@@ -122,10 +122,17 @@ class BrandingTests(unittest.TestCase):
     def test_settings_actions_remain_readable_on_a_narrow_desktop(self):
         runtime = FFmpegRuntime(Path("ffmpeg"), Path("ffprobe"), "FFmpeg 9.0.2", "FFprobe 9.0.2")
         box = settings_dialog(runtime)
+        # Native Windows fonts and the beta's extra diagnostics/issue actions need
+        # more room than the old 400px fixture. A 640px dialog fits a 1366px laptop
+        # at 150% scale; check actual label size hints instead of font-specific pixels.
+        box.resize(640, box.sizeHint().height())
         box.show()
         self.app.processEvents()
         self.assertIn(PRODUCT_NAME, box.windowTitle())
-        self.assertLessEqual(box.minimumSizeHint().width(), 400)
+        self.assertLessEqual(box.minimumSizeHint().width(), 640)
+        self.assertLessEqual(box.width(), 640)
+        for action in box.findChildren(QPushButton):
+            self.assertGreaterEqual(action.width(), action.sizeHint().width(), action.text())
         button = next(b for b in box.findChildren(QPushButton) if b.text() == "About")
         button.click()
         self.assertEqual(box.selected_action, "about")
