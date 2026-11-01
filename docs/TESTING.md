@@ -194,12 +194,17 @@ final timing and the exact environment.
 
 ## Public beta hardening
 
-`tests/test_release.py` adds twelve focused tests: central beta/PEP 440/Windows
+`tests/test_release.py` adds thirteen focused tests: central beta/PEP 440/Windows
 version mapping, essential capability parsing/failure, HTTPS/digest/member safety,
 exact-member extraction and traversal rejection, generated checksums, blocked
 publication, source/artifact/manual-evidence mismatch, config/temp failure messages,
-frozen no-PATH fallback, diagnostic fields/privacy, workflow pre-release guards and
-atomic no-overwrite finalization. Full source suite now contains 146 tests.
+frozen no-PATH fallback, diagnostic fields/privacy, workflow pre-release guards,
+atomic no-overwrite finalization and logged exception recovery without private
+traceback UI. `test_batch_ui.py` also verifies that preanalyzed media using an
+equivalent path alias reuses the existing job. Full source suite now contains
+**148 tests**. Linux GPU fixtures explicitly preserve POSIX device paths/platform
+intent on Windows; filesystem fixtures stay inside legal temporary paths, and
+dialog readability uses native size hints within a 640-logical-pixel width.
 
 `scripts/package_smoke.py` is a separate actual frozen-payload test, with PATH empty
 and isolated config/data paths. It verifies a real Qt window, bundled media tools,
@@ -209,3 +214,10 @@ extracted Windows ZIP, installed Windows payload and Linux AppImage where native
 builds are available. Cloud tests do not substitute for manual Windows 11/desktop
 artifact testing. Physical GPUs remain optional; the existing actual RX 7700 XT
 scenarios were retained. See the report for exact runs, hashes and untested gates.
+
+Native Windows Server 2025 and Ubuntu 22.04 / Python 3.14.7 source checks pass all
+148 tests with three optional physical-GPU skips. Local RX 7700 XT / VAAPI opt-in
+passes all 148 without skips. Native package smoke passes for all formats; the
+candidate workflow then intentionally refuses binary upload at its license gate.
+This is not a completed public release or a substitute for manual Windows 11 and
+Linux desktop exact-artifact testing.
