@@ -57,8 +57,10 @@ Both BtbN dated archives come from `autobuild-2026-11-01-12-49`, with build iden
 assertion that these bytes are the pristine upstream 9.0.2 tarball. Exact archive,
 FFmpeg, FFprobe and supplied license hashes/configuration are committed in the
 manifest. Linux execution verified matching build IDs/configurations, required
-software capabilities and NVENC/AMF/VAAPI/QSV table exposure. Windows members/hashes/
-embedded configuration were inspected, but native verification must execute in CI.
+software capabilities and NVENC/AMF/VAAPI/QSV table exposure. Windows native execution subsequently verified the same integrity/coherence and
+mandatory software tables. The pinned build also exposes h264_vaapi on Windows,
+in addition to NVENC/AMF/QSV; the manifest now records the observed table exactly.
+This does not add a Cactu Windows VAAPI backend or claim physical GPU availability.
 
 Linux archive SHA-256: `11570b7bb1436ff432c91202ae0e7ea4be65359fd06650e18935c1ee9d005bf6`.
 Windows archive SHA-256: `ce92c2ee8a90fbe3da3e8a2bd510f4ebc0e838d4cf433371095ac2179f95e834`.
