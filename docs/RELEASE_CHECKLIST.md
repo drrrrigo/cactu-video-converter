@@ -6,6 +6,21 @@ Repository: https://github.com/drrrrigo/cactu-video-converter.
 Cactu source license: GPL-3.0-or-later (owner-confirmed 2026-11-01).
 No public beta tag or binary release is authorized by an incomplete audit/test.
 
+## Recorded automated checks (2026-11-01)
+
+Source commit `ccb4e33` passed the complete native Windows/Linux source matrix:
+[CI run 41350221215](https://github.com/drrrrigo/cactu-video-converter/actions/runs/41350221215).
+Each ran 148 tests with three optional physical-GPU skips. The local RX 7700 XT
+run passed all 148 with no skips. Current source/history/privacy scans have no
+findings; `security_audit_approved` records that bounded audit, not certification.
+
+[Candidate run 41350221053](https://github.com/drrrrigo/cactu-video-converter/actions/runs/41350221053)
+successfully built/tested Windows ONEDIR/portable/Setup (including automated
+install/convert/uninstall) and Linux AppImage. Both jobs then intentionally failed
+the unapproved license gate before public artifact upload. No retained approved
+candidate/manual test/checksum/tag/release set is claimed. License/source closure
+and real Windows 11/Linux desktop manual evidence remain required below.
+
 ## Before distributing any binary candidate
 
 - Complete docs/RELEASE_LICENSE_AUDIT.md against the exact shipped builds.

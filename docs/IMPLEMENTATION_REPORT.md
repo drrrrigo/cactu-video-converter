@@ -673,8 +673,8 @@ self-contained release artifact is claimed by this feature.
 
 ## Public beta release hardening — 0.1.0-beta.1 (2026-11-01)
 
-**Status: implementation and internal Linux candidate verified; public binary
-release blocked.** No beta tag or GitHub release has been created. Owner decisions
+**Status: native Windows/Linux builds and automated package smoke verified; public
+binary release blocked.** No beta tag or GitHub release has been created. Owner decisions
 are recorded: repository `https://github.com/drrrrigo/cactu-video-converter`, Cactu
 original source **GPL-3.0-or-later**. Root LICENSE and package metadata reflect that
 decision. Third-party redistribution approval remains separate and incomplete.
@@ -711,7 +711,9 @@ candidate-run bytes from the exact same commit, retests them natively, checks
 external manual evidence against all three artifact hashes and generates
 SHA256SUMS before creating a pre-release. It does not rebuild after manual testing.
 The `public-beta` GitHub environment requires owner review and accepts beta tags.
-Private vulnerability reporting is enabled. No publish approval flags were set.
+Private vulnerability reporting is enabled. License and final publication approvals
+remain false. The bounded source/privacy audit has been approved after the current
+tree/history and documentation-image checks.
 
 ### Exact inputs and local environment
 
@@ -737,19 +739,21 @@ amdgpu and VAAPI render node without modifying drivers or permissions.
 
 ### Completed verification
 
-The entire existing/new suite passed: **147 tests in 63.029 seconds**, including
+The entire existing/new suite passed: **148 tests in 65.786 seconds**, including
 real RX 7700 XT/VAAPI tests with `VIDEO_CONVERTER_HARDWARE_TEST=1` and the staged,
 verified FFmpeg pair. New release tests cover version mapping, mandatory capability
 failure, archive/hash/path validation, generated checksums, blocked licensing,
 exact tested commit/hash promotion, writable startup, frozen no-PATH fallback,
-diagnostic privacy, atomic no-overwrite and exception recovery. Existing queue,
+diagnostic privacy, atomic no-overwrite, exception recovery and reuse of an existing
+job when preanalyzed media uses an equivalent path alias. Existing queue,
 preview, loudness, audio gain/clipping, subtitle, software/hardware planning,
 progress, pause/cancel, verification and cleanup regressions remain intact.
 Ruff, bytecode compilation, branding checks and isolated `pip check` pass.
-Current source and available initial Git history scans report **zero findings**;
-this is a bounded pattern scan plus artifact review, not a claim of exhaustive
-security certification. Native GitHub CI results are recorded separately below
-when available; local Linux success does not establish native Windows success.
+Current source and all available Git history scans report **zero findings**;
+OCR of all 24 published documentation screenshots also found no personal labels.
+This is a bounded pattern/OCR scan plus artifact review, not a claim of exhaustive
+security certification. Native GitHub CI results are recorded separately below;
+local Linux success alone does not establish native Windows success.
 
 Actual frozen ONEDIR and AppImage smoke tests passed with PATH empty. They start
 MainWindow offscreen, locate bundled binaries, create synthetic MKV/audio/external
@@ -757,9 +761,10 @@ subtitles, convert through the existing pipeline and verify MP4/H.264/yuv420p/AA
 Faststart, duration, burned subtitle mode, normal exit and unchanged source.
 The internal AppImage is approximately **203 MiB**. Build metadata and smoke JSON
 are under gitignored `dist/candidate`; these are local evidence, not public assets.
-The final local packaging run includes the startup-construction error catch and
-recovered Qt license payload; it is still a private candidate from the development
-workspace, with a Python patch mismatch and no approved release-commit attestation.
+The final local packaging run includes the startup-construction error catch,
+canonical job-path lookup fix and recovered Qt license payload. It is still a private
+candidate from the development workspace, with a Python patch mismatch and no
+approved release-commit attestation.
 
 ### Remaining release gates and risks
 
@@ -769,16 +774,17 @@ workspace, with a Python patch mismatch and no approved release-commit attestati
 - The exact Qt 6.11.2 wheel manifests provided no collected license text files;
   eight license texts were subsequently recovered from the exact official PySide
   source commit and added with provenance. Qt/module/third-party source and notice
-  closure, native ELF/DLL/plugin inventory,
-  Python third-party obligations and AppImage/Inno runtime/stub review remain open.
+  closure, native ELF/DLL/plugin inventory, Python third-party obligations and
+  AppImage/Inno runtime/stub review remain open.
   The Python 3.14.7 combined license text is included, but audit completion is not
   inferred from it. `RELEASE_LICENSE_AUDIT.md` records evidence and missing items.
 - Clean Windows 11 installer/portable/manual/uninstall and a distinct Linux desktop
   manual test have not been performed. Server CI and offscreen smoke cannot stand
   in for those required tests. No physical NVIDIA/Intel/Windows AMD test is claimed.
-- Windows Setup and portable packages require native CI validation. Local Linux
-  cannot establish those outputs. Windows signing support is optional; no signing
-  certificate or public-trust claim is present.
+- Native Windows Setup/portable builds and automated install/convert/uninstall
+  smoke pass on Server 2025. This does not replace clean Windows 11 interactive
+  testing. Signing is optional; these candidates are unsigned, with no signing
+  certificate or public-trust claim.
 - No complete approved three-artifact set, manual hash attestation, final checksum
   file, public beta tag or pre-release exists. Publication and license approvals
   remain false. Queue/preview/hardware behavior and other existing limitations are
@@ -788,11 +794,63 @@ README, installation, known issues, security, contributing, issue forms, release
 notes, build/packaging/runtime docs, architecture/testing/review guides and the
 release checklist were updated. Normal conversion remains offline; external links
 open only through explicit user actions. Public beta completion must wait for the
-remaining licensing, native build and manual exact-artifact gates.
+remaining licensing and manual exact-artifact gates.
 
-Source publication attempt: the complete source was committed in a separate
-temporary clone, preserving initial README commit `55e3d27`. GitHub rejected the
-push because the available OAuth credential lacks the `workflow` scope needed for
-the new CI files. Reauthorization was requested; no source push or native Actions
-run is claimed until that permission is available. The primary supplied checkout
-has an empty read-only `.git`, so it could not serve as the publishing repository.
+The complete source was pushed to the owner-provided GitHub repository using the
+owner's working SSH credential, preserving initial README commit `55e3d27`. The
+HTTPS OAuth credential lacks workflow scope; no scope restriction was bypassed or
+token exported. The primary supplied checkout has an empty read-only `.git`, so
+publishing used a separate temporary clone.
+
+Native Ubuntu 22.04 / Python 3.14.7 source CI passed at `fa80b39`:
+[run 41348951474](https://github.com/drrrrigo/cactu-video-converter/actions/runs/41348951474),
+**147 tests in 41.077 seconds, three optional physical-GPU skips**. Its native Linux
+candidate job also passed 147 tests (42.668 seconds, same skips), built the AppImage
+and completed frozen smoke tests before failing at the intentional unapproved
+license gate in [candidate run 41348963526](https://github.com/drrrrigo/cactu-video-converter/actions/runs/41348963526).
+No candidate binary was uploaded. Windows native validation found that the pinned
+build also exposes h264_vaapi; the manifest now records all four observed H.264 GPU
+encoder identifiers without adding a Cactu Windows VAAPI backend. The first Windows
+full suite then exposed a real canonical-path lookup issue in programmatic media
+loading, now fixed with a regression test. Synthetic Linux device paths, filesystem
+fixtures, canonical media paths and application theme setup were made portable in
+tests. The readability regression now verifies every action fits its native size
+hint inside a 640-logical-pixel dialog, rather than assuming all platform fonts fit
+the former 400-pixel fixture.
+
+Final native source matrix at `ccb4e33` is **green**:
+[run 41350221215](https://github.com/drrrrigo/cactu-video-converter/actions/runs/41350221215).
+Ubuntu 22.04 image `20261025.340.1`: **148 tests / 49.691 s / 3 optional GPU skips**.
+Windows Server 2025 image `20261021.278.1`: **148 tests / 69.554 s / 3 optional GPU skips**.
+Both use Python 3.14.7, verified staged FFmpeg, pinned dependencies, lint, branding
+and history scan. These tests do not substitute for manual Windows 11/desktop UX.
+The latest local AppImage, including the canonical-path fix, passes both frozen
+smoke checks; SHA-256 `cef62dfbc1bced448d663aa668a1ed29ad6cb4c726bde6e8f5d781db9ff9d8bb`.
+It retains the documented local Python patch mismatch and is not a release asset.
+
+### Native package verification and publication block
+
+[Candidate run 41350221053](https://github.com/drrrrigo/cactu-video-converter/actions/runs/41350221053)
+at `ccb4e33` built all three required package formats natively with Python 3.14.7.
+The Windows job passed 148 tests in 39.761 seconds (3 physical-GPU skips), validated
+the exact FFmpeg pair and hash-pinned Inno Setup, built ONEDIR, created/extracted
+the portable ZIP, compiled Setup and installed/converted/uninstalled it. Actual
+frozen ONEDIR, extracted portable and installed application smoke all passed with
+PATH empty. Setup compilation completed in 68.500 seconds. The Linux job passed
+148 tests in 31.754 seconds (same skips), validated fixed appimagetool/runtime,
+built AppImage and passed ONEDIR/AppImage frozen smoke.
+
+Native candidate filenames produced:
+
+- `CactuVideoConverter-Setup-0.1.0-beta.1.exe`
+- `CactuVideoConverter-Portable-0.1.0-beta.1.zip`
+- `CactuVideoConverter-0.1.0-beta.1-x86_64.AppImage`
+
+Both native jobs then **failed only at Verify distribution eligibility**, with
+`Binary distribution blocked: exact dependency/license/source audit not approved`.
+This is the intended fail-closed publication result, not a package/test success
+claim for the overall release workflow. The artifacts were not uploaded and the
+cloud runner files are not a retained, approved release-candidate set. No combined
+final SHA256SUMS or final tag was created. After source/license closure, rebuild a
+candidate from the final reviewed commit, retain it, perform the required manual
+tests and promote those exact bytes through the protected release workflow.

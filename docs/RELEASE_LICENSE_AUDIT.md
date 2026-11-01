@@ -4,10 +4,11 @@ Initial audit 2026-11-01, before release implementation. **Publication blocked.*
 
 ## Cactu source
 
-No LICENSE file, SPDX license selection or copyright-holder declaration is present.
-The owner must choose/confirm Cactu's source license; no dependency license implies
-an automatic source-license choice. The source license decision and compatibility
-review are unresolved. No legal entity, copyright holder or license is invented.
+At initial inspection, no LICENSE file, SPDX selection or copyright-holder
+declaration was present. The owner subsequently chose GPL-3.0-or-later; see the
+owner-decision record below and root LICENSE. That resolves Cactu's original source
+license. Exact third-party compatibility/redistribution review remains open. No
+legal entity or copyright holder is invented.
 
 ## Exact shipped components
 
@@ -136,3 +137,9 @@ The BtbN recipe tag resolves to commit
 `5ece62897c650b863c1ddda7b6964845344aef2d`, recorded in the FFmpeg manifest.
 An immutable recipe is useful provenance; it is not a substitute for the exact
 sources and patches for every library in the produced binaries.
+
+Native Windows/Linux package and frozen smoke tests now pass (candidate run
+41350221053). This verifies runtime operation, not license/source completeness.
+Both jobs correctly blocked public artifact upload at the license gate. Cactu's
+source/history/privacy audit is recorded as complete with no findings; the separate
+dependency license and final publication approvals remain false.

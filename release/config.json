@@ -3,7 +3,7 @@
   "source_license": "GPL-3.0-or-later",
   "publication_approved": false,
   "license_audit_approved": false,
-  "security_audit_approved": false,
+  "security_audit_approved": true,
   "manual_candidate_evidence": null,
-  "notes": "Public beta publication is gated on exact artifact, license and manual platform evidence."
+  "notes": "Source/history and published-documentation privacy audit completed with no findings. Binary publication remains gated on exact dependency/source licensing and manual exact-artifact evidence."
 }
