@@ -1,0 +1,53 @@
+{
+  "linux-x86_64": {
+    "version": "9.0.2",
+    "build_id": "n9.0.2-42-gd7643a0fe3-20261101",
+    "provider": "BtbN/FFmpeg-Builds",
+    "source_url": "https://github.com/BtbN/FFmpeg-Builds/releases/download/autobuild-2026-11-01-12-49/ffmpeg-n9.0.2-42-gd7643a0fe3-linux64-gpl-9.0.tar.xz",
+    "archive_sha256": "11570b7bb1436ff432c91202ae0e7ea4be65359fd06650e18935c1ee9d005bf6",
+    "archive_format": "tar.xz",
+    "ffmpeg_member": "ffmpeg-n9.0.2-42-gd7643a0fe3-linux64-gpl-9.0/bin/ffmpeg",
+    "ffprobe_member": "ffmpeg-n9.0.2-42-gd7643a0fe3-linux64-gpl-9.0/bin/ffprobe",
+    "ffmpeg_sha256": "5854c127f9ea5b2302acc5096666be048d166b444c30023d8c74d1212e0a669d",
+    "ffprobe_sha256": "c47cb9db7e7a4d933fa824ed2ab7064459bf1c67292b1551369162a969bbf197",
+    "build_configuration": "--prefix=/ffbuild/prefix --pkg-config-flags=--static --pkg-config=pkg-config --cross-prefix=x86_64-ffbuild-linux-gnu- --arch=x86_64 --target-os=linux --enable-gpl --enable-version3 --disable-debug --enable-iconv --enable-zlib --enable-libxml2 --enable-libsoxr --enable-openssl --enable-libvmaf --enable-libxcb --enable-xlib --enable-fontconfig --enable-libharfbuzz --enable-libfreetype --enable-libfribidi --enable-lcms2 --enable-vulkan --enable-libdav1d --enable-libvorbis --enable-librav1e --enable-librsvg --enable-libpulse --enable-gmp --enable-lzma --enable-liblcevc-dec --enable-opencl --enable-amf --enable-libaom --enable-avisynth --enable-chromaprint --enable-libdavs2 --enable-libdvdread --enable-libdvdnav --disable-libfdk-aac --enable-ffnvcodec --enable-cuda-llvm --enable-frei0r --enable-libgme --enable-libkvazaar --enable-libaribb24 --enable-libaribcaption --enable-libass --enable-libbluray --enable-libjxl --enable-libmp3lame --enable-libopus --enable-libplacebo --enable-librist --enable-libssh --enable-libtheora --enable-libvpx --enable-libwebp --enable-libzmq --enable-lv2 --enable-libvpl --enable-openal --enable-liboapv --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenh264 --enable-libopenjpeg --enable-libopenmpt --enable-librubberband --disable-schannel --enable-sdl2 --enable-libsnappy --enable-libsrt --enable-libsvtav1 --enable-libtwolame --enable-libuavs3d --enable-libdrm --enable-vaapi --enable-vapoursynth --enable-libvidstab --enable-libvvenc --disable-whisper --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxvid --enable-libzimg --enable-libzvbi --extra-cflags=-DLIBTWOLAME_STATIC --extra-cxxflags= --extra-libs='-lgomp -ldl' --extra-ldflags=-pthread --extra-ldexeflags= --cc=x86_64-ffbuild-linux-gnu-gcc --cxx=x86_64-ffbuild-linux-gnu-g++ --ar=x86_64-ffbuild-linux-gnu-gcc-ar --ranlib=x86_64-ffbuild-linux-gnu-gcc-ranlib --nm=x86_64-ffbuild-linux-gnu-gcc-nm --extra-version=20261101",
+    "license": "GPL-3.0-or-later",
+    "license_member": "ffmpeg-n9.0.2-42-gd7643a0fe3-linux64-gpl-9.0/LICENSE.txt",
+    "license_sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "hardware_encoders": [
+      "h264_nvenc",
+      "h264_amf",
+      "h264_vaapi",
+      "h264_qsv"
+    ],
+    "source_recipe": "https://github.com/BtbN/FFmpeg-Builds/tree/autobuild-2026-11-01-12-49",
+    "corresponding_source_complete": false,
+    "redistribution_approved": false,
+    "source_review_note": "Full matching third-party source/license closure must be archived and reviewed before publication."
+  },
+  "windows-x86_64": {
+    "version": "9.0.2",
+    "build_id": "n9.0.2-42-gd7643a0fe3-20261101",
+    "provider": "BtbN/FFmpeg-Builds",
+    "source_url": "https://github.com/BtbN/FFmpeg-Builds/releases/download/autobuild-2026-11-01-12-49/ffmpeg-n9.0.2-42-gd7643a0fe3-win64-gpl-9.0.zip",
+    "archive_sha256": "ce92c2ee8a90fbe3da3e8a2bd510f4ebc0e838d4cf433371095ac2179f95e834",
+    "archive_format": "zip",
+    "ffmpeg_member": "ffmpeg-n9.0.2-42-gd7643a0fe3-win64-gpl-9.0/bin/ffmpeg.exe",
+    "ffprobe_member": "ffmpeg-n9.0.2-42-gd7643a0fe3-win64-gpl-9.0/bin/ffprobe.exe",
+    "ffmpeg_sha256": "238eb9e809e1b2e80b9ebdb4d12f382edf1cb77ccc44543ec24cdf26dad00643",
+    "ffprobe_sha256": "e9ee63bc9929d421349e07fe90d1816353ed761b91107d665637f0110696211e",
+    "build_configuration": "--prefix=/ffbuild/prefix --pkg-config-flags=--static --pkg-config=pkg-config --cross-prefix=x86_64-w64-mingw32- --arch=x86_64 --target-os=mingw32 --enable-gpl --enable-version3 --disable-debug --disable-w32threads --enable-pthreads --enable-iconv --enable-zlib --enable-libxml2 --enable-libvmaf --disable-libxcb --disable-xlib --enable-fontconfig --enable-libharfbuzz --enable-libfreetype --enable-libfribidi --enable-lcms2 --enable-vulkan --enable-libdav1d --enable-libvorbis --enable-librav1e --enable-librsvg --disable-libpulse --enable-gmp --enable-lzma --enable-liblcevc-dec --enable-opencl --enable-amf --enable-libaom --enable-avisynth --enable-chromaprint --enable-libdavs2 --enable-libdvdread --enable-libdvdnav --disable-libfdk-aac --enable-ffnvcodec --enable-cuda-llvm --enable-frei0r --enable-libgme --enable-libkvazaar --enable-libaribb24 --enable-libaribcaption --enable-libass --enable-libbluray --enable-libjxl --enable-libmp3lame --enable-libopus --enable-libplacebo --enable-librist --enable-libssh --enable-libtheora --enable-libvpx --enable-libwebp --enable-libzmq --enable-lv2 --enable-libvpl --enable-openal --enable-liboapv --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenh264 --enable-libopenjpeg --enable-libopenmpt --enable-librubberband --enable-schannel --enable-sdl2 --enable-libsnappy --enable-libsoxr --enable-libsrt --enable-libsvtav1 --enable-libtwolame --enable-libuavs3d --disable-libdrm --enable-vaapi --enable-vapoursynth --enable-libvidstab --enable-libvvenc --disable-whisper --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxvid --enable-libzimg --enable-libzvbi --extra-cflags=-DLIBTWOLAME_STATIC --extra-cxxflags= --extra-libs=-lgomp --extra-ldflags=-pthread --extra-ldexeflags= --cc=x86_64-w64-mingw32-gcc --cxx=x86_64-w64-mingw32-g++ --ar=x86_64-w64-mingw32-gcc-ar --ranlib=x86_64-w64-mingw32-gcc-ranlib --nm=x86_64-w64-mingw32-gcc-nm --extra-version=20261101",
+    "license": "GPL-3.0-or-later",
+    "license_member": "ffmpeg-n9.0.2-42-gd7643a0fe3-win64-gpl-9.0/LICENSE.txt",
+    "license_sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "hardware_encoders": [
+      "h264_nvenc",
+      "h264_amf",
+      "h264_qsv"
+    ],
+    "source_recipe": "https://github.com/BtbN/FFmpeg-Builds/tree/autobuild-2026-11-01-12-49",
+    "corresponding_source_complete": false,
+    "redistribution_approved": false,
+    "source_review_note": "Full matching third-party source/license closure must be archived and reviewed before publication."
+  }
+}

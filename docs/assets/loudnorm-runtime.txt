@@ -1,0 +1,60 @@
+Local Linux development runtime; recorded 2026-10-24. No bundled artifact exists.
+
+$ /usr/bin/ffmpeg -version
+ffmpeg version n9.0.2 Copyright (c) 2000-2026 the FFmpeg developers
+built with gcc 16 (GCC)
+configuration: --prefix=/usr --disable-debug --disable-static --disable-stripping --enable-amf --enable-avisynth --enable-cuda-llvm --enable-lto --enable-fontconfig --enable-frei0r --enable-gmp --enable-gnutls --enable-gpl --enable-ladspa --enable-lcms2 --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libdav1d --enable-libdrm --enable-libdvdnav --enable-libdvdread --enable-libfreetype --enable-libfribidi --enable-libgsm --enable-libharfbuzz --enable-libiec61883 --enable-libjack --enable-libjxl --enable-libmodplug --enable-libmp3lame --enable-libopencore_amrnb --enable-libopencore_amrwb --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libplacebo --enable-libpulse --enable-librav1e --enable-librsvg --enable-librubberband --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtheora --enable-libv4l2 --enable-libvidstab --enable-libvmaf --enable-libvorbis --enable-libvpl --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxcb --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-nvdec --enable-nvenc --enable-opencl --enable-opengl --enable-shared --enable-vapoursynth --enable-version3 --enable-vulkan --disable-decoder=magicyuv
+libavutil      61.  1.102 / 61.  1.102
+libavcodec     63.  1.102 / 63.  1.102
+libavformat    63.  1.102 / 63.  1.102
+libavdevice    63.  1.102 / 63.  1.102
+libavfilter    12.  1.102 / 12.  1.102
+libswscale     10.  1.102 / 10.  1.102
+libswresample   7.  1.102 /  7.  1.102
+
+Exiting with exit code 0
+
+$ /usr/bin/ffprobe -version
+ffprobe version n9.0.2 Copyright (c) 2007-2026 the FFmpeg developers
+built with gcc 16 (GCC)
+configuration: --prefix=/usr --disable-debug --disable-static --disable-stripping --enable-amf --enable-avisynth --enable-cuda-llvm --enable-lto --enable-fontconfig --enable-frei0r --enable-gmp --enable-gnutls --enable-gpl --enable-ladspa --enable-lcms2 --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libdav1d --enable-libdrm --enable-libdvdnav --enable-libdvdread --enable-libfreetype --enable-libfribidi --enable-libgsm --enable-libharfbuzz --enable-libiec61883 --enable-libjack --enable-libjxl --enable-libmodplug --enable-libmp3lame --enable-libopencore_amrnb --enable-libopencore_amrwb --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libplacebo --enable-libpulse --enable-librav1e --enable-librsvg --enable-librubberband --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtheora --enable-libv4l2 --enable-libvidstab --enable-libvmaf --enable-libvorbis --enable-libvpl --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxcb --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-nvdec --enable-nvenc --enable-opencl --enable-opengl --enable-shared --enable-vapoursynth --enable-version3 --enable-vulkan --disable-decoder=magicyuv
+libavutil      61.  1.102 / 61.  1.102
+libavcodec     63.  1.102 / 63.  1.102
+libavformat    63.  1.102 / 63.  1.102
+libavdevice    63.  1.102 / 63.  1.102
+libavfilter    12.  1.102 / 12.  1.102
+libswscale     10.  1.102 / 10.  1.102
+libswresample   7.  1.102 /  7.  1.102
+
+$ /usr/bin/ffmpeg -hide_banner -h filter=loudnorm
+Filter loudnorm
+  EBU R128 loudness normalization
+    Inputs:
+       #0: default (audio)
+    Outputs:
+       #0: default (audio)
+loudnorm AVOptions:
+   I                 <double>     ..F.A...... set integrated loudness target (from -70 to -5) (default -24)
+   i                 <double>     ..F.A...... set integrated loudness target (from -70 to -5) (default -24)
+   LRA               <double>     ..F.A...... set loudness range target (from 1 to 50) (default 7)
+   lra               <double>     ..F.A...... set loudness range target (from 1 to 50) (default 7)
+   TP                <double>     ..F.A...... set maximum true peak (from -9 to 0) (default -2)
+   tp                <double>     ..F.A...... set maximum true peak (from -9 to 0) (default -2)
+   measured_I        <double>     ..F.A...... measured IL of input file (from -99 to 0) (default 0)
+   measured_i        <double>     ..F.A...... measured IL of input file (from -99 to 0) (default 0)
+   measured_LRA      <double>     ..F.A...... measured LRA of input file (from 0 to 99) (default 0)
+   measured_lra      <double>     ..F.A...... measured LRA of input file (from 0 to 99) (default 0)
+   measured_TP       <double>     ..F.A...... measured true peak of input file (from -99 to 99) (default 99)
+   measured_tp       <double>     ..F.A...... measured true peak of input file (from -99 to 99) (default 99)
+   measured_thresh   <double>     ..F.A...... measured threshold of input file (from -99 to 0) (default -70)
+   offset            <double>     ..F.A...... set offset gain (from -99 to 99) (default 0)
+   linear            <boolean>    ..F.A...... normalize linearly if possible (default true)
+   dual_mono         <boolean>    ..F.A...... treat mono input as dual-mono (default false)
+   print_format      <int>        ..F.A...... set print format for stats (from 0 to 2) (default none)
+     none            0            ..F.A......
+     json            1            ..F.A......
+     summary         2            ..F.A......
+   stats_file        <string>     ..F.A...... set stats output file
+
+
+Exiting with exit code 0

@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools==80.9.0", "wheel==0.45.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cactu-video-converter"
+dynamic = ["version"]
+description = "Cross-platform desktop media transcoding powered by FFmpeg"
+license = "GPL-3.0-or-later"
+license-files = ["LICENSE"]
+requires-python = ">=3.14,<3.15"
+dependencies = ["PySide6==6.11.2", "psutil==7.2.2"]
+
+[project.optional-dependencies]
+dev = ["pytest==8.4.2", "ruff==0.13.3", "PyInstaller==6.16.0"]
+
+[project.scripts]
+cactu-video-converter = "video_converter.app:main"
+video-converter = "video_converter.app:main"
+
+[tool.setuptools.dynamic]
+version = {attr = "video_converter.__package_version__"}
+
+[tool.setuptools.data-files]
+"share/cactu-video-converter" = ["THIRD_PARTY_NOTICES.md"]
+"share/cactu-video-converter/branding" = ["assets/branding/*.svg", "assets/branding/*.png", "assets/branding/*.ico"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+markers = ["hardware: opt-in tests requiring a working GPU encoder"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

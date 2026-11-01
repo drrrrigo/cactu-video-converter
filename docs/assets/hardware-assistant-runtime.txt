@@ -1,0 +1,26 @@
+Cactu Video Converter 0.1.0
+OS: Linux 7.3.0-4-cachyos
+Distribution: CachyOS Linux 
+Distribution family: Arch
+FFmpeg: ffmpeg version n9.0.2 Copyright (c) 2000-2026 the FFmpeg developers
+Runtime: development
+Hardware overall: Available
+Software: x264 available
+
+Finding 1: AVAILABLE
+Responsibility: No action needed
+Message: The actual FFmpeg encoder initialization passed. This backend is available for supported conversions.
+Guide: available
+GPU: AMD Navi 32 [Radeon RX 7700 XT / 7800 XT]
+Vendor / PCI: AMD 1002:747e
+Driver: amdgpu
+Driver version: Not available
+Adapter state: PCI display controller
+Render device: /dev/dri/renderD128; exists=True; read=True; write=True; mode=crw-rw-rw-
+Expected backend: VAAPI Hardware Encoder
+Encoder present: True
+FFmpeg encoder: h264_vaapi
+Probed device: /dev/dri/renderD128
+Initialization: Passed; exit=0
+Probe command: <path> -hide_banner -nostdin -loglevel error -init_hw_device vaapi=encode:/dev/dri/renderD128 -filter_hw_device encode -f lavfi -i color=c=black:s=256x144:r=10:d=0.3,format=yuv420p10le -frames:v 3 -vf <media file>,format=nv12,hwupload -c:v h264_vaapi -rc_mode CQP -qp 20 -profile:v high -f null -
+Probe details: No error recorded

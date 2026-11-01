@@ -1,0 +1,4 @@
+#!/bin/sh
+HERE="${APPDIR:-${0%/*}}"
+case "$HERE" in /*) ;; *) HERE="$(CDPATH= cd -- "$HERE" && pwd)" ;; esac
+exec "$HERE/usr/bin/CactuVideoConverter" "$@"

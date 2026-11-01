@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Cactu Video Converter
+Comment=Cross-platform desktop media transcoding powered by FFmpeg
+Exec=CactuVideoConverter
+Icon=cactu-video-converter
+Terminal=false
+Categories=AudioVideo;Video;

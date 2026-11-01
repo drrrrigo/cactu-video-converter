@@ -1,0 +1,9 @@
+{
+  "repository": "https://github.com/drrrrigo/cactu-video-converter",
+  "source_license": "GPL-3.0-or-later",
+  "publication_approved": false,
+  "license_audit_approved": false,
+  "security_audit_approved": false,
+  "manual_candidate_evidence": null,
+  "notes": "Public beta publication is gated on exact artifact, license and manual platform evidence."
+}

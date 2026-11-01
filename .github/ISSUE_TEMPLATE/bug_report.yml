@@ -1,0 +1,53 @@
+name: Bug report
+description: Report a reproducible beta failure
+title: '[Bug]: '
+body:
+  - type: markdown
+    attributes:
+      value: 'Review diagnostics before sharing. Do not upload private/copyrighted media without permission. Prefer metadata, screenshots and small synthetic reproduction files. Vulnerabilities belong in private security reporting.'
+  - type: input
+    id: version
+    attributes:
+      label: Cactu version
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: OS and version (Windows/Linux)
+    validations:
+      required: true
+  - type: dropdown
+    id: installation
+    attributes:
+      label: Installation type
+      options: [Windows Setup, Windows Portable, Linux AppImage, Source development]
+    validations:
+      required: true
+  - type: input
+    id: gpu
+    attributes:
+      label: GPU and selected encoder (or Software x264)
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Sanitized diagnostics and relevant reviewed logs
+      description: Use Settings → Diagnostics → Copy Diagnostics. Remove private paths from raw logs.

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <title>Cactu Video Converter</title>
+  <rect x="8" y="8" width="240" height="240" rx="52" fill="#10181d"/>
+  <g fill="none" stroke="#5faf6f" stroke-width="30" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M119 155H86Q64 155 64 133V111"/>
+    <path d="M139 125H170Q192 125 192 103V85"/>
+  </g>
+  <rect x="97" y="48" width="62" height="164" rx="30" fill="#5faf6f"/>
+  <path d="M116 132Q116 128 120 131L144 148Q149 152 144 156L120 173Q116 176 116 171Z" fill="#10181d"/>
+</svg>

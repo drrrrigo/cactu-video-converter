@@ -1,0 +1,11 @@
+{
+  "source_commit": "REPLACE_WITH_THE_EXACT_40_CHARACTER_TESTED_COMMIT",
+  "windows11_installer": {"passed": false, "os_build": "", "tester": "", "checks": "install/start/analyze/software/audio/subtitles/preview/queue/cancel/uninstall"},
+  "windows11_portable": {"passed": false, "os_build": "", "tester": "", "checks": "no Python/system FFmpeg; extract/start/convert/settings/logs"},
+  "linux_desktop": {"passed": false, "distribution": "", "kernel": "", "tester": "", "checks": "AppImage/start/analyze/software/audio/subtitles/preview/queue/cancel"},
+  "artifacts": {
+    "CactuVideoConverter-Setup-0.1.0-beta.1.exe": "REPLACE_WITH_THE_EXACT_TESTED_SHA256",
+    "CactuVideoConverter-Portable-0.1.0-beta.1.zip": "REPLACE_WITH_THE_EXACT_TESTED_SHA256",
+    "CactuVideoConverter-0.1.0-beta.1-x86_64.AppImage": "REPLACE_WITH_THE_EXACT_TESTED_SHA256"
+  }
+}

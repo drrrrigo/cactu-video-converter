@@ -1,0 +1,21 @@
+{
+  "python": "3.14.7",
+  "linux_runner": "ubuntu-22.04",
+  "windows_runner": "windows-2025",
+  "appimagetool": {
+    "version": "1.9.1",
+    "url": "https://github.com/AppImage/appimagetool/releases/download/1.9.1/appimagetool-x86_64.AppImage",
+    "sha256": "ed4ce84f0d9caff66f50bcca6ff6f35aae54ce8135408b3fa33abfc3cb384eb0"
+  },
+  "inno_setup": {
+    "version": "7.1.1",
+    "url": "https://github.com/jrsoftware/issrc/releases/download/is-7_1_1/innosetup-7.1.1-x64.exe",
+    "sha256": "8a5a6711c3766a6e5fb74f280ba0e3551e719ce94538d901fdbd1f8f9920b3f0"
+  },
+  "appimage_runtime": {
+    "source_commit": "fedfad51acc2860b2916a1eef32ba4a500ff31ef",
+    "asset_id": 657374641,
+    "url": "https://api.github.com/repos/AppImage/type2-runtime/releases/assets/657374641",
+    "sha256": "617aa77314d57c8b8e4fae9c3f0b35af7b30d5529cb69e98f64f92510ed98a46"
+  }
+}
