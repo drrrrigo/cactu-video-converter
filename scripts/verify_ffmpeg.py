@@ -63,7 +63,10 @@ def validate(platform: str, *, directory: Path | None = None) -> Path:
     require_capabilities(tables)
     hw = {"h264_nvenc", "h264_amf", "h264_qsv", "h264_vaapi"} & tables["-encoders"]
     if hw != set(entry["hardware_encoders"]):
-        raise RuntimeError("Hardware encoder exposure differs from the pinned build")
+        raise RuntimeError(
+            "Hardware encoder exposure differs from the pinned build: "
+            f"expected {sorted(entry['hardware_encoders'])}; detected {sorted(hw)}"
+        )
     if not entry.get("source_recipe") or not entry.get("license"):
         raise RuntimeError("FFmpeg licensing provenance missing")
     print(f"Verified exact {platform} FFmpeg/FFprobe build {identities[0]}")
