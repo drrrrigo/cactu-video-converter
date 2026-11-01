@@ -6,7 +6,7 @@ import tempfile
 import time
 import unittest
 from dataclasses import replace
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 from unittest.mock import patch
 
 from PySide6.QtCore import QCoreApplication, QEvent, QSettings
@@ -161,7 +161,7 @@ class AssistantUiTests(unittest.TestCase):
             )
 
         window.hardware_detector = HardwareEncoderDetector(
-            RUNTIME.ffmpeg, platform="linux", devices=[Path(NODE.path)], run=run
+            RUNTIME.ffmpeg, platform="linux", devices=[PurePosixPath(NODE.path)], run=run
         )
         window.hardware_diagnosis_service = HardwareDiagnosisService(
             RUNTIME, lambda: HardwareInventory("linux", "Linux", (AMD,), ARCH)

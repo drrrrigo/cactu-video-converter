@@ -87,6 +87,7 @@ class BrandingTests(unittest.TestCase):
     def setUpClass(cls):
         os.environ.setdefault("QT_QPA_PLATFORM", "offscreen")
         cls.app = QApplication.instance() or QApplication([])
+        theme.apply_theme(cls.app)
 
     def delete_widget(self, widget):
         widget.close()

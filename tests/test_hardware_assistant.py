@@ -6,7 +6,7 @@ import subprocess
 import tempfile
 import unittest
 from dataclasses import replace
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 from unittest.mock import patch
 
 from video_converter.ffmpeg.runtime import FFmpegRuntime
@@ -148,7 +148,7 @@ class InventoryTests(unittest.TestCase):
             driver = root / "drivers/amdgpu"
             driver.mkdir(parents=True)
             for index, vendor in enumerate(("1002", "8086")):
-                gpu = pci / f"0000:0{index}:00.0"
+                gpu = pci / f"gpu-{index}"
                 gpu.mkdir()
                 (gpu / "class").write_text("0x030000")
                 (gpu / "vendor").write_text("0x" + vendor)
@@ -190,14 +190,14 @@ class InventoryTests(unittest.TestCase):
 
         with patch(
             "video_converter.ffmpeg.hardware_detector.render_nodes",
-            return_value=(Path("/dev/dri/renderD129"),),
+            return_value=(PurePosixPath("/dev/dri/renderD129"),),
         ) as nodes:
-            detector = HardwareEncoderDetector(Path("ffmpeg"), run=run)
+            detector = HardwareEncoderDetector(Path("ffmpeg"), platform="linux", run=run)
             first = detector.detect()
             count = nodes.call_count
             detector.detect()
             self.assertEqual(nodes.call_count, count)
-            nodes.return_value = (Path("/dev/dri/renderD130"),)
+            nodes.return_value = (PurePosixPath("/dev/dri/renderD130"),)
             second = detector.detect(refresh=True)
             self.assertNotEqual(first, second)
             self.assertIn("/dev/dri/renderD130", [c.selection.device for c in second])

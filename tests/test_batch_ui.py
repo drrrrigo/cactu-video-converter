@@ -3,6 +3,7 @@
 import os
 import tempfile
 import unittest
+from dataclasses import replace
 from pathlib import Path
 from unittest.mock import patch
 
@@ -64,6 +65,16 @@ class BatchUiTests(unittest.TestCase):
         selection.setCurrentIndex(self.window.queue_model.index(self.window.queue_model.ids.index(source.id)),
                                   QItemSelectionModel.SelectionFlag.NoUpdate)
         self.window._bind_job(source)
+
+    def test_preanalyzed_path_alias_reuses_existing_job(self):
+        job = self.add("movie.mkv")
+        nested = self.root / "nested"
+        nested.mkdir()
+        alias = nested / ".." / "movie.mkv"
+        self.window._populate_media(replace(job.media, path=alias))
+        self.assertEqual(len(self.window.queue.jobs), 1)
+        self.assertEqual(self.window.selected_job_id, job.id)
+        self.assertEqual(job.media.path, alias)
 
     def test_rapid_selection_preserves_every_setting_without_cross_writes(self):
         a, b = self.add("A.mkv"), self.add("B.mkv", reordered=True)

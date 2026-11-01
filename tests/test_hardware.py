@@ -3,7 +3,7 @@
 import subprocess
 import tempfile
 import unittest
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 from unittest.mock import patch
 
 from video_converter.conversion.planner import plan
@@ -69,6 +69,7 @@ class HardwareTests(unittest.TestCase):
         self.assertEqual(command[command.index("-c:v") + 1], "copy")
         self.assertNotIn("h264_nvenc", command)
 
+    @patch("video_converter.ffmpeg.encoders.sys.platform", "linux")
     def test_backend_commands_and_subtitle_filter_order(self) -> None:
         cases = (
             (EncoderSelection(EncoderBackend.NVIDIA_NVENC), "h264_nvenc",
@@ -116,6 +117,7 @@ class HardwareTests(unittest.TestCase):
             self.assertEqual(high_args[high_args.index(flag) + 1], high)
             self.assertEqual(fast_args[fast_args.index(flag) + 1], fast)
 
+    @patch("video_converter.ffmpeg.encoders.sys.platform", "linux")
     def test_ten_bit_source_uses_eight_bit_hardware_input_without_subtitles(self) -> None:
         for backend_id, device, expected_filter in (
             (EncoderBackend.NVIDIA_NVENC, None, "format=yuv420p"),
@@ -155,7 +157,7 @@ class HardwareTests(unittest.TestCase):
             return subprocess.CompletedProcess(command, 0 if success else 1,
                                                "", "No usable GPU" if not success else "")
         detector = HardwareEncoderDetector(Path("ffmpeg"), platform="linux",
-            devices=[Path("/dev/dri/renderD128"), Path("/dev/dri/renderD129")], run=fake_run)
+            devices=[PurePosixPath("/dev/dri/renderD128"), PurePosixPath("/dev/dri/renderD129")], run=fake_run)
         result = detector.detect()
         self.assertEqual(len(result), 5)
         self.assertEqual([c.selection.device for c in result if c.available], ["/dev/dri/renderD129"])

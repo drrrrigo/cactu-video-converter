@@ -93,7 +93,10 @@ class ExternalSubtitleTests(unittest.TestCase):
         command = preflight_command(self.runtime.ffmpeg, prepared.path)
         self.assertIn("subtitles=subtitle.ass", command)
         self.assertNotIn(str(source_path), " ".join(command))
-        windows_like = self.root / r"C:\Users\Test User\Vídeos\Português [Final].ass"
+        windows_like = (self.root / "Test User" / "Vídeos" / "Português [Final].ass"
+                        if os.name == "nt" else
+                        self.root / r"C:\Users\Test User\Vídeos\Português [Final].ass")
+        windows_like.parent.mkdir(parents=True, exist_ok=True)
         windows_like.write_bytes(content)
         windows_staged = prepare_subtitle(ExternalSubtitleSource.from_path(windows_like),
                                           workspace, self.runtime.ffmpeg, self.video)

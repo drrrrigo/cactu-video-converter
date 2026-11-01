@@ -25,6 +25,7 @@ from qt_helpers import capture_qt_exceptions
 
 
 def media_for(path, *, codec="h264", reordered=False, missing=False):
+    path = path.resolve()
     return parse_probe({"format": {"format_name": "matroska", "duration": "10", "tags": {"title": "Movie"}},
         "streams": [{"index": 0, "codec_type": "video", "codec_name": codec, "pix_fmt": "yuv420p"},
             {"index": 9 if reordered else 2, "codec_type": "audio", "codec_name": "ac3", "channels": 6,

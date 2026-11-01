@@ -40,7 +40,7 @@ from video_converter.ui.preview_dialog import PreviewDialog
 from video_converter.services.preview_store import PreviewStore
 
 from video_converter.models.job import JobStatus
-from video_converter.models.queue import ConversionQueue, OutputPolicy
+from video_converter.models.queue import ConversionQueue, OutputPolicy, path_identity
 from video_converter.services.queue_controller import QueueController
 from video_converter.services.batch_settings import BatchSettingsService
 from video_converter.ui.queue_panel import QueuePanelMixin
@@ -638,7 +638,9 @@ class MainWindow(HardwareAssistantMixin, QueuePanelMixin, QMainWindow):
     def _populate_media(self, media: MediaInfo, *, restore: bool = True) -> None:
         # Also supports programmatic loading of already analyzed media without a re-probe.
         if restore:
-            job = next((job for job in self.queue.jobs if job.input_path == media.path), None)
+            identity = path_identity(media.path)
+            job = next((job for job in self.queue.jobs
+                        if path_identity(job.input_path) == identity), None)
             if job is None:
                 job = self.queue.add(media.path)
             job.media = media
