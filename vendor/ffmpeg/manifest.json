@@ -20,10 +20,11 @@
       "h264_vaapi",
       "h264_qsv"
     ],
-    "source_recipe": "https://github.com/BtbN/FFmpeg-Builds/tree/autobuild-2026-11-01-12-49",
+    "source_recipe": "https://github.com/BtbN/FFmpeg-Builds/tree/5ece62897c650b863c1ddda7b6964845344aef2d",
     "corresponding_source_complete": false,
     "redistribution_approved": false,
-    "source_review_note": "Full matching third-party source/license closure must be archived and reviewed before publication."
+    "source_review_note": "Full matching third-party source/license closure must be archived and reviewed before publication.",
+    "source_recipe_commit": "5ece62897c650b863c1ddda7b6964845344aef2d"
   },
   "windows-x86_64": {
     "version": "9.0.2",
@@ -45,9 +46,10 @@
       "h264_amf",
       "h264_qsv"
     ],
-    "source_recipe": "https://github.com/BtbN/FFmpeg-Builds/tree/autobuild-2026-11-01-12-49",
+    "source_recipe": "https://github.com/BtbN/FFmpeg-Builds/tree/5ece62897c650b863c1ddda7b6964845344aef2d",
     "corresponding_source_complete": false,
     "redistribution_approved": false,
-    "source_review_note": "Full matching third-party source/license closure must be archived and reviewed before publication."
+    "source_review_note": "Full matching third-party source/license closure must be archived and reviewed before publication.",
+    "source_recipe_commit": "5ece62897c650b863c1ddda7b6964845344aef2d"
   }
 }

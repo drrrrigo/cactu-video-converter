@@ -60,9 +60,11 @@ def collect(destination: Path) -> dict:
                 "files": copied,
             }
         )
-    for source in (ROOT / "licenses").glob("*"):
+    for source in (ROOT / "licenses").rglob("*"):
         if source.is_file():
-            shutil.copy2(source, destination / source.name)
+            target = destination / source.relative_to(ROOT / "licenses")
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(source, target)
     (destination / "component-inventory.json").write_text(
         json.dumps(inventory, indent=2) + "\n", encoding="utf-8"
     )

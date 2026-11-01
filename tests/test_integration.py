@@ -1,7 +1,6 @@
-"""Small generated media scenarios against a developer FFmpeg 9.0.2 pair."""
+"""Small generated media scenarios against the resolved FFmpeg 9.0.2 pair."""
 
 import os
-import shutil
 import subprocess
 import tempfile
 import unittest
@@ -33,14 +32,12 @@ class IntegrationTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         os.environ.setdefault("QT_QPA_PLATFORM", "offscreen")
-        cls.ffmpeg = shutil.which("ffmpeg")
-        cls.ffprobe = shutil.which("ffprobe")
-        if not cls.ffmpeg or not cls.ffprobe:
-            raise unittest.SkipTest("FFmpeg/FFprobe not installed for development integration tests")
         try:
             cls.runtime = FFmpegRuntime.locate(allow_system_development=True)
         except RuntimeError as exc:
             raise unittest.SkipTest("FFmpeg 9.0.2 with required capabilities is unavailable") from exc
+        cls.ffmpeg = str(cls.runtime.ffmpeg)
+        cls.ffprobe = str(cls.runtime.ffprobe)
         cls.app = QApplication.instance() or QApplication([])
 
     def setUp(self) -> None:

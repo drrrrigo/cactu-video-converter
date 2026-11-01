@@ -737,7 +737,7 @@ amdgpu and VAAPI render node without modifying drivers or permissions.
 
 ### Completed verification
 
-The entire existing/new suite passed: **147 tests in 72.566 seconds**, including
+The entire existing/new suite passed: **147 tests in 63.029 seconds**, including
 real RX 7700 XT/VAAPI tests with `VIDEO_CONVERTER_HARDWARE_TEST=1` and the staged,
 verified FFmpeg pair. New release tests cover version mapping, mandatory capability
 failure, archive/hash/path validation, generated checksums, blocked licensing,
@@ -757,16 +757,19 @@ subtitles, convert through the existing pipeline and verify MP4/H.264/yuv420p/AA
 Faststart, duration, burned subtitle mode, normal exit and unchanged source.
 The internal AppImage is approximately **203 MiB**. Build metadata and smoke JSON
 are under gitignored `dist/candidate`; these are local evidence, not public assets.
-The final startup-construction error catch was added after that packaging run, so
-the existing AppImage is not represented as a package of the final source commit.
+The final local packaging run includes the startup-construction error catch and
+recovered Qt license payload; it is still a private candidate from the development
+workspace, with a Python patch mismatch and no approved release-commit attestation.
 
 ### Remaining release gates and risks
 
 - Exact FFmpeg linked-component corresponding sources/notices are not archived or
   approved. Selected archives supply a GPL text, which is insufficient to close the
   entire static dependency audit. Dated provider inputs may expire without a mirror.
-- The exact Qt 6.11.2 wheel manifests provided no collected license text files.
-  Qt/module/third-party source and notice closure, native ELF/DLL/plugin inventory,
+- The exact Qt 6.11.2 wheel manifests provided no collected license text files;
+  eight license texts were subsequently recovered from the exact official PySide
+  source commit and added with provenance. Qt/module/third-party source and notice
+  closure, native ELF/DLL/plugin inventory,
   Python third-party obligations and AppImage/Inno runtime/stub review remain open.
   The Python 3.14.7 combined license text is included, but audit completion is not
   inferred from it. `RELEASE_LICENSE_AUDIT.md` records evidence and missing items.
@@ -786,3 +789,10 @@ notes, build/packaging/runtime docs, architecture/testing/review guides and the
 release checklist were updated. Normal conversion remains offline; external links
 open only through explicit user actions. Public beta completion must wait for the
 remaining licensing, native build and manual exact-artifact gates.
+
+Source publication attempt: the complete source was committed in a separate
+temporary clone, preserving initial README commit `55e3d27`. GitHub rejected the
+push because the available OAuth credential lacks the `workflow` scope needed for
+the new CI files. Reauthorization was requested; no source push or native Actions
+run is claimed until that permission is available. The primary supplied checkout
+has an empty read-only `.git`, so it could not serve as the publishing repository.

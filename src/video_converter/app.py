@@ -40,14 +40,19 @@ def main() -> int:
     if "--release-smoke" in sys.argv:
         from video_converter.services.release_smoke import run_smoke
         from pathlib import Path
-        index=sys.argv.index("--release-smoke")
-        return run_smoke(runtime,Path(sys.argv[index+1]))
+
+        index = sys.argv.index("--release-smoke")
+        return run_smoke(runtime, Path(sys.argv[index + 1]))
     logging.info("Runtime: %s | %s", runtime.ffmpeg_version, runtime.ffprobe_version)
     try:
         window = MainWindow(runtime)
     except Exception:
         logging.getLogger(__name__).exception("Cactu could not initialize its main window")
-        QMessageBox.critical(None, "Cactu startup error", "Cactu encountered an unexpected startup error. Review the local log folder before trying again.")
+        QMessageBox.critical(
+            None,
+            "Cactu startup error",
+            "Cactu encountered an unexpected startup error. Review the local log folder before trying again.",
+        )
         return 1
     reporter = ErrorReporter(window)
     sys.excepthook = reporter.hook

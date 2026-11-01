@@ -119,3 +119,18 @@ mirror. Before release approval, retain the approved binary inputs and exact
 corresponding sources at maintained locations, with their recorded hashes. The
 current downloader fails closed if an input disappears; a pinned URL alone does
 not guarantee long-term rebuild availability.
+
+### Recovered exact PySide source license payload
+
+The official Qt mirror's `v6.11.2` annotated tag resolves to commit
+`24627cd36e1593adf22eb1f2950e4248e7bcc1ec`. Its eight LICENSES text files were
+retrieved successfully through the official GitHub mirror and retained under
+`licenses/qt-pyside-6.11.2/`, with immutable URLs and SHA-256 values in
+`provenance.json`. Candidate license collection now preserves this directory.
+This supersedes the failed text-download attempt above, but does not establish
+the complete Qt module/native third-party inventory or corresponding-source set.
+
+The BtbN recipe tag resolves to commit
+`5ece62897c650b863c1ddda7b6964845344aef2d`, recorded in the FFmpeg manifest.
+An immutable recipe is useful provenance; it is not a substitute for the exact
+sources and patches for every library in the produced binaries.
