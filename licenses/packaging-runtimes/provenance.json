@@ -25,6 +25,12 @@
       "file": "appimagetool-1.9.1-LICENSE.txt",
       "url": "https://raw.githubusercontent.com/AppImage/appimagetool/8c8c91f762b412a19f4e8d2c4b35afb98f2d7c81/LICENSE",
       "sha256": "d726eb47bb96b7e7f8971a1431575ab4fd8780b5d2efde3552c70ef71469015f"
+    },
+    {
+      "file": "LGPL-2.1.txt",
+      "url": "https://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt",
+      "sha256": "20e50fe7aae3e56378ebf0417d9de904f55a0e61e4df315333e632a4d3555d95",
+      "role": "full LGPL 2.1 text for LGPL-covered embedded library review"
     }
   ]
 }

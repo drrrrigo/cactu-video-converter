@@ -76,7 +76,7 @@ def module_sources(root: Path) -> dict:
                     if (
                         isinstance(entry, tuple)
                         and len(entry) == 3
-                        and str(entry[2]).startswith("PYMODULE")
+                        and str(entry[2]).startswith(("PYMODULE", "PYSOURCE"))
                     ):
                         sources[entry[0]] = Path(entry[1])
     return sources
@@ -91,7 +91,9 @@ def embedded_modules(payload: Path) -> set[str]:
         if executable is None:
             continue
         archive = CArchiveReader(str(executable))
-        for entry in archive.toc:
+        for entry, info in archive.toc.items():
+            if info[-1] == "s":
+                result.add(entry)
             if entry.endswith(".pyz"):
                 result.update(archive.open_embedded_archive(entry).toc)
     for archive in payload.rglob("base_library.zip"):
@@ -140,6 +142,49 @@ def host_package(source: Path) -> dict | None:
     except (OSError, subprocess.SubprocessError, IndexError):
         pass
     return None
+
+
+def container_wrapper(artifact: Path, kind: str, root: Path) -> dict | None:
+    if kind == "extracted-linux-appimage":
+        offset = int(
+            subprocess.run(
+                [str(artifact.resolve()), "--appimage-offset"],
+                capture_output=True,
+                text=True,
+                check=True,
+            ).stdout.strip()
+        )
+        component = read_json(root / "release/component-sources.json")["appimage-runtime"]
+        tool = read_json(root / "release/toolchain.json")["appimage_runtime"]
+        description = (
+            "actual embedded ELF prefix before SquashFS; packaging may modify metadata bytes"
+        )
+    elif kind == "installed-windows":
+        import pefile
+
+        pe = pefile.PE(str(artifact), fast_load=True)
+        offset = pe.get_overlay_data_start_offset() or artifact.stat().st_size
+        pe.close()
+        component = read_json(root / "release/component-sources.json")["inno-setup"]
+        tool = read_json(root / "release/toolchain.json")["inno_setup"]
+        description = (
+            "actual generated PE prefix; installer payload and component terms reviewed separately"
+        )
+    else:
+        return None
+    if not 0 < offset <= artifact.stat().st_size:
+        raise RuntimeError("Invalid executable container boundary")
+    import hashlib
+
+    with artifact.open("rb") as stream:
+        digest = hashlib.sha256(stream.read(offset)).hexdigest()
+    return {
+        "component": component,
+        "prefix_bytes": offset,
+        "prefix_sha256": digest,
+        "pinned_input_sha256": tool["sha256"],
+        "method": description,
+    }
 
 
 def inventory(
@@ -270,6 +315,8 @@ def inventory(
             component = dict(catalog["cactu"])
         elif source and source.is_relative_to(Path(sys.base_prefix)):
             component = dict(catalog["cpython"])
+        elif name == "pyiboot01_bootstrap":
+            component = dict(catalog["pyinstaller"])
         else:
             component = {
                 "project": "UNRESOLVED",
@@ -279,6 +326,9 @@ def inventory(
                 "role": "embedded Python module",
             }
         modules.append({"name": name, "component_id": register(component)})
+    wrapper = container_wrapper(artifact, payload_kind, root)
+    if wrapper:
+        wrapper["component_id"] = register(wrapper.pop("component"))
     unresolved = [
         c
         for c in components.values()
@@ -297,6 +347,7 @@ def inventory(
         "components": list(components.values()),
         "files": records,
         "embedded_python_modules": modules,
+        "executable_container_wrapper": wrapper,
         "components_requiring_review": len(unresolved),
         "system_runtime_boundary": "Host graphics/kernel drivers are not licensed by this inventory; native dependency review remains mandatory",
     }

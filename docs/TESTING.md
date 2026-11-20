@@ -224,10 +224,10 @@ Linux desktop exact-artifact testing.
 
 ## Final preparation (2026-11-20)
 
-Eight release-boundary tests in test_release_preparation.py cover wrong Python patch,
+Nine release-boundary tests in test_release_preparation.py cover wrong Python patch,
 clean commit/dirty-source rejection, actual unknown-file inventory, escaping symlink
 rejection, missing payload evidence, missing external owner approval, incomplete
-manual records and technical-review flag enforcement. The current total is **156**.
+manual records and technical-review flag enforcement. The current total is **157**.
 The existing 148 media/product tests remain present. Release smoke additionally
 compares the actual frozen interpreter's version with the canonical 3.14.7 pin.
 

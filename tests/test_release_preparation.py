@@ -7,15 +7,33 @@ import tempfile
 import unittest
 from pathlib import Path
 from unittest.mock import patch
+from types import SimpleNamespace
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 from build_environment import check_environment
-from payload_inventory import inventory
+from payload_inventory import inventory, embedded_modules
 from release_gate import check_payload_evidence, check_publication, check_manual_record
 from release_policy import distribution_allowed
 
 
 class ReleasePreparationTests(unittest.TestCase):
+    def test_bootstrap_and_entry_scripts_outside_pyz_are_inventoried(self):
+        with tempfile.TemporaryDirectory() as directory:
+            payload = Path(directory)
+            (payload / "CactuVideoConverter").write_bytes(b"synthetic")
+            reader = SimpleNamespace(
+                toc={
+                    "pyiboot01_bootstrap": (0, 0, 0, 0, "s"),
+                    "app": (0, 0, 0, 0, "s"),
+                    "PYZ.pyz": (0, 0, 0, 0, "z"),
+                },
+                open_embedded_archive=lambda name: SimpleNamespace(toc={"video_converter": ()}),
+            )
+            with patch("PyInstaller.archive.readers.CArchiveReader", return_value=reader):
+                self.assertEqual(
+                    embedded_modules(payload), {"pyiboot01_bootstrap", "app", "video_converter"}
+                )
+
     def test_technical_review_cannot_be_bypassed_by_a_redistribution_boolean(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

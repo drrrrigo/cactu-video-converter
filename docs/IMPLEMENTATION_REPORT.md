@@ -944,8 +944,8 @@ closed; no owner approval, beta tag, release or public binary upload is executed
 
 ### Tests, manual status and remaining gates
 
-Eight release-boundary regression tests were added; the full suite now contains
-156 tests. The prior local run of 155 tests passed in 61.848 seconds with the
+Nine release-boundary regression tests were added; the full suite now contains
+157 tests. The prior local run of 155 tests passed in 61.848 seconds with the
 current pinned Python/FFmpeg and physical RX 7700 XT checks. The final additional
 technical-review gate test and focused release suite pass. Fresh complete native
 source/package runs are required for the preparation commit and recorded below

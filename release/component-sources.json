@@ -76,5 +76,14 @@
     "corresponding_source": "https://github.com/jrsoftware/issrc/tree/2527da77ff7983514f535d19391a748c5d898336",
     "notice": "_internal/licenses/packaging-runtimes",
     "review_status": "REVIEW_REQUIRED"
+  },
+  "appimage-runtime": {
+    "project": "AppImage type-2 runtime and static dependencies",
+    "version": "fedfad51acc2860b2916a1eef32ba4a500ff31ef",
+    "license": "MIT plus LGPL and other linked dependency terms",
+    "role": "embedded ELF outside SquashFS; includes libfuse/squashfuse/zstd/zlib/musl/mimalloc",
+    "corresponding_source": "https://github.com/AppImage/type2-runtime/tree/fedfad51acc2860b2916a1eef32ba4a500ff31ef",
+    "notice": "_internal/licenses/packaging-runtimes",
+    "review_status": "BLOCKED"
   }
 }

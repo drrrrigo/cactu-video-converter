@@ -37,7 +37,7 @@ def collect(destination: Path) -> dict:
         copied = []
         for file in dist.files or ():
             lower = Path(str(file)).name.lower()
-            if any(lower.startswith(token) for token in ("license", "copying", "copyright")):
+            if any(lower.startswith(token) for token in ("license", "copying", "copyright", "notice", "gpl", "lgpl")):
                 source = Path(dist.locate_file(file))
                 if source.is_file() and source.suffix.lower() not in {
                     ".pyc",
