@@ -61,12 +61,19 @@ An isolated Alpine 3.21.10 rootfs has been verified against the official release
 SHA-256. A controlled AppImage runtime experiment retains compiler/static-library
 APKs and compiles inside a rootless namespace, leaving the host untouched. Its
 outcome and source/relinking limitations must be recorded before any replacement
-is selected. The existing runtime remains selected until that review/tests pass.
+is selected. The controlled runtime is selected for the next native audit only after its local
+offline repeat reproduced the same SHA-256 and its AppImage passed frozen smoke.
+The integrated builder verifies 99 exact APK inputs, three project source archives
+and its recipe, then compiles without network and checks the expected runtime hash.
+Native CI must repeat that result before this packaging change is accepted.
+Static supplier APK recipes/patches and seven upstream source inputs were also
+retained and verified against their Alpine SHA-512 values. Publication remains gated.
 
 ## Test scope and current decision
 
-The source regression suite currently passes 162 tests locally, including physical
-RX 7700 XT checks. Frozen smoke now exercises external burn/volume/Faststart,
+The first packaging revision passed 163 tests locally, including physical
+RX 7700 XT checks. Eight focused payload/source-boundary tests now bring the
+suite to 165; complete tests must run for the integrated runtime/TLS revision. Frozen smoke now exercises external burn/volume/Faststart,
 Quick Preview, and a sequential two-job queue with embedded burn and loudness
 analysis. Native installer/portable/AppImage builds and inventories are pending
 for this source revision. CI GPU presence must not be inferred from encoder tables.
@@ -75,3 +82,9 @@ Technical closure, human license approval and publication approval remain separa
 No approval flags are set by acquisition or tests. **RC1 may not proceed until the
 remaining exact source/terms/build/relinking evidence is closed.** New audit builds
 are permitted under the existing policy without uploading executable payloads.
+
+Windows Qt TLS uses the documented Schannel backend. The optional OpenSSL TLS
+plugin and its two unrelated host DLLs are excluded; CPython SSL libraries stay.
+The hook requires Schannel before filtering, and frozen Windows smoke requires
+Schannel to initialize as the active TLS backend. See the official Qt 6.11.2
+[SSL backend documentation](https://doc.qt.io/qt-6.11/ssl.html).

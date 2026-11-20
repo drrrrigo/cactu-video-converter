@@ -29,7 +29,12 @@ def install():
         target = download(entry["url"], entry["sha256"], ROOT / "build/tools/appimagetool.AppImage")
         target.chmod(0o755)
         runtime = config["appimage_runtime"]
-        download(runtime["url"], runtime["sha256"], ROOT / "build/tools/runtime-x86_64")
+        if runtime.get("build_method") == "cactu-controlled-offline":
+            from build_controlled_runtime import build
+
+            build()
+        else:
+            download(runtime["url"], runtime["sha256"], ROOT / "build/tools/runtime-x86_64")
         environment = os.environ.copy()
         environment["APPIMAGE_EXTRACT_AND_RUN"] = "1"
         subprocess.run([str(target), "--version"], env=environment, check=True)

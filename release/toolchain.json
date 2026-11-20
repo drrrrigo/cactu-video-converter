@@ -20,11 +20,13 @@
   },
   "appimage_runtime": {
     "source_commit": "fedfad51acc2860b2916a1eef32ba4a500ff31ef",
-    "asset_id": 657374641,
-    "url": "https://api.github.com/repos/AppImage/type2-runtime/releases/assets/657374641",
-    "sha256": "617aa77314d57c8b8e4fae9c3f0b35af7b30d5529cb69e98f64f92510ed98a46",
+    "sha256": "dcf5f5b07d5679e37c5a2decff55a65fc2962c565fdaacbf88eaf2bd4ad61ac4",
     "license": "MIT plus statically linked dependency terms including LGPL-covered libfuse",
-    "role": "embedded executable runtime/stub"
+    "role": "embedded executable runtime/stub",
+    "previous_provider_input_sha256": "617aa77314d57c8b8e4fae9c3f0b35af7b30d5529cb69e98f64f92510ed98a46",
+    "build_method": "cactu-controlled-offline",
+    "source_lock": "release/appimage-controlled-lock.json",
+    "version": "fedfad51-cactu1"
   },
   "python_source": {
     "url": "https://www.python.org/ftp/python/3.14.7/Python-3.14.7.tar.xz",

@@ -1,18 +1,39 @@
 """Packaging provenance must resolve aliases without inventing redistribution rights."""
 
 import sys
+import tempfile
+import json
 import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from qt_payload_policy import filter_gui_plugins
+from qt_payload_policy import filter_gui_plugins, windows_network_plugins
 from payload_inventory import resolve_copy_origin
 from payload_diff import compare_payloads
 from qt_file_mapping import qt_file_mapping
 from retain_ffmpeg_sources import archive_url
+from build_controlled_runtime import build as build_runtime
 
 
 class PayloadResolutionTests(unittest.TestCase):
+    def test_controlled_runtime_refuses_changed_recipe_before_acquiring_inputs(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root / "release").mkdir()
+            (root / "scripts").mkdir()
+            (root / "scripts/build_controlled_appimage_runtime.sh").write_text("changed")
+            (root / "release/appimage-controlled-lock.json").write_text(
+                json.dumps({"build_recipe_sha256": "a" * 64})
+            )
+            with self.assertRaisesRegex(RuntimeError, "recipe changed"):
+                build_runtime(root)
+
+    def test_windows_tls_requires_native_backend_before_excluding_openssl(self):
+        plugins = [("qschannelbackend.dll", "tls"), ("qopensslbackend.dll", "tls")]
+        self.assertEqual(windows_network_plugins(plugins), plugins[:1])
+        with self.assertRaisesRegex(RuntimeError, "Schannel"):
+            windows_network_plugins(plugins[1:])
+
     def test_source_acquisition_rejects_mutable_refs_and_unreviewed_hosts(self):
         for repo, revision in [
             ("https://github.com/FFmpeg/FFmpeg.git", "master"),

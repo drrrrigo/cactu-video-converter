@@ -7,11 +7,13 @@ import json
 import os
 import platform
 import shutil
+import sys
 import subprocess
 from pathlib import Path
 
 from PySide6.QtCore import QEventLoop, QTimer
 from PySide6.QtWidgets import QApplication
+from PySide6.QtNetwork import QSslSocket
 
 from video_converter import __version__
 from video_converter.conversion.planner import plan
@@ -41,6 +43,13 @@ def run_smoke(runtime, directory: Path) -> int:
     }
     try:
         check_writable_environment()
+        report["qt_tls_backends"] = QSslSocket.availableBackends()
+        if sys.platform == "win32":
+            if "schannel" not in report["qt_tls_backends"] or not QSslSocket.supportsSsl():
+                raise RuntimeError("Packaged native Windows TLS backend is unavailable")
+            report["qt_tls_active_backend"] = QSslSocket.activeBackend()
+            if report["qt_tls_active_backend"] != "schannel":
+                raise RuntimeError("Unexpected Qt TLS backend in Windows package")
         # An actual configuration window starts; cloud runners need no physical GPU.
         window = MainWindow(runtime)
         window._startup_timer.stop()

@@ -70,3 +70,14 @@ older size-optimized decoder's linking exception are under
 `licenses/packaging-runtimes/inno-components/`. The SBOM identifies optional
 components as well as the compiler; listing an optional component does not assert
 it is present in the generated installer. No blanket installer approval is given.
+
+## Controlled AppImage runtime audit input
+
+The next audit selects Cactu-controlled fedfad51-cactu1 rather than the opaque
+provider stub. Exact rootfs/APK/source/patch/relink input hashes and the repeated
+runtime hash are in release/appimage-controlled-lock.json. Its source-derived
+static library notices accompany licenses/packaging-runtimes/controlled-runtime.
+The runtime uses libfuse/squashfuse, musl, zstd, zlib, mimalloc and GCC target
+runtime inputs with their individual terms. The source notice collection is a
+conservative superset; only link-map inputs are declared incorporated. Native CI,
+source delivery and human review remain required. This is not beta approval.

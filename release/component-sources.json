@@ -79,11 +79,11 @@
   },
   "appimage-runtime": {
     "project": "AppImage type-2 runtime and static dependencies",
-    "version": "fedfad51acc2860b2916a1eef32ba4a500ff31ef",
+    "version": "fedfad51-cactu1",
     "license": "MIT plus LGPL and other linked dependency terms",
-    "role": "embedded ELF outside SquashFS; includes libfuse/squashfuse/zstd/zlib/musl/mimalloc",
-    "corresponding_source": "https://github.com/AppImage/type2-runtime/tree/fedfad51acc2860b2916a1eef32ba4a500ff31ef",
+    "role": "Cactu-controlled offline static runtime; exact inputs and relink material retained",
+    "corresponding_source": "release/appimage-controlled-lock.json plus retained source/patch/relink material",
     "notice": "_internal/licenses/packaging-runtimes",
-    "review_status": "BLOCKED"
+    "review_status": "REVIEW_REQUIRED"
   }
 }
