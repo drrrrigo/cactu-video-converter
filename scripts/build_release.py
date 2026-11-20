@@ -25,6 +25,8 @@ from collect_licenses import collect
 from package_smoke import smoke
 from release_common import ROOT, platform_id, read_json, sha256
 from verify_ffmpeg import validate
+from build_environment import check_environment
+from payload_inventory import inventory
 
 
 def sign(file: Path) -> bool:
@@ -62,14 +64,34 @@ def main() -> int:
         action="store_true",
         help="Internal candidate only; does not approve redistribution",
     )
+    parser.add_argument(
+        "--rc1",
+        action="store_true",
+        help="Private RC1; requires completed technical license/source review",
+    )
     args = parser.parse_args()
-    if not args.candidate:
+    if args.candidate == args.rc1:
         raise RuntimeError(
-            "Build an internal --candidate first; publish only the exact reviewed artifacts via the release workflow"
+            "Choose exactly one of --candidate (audit only) or --rc1 (technically reviewed private RC)"
         )
+    if args.rc1:
+        if (
+            read_json(ROOT / "release/config.json").get("technical_license_audit_complete")
+            is not True
+        ):
+            raise RuntimeError("RC1 blocked: technical license/source review is incomplete")
+        if any(
+            e.get("corresponding_source_complete") is not True
+            for e in read_json(ROOT / "vendor/ffmpeg/manifest.json").values()
+        ):
+            raise RuntimeError("RC1 blocked: FFmpeg corresponding sources are incomplete")
+    environment_evidence = check_environment()
+    os.environ["SOURCE_DATE_EPOCH"] = str(environment_evidence["source_date_epoch"])
     config = read_json(ROOT / "release/toolchain.json")
     target = platform_id()
-    runtime = validate(target)
+    output = ROOT / "dist/candidate"
+    output.mkdir(parents=True, exist_ok=True)
+    runtime = validate(target, evidence_path=output / (target + "-runtime-evidence.json"))
     licenses = ROOT / "build/licenses"
     if licenses.exists():
         shutil.rmtree(licenses)
@@ -88,17 +110,19 @@ def main() -> int:
         check=True,
     )
     bundle = ROOT / "dist" / EXECUTABLE_NAME
-    output = ROOT / "dist/candidate"
-    output.mkdir(parents=True, exist_ok=True)
     executable = bundle / (EXECUTABLE_NAME + (".exe" if sys.platform == "win32" else ""))
     signed = sign(executable)
     smoke(executable, destination=output / (target + "-onedir-smoke.json"))
     evidence = {
         "version": __version__,
         "target": target,
-        "python": platform.python_version(),
-        "python_pin": config["python"],
-        "python_pin_matches": platform.python_version() == config["python"],
+        **environment_evidence,
+        "candidate_stage": "RC1" if args.rc1 else "AUDIT_ONLY_NOT_RC1",
+        "candidate_id": __version__ + ("-rc1" if args.rc1 else "-audit"),
+        "platform": platform.platform(),
+        "runner_image": os.environ.get("ImageOS"),
+        "runner_image_version": os.environ.get("ImageVersion"),
+        "packaging_toolchain": config,
         "signed": signed,
         "artifacts": {},
         "candidate_only": True,
@@ -116,6 +140,14 @@ def main() -> int:
                 Path(temporary) / EXECUTABLE_NAME / (EXECUTABLE_NAME + ".exe"),
                 destination=output / (target + "-portable-smoke.json"),
             )
+            inventory(
+                Path(temporary) / EXECUTABLE_NAME,
+                archive,
+                payload_kind="extracted-windows-portable",
+                target=target,
+                destination=output / (target + "-portable-payload.json"),
+                final_rc=args.rc1,
+            )
         iscc = ROOT / "build/tools/inno/ISCC.exe"
         if not iscc.is_file():
             raise RuntimeError("Run scripts/install_packaging_tool.py for pinned Inno Setup first")
@@ -129,7 +161,11 @@ def main() -> int:
         shutil.copy2(installer, output / installer.name)
         from smoke_installer import test_installer
 
-        test_installer(output / installer.name)
+        test_installer(
+            output / installer.name,
+            inventory_destination=output / (target + "-installed-payload.json"),
+            final_rc=args.rc1,
+        )
         evidence["artifacts"] = {p.name: sha256(p) for p in (archive, output / installer.name)}
     else:
         appdir = ROOT / "build" / f"{EXECUTABLE_NAME}.AppDir"
@@ -160,11 +196,37 @@ def main() -> int:
             check=True,
         )
         smoke(destination, destination=output / (target + "-appimage-smoke.json"))
+        with tempfile.TemporaryDirectory(prefix="cactu-inventory-") as temporary:
+            subprocess.run(
+                [str(destination.resolve()), "--appimage-extract"],
+                cwd=temporary,
+                check=True,
+                capture_output=True,
+            )
+            inventory(
+                Path(temporary) / "squashfs-root",
+                destination,
+                payload_kind="extracted-linux-appimage",
+                target=target,
+                destination=output / (target + "-appimage-payload.json"),
+                final_rc=args.rc1,
+            )
         evidence["artifacts"] = {destination.name: sha256(destination)}
+    if args.rc1:
+        reports = list(output.glob(target + "-*-payload.json"))
+        if not reports or any(
+            read_json(p).get("technical_license_complete") is not True for p in reports
+        ):
+            raise RuntimeError("RC1 blocked: actual packaged-payload license review is incomplete")
+    (output / (target + "-SHA256SUMS.txt")).write_text(
+        "".join(f"{digest}  {name}\n" for name, digest in sorted(evidence["artifacts"].items())),
+        encoding="utf-8",
+    )
     (output / (target + "-build.json")).write_text(
         json.dumps(evidence, indent=2) + "\n", encoding="utf-8"
     )
     print("Internal candidate artifacts: " + str(output))
+    print(json.dumps(evidence, indent=2))
     return 0
 
 

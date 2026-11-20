@@ -10,9 +10,9 @@ diagnostics or logs.
 ## Download
 
 Use the [official GitHub Releases](https://github.com/drrrrigo/cactu-video-converter/releases).
-The first target is **v0.1.0-beta.1 — Public Beta**. Only packages attached to an
-approved pre-release are public downloads; build candidates are not approved releases.
-If no pre-release is listed, beta hardening is still in progress.
+**The first public beta, v0.1.0-beta.1, is being prepared. No public beta binaries
+are available yet.** The names below are planned release assets, not download links.
+Only packages attached to an approved pre-release are public downloads.
 
 | Platform | Download |
 | --- | --- |
@@ -24,6 +24,7 @@ If no pre-release is listed, beta hardening is still in progress.
 Published packages include Python, Qt/PySide6, FFmpeg and FFprobe. You do not need to
 install Python, pip or system FFmpeg. macOS, ARM and Windows ARM are unsupported.
 See [installation](docs/INSTALLATION.md) and [known beta limitations](KNOWN_ISSUES.md).
+Preparation status is tracked in the [authoritative beta.1 checklist](docs/BETA1_RELEASE_CHECKLIST.md).
 
 ## Features
 

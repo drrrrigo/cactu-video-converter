@@ -1,0 +1,30 @@
+{
+  "complete_redistribution_audit": false,
+  "files": [
+    {
+      "file": "AppImage-runtime-LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/AppImage/type2-runtime/fedfad51acc2860b2916a1eef32ba4a500ff31ef/LICENSE",
+      "sha256": "aa154fc9070614bbe7921f89db11efd1dba7a1f3a41685958110e2230f9c0ca1"
+    },
+    {
+      "file": "Inno-Setup-7.1.1-LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/jrsoftware/issrc/2527da77ff7983514f535d19391a748c5d898336/license.txt",
+      "sha256": "2e5346868c2a18434489824e11d65c3031620f792fefc415d05f19cd441abf5c"
+    },
+    {
+      "file": "AppImage-runtime-build.sh",
+      "url": "https://raw.githubusercontent.com/AppImage/type2-runtime/fedfad51acc2860b2916a1eef32ba4a500ff31ef/scripts/build-runtime.sh",
+      "sha256": "97d4dde12492ad62f7345961897ba1585d62e7a856fb606c0f44767a9146677d"
+    },
+    {
+      "file": "PyInstaller-6.16.0-COPYING.txt",
+      "url": "https://raw.githubusercontent.com/pyinstaller/pyinstaller/v6.16.0/COPYING.txt",
+      "sha256": "dcf75fdb959db1e3b41c0f8505069d2ece781b5ec6b3d0a4d30975cfc6580245"
+    },
+    {
+      "file": "appimagetool-1.9.1-LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/AppImage/appimagetool/8c8c91f762b412a19f4e8d2c4b35afb98f2d7c81/LICENSE",
+      "sha256": "d726eb47bb96b7e7f8971a1431575ab4fd8780b5d2efde3552c70ef71469015f"
+    }
+  ]
+}

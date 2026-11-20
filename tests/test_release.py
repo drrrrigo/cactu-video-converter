@@ -16,7 +16,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 from branding_metadata import __version__, write_windows_metadata
 from checksums import expected_names, generate
 from release_common import safe_member, download
-from release_gate import check_publication
+from release_gate import check_publication, MANUAL_SCENARIOS
 from stage_ffmpeg import unpack
 from video_converter import __package_version__
 from video_converter.ffmpeg.capabilities import REQUIRED, require_capabilities, table_names
@@ -129,6 +129,7 @@ class ReleaseIntegrityTests(unittest.TestCase):
                 "source_license": "GPL-3.0-or-later",
                 "publication_approved": True,
                 "license_audit_approved": True,
+                "technical_license_audit_complete": True,
                 "security_audit_approved": True,
                 "manual_candidate_evidence": "evidence.json",
             }
@@ -136,10 +137,14 @@ class ReleaseIntegrityTests(unittest.TestCase):
             (root / "vendor/ffmpeg/manifest.json").write_text(
                 json.dumps(
                     {
-                        "linux": {
+                        "linux-x86_64": {
                             "redistribution_approved": True,
                             "corresponding_source_complete": True,
-                        }
+                        },
+                        "windows-x86_64": {
+                            "redistribution_approved": True,
+                            "corresponding_source_complete": True,
+                        },
                     }
                 )
             )
@@ -150,23 +155,66 @@ class ReleaseIntegrityTests(unittest.TestCase):
                 "linux_desktop": {"passed": True},
                 "artifacts": {},
             }
+            for name, cases in MANUAL_SCENARIOS.items():
+                evidence[name].update(
+                    tester="synthetic fixture",
+                    test_date="2026-11-20",
+                    os_build="synthetic",
+                    distribution="synthetic",
+                    kernel="synthetic",
+                    display_stack="synthetic",
+                    scenario_results={case: "PASS" for case in cases},
+                )
             for name in expected_names():
                 (root / name).write_bytes(b"tested")
                 evidence["artifacts"][name] = hashlib.sha256(b"tested").hexdigest()
+            for report_name, name in zip(
+                (
+                    "windows-x86_64-installed-payload.json",
+                    "windows-x86_64-portable-payload.json",
+                    "linux-x86_64-appimage-payload.json",
+                ),
+                expected_names(),
+            ):
+                (root / report_name).write_text(
+                    json.dumps(
+                        {
+                            "source_commit": "a" * 40,
+                            "technical_license_complete": True,
+                            "final_rc": True,
+                            "components_requiring_review": 0,
+                            "files": [{"path": "synthetic"}],
+                            "components": [{"review_status": "TECHNICAL_EVIDENCE"}],
+                            "artifact": {"filename": name, "sha256": evidence["artifacts"][name]},
+                        }
+                    )
+                )
             (root / "evidence.json").write_text(json.dumps(evidence))
+            (root / "owner.json").write_text(
+                json.dumps(
+                    {
+                        "approved": True,
+                        "approved_by": "drrrrigo",
+                        "approved_at": "2026-11-20",
+                        "version": __version__,
+                        "source_commit": "a" * 40,
+                        "artifacts": evidence["artifacts"],
+                    }
+                )
+            )
             with patch("release_gate.source_commit", return_value="a" * 40):
-                check_publication(root, root=root)
+                check_publication(root, root=root, owner_approval_path=Path("owner.json"))
             (root / expected_names()[0]).write_bytes(b"different binary")
             with (
                 patch("release_gate.source_commit", return_value="a" * 40),
                 self.assertRaisesRegex(RuntimeError, "differs"),
             ):
-                check_publication(root, root=root)
+                check_publication(root, root=root, owner_approval_path=Path("owner.json"))
             with (
                 patch("release_gate.source_commit", return_value="b" * 40),
                 self.assertRaisesRegex(RuntimeError, "different source"),
             ):
-                check_publication(root, root=root)
+                check_publication(root, root=root, owner_approval_path=Path("owner.json"))
 
 
 class StartupAndDiagnosticsTests(unittest.TestCase):

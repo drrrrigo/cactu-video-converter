@@ -1,5 +1,7 @@
 # Cactu Video Converter v0.1.0-beta.1
 
+**Draft — not published.** Preparation status is in BETA1_RELEASE_CHECKLIST.md.
+
 ## First Public Beta
 
 This is beta software. Expect bugs, platform-specific issues and hardware encoder
@@ -16,14 +18,21 @@ GitHub pre-release are public downloads; unfinished candidates are not releases.
 
 ## Downloads and platforms
 
-Windows 11 x86_64: versioned Setup executable (recommended) or complete Portable ZIP.
-Linux x86_64: versioned AppImage. Python, Qt, FFmpeg and FFprobe are included in
+Planned approved release assets:
+
+- Windows 11 x86_64 installer: `CactuVideoConverter-Setup-0.1.0-beta.1.exe`
+- Windows 11 x86_64 portable: `CactuVideoConverter-Portable-0.1.0-beta.1.zip`
+- Linux x86_64: `CactuVideoConverter-0.1.0-beta.1-x86_64.AppImage`
+- Integrity: generated `SHA256SUMS.txt`
+
+No public beta asset is available yet. Python, Qt, FFmpeg and FFprobe are included in
 approved packages. macOS and ARM are unsupported. The Linux baseline is documented
 in INSTALLATION.md; one development-distro test does not establish universal support.
 
 SHA256SUMS.txt is generated from the final files. Compare hashes and obtain downloads
 only from https://github.com/drrrrigo/cactu-video-converter/releases. Beta.1 is
-unsigned unless explicitly identified otherwise; do not disable platform protection
+prepared as an **unsigned beta build** unless signing is explicitly configured
+and verified before final approval; do not disable platform protection
 globally to run it. Source review/checksums do not replace publisher identity checks.
 
 ## Hardware and known limitations

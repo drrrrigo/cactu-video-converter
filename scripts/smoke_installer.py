@@ -7,7 +7,9 @@ from pathlib import Path
 from package_smoke import smoke
 
 
-def test_installer(installer: Path):
+def test_installer(
+    installer: Path, *, inventory_destination: Path | None = None, final_rc: bool = False
+):
     if sys.platform != "win32":
         raise RuntimeError("Installer testing requires native Windows")
     with tempfile.TemporaryDirectory(prefix="cactu-installed-smoke-") as folder:
@@ -26,6 +28,17 @@ def test_installer(installer: Path):
         )
         try:
             smoke(target / "CactuVideoConverter.exe")
+            if inventory_destination:
+                from payload_inventory import inventory
+
+                inventory(
+                    target,
+                    installer,
+                    payload_kind="installed-windows",
+                    target="windows-x86_64",
+                    destination=inventory_destination,
+                    final_rc=final_rc,
+                )
         finally:
             subprocess.run(
                 [str(target / "unins000.exe"), "/VERYSILENT", "/SUPPRESSMSGBOXES", "/NORESTART"],

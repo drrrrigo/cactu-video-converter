@@ -7,8 +7,11 @@ not a developer environment. Beta source version is centralized in
 
 ## Pinned environment
 
-Use **CPython 3.14.7**, an isolated venv and `python -m pip install -r
-release/requirements.txt`. That file pins runtime/build/test dependencies including
+Use **standard CPython 3.14.7**, an isolated venv and
+`python -m pip install --require-hashes --only-binary=:all: -r release/requirements.lock`.
+That file locks exact wheel hashes; requirements.txt remains the readable version
+input and dependency-provenance.json records upstream metadata/source hashes.
+The lock pins runtime/build/test dependencies including
 transitive build tools. Native packager/runtime inputs and hashes are in
 release/toolchain.json. CI targets ubuntu-22.04 and windows-2025; hosted image
 contents can change, so this is not a claim of bit-for-bit reproducibility across
@@ -26,7 +29,14 @@ exact pinned build archive, verifies it before extraction/execution, extracts on
 fixed binary/license members and validates native capabilities/build identity.
 `python scripts/install_packaging_tool.py` obtains fixed packager/runtime assets.
 `python scripts/build_release.py --candidate` builds/tests an **internal** candidate.
-It does not approve redistribution or publish a release. Windows builds natively;
+It refuses the wrong Python patch and dirty/uncommitted source; use a clean Git
+clone, not an exported source directory with an empty .git. It records the actual
+source SHA and creates actual artifact payload inventories. `--rc1` additionally
+requires completed technical/source review; current blockers prevent declaring RC1.
+The old local Python 3.14.8 image is superseded. The developer interpreter may
+differ, but release packages may not. Official 3.14.7 source and CI-family Linux
+interpreter hashes are recorded in toolchain.json for audit.
+No build command approves redistribution or publishes a release. Windows builds natively;
 Linux builds natively. Do not cross-build Windows installers from Linux.
 
 A source-only fallback is explicit:

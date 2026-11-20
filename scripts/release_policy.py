@@ -11,11 +11,20 @@ from branding_metadata import __version__
 
 def distribution_allowed(root=ROOT):
     config = read_json(root / "release/config.json")
+    if config.get("technical_license_audit_complete") is not True:
+        raise RuntimeError(
+            "Binary distribution blocked: technical dependency/source review is incomplete"
+        )
     if config.get("license_audit_approved") is not True:
         raise RuntimeError(
             "Binary distribution blocked: exact dependency/license/source audit not approved"
         )
-    for entry in read_json(root / "vendor/ffmpeg/manifest.json").values():
+    manifest = read_json(root / "vendor/ffmpeg/manifest.json")
+    if set(manifest) != {"linux-x86_64", "windows-x86_64"}:
+        raise RuntimeError(
+            "Binary distribution blocked: both exact platform manifests are required"
+        )
+    for entry in manifest.values():
         if (
             entry.get("redistribution_approved") is not True
             or entry.get("corresponding_source_complete") is not True
@@ -44,4 +53,11 @@ if __name__ == "__main__":
         target = ROOT / "build/manual-promotion.json"
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(json.dumps(evidence))
-        check_publication(args.artifacts, evidence_path=target)
+        approval_raw = os.environ.get("BETA_OWNER_APPROVAL", "")
+        if not approval_raw:
+            raise RuntimeError(
+                "Explicit owner publication approval is missing from the protected environment"
+            )
+        approval = ROOT / "build/owner-publication-approval.json"
+        approval.write_text(json.dumps(json.loads(approval_raw)))
+        check_publication(args.artifacts, evidence_path=target, owner_approval_path=approval)

@@ -1,0 +1,80 @@
+{
+  "cactu": {
+    "project": "Cactu Video Converter",
+    "version": "0.1.0-beta.1",
+    "license": "GPL-3.0-or-later",
+    "role": "application source/resources",
+    "corresponding_source": "https://github.com/drrrrigo/cactu-video-converter",
+    "notice": "_internal/LICENSE",
+    "review_status": "TECHNICAL_EVIDENCE"
+  },
+  "cpython": {
+    "project": "CPython",
+    "version": "3.14.7",
+    "license": "Python-2.0 AND included third-party terms",
+    "role": "interpreter/stdlib",
+    "corresponding_source": "https://www.python.org/ftp/python/3.14.7/Python-3.14.7.tar.xz",
+    "notice": "_internal/licenses/Python-3.14.7.txt",
+    "review_status": "REVIEW_REQUIRED"
+  },
+  "pyside6": {
+    "license": "GPL-3.0-only (proposed option; module/third-party audit pending)",
+    "role": "Qt Python bindings actually present",
+    "corresponding_source": "https://github.com/qtproject/pyside-pyside-setup/tree/24627cd36e1593adf22eb1f2950e4248e7bcc1ec",
+    "notice": "_internal/licenses/qt-pyside-6.11.2",
+    "review_status": "REVIEW_REQUIRED"
+  },
+  "pyside6-essentials": {
+    "license": "module terms and included third-party terms",
+    "role": "actual Qt/binding files from Essentials wheel",
+    "corresponding_source": "https://download.qt.io/archive/qt/6.11/6.11.2/",
+    "notice": "_internal/licenses/qt-pyside-6.11.2",
+    "review_status": "REVIEW_REQUIRED"
+  },
+  "pyside6-addons": {
+    "license": "module terms and included third-party terms",
+    "role": "actual Qt files from Addons wheel; not the whole distribution",
+    "corresponding_source": "https://download.qt.io/archive/qt/6.11/6.11.2/",
+    "notice": "_internal/licenses/qt-pyside-6.11.2",
+    "review_status": "REVIEW_REQUIRED"
+  },
+  "shiboken6": {
+    "license": "GPL-3.0-only (proposed option; source review pending)",
+    "role": "binding runtime",
+    "corresponding_source": "https://github.com/qtproject/pyside-pyside-setup/tree/24627cd36e1593adf22eb1f2950e4248e7bcc1ec",
+    "notice": "_internal/licenses/qt-pyside-6.11.2",
+    "review_status": "REVIEW_REQUIRED"
+  },
+  "psutil": {
+    "license": "BSD-3-Clause",
+    "role": "process control runtime",
+    "corresponding_source": "https://pypi.org/project/psutil/7.2.2/#files",
+    "notice": "_internal/licenses/psutil/psutil-7.2.2.dist-info/LICENSE",
+    "review_status": "TECHNICAL_EVIDENCE"
+  },
+  "pyinstaller": {
+    "project": "PyInstaller",
+    "version": "6.16.0",
+    "license": "GPL-2.0-or-later WITH bootloader exception (see COPYING.txt)",
+    "role": "bootloader/runtime hooks only; compiler is build-only",
+    "corresponding_source": "https://github.com/pyinstaller/pyinstaller/tree/v6.16.0",
+    "notice": "_internal/licenses/PyInstaller/pyinstaller-6.16.0.dist-info/licenses/COPYING.txt",
+    "review_status": "TECHNICAL_EVIDENCE"
+  },
+  "ffmpeg": {
+    "project": "FFmpeg/FFprobe and statically linked dependencies",
+    "license": "GPL-3.0-or-later plus included dependency terms",
+    "role": "media executables",
+    "notice": "_internal/licenses/FFmpeg-LICENSE.txt",
+    "review_status": "BLOCKED"
+  },
+  "inno-setup": {
+    "project": "Inno Setup",
+    "version": "7.1.1",
+    "license": "Inno Setup License and component terms",
+    "role": "installer/uninstaller code",
+    "corresponding_source": "https://github.com/jrsoftware/issrc/tree/2527da77ff7983514f535d19391a748c5d898336",
+    "notice": "_internal/licenses/packaging-runtimes",
+    "review_status": "REVIEW_REQUIRED"
+  }
+}

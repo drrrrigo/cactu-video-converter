@@ -278,3 +278,29 @@ publishes only a GitHub pre-release. Inspect source/history secret audits, ignor
 personal mockup/development artifacts and private security reporting. Release tests
 cover versions, tables, archive paths/hashes, writable environment, frozen fallback,
 diagnostic privacy, publication blockers and atomic no-overwrite behavior.
+
+## Final beta.1 preparation
+
+Use BETA1_RELEASE_CHECKLIST.md as the current state, and both MANUAL_TEST_*_BETA1.md
+guides for concrete desktop evidence. Review build_environment.py for exact Python
+3.14.7, standard CPython ABI, clean source SHA and dependency checks. requirements.lock
+enforces wheel hashes. package_smoke.py verifies the actual frozen Python version.
+No normal application UI/processing workflow is changed by these release checks.
+
+payload_inventory.py walks actual installed/extracted bytes and inspects executable
+PYZ/base-library module tables. TOC and wheel RECORD files are provenance helpers,
+not substitutes for actual payload enumeration. Native ELF/PE dependencies and build
+OS package origins are recorded where known; missing sources/notices remain blocked.
+The environment notice collector explicitly distinguishes its limited scope.
+
+Review current FFmpeg inputs/source archive evidence, expired/rejected prior inputs,
+and native -version/-buildconf/-L outputs. Review static AppImage runtime dependencies
+and Inno stub terms separately from build-only tooling. Technical completeness and
+redistribution flags remain false; hashes/tests alone do not approve licenses.
+
+The release workflow may retain only generated JSON/checksum text before its
+binary gate. Final publication additionally needs complete exact-payload inventories,
+required manual scenario results and BETA_OWNER_APPROVAL from the protected environment.
+Owner approval binds the same source/artifact hashes without changing the tested
+commit. No committed publication boolean alone authorizes release. Preparation must
+never execute a beta tag, create a release or upload application binaries publicly.

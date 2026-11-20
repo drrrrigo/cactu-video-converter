@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import subprocess
+import json
 import sys
 from pathlib import Path
 
@@ -14,7 +15,9 @@ from video_converter.ffmpeg.capabilities import capability_tables, require_capab
 MANIFEST = ROOT / "vendor/ffmpeg/manifest.json"
 
 
-def validate(platform: str, *, directory: Path | None = None) -> Path:
+def validate(
+    platform: str, *, directory: Path | None = None, evidence_path: Path | None = None
+) -> Path:
     if not MANIFEST.is_file():
         raise RuntimeError("FFmpeg provenance manifest is missing")
     entry = read_json(MANIFEST)[platform]
@@ -31,9 +34,10 @@ def validate(platform: str, *, directory: Path | None = None) -> Path:
     suffix = ".exe" if platform.startswith("windows") else ""
 
     def output(binary, flag):
-        return subprocess.run(
+        result = subprocess.run(
             [str(binary), flag], capture_output=True, text=True, check=True, timeout=20
-        ).stdout
+        )
+        return result.stdout + result.stderr
 
     identities = []
     for name in ("ffmpeg", "ffprobe"):
@@ -69,6 +73,39 @@ def validate(platform: str, *, directory: Path | None = None) -> Path:
         )
     if not entry.get("source_recipe") or not entry.get("license"):
         raise RuntimeError("FFmpeg licensing provenance missing")
+    binary = directory / ("ffmpeg" + suffix)
+    license_output = output(binary, "-L")
+    normalized_license = " ".join(license_output.split())
+    if (
+        "GNU General Public License" not in normalized_license
+        or "version 3" not in normalized_license
+    ):
+        raise RuntimeError("Exact FFmpeg -L output does not confirm expected GPL version 3 terms")
+    if evidence_path:
+        evidence_path.parent.mkdir(parents=True, exist_ok=True)
+        evidence_path.write_text(
+            json.dumps(
+                {
+                    "target": platform,
+                    "build_id": entry["build_id"],
+                    "archive_filename": entry.get("archive_filename"),
+                    "archive_sha256": entry["archive_sha256"],
+                    "ffmpeg_sha256": sha256(binary),
+                    "ffprobe_sha256": sha256(directory / ("ffprobe" + suffix)),
+                    "ffmpeg_version": output(binary, "-version"),
+                    "ffprobe_version": output(directory / ("ffprobe" + suffix), "-version"),
+                    "ffmpeg_buildconf": output(binary, "-buildconf"),
+                    "ffmpeg_license": license_output,
+                    "mandatory_capabilities_passed": True,
+                    "nonfree": False,
+                    "capability_tables": {flag: sorted(values) for flag, values in tables.items()},
+                    "redistribution_approved": False,
+                },
+                indent=2,
+            )
+            + "\n",
+            encoding="utf-8",
+        )
     print(f"Verified exact {platform} FFmpeg/FFprobe build {identities[0]}")
     return directory
 

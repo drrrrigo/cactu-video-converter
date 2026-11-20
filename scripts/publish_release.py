@@ -13,7 +13,11 @@ from release_gate import check_publication
 if __name__ == "__main__":
     directory = Path(sys.argv[1])
     distribution_allowed()
-    check_publication(directory, evidence_path=ROOT / "build/manual-promotion.json")
+    check_publication(
+        directory,
+        evidence_path=ROOT / "build/manual-promotion.json",
+        owner_approval_path=ROOT / "build/owner-publication-approval.json",
+    )
     tag = "v" + __version__
     if os.environ.get("GITHUB_REF") != "refs/tags/" + tag:
         raise RuntimeError("Unexpected release ref")

@@ -41,6 +41,14 @@ def smoke(executable: Path, *, destination: Path | None = None) -> dict:
                 f"Packaged application smoke failed (exit {result.returncode}): {result.stderr[-3000:]}"
             )
         report = json.loads(report_path.read_text())
+        expected_python = json.loads(
+            (Path(__file__).resolve().parents[1] / "release/toolchain.json").read_text()
+        )["python"]
+        if (
+            report.get("python") != expected_python
+            or report.get("python_implementation") != "CPython"
+        ):
+            raise RuntimeError("Packaged Python runtime differs from the canonical release pin")
         if not all(
             report.get(key)
             for key in ("ok", "frozen", "runtime_bundled", "faststart", "original_unchanged")

@@ -5,6 +5,7 @@ from __future__ import annotations
 import hashlib
 import json
 import os
+import platform
 import subprocess
 from pathlib import Path
 
@@ -26,6 +27,8 @@ def run_smoke(runtime, directory: Path) -> int:
     directory.mkdir(parents=True, exist_ok=True)
     report = {
         "version": __version__,
+        "python": platform.python_version(),
+        "python_implementation": platform.python_implementation(),
         "frozen": bool(getattr(__import__("sys"), "frozen", False)),
         "ok": False,
     }

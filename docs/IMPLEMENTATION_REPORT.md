@@ -854,3 +854,115 @@ cloud runner files are not a retained, approved release-candidate set. No combin
 final SHA256SUMS or final tag was created. After source/license closure, rebuild a
 candidate from the final reviewed commit, retain it, perform the required manual
 tests and promote those exact bytes through the protected release workflow.
+
+## Final beta.1 preparation — 2026-11-20
+
+**Preparation in progress; license/source closure BLOCKED; no final RC1 declared.**
+Authoritative status is docs/BETA1_RELEASE_CHECKLIST.md. The inspected public main
+was `da4d64db0567c94d0b11acfdb4e1de83022154b6`, clean and byte-identical to the supplied
+workspace. There was no public beta tag or GitHub release. The workspace's empty,
+read-only .git requires a separate clean clone for source commits/build receipts.
+This milestone changes release tooling/evidence only, with no new product feature,
+UI redesign, preset/codec/concurrency or media-pipeline refactor.
+
+### Runtime and dependency consistency
+
+The explicit canonical release decision is **standard CPython 3.14.7**. CI had not
+intentionally moved its pin, so the old locally built 3.14.8 image is superseded.
+build_environment.py rejects another patch version, a free-threaded/non-CPython
+interpreter, dirty/uncommitted source and installed dependency-version mismatches
+before packaging. Receipts include the exact source SHA, interpreter hash/ABI,
+lock hash, SOURCE_DATE_EPOCH, dependency versions and native runner image version.
+Frozen smoke reports the actual packaged Python version; the outer smoke helper
+rejects mismatches. The host's development Python 3.14.10 is not a release runtime.
+
+Local audit testing uses the same Ubuntu 22.04 / CPython 3.14.7 build family as CI,
+archive SHA-256 `938c95f002a952aa24d7dbc4a6df353e0c9bb22152cafdb7da79e0beb79ae251`.
+The official Python source SHA is recorded in toolchain.json and retained locally.
+A source-build attempt against the host's OpenSSL 4 could not import _ssl and was
+discarded; it is not a candidate runtime. No system Python/OpenSSL was changed.
+
+release/requirements.lock now records wheel SHA-256 values for 21 exact release
+dependencies and CI installs with --require-hashes / --only-binary. Corresponding
+PyPI metadata, source hashes and URLs are in dependency-provenance.json. Existing
+pins remain Qt/PySide/Shiboken 6.11.2, psutil 7.2.2, PyInstaller 6.16.0, hooks 2025.9,
+Inno Setup 7.1.1, appimagetool 1.9.1 and the independently hashed AppImage runtime.
+The notice collector no longer mistakes packaging/licenses/*.py implementation
+files for license texts; it explicitly labels its build-environment-only scope.
+
+### FFmpeg input availability and source audit
+
+The Nov 1 daily provider release now returns HTTP 404. A retained Oct 31 build was
+investigated, then rejected as a final input: it omitted three later fixes, including
+Ogg error handling and chained Vorbis parsing. The current audit/testing input is
+**n9.0.2-61-gd59078794d-20261120**, with source revision
+`d59078794d80f5256d5def27e10bb5400a13195c` and recipe
+`7f2a6b1050d302144de8366afa37a75e46f326aa`. Exact archive names/member hashes/
+configuration are in vendor/ffmpeg/manifest.json. Linux archive SHA is
+`080e804801eac92399a98687575b64aa38e557ed651cc381dfbc1e8fe5c2ccd8`;
+Windows archive SHA is `b9c8240dc689c1967768b6f421905ed2b9ad8d9cc033dc99e701d39171a39b19`.
+Both were hash-checked before extraction/execution. Native validation retains actual
+-version/-buildconf/-L and capability evidence, and checks actual GPL v3 output.
+No nonfree configuration is accepted. This is an audit input, not an approved RC.
+
+Exact FFmpeg core/recipe, AppImage runtime, libfuse 3.15.0, squashfuse 0.5.2, Inno
+and Python source archives are retained in the ignored local source cache, with
+hashes/immutable references in source-evidence.json. Packaging-runtime license texts
+and provenance were added. This narrows the gaps but does not establish complete
+correspondence/notices for all statically linked FFmpeg libraries, Qt/native files
+or the complete embedded AppImage runtime. Its Makefile also links mimalloc and its
+Alpine-derived inputs are not fully version-pinned in the root MIT notice. LGPL
+libfuse obligations remain distinct from Qt DLL replacement. The audit separates
+observations, obligations, unresolved questions and human approval. Source/technical/
+redistribution flags remain false. The controlled-build contingency is documented;
+no unverified replacement or reduced functionality was introduced.
+
+### Artifact inventory and owner approval
+
+payload_inventory.py walks actual extracted portable/AppImage and installed Windows
+files, hashes every file, inspects executable PYZ/base-library module tables and
+records ELF/PE dependencies. TOC/RECORD/OS package data identify origins only for
+files/modules actually present; the environment is not substituted for the payload.
+Unknown versions/terms/sources/notices remain open reviews. Installed and portable
+inventories are separate; installer/uninstaller runtime code is identified.
+
+The candidate workflow retains generated JSON/checksum text only before the
+unchanged public-binary gate. No application/FFmpeg/Qt/Python binary is included in
+those reports. All three final exact-payload reports must be complete, source/hash
+matched and marked RC before the publisher can pass. --candidate is explicitly
+AUDIT_ONLY_NOT_RC1; --rc1 refuses incomplete technical/source review and unresolved
+actual payloads. The RC stage label would be 0.1.0-beta.1-rc1 with the final embedded
+application version 0.1.0-beta.1. No RC1 has been generated while those gates fail.
+
+A release-workflow bug was corrected: committing a final publication boolean after
+manual tests would change the tested SHA. Final owner approval is instead an
+external protected-environment attestation, bound to owner/date/version/source SHA
+and all three exact artifact hashes. A source boolean alone cannot publish.
+Manual attestation also requires tester/date/environment and PASS for required
+guide scenario IDs. Examples remain unapproved/blank. All prior license gates stay
+closed; no owner approval, beta tag, release or public binary upload is executed.
+
+### Tests, manual status and remaining gates
+
+Eight release-boundary regression tests were added; the full suite now contains
+156 tests. The prior local run of 155 tests passed in 61.848 seconds with the
+current pinned Python/FFmpeg and physical RX 7700 XT checks. The final additional
+technical-review gate test and focused release suite pass. Fresh complete native
+source/package runs are required for the preparation commit and recorded below
+when available; historical Nov 1 CI is not counted as current evidence.
+
+Concrete Windows 11 installer/portable and CachyOS/second-Linux desktop guides are
+in MANUAL_TEST_WINDOWS_BETA1.md and MANUAL_TEST_LINUX_BETA1.md. They include bundled
+tool fixture generation, SHA comparison, playback/sync/subtitles/audio/preview,
+queue/current controls, hardware guidance, cleanup and blank per-scenario records.
+**All desktop results remain PENDING MANUAL OWNER TEST**; no VM/desktop test is
+fabricated. Optional unavailable GPUs and a missing second Linux environment must
+be explicitly reported. Current unsigned beta status is documented; signing is
+not independently required for beta.1.
+
+Final RC source SHA, retained three-artifact RC set, combined RC checksums and
+manual/owner approvals remain blocked by the open technical license/source review.
+SOURCE_DATE_EPOCH and input/hash locks improve repeatability; bit-identical output
+across changing hosted images/OS library sets is not asserted without proof.
+No beta publication has occurred, and the owner must give a separate explicit
+publication instruction after every required gate actually passes.

@@ -3,6 +3,12 @@ on:
   push:
     tags: ['v*-beta.*']
   workflow_dispatch:
+    inputs:
+      candidate_stage:
+        description: Audit-only build or technically reviewed private RC1
+        type: choice
+        options: [audit, rc1]
+        default: audit
 permissions:
   contents: read
   actions: read
@@ -34,14 +40,25 @@ jobs:
           python-version: '3.14.7'
       - if: runner.os == 'Linux'
         run: sudo apt-get update && sudo apt-get install -y libegl1 libopengl0 libxkbcommon-x11-0 libxcb-cursor0 libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-render-util0 fonts-dejavu-core
-      - run: python -m pip install -r release/requirements.txt
+      - run: "python -m pip install --require-hashes --only-binary=:all: -r release/requirements.lock"
       - run: python scripts/audit_source.py --history
       - run: python scripts/stage_ffmpeg.py ${{ matrix.target }}
       - run: python -m pip install --no-deps --no-build-isolation -e .
       - run: python -m unittest discover -s tests -v
       - run: ruff check .
       - run: python scripts/install_packaging_tool.py
-      - run: python scripts/build_release.py --candidate
+      - run: python scripts/build_release.py ${{ inputs.candidate_stage == 'rc1' && '--rc1' || '--candidate' }}
+      # Text-only evidence is safe to review while binaries remain unapproved.
+      # These reports contain package-relative paths, hashes and component metadata.
+      - name: Retain audit reports (no binaries)
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: Audit-${{ matrix.target }}-${{ github.sha }}
+          path: |
+            dist/candidate/*.json
+            dist/candidate/*-SHA256SUMS.txt
+          if-no-files-found: error
+          retention-days: 30
       # Even Actions artifacts from a public repo are distribution. Do not upload
       # candidate binaries until the corresponding-source/license gates are clear.
       - name: Verify distribution eligibility
@@ -115,6 +132,7 @@ jobs:
       - name: Validate exact tag and final evidence
         env:
           BETA_MANUAL_EVIDENCE: ${{ vars.BETA_MANUAL_EVIDENCE }}
+          BETA_OWNER_APPROVAL: ${{ vars.BETA_OWNER_APPROVAL }}
         run: python scripts/release_policy.py --publish --artifacts dist/release
       - run: python scripts/checksums.py dist/release
       - name: Publish GitHub pre-release

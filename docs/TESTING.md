@@ -221,3 +221,19 @@ passes all 148 without skips. Native package smoke passes for all formats; the
 candidate workflow then intentionally refuses binary upload at its license gate.
 This is not a completed public release or a substitute for manual Windows 11 and
 Linux desktop exact-artifact testing.
+
+## Final preparation (2026-11-20)
+
+Eight release-boundary tests in test_release_preparation.py cover wrong Python patch,
+clean commit/dirty-source rejection, actual unknown-file inventory, escaping symlink
+rejection, missing payload evidence, missing external owner approval, incomplete
+manual records and technical-review flag enforcement. The current total is **156**.
+The existing 148 media/product tests remain present. Release smoke additionally
+compares the actual frozen interpreter's version with the canonical 3.14.7 pin.
+
+Run the complete suite on the preparation commit using the hash-locked environment
+and current staged runtime. Source-tree checks and native package reports must be
+fresh; the historical Nov 1 run is not current-HEAD evidence. Native package audit
+reports include actual installed/portable/AppImage inventories and runtime license
+outputs. Full desktop/manual result forms are in MANUAL_TEST_WINDOWS_BETA1.md and
+MANUAL_TEST_LINUX_BETA1.md. No RC1 or licensing readiness is implied by green tests.

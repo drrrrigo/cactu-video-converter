@@ -38,3 +38,11 @@ No ordinary PR publishes binaries, no existing release is silently overwritten a
 no different rebuilt candidate is substituted for the manually tested bytes.
 See [release checklist](RELEASE_CHECKLIST.md), [license audit](RELEASE_LICENSE_AUDIT.md)
 and [installation](INSTALLATION.md).
+
+For final preparation, Python is strictly **3.14.7** and the source tree must be
+clean/committed. Each actual extracted AppImage/portable and installed Windows
+payload receives a file/hash/component inventory, embedded Python-module listing
+and native dependency scan. Unknown origins/notices remain open reviews. These
+reports and generated checksum text may be retained separately from binaries;
+the public binary upload gate remains intact. Audit builds are explicitly not RC1.
+See [BETA1_RELEASE_CHECKLIST](BETA1_RELEASE_CHECKLIST.md) for authoritative status.

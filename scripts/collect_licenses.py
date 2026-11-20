@@ -26,15 +26,18 @@ PACKAGES = (
 def collect(destination: Path) -> dict:
     destination.mkdir(parents=True, exist_ok=True)
     shutil.copy2(ROOT / "LICENSE", destination / "Cactu-GPL-3.0.txt")
-    inventory = {"python": sys.version, "components": [], "redistribution_approval": False}
+    inventory = {
+        "scope": "build-environment notice collection, NOT a shipped-runtime inventory; use artifact payload reports",
+        "python": sys.version, "components": [], "redistribution_approval": False,
+    }
     for name in PACKAGES:
         dist = importlib.metadata.distribution(name)
         target = destination / name
         target.mkdir(exist_ok=True)
         copied = []
         for file in dist.files or ():
-            lower = str(file).lower()
-            if any(token in lower for token in ("license", "copying", "copyright")):
+            lower = Path(str(file)).name.lower()
+            if any(lower.startswith(token) for token in ("license", "copying", "copyright")):
                 source = Path(dist.locate_file(file))
                 if source.is_file() and source.suffix.lower() not in {
                     ".pyc",
@@ -42,6 +45,7 @@ def collect(destination: Path) -> dict:
                     ".dll",
                     ".dylib",
                     ".exe",
+                    ".py",
                 }:
                     relative = Path(str(file).replace("..", "_"))
                     out = target / relative

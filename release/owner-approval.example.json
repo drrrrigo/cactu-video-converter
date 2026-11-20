@@ -1,0 +1,12 @@
+{
+  "approved": false,
+  "approved_by": "",
+  "approved_at": "",
+  "version": "0.1.0-beta.1",
+  "source_commit": "REPLACE_WITH_EXACT_TESTED_40_CHARACTER_SHA",
+  "artifacts": {
+    "CactuVideoConverter-Setup-0.1.0-beta.1.exe": "REPLACE_WITH_EXACT_TESTED_SHA256",
+    "CactuVideoConverter-Portable-0.1.0-beta.1.zip": "REPLACE_WITH_EXACT_TESTED_SHA256",
+    "CactuVideoConverter-0.1.0-beta.1-x86_64.AppImage": "REPLACE_WITH_EXACT_TESTED_SHA256"
+  }
+}

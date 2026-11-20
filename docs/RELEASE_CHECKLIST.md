@@ -1,5 +1,10 @@
 # Beta.1 release checklist and promotion
 
+**Authoritative current states:** [BETA1_RELEASE_CHECKLIST](BETA1_RELEASE_CHECKLIST.md).
+The dated results below are historical. No RC1 is currently declared; technical
+license/source closure remains blocked. This procedure does not authorize a tag,
+release or public binary upload during preparation.
+
 ## Current owner decisions
 
 Repository: https://github.com/drrrrigo/cactu-video-converter.
@@ -42,12 +47,36 @@ extracts/tests the portable ZIP and installs/converts/uninstalls Setup automatic
 Those cloud tests do not replace the specified manual Windows 11/desktop tests.
 Candidates are uploaded only if distribution/licensing policy passes.
 
+Workflow dispatch now defaults to an audit build, labelled AUDIT_ONLY_NOT_RC1.
+It retains only generated JSON/checksum text before the binary distribution gate.
+`--rc1` requires completed technical/source review and rejects actual payloads with
+open reviews. The internal candidate ID becomes 0.1.0-beta.1-rc1 while the embedded
+application version stays 0.1.0-beta.1, allowing the same tested bytes to be promoted.
+Packaging requires a clean Git checkout, standard Python 3.14.7 and exact dependencies.
+Each actual installed/extracted payload is inventoried, including embedded modules.
+
 Download exact artifacts. Complete the manual checklist in
 release/manual-evidence.example.json on clean Windows 11 and a second Linux desktop
 where practical. Include source commit, OS/kernel, checks and all three SHA-256
 values. Do not commit this attestation after testing and thereby change the tested
 commit; store it as BETA_MANUAL_EVIDENCE in the protected public-beta environment.
 Set BETA_CANDIDATE_RUN_ID to the successful candidate run. Preserve its artifacts.
+
+Use the concrete [Windows](MANUAL_TEST_WINDOWS_BETA1.md) and
+[Linux](MANUAL_TEST_LINUX_BETA1.md) guides. Required scenario IDs need PASS results,
+tester/date/OS details and exact artifact hashes. A passed=true switch alone fails.
+Keep results outside the tested source tree. Any changed source/binary requires a
+new reviewed candidate and matching tests. Generate the complete SHA256SUMS with
+`python scripts/checksums.py RC_DIRECTORY` only when all three exact files exist;
+per-platform fragments alone are not the final checksum set.
+
+Final publication approval is external: fill release/owner-approval.example.json
+as BETA_OWNER_APPROVAL in the protected public-beta environment only after the owner
+separately instructs **Publish the beta**. It binds owner/date/version/source SHA
+and the exact three tested hashes. A committed publication_approved boolean alone
+cannot publish. Do not change the tested source commit merely to record approval.
+Human license/source approval must be resolved before freezing the final RC inputs;
+this external record handles final publication authorization after manual testing.
 
 ## Promote without rebuilding
 
@@ -63,3 +92,9 @@ hashes. Never fake a manual test, source/license closure or a green gate. Unsign
 status must be disclosed. Signing hooks read external certificate selectors only;
 no private key/certificate is committed. The final source, workflow run IDs, exact
 hashes, manual evidence and release URL belong in the implementation report.
+
+After the owner's separate explicit publication instruction, check out the **exact
+tested SHA**, verify `git status --porcelain` is empty, create an annotated
+v0.1.0-beta.1 tag at that SHA and push only that tag. Do not blindly tag a newer main
+commit or execute this step during preparation. The protected publisher additionally
+requires complete matching payload inventories, manual results and owner attestation.

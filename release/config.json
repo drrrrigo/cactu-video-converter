@@ -5,5 +5,7 @@
   "license_audit_approved": false,
   "security_audit_approved": true,
   "manual_candidate_evidence": null,
-  "notes": "Source/history and published-documentation privacy audit completed with no findings. Binary publication remains gated on exact dependency/source licensing and manual exact-artifact evidence."
+  "notes": "2026-11-20 preparation: no publication authorization; final technical dependency/source closure and manual exact-artifact evidence remain blocked/pending. Historical security approval must be rechecked for the current commit.",
+  "technical_license_audit_complete": false,
+  "publication_approval_source": "BETA_OWNER_APPROVAL in the protected public-beta environment; bound to exact source and artifact hashes, never auto-approved"
 }

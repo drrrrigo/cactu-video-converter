@@ -1,7 +1,9 @@
 # FFmpeg / FFprobe beta provenance
 
-The candidate manifest pins BtbN dated archives from autobuild-2026-11-01-12-49,
-identity **n9.0.2-42-gd7643a0fe3-20261101**, for native Windows/Linux x86_64.
+The audit manifest pins FFmpeg-Builds/FFmpeg-Builds dated archives from
+autobuild-2026-11-20-12-40, identity **n9.0.2-61-gd59078794d-20261120**, for native
+Windows/Linux x86_64. The former Nov 1 daily input expired. The retained Oct 31
+input was rejected after reviewing missing later fixes. No final RC is approved.
 This is the 9.0.2 branch plus revisions; it is not described as the pristine 9.0.2
 tarball. FFmpeg and FFprobe must match that exact identity/configuration and their
 individual binary hashes. Never replace them with a system PATH binary in a frozen
@@ -28,3 +30,9 @@ release obligations still need evidence. A generic source homepage/build recipe
 and one GPL text are insufficient. See [RELEASE_LICENSE_AUDIT](RELEASE_LICENSE_AUDIT.md).
 Do not set the manifest's source/redistribution approvals until those items are
 actually resolved. Hash pins establish byte integrity, not license compliance.
+
+The exact current FFmpeg source revision and recipe archives/hashes are retained
+in release/source-evidence.json and its local ignored source cache. This does not
+yet provide the full linked-library source/notice set. The validator now retains
+actual native -version, -buildconf and -L evidence with the package audit reports.
+The CLI's actual GPL v3 text is checked in addition to manifest flags.
