@@ -51,3 +51,22 @@ Actual per-artifact payload reports determine which Python/Qt/native files are
 shipped. The build-environment notice collection is not a shipped-runtime inventory.
 Required third-party notice/source/relinking closure remains incomplete; these
 added texts do not authorize redistribution or replace individual upstream terms.
+
+## Retained Qt and installer component notices
+
+Qt source/module license and third-party attribution material for the pinned
+6.11.2 source revisions is supplied in `licenses/qt-6.11.2/`. This is a conservative
+notice superset for the selected source modules, not a declaration that every
+listed third-party component is linked into Cactu. Per-file mapping and exact
+source archive hashes accompany the payload/source manifests. Eligible Qt/PySide
+components are evaluated under their GPL v3 option; independent third-party terms
+remain applicable. Native libraries remain separate replaceable files in ONEDIR.
+
+The Windows installer is made using Inno Setup and RemObjects Pascal Script.
+RemObjects Pascal Script can be found at https://github.com/remobjects/pascalscript.
+Its retained license requires this acknowledgement in documentation. The exact
+Inno Setup 7.1.1 SBOM, Pascal Script notice, LZMA SDK public-domain declaration and
+older size-optimized decoder's linking exception are under
+`licenses/packaging-runtimes/inno-components/`. The SBOM identifies optional
+components as well as the compiler; listing an optional component does not assert
+it is present in the generated installer. No blanket installer approval is given.

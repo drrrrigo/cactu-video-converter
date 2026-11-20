@@ -1,0 +1,42 @@
+{
+  "version": "6.11.2",
+  "license_choice": "GPL-3.0-only for eligible Qt/PySide modules; independent third-party terms retained",
+  "archives": [
+    {
+      "project": "qtbase",
+      "commit": "ef55f427f2c8b410d34f8a7681020a3000cf6866",
+      "url": "https://codeload.github.com/qt/qtbase/tar.gz/ef55f427f2c8b410d34f8a7681020a3000cf6866",
+      "filename": "qtbase-ef55f427f2c8b410d34f8a7681020a3000cf6866.tar.gz",
+      "sha256": "12b3a9ba00613180caea4da77a1ae6fc1ca054b8822b316ba3a05fb4414fba56",
+      "retained": true,
+      "complete_binary_build_correspondence": false
+    },
+    {
+      "project": "qtsvg",
+      "commit": "17ca512f903f935282ebeca496aac5d11ba4199a",
+      "url": "https://codeload.github.com/qt/qtsvg/tar.gz/17ca512f903f935282ebeca496aac5d11ba4199a",
+      "filename": "qtsvg-17ca512f903f935282ebeca496aac5d11ba4199a.tar.gz",
+      "sha256": "67214f604e86af925d9e2c9f32af5e778a621cabfb51011b7e89aef268a6a150",
+      "retained": true,
+      "complete_binary_build_correspondence": false
+    },
+    {
+      "project": "qtwayland",
+      "commit": "fd0456558bc1766da85aee42f6a87f79092cbb13",
+      "url": "https://codeload.github.com/qt/qtwayland/tar.gz/fd0456558bc1766da85aee42f6a87f79092cbb13",
+      "filename": "qtwayland-fd0456558bc1766da85aee42f6a87f79092cbb13.tar.gz",
+      "sha256": "70e921497f4decb88d6f61b6a94673f2dda3c18f4343bd21b8cab44ba19692f4",
+      "retained": true,
+      "complete_binary_build_correspondence": false
+    },
+    {
+      "project": "pyside-pyside-setup",
+      "commit": "24627cd36e1593adf22eb1f2950e4248e7bcc1ec",
+      "url": "https://codeload.github.com/qtproject/pyside-pyside-setup/tar.gz/24627cd36e1593adf22eb1f2950e4248e7bcc1ec",
+      "filename": "pyside-pyside-setup-24627cd36e1593adf22eb1f2950e4248e7bcc1ec.tar.gz",
+      "sha256": "92f292b8889f8a3213f7d17da5cdcd19f6d7f01611689bdf692890d5fbc7eb61",
+      "retained": true,
+      "complete_binary_build_correspondence": false
+    }
+  ]
+}

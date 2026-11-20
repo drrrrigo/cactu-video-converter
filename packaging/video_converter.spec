@@ -23,7 +23,8 @@ a = Analysis([str(root / "src" / "video_converter" / "app.py")],
                     (str(root / "LICENSE"), "."),
                     (str(root / "build/licenses"), "licenses")],
              # License payload comes from the exact pinned build environment.
-             hiddenimports=[], hookspath=[], hooksconfig={}, runtime_hooks=[], excludes=[])
+             hiddenimports=[], hookspath=[str(root / "packaging/hooks")],
+             hooksconfig={}, runtime_hooks=[], excludes=[])
 pyz = PYZ(a.pure)
 exe = EXE(pyz, a.scripts, [], exclude_binaries=True, name=EXECUTABLE_NAME, console=False,
           icon=str(ASSETS / "cactu-video-converter.ico"),

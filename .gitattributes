@@ -1,2 +1,4 @@
 # Preserve retained audit bytes (including native checksum line endings) exactly.
 release/evidence/beta1-audit-eabc092/** -text
+# Hash-verified upstream legal material keeps original bytes and whitespace.
+licenses/** -text -whitespace

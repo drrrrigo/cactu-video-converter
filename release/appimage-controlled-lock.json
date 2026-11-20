@@ -1,0 +1,1485 @@
+{
+  "stage": "EXPERIMENTAL_NOT_SELECTED",
+  "base": {
+    "version": "3.21.10",
+    "url": "https://dl-cdn.alpinelinux.org/alpine/v3.21/releases/x86_64/alpine-minirootfs-3.21.10-x86_64.tar.gz",
+    "sha256": "d225c786541b5ae5ba006ef541701d9ecc7e732bd16317c08adfb93212345efa"
+  },
+  "packages": [
+    {
+      "filename": "abuild-3.14.1-r4.apk",
+      "sha256": "728bec6c2fce11e0c293255c8c46865290168a92220bc51538137d9dad295232",
+      "package": "abuild",
+      "version": "3.14.1-r4",
+      "origin": "abuild",
+      "aports_commit": "8fb34bb4a9520f9a6a3d1b1316907307c93fe333",
+      "license": [
+        "GPL-2.0-only"
+      ],
+      "url": [
+        "https://gitlab.alpinelinux.org/alpine/abuild/"
+      ]
+    },
+    {
+      "filename": "abuild-meson-1.6.1-r0.apk",
+      "sha256": "be9af1fe3be40e28b0bfb90b37fb0a6f4d3c0ada601c2f4e45e399ba04c5e197",
+      "package": "abuild-meson",
+      "version": "1.6.1-r0",
+      "origin": "meson",
+      "aports_commit": "bd2a8e0fc4db67c9e50e2de14e98e57dcc615297",
+      "license": [
+        "Apache-2.0"
+      ],
+      "url": [
+        "https://mesonbuild.com"
+      ]
+    },
+    {
+      "filename": "abuild-sudo-3.14.1-r4.apk",
+      "sha256": "cdb78ea5a1b34eeb2f8dcf9d79debe24885f50623587d7d66944c68ed5b3c67f",
+      "package": "abuild-sudo",
+      "version": "3.14.1-r4",
+      "origin": "abuild",
+      "aports_commit": "8fb34bb4a9520f9a6a3d1b1316907307c93fe333",
+      "license": [
+        "GPL-2.0-only"
+      ],
+      "url": [
+        "https://gitlab.alpinelinux.org/alpine/abuild/"
+      ]
+    },
+    {
+      "filename": "acl-libs-2.3.2-r1.apk",
+      "sha256": "97aa6d629b26a4329757aa82629ce283710e78b0edc4ac26117246bac037591d",
+      "package": "acl-libs",
+      "version": "2.3.2-r1",
+      "origin": "acl",
+      "aports_commit": "0824e5bc4c0d1fb9aac2f133a4c0a92f1f0bb5b4",
+      "license": [
+        "LGPL-2.1-or-later AND GPL-2.0-or-later"
+      ],
+      "url": [
+        "https://savannah.nongnu.org/projects/acl"
+      ]
+    },
+    {
+      "filename": "alpine-sdk-1.1-r0.apk",
+      "sha256": "fc6dd4a51ecdb67cadb8f12b207db366c6a94a479d7ea6c62b2939b1be14414a",
+      "package": "alpine-sdk",
+      "version": "1.1-r0",
+      "origin": "alpine-sdk",
+      "aports_commit": "dea35b27002e3c31bef0aa0f724e9fae6230b6f3",
+      "license": [
+        "GPL-2.0-only"
+      ],
+      "url": [
+        "https://git.alpinelinux.org/"
+      ]
+    },
+    {
+      "filename": "apk-tools-2.14.13-r0.apk",
+      "sha256": "6bb548ddb43c501f1e20d27999e291adf4cd7b5962acfea4f3f190ef501f10c2",
+      "package": "apk-tools",
+      "version": "2.14.13-r0",
+      "origin": "apk-tools",
+      "aports_commit": "359c1bd4ec4812088e00fcd2490b45787efa81a5",
+      "license": [
+        "GPL-2.0-only"
+      ],
+      "url": [
+        "https://gitlab.alpinelinux.org/alpine/apk-tools"
+      ]
+    },
+    {
+      "filename": "autoconf-2.72-r0.apk",
+      "sha256": "e5933488956c39b18fbfdd9aa9e23d111ccf1cb0dece612860f289e387447f9d",
+      "package": "autoconf",
+      "version": "2.72-r0",
+      "origin": "autoconf",
+      "aports_commit": "bd3ab572ca03265baf7e78b71b241dcc59eb2e63",
+      "license": [
+        "GPL-3.0-or-later WITH Autoconf-exception-3.0"
+      ],
+      "url": [
+        "https://www.gnu.org/software/autoconf"
+      ]
+    },
+    {
+      "filename": "automake-1.17-r0.apk",
+      "sha256": "d16119b95e8ba0194bc788265f20778522a2147289952fefd0794e6ee8f40ba0",
+      "package": "automake",
+      "version": "1.17-r0",
+      "origin": "automake",
+      "aports_commit": "2ac544c8b36b9f9595785604691c9de112459a45",
+      "license": [
+        "GPL-2.0-or-later"
+      ],
+      "url": [
+        "https://www.gnu.org/software/automake"
+      ]
+    },
+    {
+      "filename": "bash-5.2.37-r0.apk",
+      "sha256": "0d58acbe43dd345a274a74e333f78af583b612229fc003dfb9fdee5dfc9149ff",
+      "package": "bash",
+      "version": "5.2.37-r0",
+      "origin": "bash",
+      "aports_commit": "dfdce3cefb431614e410ac9bc3665d33ea45020c",
+      "license": [
+        "GPL-3.0-or-later"
+      ],
+      "url": [
+        "https://www.gnu.org/software/bash/bash.html"
+      ]
+    },
+    {
+      "filename": "binutils-2.43.1-r3.apk",
+      "sha256": "eb1ae53b03b13c8e1ba7a97c23b7b64ef27c71080b9da5a21e7365188f48d361",
+      "package": "binutils",
+      "version": "2.43.1-r3",
+      "origin": "binutils",
+      "aports_commit": "f8c4bbdba1f690f506696c3dfeaf8311411789ac",
+      "license": [
+        "GPL-2.0-or-later AND LGPL-2.1-or-later AND BSD-3-Clause"
+      ],
+      "url": [
+        "https://www.gnu.org/software/binutils/"
+      ]
+    },
+    {
+      "filename": "brotli-libs-1.1.1-r0.apk",
+      "sha256": "b38110a0f60022d20f0e9c9263cc932547f3e8e82931291d937f1f370137a4a2",
+      "package": "brotli-libs",
+      "version": "1.1.1-r0",
+      "origin": "brotli",
+      "aports_commit": "2e2e1c66200dbbb50a717171d1df57829ff4c264",
+      "license": [
+        "MIT"
+      ],
+      "url": [
+        "https://github.com/google/brotli"
+      ]
+    },
+    {
+      "filename": "build-base-0.5-r3.apk",
+      "sha256": "4749180b35754cb803b643db52e5bb2fefe0ce65411ca12fdf94d8e32302a7e7",
+      "package": "build-base",
+      "version": "0.5-r3",
+      "origin": "build-base",
+      "aports_commit": "2d1f9f414de2521837a7a9c7068217b76e3452ca",
+      "license": [
+        "MIT"
+      ],
+      "url": [
+        "http://dev.alpinelinux.org/cgit"
+      ]
+    },
+    {
+      "filename": "busybox-1.37.0-r14.apk",
+      "sha256": "e0c42bc21e4d25cf5b4e15947d9bd75045ea4b7a8237e87cbefbfa425e7d4717",
+      "package": "busybox",
+      "version": "1.37.0-r14",
+      "origin": "busybox",
+      "aports_commit": "284d827a2793963e6dcf88324bd1eb81adff579c",
+      "license": [
+        "GPL-2.0-only"
+      ],
+      "url": [
+        "https://busybox.net/"
+      ]
+    },
+    {
+      "filename": "busybox-binsh-1.37.0-r14.apk",
+      "sha256": "cdb0e74af11fa4cc78cf6626637fdf63ee960871637f15483fcbc111c1f10996",
+      "package": "busybox-binsh",
+      "version": "1.37.0-r14",
+      "origin": "busybox",
+      "aports_commit": "284d827a2793963e6dcf88324bd1eb81adff579c",
+      "license": [
+        "GPL-2.0-only"
+      ],
+      "url": [
+        "https://busybox.net/"
+      ]
+    },
+    {
+      "filename": "c-ares-1.34.9-r0.apk",
+      "sha256": "2b4f030297c96c8c69b6f19bacb55a4c0ba8e502c6200f09a77a9160e78b8fe4",
+      "package": "c-ares",
+      "version": "1.34.9-r0",
+      "origin": "c-ares",
+      "aports_commit": "dbc05e4ef8f0c86d93ce3d4933d28ab5d39241f4",
+      "license": [
+        "MIT"
+      ],
+      "url": [
+        "https://c-ares.org/"
+      ]
+    },
+    {
+      "filename": "ca-certificates-bundle-20261020-r0.apk",
+      "sha256": "2af4046ff45d2034d674ea4d6b89f9e9000a15054745a26025b867d28135b830",
+      "package": "ca-certificates-bundle",
+      "version": "20261020-r0",
+      "origin": "ca-certificates",
+      "aports_commit": "660f223b42ca35e7d2a76ce568e15c847b92d33d",
+      "license": [
+        "MPL-2.0 AND MIT"
+      ],
+      "url": [
+        "https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/"
+      ]
+    },
+    {
+      "filename": "clang19-19.1.4-r0.apk",
+      "sha256": "9c3c3761e5f06bcf857ffa6b42a097ceefe782a349283d766e895f1898a4c322",
+      "package": "clang19",
+      "version": "19.1.4-r0",
+      "origin": "clang19",
+      "aports_commit": "d231442d24a4fc805346691521933c7cc3c20fa1",
+      "license": [
+        "Apache-2.0 WITH LLVM-exception"
+      ],
+      "url": [
+        "https://llvm.org/"
+      ]
+    },
+    {
+      "filename": "clang19-headers-19.1.4-r0.apk",
+      "sha256": "6686a5ced76e53e4a6ac150833b2590545a884122c86c3abe2c3a7ed529b514b",
+      "package": "clang19-headers",
+      "version": "19.1.4-r0",
+      "origin": "clang19",
+      "aports_commit": "d231442d24a4fc805346691521933c7cc3c20fa1",
+      "license": [
+        "Apache-2.0 WITH LLVM-exception"
+      ],
+      "url": [
+        "https://llvm.org/"
+      ]
+    },
+    {
+      "filename": "clang19-libs-19.1.4-r0.apk",
+      "sha256": "946d59e7476d738921e6cb32806cfbf7043a405d324e665a6c2902221fe67193",
+      "package": "clang19-libs",
+      "version": "19.1.4-r0",
+      "origin": "clang19",
+      "aports_commit": "d231442d24a4fc805346691521933c7cc3c20fa1",
+      "license": [
+        "Apache-2.0 WITH LLVM-exception"
+      ],
+      "url": [
+        "https://llvm.org/"
+      ]
+    },
+    {
+      "filename": "fakeroot-1.37.1.1-r0.apk",
+      "sha256": "f392b61e8365bf88ff6835b67f390d3fb6236e35aed0c34955f00f4d47d98de7",
+      "package": "fakeroot",
+      "version": "1.37.1.1-r0",
+      "origin": "fakeroot",
+      "aports_commit": "ec075722826069fe262f9688bb80fa1ba61e60f6",
+      "license": [
+        "GPL-3.0-or-later"
+      ],
+      "url": [
+        "https://packages.debian.org/fakeroot"
+      ]
+    },
+    {
+      "filename": "file-5.46-r2.apk",
+      "sha256": "72e5c72162439b067ad3e5060e27754eb7bad287db5d6978aef217d36aa1a9c6",
+      "package": "file",
+      "version": "5.46-r2",
+      "origin": "file",
+      "aports_commit": "e89c62d847f7369b16ae24657d91b8d20c564ca4",
+      "license": [
+        "BSD-2-Clause"
+      ],
+      "url": [
+        "https://www.darwinsys.com/file/"
+      ]
+    },
+    {
+      "filename": "fortify-headers-1.1-r5.apk",
+      "sha256": "133599cbec77b30b58cef7e6e78c65568c205efbac373565b4fdda6c3ac13649",
+      "package": "fortify-headers",
+      "version": "1.1-r5",
+      "origin": "fortify-headers",
+      "aports_commit": "175895ac5c1d9d62add7fe3c5a7f39548b8fd715",
+      "license": [
+        "0BSD"
+      ],
+      "url": [
+        "http://git.2f30.org/fortify-headers/"
+      ]
+    },
+    {
+      "filename": "g++-14.2.0-r4.apk",
+      "sha256": "49e912e85f0b7cbc26e812f4f92d5d86c7e6e4d8de4e20c980d6ac148ed8cc57",
+      "package": "g++",
+      "version": "14.2.0-r4",
+      "origin": "gcc",
+      "aports_commit": "1a03a2a9c9e77f1a07d48b6f6805e72c8c63c03f",
+      "license": [
+        "GPL-2.0-or-later AND LGPL-2.1-or-later"
+      ],
+      "url": [
+        "https://gcc.gnu.org"
+      ]
+    },
+    {
+      "filename": "gcc-14.2.0-r4.apk",
+      "sha256": "6727367ddd0c58203ac4e9b96a30d371e92da64c4b0f7b1b2afbd512c80a61be",
+      "package": "gcc",
+      "version": "14.2.0-r4",
+      "origin": "gcc",
+      "aports_commit": "1a03a2a9c9e77f1a07d48b6f6805e72c8c63c03f",
+      "license": [
+        "GPL-2.0-or-later AND LGPL-2.1-or-later"
+      ],
+      "url": [
+        "https://gcc.gnu.org"
+      ]
+    },
+    {
+      "filename": "gdbm-1.24-r0.apk",
+      "sha256": "261f792e3bd65c0c1859417e324643a49e8a804ddb92ed197b58e7f6606af090",
+      "package": "gdbm",
+      "version": "1.24-r0",
+      "origin": "gdbm",
+      "aports_commit": "cf76e1b436494c60e0c188400007dbf78bbff5f0",
+      "license": [
+        "GPL-3.0-or-later"
+      ],
+      "url": [
+        "https://www.gnu.org/software/gdbm/"
+      ]
+    },
+    {
+      "filename": "git-2.47.3-r0.apk",
+      "sha256": "1d3696aaf8b7afdbd3fff8cf0954145ff79a9763a602aaa93d249482ef4114bc",
+      "package": "git",
+      "version": "2.47.3-r0",
+      "origin": "git",
+      "aports_commit": "ca82c367c9e522b81bfa0dcbe39e0fd5eff1b1b5",
+      "license": [
+        "GPL-2.0-only"
+      ],
+      "url": [
+        "https://www.git-scm.com/"
+      ]
+    },
+    {
+      "filename": "git-init-template-2.47.3-r0.apk",
+      "sha256": "451af5557bab28a0afaf1718543c13285d8d6588a22cbd022deb47d03e78355a",
+      "package": "git-init-template",
+      "version": "2.47.3-r0",
+      "origin": "git",
+      "aports_commit": "ca82c367c9e522b81bfa0dcbe39e0fd5eff1b1b5",
+      "license": [
+        "GPL-2.0-only"
+      ],
+      "url": [
+        "https://www.git-scm.com/"
+      ]
+    },
+    {
+      "filename": "git-perl-2.47.3-r0.apk",
+      "sha256": "7080a4cd4b0a8daa5ffda6403e7892c630f4c865409fc262cdd17d879e6e5fce",
+      "package": "git-perl",
+      "version": "2.47.3-r0",
+      "origin": "git",
+      "aports_commit": "ca82c367c9e522b81bfa0dcbe39e0fd5eff1b1b5",
+      "license": [
+        "GPL-2.0-only"
+      ],
+      "url": [
+        "https://www.git-scm.com/"
+      ]
+    },
+    {
+      "filename": "gmp-6.3.0-r2.apk",
+      "sha256": "4b2790276c2a652883302a4f43712f18a666bfa50edccd95b71ae5d5b9520591",
+      "package": "gmp",
+      "version": "6.3.0-r2",
+      "origin": "gmp",
+      "aports_commit": "b324434270c040f53644c8698889c6e07206e790",
+      "license": [
+        "LGPL-3.0-or-later OR GPL-2.0-or-later"
+      ],
+      "url": [
+        "https://gmplib.org/"
+      ]
+    },
+    {
+      "filename": "isl26-0.26-r1.apk",
+      "sha256": "fad45095620e08c1410260cfef6723cc318dc9e554821cced49d263a9d1b4064",
+      "package": "isl26",
+      "version": "0.26-r1",
+      "origin": "isl26",
+      "aports_commit": "84a227baf001b6e0208e3352b294e4d7a40e93de",
+      "license": [
+        "MIT"
+      ],
+      "url": [
+        "http://isl.gforge.inria.fr/"
+      ]
+    },
+    {
+      "filename": "jansson-2.14-r4.apk",
+      "sha256": "ccfcfbe5940220c2224c1d5b4ee282994ebf1419af6455041fa850413e58632d",
+      "package": "jansson",
+      "version": "2.14-r4",
+      "origin": "jansson",
+      "aports_commit": "98f1223d0dbb22dbfe0bede7a7f1a0fef68e0b15",
+      "license": [
+        "MIT"
+      ],
+      "url": [
+        "http://www.digip.org/jansson/"
+      ]
+    },
+    {
+      "filename": "libatomic-14.2.0-r4.apk",
+      "sha256": "888fc0cd460a584258cbec9a9d5cdea31060a23f18cdc9c75ff0fb9d35ff7fc5",
+      "package": "libatomic",
+      "version": "14.2.0-r4",
+      "origin": "gcc",
+      "aports_commit": "1a03a2a9c9e77f1a07d48b6f6805e72c8c63c03f",
+      "license": [
+        "GPL-2.0-or-later AND LGPL-2.1-or-later"
+      ],
+      "url": [
+        "https://gcc.gnu.org"
+      ]
+    },
+    {
+      "filename": "libbz2-1.0.8-r6.apk",
+      "sha256": "9d8305edec09baad972ed5ec904ab2a111a38f306e71332113799d170c1fe4fe",
+      "package": "libbz2",
+      "version": "1.0.8-r6",
+      "origin": "bzip2",
+      "aports_commit": "33283848034c9885d984c8e8697c645c57324938",
+      "license": [
+        "bzip2-1.0.6"
+      ],
+      "url": [
+        "https://sourceware.org/bzip2/"
+      ]
+    },
+    {
+      "filename": "libcap-getcap-2.78-r0.apk",
+      "sha256": "c7d1be9c5677e2043bb0bc14a1c473cde038cb207152d4eb3463b1d852fe25cf",
+      "package": "libcap-getcap",
+      "version": "2.78-r0",
+      "origin": "libcap",
+      "aports_commit": "b9cb172a928158ce3cedb488f4edaba270c7d728",
+      "license": [
+        "BSD-3-Clause OR GPL-2.0-only"
+      ],
+      "url": [
+        "https://sites.google.com/site/fullycapable/"
+      ]
+    },
+    {
+      "filename": "libcap2-2.78-r0.apk",
+      "sha256": "a2160f94232206985c3656fe4108bb7b25cf56cfda83b8488791b225cc6e7ed1",
+      "package": "libcap2",
+      "version": "2.78-r0",
+      "origin": "libcap",
+      "aports_commit": "b9cb172a928158ce3cedb488f4edaba270c7d728",
+      "license": [
+        "BSD-3-Clause OR GPL-2.0-only"
+      ],
+      "url": [
+        "https://sites.google.com/site/fullycapable/"
+      ]
+    },
+    {
+      "filename": "libcrypto3-3.3.7-r2.apk",
+      "sha256": "3c6fb1c90a974ef0fc83687868712340ca3df3ef5206cfc79fd81ff16f22596a",
+      "package": "libcrypto3",
+      "version": "3.3.7-r2",
+      "origin": "openssl",
+      "aports_commit": "a254386dfe34f70a05bdb8b2a3d7a5b20b6f076e",
+      "license": [
+        "Apache-2.0"
+      ],
+      "url": [
+        "https://www.openssl.org/"
+      ]
+    },
+    {
+      "filename": "libcurl-8.14.1-r3.apk",
+      "sha256": "ce11750996550c732eec37c6ed25a4f97f5be1863b3b0fe93bee4596f4832c53",
+      "package": "libcurl",
+      "version": "8.14.1-r3",
+      "origin": "curl",
+      "aports_commit": "4277a10b6f212864a4c88d3cae7192383f9badcb",
+      "license": [
+        "curl"
+      ],
+      "url": [
+        "https://curl.se/"
+      ]
+    },
+    {
+      "filename": "libexpat-2.10.0-r0.apk",
+      "sha256": "60f92d09a9272743684dcfc9f85b168cf4308011e07d26853fa9accf15222a43",
+      "package": "libexpat",
+      "version": "2.10.0-r0",
+      "origin": "expat",
+      "aports_commit": "2e1e6064c0baf5021dc86573ddc4a338dde12bc0",
+      "license": [
+        "MIT"
+      ],
+      "url": [
+        "https://libexpat.github.io/"
+      ]
+    },
+    {
+      "filename": "libffi-3.4.7-r0.apk",
+      "sha256": "819e95a9b0dd12dddb72d7151964855518d83d61dc6b7c9b619dd17233160097",
+      "package": "libffi",
+      "version": "3.4.7-r0",
+      "origin": "libffi",
+      "aports_commit": "22c7b41f717ec56d69c0cc0a183703326fa47414",
+      "license": [
+        "MIT"
+      ],
+      "url": [
+        "https://sourceware.org/libffi/"
+      ]
+    },
+    {
+      "filename": "libgcc-14.2.0-r4.apk",
+      "sha256": "8675867db77b5af11b88fd19186450333202d94cccd84a76a066dccd5b6e8cf1",
+      "package": "libgcc",
+      "version": "14.2.0-r4",
+      "origin": "gcc",
+      "aports_commit": "1a03a2a9c9e77f1a07d48b6f6805e72c8c63c03f",
+      "license": [
+        "GPL-2.0-or-later AND LGPL-2.1-or-later"
+      ],
+      "url": [
+        "https://gcc.gnu.org"
+      ]
+    },
+    {
+      "filename": "libgomp-14.2.0-r4.apk",
+      "sha256": "86720fd442c4e48964d169769ad904fe3fc895b728767a9f2f79f2fb86bd3acb",
+      "package": "libgomp",
+      "version": "14.2.0-r4",
+      "origin": "gcc",
+      "aports_commit": "1a03a2a9c9e77f1a07d48b6f6805e72c8c63c03f",
+      "license": [
+        "GPL-2.0-or-later AND LGPL-2.1-or-later"
+      ],
+      "url": [
+        "https://gcc.gnu.org"
+      ]
+    },
+    {
+      "filename": "libidn2-2.3.7-r0.apk",
+      "sha256": "3625d1123662203440cd25c09325c7d7891809ec68ad420ba7d8dd0173a737a6",
+      "package": "libidn2",
+      "version": "2.3.7-r0",
+      "origin": "libidn2",
+      "aports_commit": "1cdcdd0eccbee1f60078417a7aaf83f92f6e6754",
+      "license": [
+        "GPL-2.0-or-later OR LGPL-3.0-or-later"
+      ],
+      "url": [
+        "https://www.gnu.org/software/libidn#libidn2"
+      ]
+    },
+    {
+      "filename": "libltdl-2.4.7-r3.apk",
+      "sha256": "2613d2169354172f645178eccbb026ba9c0c6814a43db4acafa316093a2feef5",
+      "package": "libltdl",
+      "version": "2.4.7-r3",
+      "origin": "libtool",
+      "aports_commit": "33283848034c9885d984c8e8697c645c57324938",
+      "license": [
+        "LGPL-2.0-or-later AND GPL-2.0-or-later"
+      ],
+      "url": [
+        "https://www.gnu.org/software/libtool"
+      ]
+    },
+    {
+      "filename": "libmagic-5.46-r2.apk",
+      "sha256": "43422ba328180757224cfb7f3d23d48e42c6b6b0e873a55189c5fc4dc3100620",
+      "package": "libmagic",
+      "version": "5.46-r2",
+      "origin": "file",
+      "aports_commit": "e89c62d847f7369b16ae24657d91b8d20c564ca4",
+      "license": [
+        "BSD-2-Clause"
+      ],
+      "url": [
+        "https://www.darwinsys.com/file/"
+      ]
+    },
+    {
+      "filename": "libncursesw-6.5_p20241006-r3.apk",
+      "sha256": "3919cf673e841d91865213799ccfd5f77a48f5f9f5402723167470295ee32a49",
+      "package": "libncursesw",
+      "version": "6.5_p20241006-r3",
+      "origin": "ncurses",
+      "aports_commit": "2cf24c798675a7f7deb2603c350d4adc7b59c8bb",
+      "license": [
+        "X11"
+      ],
+      "url": [
+        "https://invisible-island.net/ncurses/"
+      ]
+    },
+    {
+      "filename": "libpanelw-6.5_p20241006-r3.apk",
+      "sha256": "f89752780981d11707e7eee3ca7b5a7f52e91e60ee28bd9e1815c7da05741c4a",
+      "package": "libpanelw",
+      "version": "6.5_p20241006-r3",
+      "origin": "ncurses",
+      "aports_commit": "2cf24c798675a7f7deb2603c350d4adc7b59c8bb",
+      "license": [
+        "X11"
+      ],
+      "url": [
+        "https://invisible-island.net/ncurses/"
+      ]
+    },
+    {
+      "filename": "libpsl-0.21.5-r3.apk",
+      "sha256": "693c1743c6204b9307a539a20d048060350531e50dad4059bdd04feaf4acdc58",
+      "package": "libpsl",
+      "version": "0.21.5-r3",
+      "origin": "libpsl",
+      "aports_commit": "398a5aee3025ec8a4d0d761e448dc86ac777fa09",
+      "license": [
+        "MIT"
+      ],
+      "url": [
+        "https://rockdaboot.github.io/libpsl"
+      ]
+    },
+    {
+      "filename": "libssl3-3.3.7-r2.apk",
+      "sha256": "00e674d00a80c9808580546dd388093c1c67f21628a9d70e27628bddc86a31e8",
+      "package": "libssl3",
+      "version": "3.3.7-r2",
+      "origin": "openssl",
+      "aports_commit": "a254386dfe34f70a05bdb8b2a3d7a5b20b6f076e",
+      "license": [
+        "Apache-2.0"
+      ],
+      "url": [
+        "https://www.openssl.org/"
+      ]
+    },
+    {
+      "filename": "libstdc++-14.2.0-r4.apk",
+      "sha256": "5899f66390aba2ac908f0912fc62a49775830f523fa38fab406c1761821dfb07",
+      "package": "libstdc++",
+      "version": "14.2.0-r4",
+      "origin": "gcc",
+      "aports_commit": "1a03a2a9c9e77f1a07d48b6f6805e72c8c63c03f",
+      "license": [
+        "GPL-2.0-or-later AND LGPL-2.1-or-later"
+      ],
+      "url": [
+        "https://gcc.gnu.org"
+      ]
+    },
+    {
+      "filename": "libstdc++-dev-14.2.0-r4.apk",
+      "sha256": "8a2c14b49e5b3d75ec32d6f62966df8b1abad200ab9479172805ddc0f221e1df",
+      "package": "libstdc++-dev",
+      "version": "14.2.0-r4",
+      "origin": "gcc",
+      "aports_commit": "1a03a2a9c9e77f1a07d48b6f6805e72c8c63c03f",
+      "license": [
+        "GPL-2.0-or-later AND LGPL-2.1-or-later"
+      ],
+      "url": [
+        "https://gcc.gnu.org"
+      ]
+    },
+    {
+      "filename": "libtool-2.4.7-r3.apk",
+      "sha256": "9e604c47eadffa8bfe99a956150792c8d82a1d61a76c6fa6154b8b78fdb4a204",
+      "package": "libtool",
+      "version": "2.4.7-r3",
+      "origin": "libtool",
+      "aports_commit": "33283848034c9885d984c8e8697c645c57324938",
+      "license": [
+        "LGPL-2.0-or-later AND GPL-2.0-or-later"
+      ],
+      "url": [
+        "https://www.gnu.org/software/libtool"
+      ]
+    },
+    {
+      "filename": "libunistring-1.2-r0.apk",
+      "sha256": "81be06ee6cab58c1b44dd72cd10036457c031a0186a4f915befebb22989b9802",
+      "package": "libunistring",
+      "version": "1.2-r0",
+      "origin": "libunistring",
+      "aports_commit": "c4c67852adc5bc15e278054876bc3c70c321948e",
+      "license": [
+        "GPL-2.0-or-later OR LGPL-3.0-or-later"
+      ],
+      "url": [
+        "https://www.gnu.org/software/libunistring/"
+      ]
+    },
+    {
+      "filename": "libxml2-2.13.9-r1.apk",
+      "sha256": "8a99b85bf26a698934ca901b66a7aa9a117ed20139cb019086215ea32ec87d2f",
+      "package": "libxml2",
+      "version": "2.13.9-r1",
+      "origin": "libxml2",
+      "aports_commit": "f77d9e58e5dcbf8b6cc3090c8198d09614581c9b",
+      "license": [
+        "MIT"
+      ],
+      "url": [
+        "https://gitlab.gnome.org/GNOME/libxml2"
+      ]
+    },
+    {
+      "filename": "linux-headers-6.6-r1.apk",
+      "sha256": "775cfa57ca5475d6dd87527a9889f6934e1dda11331060b7aee761d54a7c9949",
+      "package": "linux-headers",
+      "version": "6.6-r1",
+      "origin": "linux-headers",
+      "aports_commit": "ff05649790da27954fc672698b30aa984b772c01",
+      "license": [
+        "GPL-2.0-only"
+      ],
+      "url": [
+        "https://kernel.org/"
+      ]
+    },
+    {
+      "filename": "llvm19-libs-19.1.4-r1.apk",
+      "sha256": "5cca50343cc5dcbfed31cd2208602272f95f6acee33ba109751060383a5ce031",
+      "package": "llvm19-libs",
+      "version": "19.1.4-r1",
+      "origin": "llvm19",
+      "aports_commit": "14cbf9f66aa84dae688360611937caac603f397b",
+      "license": [
+        "Apache-2.0"
+      ],
+      "url": [
+        "https://llvm.org/"
+      ]
+    },
+    {
+      "filename": "llvm19-linker-tools-19.1.4-r1.apk",
+      "sha256": "baf97d77747f60da0d0aa557161426da96af87f543b7cdffa6bbe95b2c74ad97",
+      "package": "llvm19-linker-tools",
+      "version": "19.1.4-r1",
+      "origin": "llvm19",
+      "aports_commit": "14cbf9f66aa84dae688360611937caac603f397b",
+      "license": [
+        "Apache-2.0"
+      ],
+      "url": [
+        "https://llvm.org/"
+      ]
+    },
+    {
+      "filename": "lzip-1.24.1-r1.apk",
+      "sha256": "872b9758faaa44021d13a2ff6989b6946f72b6dd8be7458f4de2c7180bb82b39",
+      "package": "lzip",
+      "version": "1.24.1-r1",
+      "origin": "lzip",
+      "aports_commit": "69d685ccfa67285422d5e908a1627f5566fdb1ba",
+      "license": [
+        "GPL-2.0-or-later"
+      ],
+      "url": [
+        "https://www.nongnu.org/lzip/"
+      ]
+    },
+    {
+      "filename": "m4-1.4.19-r3.apk",
+      "sha256": "d2ffe67c64e12601536a488d1dff3202c5ccb00ea81a6be0bf9530048406aba3",
+      "package": "m4",
+      "version": "1.4.19-r3",
+      "origin": "m4",
+      "aports_commit": "84a227baf001b6e0208e3352b294e4d7a40e93de",
+      "license": [
+        "GPL-3.0-or-later"
+      ],
+      "url": [
+        "https://www.gnu.org/software/m4"
+      ]
+    },
+    {
+      "filename": "make-4.4.1-r2.apk",
+      "sha256": "a61bf1442fa3cdee6ea7188e28673dba7b36bf2f469ccaa6b119cb95c3338b43",
+      "package": "make",
+      "version": "4.4.1-r2",
+      "origin": "make",
+      "aports_commit": "2360b6d78eeafe5b88b6409a4c94dc591339d40c",
+      "license": [
+        "GPL-3.0-or-later"
+      ],
+      "url": [
+        "https://www.gnu.org/software/make"
+      ]
+    },
+    {
+      "filename": "meson-1.6.1-r0.apk",
+      "sha256": "47fa573cb2d211689be8368e4a65e7c2cfa34de02ddcebf5b241e0d6799e3167",
+      "package": "meson",
+      "version": "1.6.1-r0",
+      "origin": "meson",
+      "aports_commit": "bd2a8e0fc4db67c9e50e2de14e98e57dcc615297",
+      "license": [
+        "Apache-2.0"
+      ],
+      "url": [
+        "https://mesonbuild.com"
+      ]
+    },
+    {
+      "filename": "meson-pyc-1.6.1-r0.apk",
+      "sha256": "de3040ebdfcb9aea5414015a25f7e6f8d69f99c6b4761c7121cb2772902ebd9f",
+      "package": "meson-pyc",
+      "version": "1.6.1-r0",
+      "origin": "meson",
+      "aports_commit": "bd2a8e0fc4db67c9e50e2de14e98e57dcc615297",
+      "license": [
+        "Apache-2.0"
+      ],
+      "url": [
+        "https://mesonbuild.com"
+      ]
+    },
+    {
+      "filename": "mimalloc2-2.1.7-r0.apk",
+      "sha256": "fb91cf2044e28fd2e6786efa2953d3e371bf949879688da88268db2085099858",
+      "package": "mimalloc2",
+      "version": "2.1.7-r0",
+      "origin": "mimalloc2",
+      "aports_commit": "5a1a5dc3216a69e3cd66a57ee07cb5ef01b8be39",
+      "license": [
+        "MIT"
+      ],
+      "url": [
+        "https://github.com/microsoft/mimalloc"
+      ]
+    },
+    {
+      "filename": "mimalloc2-debug-2.1.7-r0.apk",
+      "sha256": "7a565661d54e925ecc04ca874a9d666b5dd63677063a527d9adabb023ca36e2d",
+      "package": "mimalloc2-debug",
+      "version": "2.1.7-r0",
+      "origin": "mimalloc2",
+      "aports_commit": "5a1a5dc3216a69e3cd66a57ee07cb5ef01b8be39",
+      "license": [
+        "MIT"
+      ],
+      "url": [
+        "https://github.com/microsoft/mimalloc"
+      ]
+    },
+    {
+      "filename": "mimalloc2-dev-2.1.7-r0.apk",
+      "sha256": "9b140b549613492ad23a8c0749c17e38d9ad737d7b22b7927e035b03f8c4ac3f",
+      "package": "mimalloc2-dev",
+      "version": "2.1.7-r0",
+      "origin": "mimalloc2",
+      "aports_commit": "5a1a5dc3216a69e3cd66a57ee07cb5ef01b8be39",
+      "license": [
+        "MIT"
+      ],
+      "url": [
+        "https://github.com/microsoft/mimalloc"
+      ]
+    },
+    {
+      "filename": "mimalloc2-insecure-2.1.7-r0.apk",
+      "sha256": "078b69f8cd6734b49e23da7f92538639bc7f651e0eb5bf6a7023e3af1548a72d",
+      "package": "mimalloc2-insecure",
+      "version": "2.1.7-r0",
+      "origin": "mimalloc2",
+      "aports_commit": "5a1a5dc3216a69e3cd66a57ee07cb5ef01b8be39",
+      "license": [
+        "MIT"
+      ],
+      "url": [
+        "https://github.com/microsoft/mimalloc"
+      ]
+    },
+    {
+      "filename": "mpc1-1.3.1-r1.apk",
+      "sha256": "a63431b3ae86d2b376d7b3a48bf3ead220983cf1d172b3339cfc899dbfdc6d2a",
+      "package": "mpc1",
+      "version": "1.3.1-r1",
+      "origin": "mpc1",
+      "aports_commit": "84a227baf001b6e0208e3352b294e4d7a40e93de",
+      "license": [
+        "LGPL-3.0-or-later"
+      ],
+      "url": [
+        "http://www.multiprecision.org/"
+      ]
+    },
+    {
+      "filename": "mpdecimal-4.0.0-r0.apk",
+      "sha256": "022349ca371423bf80d45e7f8bd11fa1f8e115d103b8bd8674c8f8dfdcc48286",
+      "package": "mpdecimal",
+      "version": "4.0.0-r0",
+      "origin": "mpdecimal",
+      "aports_commit": "2eb73f6cb661fb3582606482331ad083155f18e8",
+      "license": [
+        "BSD-2-Clause"
+      ],
+      "url": [
+        "https://www.bytereef.org/mpdecimal/index.html"
+      ]
+    },
+    {
+      "filename": "mpfr4-4.2.1-r0.apk",
+      "sha256": "2493390b05fcaed445ca4fdbf3508422cd9a0af5b7051c6a63a832a65b549ff2",
+      "package": "mpfr4",
+      "version": "4.2.1-r0",
+      "origin": "mpfr4",
+      "aports_commit": "f0981ab6660cc878d98f8dab150cbcf62206b2db",
+      "license": [
+        "LGPL-3.0-or-later"
+      ],
+      "url": [
+        "https://www.mpfr.org/"
+      ]
+    },
+    {
+      "filename": "musl-1.2.5-r12.apk",
+      "sha256": "abfcfe822d37bb6fa621d7d682e26eba95152c642dc5619b768b4e4a9789133e",
+      "package": "musl",
+      "version": "1.2.5-r12",
+      "origin": "musl",
+      "aports_commit": "5245849e14d213abe18d589b4b80d65793327940",
+      "license": [
+        "MIT"
+      ],
+      "url": [
+        "https://musl.libc.org/"
+      ]
+    },
+    {
+      "filename": "musl-dev-1.2.5-r12.apk",
+      "sha256": "0b0357736d51253ddf82a4338378848cfbbe6d695aba60cf7790423670d61b2a",
+      "package": "musl-dev",
+      "version": "1.2.5-r12",
+      "origin": "musl",
+      "aports_commit": "5245849e14d213abe18d589b4b80d65793327940",
+      "license": [
+        "MIT"
+      ],
+      "url": [
+        "https://musl.libc.org/"
+      ]
+    },
+    {
+      "filename": "musl-utils-1.2.5-r12.apk",
+      "sha256": "42bb107b4f139a289b146ac0404e222c0ae74ad759add38ac69b0063d2a5164c",
+      "package": "musl-utils",
+      "version": "1.2.5-r12",
+      "origin": "musl",
+      "aports_commit": "5245849e14d213abe18d589b4b80d65793327940",
+      "license": [
+        "MIT AND BSD-2-Clause AND GPL-2.0-or-later"
+      ],
+      "url": [
+        "https://musl.libc.org/"
+      ]
+    },
+    {
+      "filename": "ncurses-terminfo-base-6.5_p20241006-r3.apk",
+      "sha256": "46402464710d165a8fed4b843b3a20d9950e1e9a20923c3869241014bf6b2f51",
+      "package": "ncurses-terminfo-base",
+      "version": "6.5_p20241006-r3",
+      "origin": "ncurses",
+      "aports_commit": "2cf24c798675a7f7deb2603c350d4adc7b59c8bb",
+      "license": [
+        "X11"
+      ],
+      "url": [
+        "https://invisible-island.net/ncurses/"
+      ]
+    },
+    {
+      "filename": "nghttp2-libs-1.69.0-r0.apk",
+      "sha256": "341724304e3b4bb5ae0ec9021f55da2ef27a19b78ef7873d1a865bdf72dbef0c",
+      "package": "nghttp2-libs",
+      "version": "1.69.0-r0",
+      "origin": "nghttp2",
+      "aports_commit": "f5865f848b702c52c657060adbe80706265984ec",
+      "license": [
+        "MIT"
+      ],
+      "url": [
+        "https://nghttp2.org"
+      ]
+    },
+    {
+      "filename": "openssl-3.3.7-r2.apk",
+      "sha256": "a444f449e2993d6b37fd5c9d9928b4378bb33a2362c0d0084ac940f564aaeb97",
+      "package": "openssl",
+      "version": "3.3.7-r2",
+      "origin": "openssl",
+      "aports_commit": "a254386dfe34f70a05bdb8b2a3d7a5b20b6f076e",
+      "license": [
+        "Apache-2.0"
+      ],
+      "url": [
+        "https://www.openssl.org/"
+      ]
+    },
+    {
+      "filename": "patch-2.7.6-r10.apk",
+      "sha256": "c0c7b135ac7e08379bde9bd7ac89661dd70d83c924c7455b6f20d91997cb5595",
+      "package": "patch",
+      "version": "2.7.6-r10",
+      "origin": "patch",
+      "aports_commit": "fc95c59998285564fbcb0bfb2443898c62e10171",
+      "license": [
+        "GPL-3.0-or-later"
+      ],
+      "url": [
+        "https://www.gnu.org/software/patch/patch.html"
+      ]
+    },
+    {
+      "filename": "pcre2-10.43-r1.apk",
+      "sha256": "1d00d2d746d81977271576965242222d1ae6b0d8a48166e1e4692ba95293550f",
+      "package": "pcre2",
+      "version": "10.43-r1",
+      "origin": "pcre2",
+      "aports_commit": "b5677eddd475c9745d9e89050108d6b2c6c0c438",
+      "license": [
+        "BSD-3-Clause"
+      ],
+      "url": [
+        "https://pcre.org/"
+      ]
+    },
+    {
+      "filename": "perl-5.40.4-r0.apk",
+      "sha256": "25d29d18dea18b4e8ccc681643d7eec9b154e4ad2ed76cd039052e13804a7fca",
+      "package": "perl",
+      "version": "5.40.4-r0",
+      "origin": "perl",
+      "aports_commit": "f6a32c48ff721cf171c26edfd2337c5d733c6ac8",
+      "license": [
+        "Artistic-1.0-Perl OR GPL-1.0-or-later"
+      ],
+      "url": [
+        "https://www.perl.org/"
+      ]
+    },
+    {
+      "filename": "perl-error-0.17029-r2.apk",
+      "sha256": "9b3d3f90da61c646959f4f0d00c3a00b8adb4c9740ccd32d016bf1b8ce57a9ac",
+      "package": "perl-error",
+      "version": "0.17029-r2",
+      "origin": "perl-error",
+      "aports_commit": "1325c9bb2fdb0ed63d3776b3fd8151fbb8cb49f4",
+      "license": [
+        "GPL-1.0-or-later OR Artistic-1.0-Perl"
+      ],
+      "url": [
+        "https://metacpan.org/release/Error"
+      ]
+    },
+    {
+      "filename": "perl-git-2.47.3-r0.apk",
+      "sha256": "3856fd0f5f4c7e6279abfe849fd2da83013efcae0e8778dce1a9991fbffdfba0",
+      "package": "perl-git",
+      "version": "2.47.3-r0",
+      "origin": "git",
+      "aports_commit": "ca82c367c9e522b81bfa0dcbe39e0fd5eff1b1b5",
+      "license": [
+        "GPL-2.0-only"
+      ],
+      "url": [
+        "https://www.git-scm.com/"
+      ]
+    },
+    {
+      "filename": "pkgconf-2.3.0-r0.apk",
+      "sha256": "df410a0e485d40a2bd0bf9b36d1e26f7577c5fe60e25b99906a7d63a426e0d29",
+      "package": "pkgconf",
+      "version": "2.3.0-r0",
+      "origin": "pkgconf",
+      "aports_commit": "30b8a2129aa575809ad80dfdf4124e3fb9e7e427",
+      "license": [
+        "ISC"
+      ],
+      "url": [
+        "https://gitea.treehouse.systems/ariadne/pkgconf"
+      ]
+    },
+    {
+      "filename": "pyc-3.12.16-r0.apk",
+      "sha256": "180390d4ab3b1872cc1fd70790af1067ad12d252725eb42965964943ebce44a2",
+      "package": "pyc",
+      "version": "3.12.16-r0",
+      "origin": "python3",
+      "aports_commit": "c8a95d62be52f67eea6f352d9407de796446df71",
+      "license": [
+        "PSF-2.0"
+      ],
+      "url": [
+        "https://www.python.org/"
+      ]
+    },
+    {
+      "filename": "python3-3.12.16-r0.apk",
+      "sha256": "ad4aca4c7af3f21d260295f38fa000c8ef70d5f6a62c58e8a7dc778456ce23e9",
+      "package": "python3",
+      "version": "3.12.16-r0",
+      "origin": "python3",
+      "aports_commit": "c8a95d62be52f67eea6f352d9407de796446df71",
+      "license": [
+        "PSF-2.0"
+      ],
+      "url": [
+        "https://www.python.org/"
+      ]
+    },
+    {
+      "filename": "python3-pyc-3.12.16-r0.apk",
+      "sha256": "1b34ba0d7ea33a7203f19c6a3247e13ecaa856a76629f6d284657bd156f25a3c",
+      "package": "python3-pyc",
+      "version": "3.12.16-r0",
+      "origin": "python3",
+      "aports_commit": "c8a95d62be52f67eea6f352d9407de796446df71",
+      "license": [
+        "PSF-2.0"
+      ],
+      "url": [
+        "https://www.python.org/"
+      ]
+    },
+    {
+      "filename": "python3-pycache-pyc0-3.12.16-r0.apk",
+      "sha256": "d2873a1fd7bcde8d14f3220a45a08ce4749b3c606d4b2e189e4d715a0ce79357",
+      "package": "python3-pycache-pyc0",
+      "version": "3.12.16-r0",
+      "origin": "python3",
+      "aports_commit": "c8a95d62be52f67eea6f352d9407de796446df71",
+      "license": [
+        "PSF-2.0"
+      ],
+      "url": [
+        "https://www.python.org/"
+      ]
+    },
+    {
+      "filename": "readline-8.2.13-r0.apk",
+      "sha256": "fa4ff2347886f5516d021b9064a00259b29fc6e2608eac5588a339de244acf12",
+      "package": "readline",
+      "version": "8.2.13-r0",
+      "origin": "readline",
+      "aports_commit": "7dff18068fb2ef6694db4f7bdc447755187e74ab",
+      "license": [
+        "GPL-3.0-or-later"
+      ],
+      "url": [
+        "https://tiswww.cwru.edu/php/chet/readline/rltop.html"
+      ]
+    },
+    {
+      "filename": "samurai-1.2-r6.apk",
+      "sha256": "c8ea6ea3303c60dae5254afef6217e8e426f80d2bce8b6c62a7101925ededdc6",
+      "package": "samurai",
+      "version": "1.2-r6",
+      "origin": "samurai",
+      "aports_commit": "df5dd307a5e1e9193d389378b85a154de4996016",
+      "license": [
+        "Apache-2.0"
+      ],
+      "url": [
+        "https://github.com/michaelforney/samurai"
+      ]
+    },
+    {
+      "filename": "scanelf-1.3.8-r1.apk",
+      "sha256": "ab09a222be0de397e5102107f057f1181be1bf3b70bc66c645750f92d861ae14",
+      "package": "scanelf",
+      "version": "1.3.8-r1",
+      "origin": "pax-utils",
+      "aports_commit": "398a5aee3025ec8a4d0d761e448dc86ac777fa09",
+      "license": [
+        "GPL-2.0-only"
+      ],
+      "url": [
+        "https://wiki.gentoo.org/wiki/Hardened/PaX_Utilities"
+      ]
+    },
+    {
+      "filename": "sqlite-libs-3.48.0-r4.apk",
+      "sha256": "56b55029cce8d43a67f5076e07c96b68b80b26dc412b205b7f0b5c63704ab234",
+      "package": "sqlite-libs",
+      "version": "3.48.0-r4",
+      "origin": "sqlite",
+      "aports_commit": "ee0eac4d746e3a414cacb3186b3577ccc4342c07",
+      "license": [
+        "blessing"
+      ],
+      "url": [
+        "https://www.sqlite.org/"
+      ]
+    },
+    {
+      "filename": "ssl_client-1.37.0-r14.apk",
+      "sha256": "e104e7b0c3176370fef92235cde4608b4434ab482204c6428248fa3743fb5db0",
+      "package": "ssl_client",
+      "version": "1.37.0-r14",
+      "origin": "busybox",
+      "aports_commit": "284d827a2793963e6dcf88324bd1eb81adff579c",
+      "license": [
+        "GPL-2.0-only"
+      ],
+      "url": [
+        "https://busybox.net/"
+      ]
+    },
+    {
+      "filename": "tar-1.35-r2.apk",
+      "sha256": "9013cb0ec7a6acf84698a462e0ec903b634da1dbeb5a7b4f613aa9b639a737c6",
+      "package": "tar",
+      "version": "1.35-r2",
+      "origin": "tar",
+      "aports_commit": "847ff38eb449c4700ec5f6b32f5c2a08933f3027",
+      "license": [
+        "GPL-3.0-or-later"
+      ],
+      "url": [
+        "https://www.gnu.org/software/tar/"
+      ]
+    },
+    {
+      "filename": "xz-5.8.4-r0.apk",
+      "sha256": "f58a7606d22f3afb0aed68e4829cf18ea0bc96ea0ba6451fd685ea2a69f29fca",
+      "package": "xz",
+      "version": "5.8.4-r0",
+      "origin": "xz",
+      "aports_commit": "703710896c49375655df7c22d0a523aa02544f2c",
+      "license": [
+        "GPL-2.0-or-later AND 0BSD AND Public-Domain AND LGPL-2.1-or-later"
+      ],
+      "url": [
+        "https://tukaani.org/xz/"
+      ]
+    },
+    {
+      "filename": "xz-libs-5.8.4-r0.apk",
+      "sha256": "6f5303a049a23f68659205eda4840865370340905e0481ba5266c19e2f49b585",
+      "package": "xz-libs",
+      "version": "5.8.4-r0",
+      "origin": "xz",
+      "aports_commit": "703710896c49375655df7c22d0a523aa02544f2c",
+      "license": [
+        "GPL-2.0-or-later AND 0BSD AND Public-Domain AND LGPL-2.1-or-later"
+      ],
+      "url": [
+        "https://tukaani.org/xz/"
+      ]
+    },
+    {
+      "filename": "zlib-1.4-r0.apk",
+      "sha256": "a88ff332b239e7efa688a04832da72687fe3701a952b92c9422b3dc985a3c220",
+      "package": "zlib",
+      "version": "1.4-r0",
+      "origin": "zlib",
+      "aports_commit": "d3332621d44c2c4cf52e52217b16674db190212c",
+      "license": [
+        "Zlib"
+      ],
+      "url": [
+        "https://zlib.net/"
+      ]
+    },
+    {
+      "filename": "zlib-dev-1.4-r0.apk",
+      "sha256": "fa6aa5fc6432ed0c22301d90249a5deae77ad565fe81f4116e162d237a40e862",
+      "package": "zlib-dev",
+      "version": "1.4-r0",
+      "origin": "zlib",
+      "aports_commit": "d3332621d44c2c4cf52e52217b16674db190212c",
+      "license": [
+        "Zlib"
+      ],
+      "url": [
+        "https://zlib.net/"
+      ]
+    },
+    {
+      "filename": "zlib-static-1.4-r0.apk",
+      "sha256": "1246caba7a1cbde1bde159b5e959d0a8aef4d7dbfccc353c99a49478eb453db2",
+      "package": "zlib-static",
+      "version": "1.4-r0",
+      "origin": "zlib",
+      "aports_commit": "d3332621d44c2c4cf52e52217b16674db190212c",
+      "license": [
+        "Zlib"
+      ],
+      "url": [
+        "https://zlib.net/"
+      ]
+    },
+    {
+      "filename": "zstd-1.5.6-r2.apk",
+      "sha256": "0b6c7723b35c2d3333f2dd1a18c73c2efbd220933b0eda2757bb5892e268c404",
+      "package": "zstd",
+      "version": "1.5.6-r2",
+      "origin": "zstd",
+      "aports_commit": "5c2ddf18f193dafdd25ae7391d96c7e30766eecd",
+      "license": [
+        "BSD-3-Clause OR GPL-2.0-or-later"
+      ],
+      "url": [
+        "https://facebook.github.io/zstd/"
+      ]
+    },
+    {
+      "filename": "zstd-dev-1.5.6-r2.apk",
+      "sha256": "a96d7dc92a56d916fa0b0643e11aac8fbfa28dc417fb86aa669f8cbea3c9dbea",
+      "package": "zstd-dev",
+      "version": "1.5.6-r2",
+      "origin": "zstd",
+      "aports_commit": "5c2ddf18f193dafdd25ae7391d96c7e30766eecd",
+      "license": [
+        "BSD-3-Clause OR GPL-2.0-or-later"
+      ],
+      "url": [
+        "https://facebook.github.io/zstd/"
+      ]
+    },
+    {
+      "filename": "zstd-libs-1.5.6-r2.apk",
+      "sha256": "45a06bfc107f44502b7e0503fcd5c8d2d2e6cff255134ed959275eb99caf9979",
+      "package": "zstd-libs",
+      "version": "1.5.6-r2",
+      "origin": "zstd",
+      "aports_commit": "5c2ddf18f193dafdd25ae7391d96c7e30766eecd",
+      "license": [
+        "BSD-3-Clause OR GPL-2.0-or-later"
+      ],
+      "url": [
+        "https://facebook.github.io/zstd/"
+      ]
+    },
+    {
+      "filename": "zstd-static-1.5.6-r2.apk",
+      "sha256": "c82da00816b8dfec70f91d0f1d979aa9558bf5c4e1a15ab354f05c6dba5e7ca1",
+      "package": "zstd-static",
+      "version": "1.5.6-r2",
+      "origin": "zstd",
+      "aports_commit": "5c2ddf18f193dafdd25ae7391d96c7e30766eecd",
+      "license": [
+        "BSD-3-Clause OR GPL-2.0-or-later"
+      ],
+      "url": [
+        "https://facebook.github.io/zstd/"
+      ]
+    }
+  ],
+  "runtime_source_commit": "fedfad51acc2860b2916a1eef32ba4a500ff31ef",
+  "sources": [
+    "libfuse-3.15.0.tar.xz",
+    "squashfuse-0.5.2.tar.gz"
+  ],
+  "runtime_sha256": "dcf5f5b07d5679e37c5a2decff55a65fc2962c565fdaacbf88eaf2bd4ad61ac4",
+  "runtime_object_sha256": "09fd66015662ce08645b32ab63d6bca402cf9219b68ad8c2a00165218139f58b",
+  "link_map_sha256": "814091e55b4d8ee79b7948bf6c0016c5d9fc12a7fcc3730d720f960c054596cf",
+  "build_recipe_sha256": "f81bcc3a58a18280b46ef115c2165f1fa0117dc37d320c9b7f602687719ace54",
+  "technical_source_relinking_complete": false,
+  "relink_inputs": [
+    {
+      "sysroot_path": "/usr/lib/crti.o",
+      "sha256": "8edb7b9515f2a2c75bc41e773bdf118e82808452b9eef55a8a360e9d8068ead3",
+      "size": 2792
+    },
+    {
+      "sysroot_path": "/usr/lib/crtn.o",
+      "sha256": "cbfe47a3fbdbde2c51e2042a1af512bdd4b0e1b0d01f46a54b227c76650335b2",
+      "size": 2736
+    },
+    {
+      "sysroot_path": "/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/crtbeginS.o",
+      "sha256": "7f13ed58a696945c2a1f4de29450485c59664886606b55b5eb7701d32cd6bad1",
+      "size": 3280
+    },
+    {
+      "sysroot_path": "/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/crtendS.o",
+      "sha256": "801b38e1001ac23947848c28a74bcf739516c253173b5641644fedcb459233b4",
+      "size": 1168
+    },
+    {
+      "sysroot_path": "/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/libgcc.a",
+      "sha256": "d1bbcb4ac2fc9c966e40d2f4c4c9597dd30bb6746edbd1e9166acba192ab2bdc",
+      "size": 3285436
+    },
+    {
+      "sysroot_path": "/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/libgcc_eh.a",
+      "sha256": "145622b860bdbf0fb7809dd42a04b1322b732c197b953c58aaa9a747a3b31229",
+      "size": 346210
+    },
+    {
+      "sysroot_path": "/usr/lib/libc.a",
+      "sha256": "981861198fda961f6cea01597451996836a5925249e7ef3de8f72fbd2938a90d",
+      "size": 9417962
+    },
+    {
+      "sysroot_path": "/usr/lib/libfuse3.a",
+      "sha256": "3e28867d2ec65284aa21f26455e8cc651d8935b3d41d8619e9ef7f03401ad3f5",
+      "size": 1177980
+    },
+    {
+      "sysroot_path": "/usr/lib/libmimalloc.a",
+      "sha256": "a4e22b6d2428a26822b9cf9498cb22d489f44e782313e4df75591b965ba36461",
+      "size": 290586
+    },
+    {
+      "sysroot_path": "/usr/lib/libssp_nonshared.a",
+      "sha256": "e6aa34049f2b7b6011de98e106d6492ff404b7c54aa87eb09512cfb2dea438ea",
+      "size": 3390
+    },
+    {
+      "sysroot_path": "/usr/lib/libz.a",
+      "sha256": "2d70d9a4ee9855d6082ad70c88e0b7114f4eb760bedf3a340ecce720842f9d36",
+      "size": 140734
+    },
+    {
+      "sysroot_path": "/usr/lib/libzstd.a",
+      "sha256": "9f67beb4922cac41f9e0be69a3a4f1152a7c1db439daa36ceb45d4debd3bad72",
+      "size": 4598240
+    },
+    {
+      "sysroot_path": "/usr/lib/rcrt1.o",
+      "sha256": "c2b7420a576dbd3c95ccd6dba0963e8477256cf32dcc31b734226d51bb09277b",
+      "size": 10432
+    },
+    {
+      "sysroot_path": "/usr/local/lib/libsquashfuse.a",
+      "sha256": "b10f74da74ad9b576bf285f766dbec22b8d1128be65750c696af52f50f65b24d",
+      "size": 82578
+    },
+    {
+      "sysroot_path": "/usr/local/lib/libsquashfuse_ll.a",
+      "sha256": "458799b252f2cf359e3d717e8e3d6ab7e6018907b1d59a4779cb2b29b0595d72",
+      "size": 122368
+    }
+  ],
+  "compiler": "Alpine clang version 19.1.4\nTarget: x86_64-alpine-linux-musl\nThread model: posix\nInstalledDir: /usr/lib/llvm19/bin\nConfiguration file: /etc/clang19/x86_64-alpine-linux-musl.cfg\n",
+  "dynamic_section": "\nDynamic section at offset 0x9ee30 contains 19 entries:\n  Tag        Type                         Name/Value\n 0x000000000000000c (INIT)               0x4000\n 0x000000000000000d (FINI)               0x6ef3c\n 0x0000000000000019 (INIT_ARRAY)         0x8d1a0\n 0x000000000000001b (INIT_ARRAYSZ)       24 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x8d1b8\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x830\n 0x0000000000000005 (STRTAB)             0x868\n 0x0000000000000006 (SYMTAB)             0x850\n 0x000000000000000a (STRSZ)              1 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000015 (DEBUG)              0x0\n 0x0000000000000007 (RELA)               0x870\n 0x0000000000000008 (RELASZ)             13008 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000000000001e (FLAGS)              BIND_NOW\n 0x000000006ffffffb (FLAGS_1)            Flags: NOW PIE\n 0x000000006ffffff9 (RELACOUNT)          542\n 0x0000000000000000 (NULL)               0x0\n"
+}

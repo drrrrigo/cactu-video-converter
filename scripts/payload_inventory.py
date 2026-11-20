@@ -5,11 +5,13 @@ from __future__ import annotations
 import ast
 import importlib.metadata
 import json
+import os
 import re
 import subprocess
 import sys
 import zipfile
 from collections import Counter
+from functools import lru_cache
 from pathlib import Path
 
 from release_common import ROOT, read_json, sha256
@@ -40,8 +42,24 @@ def native_details(file: Path, magic: bytes) -> dict:
                 entry.dll.decode(errors="replace")
                 for entry in getattr(pe, "DIRECTORY_ENTRY_IMPORT", ())
             ]
+            # Resource versions distinguish supplier DLLs from the package copying them.
+            pe.parse_data_directories()
+            version = {}
+            for group in getattr(pe, "FileInfo", ()):
+                for item in group:
+                    for table in getattr(item, "StringTable", ()):
+                        for key, value in table.entries.items():
+                            key = key.decode(errors="replace")
+                            if key in {
+                                "CompanyName",
+                                "ProductName",
+                                "ProductVersion",
+                                "FileVersion",
+                                "OriginalFilename",
+                            }:
+                                version[key] = value.decode(errors="replace")
             pe.close()
-            return {"format": "PE", "needed": needed}
+            return {"format": "PE", "needed": needed, "version_resource": version}
         except (ImportError, OSError, ValueError):
             return {"format": "PE", "dependency_scan": "UNAVAILABLE"}
     return {}
@@ -55,6 +73,21 @@ def collect_origins(root: Path = ROOT) -> dict:
         for name, source, kind in data[0]:
             sources[name.replace("\\", "/")] = (Path(source), kind)
     return sources
+
+
+def resolve_copy_origin(sources: dict, key: str):
+    """COLLECT symlink entries refer to another destination, not a host file."""
+    visited = set()
+    while key not in visited:
+        visited.add(key)
+        entry = sources.get(key)
+        if not entry:
+            return None
+        source, kind = entry
+        if kind != "SYMLINK":
+            return entry
+        key = source.as_posix()
+    return None
 
 
 def wheel_owners() -> dict:
@@ -105,14 +138,24 @@ def embedded_modules(payload: Path) -> set[str]:
     return result
 
 
+@lru_cache(maxsize=None)
 def host_package(source: Path) -> dict | None:
     if not sys.platform.startswith("linux"):
         return None
     # Only query a source selected by PyInstaller; never enumerate unrelated host files.
     try:
-        result = subprocess.run(
-            ["dpkg-query", "-S", str(source)], capture_output=True, text=True, check=False
-        )
+        candidates = [source, source.resolve()]
+        for file in list(candidates):
+            if str(file).startswith("/usr/lib/"):
+                candidates.append(Path(str(file).removeprefix("/usr")))
+            elif str(file).startswith("/lib/"):
+                candidates.append(Path("/usr" + str(file)))
+        for candidate in dict.fromkeys(candidates):
+            result = subprocess.run(
+                ["dpkg-query", "-S", str(candidate)], capture_output=True, text=True, check=False
+            )
+            if result.returncode == 0:
+                break
         if result.returncode == 0:
             package = result.stdout.split(": ", 1)[0]
             value = subprocess.run(
@@ -138,6 +181,10 @@ def host_package(source: Path) -> dict | None:
                 "host_copyright_sha256": sha256(copyright_file)
                 if copyright_file.is_file()
                 else None,
+                "notice": "_internal/licenses/native-system/"
+                + package.split(":")[0]
+                + "/copyright",
+                "review_status": "REVIEW_REQUIRED",
             }
     except (OSError, subprocess.SubprocessError, IndexError):
         pass
@@ -199,6 +246,8 @@ def inventory(
 ) -> dict:
     sources, owners = collect_origins(root), wheel_owners()
     catalog = read_json(root / "release/component-sources.json")
+    qt_lock_file = root / "release/qt-source-lock.json"
+    qt_lock = read_json(qt_lock_file) if qt_lock_file.is_file() else None
     records, components = [], {}
 
     def register(component):
@@ -239,13 +288,37 @@ def inventory(
             magic = stream.read(4)
         native = magic.startswith(b"\x7fELF") or magic.startswith(b"MZ")
         key = relative.removeprefix("usr/bin/").removeprefix("_internal/")
-        origin = sources.get(key) or sources.get(relative)
+        origin = resolve_copy_origin(sources, key) or resolve_copy_origin(sources, relative)
+        details = native_details(file, magic) if native else None
+        source_evidence = None
         component = None
         if origin:
             source, _kind = origin
+            if source.is_file():
+                source_evidence = {
+                    "copy_kind": _kind,
+                    "source_filename": source.name,
+                    "source_sha256": sha256(source),
+                    "copy_bytes_match": sha256(source) == sha256(file),
+                }
+                if source.is_relative_to(Path(sys.base_prefix)):
+                    source_evidence["distribution"] = "CPython " + sys.version.split()[0]
+                    source_evidence["relative_path"] = source.relative_to(
+                        Path(sys.base_prefix)
+                    ).as_posix()
+                system_root = os.environ.get("SystemRoot")
+                if system_root and source.is_relative_to(Path(system_root)):
+                    source_evidence["distribution"] = "Windows runner image " + os.environ.get(
+                        "ImageVersion", "UNRECORDED"
+                    )
+                    source_evidence["relative_path"] = source.relative_to(
+                        Path(system_root)
+                    ).as_posix()
             owner = owners.get(source.resolve())
             if owner:
                 component = from_wheel(owner)
+                if source_evidence:
+                    source_evidence["distribution"] = owner[0] + " " + owner[1]
             elif source.is_relative_to(root / "src") or key.startswith("assets/"):
                 component = dict(catalog["cactu"])
             elif source.is_relative_to(Path(sys.base_prefix)):
@@ -259,6 +332,22 @@ def inventory(
                 )
             elif native:
                 component = host_package(source)
+            if source_evidence and source_evidence["copy_bytes_match"] is not True:
+                component = None
+        if native and details and details.get("format") == "PE":
+            version = details.get("version_resource", {})
+            if "Microsoft" in version.get("CompanyName", ""):
+                component = {
+                    "project": "Microsoft Windows / Visual C++ runtime",
+                    "version": version.get("FileVersion", "UNRESOLVED"),
+                    "role": "supplier runtime DLL; bundled, not Cactu/Qt code",
+                    "license": "Microsoft redistribution terms: exact grant review required",
+                    "corresponding_source": "https://learn.microsoft.com/en-us/cpp/windows/redistributing-visual-cpp-files",
+                    "review_status": "REVIEW_REQUIRED",
+                    "included_by": component.get("project", "native dependency analysis")
+                    if component
+                    else "native dependency analysis",
+                }
         if relative.startswith("unins"):
             component = dict(catalog["inno-setup"])
         elif (
@@ -292,18 +381,22 @@ def inventory(
                 "corresponding_source": "UNRESOLVED",
             }
         component_id = register(component)
-        records.append(
-            {
-                "path": relative,
-                "sha256": sha256(file),
-                "size": file.stat().st_size,
-                "type": "native" if native else "data",
-                "bundled": True,
-                "component_id": component_id,
-                "symlink": file.is_symlink(),
-                "native": native_details(file, magic) if native else None,
-            }
-        )
+        record = {
+            "path": relative,
+            "sha256": sha256(file),
+            "size": file.stat().st_size,
+            "type": "native" if native else "data",
+            "bundled": True,
+            "component_id": component_id,
+            "symlink": file.is_symlink(),
+            "native": details,
+            "copy_source_evidence": source_evidence,
+        }
+        if qt_lock:
+            from qt_file_mapping import qt_file_mapping
+
+            record["qt_source_mapping"] = qt_file_mapping(relative, qt_lock)
+        records.append(record)
     modules = []
     provenance = module_sources(root)
     for name in sorted(embedded_modules(payload)):

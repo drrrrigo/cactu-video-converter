@@ -1,0 +1,21 @@
+[
+  {
+    "Id": "python",
+    "Name": "Python",
+    "Version": "3.7.0",
+    "License": "PSF LICENSE AGREEMENT FOR PYTHON 3.7.0",
+    "QtUsage": "Used for Qt for Python in the signature extension.",
+    "Homepage": "https://www.python.org/",
+    "source_file": "sources/shiboken6/libshiboken/qt_attribution.json"
+  },
+  {
+    "Id": "python",
+    "Name": "Python",
+    "Version": "3.7.0",
+    "License": "Python License 2.0",
+    "LicenseId": "Python-2.0",
+    "QtUsage": "Used for Qt for Python in the signature extension.",
+    "Homepage": "https://www.python.org/",
+    "source_file": "sources/shiboken6/shibokenmodule/files.dir/shibokensupport/signature/qt_attribution.json"
+  }
+]

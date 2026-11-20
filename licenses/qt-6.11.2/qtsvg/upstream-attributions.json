@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "xsvg",
+    "Name": "XSVG",
+    "License": "Historical Permission Notice and Disclaimer - sell variant",
+    "LicenseId": "HPND-sell-variant",
+    "QtUsage": "Used in the Qt SVG library.",
+    "source_file": "src/svg/qt_attribution.json"
+  }
+]

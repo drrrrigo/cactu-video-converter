@@ -51,7 +51,16 @@ def smoke(executable: Path, *, destination: Path | None = None) -> dict:
             raise RuntimeError("Packaged Python runtime differs from the canonical release pin")
         if not all(
             report.get(key)
-            for key in ("ok", "frozen", "runtime_bundled", "faststart", "original_unchanged")
+            for key in (
+                "ok",
+                "frozen",
+                "runtime_bundled",
+                "faststart",
+                "original_unchanged",
+                "quick_preview",
+                "embedded_subtitle_queue",
+                "loudness_queue",
+            )
         ):
             raise RuntimeError("Packaged smoke evidence is incomplete: " + str(report))
         # Do not export ephemeral private paths or environmental variables.

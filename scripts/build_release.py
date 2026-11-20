@@ -110,6 +110,9 @@ def main() -> int:
         check=True,
     )
     bundle = ROOT / "dist" / EXECUTABLE_NAME
+    from native_notices import collect_native_notices
+
+    collect_native_notices(bundle / "_internal/licenses", ROOT)
     executable = bundle / (EXECUTABLE_NAME + (".exe" if sys.platform == "win32" else ""))
     signed = sign(executable)
     smoke(executable, destination=output / (target + "-onedir-smoke.json"))
@@ -212,6 +215,9 @@ def main() -> int:
                 final_rc=args.rc1,
             )
         evidence["artifacts"] = {destination.name: sha256(destination)}
+    from payload_diff import write_comparisons
+
+    write_comparisons(output, ROOT, target)
     if args.rc1:
         reports = list(output.glob(target + "-*-payload.json"))
         if not reports or any(

@@ -1,0 +1,38 @@
+[
+  {
+    "source_commit": "2527da77ff7983514f535d19391a748c5d898336",
+    "source_file": "SBOM.spdx.json",
+    "file": "SBOM.spdx.json",
+    "sha256": "722e08b2704c06847b38bdb7ae270e8eaf03d17efb18416b3f195f3469e46fb9"
+  },
+  {
+    "source_commit": "2527da77ff7983514f535d19391a748c5d898336",
+    "source_file": "Components/UniPs/LICENSE.md",
+    "file": "LICENSE.md",
+    "sha256": "a08799bb2385a3af99a9bbb7c746d0ad9ac7dd07be0fb1473f2f4d1dc3e11bd1"
+  },
+  {
+    "source_commit": "2527da77ff7983514f535d19391a748c5d898336",
+    "source_file": "Components/Lzma2/lzma-sdk.txt",
+    "file": "lzma-sdk.txt",
+    "sha256": "4959662697d44ed9c63c6f15d2b08cedc02cdc312a673aef191b1b6653a186c2"
+  },
+  {
+    "source_commit": "2527da77ff7983514f535d19391a748c5d898336",
+    "source_file": "Components/Lzma2/7zC.txt",
+    "file": "7zC.txt",
+    "sha256": "e5cc6089348474fc82631365932b1aa09df26a8cfc9f320bbb2509a7b3fc7a0c"
+  },
+  {
+    "source_commit": "2527da77ff7983514f535d19391a748c5d898336",
+    "source_file": "Projects/Src/Compression.LZMA1SmallDecompressor/LzmaDecode/LzmaDecodeSize.c",
+    "file": "LzmaDecodeSize.c.license.txt",
+    "sha256": "bfb54445b6ed867860f6f932bcbd57e3b90da3bc617ee8f9fc0bb64990c4be6a"
+  },
+  {
+    "source_commit": "2527da77ff7983514f535d19391a748c5d898336",
+    "source_file": "Projects/Src/Compression.LZMA1SmallDecompressor/LzmaDecode/LzmaTypes.h",
+    "file": "LzmaTypes.h.license.txt",
+    "sha256": "12041b0be1c86213ed720e2404e092bd58e89bd9100e31162dabf7b389c0838b"
+  }
+]

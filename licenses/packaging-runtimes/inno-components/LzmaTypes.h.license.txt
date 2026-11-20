@@ -1,0 +1,8 @@
+/* 
+LzmaTypes.h 
+
+Types for LZMA Decoder
+
+This file written and distributed to public domain by Igor Pavlov.
+This file is part of LZMA SDK 4.40 (2006-05-01)
+*/

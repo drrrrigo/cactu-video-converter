@@ -1,0 +1,2414 @@
+{
+  "recipe_commit": "7f2a6b1050d302144de8366afa37a75e46f326aa",
+  "recipe_sha256": "e9bb8c9b0e0b5927bca3dd7817a959daaee24eef486eb857b2b8cbae3959568f",
+  "inputs": [
+    {
+      "recipe_file": "scripts.d/10-mingw-std-threads.sh",
+      "repo": "https://github.com/meganz/mingw-std-threads.git",
+      "revision": "c931bac289dd431f1dd30fc4a5d1a7be36668073",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/meganz/mingw-std-threads/tar.gz/c931bac289dd431f1dd30fc4a5d1a7be36668073",
+      "status": "RETAINED",
+      "filename": "10-mingw-std-threads--c931bac289dd431f1dd30fc4a5d1a7be36668073.tar.gz",
+      "license_files": [
+        {
+          "file": "LICENSE",
+          "sha256": "86c148320eb0acc26607ed347e0fde9f49a236d0ec5291d36dc6a7e0e1d26b9f"
+        }
+      ],
+      "sha256": "bba362a5fd537ecd223239efa1f7e7c570018e6d5ea7b26cc0515d3ede9da5ad",
+      "size": 33291
+    },
+    {
+      "recipe_file": "scripts.d/10-mingw.sh",
+      "repo": "https://git.code.sf.net/p/mingw-w64/mingw-w64.git",
+      "revision": "41eb042358a52011b35350392130dcdc94a8ead8",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "status": "BLOCKED",
+      "reason": "Source host requires a verified archive retrieval adapter"
+    },
+    {
+      "recipe_file": "scripts.d/10-xorg-macros.sh",
+      "repo": "https://gitlab.freedesktop.org/xorg/util/macros.git",
+      "revision": "ea1e15a4909ac8b03b2c5a08ac3810b385985157",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://gitlab.freedesktop.org/xorg/util/macros/-/archive/ea1e15a4909ac8b03b2c5a08ac3810b385985157/macros-ea1e15a4909ac8b03b2c5a08ac3810b385985157.tar.gz",
+      "status": "RETAINED",
+      "filename": "10-xorg-macros--ea1e15a4909ac8b03b2c5a08ac3810b385985157.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "7db0516389152a90c20ea910e8839d10204ebc25ccbc71fc7f5809dfb98e80ac"
+        }
+      ],
+      "sha256": "3d7b9d27ac79e9fcdbdae6fcbacb171ba11a5fc12cb54c756bc81633064f91ad",
+      "size": 26322
+    },
+    {
+      "recipe_file": "scripts.d/20-libiconv.sh",
+      "repo": "https://git.savannah.gnu.org/git/libiconv.git",
+      "revision": "baaba39736e3b498e1597bf0e5e899b1f753fb01",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "status": "BLOCKED",
+      "reason": "Source host requires a verified archive retrieval adapter"
+    },
+    {
+      "recipe_file": "scripts.d/20-libiconv.sh",
+      "repo": "https://git.savannah.gnu.org/git/gnulib.git",
+      "revision": "f9e4c24e9bf3f878a11505a8d06bec965f0fca02",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "status": "BLOCKED",
+      "reason": "Source host requires a verified archive retrieval adapter"
+    },
+    {
+      "recipe_file": "scripts.d/20-zlib.sh",
+      "repo": "https://github.com/madler/zlib.git",
+      "revision": "99623ef7097352da7993ba614161fd6a311e046e",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/madler/zlib/tar.gz/99623ef7097352da7993ba614161fd6a311e046e",
+      "status": "RETAINED",
+      "filename": "20-zlib--99623ef7097352da7993ba614161fd6a311e046e.tar.gz",
+      "license_files": [
+        {
+          "file": "LICENSE",
+          "sha256": "e32ff4e00d9d94930537635291da39e7e612703334bf6fde8c7f1686fe8a45a2"
+        }
+      ],
+      "sha256": "f0d590dd90243a12f551ee13359bf6c634249c55b316fa2b7dbecabe7ae9a904",
+      "size": 1569285
+    },
+    {
+      "recipe_file": "scripts.d/25-fftw3.sh",
+      "repo": "https://github.com/FFTW/fftw3.git",
+      "revision": "a7b679c528330cf6258253d6dcf5ec90552e6c93",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/FFTW/fftw3/tar.gz/a7b679c528330cf6258253d6dcf5ec90552e6c93",
+      "status": "RETAINED",
+      "filename": "25-fftw3--a7b679c528330cf6258253d6dcf5ec90552e6c93.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "231f7edcc7352d7734a96eef0b8030f77982678c516876fcb81e25b32d68564c"
+        },
+        {
+          "file": "COPYRIGHT",
+          "sha256": "8a74b35d541d93fdf58a22a3d3baa48ae3edbf6d715edfeb6457c21968ae43ac"
+        },
+        {
+          "file": "doc/license.texi",
+          "sha256": "68f733830a3b4dbf66815ca54b5637015517848c5f32f38f1ea2057782161a77"
+        }
+      ],
+      "sha256": "cb4c579c7d67b933b91eb37c0c18e929734ac8cbe7154f742a4a3dde139e18d7",
+      "size": 543592
+    },
+    {
+      "recipe_file": "scripts.d/25-fribidi.sh",
+      "repo": "https://github.com/fribidi/fribidi.git",
+      "revision": "15393e4937aa95bcf865d92143735746aeb654fa",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/fribidi/fribidi/tar.gz/15393e4937aa95bcf865d92143735746aeb654fa",
+      "status": "RETAINED",
+      "filename": "25-fribidi--15393e4937aa95bcf865d92143735746aeb654fa.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "20e50fe7aae3e56378ebf0417d9de904f55a0e61e4df315333e632a4d3555d95"
+        }
+      ],
+      "sha256": "3e8c03cf8182ff3570a3696c7efd3c456f1fcf288a509b588abe67fc2ff4f630",
+      "size": 2168509
+    },
+    {
+      "recipe_file": "scripts.d/25-gmp.sh",
+      "repo": "https://github.com/BtbN/gmplib.git",
+      "revision": "f9095918ead819c0a2340232891b5acac24b8085",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/BtbN/gmplib/tar.gz/f9095918ead819c0a2340232891b5acac24b8085",
+      "status": "RETAINED",
+      "filename": "25-gmp--f9095918ead819c0a2340232891b5acac24b8085.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING.LESSERv3",
+          "sha256": "a853c2ffec17057872340eee242ae4d96cbf2b520ae27d903e1b2fef1a5f9d1c"
+        },
+        {
+          "file": "COPYINGv2",
+          "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+        },
+        {
+          "file": "COPYINGv3",
+          "sha256": "e6037104443f9a7829b2aa7c5370d0789a7bda3ca65a0b904cdc0c2e285d9195"
+        }
+      ],
+      "sha256": "7e03113bef806a1c57a059093ccc63bb76c5ebcd221829f78e49c54ec83fd9c9",
+      "size": 2549001
+    },
+    {
+      "recipe_file": "scripts.d/25-libogg.sh",
+      "repo": "https://github.com/xiph/ogg.git",
+      "revision": "06a5e0262cdc28aa4ae6797627a783b5010440f0",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/xiph/ogg/tar.gz/06a5e0262cdc28aa4ae6797627a783b5010440f0",
+      "status": "RETAINED",
+      "filename": "25-libogg--06a5e0262cdc28aa4ae6797627a783b5010440f0.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "d2ab5758336489da61c12cc5bb757da5339c4ae9001f9bb0562b4370249af814"
+        }
+      ],
+      "sha256": "fd7ab06f9fe9ace6b75d4223cf9034c9648cbe9f16120a344ec82f27c605ca11",
+      "size": 254527
+    },
+    {
+      "recipe_file": "scripts.d/25-libpng.sh",
+      "repo": "https://github.com/glennrp/libpng.git",
+      "revision": "5408ee7a2e56555cc4b0acc4051ae241fee38cf3",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/glennrp/libpng/tar.gz/5408ee7a2e56555cc4b0acc4051ae241fee38cf3",
+      "status": "RETAINED",
+      "filename": "25-libpng--5408ee7a2e56555cc4b0acc4051ae241fee38cf3.tar.gz",
+      "license_files": [
+        {
+          "file": "LICENSE.md",
+          "sha256": "bdb0a645ea18c60507d0368379b1ac5474b92255fcc2d115e07486a7672ba526"
+        }
+      ],
+      "sha256": "57c27f62c21ad560b9474ab366fa06c95e7d1f074fbd6fec0aeb5c9848fc7403",
+      "size": 1171584
+    },
+    {
+      "recipe_file": "scripts.d/25-libxml2.sh",
+      "repo": "https://github.com/GNOME/libxml2.git",
+      "revision": "21c8223ac091b81d5914c52eb20b1b063e29cb92",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/GNOME/libxml2/tar.gz/21c8223ac091b81d5914c52eb20b1b063e29cb92",
+      "status": "RETAINED",
+      "filename": "25-libxml2--21c8223ac091b81d5914c52eb20b1b063e29cb92.tar.gz",
+      "license_files": [
+        {
+          "file": "Copyright",
+          "sha256": "5d4873884a890122a4b9b20ad56ac6f7da1d796a5bfcf04a427970ac96217626"
+        }
+      ],
+      "sha256": "8f6ac2d07fcc87404494257cc726cefafed2796f7a7885700610d7255b9fc802",
+      "size": 2970856
+    },
+    {
+      "recipe_file": "scripts.d/25-openssl.sh",
+      "repo": "https://github.com/openssl/openssl.git",
+      "revision": "openssl-3.6.5",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "status": "BLOCKED",
+      "reason": "Mutable/non-commit source ref requires explicit resolution"
+    },
+    {
+      "recipe_file": "scripts.d/25-xz.sh",
+      "repo": "https://github.com/tukaani-project/xz.git",
+      "revision": "f54febc540607b3bdee0a0e6793355df2a7e9f61",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/tukaani-project/xz/tar.gz/f54febc540607b3bdee0a0e6793355df2a7e9f61",
+      "status": "RETAINED",
+      "filename": "25-xz--f54febc540607b3bdee0a0e6793355df2a7e9f61.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "616a3ad264ce29b8f1cb97e53037b139d406899ca8d1f799651e17bfa09830b8"
+        },
+        {
+          "file": "COPYING.0BSD",
+          "sha256": "0b01625d853911cd0e2e088dcfb743261034a091bb379246cb25a14cc4c74bf1"
+        },
+        {
+          "file": "COPYING.GPLv2",
+          "sha256": "edaef632cbb643e4e7a221717a6c441a4c1a7c918e6e4d56debc3d8739b233f6"
+        },
+        {
+          "file": "COPYING.GPLv3",
+          "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+        },
+        {
+          "file": "COPYING.LGPLv2.1",
+          "sha256": "20e50fe7aae3e56378ebf0417d9de904f55a0e61e4df315333e632a4d3555d95"
+        },
+        {
+          "file": "build-aux/license-check.sh",
+          "sha256": "2b3fa1d23cb2ab084f3d919908159473cc0e1eed059d106e2a2857c0ec8af98a"
+        }
+      ],
+      "sha256": "ba9015d70fd478711f09124697c59eec155e87af02efa965e6a3875e04306a24",
+      "size": 1847209
+    },
+    {
+      "recipe_file": "scripts.d/45-brotli.sh",
+      "repo": "https://github.com/google/brotli.git",
+      "revision": "3dce8720b74194027c7b4cf42dee5bd159786df5",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/google/brotli/tar.gz/3dce8720b74194027c7b4cf42dee5bd159786df5",
+      "status": "RETAINED",
+      "filename": "45-brotli--3dce8720b74194027c7b4cf42dee5bd159786df5.tar.gz",
+      "license_files": [
+        {
+          "file": "LICENSE",
+          "sha256": "3d180008e36922a4e8daec11c34c7af264fed5962d07924aea928c38e8663c94"
+        }
+      ],
+      "sha256": "fd56b2612ae2851529d7e3b4de34b45ed9abdf9ba3cb8d4fa7cf2a9218c645d7",
+      "size": 682054
+    },
+    {
+      "recipe_file": "scripts.d/45-fonts/25-freetype.sh",
+      "repo": "https://gitlab.freedesktop.org/freetype/freetype.git",
+      "revision": "dbb00e529e69a2be629a9ef98498e4f9b188aab1",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://gitlab.freedesktop.org/freetype/freetype/-/archive/dbb00e529e69a2be629a9ef98498e4f9b188aab1/freetype-dbb00e529e69a2be629a9ef98498e4f9b188aab1.tar.gz",
+      "status": "RETAINED",
+      "filename": "25-freetype--dbb00e529e69a2be629a9ef98498e4f9b188aab1.tar.gz",
+      "license_files": [
+        {
+          "file": "LICENSE.TXT",
+          "sha256": "bd36c8b474855fa294c2ec5c184544478ef3720aad37d65a6296a4f264fd2d3b"
+        }
+      ],
+      "sha256": "213242cda8ea9e08e6c2abd159ba4c0fb3d884622e896e1546c8b9102f893a30",
+      "size": 2595127
+    },
+    {
+      "recipe_file": "scripts.d/45-fonts/35-fontconfig.sh",
+      "repo": "https://gitlab.freedesktop.org/fontconfig/fontconfig.git",
+      "revision": "bb21be622280981392c0335fc22202fbba46d247",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://gitlab.freedesktop.org/fontconfig/fontconfig/-/archive/bb21be622280981392c0335fc22202fbba46d247/fontconfig-bb21be622280981392c0335fc22202fbba46d247.tar.gz",
+      "status": "RETAINED",
+      "filename": "35-fontconfig--bb21be622280981392c0335fc22202fbba46d247.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "51a51aa9823704fd90bccc616cdd17ebabb5b2b3e9cbde886ca02c7002288067"
+        }
+      ],
+      "sha256": "36389e1f51dae04abace72832a106e9eed746874539e12f34017789ecaa71b01",
+      "size": 680718
+    },
+    {
+      "recipe_file": "scripts.d/45-fonts/45-harfbuzz.sh",
+      "repo": "https://github.com/harfbuzz/harfbuzz.git",
+      "revision": "8f1a4e0634a35182e5dd04401edcf57acf5eb12e",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/harfbuzz/harfbuzz/tar.gz/8f1a4e0634a35182e5dd04401edcf57acf5eb12e",
+      "status": "RETAINED",
+      "filename": "45-harfbuzz--8f1a4e0634a35182e5dd04401edcf57acf5eb12e.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "ba8f810f2455c2f08e2d56bb49b72f37fcf68f1f4fade38977cfd7372050ad64"
+        },
+        {
+          "file": "test/COPYING",
+          "sha256": "9b35b8485f69cd298fccbb3c40a827dc06cf1185553bef827903497d2944a8d7"
+        }
+      ],
+      "sha256": "0e39f541c2c6a266e951f63530c6c2f7652be65a9f3578092541abd00213a785",
+      "size": 39398186
+    },
+    {
+      "recipe_file": "scripts.d/45-fonts/50-freetype.sh",
+      "repo": "https://gitlab.freedesktop.org/freetype/freetype.git",
+      "revision": "dbb00e529e69a2be629a9ef98498e4f9b188aab1",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://gitlab.freedesktop.org/freetype/freetype/-/archive/dbb00e529e69a2be629a9ef98498e4f9b188aab1/freetype-dbb00e529e69a2be629a9ef98498e4f9b188aab1.tar.gz",
+      "status": "RETAINED",
+      "filename": "50-freetype--dbb00e529e69a2be629a9ef98498e4f9b188aab1.tar.gz",
+      "license_files": [
+        {
+          "file": "LICENSE.TXT",
+          "sha256": "bd36c8b474855fa294c2ec5c184544478ef3720aad37d65a6296a4f264fd2d3b"
+        }
+      ],
+      "sha256": "213242cda8ea9e08e6c2abd159ba4c0fb3d884622e896e1546c8b9102f893a30",
+      "size": 2595127
+    },
+    {
+      "recipe_file": "scripts.d/45-lcms2.sh",
+      "repo": "https://github.com/mm2/Little-CMS.git",
+      "revision": "ed288c301bd85eaabcb9e1ae0f73540c5f129e1e",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/mm2/Little-CMS/tar.gz/ed288c301bd85eaabcb9e1ae0f73540c5f129e1e",
+      "status": "RETAINED",
+      "filename": "45-lcms2--ed288c301bd85eaabcb9e1ae0f73540c5f129e1e.tar.gz",
+      "license_files": [
+        {
+          "file": "LICENSE",
+          "sha256": "6dbd60437f8ef91d8de1f08ad75882547fd4931bfcc3566a0735f28db1484d31"
+        }
+      ],
+      "sha256": "a66ab9851e297389daafeb01bd407e650535cff5d182898cb691c36a55850eb4",
+      "size": 5481579
+    },
+    {
+      "recipe_file": "scripts.d/45-libffi.sh",
+      "repo": "https://github.com/libffi/libffi.git",
+      "revision": "de7afe7aa9e8ab7ac36429428a7222caae1e7988",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/libffi/libffi/tar.gz/de7afe7aa9e8ab7ac36429428a7222caae1e7988",
+      "status": "RETAINED",
+      "filename": "45-libffi--de7afe7aa9e8ab7ac36429428a7222caae1e7988.tar.gz",
+      "license_files": [
+        {
+          "file": "LICENSE",
+          "sha256": "17b64dc60f3b6897a60f971e288b973f655c2edcdf08b25f3c3dd5549857881c"
+        },
+        {
+          "file": "LICENSE-BUILDTOOLS",
+          "sha256": "e67978cd18816c0cb7d29aaaacde7b7447402c2fb321a051698890a8eaedda94"
+        }
+      ],
+      "sha256": "d3c4bc7f807bd15f10c99ea3b2a3365bad27f47b3fd0621a329120af3fe87e9d",
+      "size": 687779
+    },
+    {
+      "recipe_file": "scripts.d/45-libsamplerate.sh",
+      "repo": "https://github.com/libsndfile/libsamplerate.git",
+      "revision": "0844c208f683527c08ea8a80acc13b398aa9c8bf",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/libsndfile/libsamplerate/tar.gz/0844c208f683527c08ea8a80acc13b398aa9c8bf",
+      "status": "RETAINED",
+      "filename": "45-libsamplerate--0844c208f683527c08ea8a80acc13b398aa9c8bf.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "2c1f76ce2effdddb425018405d5690c0b1ab4e6976e35296b0a6db65c5e1a55d"
+        },
+        {
+          "file": "docs/license.md",
+          "sha256": "9722032e4b5684f0ecd399480183a9029623636add1e9515621defaf8dbcf3ed"
+        }
+      ],
+      "sha256": "c5b976c99196df8247dd429fcaa05f44e281ec15b48f185c9b60c979c468d4c6",
+      "size": 3955146
+    },
+    {
+      "recipe_file": "scripts.d/45-libudfread.sh",
+      "repo": "https://code.videolan.org/videolan/libudfread.git",
+      "revision": "b0bc6957e7e07d5f35391f210596d9eb71cffdd9",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://code.videolan.org/videolan/libudfread/-/archive/b0bc6957e7e07d5f35391f210596d9eb71cffdd9/libudfread-b0bc6957e7e07d5f35391f210596d9eb71cffdd9.tar.gz",
+      "status": "RETAINED",
+      "filename": "45-libudfread--b0bc6957e7e07d5f35391f210596d9eb71cffdd9.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551"
+        }
+      ],
+      "sha256": "c04bb96b72dd0760030d880ad6c9ea2ae80abbdd648de127adb1b2e8555186aa",
+      "size": 112983
+    },
+    {
+      "recipe_file": "scripts.d/45-libunibreak.sh",
+      "repo": "https://github.com/adah1972/libunibreak.git",
+      "revision": "ff24f284a567a006c183b3507b6c650d6ec68b94",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/adah1972/libunibreak/tar.gz/ff24f284a567a006c183b3507b6c650d6ec68b94",
+      "status": "RETAINED",
+      "filename": "45-libunibreak--ff24f284a567a006c183b3507b6c650d6ec68b94.tar.gz",
+      "license_files": [],
+      "sha256": "af0578a41869495401fa65d7071216af969cc40005f8c599ef97ed8c9828b578",
+      "size": 351045
+    },
+    {
+      "recipe_file": "scripts.d/45-libvorbis.sh",
+      "repo": "https://github.com/xiph/vorbis.git",
+      "revision": "1b75110b5a2754ba1931d82dd83cb822b266a21d",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/xiph/vorbis/tar.gz/1b75110b5a2754ba1931d82dd83cb822b266a21d",
+      "status": "RETAINED",
+      "filename": "45-libvorbis--1b75110b5a2754ba1931d82dd83cb822b266a21d.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "ec1815db59fcd302846df949d7424876cb2e2dc5ed1606c5fb0b36787b1cf43a"
+        },
+        {
+          "file": "debian/copyright",
+          "sha256": "1f6c6b6397d86d20968d7856d6945591b89e4cb64e5fc1ec8b992811f6a65ed8"
+        }
+      ],
+      "sha256": "bd0f08c8a63debdce27dd71de7d953f9c92e410d1cfe263220bcb49fff2ab749",
+      "size": 1243488
+    },
+    {
+      "recipe_file": "scripts.d/45-opencl.sh",
+      "repo": "https://github.com/KhronosGroup/OpenCL-Headers.git",
+      "revision": "82f60316cc142e7b21dc1d8983b26de18858fbd9",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/KhronosGroup/OpenCL-Headers/tar.gz/82f60316cc142e7b21dc1d8983b26de18858fbd9",
+      "status": "RETAINED",
+      "filename": "45-opencl--82f60316cc142e7b21dc1d8983b26de18858fbd9.tar.gz",
+      "license_files": [
+        {
+          "file": "LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ],
+      "sha256": "7576bc8ba67af73ef30ae28096b4d19b953e7767960f24fba0e14d97e732f62d",
+      "size": 89772
+    },
+    {
+      "recipe_file": "scripts.d/45-opencl.sh",
+      "repo": "https://github.com/KhronosGroup/OpenCL-ICD-Loader.git",
+      "revision": "d0be526adb156de7f701024acc811182c984d4c5",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/KhronosGroup/OpenCL-ICD-Loader/tar.gz/d0be526adb156de7f701024acc811182c984d4c5",
+      "status": "RETAINED",
+      "filename": "45-opencl-2-d0be526adb156de7f701024acc811182c984d4c5.tar.gz",
+      "license_files": [
+        {
+          "file": "LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      ],
+      "sha256": "a144134837478ffc3d8d67c3d398ab8a2d3130ffc25a7d19bdedf8348c8cd864",
+      "size": 116482
+    },
+    {
+      "recipe_file": "scripts.d/45-pcre2.sh",
+      "repo": "https://github.com/PCRE2Project/pcre2.git",
+      "revision": "49d26bca00694ae940adde6d8bd056d8bfc168fa",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/PCRE2Project/pcre2/tar.gz/49d26bca00694ae940adde6d8bd056d8bfc168fa",
+      "status": "RETAINED",
+      "filename": "45-pcre2--49d26bca00694ae940adde6d8bd056d8bfc168fa.tar.gz",
+      "license_files": [
+        {
+          "file": "cmake/COPYING-CMAKE-SCRIPTS",
+          "sha256": "c666ec2313dba24523ccad88f4c04ea4b24fad6545263a35b1d4ab2b08efe50a"
+        }
+      ],
+      "sha256": "62c34aa3104806a35afc6604cbf05bcb009fdbdb90f4aefaef5ced147c9531a2",
+      "size": 5728668
+    },
+    {
+      "recipe_file": "scripts.d/45-pixman.sh",
+      "repo": "https://gitlab.freedesktop.org/pixman/pixman.git",
+      "revision": "b88b92e512a33a222e08352e87ff90a57d33c7b5",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://gitlab.freedesktop.org/pixman/pixman/-/archive/b88b92e512a33a222e08352e87ff90a57d33c7b5/pixman-b88b92e512a33a222e08352e87ff90a57d33c7b5.tar.gz",
+      "status": "RETAINED",
+      "filename": "45-pixman--b88b92e512a33a222e08352e87ff90a57d33c7b5.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "fac9270f0987b96ff4533fca3548c633e02083cbba4a0172a3b149b2e4019793"
+        }
+      ],
+      "sha256": "f93b3cd41cefcecbb8a908d16ed085b93db95ae47938694dc88be967bc2e44fc",
+      "size": 850544
+    },
+    {
+      "recipe_file": "scripts.d/45-pulseaudio.sh",
+      "repo": "https://gitlab.freedesktop.org/pulseaudio/pulseaudio.git",
+      "revision": "819f2c06ccdc105739e1c714de968f2af1d3e205",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://gitlab.freedesktop.org/pulseaudio/pulseaudio/-/archive/819f2c06ccdc105739e1c714de968f2af1d3e205/pulseaudio-819f2c06ccdc105739e1c714de968f2af1d3e205.tar.gz",
+      "status": "RETAINED",
+      "filename": "45-pulseaudio--819f2c06ccdc105739e1c714de968f2af1d3e205.tar.gz",
+      "license_files": [
+        {
+          "file": "LICENSE",
+          "sha256": "a1064b9838b6b4feee61eaeb0925da4b4834c984b77716558860c4294ed6c015"
+        }
+      ],
+      "sha256": "7f755548d2d38a416af422d0577c4458d9a050b586901a6efc8a7cbfe7893385",
+      "size": 3030478
+    },
+    {
+      "recipe_file": "scripts.d/45-vmaf.sh",
+      "repo": "https://github.com/Netflix/vmaf.git",
+      "revision": "cf677baaa039723876fff8c2677164f25102e684",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/Netflix/vmaf/tar.gz/cf677baaa039723876fff8c2677164f25102e684",
+      "status": "RETAINED",
+      "filename": "45-vmaf--cf677baaa039723876fff8c2677164f25102e684.tar.gz",
+      "license_files": [
+        {
+          "file": "LICENSE",
+          "sha256": "a6fdb51d02b9dfe198e55534bb8047fe6d756eda117f4ff83de98f92c1952710"
+        }
+      ],
+      "sha256": "877997d8d63d9a0f757daac788f319248ef82416aad366cd992a238e204c0955",
+      "size": 18666999
+    },
+    {
+      "recipe_file": "scripts.d/45-x11/10-xcbproto.sh",
+      "repo": "https://gitlab.freedesktop.org/xorg/proto/xcbproto.git",
+      "revision": "dea37a7033abfdef3376dc9ad5e8756e9fee959b",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://gitlab.freedesktop.org/xorg/proto/xcbproto/-/archive/dea37a7033abfdef3376dc9ad5e8756e9fee959b/xcbproto-dea37a7033abfdef3376dc9ad5e8756e9fee959b.tar.gz",
+      "status": "RETAINED",
+      "filename": "10-xcbproto--dea37a7033abfdef3376dc9ad5e8756e9fee959b.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "c5ffbfeaa501071ceeb97b7de2c0d703fdaa35de01c0fb6cbac1c28453a3e9fd"
+        }
+      ],
+      "sha256": "95c513c2364bdeba4d51ceb4dacf969a6b8506fe917c169b9341cfb13f31300d",
+      "size": 135162
+    },
+    {
+      "recipe_file": "scripts.d/45-x11/10-xproto.sh",
+      "repo": "https://gitlab.freedesktop.org/xorg/proto/xorgproto.git",
+      "revision": "6d3907b6d5dc4aa7d7ee6ee5d7d8714e7466630b",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://gitlab.freedesktop.org/xorg/proto/xorgproto/-/archive/6d3907b6d5dc4aa7d7ee6ee5d7d8714e7466630b/xorgproto-6d3907b6d5dc4aa7d7ee6ee5d7d8714e7466630b.tar.gz",
+      "status": "RETAINED",
+      "filename": "10-xproto--6d3907b6d5dc4aa7d7ee6ee5d7d8714e7466630b.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING-applewmproto",
+          "sha256": "aacd931f191b610902aee1e526090c2858aabc07969441fa2537ffd3e7049555"
+        },
+        {
+          "file": "COPYING-bigreqsproto",
+          "sha256": "dabc025f93129a0eb2d17f37c719dbe5ecbcb5bc8f7bc7f4ce89fe04576cc0c2"
+        },
+        {
+          "file": "COPYING-compositeproto",
+          "sha256": "3e980a770506b448897638632974bbcbdf2da3b99191dd0a03d3770097a46738"
+        },
+        {
+          "file": "COPYING-damageproto",
+          "sha256": "f67a18cb46c4c203c5122b4a901cfcc3178b2a62f83f31ca5fef5bdca3966094"
+        },
+        {
+          "file": "COPYING-dmxproto",
+          "sha256": "819e8dcd3dd2a44850c350331aa492230f86bccb0983dd739dec5ba36d7d2b8e"
+        },
+        {
+          "file": "COPYING-dri2proto",
+          "sha256": "0c306691492c4d7a8cda1ec3847668b797887dddcd7e986b4c166ae27619af7d"
+        },
+        {
+          "file": "COPYING-dri3proto",
+          "sha256": "64a579d1a0b3347301d87c94698a58ea7933d0ae6ca7e8fdd702fde2ea376301"
+        },
+        {
+          "file": "COPYING-evieproto",
+          "sha256": "9936421f7516f7a17ae560b6989636b493e55c01128b543c7e72441568c3cba4"
+        },
+        {
+          "file": "COPYING-fixesproto",
+          "sha256": "fb361c7c4322e4919ae193c5a20055d5190c23aa50480fd0a41f4d439cae2bc6"
+        },
+        {
+          "file": "COPYING-fontcacheproto",
+          "sha256": "1ab381e978bff63d68be2e4f235d51935f3f16f3ba3bebf83afa99a70c0484a2"
+        },
+        {
+          "file": "COPYING-fontsproto",
+          "sha256": "f4af05774b02ae149357cc26f7bf5ef1116c2e09373c2492081a3a1892c58417"
+        },
+        {
+          "file": "COPYING-glproto",
+          "sha256": "823deb4673d3f26aa8c90e704888299648f00be3262f9363eaeecedcd65b936d"
+        },
+        {
+          "file": "COPYING-inputproto",
+          "sha256": "5e083a2ace0215a6084c877c023a6079952ba803d692488203ba4269196debe3"
+        },
+        {
+          "file": "COPYING-kbproto",
+          "sha256": "883f26ebeffb29f955c1e2becdee284bce16c7139b1410f6f7331d3bd59bfc78"
+        },
+        {
+          "file": "COPYING-lg3dproto",
+          "sha256": "2467132d97b75edba05d908604124be2f46ee113954f848c99bcd938055e8e4b"
+        },
+        {
+          "file": "COPYING-pmproto",
+          "sha256": "8442b5f22f2fb13017a4302a906e7dedc899267b41f613558970941120170128"
+        },
+        {
+          "file": "COPYING-presentproto",
+          "sha256": "64a579d1a0b3347301d87c94698a58ea7933d0ae6ca7e8fdd702fde2ea376301"
+        },
+        {
+          "file": "COPYING-printproto",
+          "sha256": "46f599055002bbf3e6ce244bde8d9ebe5ec24ae7906836db186773a9791d0b75"
+        },
+        {
+          "file": "COPYING-randrproto",
+          "sha256": "41c13dcd09147ed2440286f2fb8151df8ebee06deee4ed78ddf094601c216d3d"
+        },
+        {
+          "file": "COPYING-recordproto",
+          "sha256": "e37891ac36e827611d6e7ae51ddb14a9cc9ba56f6cc87c55b6ce3b6d76cd2bf4"
+        },
+        {
+          "file": "COPYING-renderproto",
+          "sha256": "e0ca4f1d27a95ef7552ccdfce7e95ddf1e8b10ac713a05b49e8bd82713d7914b"
+        },
+        {
+          "file": "COPYING-resourceproto",
+          "sha256": "403e7be948674530ad40669b1e3a31adeddb656502f3b0ef810d5d3cc35d0b52"
+        },
+        {
+          "file": "COPYING-scrnsaverproto",
+          "sha256": "fcbd3c628bf4d28ee3e6032054bf44bbe58f3b1a944dad856a8d3eb6b37ea412"
+        },
+        {
+          "file": "COPYING-trapproto",
+          "sha256": "2c1807ecb78dddba1a9cd612a11bfdbc013b77144880ec3c268241495cb022dd"
+        },
+        {
+          "file": "COPYING-videoproto",
+          "sha256": "f8f49bbad61967ebc890fb79fff5bfb7cfc1c341aa8f8dee13eb3fb534040b47"
+        },
+        {
+          "file": "COPYING-windowswmproto",
+          "sha256": "eb183a00c61bb47992f096b6993ed7ec17518bea9c285fe87efff7f622cc6c12"
+        },
+        {
+          "file": "COPYING-x11proto",
+          "sha256": "da835951edc6e3b8d168d6afe7447c65d0b9a99937293cf3f288bba8244a9f86"
+        },
+        {
+          "file": "COPYING-xcmiscproto",
+          "sha256": "5531d18cfcc944dab39991f63f182cbbce3fe493ba0c7cf08a25c0d01ee84482"
+        },
+        {
+          "file": "COPYING-xextproto",
+          "sha256": "9ce418e7d81cb230d8a53b07a7d9d705fc830dd095c104ba5d9405dc98be8357"
+        },
+        {
+          "file": "COPYING-xf86bigfontproto",
+          "sha256": "3591964e01a9cdfc9cc4149a847a431a3f3d98328cc9e5864c7a7831b29c4058"
+        },
+        {
+          "file": "COPYING-xf86dgaproto",
+          "sha256": "3591964e01a9cdfc9cc4149a847a431a3f3d98328cc9e5864c7a7831b29c4058"
+        },
+        {
+          "file": "COPYING-xf86driproto",
+          "sha256": "4a05d06752388d9db71ee1006f371d4fb2c316a821fc2fc272db90b3ef978334"
+        },
+        {
+          "file": "COPYING-xf86miscproto",
+          "sha256": "3591964e01a9cdfc9cc4149a847a431a3f3d98328cc9e5864c7a7831b29c4058"
+        },
+        {
+          "file": "COPYING-xf86rushproto",
+          "sha256": "3591964e01a9cdfc9cc4149a847a431a3f3d98328cc9e5864c7a7831b29c4058"
+        },
+        {
+          "file": "COPYING-xf86vidmodeproto",
+          "sha256": "942bb46a3503a708948491699171b00b9e0dfb47818d9268b160bccc5f51a4b9"
+        },
+        {
+          "file": "COPYING-xineramaproto",
+          "sha256": "b2d8cda803e900915ce10f0ba735ff2c033b39c7cc5a8a436667ca583d4066fa"
+        },
+        {
+          "file": "COPYING-xwaylandproto",
+          "sha256": "309bd89bc2b30c6e3d3eb78f5377fa576475499e0ba936a9c3cba50ba5d6375c"
+        }
+      ],
+      "sha256": "2f41108995a0e85fc3f8bb8ca2e5649b827052d3d18135766ad50e248fb142b3",
+      "size": 991800
+    },
+    {
+      "recipe_file": "scripts.d/45-x11/10-xtrans.sh",
+      "repo": "https://gitlab.freedesktop.org/xorg/lib/libxtrans.git",
+      "revision": "79f6b0bfe2170496e8c37626043d009f4cd3f1e1",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://gitlab.freedesktop.org/xorg/lib/libxtrans/-/archive/79f6b0bfe2170496e8c37626043d009f4cd3f1e1/libxtrans-79f6b0bfe2170496e8c37626043d009f4cd3f1e1.tar.gz",
+      "status": "RETAINED",
+      "filename": "10-xtrans--79f6b0bfe2170496e8c37626043d009f4cd3f1e1.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "3fe68a84ab89e82947e560316ab70cf2d02a8b978ae5cf4fbdfd53fc5b917308"
+        }
+      ],
+      "sha256": "6b1027b212c31d8b6867eea3f20a192b6323c417c20a83a37c940197f832e541",
+      "size": 54956
+    },
+    {
+      "recipe_file": "scripts.d/45-x11/20-libxau.sh",
+      "repo": "https://gitlab.freedesktop.org/xorg/lib/libxau.git",
+      "revision": "be1daeb909f1d678e7859ac1555e90b4e768d5c4",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://gitlab.freedesktop.org/xorg/lib/libxau/-/archive/be1daeb909f1d678e7859ac1555e90b4e768d5c4/libxau-be1daeb909f1d678e7859ac1555e90b4e768d5c4.tar.gz",
+      "status": "RETAINED",
+      "filename": "20-libxau--be1daeb909f1d678e7859ac1555e90b4e768d5c4.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "56abe29bb1d9806a9e04fa9f80fed2c0f18027594df3f098148d814aef6bddfa"
+        }
+      ],
+      "sha256": "91c7a43930dee28fce9f3aa17181e61eeee385318ba94952990070fe05b27d35",
+      "size": 17569
+    },
+    {
+      "recipe_file": "scripts.d/45-x11/30-libxcb.sh",
+      "repo": "https://gitlab.freedesktop.org/xorg/lib/libxcb.git",
+      "revision": "aa7f3256060451ad65a38feeccf792f44181a4e0",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://gitlab.freedesktop.org/xorg/lib/libxcb/-/archive/aa7f3256060451ad65a38feeccf792f44181a4e0/libxcb-aa7f3256060451ad65a38feeccf792f44181a4e0.tar.gz",
+      "status": "RETAINED",
+      "filename": "30-libxcb--aa7f3256060451ad65a38feeccf792f44181a4e0.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "c5ffbfeaa501071ceeb97b7de2c0d703fdaa35de01c0fb6cbac1c28453a3e9fd"
+        }
+      ],
+      "sha256": "76caea5c2af7c621c7db84d3cf595508d05b3baabddf902ce8913b99c5ecd689",
+      "size": 148813
+    },
+    {
+      "recipe_file": "scripts.d/45-x11/40-libx11.sh",
+      "repo": "https://gitlab.freedesktop.org/xorg/lib/libx11.git",
+      "revision": "bf893321132251b17b5224fa8830787b45aec4f6",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://gitlab.freedesktop.org/xorg/lib/libx11/-/archive/bf893321132251b17b5224fa8830787b45aec4f6/libx11-bf893321132251b17b5224fa8830787b45aec4f6.tar.gz",
+      "status": "RETAINED",
+      "filename": "40-libx11--bf893321132251b17b5224fa8830787b45aec4f6.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "eda0c2ed1cae0280c7fe79762eaad8ad31c044afc64e71e92ef2c6f3cd7bc395"
+        }
+      ],
+      "sha256": "23a00311a4e04713b8f45bd2b5e55bf00c9dd45c65e2bb6f3498abe9cea69b39",
+      "size": 2298361
+    },
+    {
+      "recipe_file": "scripts.d/45-x11/50-libxext.sh",
+      "repo": "https://gitlab.freedesktop.org/xorg/lib/libxext.git",
+      "revision": "4770cdff013c036ba4f043b2c895d1b0bfeb0973",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://gitlab.freedesktop.org/xorg/lib/libxext/-/archive/4770cdff013c036ba4f043b2c895d1b0bfeb0973/libxext-4770cdff013c036ba4f043b2c895d1b0bfeb0973.tar.gz",
+      "status": "RETAINED",
+      "filename": "50-libxext--4770cdff013c036ba4f043b2c895d1b0bfeb0973.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "fd62910be4b13829d94e76c1447cf840953f0e225c4dc6c79349c84dd0557f22"
+        }
+      ],
+      "sha256": "40cba75fb020d207a0c440c2652bbb20ee546f663973cfd7e02db3b6c094e0c6",
+      "size": 99832
+    },
+    {
+      "recipe_file": "scripts.d/45-x11/50-libxfixes.sh",
+      "repo": "https://gitlab.freedesktop.org/xorg/lib/libxfixes.git",
+      "revision": "156e1e39c518f0443073e9c27071e4eceb02e3c0",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://gitlab.freedesktop.org/xorg/lib/libxfixes/-/archive/156e1e39c518f0443073e9c27071e4eceb02e3c0/libxfixes-156e1e39c518f0443073e9c27071e4eceb02e3c0.tar.gz",
+      "status": "RETAINED",
+      "filename": "50-libxfixes--156e1e39c518f0443073e9c27071e4eceb02e3c0.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "a07d8a5a6972638a745a03983207a1052881c24eea29021fdca7794bea8d7774"
+        }
+      ],
+      "sha256": "d3b890b7f3a66060fb52c9fbd1c60f6d5258115c56e01489ef52d6badc7070e0",
+      "size": 14737
+    },
+    {
+      "recipe_file": "scripts.d/45-x11/50-libxi.sh",
+      "repo": "https://gitlab.freedesktop.org/xorg/lib/libxi.git",
+      "revision": "9584453906a144fb8b4dbe92d9bf79219391f8e1",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://gitlab.freedesktop.org/xorg/lib/libxi/-/archive/9584453906a144fb8b4dbe92d9bf79219391f8e1/libxi-9584453906a144fb8b4dbe92d9bf79219391f8e1.tar.gz",
+      "status": "RETAINED",
+      "filename": "50-libxi--9584453906a144fb8b4dbe92d9bf79219391f8e1.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "9392174bc86e291369fd2f61f3ed325962735a5f5c585ce8d7ebd365e2a5639f"
+        }
+      ],
+      "sha256": "ba08bd3a0e721a2d9724965ef66053b321836ad866a8313d31891e4f45d7bb39",
+      "size": 139727
+    },
+    {
+      "recipe_file": "scripts.d/45-x11/50-libxinerama.sh",
+      "repo": "https://gitlab.freedesktop.org/xorg/lib/libxinerama.git",
+      "revision": "92d8f35d672537721dcd3a071d04306aa065c29b",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://gitlab.freedesktop.org/xorg/lib/libxinerama/-/archive/92d8f35d672537721dcd3a071d04306aa065c29b/libxinerama-92d8f35d672537721dcd3a071d04306aa065c29b.tar.gz",
+      "status": "RETAINED",
+      "filename": "50-libxinerama--92d8f35d672537721dcd3a071d04306aa065c29b.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "1d4e533646e02aa0e4192eb5355c1a9dd5d01b00412f01fb73856f0e7a638a84"
+        }
+      ],
+      "sha256": "235578c4ffecdc7ab22126e2fd03c741369d7fd47ae66d6e06ec712f365a7598",
+      "size": 11105
+    },
+    {
+      "recipe_file": "scripts.d/45-x11/50-libxrender.sh",
+      "repo": "https://gitlab.freedesktop.org/xorg/lib/libxrender.git",
+      "revision": "3aff9046bc91b31cc3dd6974876c29bc309a250a",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://gitlab.freedesktop.org/xorg/lib/libxrender/-/archive/3aff9046bc91b31cc3dd6974876c29bc309a250a/libxrender-3aff9046bc91b31cc3dd6974876c29bc309a250a.tar.gz",
+      "status": "RETAINED",
+      "filename": "50-libxrender--3aff9046bc91b31cc3dd6974876c29bc309a250a.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "bbe1db89c48816c48248796adac91defd8fbde1141b145f01511781ab87f29a1"
+        }
+      ],
+      "sha256": "e806ab687a7e116762ead839e4418cd7e32cc3c26c254cb95d0fb2602c8d71f3",
+      "size": 64770
+    },
+    {
+      "recipe_file": "scripts.d/45-x11/50-libxscrnsaver.sh",
+      "repo": "https://gitlab.freedesktop.org/xorg/lib/libxscrnsaver.git",
+      "revision": "723953c9a8dba44bcb1866cf06a54be74fbb8089",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://gitlab.freedesktop.org/xorg/lib/libxscrnsaver/-/archive/723953c9a8dba44bcb1866cf06a54be74fbb8089/libxscrnsaver-723953c9a8dba44bcb1866cf06a54be74fbb8089.tar.gz",
+      "status": "RETAINED",
+      "filename": "50-libxscrnsaver--723953c9a8dba44bcb1866cf06a54be74fbb8089.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "5cf3e16f5dd753a4c0853e8227134ab65f5562d9ef89b1a2d7681f5c8ac9feb5"
+        }
+      ],
+      "sha256": "12f97d52efefa0f613b21362fe026a498daa95a4842f4f2ab5b8a1d4ca8062ca",
+      "size": 15911
+    },
+    {
+      "recipe_file": "scripts.d/45-x11/50-libxxf86vm.sh",
+      "repo": "https://gitlab.freedesktop.org/xorg/lib/libxxf86vm.git",
+      "revision": "cf0c73fe2d5847eec3fb966487769f460c722cc4",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://gitlab.freedesktop.org/xorg/lib/libxxf86vm/-/archive/cf0c73fe2d5847eec3fb966487769f460c722cc4/libxxf86vm-cf0c73fe2d5847eec3fb966487769f460c722cc4.tar.gz",
+      "status": "RETAINED",
+      "filename": "50-libxxf86vm--cf0c73fe2d5847eec3fb966487769f460c722cc4.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "f3da8eaed19e27e4f67e6f076d4ebdb8d649e15a8ad33a415fb65a23de1b6689"
+        }
+      ],
+      "sha256": "f1c5176628f863099cf49dddf75f2dd095c994df441093d5bdf04b33e1e8fc03",
+      "size": 17408
+    },
+    {
+      "recipe_file": "scripts.d/45-x11/60-libglvnd.sh",
+      "repo": "https://gitlab.freedesktop.org/glvnd/libglvnd.git",
+      "revision": "8731041dbd78566bffafb5145aec8b8df8b5260e",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://gitlab.freedesktop.org/glvnd/libglvnd/-/archive/8731041dbd78566bffafb5145aec8b8df8b5260e/libglvnd-8731041dbd78566bffafb5145aec8b8df8b5260e.tar.gz",
+      "status": "RETAINED",
+      "filename": "60-libglvnd--8731041dbd78566bffafb5145aec8b8df8b5260e.tar.gz",
+      "license_files": [],
+      "sha256": "d810f1e315917b546d0e8ae099071c4de662a71eaf2bd3ac434b664e32bddfa4",
+      "size": 848492
+    },
+    {
+      "recipe_file": "scripts.d/45-x11/60-libxcursor.sh",
+      "repo": "https://gitlab.freedesktop.org/xorg/lib/libxcursor.git",
+      "revision": "15efad7ccd035f5d1ddc8d437e047569d1775fa7",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://gitlab.freedesktop.org/xorg/lib/libxcursor/-/archive/15efad7ccd035f5d1ddc8d437e047569d1775fa7/libxcursor-15efad7ccd035f5d1ddc8d437e047569d1775fa7.tar.gz",
+      "status": "RETAINED",
+      "filename": "60-libxcursor--15efad7ccd035f5d1ddc8d437e047569d1775fa7.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "ad2e9d279088c5d612fb0e506ea8bb7d9f01b411e7f4b97b64589c3cd48a68f1"
+        }
+      ],
+      "sha256": "b8d34bcb1959204f1b85df2c654eb3863012f488dbd0f22c98609982cfcfd3b8",
+      "size": 42976
+    },
+    {
+      "recipe_file": "scripts.d/45-x11/60-libxrandr.sh",
+      "repo": "https://gitlab.freedesktop.org/xorg/lib/libxrandr.git",
+      "revision": "cc7082d2af97458dbb6d7e4bbda7b8884030e05f",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://gitlab.freedesktop.org/xorg/lib/libxrandr/-/archive/cc7082d2af97458dbb6d7e4bbda7b8884030e05f/libxrandr-cc7082d2af97458dbb6d7e4bbda7b8884030e05f.tar.gz",
+      "status": "RETAINED",
+      "filename": "60-libxrandr--cc7082d2af97458dbb6d7e4bbda7b8884030e05f.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "73777e5be1cef2827d843e4b186803f050c66db472cf8076d88e2b5f71696e67"
+        }
+      ],
+      "sha256": "6dac1aa060a6b1694afae6c072241e9ad2a101d81b79035209cc726513e29967",
+      "size": 30888
+    },
+    {
+      "recipe_file": "scripts.d/45-x11/60-libxv.sh",
+      "repo": "https://gitlab.freedesktop.org/xorg/lib/libxv.git",
+      "revision": "f315ec50fcad9bdbaed46c3e78dc5e7fe209f933",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://gitlab.freedesktop.org/xorg/lib/libxv/-/archive/f315ec50fcad9bdbaed46c3e78dc5e7fe209f933/libxv-f315ec50fcad9bdbaed46c3e78dc5e7fe209f933.tar.gz",
+      "status": "RETAINED",
+      "filename": "60-libxv--f315ec50fcad9bdbaed46c3e78dc5e7fe209f933.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "4fac4d581d00f11c459d68b7cb970f3d4e5a5bbfb53784d85f59a90076280301"
+        }
+      ],
+      "sha256": "5f952681dfa38d36ea6af9e560d886d36d1cc8ef6b9161cbfafc9f18fba4ac6c",
+      "size": 28732
+    },
+    {
+      "recipe_file": "scripts.d/45-xxhash.sh",
+      "repo": "https://github.com/Cyan4973/xxHash.git",
+      "revision": "2ec67caeb18ec15ae60c0853174331089acddfc0",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/Cyan4973/xxHash/tar.gz/2ec67caeb18ec15ae60c0853174331089acddfc0",
+      "status": "RETAINED",
+      "filename": "45-xxhash--2ec67caeb18ec15ae60c0853174331089acddfc0.tar.gz",
+      "license_files": [
+        {
+          "file": "LICENSE",
+          "sha256": "6ffedbc0f7878612d2b23589f1ff2ab15633e1df7963a5d9fc750ec5500c7e7a"
+        },
+        {
+          "file": "cli/COPYING",
+          "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+        }
+      ],
+      "sha256": "3af288291460ab006ed582312d3fd8e140fadc08a538c97bc1917c49a46bb935",
+      "size": 1234956
+    },
+    {
+      "recipe_file": "scripts.d/45-zstd.sh",
+      "repo": "https://github.com/facebook/zstd.git",
+      "revision": "de6359d7ea2949afa1407ed2fc2423777ebf1e23",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/facebook/zstd/tar.gz/de6359d7ea2949afa1407ed2fc2423777ebf1e23",
+      "status": "RETAINED",
+      "filename": "45-zstd--de6359d7ea2949afa1407ed2fc2423777ebf1e23.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "f9c375a1be4a41f7b70301dd83c91cb89e41567478859b77eef375a52d782505"
+        },
+        {
+          "file": "LICENSE",
+          "sha256": "7055266497633c9025b777c78eb7235af13922117480ed5c674677adc381c9d8"
+        }
+      ],
+      "sha256": "865e80e792fc4462c375d6850617b6bd9adf03284072dd6797e842abbec78b9f",
+      "size": 2544631
+    },
+    {
+      "recipe_file": "scripts.d/47-vulkan/40-vulkan-headers.sh",
+      "repo": "https://github.com/KhronosGroup/Vulkan-Headers.git",
+      "revision": "v1.4.368",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "status": "BLOCKED",
+      "reason": "Mutable/non-commit source ref requires explicit resolution"
+    },
+    {
+      "recipe_file": "scripts.d/47-vulkan/45-vulkan-loader.sh",
+      "repo": "https://github.com/BtbN/Vulkan-Shim-Loader.git",
+      "revision": "65b3936528cd92eb4ea3de485d03f858a3850484",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/BtbN/Vulkan-Shim-Loader/tar.gz/65b3936528cd92eb4ea3de485d03f858a3850484",
+      "status": "RETAINED",
+      "filename": "45-vulkan-loader--65b3936528cd92eb4ea3de485d03f858a3850484.tar.gz",
+      "license_files": [
+        {
+          "file": "LICENSE",
+          "sha256": "8d4d279343d72e5b9e06bbe38c1ad8660fa8eabc217164a5b482ddf4ab0dba9d"
+        }
+      ],
+      "sha256": "1cea0208588bd9d30379e7b83800dd7a32ca68d43c118642693be57782f8633d",
+      "size": 3657
+    },
+    {
+      "recipe_file": "scripts.d/47-vulkan/45-vulkan-loader.sh",
+      "repo": "https://github.com/KhronosGroup/Vulkan-Headers.git",
+      "revision": "v1.4.368",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "status": "BLOCKED",
+      "reason": "Mutable/non-commit source ref requires explicit resolution"
+    },
+    {
+      "recipe_file": "scripts.d/47-vulkan/50-shaderc.sh",
+      "repo": "https://github.com/google/shaderc.git",
+      "revision": "05814952134d09f8b54ae925afe578fc341cf6c1",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/google/shaderc/tar.gz/05814952134d09f8b54ae925afe578fc341cf6c1",
+      "status": "RETAINED",
+      "filename": "50-shaderc--05814952134d09f8b54ae925afe578fc341cf6c1.tar.gz",
+      "license_files": [
+        {
+          "file": "LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        },
+        {
+          "file": "license-checker.cfg",
+          "sha256": "ff39f110e4b17c6a2e24eacc14a32674c2c1f2385828bdc23a0399d3475fffc8"
+        },
+        {
+          "file": "third_party/LICENSE.glslang",
+          "sha256": "b5a00e94f058edc87e05978329b55730d8689abe61205d9018443d03de4f07da"
+        },
+        {
+          "file": "third_party/LICENSE.spirv-tools",
+          "sha256": "47e20ce182bc68fab1a0cfb129b03c326aaf4f2b6b7905aa9d376d31018bd29f"
+        }
+      ],
+      "sha256": "8e4c6994dfe6451be2665f186ba9c721f486fb23e6aaa026bb4a1ec98625135e",
+      "size": 240634
+    },
+    {
+      "recipe_file": "scripts.d/47-vulkan/55-spirv-cross.sh",
+      "repo": "https://github.com/KhronosGroup/SPIRV-Cross.git",
+      "revision": "57e4efcc84112abcd426dc5ec248b5339bee04f2",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/KhronosGroup/SPIRV-Cross/tar.gz/57e4efcc84112abcd426dc5ec248b5339bee04f2",
+      "status": "RETAINED",
+      "filename": "55-spirv-cross--57e4efcc84112abcd426dc5ec248b5339bee04f2.tar.gz",
+      "license_files": [
+        {
+          "file": "LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "file": "LICENSES/LicenseRef-KhronosFreeUse.txt",
+          "sha256": "fbeaca472f4f70e276dd1106ca5097435967a22ad6c1d8200aef7ad9f70aaf3f"
+        }
+      ],
+      "sha256": "59f15a74725f96a1e15f0fa708d54a217ab659eeef894c4d7e44cc67837d3e3a",
+      "size": 2054609
+    },
+    {
+      "recipe_file": "scripts.d/47-vulkan/60-spirv-headers.sh",
+      "repo": "https://github.com/KhronosGroup/SPIRV-Headers.git",
+      "revision": "5c6004e758e0c80185ef2cee93ae5c10fa342a5b",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/KhronosGroup/SPIRV-Headers/tar.gz/5c6004e758e0c80185ef2cee93ae5c10fa342a5b",
+      "status": "RETAINED",
+      "filename": "60-spirv-headers--5c6004e758e0c80185ef2cee93ae5c10fa342a5b.tar.gz",
+      "license_files": [
+        {
+          "file": "LICENSE",
+          "sha256": "ea43b1de38a6f90c488800d66dec1ed671e68cda530266bc96951fb5b6307613"
+        }
+      ],
+      "sha256": "cc1bdb9d3ecee75c00eab4e60387909d27152ec5f13ac928ee984ae952b6f70c",
+      "size": 597021
+    },
+    {
+      "recipe_file": "scripts.d/50-amf.sh",
+      "repo": "https://github.com/GPUOpen-LibrariesAndSDKs/AMF.git",
+      "revision": "57ee0cfb0e1a08d9041f77435653794c1b012be0",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/GPUOpen-LibrariesAndSDKs/AMF/tar.gz/57ee0cfb0e1a08d9041f77435653794c1b012be0",
+      "status": "BLOCKED",
+      "filename": "50-amf--57ee0cfb0e1a08d9041f77435653794c1b012be0.tar.gz",
+      "reason": "ValueError: Archive exceeds acquisition bound; retain separately with explicit hash"
+    },
+    {
+      "recipe_file": "scripts.d/50-aom.sh",
+      "repo": "https://aomedia.googlesource.com/aom",
+      "revision": "aac27b8f291ed449fac576bcce0ad0ca189be851",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "status": "BLOCKED",
+      "reason": "Source host requires a verified archive retrieval adapter"
+    },
+    {
+      "recipe_file": "scripts.d/50-avisynth.sh",
+      "repo": "https://github.com/AviSynth/AviSynthPlus.git",
+      "revision": "5da089a5889a69ebacc25139c7718b4ab12f3cfb",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/AviSynth/AviSynthPlus/tar.gz/5da089a5889a69ebacc25139c7718b4ab12f3cfb",
+      "status": "RETAINED",
+      "filename": "50-avisynth--5da089a5889a69ebacc25139c7718b4ab12f3cfb.tar.gz",
+      "license_files": [],
+      "sha256": "f563b7d6dba24725a8fa4be5225c506536d849c26cc622e26acf7bc6b3e61752",
+      "size": 11096902
+    },
+    {
+      "recipe_file": "scripts.d/50-chromaprint.sh",
+      "repo": "https://github.com/acoustid/chromaprint.git",
+      "revision": "3b38c100022bdfb49be7797c4828a476f1621d55",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/acoustid/chromaprint/tar.gz/3b38c100022bdfb49be7797c4828a476f1621d55",
+      "status": "RETAINED",
+      "filename": "50-chromaprint--3b38c100022bdfb49be7797c4828a476f1621d55.tar.gz",
+      "license_files": [
+        {
+          "file": "LICENSE.md",
+          "sha256": "562cfe59627e0c4e8e3b066f3ff2e9736f83811ffe4c6c2c7796595aa7595ebd"
+        }
+      ],
+      "sha256": "c68c77e11c9afe905117e3af24eb1bd802342d19b6d4629bae3bebc912df1dc6",
+      "size": 1587849
+    },
+    {
+      "recipe_file": "scripts.d/50-dav1d.sh",
+      "repo": "https://code.videolan.org/videolan/dav1d.git",
+      "revision": "6c7bee685677fd997a431302be4fea8ea4017606",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://code.videolan.org/videolan/dav1d/-/archive/6c7bee685677fd997a431302be4fea8ea4017606/dav1d-6c7bee685677fd997a431302be4fea8ea4017606.tar.gz",
+      "status": "RETAINED",
+      "filename": "50-dav1d--6c7bee685677fd997a431302be4fea8ea4017606.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "dd92c3c2247c5651606fc23a5e2d6a1ebc5ace9a3e49cbde0e12f05ad1cb1ee5"
+        }
+      ],
+      "sha256": "725d0ebe5bd19316aaaeee84a170b0f6f3930fc7cf53fa0c5bbe3c86ba1c2b15",
+      "size": 1773416
+    },
+    {
+      "recipe_file": "scripts.d/50-davs2.sh",
+      "repo": "https://github.com/pkuvcl/davs2.git",
+      "revision": "b41cf117452e2d73d827f02d3e30aa20f1c721ac",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/pkuvcl/davs2/tar.gz/b41cf117452e2d73d827f02d3e30aa20f1c721ac",
+      "status": "RETAINED",
+      "filename": "50-davs2--b41cf117452e2d73d827f02d3e30aa20f1c721ac.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "971f09fd8dedc915472df12845fb7c653563689672fb1a658e28004887ba4a07"
+        }
+      ],
+      "sha256": "efa1d5080a42c6fe4a74177111bc20c82dd1cef7adfc5ed2ca997f4b03c8dd9c",
+      "size": 535215
+    },
+    {
+      "recipe_file": "scripts.d/50-dvd/30-libdvdcss.sh",
+      "repo": "https://code.videolan.org/videolan/libdvdcss.git",
+      "revision": "811ce97a1d4d1c9d936f4b2707f533a9ef768251",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://code.videolan.org/videolan/libdvdcss/-/archive/811ce97a1d4d1c9d936f4b2707f533a9ef768251/libdvdcss-811ce97a1d4d1c9d936f4b2707f533a9ef768251.tar.gz",
+      "status": "RETAINED",
+      "filename": "30-libdvdcss--811ce97a1d4d1c9d936f4b2707f533a9ef768251.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+        }
+      ],
+      "sha256": "14f97b4df1ec2aacaa84cca3806155fc85f3f2efa6abc51ea0007d423f374ed0",
+      "size": 102399
+    },
+    {
+      "recipe_file": "scripts.d/50-dvd/40-libdvdread.sh",
+      "repo": "https://code.videolan.org/videolan/libdvdread.git",
+      "revision": "0f30df53125b564ef45903714403ce0a1e6c5e9e",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://code.videolan.org/videolan/libdvdread/-/archive/0f30df53125b564ef45903714403ce0a1e6c5e9e/libdvdread-0f30df53125b564ef45903714403ce0a1e6c5e9e.tar.gz",
+      "status": "RETAINED",
+      "filename": "40-libdvdread--0f30df53125b564ef45903714403ce0a1e6c5e9e.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "d6cb0e9e560f51085556949a84af12b79a00f10ab8b66c752537faf7cd665572"
+        }
+      ],
+      "sha256": "51a8e9192363753e8aadee37de97a196200237ea7c35d232727cb82eadf5dc6e",
+      "size": 127168
+    },
+    {
+      "recipe_file": "scripts.d/50-dvd/50-libdvdnav.sh",
+      "repo": "https://code.videolan.org/videolan/libdvdnav.git",
+      "revision": "8147ccd35e5aae4afdd21171cf7b6b4d8f179d28",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://code.videolan.org/videolan/libdvdnav/-/archive/8147ccd35e5aae4afdd21171cf7b6b4d8f179d28/libdvdnav-8147ccd35e5aae4afdd21171cf7b6b4d8f179d28.tar.gz",
+      "status": "RETAINED",
+      "filename": "50-libdvdnav--8147ccd35e5aae4afdd21171cf7b6b4d8f179d28.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "32b1062f7da84967e7019d01ab805935caa7ab7321a7ced0e30ebe75e5df1670"
+        }
+      ],
+      "sha256": "c79e47e5fb0523a3a8d6a62d9ec2e5b734eecea20733cacb0d69a2731b29f63f",
+      "size": 104591
+    },
+    {
+      "recipe_file": "scripts.d/50-fdk-aac.sh",
+      "repo": "https://github.com/mstorsjo/fdk-aac.git",
+      "revision": "ec82feb39662ac77e24ee9b324d5962e91bc79c5",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/mstorsjo/fdk-aac/tar.gz/ec82feb39662ac77e24ee9b324d5962e91bc79c5",
+      "status": "RETAINED",
+      "filename": "50-fdk-aac--ec82feb39662ac77e24ee9b324d5962e91bc79c5.tar.gz",
+      "license_files": [
+        {
+          "file": "NOTICE",
+          "sha256": "95ec80da40b4af12ad4c4f3158c9cfb80f2479f3246e4260cb600827cc8c7836"
+        },
+        {
+          "file": "rust/NOTICE",
+          "sha256": "362f6eb3a5005f435e59ad2bac6440ca3a7e07aa1e09e0e354d40d25a268f15a"
+        },
+        {
+          "file": "xhe-aac/NOTICE",
+          "sha256": "bf3e762249027586195def2b2e904901b42c8b7fab455fc66bf365f70d08de6d"
+        }
+      ],
+      "sha256": "08c7477b63d142d555f6c238df6a95d20d38c504b70e9eb9512d21a877884752",
+      "size": 4707633
+    },
+    {
+      "recipe_file": "scripts.d/50-ffnvcodec.sh",
+      "repo": "https://github.com/FFmpeg/nv-codec-headers.git",
+      "revision": "f2053071ea93137255b6dcf42e9b4c9e0965a44e",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/FFmpeg/nv-codec-headers/tar.gz/f2053071ea93137255b6dcf42e9b4c9e0965a44e",
+      "status": "RETAINED",
+      "filename": "50-ffnvcodec--f2053071ea93137255b6dcf42e9b4c9e0965a44e.tar.gz",
+      "license_files": [],
+      "sha256": "84cefa55265740888a269625474eda5bd018955c2302b72cfe7473ddc82f741f",
+      "size": 87916
+    },
+    {
+      "recipe_file": "scripts.d/50-ffnvcodec.sh",
+      "repo": "https://github.com/FFmpeg/nv-codec-headers.git",
+      "revision": "ced4f8eba3ba5dd431932cba17928f0dffdaeb2b",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/FFmpeg/nv-codec-headers/tar.gz/ced4f8eba3ba5dd431932cba17928f0dffdaeb2b",
+      "status": "RETAINED",
+      "filename": "50-ffnvcodec-2-ced4f8eba3ba5dd431932cba17928f0dffdaeb2b.tar.gz",
+      "license_files": [],
+      "sha256": "625ddd8f2a603699fdba101bebcde0e7a97bcc7b8a82ec7f45a7d06d61336597",
+      "size": 84047
+    },
+    {
+      "recipe_file": "scripts.d/50-ffnvcodec.sh",
+      "repo": "https://github.com/FFmpeg/nv-codec-headers.git",
+      "revision": "833faee5f7b8d3f56444347c587f4aed11ee213f",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/FFmpeg/nv-codec-headers/tar.gz/833faee5f7b8d3f56444347c587f4aed11ee213f",
+      "status": "RETAINED",
+      "filename": "50-ffnvcodec-3-833faee5f7b8d3f56444347c587f4aed11ee213f.tar.gz",
+      "license_files": [],
+      "sha256": "1d1d8c3518b48fd11333895ce670f9f53c7f67c716e465547152ae455dd59f11",
+      "size": 71625
+    },
+    {
+      "recipe_file": "scripts.d/50-frei0r.sh",
+      "repo": "https://github.com/dyne/frei0r.git",
+      "revision": "f09dad3aeb8160244febac49589e47a1513549d4",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/dyne/frei0r/tar.gz/f09dad3aeb8160244febac49589e47a1513549d4",
+      "status": "RETAINED",
+      "filename": "50-frei0r--f09dad3aeb8160244febac49589e47a1513549d4.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "231f7edcc7352d7734a96eef0b8030f77982678c516876fcb81e25b32d68564c"
+        }
+      ],
+      "sha256": "9f5986e842bc0195386b56c395e07e113a248b56e2f00d4e9e1cedb13c4d7a51",
+      "size": 4460542
+    },
+    {
+      "recipe_file": "scripts.d/50-gme.sh",
+      "repo": "https://github.com/libgme/game-music-emu.git",
+      "revision": "8238afd9503a59ffcec0e2685584d5ce819ad7c6",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/libgme/game-music-emu/tar.gz/8238afd9503a59ffcec0e2685584d5ce819ad7c6",
+      "status": "RETAINED",
+      "filename": "50-gme--8238afd9503a59ffcec0e2685584d5ce819ad7c6.tar.gz",
+      "license_files": [
+        {
+          "file": "license.gpl2.txt",
+          "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+        },
+        {
+          "file": "license.txt",
+          "sha256": "d2efc89fbb7533572a472d34e07964951810a3a4f8d3159ecc2dcaa1452c5c26"
+        }
+      ],
+      "sha256": "b9c1cee28476bd374b3dae40e534e414547d66499524c2460a66e828263b752c",
+      "size": 352505
+    },
+    {
+      "recipe_file": "scripts.d/50-kvazaar.sh",
+      "repo": "https://github.com/ultravideo/kvazaar.git",
+      "revision": "ec7562da7f5971f9fa3f984db358371e74bf3c7d",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/ultravideo/kvazaar/tar.gz/ec7562da7f5971f9fa3f984db358371e74bf3c7d",
+      "status": "RETAINED",
+      "filename": "50-kvazaar--ec7562da7f5971f9fa3f984db358371e74bf3c7d.tar.gz",
+      "license_files": [
+        {
+          "file": "LICENSE",
+          "sha256": "3c1dc3d7f8a3d08c14f4fbe9942f45764d8a21a3296e8d83446f33fd65f21c38"
+        },
+        {
+          "file": "LICENSE.EXT.greatest",
+          "sha256": "16f569c87d5ec20b7474b55ee0a8877b8f8b4dc13f9567ebe0b8fe8afdeb34d2"
+        }
+      ],
+      "sha256": "47d3dbc11dee7d7fce04843c4a205bd21fa7f2fff074369680cc6ad91c001959",
+      "size": 818931
+    },
+    {
+      "recipe_file": "scripts.d/50-lcevcdec.sh",
+      "repo": "https://github.com/v-novaltd/LCEVCdec.git",
+      "revision": "e295d8438ba554bc541fb269baa9cbd567b626a8",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/v-novaltd/LCEVCdec/tar.gz/e295d8438ba554bc541fb269baa9cbd567b626a8",
+      "status": "RETAINED",
+      "filename": "50-lcevcdec--e295d8438ba554bc541fb269baa9cbd567b626a8.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "3afa5369b4fb44e18280b6e0e275971f78bc6eaf5f53553f41f2483fd8b1267e"
+        },
+        {
+          "file": "LICENSE.md",
+          "sha256": "14358b0ecf6e7036c211c10f0f25563c94483dee7b8c7c954e09e10f3771d0af"
+        }
+      ],
+      "sha256": "737431483106a2c1d614940f28f1a21d060963057e15dceddefb7ac6c2ebca1b",
+      "size": 2485817
+    },
+    {
+      "recipe_file": "scripts.d/50-libaribb24.sh",
+      "repo": "https://github.com/nkoriyama/aribb24.git",
+      "revision": "5e9be272f96e00f15a2f3c5f8ba7e124862aec38",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/nkoriyama/aribb24/tar.gz/5e9be272f96e00f15a2f3c5f8ba7e124862aec38",
+      "status": "RETAINED",
+      "filename": "50-libaribb24--5e9be272f96e00f15a2f3c5f8ba7e124862aec38.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "da7eabb7bafdf7d3ae5e9f223aa5bdc1eece45ac569dc21b3b037520b4464768"
+        }
+      ],
+      "sha256": "651e88af3c8189d4faed538bee3affde360eb4698a70505765fc7e5653f5eb23",
+      "size": 47450
+    },
+    {
+      "recipe_file": "scripts.d/50-libaribcaption.sh",
+      "repo": "https://github.com/xqq/libaribcaption.git",
+      "revision": "d59c9d6403645dd7e8098b02b887a6723b15259b",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/xqq/libaribcaption/tar.gz/d59c9d6403645dd7e8098b02b887a6723b15259b",
+      "status": "RETAINED",
+      "filename": "50-libaribcaption--d59c9d6403645dd7e8098b02b887a6723b15259b.tar.gz",
+      "license_files": [
+        {
+          "file": "LICENSE",
+          "sha256": "5149f1ce4fe89190d86bfb440456701a3a7406fc2b19ef0d8b57661f62b32c04"
+        }
+      ],
+      "sha256": "8e7d3b0f2254d5e35260a2b011243dfb0ef5f8d25608eb0f117fea45e19b3245",
+      "size": 259712
+    },
+    {
+      "recipe_file": "scripts.d/50-libass.sh",
+      "repo": "https://github.com/libass/libass.git",
+      "revision": "21b5a54fceff49c126c201d4b51c6445287a5072",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/libass/libass/tar.gz/21b5a54fceff49c126c201d4b51c6445287a5072",
+      "status": "RETAINED",
+      "filename": "50-libass--21b5a54fceff49c126c201d4b51c6445287a5072.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "f7e30699d02798351e7f839e3d3bfeb29ce65e44efa7735c225464c4fd7dfe9c"
+        }
+      ],
+      "sha256": "cc971ba7cb615f2276ef51ba8206e7eee8cd567d565255e923879bb7bab49032",
+      "size": 353119
+    },
+    {
+      "recipe_file": "scripts.d/50-libbluray.sh",
+      "repo": "https://code.videolan.org/videolan/libbluray.git",
+      "revision": "4613535451af402c6d72665e8cd88be1b29c9158",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://code.videolan.org/videolan/libbluray/-/archive/4613535451af402c6d72665e8cd88be1b29c9158/libbluray-4613535451af402c6d72665e8cd88be1b29c9158.tar.gz",
+      "status": "RETAINED",
+      "filename": "50-libbluray--4613535451af402c6d72665e8cd88be1b29c9158.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "b3aa400aca6d2ba1f0bd03bd98d03d1fe7489a3bbb26969d72016360af8a5c9d"
+        }
+      ],
+      "sha256": "50831fc66db7fdf315adff0d8bd3c2ec6fd00ae1ec2e860bf8127214956d4ce0",
+      "size": 616971
+    },
+    {
+      "recipe_file": "scripts.d/50-libcurl/40-libpsl.sh",
+      "repo": "https://github.com/rockdaboot/libpsl.git",
+      "revision": "88331dae18f1824ab033f7e77880cf65814fc21a",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/rockdaboot/libpsl/tar.gz/88331dae18f1824ab033f7e77880cf65814fc21a",
+      "status": "RETAINED",
+      "filename": "40-libpsl--88331dae18f1824ab033f7e77880cf65814fc21a.tar.gz",
+      "license_files": [
+        {
+          "file": "LICENSE",
+          "sha256": "e7c9f0d8498d28a360a7e8293ea70fd7bd952955b636938322c13d60a03b5a45"
+        },
+        {
+          "file": "src/LICENSE.chromium",
+          "sha256": "1d7f52747a9169751cdf2641a8299c0098e9ecdf9429296ffd55bdb14c9ed5b3"
+        }
+      ],
+      "sha256": "2fdf8b855976c24aa476a7ee75134824a2b0a9a968b284dc266d5b6a482eb5e9",
+      "size": 7003198
+    },
+    {
+      "recipe_file": "scripts.d/50-libcurl/40-libpsl.sh",
+      "repo": "https://github.com/publicsuffix/list.git",
+      "revision": "ee4f2faaca9387a7cf3d433e68484b82c9542543",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/publicsuffix/list/tar.gz/ee4f2faaca9387a7cf3d433e68484b82c9542543",
+      "status": "RETAINED",
+      "filename": "40-libpsl-2-ee4f2faaca9387a7cf3d433e68484b82c9542543.tar.gz",
+      "license_files": [
+        {
+          "file": "LICENSE",
+          "sha256": "66a3107d5ad6a058aab753eaac2047ccb2ed0e39465dd0fe5844da3e300d5172"
+        }
+      ],
+      "sha256": "814f0f128f1fd85fba75a77861114a0971e3a761ca1db4cc979eb0932a4cf8cb",
+      "size": 323881
+    },
+    {
+      "recipe_file": "scripts.d/50-libcurl/40-nghttp2.sh",
+      "repo": "https://github.com/nghttp2/nghttp2.git",
+      "revision": "c785bf23f9d77966085ae1b32717f3e8c8d12090",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/nghttp2/nghttp2/tar.gz/c785bf23f9d77966085ae1b32717f3e8c8d12090",
+      "status": "RETAINED",
+      "filename": "40-nghttp2--c785bf23f9d77966085ae1b32717f3e8c8d12090.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "6b94f3abc1aabd0c72a7c7d92a77f79dda7c8a0cb3df839a97890b4116a2de2a"
+        }
+      ],
+      "sha256": "e174657a2d322e11ce04c8657592ccb2803463087f5bf006a57144ccc9e9558e",
+      "size": 1076440
+    },
+    {
+      "recipe_file": "scripts.d/50-libcurl/40-nghttp3.sh",
+      "repo": "https://github.com/ngtcp2/nghttp3.git",
+      "revision": "e06a63ac6a0267149b480cd7fe04c8ea9a366d9e",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/ngtcp2/nghttp3/tar.gz/e06a63ac6a0267149b480cd7fe04c8ea9a366d9e",
+      "status": "RETAINED",
+      "filename": "40-nghttp3--e06a63ac6a0267149b480cd7fe04c8ea9a366d9e.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "58cc3fc8c6d6cb2485ab35eb5918e849b5bf1e56522974e106d7a39a88d61dcd"
+        }
+      ],
+      "sha256": "03280144d31b401240260241851ad973fdf60d3bee3d8fbc1a4d6acacaaf8880",
+      "size": 231784
+    },
+    {
+      "recipe_file": "scripts.d/50-libcurl/40-ngtcp2.sh",
+      "repo": "https://github.com/ngtcp2/ngtcp2.git",
+      "revision": "9595a0dda7990b95cc2ff728d2524d7db0a8b7f3",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/ngtcp2/ngtcp2/tar.gz/9595a0dda7990b95cc2ff728d2524d7db0a8b7f3",
+      "status": "RETAINED",
+      "filename": "40-ngtcp2--9595a0dda7990b95cc2ff728d2524d7db0a8b7f3.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "542dd526d2ea23565f0571cc68df6f05ed11248a90ff0f32de19d8ba589db513"
+        }
+      ],
+      "sha256": "2e28034b1cc10f811dccbc7b9b538802b1a6a5fc7d9e6963eff75e9db549feba",
+      "size": 724756
+    },
+    {
+      "recipe_file": "scripts.d/50-libcurl/50-libcurl.sh",
+      "repo": "https://github.com/curl/curl.git",
+      "revision": "d999cc6c6bb1f73ca60593355e522f97240317ad",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/curl/curl/tar.gz/d999cc6c6bb1f73ca60593355e522f97240317ad",
+      "status": "RETAINED",
+      "filename": "50-libcurl--d999cc6c6bb1f73ca60593355e522f97240317ad.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "82f2f4427d6545ee5aaac4f0b80428da6cc8ba41c2cf5da3a03680ec327b9681"
+        }
+      ],
+      "sha256": "899c9c63a506d96464f0ee85e2874eb0437ef739af9ac46ae2df250b5c316cf0",
+      "size": 3766741
+    },
+    {
+      "recipe_file": "scripts.d/50-libjxl/50-libjxl.sh",
+      "repo": "https://github.com/libjxl/libjxl.git",
+      "revision": "a14f4e0ff32c07cbd19eae144c850e8bbfee2261",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/libjxl/libjxl/tar.gz/a14f4e0ff32c07cbd19eae144c850e8bbfee2261",
+      "status": "RETAINED",
+      "filename": "50-libjxl--a14f4e0ff32c07cbd19eae144c850e8bbfee2261.tar.gz",
+      "license_files": [
+        {
+          "file": "LICENSE",
+          "sha256": "8405932022a556380c2d8c272eff154a923feb197233f348ce5f7334fb0a5ede"
+        },
+        {
+          "file": "debian/copyright",
+          "sha256": "ec6f5bc1043fba8ffa648157b5beee8915865a54f25c5f3201b0e910cd09ebde"
+        }
+      ],
+      "sha256": "0c191b8730782fe23a8adf50effdc06e234d8161d4750a2d08c51788fccd77bf",
+      "size": 1736321
+    },
+    {
+      "recipe_file": "scripts.d/50-libmp3lame.sh",
+      "repo": "https://svn.code.sf.net/p/lame/svn/trunk/lame",
+      "revision": "",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "status": "BLOCKED",
+      "reason": "Mutable/non-commit source ref requires explicit resolution"
+    },
+    {
+      "recipe_file": "scripts.d/50-libopus.sh",
+      "repo": "https://github.com/xiph/opus.git",
+      "revision": "f1afc4222aff7c5456d27581ec618ae64158fbe1",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/xiph/opus/tar.gz/f1afc4222aff7c5456d27581ec618ae64158fbe1",
+      "status": "RETAINED",
+      "filename": "50-libopus--f1afc4222aff7c5456d27581ec618ae64158fbe1.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "01e1167d54a096d123cf6dfbbeb19587278845c6481d2d66d545669846079551"
+        },
+        {
+          "file": "LICENSE_PLEASE_READ.txt",
+          "sha256": "7efb4989e0cd1b256229bdf2f09300c5d14e35db0e7476bfb87fac243498273d"
+        }
+      ],
+      "sha256": "4d905fc26579de9a034bd6179422a7b87bdb5c0c8b579f45b8e83095ced7ce6d",
+      "size": 4965386
+    },
+    {
+      "recipe_file": "scripts.d/50-libplacebo.sh",
+      "repo": "https://code.videolan.org/videolan/libplacebo.git",
+      "revision": "e608e5b799b6515af2689fddbbed66ffae7b724c",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://code.videolan.org/videolan/libplacebo/-/archive/e608e5b799b6515af2689fddbbed66ffae7b724c/libplacebo-e608e5b799b6515af2689fddbbed66ffae7b724c.tar.gz",
+      "status": "RETAINED",
+      "filename": "50-libplacebo--e608e5b799b6515af2689fddbbed66ffae7b724c.tar.gz",
+      "license_files": [
+        {
+          "file": "LICENSE",
+          "sha256": "b3aa400aca6d2ba1f0bd03bd98d03d1fe7489a3bbb26969d72016360af8a5c9d"
+        },
+        {
+          "file": "demos/LICENSE",
+          "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499"
+        }
+      ],
+      "sha256": "c39c7c9ea738ab8ee56bcdcfb3110a90d6a3f2bb3257be4985511055a6701324",
+      "size": 1017087
+    },
+    {
+      "recipe_file": "scripts.d/50-librist/40-mbedtls.sh",
+      "repo": "https://github.com/ARMmbed/mbedtls.git",
+      "revision": "v4.3.0",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "status": "BLOCKED",
+      "reason": "Mutable/non-commit source ref requires explicit resolution"
+    },
+    {
+      "recipe_file": "scripts.d/50-librist/50-librist.sh",
+      "repo": "https://code.videolan.org/rist/librist.git",
+      "revision": "a911bee8904d88beb1ccd3349ff9a3de1cadc1a6",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://code.videolan.org/rist/librist/-/archive/a911bee8904d88beb1ccd3349ff9a3de1cadc1a6/librist-a911bee8904d88beb1ccd3349ff9a3de1cadc1a6.tar.gz",
+      "status": "BLOCKED",
+      "filename": "50-librist--a911bee8904d88beb1ccd3349ff9a3de1cadc1a6.tar.gz",
+      "reason": "RemoteDisconnected: Remote end closed connection without response"
+    },
+    {
+      "recipe_file": "scripts.d/50-librsvg/10-glib.sh",
+      "repo": "https://github.com/GNOME/glib.git",
+      "revision": "5cf924587ed152260d85c6ca8733546bcad5ee42",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/GNOME/glib/tar.gz/5cf924587ed152260d85c6ca8733546bcad5ee42",
+      "status": "RETAINED",
+      "filename": "10-glib--5cf924587ed152260d85c6ca8733546bcad5ee42.tar.gz",
+      "license_files": [
+        {
+          "file": "LICENSES/LicenseRef-old-glib-tests.txt",
+          "sha256": "fb261b2d5dbe76c4850f90da763210bc385e52428df6bbfd7b06295ac8a32914"
+        }
+      ],
+      "sha256": "ac4d8ca841b897b660927c0902ce8599597ca246e769864d30a4bda9bc92d4cb",
+      "size": 10314303
+    },
+    {
+      "recipe_file": "scripts.d/50-librsvg/20-cairo.sh",
+      "repo": "https://gitlab.freedesktop.org/cairo/cairo.git",
+      "revision": "07adef44b00a9765e9bdb92c4e6f3772debc83c2",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://gitlab.freedesktop.org/cairo/cairo/-/archive/07adef44b00a9765e9bdb92c4e6f3772debc83c2/cairo-07adef44b00a9765e9bdb92c4e6f3772debc83c2.tar.gz",
+      "status": "RETAINED",
+      "filename": "20-cairo--07adef44b00a9765e9bdb92c4e6f3772debc83c2.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "67228a9f7c5f9b67c58f556f1be178f62da4d9e2e6285318d8c74d567255abdf"
+        },
+        {
+          "file": "COPYING-LGPL-2.1",
+          "sha256": "9e9e8608c4cdda51a78cc3a385f4ec9a2e4c96d5ecad74ac8bca5fca3e563b7d"
+        },
+        {
+          "file": "COPYING-MPL-1.1",
+          "sha256": "53692a2ed6c6a2c6ec9b32dd0b820dfae91e0a1fcdf625ca9ed0bdf8705fcc4f"
+        },
+        {
+          "file": "perf/COPYING",
+          "sha256": "6f93b45ea874706058ae35bc02df79c3f9daf00948672eea8394cc25d1327d49"
+        },
+        {
+          "file": "test/COPYING",
+          "sha256": "a37812e0e27a211272d4c27fa45028c3653e78bb708acccb77c94128dc72b98e"
+        },
+        {
+          "file": "util/COPYING",
+          "sha256": "008e976b6e5e7155ee24322073f42cab7cd6daf90bc2322f1d5c3aacab94111c"
+        }
+      ],
+      "sha256": "9f8f0b75d72bf725975192a43fa33ab379395eec26888492fce68ddaf79f78c8",
+      "size": 47858304
+    },
+    {
+      "recipe_file": "scripts.d/50-librsvg/30-pango.sh",
+      "repo": "https://github.com/GNOME/pango.git",
+      "revision": "6bd640fdbdfe4d751cc17e0fff25caa6a372d303",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/GNOME/pango/tar.gz/6bd640fdbdfe4d751cc17e0fff25caa6a372d303",
+      "status": "RETAINED",
+      "filename": "30-pango--6bd640fdbdfe4d751cc17e0fff25caa6a372d303.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "d245807f90032872d1438d741ed21e2490e1175dc8aa3afa5ddb6c8e529b58e5"
+        }
+      ],
+      "sha256": "65df71b867b4fd3346e62477f17266ea765e6b94300f7945709427f41d791741",
+      "size": 2588871
+    },
+    {
+      "recipe_file": "scripts.d/50-librsvg/99-librsvg.sh",
+      "repo": "https://github.com/GNOME/librsvg.git",
+      "revision": "a6ab2529560de5e17551a9ca3ed9e8a9b9bc9a2e",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/GNOME/librsvg/tar.gz/a6ab2529560de5e17551a9ca3ed9e8a9b9bc9a2e",
+      "status": "RETAINED",
+      "filename": "99-librsvg--a6ab2529560de5e17551a9ca3ed9e8a9b9bc9a2e.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING.LIB",
+          "sha256": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551"
+        },
+        {
+          "file": "librsvg-rebind/LICENSE",
+          "sha256": "f9c4c77baa3828004ee54b8a4f2db2e88ed44a6237a493965bf551fac0fcb62d"
+        }
+      ],
+      "sha256": "3a31f167e9de96e412b72aa5c89f4c9dd78e9f75768bff1c00950e3900697f9d",
+      "size": 7885974
+    },
+    {
+      "recipe_file": "scripts.d/50-libssh.sh",
+      "repo": "https://gitlab.com/libssh/libssh-mirror.git",
+      "revision": "5138d46fd3b844d525b05938bf55a6d0d924c8d2",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "status": "BLOCKED",
+      "reason": "Source host requires a verified archive retrieval adapter"
+    },
+    {
+      "recipe_file": "scripts.d/50-libtheora.sh",
+      "repo": "https://github.com/xiph/theora.git",
+      "revision": "28fd5ec77f0ad0e07a371cef1047828116f6bd8a",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/xiph/theora/tar.gz/28fd5ec77f0ad0e07a371cef1047828116f6bd8a",
+      "status": "RETAINED",
+      "filename": "50-libtheora--28fd5ec77f0ad0e07a371cef1047828116f6bd8a.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "8417fad7da775735564e209484a2e011e0fa201e94f01fdbee6e4977e478e6fc"
+        },
+        {
+          "file": "LICENSE",
+          "sha256": "2c902950c73a63cd285dc0c36573de9c5fefe66d49312949c51d941f33e92932"
+        }
+      ],
+      "sha256": "b92c94380b3c86db5797e8f248373eecfc6230c8a0b374e64b4041645b0d2152",
+      "size": 1221487
+    },
+    {
+      "recipe_file": "scripts.d/50-libvpx.sh",
+      "repo": "https://chromium.googlesource.com/webm/libvpx",
+      "revision": "7e000a41a7727d5b9477dbbe5727431560d6a16c",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "status": "BLOCKED",
+      "reason": "Source host requires a verified archive retrieval adapter"
+    },
+    {
+      "recipe_file": "scripts.d/50-libwebp.sh",
+      "repo": "https://chromium.googlesource.com/webm/libwebp",
+      "revision": "67b8354c37d21f36d6d5cdd027ca0bcf94d3243d",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "status": "BLOCKED",
+      "reason": "Source host requires a verified archive retrieval adapter"
+    },
+    {
+      "recipe_file": "scripts.d/50-libzmq.sh",
+      "repo": "https://github.com/zeromq/libzmq.git",
+      "revision": "46493370217ac135246617fa2f6ac819d8b61bfc",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/zeromq/libzmq/tar.gz/46493370217ac135246617fa2f6ac819d8b61bfc",
+      "status": "RETAINED",
+      "filename": "50-libzmq--46493370217ac135246617fa2f6ac819d8b61bfc.tar.gz",
+      "license_files": [
+        {
+          "file": "LICENSE",
+          "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5"
+        }
+      ],
+      "sha256": "a5219efcc1bd863f1e37c170ce05a04f0c11cce497ea52222dd8a1952a78c1b9",
+      "size": 872096
+    },
+    {
+      "recipe_file": "scripts.d/50-lilv/96-lv2.sh",
+      "repo": "https://github.com/lv2/lv2.git",
+      "revision": "3c57dae600a5ad8d05acd53ee3490f7d91cb7be6",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/lv2/lv2/tar.gz/3c57dae600a5ad8d05acd53ee3490f7d91cb7be6",
+      "status": "RETAINED",
+      "filename": "96-lv2--3c57dae600a5ad8d05acd53ee3490f7d91cb7be6.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "1e6bb175e193608b767ff25a4ed68b82c4db599491cf0d2694435cf60e9a4841"
+        }
+      ],
+      "sha256": "4769e649aabf1774aaf2cb4dede19ae2463ded0e94cd3cc3af81403992398457",
+      "size": 253878
+    },
+    {
+      "recipe_file": "scripts.d/50-lilv/96-serd.sh",
+      "repo": "https://github.com/drobilla/serd.git",
+      "revision": "b621b0bc790d1e8102d3138ead16b974ddda8432",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/drobilla/serd/tar.gz/b621b0bc790d1e8102d3138ead16b974ddda8432",
+      "status": "RETAINED",
+      "filename": "96-serd--b621b0bc790d1e8102d3138ead16b974ddda8432.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "ae223adebe7cc1ee0716e0f926d1ecc8e42c6e4da7e1d7418c9c07fae244bbde"
+        }
+      ],
+      "sha256": "67575636d233332ae137ac086e6dd193f1f8a10fd7ede8ef4dff539c8e784cbc",
+      "size": 382947
+    },
+    {
+      "recipe_file": "scripts.d/50-lilv/96-zix.sh",
+      "repo": "https://github.com/drobilla/zix.git",
+      "revision": "17d632393f5addb6fa24dda2927b96515407cca7",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/drobilla/zix/tar.gz/17d632393f5addb6fa24dda2927b96515407cca7",
+      "status": "RETAINED",
+      "filename": "96-zix--17d632393f5addb6fa24dda2927b96515407cca7.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "1314cc14fb947491491c517c533ac7de4f6798585f922a472358082c25ac1881"
+        }
+      ],
+      "sha256": "a1b95d6eb32a00f881f620edcab9d27335250e37c6ad879feb0c29a7fc2c02e5",
+      "size": 104423
+    },
+    {
+      "recipe_file": "scripts.d/50-lilv/97-sord.sh",
+      "repo": "https://github.com/drobilla/sord.git",
+      "revision": "4b5232bb91e7f2f1b84df384494d073fabbcd312",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/drobilla/sord/tar.gz/4b5232bb91e7f2f1b84df384494d073fabbcd312",
+      "status": "RETAINED",
+      "filename": "97-sord--4b5232bb91e7f2f1b84df384494d073fabbcd312.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "ae223adebe7cc1ee0716e0f926d1ecc8e42c6e4da7e1d7418c9c07fae244bbde"
+        }
+      ],
+      "sha256": "b5a1d3a34d7b177fd33f4ac7f96c3904861b2c6cf9b3039cb6856f6cb9abb995",
+      "size": 287345
+    },
+    {
+      "recipe_file": "scripts.d/50-lilv/98-sratom.sh",
+      "repo": "https://github.com/lv2/sratom.git",
+      "revision": "9e8ee84eed502e6030ce8bb49694fd28542b08fc",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/lv2/sratom/tar.gz/9e8ee84eed502e6030ce8bb49694fd28542b08fc",
+      "status": "RETAINED",
+      "filename": "98-sratom--9e8ee84eed502e6030ce8bb49694fd28542b08fc.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "1d968c655ecad113e128dbf4d4deabd9e30b931b42943b6a681c9cf11d7da5d4"
+        }
+      ],
+      "sha256": "7a1785d825e6d1d60f11c7371a0a5fc8a6d66f407eddf9d37eb50dd87afe274f",
+      "size": 25290
+    },
+    {
+      "recipe_file": "scripts.d/50-lilv/99-lilv.sh",
+      "repo": "https://github.com/lv2/lilv.git",
+      "revision": "4b8f30055fa5cb4134a2eb45fc1555bc04289314",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/lv2/lilv/tar.gz/4b8f30055fa5cb4134a2eb45fc1555bc04289314",
+      "status": "RETAINED",
+      "filename": "99-lilv--4b8f30055fa5cb4134a2eb45fc1555bc04289314.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "ae223adebe7cc1ee0716e0f926d1ecc8e42c6e4da7e1d7418c9c07fae244bbde"
+        }
+      ],
+      "sha256": "37c5df93860082273ab02104556b45625303a04a299d2914f5dd215f39a29409",
+      "size": 153394
+    },
+    {
+      "recipe_file": "scripts.d/50-onevpl.sh",
+      "repo": "https://github.com/intel/libvpl.git",
+      "revision": "412c5cffe3022d5ebb8a955c3b30afe7bd2e3929",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/intel/libvpl/tar.gz/412c5cffe3022d5ebb8a955c3b30afe7bd2e3929",
+      "status": "RETAINED",
+      "filename": "50-onevpl--412c5cffe3022d5ebb8a955c3b30afe7bd2e3929.tar.gz",
+      "license_files": [
+        {
+          "file": "LICENSE",
+          "sha256": "bf1cfac2e2792b6e1e995ce103d70796aecaf2ec7e4c5fe5474f7acec7b4a677"
+        }
+      ],
+      "sha256": "deb2641c23f4350f8dbe965be6e424e59fa6696c7b5528ceb9d77a29244cccc4",
+      "size": 12977142
+    },
+    {
+      "recipe_file": "scripts.d/50-openal.sh",
+      "repo": "https://github.com/kcat/openal-soft.git",
+      "revision": "0609c8df5848040a13d67d790ac65ed95fad265f",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/kcat/openal-soft/tar.gz/0609c8df5848040a13d67d790ac65ed95fad265f",
+      "status": "RETAINED",
+      "filename": "50-openal--0609c8df5848040a13d67d790ac65ed95fad265f.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "d808ce217e5b611854da622b57ec29fe545584c48bc5352fae72a4b6e5074a15"
+        },
+        {
+          "file": "LICENSE-pffft",
+          "sha256": "64056328b3e7bc104e24ef96accc1a7abead156f0c02d1b87c97e3f3a28030de"
+        },
+        {
+          "file": "LICENSE.Apache-2.0.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "file": "LICENSE.BSD-3-Clause.txt",
+          "sha256": "b5a08cf98996dd83aa906a72c163600f6cb17a65ce546a553815a1267abd43ff"
+        },
+        {
+          "file": "fmt-11.2.0/LICENSE",
+          "sha256": "07580f2a3b35709ce703d523f447b242f6dfec7582a8c0df102c7fa2849375f8"
+        },
+        {
+          "file": "gsl/LICENSE",
+          "sha256": "4c21dc82a1c7186ea754fd59d504c00947953a3401fe8e24eaa44109ef8e2555"
+        }
+      ],
+      "sha256": "8c352251c0103f76ab956674fcb0e87cb17a3eb3ec11643fd80de7c45cfed6a1",
+      "size": 1621150
+    },
+    {
+      "recipe_file": "scripts.d/50-openapv.sh",
+      "repo": "https://github.com/AcademySoftwareFoundation/openapv.git",
+      "revision": "3f0291391dbb1fbc27229b2543aad4ce778b0d72",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/AcademySoftwareFoundation/openapv/tar.gz/3f0291391dbb1fbc27229b2543aad4ce778b0d72",
+      "status": "RETAINED",
+      "filename": "50-openapv--3f0291391dbb1fbc27229b2543aad4ce778b0d72.tar.gz",
+      "license_files": [
+        {
+          "file": "LICENSE",
+          "sha256": "7ad8e53c0c3e24e7ba64dbcad5e7706108f3dc67cf6515ef761adac0a39dab25"
+        }
+      ],
+      "sha256": "2ba3d8b0cdbf60cd95a98513d3d2dfc65a8571494fe6cfcffb727f5ef0abc200",
+      "size": 138596144
+    },
+    {
+      "recipe_file": "scripts.d/50-opencore-amr.sh",
+      "repo": "https://git.code.sf.net/p/opencore-amr/code",
+      "revision": "7dba8c32238418ce0b316a852b2224df586ca896",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "status": "BLOCKED",
+      "reason": "Source host requires a verified archive retrieval adapter"
+    },
+    {
+      "recipe_file": "scripts.d/50-openh264.sh",
+      "repo": "https://github.com/cisco/openh264.git",
+      "revision": "1bca62311e447fd9c39fc93de2c4b96cd5ce971c",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/cisco/openh264/tar.gz/1bca62311e447fd9c39fc93de2c4b96cd5ce971c",
+      "status": "RETAINED",
+      "filename": "50-openh264--1bca62311e447fd9c39fc93de2c4b96cd5ce971c.tar.gz",
+      "license_files": [
+        {
+          "file": "LICENSE",
+          "sha256": "dd5c1c9668512530fa5a96e4c29ac4033d70a7eeb0eed7a42fddb6dd794ebdbb"
+        }
+      ],
+      "sha256": "2238d3e5956ef0d288dd43842a0220015cf72c4327d98684e8bc47ffa7cf5308",
+      "size": 60334161
+    },
+    {
+      "recipe_file": "scripts.d/50-openjpeg.sh",
+      "repo": "https://github.com/uclouvain/openjpeg.git",
+      "revision": "8314119b067c0fc77834731168daaebd379fdb12",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/uclouvain/openjpeg/tar.gz/8314119b067c0fc77834731168daaebd379fdb12",
+      "status": "RETAINED",
+      "filename": "50-openjpeg--8314119b067c0fc77834731168daaebd379fdb12.tar.gz",
+      "license_files": [
+        {
+          "file": "LICENSE",
+          "sha256": "a6af136f3e15038a666b61f376612a07d9a4e48cb7c01adbf3e33b3f14ab49b6"
+        }
+      ],
+      "sha256": "e723e8babb2188e8743308842bb1bfc9809f0375cd964cfeac2fb17285094321",
+      "size": 2165377
+    },
+    {
+      "recipe_file": "scripts.d/50-openmpt.sh",
+      "repo": "https://github.com/OpenMPT/openmpt.git",
+      "revision": "ad7ba02b3fd1212e65cca02c41476af4368491ce",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/OpenMPT/openmpt/tar.gz/ad7ba02b3fd1212e65cca02c41476af4368491ce",
+      "status": "RETAINED",
+      "filename": "50-openmpt--ad7ba02b3fd1212e65cca02c41476af4368491ce.tar.gz",
+      "license_files": [
+        {
+          "file": "LICENSE",
+          "sha256": "2c999e99533c10a347916a72e075bacf10fcedeff793bd90d41d812b46161da2"
+        }
+      ],
+      "sha256": "144d28ff590db951df220f396cb6d5dbc49a55925b6748ed92223de8712dc3cd",
+      "size": 31922200
+    },
+    {
+      "recipe_file": "scripts.d/50-rav1e.sh",
+      "repo": "https://github.com/xiph/rav1e.git",
+      "revision": "31435de9d76fddd38f6dcc31d4014574cebb2092",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/xiph/rav1e/tar.gz/31435de9d76fddd38f6dcc31d4014574cebb2092",
+      "status": "RETAINED",
+      "filename": "50-rav1e--31435de9d76fddd38f6dcc31d4014574cebb2092.tar.gz",
+      "license_files": [
+        {
+          "file": "LICENSE",
+          "sha256": "2dd0a109751e939dec3f80ddcfbc1ba91553f18c574399e85c159632182a2c0a"
+        },
+        {
+          "file": "ivf/LICENSE",
+          "sha256": "5d3c397a3aeeecbc417962e4df8e8432af8219fda8a56ebe601a638a1e76c522"
+        },
+        {
+          "file": "license_template.txt",
+          "sha256": "5097df781d1759aabea7eeaa308a591e9b6e0e4389eff515fdab458c4b4389ac"
+        }
+      ],
+      "sha256": "ac56fef82e5f41b53d2c6088f4b0693380c389a55665a698ba768908ee17f073",
+      "size": 3043374
+    },
+    {
+      "recipe_file": "scripts.d/50-rubberband.sh",
+      "repo": "https://github.com/breakfastquay/rubberband.git",
+      "revision": "e4296ac80b1170018a110bc326fd0d45a0eb27d6",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/breakfastquay/rubberband/tar.gz/e4296ac80b1170018a110bc326fd0d45a0eb27d6",
+      "status": "RETAINED",
+      "filename": "50-rubberband--e4296ac80b1170018a110bc326fd0d45a0eb27d6.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "cedd4c1885d75991bf1077cc6e33359103cf04fbc996f20d30ab043d5fc5fcc5"
+        }
+      ],
+      "sha256": "32770ab6a395badb6a5ee3443bf5a0cfd5cac07f332af8e03fd6dcd61f5b3759",
+      "size": 290620
+    },
+    {
+      "recipe_file": "scripts.d/50-sdl.sh",
+      "repo": "https://github.com/libsdl-org/SDL.git",
+      "revision": "fe30456e94e89ef2cab50172121bffb7f7f50830",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/libsdl-org/SDL/tar.gz/fe30456e94e89ef2cab50172121bffb7f7f50830",
+      "status": "RETAINED",
+      "filename": "50-sdl--fe30456e94e89ef2cab50172121bffb7f7f50830.tar.gz",
+      "license_files": [
+        {
+          "file": "LICENSE.txt",
+          "sha256": "1c040b8271b37e5076359f8fd54240e371114112924d2df81ef87c7d6a1dfdfd"
+        },
+        {
+          "file": "test/COPYING",
+          "sha256": "d5a549e4a7b88cb696d0db15b21830061131ed361257ab399a33ca08ce0b33d5"
+        },
+        {
+          "file": "visualtest/COPYING.txt",
+          "sha256": "dae65ccf728227eff8e10194437078a5628047b9f55d796039688e7ca8e3aa4e"
+        }
+      ],
+      "sha256": "d188f3fd4611824c4aff0ce1c38737ba56af6d4c904fb443a9eba1ef8a114bba",
+      "size": 7913084
+    },
+    {
+      "recipe_file": "scripts.d/50-snappy.sh",
+      "repo": "https://github.com/google/snappy.git",
+      "revision": "946606459314e55d029c85f9a8c46f8809467f0f",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/google/snappy/tar.gz/946606459314e55d029c85f9a8c46f8809467f0f",
+      "status": "RETAINED",
+      "filename": "50-snappy--946606459314e55d029c85f9a8c46f8809467f0f.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "55172044f7e241207117448a4d9d6ba1d0925c8ad66b5d4c08c70adfa9cc3de6"
+        },
+        {
+          "file": "COPYING.notestdata",
+          "sha256": "5221a36a801b981fbdfda7b87db64cff231a3b88223a066c325411b539df796f"
+        }
+      ],
+      "sha256": "78767c8f8d9ac0eb26a7ab04ed33ed9b33b9de7f80434bc66d4792fb55c83cb8",
+      "size": 1117103
+    },
+    {
+      "recipe_file": "scripts.d/50-soxr.sh",
+      "repo": "https://git.code.sf.net/p/soxr/code",
+      "revision": "945b592b70470e29f917f4de89b4281fbbd540c0",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "status": "BLOCKED",
+      "reason": "Source host requires a verified archive retrieval adapter"
+    },
+    {
+      "recipe_file": "scripts.d/50-srt.sh",
+      "repo": "https://github.com/Haivision/srt.git",
+      "revision": "23af65f7dafb0f65b80312b859f80aeece557924",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/Haivision/srt/tar.gz/23af65f7dafb0f65b80312b859f80aeece557924",
+      "status": "RETAINED",
+      "filename": "50-srt--23af65f7dafb0f65b80312b859f80aeece557924.tar.gz",
+      "license_files": [
+        {
+          "file": "LICENSE",
+          "sha256": "fab3dd6bdab226f1c08630b1dd917e11fcb4ec5e1e020e2c16f83a0a13863e85"
+        }
+      ],
+      "sha256": "f07139fa40ab6e48ae99e9a6652dd17f9d4e4262b0c10fb924064bfcb51477b4",
+      "size": 1829825
+    },
+    {
+      "recipe_file": "scripts.d/50-svtav1.sh",
+      "repo": "https://github.com/AOMediaCodec/SVT-AV1.git",
+      "revision": "5fdf6b2f373bd96256bb6b45f892077b1b4431d9",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/AOMediaCodec/SVT-AV1/tar.gz/5fdf6b2f373bd96256bb6b45f892077b1b4431d9",
+      "status": "RETAINED",
+      "filename": "50-svtav1--5fdf6b2f373bd96256bb6b45f892077b1b4431d9.tar.gz",
+      "license_files": [
+        {
+          "file": "LICENSE-BSD2.md",
+          "sha256": "c582fcbeb9cf972a60d298bfaf41dc5adff2dd14208946edcb9bb56a281e8438"
+        },
+        {
+          "file": "LICENSE.md",
+          "sha256": "0acc2fcb27472bdc9aaf8b71f37055bbdac4f54671b7d922f241bd7fcd0dd3e6"
+        }
+      ],
+      "sha256": "f60536d3b8d434c606febcf58682341897bfd1eaa9b607cabd535a9ace4087b5",
+      "size": 11291713
+    },
+    {
+      "recipe_file": "scripts.d/50-twolame.sh",
+      "repo": "https://github.com/njh/twolame.git",
+      "revision": "6fced852d4d5cfad58cf9dbe3ea619b08e87d398",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/njh/twolame/tar.gz/6fced852d4d5cfad58cf9dbe3ea619b08e87d398",
+      "status": "RETAINED",
+      "filename": "50-twolame--6fced852d4d5cfad58cf9dbe3ea619b08e87d398.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "257a842724705950b07da76ce0e22ffa80ec77b3e9dfc6702522ac342409da0f"
+        }
+      ],
+      "sha256": "6fd32a3d16a57ceacd5a64c4b6c54d6118b213fe8c63bc2900045200e2012000",
+      "size": 432902
+    },
+    {
+      "recipe_file": "scripts.d/50-uavs3d.sh",
+      "repo": "https://github.com/uavs3/uavs3d.git",
+      "revision": "0e20d2c291853f196c68922a264bcd8471d75b68",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/uavs3/uavs3d/tar.gz/0e20d2c291853f196c68922a264bcd8471d75b68",
+      "status": "RETAINED",
+      "filename": "50-uavs3d--0e20d2c291853f196c68922a264bcd8471d75b68.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "5a8dcb7da222df8a81b6e334000f859248196335e2d28e1db9f3c552827d7cdf"
+        }
+      ],
+      "sha256": "1c1eb778b6080bc01493180ea7ae671c6444ce3aa760b5d021ba882eb0f9e3a0",
+      "size": 629567
+    },
+    {
+      "recipe_file": "scripts.d/50-vaapi/30-libpciaccess.sh",
+      "repo": "https://gitlab.freedesktop.org/xorg/lib/libpciaccess.git",
+      "revision": "e33aa5fd28f63b9842e36c1a8a954577eec042e3",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://gitlab.freedesktop.org/xorg/lib/libpciaccess/-/archive/e33aa5fd28f63b9842e36c1a8a954577eec042e3/libpciaccess-e33aa5fd28f63b9842e36c1a8a954577eec042e3.tar.gz",
+      "status": "RETAINED",
+      "filename": "30-libpciaccess--e33aa5fd28f63b9842e36c1a8a954577eec042e3.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "f33f360f8905940dac01aa21597fe8a6727ca6f4ffa43b380e2116fd0666aa8a"
+        }
+      ],
+      "sha256": "2ea4a0ddc2c38ca4b510b8053d1550cae2dbe0b6717b4c2cbf6891677bd7a5a8",
+      "size": 80163
+    },
+    {
+      "recipe_file": "scripts.d/50-vaapi/40-libdrm.sh",
+      "repo": "https://gitlab.freedesktop.org/mesa/drm.git",
+      "revision": "33fab8cbca7f7581e955a675597d14412702edc4",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://gitlab.freedesktop.org/mesa/drm/-/archive/33fab8cbca7f7581e955a675597d14412702edc4/drm-33fab8cbca7f7581e955a675597d14412702edc4.tar.gz",
+      "status": "RETAINED",
+      "filename": "40-libdrm--33fab8cbca7f7581e955a675597d14412702edc4.tar.gz",
+      "license_files": [],
+      "sha256": "158ba73b9149793fb50f6ed51020917b6f31754ff0d2404394b76ae8afe73710",
+      "size": 571838
+    },
+    {
+      "recipe_file": "scripts.d/50-vaapi/50-libva.sh",
+      "repo": "https://github.com/intel/libva.git",
+      "revision": "f052e984e0c8bf10784198cc311b23c567b1367f",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/intel/libva/tar.gz/f052e984e0c8bf10784198cc311b23c567b1367f",
+      "status": "RETAINED",
+      "filename": "50-libva--f052e984e0c8bf10784198cc311b23c567b1367f.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "c86a782ee845b52472dae9b9d79fb915d333628ac0efe49cdce63644814931de"
+        }
+      ],
+      "sha256": "549d8b3984e7221572db3d4a9d45561d88197e553e067e09bc37352629278682",
+      "size": 307250
+    },
+    {
+      "recipe_file": "scripts.d/50-vapoursynth.sh",
+      "repo": "https://github.com/vapoursynth/vapoursynth.git",
+      "revision": "R82",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "status": "BLOCKED",
+      "reason": "Mutable/non-commit source ref requires explicit resolution"
+    },
+    {
+      "recipe_file": "scripts.d/50-vidstab.sh",
+      "repo": "https://github.com/georgmartius/vid.stab.git",
+      "revision": "e2445c4081658318223762a696eb1c645c2d7168",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/georgmartius/vid.stab/tar.gz/e2445c4081658318223762a696eb1c645c2d7168",
+      "status": "RETAINED",
+      "filename": "50-vidstab--e2445c4081658318223762a696eb1c645c2d7168.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING.LESSER",
+          "sha256": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551"
+        },
+        {
+          "file": "LICENSE",
+          "sha256": "71c1072d2c2597bbe25f7defc01f9082f4bae9b54ba73a8c5c7ca423fef92e8d"
+        }
+      ],
+      "sha256": "39506541c073b2be1e376b59fc90e6a79ba4d16cbf4a4a2a58a6badc3a4ce1c3",
+      "size": 316810
+    },
+    {
+      "recipe_file": "scripts.d/50-vvenc.sh",
+      "repo": "https://github.com/fraunhoferhhi/vvenc.git",
+      "revision": "7804c92e133983e5d81c88d0ae642201d73ee457",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/fraunhoferhhi/vvenc/tar.gz/7804c92e133983e5d81c88d0ae642201d73ee457",
+      "status": "RETAINED",
+      "filename": "50-vvenc--7804c92e133983e5d81c88d0ae642201d73ee457.tar.gz",
+      "license_files": [
+        {
+          "file": "LICENSE.txt",
+          "sha256": "88330a2cc59b9dd90674f8759900bc9c06e9efc8799dadda067609addefb49d1"
+        }
+      ],
+      "sha256": "d2e543507f18c5072521a9350756c18c8653fe28666bdee7f5298355bdce33e4",
+      "size": 2720389
+    },
+    {
+      "recipe_file": "scripts.d/50-whisper.sh",
+      "repo": "https://github.com/ggml-org/whisper.cpp.git",
+      "revision": "aba02defd6bb6ff5de63721c21e3456645c153e2",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/ggml-org/whisper.cpp/tar.gz/aba02defd6bb6ff5de63721c21e3456645c153e2",
+      "status": "RETAINED",
+      "filename": "50-whisper--aba02defd6bb6ff5de63721c21e3456645c153e2.tar.gz",
+      "license_files": [
+        {
+          "file": "LICENSE",
+          "sha256": "94f29bbed6a22c35b992c5c6ebf0e7c92f13b836b90f36f461c9cf2f0f1d010d"
+        }
+      ],
+      "sha256": "bcfdb3c3cbe74171067bee2d070acfd7f0dd147ea972a56cd98dd2a01ad3f332",
+      "size": 9986766
+    },
+    {
+      "recipe_file": "scripts.d/50-x264.sh",
+      "repo": "https://code.videolan.org/videolan/x264.git",
+      "revision": "0480cb05fa188d37ae87e8f4fd8f1aea3711f7ee",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://code.videolan.org/videolan/x264/-/archive/0480cb05fa188d37ae87e8f4fd8f1aea3711f7ee/x264-0480cb05fa188d37ae87e8f4fd8f1aea3711f7ee.tar.gz",
+      "status": "RETAINED",
+      "filename": "50-x264--0480cb05fa188d37ae87e8f4fd8f1aea3711f7ee.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "32b1062f7da84967e7019d01ab805935caa7ab7321a7ced0e30ebe75e5df1670"
+        }
+      ],
+      "sha256": "d0967a1348c85dfde363bb52610403be898171493100561efa0dd05d5fd1ae50",
+      "size": 1040667
+    },
+    {
+      "recipe_file": "scripts.d/50-x265.sh",
+      "repo": "https://github.com/Multicorewareinc/x265.git",
+      "revision": "217c4f9b88a06513afb7ea44d55b832d6618f80c",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/Multicorewareinc/x265/tar.gz/217c4f9b88a06513afb7ea44d55b832d6618f80c",
+      "status": "RETAINED",
+      "filename": "50-x265--217c4f9b88a06513afb7ea44d55b832d6618f80c.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "d8afb1bcc7a2cfc603683b168d6987ef0a48e59e0da3693bf55c5d33b67e2b49"
+        }
+      ],
+      "sha256": "2a1891ecaf5e09b1019d8637b9baa763a64a6879a9dea27ed1d56be9931f2e73",
+      "size": 2102401
+    },
+    {
+      "recipe_file": "scripts.d/50-xavs2.sh",
+      "repo": "https://github.com/pkuvcl/xavs2.git",
+      "revision": "eae1e8b9d12468059bdd7dee893508e470fa83d8",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/pkuvcl/xavs2/tar.gz/eae1e8b9d12468059bdd7dee893508e470fa83d8",
+      "status": "RETAINED",
+      "filename": "50-xavs2--eae1e8b9d12468059bdd7dee893508e470fa83d8.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "971f09fd8dedc915472df12845fb7c653563689672fb1a658e28004887ba4a07"
+        }
+      ],
+      "sha256": "48d69abb070e6326b8894fd88f61d696eb6d4626cd052fecfeb36b4d528c270c",
+      "size": 836207
+    },
+    {
+      "recipe_file": "scripts.d/50-xvid.sh",
+      "repo": "https://svn.xvid.org/trunk/xvidcore",
+      "revision": "",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "status": "BLOCKED",
+      "reason": "Mutable/non-commit source ref requires explicit resolution"
+    },
+    {
+      "recipe_file": "scripts.d/50-zimg.sh",
+      "repo": "https://github.com/sekrit-twc/zimg.git",
+      "revision": "67e0603271c080e22c8429856dd4a8a56587e61e",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/sekrit-twc/zimg/tar.gz/67e0603271c080e22c8429856dd4a8a56587e61e",
+      "status": "RETAINED",
+      "filename": "50-zimg--67e0603271c080e22c8429856dd4a8a56587e61e.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "7637386b5f81e8a719ca336233149005e5fa28b5e6054ea7b67de49355b0ad40"
+        }
+      ],
+      "sha256": "539495d51fcd8c7ef9b89a611454e0c1173d18e8d4e743efdef67c4aa7e40d4f",
+      "size": 294243
+    },
+    {
+      "recipe_file": "scripts.d/50-zvbi.sh",
+      "repo": "https://github.com/zapping-vbi/zvbi",
+      "revision": "34bb6f660c5c1bacd4a66cc7b22311e4ca3c1ab5",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "url": "https://codeload.github.com/zapping-vbi/zvbi/tar.gz/34bb6f660c5c1bacd4a66cc7b22311e4ca3c1ab5",
+      "status": "RETAINED",
+      "filename": "50-zvbi--34bb6f660c5c1bacd4a66cc7b22311e4ca3c1ab5.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING.md",
+          "sha256": "6d679539253897582d38fcd1eabfa670c01c0ece73d8cd3dc97869fcf723f106"
+        }
+      ],
+      "sha256": "5c671a9f052e41cf770372a263ee6258cb41f6c97ce884080f68b341ab81db1a",
+      "size": 944273
+    }
+  ],
+  "binary_correspondence_complete": false,
+  "controlled_build_complete": false,
+  "remaining_build_requirements": [
+    "pin toolchain/base images and all non-git/generated/vendored inputs",
+    "resolve blocked source inputs",
+    "build and validate natively on Windows and Linux",
+    "retain actual build logs/configuration/patches/notices and relinking material"
+  ]
+}

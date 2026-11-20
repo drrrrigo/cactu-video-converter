@@ -1,0 +1,12 @@
+[
+  {
+    "Id": "wayland-ivi-extension-protocol",
+    "Name": "Wayland IVI Extension Protocol",
+    "Version": "1.9.1",
+    "License": "MIT License",
+    "LicenseId": "MIT",
+    "QtUsage": "Used in the Qt Wayland Compositor, and the Qt Wayland platform plugin.",
+    "Homepage": "https://at.projects.genivi.org/wiki/display/WIE/Wayland+IVI+Extension+Home",
+    "source_file": "src/3rdparty/protocol/ivi/qt_attribution.json"
+  }
+]
