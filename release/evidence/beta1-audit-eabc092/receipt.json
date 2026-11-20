@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "stage": "AUDIT_ONLY_NOT_RC1",
+  "review_date": "2026-11-20",
+  "source_commit": "eabc0920b4d091cba3b6670b263182babca7e539",
+  "source_ci_run": 44810167677,
+  "audit_build_run": 44810167815,
+  "source_ci_jobs": {
+    "linux": 136544381259,
+    "windows": 136544381645
+  },
+  "audit_build_jobs": {
+    "linux": 136544525283,
+    "windows": 136544525811
+  },
+  "audit_report_artifacts": {
+    "linux": {
+      "id": 14664474874,
+      "zip_sha256": "d3e7dcbb333cb235c18e0b11d0a08118f2cbdd47304b6c9ea24ba457cfcf59af"
+    },
+    "windows": {
+      "id": 14667735030,
+      "zip_sha256": "d7c6449f3c97ef60f919e4cb80351e27726990eca9b28f77a9dd23dcf6877729"
+    }
+  },
+  "ci_tests": {
+    "discovered_per_platform": 157,
+    "passed_per_platform": 154,
+    "optional_physical_gpu_skipped_per_platform": 3
+  },
+  "local_hardware_tests": {
+    "discovered": 157,
+    "passed": 157,
+    "skipped": 0,
+    "duration_seconds": 61.796,
+    "python": "3.14.7",
+    "gpu": "AMD Radeon RX 7700 XT"
+  },
+  "build_results": {
+    "linux_appimage": "build/frozen conversion smoke PASS",
+    "windows_portable": "build/frozen conversion smoke PASS",
+    "windows_installer": "build/install/frozen conversion/uninstall smoke PASS",
+    "distribution_gate": "BLOCKED as intended: technical dependency/source review incomplete"
+  },
+  "release_binaries_uploaded": false,
+  "final_rc_generated": false,
+  "manual_results": "PENDING MANUAL",
+  "report_sha256": {
+    "linux/linux-x86_64-SHA256SUMS.txt": "772e4ab3873caa846472341a8c560b46c4ae99def8860c7a0c76af598b59b99d",
+    "linux/linux-x86_64-appimage-payload.json": "ccf1430ce6429f3b2afd62184595bd21c99f546554eec85ed83549bd054a960d",
+    "linux/linux-x86_64-appimage-smoke.json": "a86d3f3ddd7ae432026cbb03cb0c3665fad29bc8b558638a2aabff27577d33c5",
+    "linux/linux-x86_64-build.json": "755be709091ba73f657b425fe0c1ab35785f40d8c3be669339989ce60e50082e",
+    "linux/linux-x86_64-onedir-smoke.json": "a86d3f3ddd7ae432026cbb03cb0c3665fad29bc8b558638a2aabff27577d33c5",
+    "linux/linux-x86_64-runtime-evidence.json": "5018de30670426422e632fe53361c8ba2583a548f89a7fa16f84ee00f0dbb1de",
+    "windows/windows-x86_64-SHA256SUMS.txt": "e5cce3bd86ec89671514af43680208662c13cf1c833285e7112e8ebbdf6d8b35",
+    "windows/windows-x86_64-build.json": "79b0dcf41d22705fcf29d8cf7b9fff8e4f3e6acd53b9b2fd8d3f0081e0537029",
+    "windows/windows-x86_64-installed-payload.json": "411c6f716c9e0572a8f69ae429bb2460ee86e1abf84b7f79c4971a0dd6acc0c8",
+    "windows/windows-x86_64-onedir-smoke.json": "d9bdd133c765ec3cb030a181dce626ea2e655e74213b852171bc4a18e748e291",
+    "windows/windows-x86_64-portable-payload.json": "a2488e4076cafaff1d7a2051ecf3304e122d3da1983389d2549041f9edb8ebef",
+    "windows/windows-x86_64-portable-smoke.json": "d9bdd133c765ec3cb030a181dce626ea2e655e74213b852171bc4a18e748e291",
+    "windows/windows-x86_64-runtime-evidence.json": "e7fc7aee12291f2c8c2d623b3f2d76d8577a5b5eb5f8072e1712f919f3f36c1b"
+  }
+}

@@ -1,0 +1,2 @@
+# Preserve retained audit bytes (including native checksum line endings) exactly.
+release/evidence/beta1-audit-eabc092/** -text

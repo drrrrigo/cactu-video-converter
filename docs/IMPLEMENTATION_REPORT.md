@@ -857,7 +857,7 @@ tests and promote those exact bytes through the protected release workflow.
 
 ## Final beta.1 preparation — 2026-11-20
 
-**Preparation in progress; license/source closure BLOCKED; no final RC1 declared.**
+**Preparation stopped at the dependency/source/license gate; no final RC1 declared.**
 Authoritative status is docs/BETA1_RELEASE_CHECKLIST.md. The inspected public main
 was `da4d64db0567c94d0b11acfdb4e1de83022154b6`, clean and byte-identical to the supplied
 workspace. There was no public beta tag or GitHub release. The workspace's empty,
@@ -945,11 +945,17 @@ closed; no owner approval, beta tag, release or public binary upload is executed
 ### Tests, manual status and remaining gates
 
 Nine release-boundary regression tests were added; the full suite now contains
-157 tests. The prior local run of 155 tests passed in 61.848 seconds with the
-current pinned Python/FFmpeg and physical RX 7700 XT checks. The final additional
-technical-review gate test and focused release suite pass. Fresh complete native
-source/package runs are required for the preparation commit and recorded below
-when available; historical Nov 1 CI is not counted as current evidence.
+157 tests. The final local complete run passed **157/157, zero skips, in 61.796
+seconds** with CPython 3.14.7, current FFmpeg n61 and physical RX 7700 XT checks.
+Native Windows/Linux source run
+[44810167677](https://github.com/drrrrigo/cactu-video-converter/actions/runs/44810167677)
+passed on audited application/tooling commit
+`eabc0920b4d091cba3b6670b263182babca7e539`: 157 discovered, 154 pass and three
+optional physical-hardware skips per platform. Linux took 55.999 seconds and
+Windows 69.881 seconds. Ruff, branding and full source/history/privacy scans pass;
+the latter reported zero findings locally too. These are current Nov 20 results,
+not reused Nov 1 evidence. The documentation/evidence receipt follow-up also
+triggers the full source matrix; its exact SHA is its containing Git commit.
 
 Concrete Windows 11 installer/portable and CachyOS/second-Linux desktop guides are
 in MANUAL_TEST_WINDOWS_BETA1.md and MANUAL_TEST_LINUX_BETA1.md. They include bundled
@@ -966,3 +972,55 @@ SOURCE_DATE_EPOCH and input/hash locks improve repeatability; bit-identical outp
 across changing hosted images/OS library sets is not asserted without proof.
 No beta publication has occurred, and the owner must give a separate explicit
 publication instruction after every required gate actually passes.
+
+### Native packaging receipts and stop decision
+
+Audit build run
+[44810167815](https://github.com/drrrrigo/cactu-video-converter/actions/runs/44810167815)
+used the same clean eabc092 commit. Both native jobs passed staging, all tests,
+lint, package construction and frozen conversion smoke. Windows also passed
+silent install/convert/uninstall. The workflow's overall conclusion is **failure**:
+both jobs intentionally stopped at distribution eligibility with
+"technical dependency/source review is incomplete". Binary upload and publish
+steps were skipped. Only JSON/checksum text was retained, now copied into
+`release/evidence/beta1-audit-eabc092/` with a hashed report receipt so it does not
+depend solely on expiring Actions retention.
+
+Both native runtimes are CPython 3.14.7. PySide/Qt/Shiboken are 6.11.2,
+PyInstaller 6.16.0, psutil 7.2.2. Packaging uses Inno Setup 7.1.1 and
+appimagetool 1.9.1 with separately pinned type2-runtime fedfad51. The runner image
+versions were ubuntu22 `20261116.365.1` and win25-vs2026 `20261116.315.1`.
+
+| Audit output, not RC1 | SHA-256 |
+| --- | --- |
+| CactuVideoConverter-Setup-0.1.0-beta.1.exe | `6d34b7b6ea5351659f6e7487875fe034dc8de7a834958316d40bc3a591875c85` |
+| CactuVideoConverter-Portable-0.1.0-beta.1.zip | `ef3d970a2fd9fb72931650aa743476ba9146be0c5fc0900029eb0350e2327f82` |
+| CactuVideoConverter-0.1.0-beta.1-x86_64.AppImage, Ubuntu CI | `1b29aa4f44b8012e44cd787e176ca88ba5855785f8c807f530eb792babe54e86` |
+| Same AppImage filename, separate local CachyOS audit | `a4ab0be5670ea2df3ae8bd482eeaeef4965bc50f49a5639677d6f0c6f91d53dd` |
+
+The installed Windows inventory contains 272 files / 123 native files / 380
+embedded modules; portable contains 270 / 122 / 380; native Ubuntu AppImage
+contains 392 / 244 / 382. Outer installer/AppImage executable prefixes are hashed
+separately. Open review groups number 7, 6 and 20 respectively, with 47 unresolved
+file origins in each Windows payload and 101 in Ubuntu. No known driver-file
+pattern matches were found. This does not establish notice/source completeness.
+For example, Ubuntu includes glibc's libmvec.so.1 and Windows includes UCRT and
+OpenSSL files requiring exact origin/term review. See the license audit for exact
+paths, obligations and possible resolutions.
+
+The former primary-workspace Python 3.14.8 image was moved into ignored
+`dist/superseded-python3.14.8-2026-11-01/`; current `dist/candidate/` holds the
+rebuilt Python 3.14.7 **local audit**, not the different Ubuntu CI image. Neither
+is an approved RC. Windows CI binaries were not retained as a transferable RC set.
+Per-platform audit checksum fragments exist; no final RC SHA256SUMS.txt or RC1
+source commit is declared. Cross-host bit-identical reproducibility remains
+unproven despite locked inputs/epoch and recorded environments.
+
+**STOP: dependency/source/license closure remains BLOCKED.** Following the
+request's dependency stop condition, do not generate/promote RC1, seek blanket
+redistribution approval, or publish while these exact gaps remain. Source checks
+and audit packaging are verified; licensing is not ready. Manual Windows 11 and
+Linux desktop results remain pending. The guides are ready for use after an
+approved exact-artifact RC exists. All final owner approval boxes and machine
+license/publication flags remain unapproved. Remote tag/release lists were both
+empty on 2026-11-20; no public beta or binary release was created.

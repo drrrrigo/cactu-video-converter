@@ -1,0 +1,16 @@
+{
+  "version": "0.1.0-beta.1",
+  "python": "3.14.7",
+  "python_implementation": "CPython",
+  "frozen": true,
+  "ok": true,
+  "window_title": "Cactu Video Converter",
+  "ffmpeg": "ffmpeg version n9.0.2-61-gd59078794d-20261120 Copyright (c) 2000-2026 the FFmpeg developers",
+  "ffprobe": "ffprobe version n9.0.2-61-gd59078794d-20261120 Copyright (c) 2007-2026 the FFmpeg developers",
+  "runtime_bundled": true,
+  "video": "h264",
+  "audio": "aac",
+  "faststart": true,
+  "original_unchanged": true,
+  "output_sha256": "d10393a939ec2b1b22ad6ec992d73ca2d6a334c852e0fe39f2da95ee64e1aee0"
+}

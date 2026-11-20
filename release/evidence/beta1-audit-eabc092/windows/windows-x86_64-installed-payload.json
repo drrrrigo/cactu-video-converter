@@ -1,0 +1,5820 @@
+{
+  "schema_version": 1,
+  "payload_kind": "installed-windows",
+  "target": "windows-x86_64",
+  "artifact": {
+    "filename": "CactuVideoConverter-Setup-0.1.0-beta.1.exe",
+    "sha256": "6d34b7b6ea5351659f6e7487875fe034dc8de7a834958316d40bc3a591875c85"
+  },
+  "inventory_method": "walked actual extracted/installed payload; TOC/RECORD used only for origin attribution",
+  "technical_license_complete": false,
+  "final_rc": false,
+  "file_count": 272,
+  "file_types": {
+    "native": 123,
+    "data": 149
+  },
+  "components": [
+    {
+      "id": "component-1",
+      "project": "CPython",
+      "version": "3.14.7",
+      "license": "Python-2.0 AND included third-party terms",
+      "role": "interpreter/stdlib",
+      "corresponding_source": "https://www.python.org/ftp/python/3.14.7/Python-3.14.7.tar.xz",
+      "notice": "_internal/licenses/Python-3.14.7.txt",
+      "review_status": "REVIEW_REQUIRED"
+    },
+    {
+      "id": "component-2",
+      "project": "UNRESOLVED",
+      "version": "UNRESOLVED",
+      "license": "UNRESOLVED",
+      "role": "native-library",
+      "review_status": "BLOCKED",
+      "corresponding_source": "UNRESOLVED"
+    },
+    {
+      "id": "component-3",
+      "project": "Cactu Video Converter",
+      "version": "0.1.0-beta.1",
+      "license": "GPL-3.0-or-later",
+      "role": "application source/resources",
+      "corresponding_source": "https://github.com/drrrrigo/cactu-video-converter",
+      "notice": "_internal/LICENSE",
+      "review_status": "TECHNICAL_EVIDENCE"
+    },
+    {
+      "id": "component-4",
+      "project": "FFmpeg/FFprobe and statically linked dependencies",
+      "license": "GPL-3.0-or-later plus included dependency terms",
+      "role": "media executables",
+      "notice": "_internal/licenses/FFmpeg-LICENSE.txt",
+      "review_status": "BLOCKED",
+      "version": "n9.0.2-61-gd59078794d-20261120",
+      "corresponding_source": "https://github.com/FFmpeg-Builds/FFmpeg-Builds/tree/7f2a6b1050d302144de8366afa37a75e46f326aa"
+    },
+    {
+      "id": "component-5",
+      "project": "license-and-notice-material",
+      "version": "payload",
+      "license": "per-file terms",
+      "role": "notice",
+      "review_status": "NOTICE_MATERIAL"
+    },
+    {
+      "id": "component-6",
+      "license": "BSD-3-Clause",
+      "corresponding_source": "https://pypi.org/project/psutil/7.2.2/#files",
+      "notice": "_internal/licenses/psutil/psutil-7.2.2.dist-info/LICENSE",
+      "review_status": "TECHNICAL_EVIDENCE",
+      "role": "process control runtime",
+      "project": "psutil",
+      "version": "7.2.2",
+      "origin": "python-wheel"
+    },
+    {
+      "id": "component-7",
+      "license": "module terms and included third-party terms",
+      "corresponding_source": "https://download.qt.io/archive/qt/6.11/6.11.2/",
+      "notice": "_internal/licenses/qt-pyside-6.11.2",
+      "review_status": "REVIEW_REQUIRED",
+      "role": "actual Qt/binding files from Essentials wheel",
+      "project": "PySide6_Essentials",
+      "version": "6.11.2",
+      "origin": "python-wheel"
+    },
+    {
+      "id": "component-8",
+      "license": "module terms and included third-party terms",
+      "corresponding_source": "https://download.qt.io/archive/qt/6.11/6.11.2/",
+      "notice": "_internal/licenses/qt-pyside-6.11.2",
+      "review_status": "REVIEW_REQUIRED",
+      "role": "actual Qt files from Addons wheel; not the whole distribution",
+      "project": "PySide6_Addons",
+      "version": "6.11.2",
+      "origin": "python-wheel"
+    },
+    {
+      "id": "component-9",
+      "license": "GPL-3.0-only (proposed option; source review pending)",
+      "corresponding_source": "https://github.com/qtproject/pyside-pyside-setup/tree/24627cd36e1593adf22eb1f2950e4248e7bcc1ec",
+      "notice": "_internal/licenses/qt-pyside-6.11.2",
+      "review_status": "REVIEW_REQUIRED",
+      "role": "binding runtime",
+      "project": "shiboken6",
+      "version": "6.11.2",
+      "origin": "python-wheel"
+    },
+    {
+      "id": "component-10",
+      "project": "PyInstaller",
+      "version": "6.16.0",
+      "license": "GPL-2.0-or-later WITH bootloader exception (see COPYING.txt)",
+      "role": "bootloader plus embedded Cactu/Python module archive",
+      "corresponding_source": "https://github.com/pyinstaller/pyinstaller/tree/v6.16.0",
+      "notice": "_internal/licenses/PyInstaller/pyinstaller-6.16.0.dist-info/licenses/COPYING.txt",
+      "review_status": "TECHNICAL_EVIDENCE"
+    },
+    {
+      "id": "component-11",
+      "project": "Inno Setup",
+      "version": "7.1.1",
+      "license": "Inno Setup License and component terms",
+      "role": "installer/uninstaller code",
+      "corresponding_source": "https://github.com/jrsoftware/issrc/tree/2527da77ff7983514f535d19391a748c5d898336",
+      "notice": "_internal/licenses/packaging-runtimes",
+      "review_status": "REVIEW_REQUIRED"
+    },
+    {
+      "id": "component-12",
+      "license": "GPL-2.0-or-later WITH bootloader exception (see COPYING.txt)",
+      "corresponding_source": "https://github.com/pyinstaller/pyinstaller/tree/v6.16.0",
+      "notice": "_internal/licenses/PyInstaller/pyinstaller-6.16.0.dist-info/licenses/COPYING.txt",
+      "review_status": "TECHNICAL_EVIDENCE",
+      "project": "pyinstaller",
+      "version": "6.16.0",
+      "role": "bootloader/runtime hooks only; compiler is build-only",
+      "origin": "python-wheel"
+    },
+    {
+      "id": "component-13",
+      "project": "PyInstaller",
+      "version": "6.16.0",
+      "license": "GPL-2.0-or-later WITH bootloader exception (see COPYING.txt)",
+      "role": "bootloader/runtime hooks only; compiler is build-only",
+      "corresponding_source": "https://github.com/pyinstaller/pyinstaller/tree/v6.16.0",
+      "notice": "_internal/licenses/PyInstaller/pyinstaller-6.16.0.dist-info/licenses/COPYING.txt",
+      "review_status": "TECHNICAL_EVIDENCE"
+    }
+  ],
+  "files": [
+    {
+      "path": "_internal/_bz2.pyd",
+      "sha256": "b938073c85cf6b9fe80556d7899ed1901e5e60b7adea2832442376239fb36b36",
+      "size": 88288,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-1",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "python314.dll",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-stdio-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "KERNEL32.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/_ctypes.pyd",
+      "sha256": "408cc4e7a22ffa418ca52f5e13fe9268a3c50a2bc9de02b0530b555ef591bc5a",
+      "size": 142560,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-1",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "libffi-8.dll",
+          "ole32.dll",
+          "OLEAUT32.dll",
+          "KERNEL32.dll",
+          "python314.dll",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-stdio-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "api-ms-win-crt-string-l1-1-0.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/_decimal.pyd",
+      "sha256": "bc3a61685825ae37a4cd2b2b87fa27af12e01575c4f920788ea806e6781a2c79",
+      "size": 291552,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-1",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "python314.dll",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-convert-l1-1-0.dll",
+          "api-ms-win-crt-math-l1-1-0.dll",
+          "api-ms-win-crt-stdio-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-locale-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "KERNEL32.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/_hashlib.pyd",
+      "sha256": "5933ef5eda7c0bca0b3874a6e2c5f13b91b8f2cfc29bc46160df3212a1dbee79",
+      "size": 69344,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-1",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "libcrypto-3.dll",
+          "python314.dll",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "KERNEL32.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/_lzma.pyd",
+      "sha256": "d2abf8db7fb0cf6285663b177991691a41b37e215c3d71fd087a98d8ec1bee63",
+      "size": 160992,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-1",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "python314.dll",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "KERNEL32.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/_queue.pyd",
+      "sha256": "2fd8668f52b34d0e71ae48784bd2e7d35e5d99df6f641edb0fc279235a187c8e",
+      "size": 36576,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-1",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "python314.dll",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "KERNEL32.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/_socket.pyd",
+      "sha256": "02265dd0d0287f3ffd287ea5d8e3c918a5a056e8ef2c4529857f5e84ec9e2519",
+      "size": 87776,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-1",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "WS2_32.dll",
+          "IPHLPAPI.DLL",
+          "RPCRT4.dll",
+          "KERNEL32.dll",
+          "python314.dll",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "api-ms-win-crt-stdio-l1-1-0.dll",
+          "api-ms-win-crt-string-l1-1-0.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/_ssl.pyd",
+      "sha256": "4cfb154c7cc525d57020c0e64f2dd876a78b46cd38419446392478de6b7b13b8",
+      "size": 190688,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-1",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "WS2_32.dll",
+          "CRYPT32.dll",
+          "libcrypto-3.dll",
+          "libssl-3.dll",
+          "KERNEL32.dll",
+          "python314.dll",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-stdio-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "api-ms-win-crt-string-l1-1-0.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/_uuid.pyd",
+      "sha256": "fbfd7fe8583b346ba20b174b2510c0830237f5092bdf9fc26da9d6b25b018385",
+      "size": 28384,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-1",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "RPCRT4.dll",
+          "python314.dll",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "KERNEL32.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/_wmi.pyd",
+      "sha256": "b6fd41f079da0c0054829855360e88b8b762f5c42bb474c2fa02eae367839ad2",
+      "size": 40160,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-1",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "PROPSYS.dll",
+          "OLEAUT32.dll",
+          "KERNEL32.dll",
+          "python314.dll",
+          "VCRUNTIME140_1.dll",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/_zstd.pyd",
+      "sha256": "33c6eca99470c3eb9d776b617c550ad41b002a668336f062a9ab7be677a7409a",
+      "size": 503520,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-1",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "KERNEL32.dll",
+          "python314.dll",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "api-ms-win-crt-time-l1-1-0.dll",
+          "api-ms-win-crt-stdio-l1-1-0.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/api-ms-win-core-console-l1-1-0.dll",
+      "sha256": "88ace577a9c51061cb7d1a36babbbefa48212fadc838ffde98fdfff60de18386",
+      "size": 22072,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-2",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": []
+      }
+    },
+    {
+      "path": "_internal/api-ms-win-core-datetime-l1-1-0.dll",
+      "sha256": "1bd81dfd19204b44662510d9054852fb77c9f25c1088d647881c9b976cc16818",
+      "size": 22056,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-2",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": []
+      }
+    },
+    {
+      "path": "_internal/api-ms-win-core-debug-l1-1-0.dll",
+      "sha256": "591358eb4d1531e9563ee0813e4301c552ce364c912ce684d16576eabf195dc3",
+      "size": 21944,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-2",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": []
+      }
+    },
+    {
+      "path": "_internal/api-ms-win-core-errorhandling-l1-1-0.dll",
+      "sha256": "d56ce7b1cd76108ad6c137326ec694a14c99d48c3d7b0ace8c3ff4d9bcee3ce8",
+      "size": 22096,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-2",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": []
+      }
+    },
+    {
+      "path": "_internal/api-ms-win-core-fibers-l1-1-0.dll",
+      "sha256": "91d249d7bc0e38ef6bcb17158b1fdc6dd8888dc086615c9b8b750b87e52a5fb3",
+      "size": 22072,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-2",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": []
+      }
+    },
+    {
+      "path": "_internal/api-ms-win-core-fibers-l1-1-1.dll",
+      "sha256": "fc9d86cec621383eab636ebc87ddd3f5c19a3cb2a33d97be112c051d0b275429",
+      "size": 22072,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-2",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": []
+      }
+    },
+    {
+      "path": "_internal/api-ms-win-core-file-l1-1-0.dll",
+      "sha256": "1ca895aba4e7435563a6b43e85eba67a0f8c74aa6a6a94d0fc48fa35535e2585",
+      "size": 26152,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-2",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": []
+      }
+    },
+    {
+      "path": "_internal/api-ms-win-core-file-l1-2-0.dll",
+      "sha256": "4cadbc0c39da7c6722206fdcebd670abe5b8d261e7b041dd94f9397a89d1990d",
+      "size": 22056,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-2",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": []
+      }
+    },
+    {
+      "path": "_internal/api-ms-win-core-file-l2-1-0.dll",
+      "sha256": "93c624b366ba16c643fc8933070a26f03b073ad0cf7f80173266d67536c61989",
+      "size": 21960,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-2",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": []
+      }
+    },
+    {
+      "path": "_internal/api-ms-win-core-handle-l1-1-0.dll",
+      "sha256": "39095f59c41d76ec81bb2723d646fde4c148e7cc3402f4980d2ade95cb9c84f9",
+      "size": 21944,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-2",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": []
+      }
+    },
+    {
+      "path": "_internal/api-ms-win-core-heap-l1-1-0.dll",
+      "sha256": "8f105771b236dbcb859de271f0a6822ce1cb79c36988dd42c9e3f6f55c5f7eb9",
+      "size": 22072,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-2",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": []
+      }
+    },
+    {
+      "path": "_internal/api-ms-win-core-interlocked-l1-1-0.dll",
+      "sha256": "53b25e753ca785bf8b695d89dde5818a318890211dc992a89146f16658f0b606",
+      "size": 22072,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-2",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": []
+      }
+    },
+    {
+      "path": "_internal/api-ms-win-core-kernel32-legacy-l1-1-1.dll",
+      "sha256": "a9b13a1cd1b8c19b0c6b4afcd5bb0dd29c0e2288231ac9e6db8510094ce68ba6",
+      "size": 22080,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-2",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": []
+      }
+    },
+    {
+      "path": "_internal/api-ms-win-core-libraryloader-l1-1-0.dll",
+      "sha256": "7f39ba298b41e4963047341288cab36b6a241835ee11ba4ad70f44dacd40906c",
+      "size": 22056,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-2",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": []
+      }
+    },
+    {
+      "path": "_internal/api-ms-win-core-localization-l1-2-0.dll",
+      "sha256": "6ee44dd0d8510dc024c9f7c79b1b9fa88c987b26b6beb6653ddd11751c34e5dc",
+      "size": 22080,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-2",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": []
+      }
+    },
+    {
+      "path": "_internal/api-ms-win-core-memory-l1-1-0.dll",
+      "sha256": "0512a35316ec9180437f86696a84c5c06a7e4e82e050055a656e5bf9fca206f9",
+      "size": 22056,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-2",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": []
+      }
+    },
+    {
+      "path": "_internal/api-ms-win-core-namedpipe-l1-1-0.dll",
+      "sha256": "c05f1fffe3b5a2738ea54ce9485cca026fb9635f982626fba1e1dcc531897273",
+      "size": 22096,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-2",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": []
+      }
+    },
+    {
+      "path": "_internal/api-ms-win-core-processenvironment-l1-1-0.dll",
+      "sha256": "c4eca98c3c67b6395d5b005b00ac1eb0318b86b23aa71035a44c2b1602befba9",
+      "size": 21968,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-2",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": []
+      }
+    },
+    {
+      "path": "_internal/api-ms-win-core-processthreads-l1-1-0.dll",
+      "sha256": "5ccb89e93d67bc3288d4e84649c5346e66e15e3d7cd65d989daf3f4cb584be9a",
+      "size": 22096,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-2",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": []
+      }
+    },
+    {
+      "path": "_internal/api-ms-win-core-processthreads-l1-1-1.dll",
+      "sha256": "4ad565a8ba3ef0ea8ab87221ad11f83ee0bc844ce236607958406663b407333e",
+      "size": 22072,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-2",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": []
+      }
+    },
+    {
+      "path": "_internal/api-ms-win-core-profile-l1-1-0.dll",
+      "sha256": "7809160932f44e59b021699f5bc68799eb7293ee1fa926d6fcca3c3445302e61",
+      "size": 22080,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-2",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": []
+      }
+    },
+    {
+      "path": "_internal/api-ms-win-core-rtlsupport-l1-1-0.dll",
+      "sha256": "9dc1e91e71c7c054854bd1487cb4e6946d82c9f463430f1c4e8d1471005172b1",
+      "size": 21960,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-2",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": []
+      }
+    },
+    {
+      "path": "_internal/api-ms-win-core-string-l1-1-0.dll",
+      "sha256": "60fc31d2a0c634412f529dba76af3b9bf991352877c6dae528186d3935704cfd",
+      "size": 22056,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-2",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": []
+      }
+    },
+    {
+      "path": "_internal/api-ms-win-core-synch-l1-1-0.dll",
+      "sha256": "3a72b4f29f39a265d32ad12f0ce15dbf60129c840e10d84d427829ede45e78ad",
+      "size": 22056,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-2",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": []
+      }
+    },
+    {
+      "path": "_internal/api-ms-win-core-synch-l1-2-0.dll",
+      "sha256": "efc1e4460984a73cf47a3def033af1c8f3b1dbc1a56cd27781d3aacf3e3330cb",
+      "size": 22080,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-2",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": []
+      }
+    },
+    {
+      "path": "_internal/api-ms-win-core-sysinfo-l1-1-0.dll",
+      "sha256": "b203d862ddef1dd62bf623fc866c7f7a9c317c1c2ae30d1f52cb41f955b5698e",
+      "size": 22072,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-2",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": []
+      }
+    },
+    {
+      "path": "_internal/api-ms-win-core-sysinfo-l1-2-0.dll",
+      "sha256": "2703635d835396afd0f138d7c73751afe7e33a24f4225d08c1690b0a371932c0",
+      "size": 22080,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-2",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": []
+      }
+    },
+    {
+      "path": "_internal/api-ms-win-core-timezone-l1-1-0.dll",
+      "sha256": "33f4fddc181066fce06b2227bded813f95e94ed1f3d785e982c6b6b56c510c57",
+      "size": 22056,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-2",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": []
+      }
+    },
+    {
+      "path": "_internal/api-ms-win-core-util-l1-1-0.dll",
+      "sha256": "6eda016742a6171205a387a14b3c0b331841567740376f56768f8c151724207d",
+      "size": 21944,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-2",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": []
+      }
+    },
+    {
+      "path": "_internal/api-ms-win-crt-conio-l1-1-0.dll",
+      "sha256": "b762061b688aae679afe788904d2c9970f74a7dac98f3b42463d08f25e483d3f",
+      "size": 22056,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-2",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": []
+      }
+    },
+    {
+      "path": "_internal/api-ms-win-crt-convert-l1-1-0.dll",
+      "sha256": "ebb2ae5535a64f65daeab8235585114fc9dd2cf1a49f5852d446250b998b6ae4",
+      "size": 26056,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-2",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": []
+      }
+    },
+    {
+      "path": "_internal/api-ms-win-crt-environment-l1-1-0.dll",
+      "sha256": "17d63275d00bdd8670422b95bd264c532998e0a1b041079e54fce4b6b7a55819",
+      "size": 22080,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-2",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": []
+      }
+    },
+    {
+      "path": "_internal/api-ms-win-crt-filesystem-l1-1-0.dll",
+      "sha256": "9a9e2a65a281644e368d0f272b95ba5f6b445d1c35910d06056c5ebeb77402db",
+      "size": 22056,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-2",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": []
+      }
+    },
+    {
+      "path": "_internal/api-ms-win-crt-heap-l1-1-0.dll",
+      "sha256": "bab9ac3ec83e380ae51e4295ef3bf2c738627812d3a49d1e713661abbc8dc57a",
+      "size": 22096,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-2",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": []
+      }
+    },
+    {
+      "path": "_internal/api-ms-win-crt-locale-l1-1-0.dll",
+      "sha256": "bd14c67ea28e21d6257ad780a37122c9b5773f69e693f5db6bffaee4d839526e",
+      "size": 22080,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-2",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": []
+      }
+    },
+    {
+      "path": "_internal/api-ms-win-crt-math-l1-1-0.dll",
+      "sha256": "606d66d82db562ea7979179d06486a0f94d079941d26b80a1e2c49d29959df6f",
+      "size": 30248,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-2",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": []
+      }
+    },
+    {
+      "path": "_internal/api-ms-win-crt-multibyte-l1-1-0.dll",
+      "sha256": "95f49efbe8107786733fa7c474025cf3fee0ac632f240367b296c736d06572aa",
+      "size": 30248,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-2",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": []
+      }
+    },
+    {
+      "path": "_internal/api-ms-win-crt-private-l1-1-0.dll",
+      "sha256": "1bc82bed6143d2bf1b6b08a7809f4a5e29317d6fddd338a7da3c0223522e4bbf",
+      "size": 75328,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-2",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": []
+      }
+    },
+    {
+      "path": "_internal/api-ms-win-crt-process-l1-1-0.dll",
+      "sha256": "f6156b1020380ec4f0e48577ebedaaef5fb1ab1f337d8b4e72e6a33a7567a9cc",
+      "size": 22096,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-2",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": []
+      }
+    },
+    {
+      "path": "_internal/api-ms-win-crt-runtime-l1-1-0.dll",
+      "sha256": "c5902934d026d7e15fbe9917d474f3322846a41a25e66f4b2b1f758801879f4b",
+      "size": 26152,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-2",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": []
+      }
+    },
+    {
+      "path": "_internal/api-ms-win-crt-stdio-l1-1-0.dll",
+      "sha256": "a9c5a153d8c0286f9b41a2b1c65854ad9e6471b8755b7de87bae4470e60bcab6",
+      "size": 26168,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-2",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": []
+      }
+    },
+    {
+      "path": "_internal/api-ms-win-crt-string-l1-1-0.dll",
+      "sha256": "25b8f83a7767211b11132775a0e27a45aa4ec8ab4e6572599f9c172ae3606b40",
+      "size": 26176,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-2",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": []
+      }
+    },
+    {
+      "path": "_internal/api-ms-win-crt-time-l1-1-0.dll",
+      "sha256": "7c7f6393f06de11750adb09cc5698ae55cd9fb27b2e51e207286feb1b5b2b156",
+      "size": 22096,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-2",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": []
+      }
+    },
+    {
+      "path": "_internal/api-ms-win-crt-utility-l1-1-0.dll",
+      "sha256": "d8ba5f17b9ffcbf3aeaf3fa1da226832d2fa90f81acce0cd669464e76ce434ac",
+      "size": 21952,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-2",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": []
+      }
+    },
+    {
+      "path": "_internal/assets/branding/cactu-video-converter-128.png",
+      "sha256": "fbcf10f386c6586c055be3d78c94ab7b3f33dcb37070c2b4c2a24628a2c9d2fc",
+      "size": 2954,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-3",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/assets/branding/cactu-video-converter-16.png",
+      "sha256": "37f1b806c4487726a341dcc36c3358df7fb7d1cfda2afb7add183255e8ee4000",
+      "size": 491,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-3",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/assets/branding/cactu-video-converter-24.png",
+      "sha256": "21cb217e4f02032b1c4f17f51dab22e9eb2ac60ddee666d7bc5f5142bf3060f1",
+      "size": 729,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-3",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/assets/branding/cactu-video-converter-256.png",
+      "sha256": "43d2233bbb519ad8403b09890383908d4205ebf4e84d22a9a4ba0156584806eb",
+      "size": 6235,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-3",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/assets/branding/cactu-video-converter-32.png",
+      "sha256": "6666dfb4f1d16147ce30f7730bc1a3ef48a493f8ca3bb59af4f66f337e53fe18",
+      "size": 900,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-3",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/assets/branding/cactu-video-converter-48.png",
+      "sha256": "b2608c4d8890ab1c9916861df20363518eaf34cd52d6700cc8cba5d057aa3d46",
+      "size": 1240,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-3",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/assets/branding/cactu-video-converter-512.png",
+      "sha256": "83862f0028ac4d0f5ead3100c9d4839f4ef4be56696ca0790f76b5832275e892",
+      "size": 14075,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-3",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/assets/branding/cactu-video-converter-64.png",
+      "sha256": "b3202c9d3d017d84209834cde0aa3b77883e9d4877f6f42e3d5c9ec574828f49",
+      "size": 1554,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-3",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/assets/branding/cactu-video-converter.ico",
+      "sha256": "05ff81efec09bbb3049fa1c8eb0726e27c5a670f6faff9256fc3eade3e33b652",
+      "size": 14221,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-3",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/assets/branding/cactu-video-converter.png",
+      "sha256": "43d2233bbb519ad8403b09890383908d4205ebf4e84d22a9a4ba0156584806eb",
+      "size": 6235,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-3",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/assets/branding/cactu-video-converter.svg",
+      "sha256": "68008eef86ba7da7c705fd7351aa51ffe11740739a78b11aa660107567c9a2ed",
+      "size": 589,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-3",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/assets/branding/check.svg",
+      "sha256": "8780a59c941740ef38a173cb64383de9231be92625f14f4240f0f6a19b313646",
+      "size": 210,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-3",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/assets/branding/README.md",
+      "sha256": "23d56078b731420021a7029534b3bafa3b8ee47339bad58ac1f1a85cf0d0607d",
+      "size": 836,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-3",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/base_library.zip",
+      "sha256": "3696f5046a3b2f8cd6d78c4a32b9a20c5cbcb48975f639a6fd143b98bf04e0a3",
+      "size": 1394319,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-1",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/ffmpeg/ffmpeg.exe",
+      "sha256": "aaa365367eec124a950e8042813686609947d7de8d535a9280594f14df0af4ea",
+      "size": 168280064,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-4",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "ADVAPI32.dll",
+          "AVRT.dll",
+          "bcrypt.dll",
+          "CFGMGR32.dll",
+          "CRYPT32.dll",
+          "d2d1.dll",
+          "DNSAPI.dll",
+          "DWrite.dll",
+          "GDI32.dll",
+          "IPHLPAPI.DLL",
+          "KERNEL32.dll",
+          "MSIMG32.dll",
+          "api-ms-win-crt-conio-l1-1-0.dll",
+          "api-ms-win-crt-convert-l1-1-0.dll",
+          "api-ms-win-crt-environment-l1-1-0.dll",
+          "api-ms-win-crt-filesystem-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-locale-l1-1-0.dll",
+          "api-ms-win-crt-math-l1-1-0.dll",
+          "api-ms-win-crt-multibyte-l1-1-0.dll",
+          "api-ms-win-crt-private-l1-1-0.dll",
+          "api-ms-win-crt-process-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "api-ms-win-crt-stdio-l1-1-0.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-time-l1-1-0.dll",
+          "api-ms-win-crt-utility-l1-1-0.dll",
+          "ncrypt.dll",
+          "ntdll.dll",
+          "ole32.dll",
+          "OLEAUT32.dll",
+          "RPCRT4.dll",
+          "Secur32.dll",
+          "SHELL32.dll",
+          "SHLWAPI.dll",
+          "api-ms-win-core-synch-l1-2-0.dll",
+          "USER32.dll",
+          "USERENV.dll",
+          "USP10.dll",
+          "AVICAP32.dll",
+          "WINMM.dll",
+          "WS2_32.dll",
+          "bcryptprimitives.dll",
+          "ntdll.dll",
+          "ws2_32.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/ffmpeg/ffprobe.exe",
+      "sha256": "5e79762c9ed09e120a6c449fd9642b6fc75fac613b7682447700f8c65216fb5c",
+      "size": 168080384,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-4",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "ADVAPI32.dll",
+          "AVRT.dll",
+          "bcrypt.dll",
+          "CFGMGR32.dll",
+          "CRYPT32.dll",
+          "d2d1.dll",
+          "DNSAPI.dll",
+          "DWrite.dll",
+          "GDI32.dll",
+          "IPHLPAPI.DLL",
+          "KERNEL32.dll",
+          "MSIMG32.dll",
+          "api-ms-win-crt-conio-l1-1-0.dll",
+          "api-ms-win-crt-convert-l1-1-0.dll",
+          "api-ms-win-crt-environment-l1-1-0.dll",
+          "api-ms-win-crt-filesystem-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-locale-l1-1-0.dll",
+          "api-ms-win-crt-math-l1-1-0.dll",
+          "api-ms-win-crt-multibyte-l1-1-0.dll",
+          "api-ms-win-crt-private-l1-1-0.dll",
+          "api-ms-win-crt-process-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "api-ms-win-crt-stdio-l1-1-0.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-time-l1-1-0.dll",
+          "api-ms-win-crt-utility-l1-1-0.dll",
+          "ncrypt.dll",
+          "ntdll.dll",
+          "ole32.dll",
+          "OLEAUT32.dll",
+          "RPCRT4.dll",
+          "Secur32.dll",
+          "SHELL32.dll",
+          "SHLWAPI.dll",
+          "api-ms-win-core-synch-l1-2-0.dll",
+          "USER32.dll",
+          "USERENV.dll",
+          "USP10.dll",
+          "AVICAP32.dll",
+          "WINMM.dll",
+          "WS2_32.dll",
+          "bcryptprimitives.dll",
+          "ntdll.dll",
+          "ws2_32.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/libcrypto-3-x64.dll",
+      "sha256": "d51f2b081e5ac0f94c2bf15650a6b55cf48da1de8c313c9f90003d9ed08ccc9e",
+      "size": 6946448,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-2",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "WS2_32.dll",
+          "ADVAPI32.dll",
+          "CRYPT32.dll",
+          "USER32.dll",
+          "KERNEL32.dll",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-stdio-l1-1-0.dll",
+          "api-ms-win-crt-convert-l1-1-0.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-time-l1-1-0.dll",
+          "api-ms-win-crt-utility-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "api-ms-win-crt-filesystem-l1-1-0.dll",
+          "api-ms-win-crt-environment-l1-1-0.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/libcrypto-3.dll",
+      "sha256": "53c529145339fb042a3dcd3a09c2d7753204f8b4fc79d99e0d31e69a33985958",
+      "size": 6242552,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-1",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "WS2_32.dll",
+          "ADVAPI32.dll",
+          "CRYPT32.dll",
+          "USER32.dll",
+          "KERNEL32.dll",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-stdio-l1-1-0.dll",
+          "api-ms-win-crt-convert-l1-1-0.dll",
+          "api-ms-win-crt-time-l1-1-0.dll",
+          "api-ms-win-crt-utility-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "api-ms-win-crt-filesystem-l1-1-0.dll",
+          "api-ms-win-crt-environment-l1-1-0.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/libffi-8.dll",
+      "sha256": "eff52743773eb550fcc6ce3efc37c85724502233b6b002a35496d828bd7b280a",
+      "size": 39696,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-1",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "KERNEL32.dll",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/libssl-3-x64.dll",
+      "sha256": "a2cb46897a5365a740c8f898bf1b9119ba23f01807ad0ba1efb69a9997b43ba0",
+      "size": 1296520,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-2",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "libcrypto-3-x64.dll",
+          "WS2_32.dll",
+          "KERNEL32.dll",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-environment-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "api-ms-win-crt-time-l1-1-0.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-utility-l1-1-0.dll",
+          "api-ms-win-crt-filesystem-l1-1-0.dll",
+          "api-ms-win-crt-convert-l1-1-0.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/libssl-3.dll",
+      "sha256": "b17a87979862d19241edc4318f967e24c3ec356ed6c2368f561179fab2311001",
+      "size": 1329912,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-1",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "libcrypto-3.dll",
+          "WS2_32.dll",
+          "KERNEL32.dll",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-environment-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "api-ms-win-crt-time-l1-1-0.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-utility-l1-1-0.dll",
+          "api-ms-win-crt-filesystem-l1-1-0.dll",
+          "api-ms-win-crt-convert-l1-1-0.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/LICENSE",
+      "sha256": "230184f60bae2feaf244f10a8bac053c8ff33a183bcc365b4d8b876d2b7f4809",
+      "size": 35823,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-5",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/licenses/altgraph/altgraph-0.17.4.dist-info/LICENSE",
+      "sha256": "6c194d6db0c64d45535d10c95142b9b0cda7b7dcc7f1ddee302b3d536f3dbe46",
+      "size": 1002,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-5",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/licenses/Cactu-GPL-3.0.txt",
+      "sha256": "230184f60bae2feaf244f10a8bac053c8ff33a183bcc365b4d8b876d2b7f4809",
+      "size": 35823,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-5",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/licenses/component-inventory.json",
+      "sha256": "847797661751db4433ec5c38577025c7765e5c5df81653718d20bd665979eb6a",
+      "size": 4324,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-5",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/licenses/FFmpeg-LICENSE.txt",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "size": 35147,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-5",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/licenses/packaging/packaging-25.0.dist-info/licenses/LICENSE",
+      "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+      "size": 197,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-5",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/licenses/packaging/packaging-25.0.dist-info/licenses/LICENSE.APACHE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "size": 10174,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-5",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/licenses/packaging/packaging-25.0.dist-info/licenses/LICENSE.BSD",
+      "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+      "size": 1344,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-5",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/licenses/packaging-runtimes/AppImage-runtime-build.sh",
+      "sha256": "0a2c408a6a3da3dd1265ae09688e0e5b60b2867dac3fa0423b7456807ff8c7f3",
+      "size": 1862,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-5",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/licenses/packaging-runtimes/AppImage-runtime-LICENSE.txt",
+      "sha256": "ccf7d4bc13667db431b8c1812eafd05e5fc6bc781efa7f315400a30edfdb729d",
+      "size": 1714,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-5",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/licenses/packaging-runtimes/appimagetool-1.9.1-LICENSE.txt",
+      "sha256": "5c7139831f7acc3157b91efe5e7768bd3480ad2e0a31a2b467bba9a52694c60d",
+      "size": 1541,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-5",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/licenses/packaging-runtimes/Inno-Setup-7.1.1-LICENSE.txt",
+      "sha256": "2e5346868c2a18434489824e11d65c3031620f792fefc415d05f19cd441abf5c",
+      "size": 1521,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-5",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/licenses/packaging-runtimes/LGPL-2.1.txt",
+      "sha256": "b14c366c41cc9f62dc20ec1a0885f278cf9681076d98027012a910fca5e89639",
+      "size": 26920,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-5",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/licenses/packaging-runtimes/libfuse-3.15.0/GPL2.txt",
+      "sha256": "189b1af95d661151e054cea10c91b3d754e4de4d3fecfb074c1fb29476f7167b",
+      "size": 18431,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-5",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/licenses/packaging-runtimes/libfuse-3.15.0/LGPL2.txt",
+      "sha256": "1e7e6bae5a5bde32f1ae5a7c37a082d1ab03cf89354f7f936ac40be9e39a6531",
+      "size": 27032,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-5",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/licenses/packaging-runtimes/libfuse-3.15.0/LICENSE",
+      "sha256": "1046b64d605e5e24f614e90b2ea2cdf3be9f3a3f7fb54f3fd645664af69397f4",
+      "size": 448,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-5",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/licenses/packaging-runtimes/libfuse-3.15.0-LICENSE.txt",
+      "sha256": "1046b64d605e5e24f614e90b2ea2cdf3be9f3a3f7fb54f3fd645664af69397f4",
+      "size": 448,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-5",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/licenses/packaging-runtimes/provenance.json",
+      "sha256": "2ebb84a64e6252a4f919b350e48b7868e66a8a1be53c55852fc322eb70804418",
+      "size": 1679,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-5",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/licenses/packaging-runtimes/PyInstaller-6.16.0-COPYING.txt",
+      "sha256": "0272fb1ecee668bf0cc359ef4cd5d5ca1551b686be0abc27a660f68a3cb85ae5",
+      "size": 32774,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-5",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/licenses/packaging-runtimes/squashfuse-0.5.2-LICENSE.txt",
+      "sha256": "e197778c5e5f9114f91adac0a7f9a533e17ab7d4e7234b4bccb4599827b941e7",
+      "size": 1623,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-5",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/licenses/psutil/psutil-7.2.2.dist-info/LICENSE",
+      "sha256": "c7adc4d5d1337a548b967421f1fbe258b93033a0417708fd6f4e38f8ecbceb80",
+      "size": 1577,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-5",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/licenses/PyInstaller/pyinstaller-6.16.0.dist-info/licenses/COPYING.txt",
+      "sha256": "dcf75fdb959db1e3b41c0f8505069d2ece781b5ec6b3d0a4d30975cfc6580245",
+      "size": 32138,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-5",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/licenses/pyinstaller-hooks-contrib/pyinstaller_hooks_contrib-2025.9.dist-info/licenses/LICENSE",
+      "sha256": "91d0baaff00773038e72c0a1fc9d5d2d38706b7a2b9c04f34296608f931b9cd0",
+      "size": 27666,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-5",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/licenses/PySide6/pyside6-6.11.2.dist-info/licenses/LicenseRef-Qt-Commercial.txt",
+      "sha256": "4f54763ac0fe2abd8f7f8d8fe370a94a08ebf84786aa0b91045bd6628deb08a3",
+      "size": 470,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-5",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/licenses/PySide6_Addons/pyside6_addons-6.11.2.dist-info/licenses/LicenseRef-Qt-Commercial.txt",
+      "sha256": "4f54763ac0fe2abd8f7f8d8fe370a94a08ebf84786aa0b91045bd6628deb08a3",
+      "size": 470,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-5",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/licenses/PySide6_Essentials/pyside6_essentials-6.11.2.dist-info/licenses/LicenseRef-Qt-Commercial.txt",
+      "sha256": "4f54763ac0fe2abd8f7f8d8fe370a94a08ebf84786aa0b91045bd6628deb08a3",
+      "size": 470,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-5",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/licenses/Python-3.14.7.txt",
+      "sha256": "db693914a7f6d42f1d3e09c10eda1482e5d94ed4c70a769476ae8d722a9be1ce",
+      "size": 14081,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-5",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/licenses/qt-pyside-6.11.2/Apache-2.0.txt",
+      "sha256": "870e20c217d15bcfcbe53d7c5867cd8fac44a4ca0b41fc1eb843557e16063eba",
+      "size": 10459,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-5",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/licenses/qt-pyside-6.11.2/BSD-3-Clause.txt",
+      "sha256": "a321a6283746a381899921d2d75ac4f6bf2d52df29a1b560a6f297cd706a8f80",
+      "size": 1487,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-5",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/licenses/qt-pyside-6.11.2/GFDL-1.3-no-invariants-only.txt",
+      "sha256": "ad59b1b4ad0fb244d232a50c638d398784ea8668e963470da8d342263afb9ee7",
+      "size": 23406,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-5",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/licenses/qt-pyside-6.11.2/GPL-2.0-only.txt",
+      "sha256": "189b1af95d661151e054cea10c91b3d754e4de4d3fecfb074c1fb29476f7167b",
+      "size": 18431,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-5",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/licenses/qt-pyside-6.11.2/GPL-3.0-only.txt",
+      "sha256": "0b383d5a63da644f628d99c33976ea6487ed89aaa59f0b3257992deac1171e6b",
+      "size": 35821,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-5",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/licenses/qt-pyside-6.11.2/LGPL-3.0-only.txt",
+      "sha256": "ea7d049c7705dc13afc202dd18e1827f3484f8212fd3fa7b82fc4a0c363432c9",
+      "size": 7816,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-5",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/licenses/qt-pyside-6.11.2/LicenseRef-Qt-Commercial.txt",
+      "sha256": "4f54763ac0fe2abd8f7f8d8fe370a94a08ebf84786aa0b91045bd6628deb08a3",
+      "size": 470,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-5",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/licenses/qt-pyside-6.11.2/provenance.json",
+      "sha256": "30b9d0ce27c9092a9765585b4970a651e7d83bd3ae32f30c4ae7dec5b424a2b1",
+      "size": 2560,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-5",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/licenses/qt-pyside-6.11.2/Qt-GPL-exception-1.0.txt",
+      "sha256": "c7daae6dbde7cbc69a4873db880eb49e91acf41030e5d2653ca5d36f6c608d49",
+      "size": 987,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-5",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/licenses/shiboken6/shiboken6-6.11.2.dist-info/licenses/LicenseRef-Qt-Commercial.txt",
+      "sha256": "4f54763ac0fe2abd8f7f8d8fe370a94a08ebf84786aa0b91045bd6628deb08a3",
+      "size": 470,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-5",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/psutil/_psutil_windows.pyd",
+      "sha256": "0035450801bd7d938e9e146c5ec28e619cb5a5f4a18cdc53ac7e9734c7f94f78",
+      "size": 70656,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-6",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "ADVAPI32.dll",
+          "KERNEL32.dll",
+          "pdh.dll",
+          "POWRPROF.dll",
+          "PSAPI.DLL",
+          "SHELL32.dll",
+          "WS2_32.dll",
+          "python3.dll",
+          "IPHLPAPI.DLL",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-environment-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "api-ms-win-crt-stdio-l1-1-0.dll",
+          "api-ms-win-crt-string-l1-1-0.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/PySide6/MSVCP140.dll",
+      "sha256": "4c667b706893593812cd111b369ba6a77f54d1f1b1ae87cf3bf37692663cfba2",
+      "size": 549176,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "VCRUNTIME140.dll",
+          "VCRUNTIME140_1.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-locale-l1-1-0.dll",
+          "api-ms-win-crt-stdio-l1-1-0.dll",
+          "api-ms-win-crt-filesystem-l1-1-0.dll",
+          "api-ms-win-crt-time-l1-1-0.dll",
+          "api-ms-win-crt-environment-l1-1-0.dll",
+          "api-ms-win-crt-math-l1-1-0.dll",
+          "api-ms-win-crt-convert-l1-1-0.dll",
+          "api-ms-win-crt-utility-l1-1-0.dll",
+          "KERNEL32.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/PySide6/MSVCP140_1.dll",
+      "sha256": "d419d24b0a76366f5c9d908b0e45fe70e9e9154bb8ad5f3de42070f2337f857b",
+      "size": 27448,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "MSVCP140.dll",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "KERNEL32.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/PySide6/MSVCP140_2.dll",
+      "sha256": "89917964abb6ca16a260cab258e180c3abc239b5af00eed659d0edf0efdd339c",
+      "size": 271672,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "MSVCP140.dll",
+          "VCRUNTIME140.dll",
+          "VCRUNTIME140_1.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "api-ms-win-crt-math-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-stdio-l1-1-0.dll",
+          "api-ms-win-crt-locale-l1-1-0.dll",
+          "KERNEL32.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/PySide6/opengl32sw.dll",
+      "sha256": "34b444c016289b560662ff896deceb7f4b2c0723aed3d319ae167c9186ce42b3",
+      "size": 20639544,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "imagehlp.dll",
+          "SHELL32.dll",
+          "ADVAPI32.dll",
+          "GDI32.dll",
+          "USER32.dll",
+          "KERNEL32.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/PySide6/plugins/generic/qtuiotouchplugin.dll",
+      "sha256": "aa9080fa8b1c3cf4d3790c1eecf4a1f5c796ce58f31f80910357578f20fd80ac",
+      "size": 101176,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "Qt6Network.dll",
+          "Qt6Gui.dll",
+          "Qt6Core.dll",
+          "MSVCP140.dll",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "KERNEL32.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/PySide6/plugins/iconengines/qsvgicon.dll",
+      "sha256": "5bb97b6f114682ae0b5f42b23b6818aece6499bad88dac80a138efa8a88c12bc",
+      "size": 72504,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "Qt6Svg.dll",
+          "Qt6Gui.dll",
+          "Qt6Core.dll",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "KERNEL32.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/PySide6/plugins/imageformats/qgif.dll",
+      "sha256": "d301d7e9a68327692e4c76faa6b125517730b22c68f4de7f09fda9d4ac0ddee1",
+      "size": 47928,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "Qt6Gui.dll",
+          "Qt6Core.dll",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "KERNEL32.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/PySide6/plugins/imageformats/qicns.dll",
+      "sha256": "49db148fea9f01e9953fd0a771d16cfaf364599f07aab3634d4f5c7c25abd78a",
+      "size": 57144,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "Qt6Gui.dll",
+          "Qt6Core.dll",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-math-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "KERNEL32.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/PySide6/plugins/imageformats/qico.dll",
+      "sha256": "1684fd56f1758167f7b3ac011264ae5859b3cf6113e381626ec3dc1d3122fe52",
+      "size": 46904,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "Qt6Gui.dll",
+          "Qt6Core.dll",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "KERNEL32.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/PySide6/plugins/imageformats/qjpeg.dll",
+      "sha256": "6517345ac19f5c489daeadc029d0018bbdc09d8e1031c60d714557972f22c6d4",
+      "size": 591672,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "Qt6Gui.dll",
+          "Qt6Core.dll",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "api-ms-win-crt-math-l1-1-0.dll",
+          "api-ms-win-crt-stdio-l1-1-0.dll",
+          "api-ms-win-crt-environment-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "KERNEL32.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/PySide6/plugins/imageformats/qpdf.dll",
+      "sha256": "541350d584d990b8dcccb6726a4cb2169b901b90b6221273f813a13256570705",
+      "size": 42296,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "Qt6Pdf.dll",
+          "Qt6Gui.dll",
+          "Qt6Core.dll",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "KERNEL32.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/PySide6/plugins/imageformats/qsvg.dll",
+      "sha256": "4b7d65ba39be58cb469b54b5fdee2987871d67e5050cd70724016e09966e54f6",
+      "size": 39736,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "Qt6Svg.dll",
+          "Qt6Gui.dll",
+          "Qt6Core.dll",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "KERNEL32.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/PySide6/plugins/imageformats/qtga.dll",
+      "sha256": "6b0381150070fcd4224597fe73c68b47055b30b418aa14794c94c5007d14ca5d",
+      "size": 38200,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "Qt6Gui.dll",
+          "Qt6Core.dll",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "KERNEL32.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/PySide6/plugins/imageformats/qtiff.dll",
+      "sha256": "3d6ea04da215ee2a9459399fb9f6d73cad8787944b9d450399025bcd39d020b5",
+      "size": 445752,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "Qt6Gui.dll",
+          "Qt6Core.dll",
+          "KERNEL32.dll",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-math-l1-1-0.dll",
+          "api-ms-win-crt-stdio-l1-1-0.dll",
+          "api-ms-win-crt-utility-l1-1-0.dll",
+          "api-ms-win-crt-convert-l1-1-0.dll",
+          "api-ms-win-crt-environment-l1-1-0.dll",
+          "api-ms-win-crt-time-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/PySide6/plugins/imageformats/qwbmp.dll",
+      "sha256": "1a4596509987e9557edda69ed13cdd0d33f4ebda72e464ddc00a566bec05f151",
+      "size": 36664,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "Qt6Gui.dll",
+          "Qt6Core.dll",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "KERNEL32.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/PySide6/plugins/imageformats/qwebp.dll",
+      "sha256": "6b2c53cc4423140c29a6a1eb6dd908016e09d794b5739a05a3a39c8c49a0df8a",
+      "size": 564536,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "Qt6Gui.dll",
+          "Qt6Core.dll",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-math-l1-1-0.dll",
+          "api-ms-win-crt-utility-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "KERNEL32.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/PySide6/plugins/networkinformation/qnetworklistmanager.dll",
+      "sha256": "e571a4b4e582738cd1bc4889cb2896635c2543baff408442701b6706a1b4a86e",
+      "size": 79160,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "OLEAUT32.dll",
+          "Qt6Network.dll",
+          "Qt6Core.dll",
+          "ole32.dll",
+          "MSVCP140.dll",
+          "VCRUNTIME140.dll",
+          "VCRUNTIME140_1.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "KERNEL32.dll",
+          "api-ms-win-core-winrt-l1-1-0.dll",
+          "api-ms-win-core-winrt-error-l1-1-1.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/PySide6/plugins/platforminputcontexts/qtvirtualkeyboardplugin.dll",
+      "sha256": "e10c64dd2ae4f9b756ec1ebe3950a05e345ba40834b7be2900af426623d85475",
+      "size": 34104,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "IMM32.dll",
+          "Qt6VirtualKeyboard.dll",
+          "Qt6Gui.dll",
+          "Qt6Core.dll",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "KERNEL32.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/PySide6/plugins/platforms/qdirect2d.dll",
+      "sha256": "56f41ad523d016fe2cf2c90fae158e21766d1fcd021bced1a3704c6da0f00c98",
+      "size": 1071416,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "ADVAPI32.dll",
+          "d2d1.dll",
+          "d3d11.dll",
+          "dwmapi.dll",
+          "DWrite.dll",
+          "GDI32.dll",
+          "IMM32.dll",
+          "ole32.dll",
+          "OLEAUT32.dll",
+          "SETUPAPI.dll",
+          "SHELL32.dll",
+          "SHLWAPI.dll",
+          "USER32.dll",
+          "VERSION.dll",
+          "WINMM.dll",
+          "WTSAPI32.dll",
+          "api-ms-win-shcore-scaling-l1-1-1.dll",
+          "COMDLG32.dll",
+          "d3d9.dll",
+          "api-ms-win-core-winrt-string-l1-1-0.dll",
+          "api-ms-win-core-winrt-l1-1-0.dll",
+          "UIAutomationCore.DLL",
+          "Qt6Gui.dll",
+          "Qt6Core.dll",
+          "KERNEL32.dll",
+          "MSVCP140.dll",
+          "VCRUNTIME140_1.dll",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-stdio-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-math-l1-1-0.dll",
+          "api-ms-win-core-winrt-error-l1-1-1.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/PySide6/plugins/platforms/qminimal.dll",
+      "sha256": "768a9c6dbb1c86abbefa2ff9d7e98cdfb4fdc9292eb8d64195bb6d23939a5344",
+      "size": 61752,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "Qt6Gui.dll",
+          "Qt6Core.dll",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "KERNEL32.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/PySide6/plugins/platforms/qoffscreen.dll",
+      "sha256": "e776251668440169ed18a2fe1b236762d514ef5244639cbb559b5a77ddd38954",
+      "size": 110904,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "Qt6Gui.dll",
+          "Qt6Core.dll",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "KERNEL32.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/PySide6/plugins/platforms/qwindows.dll",
+      "sha256": "bf6dbc3009f386fa22f0ced560bea6bbf3e0e0b4442d2fb855db67cffce49dbf",
+      "size": 991032,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "ADVAPI32.dll",
+          "dwmapi.dll",
+          "GDI32.dll",
+          "IMM32.dll",
+          "ole32.dll",
+          "OLEAUT32.dll",
+          "SETUPAPI.dll",
+          "SHELL32.dll",
+          "SHLWAPI.dll",
+          "USER32.dll",
+          "WINMM.dll",
+          "WTSAPI32.dll",
+          "api-ms-win-shcore-scaling-l1-1-1.dll",
+          "COMDLG32.dll",
+          "d3d9.dll",
+          "api-ms-win-core-winrt-string-l1-1-0.dll",
+          "api-ms-win-core-winrt-l1-1-0.dll",
+          "UIAutomationCore.DLL",
+          "Qt6Gui.dll",
+          "Qt6Core.dll",
+          "KERNEL32.dll",
+          "MSVCP140.dll",
+          "VCRUNTIME140_1.dll",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-stdio-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-math-l1-1-0.dll",
+          "api-ms-win-core-winrt-error-l1-1-1.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/PySide6/plugins/styles/qmodernwindowsstyle.dll",
+      "sha256": "a7a6424c23bf371bd28a404a196b210971726f6f2a87b63aac185a5e6e40da71",
+      "size": 240440,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "dwmapi.dll",
+          "GDI32.dll",
+          "USER32.dll",
+          "UxTheme.dll",
+          "Qt6Widgets.dll",
+          "Qt6Gui.dll",
+          "Qt6Core.dll",
+          "KERNEL32.dll",
+          "MSVCP140.dll",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-math-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/PySide6/plugins/tls/qcertonlybackend.dll",
+      "sha256": "67be4d333a0f489d02714169a6ec54eaa80efa649d733fcbeb81881ecb02b4f3",
+      "size": 104760,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "Qt6Network.dll",
+          "Qt6Core.dll",
+          "MSVCP140.dll",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "KERNEL32.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/PySide6/plugins/tls/qopensslbackend.dll",
+      "sha256": "7a0727417b8e21e64d9a7cf0f390bc85b3e337b4eef5ac977f49659d97e6b552",
+      "size": 314168,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "CRYPT32.dll",
+          "Qt6Network.dll",
+          "Qt6Core.dll",
+          "KERNEL32.dll",
+          "MSVCP140.dll",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-string-l1-1-0.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/PySide6/plugins/tls/qschannelbackend.dll",
+      "sha256": "14abc5b245c0f2e03f7bc0b474a8db2ecb441c7300a8a8b16fb865eaf2674619",
+      "size": 247608,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "CRYPT32.dll",
+          "Secur32.dll",
+          "bcrypt.dll",
+          "ncrypt.dll",
+          "Qt6Network.dll",
+          "Qt6Core.dll",
+          "KERNEL32.dll",
+          "MSVCP140.dll",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/PySide6/pyside6.abi3.dll",
+      "sha256": "d0b5c701fb3a8ea839e72b602058f3960935156ebeca084893c54c99e54dd707",
+      "size": 255288,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "shiboken6.abi3.dll",
+          "python3.dll",
+          "Qt6Core.dll",
+          "MSVCP140.dll",
+          "VCRUNTIME140.dll",
+          "VCRUNTIME140_1.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-stdio-l1-1-0.dll",
+          "KERNEL32.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/PySide6/Qt6Core.dll",
+      "sha256": "d6a3c37c5263c5d418fc0e80b722bc9fca7c0859e6f635f9624a2fde00bdc653",
+      "size": 10363704,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "api-ms-win-core-synch-l1-2-0.dll",
+          "MPR.dll",
+          "USERENV.dll",
+          "ADVAPI32.dll",
+          "AUTHZ.dll",
+          "KERNEL32.dll",
+          "NETAPI32.dll",
+          "ntdll.dll",
+          "ole32.dll",
+          "SHELL32.dll",
+          "USER32.dll",
+          "VERSION.dll",
+          "WINMM.dll",
+          "WS2_32.dll",
+          "icuuc.dll",
+          "MSVCP140.dll",
+          "MSVCP140_1.dll",
+          "VCRUNTIME140.dll",
+          "VCRUNTIME140_1.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-stdio-l1-1-0.dll",
+          "api-ms-win-crt-environment-l1-1-0.dll",
+          "api-ms-win-crt-math-l1-1-0.dll",
+          "api-ms-win-crt-utility-l1-1-0.dll",
+          "api-ms-win-crt-time-l1-1-0.dll",
+          "api-ms-win-crt-filesystem-l1-1-0.dll",
+          "api-ms-win-core-winrt-l1-1-0.dll",
+          "api-ms-win-core-winrt-error-l1-1-1.dll",
+          "OLEAUT32.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/PySide6/Qt6Gui.dll",
+      "sha256": "ae29b005f51b6850bf57fa06fced0dc8c7039fd6fafc3bfbcfe76e38adc7abf1",
+      "size": 9546552,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "d3d11.dll",
+          "dxgi.dll",
+          "d3d12.dll",
+          "GDI32.dll",
+          "ole32.dll",
+          "SHELL32.dll",
+          "USER32.dll",
+          "UxTheme.dll",
+          "DWrite.dll",
+          "Qt6Core.dll",
+          "KERNEL32.dll",
+          "MSVCP140.dll",
+          "MSVCP140_1.dll",
+          "MSVCP140_2.dll",
+          "VCRUNTIME140.dll",
+          "VCRUNTIME140_1.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "api-ms-win-crt-math-l1-1-0.dll",
+          "api-ms-win-crt-stdio-l1-1-0.dll",
+          "api-ms-win-crt-environment-l1-1-0.dll",
+          "api-ms-win-crt-utility-l1-1-0.dll",
+          "api-ms-win-crt-convert-l1-1-0.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/PySide6/Qt6Network.dll",
+      "sha256": "dd3512d1c5ed062d30c98426cd0a850f13e0cf31437afb5b0b474132b9c52922",
+      "size": 1751352,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "Qt6Core.dll",
+          "ADVAPI32.dll",
+          "DNSAPI.dll",
+          "IPHLPAPI.DLL",
+          "Secur32.dll",
+          "WINHTTP.dll",
+          "WS2_32.dll",
+          "KERNEL32.dll",
+          "MSVCP140.dll",
+          "MSVCP140_1.dll",
+          "VCRUNTIME140.dll",
+          "VCRUNTIME140_1.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-stdio-l1-1-0.dll",
+          "api-ms-win-crt-math-l1-1-0.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/PySide6/Qt6OpenGL.dll",
+      "sha256": "d51088f16db8c96dba7ef3c1474e611adb3ebdb211fea35b8e755d2a7407f7ad",
+      "size": 1988408,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "Qt6Gui.dll",
+          "Qt6Core.dll",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-math-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "KERNEL32.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/PySide6/Qt6Pdf.dll",
+      "sha256": "6fc87c84a723b05a0a3d7dce87083d25d23b1558e8806ff1cc7952bb9c5c9779",
+      "size": 4620600,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-8",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "ADVAPI32.dll",
+          "GDI32.dll",
+          "USER32.dll",
+          "Qt6Gui.dll",
+          "Qt6Network.dll",
+          "Qt6Core.dll",
+          "KERNEL32.dll",
+          "MSVCP140.dll",
+          "VCRUNTIME140.dll",
+          "VCRUNTIME140_1.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "api-ms-win-crt-stdio-l1-1-0.dll",
+          "api-ms-win-crt-math-l1-1-0.dll",
+          "api-ms-win-crt-time-l1-1-0.dll",
+          "api-ms-win-crt-convert-l1-1-0.dll",
+          "api-ms-win-crt-utility-l1-1-0.dll",
+          "api-ms-win-crt-environment-l1-1-0.dll",
+          "api-ms-win-crt-filesystem-l1-1-0.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/PySide6/Qt6Qml.dll",
+      "sha256": "514fc8d9ff0754d2bcb446bbe0f6cc421213d92c8c1870e4cf787e4e176d51f6",
+      "size": 5337912,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "Qt6Network.dll",
+          "Qt6Core.dll",
+          "KERNEL32.dll",
+          "MSVCP140.dll",
+          "VCRUNTIME140.dll",
+          "VCRUNTIME140_1.dll",
+          "api-ms-win-crt-math-l1-1-0.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-stdio-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/PySide6/Qt6QmlMeta.dll",
+      "sha256": "c6e8b02ad52e01e0e865a085b629b08629fbe5c68146425d4cefdcaaef7a8462",
+      "size": 159032,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "Qt6QmlModels.dll",
+          "Qt6QmlWorkerScript.dll",
+          "Qt6Qml.dll",
+          "Qt6Core.dll",
+          "MSVCP140.dll",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "api-ms-win-crt-math-l1-1-0.dll",
+          "KERNEL32.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/PySide6/Qt6QmlModels.dll",
+      "sha256": "066e72ad668ff02dcf530805d071313f9e89d9f1fb49a522aa4ed52712741bf2",
+      "size": 990008,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "Qt6Qml.dll",
+          "Qt6Core.dll",
+          "MSVCP140.dll",
+          "VCRUNTIME140.dll",
+          "VCRUNTIME140_1.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "api-ms-win-crt-math-l1-1-0.dll",
+          "KERNEL32.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/PySide6/Qt6QmlWorkerScript.dll",
+      "sha256": "c037ab72fb9c1c1ebbe47f70b8a35d440537765ef6207424aae0c16fea26eda1",
+      "size": 79672,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "Qt6Qml.dll",
+          "Qt6Core.dll",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-math-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "KERNEL32.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/PySide6/Qt6Quick.dll",
+      "sha256": "900a493625af1f7d9fe6071b9aaee15e560cc7afc122702656723539ed81975f",
+      "size": 6569272,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "USER32.dll",
+          "Qt6QmlMeta.dll",
+          "Qt6QmlModels.dll",
+          "Qt6Qml.dll",
+          "Qt6Network.dll",
+          "Qt6OpenGL.dll",
+          "Qt6Gui.dll",
+          "Qt6Core.dll",
+          "KERNEL32.dll",
+          "MSVCP140.dll",
+          "MSVCP140_1.dll",
+          "MSVCP140_2.dll",
+          "VCRUNTIME140.dll",
+          "VCRUNTIME140_1.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-math-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "api-ms-win-crt-convert-l1-1-0.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/PySide6/Qt6Svg.dll",
+      "sha256": "1eac8f7415b311a88cb3cb4e25c3098d0e059c24c831fbbb13f43a80f0df06b7",
+      "size": 609080,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "Qt6Gui.dll",
+          "Qt6Core.dll",
+          "MSVCP140.dll",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-math-l1-1-0.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "KERNEL32.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/PySide6/Qt6VirtualKeyboard.dll",
+      "sha256": "a14fac89759569965dbeb45b2a13e592c0bce0cc559adaa32145fcb92de016f9",
+      "size": 427832,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-8",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "Qt6Quick.dll",
+          "Qt6Qml.dll",
+          "Qt6Gui.dll",
+          "Qt6Core.dll",
+          "MSVCP140.dll",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-math-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "KERNEL32.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/PySide6/Qt6Widgets.dll",
+      "sha256": "ff0df9e2e6827e035f0731a4cedfc6333f4602bca00775e56346f27032406b74",
+      "size": 6497080,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "dwmapi.dll",
+          "UxTheme.dll",
+          "Qt6Gui.dll",
+          "Qt6Core.dll",
+          "KERNEL32.dll",
+          "USER32.dll",
+          "GDI32.dll",
+          "MSVCP140.dll",
+          "MSVCP140_1.dll",
+          "VCRUNTIME140.dll",
+          "VCRUNTIME140_1.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "api-ms-win-crt-math-l1-1-0.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/PySide6/QtCore.pyd",
+      "sha256": "74f96322c5e9cea73aefd2ed5870e5275336b31f552fcd32f12fc81d23f1bc6f",
+      "size": 3345720,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "pyside6.abi3.dll",
+          "shiboken6.abi3.dll",
+          "python3.dll",
+          "Qt6Core.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/PySide6/QtGui.pyd",
+      "sha256": "7bef20046045199c037b7cbfedaa1c5464730fa948b2c9ec8afbf718e63774d4",
+      "size": 3901240,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "pyside6.abi3.dll",
+          "Qt6Gui.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/PySide6/QtNetwork.pyd",
+      "sha256": "c5038bb71fc9d57330fa2d8eeec65aab69fcf02687cc8f54dbfb5995cfec6a71",
+      "size": 1009464,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "pyside6.abi3.dll",
+          "Qt6Network.dll",
+          "shiboken6.abi3.dll",
+          "python3.dll",
+          "Qt6Core.dll",
+          "MSVCP140.dll",
+          "VCRUNTIME140.dll",
+          "VCRUNTIME140_1.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "KERNEL32.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/PySide6/QtWidgets.pyd",
+      "sha256": "f12f4ca641998e5706d5f7b0023147d573f0f2d2361e26dadf31bdbf05fbfd1d",
+      "size": 4857656,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "pyside6.abi3.dll",
+          "Qt6Widgets.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_ar.qm",
+      "sha256": "b11333c520ccd8e375cde20985df402d586a1a95e0796313bbeb9f717d4db22e",
+      "size": 104,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_bg.qm",
+      "sha256": "1e22ee126ec9f76031d880285a907b3a0c4510392319ff700dcdee964abbb1ad",
+      "size": 91,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_ca.qm",
+      "sha256": "17ab2623c7f6e8def44b3dbcb517544185817d65f1298ddb10ef71136f232bdc",
+      "size": 91,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_cs.qm",
+      "sha256": "c585918fb1d4821a054ea40bdcf279f275ca76c88a5793f433dac6a611ac7e8f",
+      "size": 95,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_da.qm",
+      "sha256": "f6773c672acb73fdef6e092060d69d1e5dfee840012bac912d1e92de28714386",
+      "size": 91,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_de.qm",
+      "sha256": "0401c316aa3b50a172eb44a4ff1ec384924073beec7c928ef888ec48e4612688",
+      "size": 91,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_en.qm",
+      "sha256": "494ac9a2b2cb2fdeced353f4a9f898ed8dcf616e9bc667438c62681e3f7f79cf",
+      "size": 33,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_es.qm",
+      "sha256": "648ed4519bc45d7a4779479a7626ea16cf9aa23e93a0b178546cc47bea0591ab",
+      "size": 91,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_fa.qm",
+      "sha256": "3f4c989c6b2990d80cc6299408214b31698923b52f154483b3371875de91f88e",
+      "size": 84,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_fi.qm",
+      "sha256": "342d01c7eeb234e431d0506821c4cd03c0433115d8d63fee3357be2331858879",
+      "size": 91,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_fr.qm",
+      "sha256": "c896a38892a92346b033793d56440993236b23e47e06f3974afdb0552f628387",
+      "size": 91,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_gd.qm",
+      "sha256": "49df855a004a17950338af3146466f6df4d5852410bd0b58ea80e0d0203a9d24",
+      "size": 70,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_gl.qm",
+      "sha256": "204a01ac7deb6b5bae193afecbd1e50d18c73bf7d94badeb2bbfdf6123c4ed93",
+      "size": 323590,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_he.qm",
+      "sha256": "36f01fff2f25e116d4b7af78097b7e49520fd5b7fb6fb120e40be228c05c045f",
+      "size": 57,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_help_ar.qm",
+      "sha256": "222088c9752d1cc3bab985ef2dc77e5ae78578dce18a61ec15b39f02e588163d",
+      "size": 8743,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_help_bg.qm",
+      "sha256": "cbcdd1e0bbae332d80ddb0a286056f17c824fa28d353d7fdf12fc97d9f6fe054",
+      "size": 10599,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_help_ca.qm",
+      "sha256": "fe40962c814a9f489e18d033e4aaabe435232c9bcf760830c6165af507cca80e",
+      "size": 7435,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_help_cs.qm",
+      "sha256": "4ac56fc63e400943bab13f1d4c418502138908e1d488c24aee6131d3d17552aa",
+      "size": 15297,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_help_da.qm",
+      "sha256": "6bb092552a398687119f6d52145f04bf8373977446d8f00c0dcbd56b96829f0f",
+      "size": 4795,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_help_de.qm",
+      "sha256": "037bc99abf98571ae9375c2513536c15b571d66406c36c1de447b547ff539c07",
+      "size": 7569,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_help_en.qm",
+      "sha256": "494ac9a2b2cb2fdeced353f4a9f898ed8dcf616e9bc667438c62681e3f7f79cf",
+      "size": 33,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_help_es.qm",
+      "sha256": "fd16b279f8cf69077f75e94d90c9c07a2afff3948a579e3789f5ffb5e5f4202d",
+      "size": 10704,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_help_fr.qm",
+      "sha256": "875ee2dcdc64e3dea888d84048e382d3921a175f12847de2e6b1cb12ad9add50",
+      "size": 3573,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_help_gl.qm",
+      "sha256": "7399a248609974773f60866c87b78ea7dfbc4f750313d692f7886cd763883c9f",
+      "size": 10891,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_help_hr.qm",
+      "sha256": "8c8cc3c5b1ab2b074f82937001b896603420ef75592b3b78172177360dd7ea61",
+      "size": 5170,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_help_hu.qm",
+      "sha256": "7be32e015119c969453abb6e8f3fb377963a69fafb10c27b796737b5eb283eaf",
+      "size": 7255,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_help_it.qm",
+      "sha256": "316fe8d0815e2b4b396895beb38ef1a40431915b5e054df80f4c0cd556f26e4b",
+      "size": 10612,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_help_ja.qm",
+      "sha256": "ae603b2c0d434d40cde433ffcba65f9ee27978a9e19316007be7fe782a5b8b47",
+      "size": 7917,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_help_ka.qm",
+      "sha256": "159c74f94b384b5ee6afdf38b6cfc4806bc99ecf73be02d4a7021d4ceba7ec7e",
+      "size": 7091,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_help_ko.qm",
+      "sha256": "f11c64694e8e34e1d2c46c1a1d15d6ba9f2db7b61de4fdf54eca5ab977c3e052",
+      "size": 5708,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_help_nl.qm",
+      "sha256": "44a8a0daf775d14352180052d13f623814d7bdf98e2c5c80144b7bf74214e3b0",
+      "size": 5087,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_help_nn.qm",
+      "sha256": "4c8a7213942078e4f72f5babd26c41b77ace70189714a58b5504a7d5ad0193dc",
+      "size": 6934,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_help_pl.qm",
+      "sha256": "cc6cb4d8c54086224672f2e49e623c8cb7c0c1cd65b8d5ecd42fc9ba3a6065bd",
+      "size": 9673,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_help_pt_BR.qm",
+      "sha256": "b4015c5d519b4fe93c00bf734d1742e4f0094d89862664d548eb64a46a2feae7",
+      "size": 16030,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_help_ru.qm",
+      "sha256": "557b644e6da5f1ec720ef93965617087e4d1f40b2494cc5aa524cf3796108de7",
+      "size": 7288,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_help_sk.qm",
+      "sha256": "f41e33e1d790bd0d3eb180f1f875bc191fe74773628f25c2cad95e1402e66867",
+      "size": 10388,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_help_sl.qm",
+      "sha256": "2ec955e662407ebcd8dcdae5aaa21e4108e0b5b0aee0e9db712c27072943535f",
+      "size": 10363,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_help_sv.qm",
+      "sha256": "95bdb03dbaa6dbdfda46c249e9ccce9a353f71ddb8b112961e8b005b2c60b13c",
+      "size": 6934,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_help_tr.qm",
+      "sha256": "81da2f88cd624097581f2d29b10311796bcd9ab289e65883346d276110542d28",
+      "size": 6723,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_help_uk.qm",
+      "sha256": "497cfc473684692ee44d7a3795e8fb2270c57069fd9eb98a615dd29ab9be8a7c",
+      "size": 9750,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_help_zh_CN.qm",
+      "sha256": "e256d1f6034a5a5521c62f129f91731216e474f71e1d9caea3d3dcb11b670deb",
+      "size": 5115,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_help_zh_TW.qm",
+      "sha256": "40112812abb43853d678cc6d97729f21f21b3a7321c827fc9d18f6c936447d1e",
+      "size": 5160,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_hr.qm",
+      "sha256": "fc9e4146f33be3d09b234be01e56235d3037d8d82d64f0700b4d4a6e253a61a7",
+      "size": 102,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_hu.qm",
+      "sha256": "c2fa649f167cdb801d1cc0cb69c1d93594fd5bf8c0b7e79b969935da5c3e19aa",
+      "size": 84,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_it.qm",
+      "sha256": "9e7a18bc20ebeec54baaaf41c918a74534511271f796dffffd0f9b9ec31c68d3",
+      "size": 91,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_ja.qm",
+      "sha256": "0f5fe50452947d1ee9755249d860354bff6977279b4c496a5bc77e5b89dd745e",
+      "size": 84,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_ka.qm",
+      "sha256": "00b67c6dfc255079b5b98a5640f82519c96b2520a028682fba4078b39d743eaa",
+      "size": 94,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_ko.qm",
+      "sha256": "1d254b535e1cb35cbcad8210b15b89f4488159826bf35b4504696263dd102fa3",
+      "size": 84,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_lg.qm",
+      "sha256": "6ba668501f4c040c66da1bdc022362da3c8cf663da6aa484cbdb599028da98ed",
+      "size": 57,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_lt.qm",
+      "sha256": "47eb5f97467df769261421d54a5bea1131c9fb9b6388791d38bb6574335b64bf",
+      "size": 165383,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_lv.qm",
+      "sha256": "addeca285282338294f24ca50d37d08a5f68d3785d0a94af86dd4ec8f2a3b449",
+      "size": 63,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_nl.qm",
+      "sha256": "39e870cbd25c0f97fa9b1828d5ea1ed9849857a2e26c5321b3f13c76be8f0548",
+      "size": 91,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_nn.qm",
+      "sha256": "4e544e23f75eafe1553dc896973db23b5795cd243786d5c653cc0f36a46ca74f",
+      "size": 91,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_pl.qm",
+      "sha256": "e6890afa0caf0f6db0248e4c94f6016b8ec8bc266f1e0e9b8f01e8ea912cf968",
+      "size": 99,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_pt_BR.qm",
+      "sha256": "0e24c58e35271853f8cdfb3f0f7b0741b5a9a588e43cdec62ae85a3842771e0a",
+      "size": 106,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_pt_PT.qm",
+      "sha256": "2c1e7bbf5168a64b43752dd4c547601c0bde6d610f8671fa3e3af38597e84783",
+      "size": 70334,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_ru.qm",
+      "sha256": "1b388e2d6d1bd405603e794e498c6d7ec5f5a5ad819243546f6399181da36758",
+      "size": 102,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_sk.qm",
+      "sha256": "840c3b01c89df976fc1d2e5bfc6fc84b65666b8a3ceb4cbf5aa0c22af3d2a383",
+      "size": 95,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_sl.qm",
+      "sha256": "c44e0313a9414cc0e490b65b0c036fa11bca959353b228886547bc2c8492034f",
+      "size": 228428,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_sv.qm",
+      "sha256": "daaae448e0814b469ac3d7a91096fde15491600a6b8bc6c01508425fb5e8b3ec",
+      "size": 91,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_tr.qm",
+      "sha256": "59e8a0c411be3b0802a68561b090f182099d6b75c4fe46f398e55f11528e11b9",
+      "size": 84,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_uk.qm",
+      "sha256": "053ec1f677c4dba48c6a97eb28f4fc78c1511324d1843d7f4cec2c7c00a66145",
+      "size": 102,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_zh_CN.qm",
+      "sha256": "c0e29d32c9540a7e78643b74214e633c56f6ab11f018e516629f2c11b1fb09fc",
+      "size": 99,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qt_zh_TW.qm",
+      "sha256": "24e226954491689549a1a1990db3b8cb78888008d8163b2fd2442b772b6d1b5f",
+      "size": 99,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qtbase_ar.qm",
+      "sha256": "e03fe68d83201543698fd7fe267dd5dfc5bfd195147e74ff2f19ac3491401263",
+      "size": 160017,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qtbase_bg.qm",
+      "sha256": "e448ac9e3f16c29eb27af3012efe21052daa78fabfb34cd6dff2f69ee3bd3cdb",
+      "size": 165337,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qtbase_ca.qm",
+      "sha256": "5298532fc52ffbc4e2c549f277151a61e741921c834286f7c04d3753677b6b04",
+      "size": 269007,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qtbase_cs.qm",
+      "sha256": "03028b42df5479270371e4c3bdc7df2f56cbbe6dda956a2864ac6f6415861fe8",
+      "size": 174701,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qtbase_da.qm",
+      "sha256": "7d1e5ca3310b54d104c19bf2abd402b38e584e87039a70e153c4a9af74b25c22",
+      "size": 181387,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qtbase_de.qm",
+      "sha256": "ed828a83dfaa51944f166c842155b48ab3bd7cb2c46dcd96269eb5d48af4f63f",
+      "size": 223282,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qtbase_en.qm",
+      "sha256": "494ac9a2b2cb2fdeced353f4a9f898ed8dcf616e9bc667438c62681e3f7f79cf",
+      "size": 33,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qtbase_es.qm",
+      "sha256": "4ffda56ba3bb5414ab0482d1dde64a6f226e3488f6b7f3f11a150e01f53fa4c8",
+      "size": 165170,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qtbase_fa.qm",
+      "sha256": "f78e59b5bdd586181a999034ba418868ed17fe9c05707fb65e523f70e92253d2",
+      "size": 148156,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qtbase_fi.qm",
+      "sha256": "e47fe13713e184d07fa4495dde0c589b0e8f562e91574a3558a9363443a4fa72",
+      "size": 179941,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qtbase_fr.qm",
+      "sha256": "314243a55c32679ad473fdfe48dc7d66e973ad0fc8bf2164480c58dddb50c1a7",
+      "size": 159463,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qtbase_gd.qm",
+      "sha256": "63b439dd44139aa3aed54c2ebe03fa9bc77f22c14ed8fba8eff2608445bb233d",
+      "size": 189580,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qtbase_he.qm",
+      "sha256": "e1ebca16afe8994356f81ca007fbdb9ddf865842010fe908923d873b687cad3f",
+      "size": 138690,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qtbase_hr.qm",
+      "sha256": "bb9eec9a9a652c1340dc75eb2e749be50df00f885b3d6900dfc76799c45b244d",
+      "size": 149711,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qtbase_hu.qm",
+      "sha256": "98463295539d769c8645a0b7fb95ad38454cfd0b14f36af485513f036ddbbbc6",
+      "size": 205885,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qtbase_it.qm",
+      "sha256": "7808ed542a7833c4bd94ec8bdfbbca00bb4f2fe15979b9121ce3249323687300",
+      "size": 161166,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qtbase_ja.qm",
+      "sha256": "2b9581c69b975f59be505b127cd3c19d403ef3d12e0e8386fb97238223e9c1df",
+      "size": 129913,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qtbase_ka.qm",
+      "sha256": "e55e4b72fa620bebee5297ca59dfe2f49894a1e544f2b7485b1cfd8829289d6f",
+      "size": 201105,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qtbase_ko.qm",
+      "sha256": "0179ed1b136e1cb3f583351eaa2c545ba3d83a6ee3f82c32505926a1a5f5f183",
+      "size": 156799,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qtbase_lg.qm",
+      "sha256": "31c0cc4ce13b1d74fe0c19ed0b47638fb31e20c93ee08092533e884007aebfb5",
+      "size": 315764,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qtbase_lv.qm",
+      "sha256": "846e047573ae40c83671c3ba7f73e27efc24b98c82701da0df9973e574178bb2",
+      "size": 153608,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qtbase_nl.qm",
+      "sha256": "f61513bcdbb6ad800585f9437a95d018aab17fa12ee414aa31462ff279d8240e",
+      "size": 202861,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qtbase_nn.qm",
+      "sha256": "f9f2fb7c60e7fcb38bbd3c1314ef122145594265e20b0659ff00004baab13ac7",
+      "size": 196411,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qtbase_pl.qm",
+      "sha256": "3cf6b5c14d5eb0cf81e9af2066e66b3aa579a6b9b3c323ed670761f6254a8c54",
+      "size": 162962,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qtbase_pt_BR.qm",
+      "sha256": "3475d61604b938d459949801a906dbd34a8ca824ade94120015d676e208da859",
+      "size": 290955,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qtbase_ru.qm",
+      "sha256": "3da6605668f9178d11a838c4515478084dcfb4f9cf22f99d7a92b492db9c224b",
+      "size": 203767,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qtbase_sk.qm",
+      "sha256": "d586ae2c314074cf398417fdecb40709d5478dfeb0a67c2fe60d509ee9b59ed7",
+      "size": 125763,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qtbase_sv.qm",
+      "sha256": "5a2178dd2c03cc4516697f1fb0049649c9ed53f5cde6b937786733dae06aeda8",
+      "size": 249963,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qtbase_tr.qm",
+      "sha256": "353fdfd7165659a49212e7a25bf91c0a71588e52c836f7496640f26782414634",
+      "size": 248720,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qtbase_uk.qm",
+      "sha256": "51b8ff55b37dc5907d637a8ddda12fbe816852b0244c74eb4f0fb84867a786e0",
+      "size": 158274,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qtbase_zh_CN.qm",
+      "sha256": "0481a9b92a6f0578400e960a7d5ee70217a6a450eaf7f98b7d32b8dbd0d58616",
+      "size": 147222,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/translations/qtbase_zh_TW.qm",
+      "sha256": "21012b2b427f8d09d31ce9cae582ca27955b478ca3dc2ec18a3068d808638c6a",
+      "size": 126185,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/PySide6/VCRUNTIME140.dll",
+      "sha256": "f893ae75a1a24eea174d982f94bc80ce2448201eaa919a73c0653a5657685de4",
+      "size": 116024,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-stdio-l1-1-0.dll",
+          "api-ms-win-crt-convert-l1-1-0.dll",
+          "KERNEL32.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/PySide6/VCRUNTIME140_1.dll",
+      "sha256": "48aa2783793ea18ab3c2c71d420d4fff9814e662a1ff810053c6e5250061a716",
+      "size": 41272,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-7",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "VCRUNTIME140.dll",
+          "KERNEL32.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/python3.dll",
+      "sha256": "6c45910e7c82617ca6360820de861699cc99f9efee434df290aa4c6e38f39886",
+      "size": 73952,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-1",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": []
+      }
+    },
+    {
+      "path": "_internal/python314.dll",
+      "sha256": "0f9857ffdfe010fe6b99328d58c2e3c7472ce75f336bf9c2ad9bd5bca3bce700",
+      "size": 6785760,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-1",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "VERSION.dll",
+          "WS2_32.dll",
+          "api-ms-win-core-path-l1-1-0.dll",
+          "bcrypt.dll",
+          "ADVAPI32.dll",
+          "KERNEL32.dll",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-stdio-l1-1-0.dll",
+          "api-ms-win-crt-environment-l1-1-0.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-locale-l1-1-0.dll",
+          "api-ms-win-crt-convert-l1-1-0.dll",
+          "api-ms-win-crt-math-l1-1-0.dll",
+          "api-ms-win-crt-time-l1-1-0.dll",
+          "api-ms-win-crt-process-l1-1-0.dll",
+          "api-ms-win-crt-conio-l1-1-0.dll",
+          "api-ms-win-crt-filesystem-l1-1-0.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/select.pyd",
+      "sha256": "722328e7fad8048057fc966474ba73966d2ceebaa32e7344cce09640ab4dc9bd",
+      "size": 33504,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-1",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "WS2_32.dll",
+          "python314.dll",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "KERNEL32.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/shiboken6/MSVCP140.dll",
+      "sha256": "fd4a8c046fa3fea9ca6132f50cf8a56cf1e783b2d3093ba5c85fa063bc6b3845",
+      "size": 549176,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-9",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "VCRUNTIME140.dll",
+          "VCRUNTIME140_1.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-locale-l1-1-0.dll",
+          "api-ms-win-crt-stdio-l1-1-0.dll",
+          "api-ms-win-crt-filesystem-l1-1-0.dll",
+          "api-ms-win-crt-time-l1-1-0.dll",
+          "api-ms-win-crt-environment-l1-1-0.dll",
+          "api-ms-win-crt-math-l1-1-0.dll",
+          "api-ms-win-crt-convert-l1-1-0.dll",
+          "api-ms-win-crt-utility-l1-1-0.dll",
+          "KERNEL32.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/shiboken6/Shiboken.pyd",
+      "sha256": "2f6f3a694f675b1dafdae26903191613c02866ab48e02591ae34ca1a3b1284f1",
+      "size": 33592,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-9",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "shiboken6.abi3.dll",
+          "python3.dll",
+          "VCRUNTIME140_1.dll",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "KERNEL32.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/shiboken6/shiboken6.abi3.dll",
+      "sha256": "de3c6b2ed5f75c9ac0de4a6844b653b3b9d09263ce68c2b5fc25a96c5c3e8469",
+      "size": 394040,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-9",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "python3.dll",
+          "KERNEL32.dll",
+          "MSVCP140.dll",
+          "VCRUNTIME140.dll",
+          "VCRUNTIME140_1.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "api-ms-win-crt-stdio-l1-1-0.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-convert-l1-1-0.dll",
+          "api-ms-win-crt-math-l1-1-0.dll",
+          "api-ms-win-crt-filesystem-l1-1-0.dll",
+          "api-ms-win-crt-environment-l1-1-0.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/shiboken6/VCRUNTIME140.dll",
+      "sha256": "de617641d82eac15595d2e39394163ac33e49bb032cf2c2ea0044ed39d3675e9",
+      "size": 116024,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-9",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-stdio-l1-1-0.dll",
+          "api-ms-win-crt-convert-l1-1-0.dll",
+          "KERNEL32.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/shiboken6/VCRUNTIME140_1.dll",
+      "sha256": "fa577d54bd10a91e52472da784a619da6cf241af45f0a0c48b27e91fa0fe6104",
+      "size": 41272,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-9",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "VCRUNTIME140.dll",
+          "KERNEL32.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/THIRD_PARTY_NOTICES.md",
+      "sha256": "72e08222aaf190597ea6d78b181a45f3ae94cd550e7523e47ce8916a49b70ab2",
+      "size": 3112,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-5",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "_internal/ucrtbase.dll",
+      "sha256": "2e5fb14b7bf8540278f3614a12f0226e56a7cc9e64b81cbd976c6fcf2f71cbfb",
+      "size": 1361448,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-2",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "api-ms-win-core-errorhandling-l1-1-0.dll",
+          "api-ms-win-core-heap-l1-1-0.dll",
+          "api-ms-win-core-processthreads-l1-1-0.dll",
+          "api-ms-win-core-libraryloader-l1-1-0.dll",
+          "api-ms-win-core-sysinfo-l1-2-0.dll",
+          "api-ms-win-core-kernel32-legacy-l1-1-1.dll",
+          "api-ms-win-core-synch-l1-1-0.dll",
+          "api-ms-win-core-debug-l1-1-0.dll",
+          "api-ms-win-core-processenvironment-l1-1-0.dll",
+          "api-ms-win-core-file-l1-1-0.dll",
+          "api-ms-win-core-string-l1-1-0.dll",
+          "api-ms-win-core-memory-l1-1-0.dll",
+          "api-ms-win-core-fibers-l1-1-0.dll",
+          "api-ms-win-core-file-l1-2-0.dll",
+          "api-ms-win-core-localization-l1-2-0.dll",
+          "api-ms-win-core-fibers-l1-1-1.dll",
+          "api-ms-win-core-datetime-l1-1-0.dll",
+          "api-ms-win-core-sysinfo-l1-1-0.dll",
+          "api-ms-win-core-rtlsupport-l1-1-0.dll",
+          "api-ms-win-core-processthreads-l1-1-1.dll",
+          "api-ms-win-core-console-l1-1-0.dll",
+          "api-ms-win-core-handle-l1-1-0.dll",
+          "api-ms-win-core-namedpipe-l1-1-0.dll",
+          "api-ms-win-core-timezone-l1-1-0.dll",
+          "api-ms-win-core-file-l2-1-0.dll",
+          "api-ms-win-core-synch-l1-2-0.dll",
+          "api-ms-win-core-profile-l1-1-0.dll",
+          "api-ms-win-core-util-l1-1-0.dll",
+          "api-ms-win-core-interlocked-l1-1-0.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/unicodedata.pyd",
+      "sha256": "280b09bd97b598d18c0ed9542dc18ed35fa57a16e84f8e65fd9c6e96516c28d6",
+      "size": 759008,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-1",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "python314.dll",
+          "VCRUNTIME140.dll",
+          "api-ms-win-crt-stdio-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "KERNEL32.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/VCRUNTIME140.dll",
+      "sha256": "d1f4225df2cd877dbf130d5668a021dce3f94118455ff5ec952061c30afc9ce7",
+      "size": 178616,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-1",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-stdio-l1-1-0.dll",
+          "api-ms-win-crt-convert-l1-1-0.dll",
+          "KERNEL32.dll"
+        ]
+      }
+    },
+    {
+      "path": "_internal/VCRUNTIME140_1.dll",
+      "sha256": "a7146c08f89fe5b04541ab507cdb59ff7b44534d4ba3c668a426c6450a03434e",
+      "size": 50112,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-1",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "VCRUNTIME140.dll",
+          "KERNEL32.dll"
+        ]
+      }
+    },
+    {
+      "path": "CactuVideoConverter.exe",
+      "sha256": "0ed85c1bea4ec9288a910bbe79fe7a8e33b9ecc92024d40cd80db3be0ea0deef",
+      "size": 2541941,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-10",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "USER32.dll",
+          "COMCTL32.dll",
+          "KERNEL32.dll",
+          "ADVAPI32.dll",
+          "GDI32.dll"
+        ]
+      }
+    },
+    {
+      "path": "unins000.dat",
+      "sha256": "815413d02e60852874468c8986d395fd0c44618b448827c8101b5da42dac05dc",
+      "size": 93293,
+      "type": "data",
+      "bundled": true,
+      "component_id": "component-11",
+      "symlink": false,
+      "native": null
+    },
+    {
+      "path": "unins000.exe",
+      "sha256": "0463ee1b9caec420b5e72fb71b86f0cedfd0a422ffb595d5641566f644f60f31",
+      "size": 4412134,
+      "type": "native",
+      "bundled": true,
+      "component_id": "component-11",
+      "symlink": false,
+      "native": {
+        "format": "PE",
+        "needed": [
+          "mpr.dll",
+          "shlwapi.dll",
+          "winspool.drv",
+          "comdlg32.dll",
+          "comctl32.dll",
+          "shell32.dll",
+          "user32.dll",
+          "version.dll",
+          "oleaut32.dll",
+          "WTSAPI32.DLL",
+          "advapi32.dll",
+          "msvcrt.dll",
+          "winhttp.dll",
+          "kernel32.dll",
+          "ole32.dll",
+          "gdi32.dll",
+          "ntdll.dll"
+        ]
+      }
+    }
+  ],
+  "embedded_python_modules": [
+    {
+      "name": "PySide6",
+      "component_id": "component-7"
+    },
+    {
+      "name": "PySide6.support",
+      "component_id": "component-7"
+    },
+    {
+      "name": "PySide6.support.deprecated",
+      "component_id": "component-7"
+    },
+    {
+      "name": "__future__",
+      "component_id": "component-1"
+    },
+    {
+      "name": "_aix_support",
+      "component_id": "component-1"
+    },
+    {
+      "name": "_ast_unparse",
+      "component_id": "component-1"
+    },
+    {
+      "name": "_collections_abc",
+      "component_id": "component-1"
+    },
+    {
+      "name": "_colorize",
+      "component_id": "component-1"
+    },
+    {
+      "name": "_compat_pickle",
+      "component_id": "component-1"
+    },
+    {
+      "name": "_ios_support",
+      "component_id": "component-1"
+    },
+    {
+      "name": "_opcode_metadata",
+      "component_id": "component-1"
+    },
+    {
+      "name": "_py_abc",
+      "component_id": "component-1"
+    },
+    {
+      "name": "_py_warnings",
+      "component_id": "component-1"
+    },
+    {
+      "name": "_pydatetime",
+      "component_id": "component-1"
+    },
+    {
+      "name": "_pydecimal",
+      "component_id": "component-1"
+    },
+    {
+      "name": "_pyi_rth_utils",
+      "component_id": "component-12"
+    },
+    {
+      "name": "_pyi_rth_utils.qt",
+      "component_id": "component-12"
+    },
+    {
+      "name": "_strptime",
+      "component_id": "component-1"
+    },
+    {
+      "name": "_threading_local",
+      "component_id": "component-1"
+    },
+    {
+      "name": "_weakrefset",
+      "component_id": "component-1"
+    },
+    {
+      "name": "abc",
+      "component_id": "component-1"
+    },
+    {
+      "name": "annotationlib",
+      "component_id": "component-1"
+    },
+    {
+      "name": "app",
+      "component_id": "component-3"
+    },
+    {
+      "name": "argparse",
+      "component_id": "component-1"
+    },
+    {
+      "name": "ast",
+      "component_id": "component-1"
+    },
+    {
+      "name": "base64",
+      "component_id": "component-1"
+    },
+    {
+      "name": "bisect",
+      "component_id": "component-1"
+    },
+    {
+      "name": "bz2",
+      "component_id": "component-1"
+    },
+    {
+      "name": "calendar",
+      "component_id": "component-1"
+    },
+    {
+      "name": "codecs",
+      "component_id": "component-1"
+    },
+    {
+      "name": "codeop",
+      "component_id": "component-1"
+    },
+    {
+      "name": "collections",
+      "component_id": "component-1"
+    },
+    {
+      "name": "compression",
+      "component_id": "component-1"
+    },
+    {
+      "name": "compression._common",
+      "component_id": "component-1"
+    },
+    {
+      "name": "compression._common._streams",
+      "component_id": "component-1"
+    },
+    {
+      "name": "compression.zstd",
+      "component_id": "component-1"
+    },
+    {
+      "name": "compression.zstd._zstdfile",
+      "component_id": "component-1"
+    },
+    {
+      "name": "contextlib",
+      "component_id": "component-1"
+    },
+    {
+      "name": "contextvars",
+      "component_id": "component-1"
+    },
+    {
+      "name": "copy",
+      "component_id": "component-1"
+    },
+    {
+      "name": "copyreg",
+      "component_id": "component-1"
+    },
+    {
+      "name": "csv",
+      "component_id": "component-1"
+    },
+    {
+      "name": "ctypes",
+      "component_id": "component-1"
+    },
+    {
+      "name": "ctypes._aix",
+      "component_id": "component-1"
+    },
+    {
+      "name": "ctypes._endian",
+      "component_id": "component-1"
+    },
+    {
+      "name": "ctypes._layout",
+      "component_id": "component-1"
+    },
+    {
+      "name": "ctypes.macholib",
+      "component_id": "component-1"
+    },
+    {
+      "name": "ctypes.macholib.dyld",
+      "component_id": "component-1"
+    },
+    {
+      "name": "ctypes.macholib.dylib",
+      "component_id": "component-1"
+    },
+    {
+      "name": "ctypes.macholib.framework",
+      "component_id": "component-1"
+    },
+    {
+      "name": "ctypes.util",
+      "component_id": "component-1"
+    },
+    {
+      "name": "ctypes.wintypes",
+      "component_id": "component-1"
+    },
+    {
+      "name": "dataclasses",
+      "component_id": "component-1"
+    },
+    {
+      "name": "datetime",
+      "component_id": "component-1"
+    },
+    {
+      "name": "decimal",
+      "component_id": "component-1"
+    },
+    {
+      "name": "difflib",
+      "component_id": "component-1"
+    },
+    {
+      "name": "dis",
+      "component_id": "component-1"
+    },
+    {
+      "name": "email",
+      "component_id": "component-1"
+    },
+    {
+      "name": "email._encoded_words",
+      "component_id": "component-1"
+    },
+    {
+      "name": "email._header_value_parser",
+      "component_id": "component-1"
+    },
+    {
+      "name": "email._parseaddr",
+      "component_id": "component-1"
+    },
+    {
+      "name": "email._policybase",
+      "component_id": "component-1"
+    },
+    {
+      "name": "email.base64mime",
+      "component_id": "component-1"
+    },
+    {
+      "name": "email.charset",
+      "component_id": "component-1"
+    },
+    {
+      "name": "email.contentmanager",
+      "component_id": "component-1"
+    },
+    {
+      "name": "email.encoders",
+      "component_id": "component-1"
+    },
+    {
+      "name": "email.errors",
+      "component_id": "component-1"
+    },
+    {
+      "name": "email.feedparser",
+      "component_id": "component-1"
+    },
+    {
+      "name": "email.generator",
+      "component_id": "component-1"
+    },
+    {
+      "name": "email.header",
+      "component_id": "component-1"
+    },
+    {
+      "name": "email.headerregistry",
+      "component_id": "component-1"
+    },
+    {
+      "name": "email.iterators",
+      "component_id": "component-1"
+    },
+    {
+      "name": "email.message",
+      "component_id": "component-1"
+    },
+    {
+      "name": "email.parser",
+      "component_id": "component-1"
+    },
+    {
+      "name": "email.policy",
+      "component_id": "component-1"
+    },
+    {
+      "name": "email.quoprimime",
+      "component_id": "component-1"
+    },
+    {
+      "name": "email.utils",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings._win_cp_codecs",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.aliases",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.ascii",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.base64_codec",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.big5",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.big5hkscs",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.bz2_codec",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.charmap",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.cp037",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.cp1006",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.cp1026",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.cp1125",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.cp1140",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.cp1250",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.cp1251",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.cp1252",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.cp1253",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.cp1254",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.cp1255",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.cp1256",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.cp1257",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.cp1258",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.cp273",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.cp424",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.cp437",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.cp500",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.cp720",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.cp737",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.cp775",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.cp850",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.cp852",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.cp855",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.cp856",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.cp857",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.cp858",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.cp860",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.cp861",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.cp862",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.cp863",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.cp864",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.cp865",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.cp866",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.cp869",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.cp874",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.cp875",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.cp932",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.cp949",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.cp950",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.euc_jis_2004",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.euc_jisx0213",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.euc_jp",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.euc_kr",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.gb18030",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.gb2312",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.gbk",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.hex_codec",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.hp_roman8",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.hz",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.idna",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.iso2022_jp",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.iso2022_jp_1",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.iso2022_jp_2",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.iso2022_jp_2004",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.iso2022_jp_3",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.iso2022_jp_ext",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.iso2022_kr",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.iso8859_1",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.iso8859_10",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.iso8859_11",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.iso8859_13",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.iso8859_14",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.iso8859_15",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.iso8859_16",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.iso8859_2",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.iso8859_3",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.iso8859_4",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.iso8859_5",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.iso8859_6",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.iso8859_7",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.iso8859_8",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.iso8859_9",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.johab",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.koi8_r",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.koi8_t",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.koi8_u",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.kz1048",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.latin_1",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.mac_arabic",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.mac_croatian",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.mac_cyrillic",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.mac_farsi",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.mac_greek",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.mac_iceland",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.mac_latin2",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.mac_roman",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.mac_romanian",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.mac_turkish",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.mbcs",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.oem",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.palmos",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.ptcp154",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.punycode",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.quopri_codec",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.raw_unicode_escape",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.rot_13",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.shift_jis",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.shift_jis_2004",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.shift_jisx0213",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.tis_620",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.undefined",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.unicode_escape",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.utf_16",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.utf_16_be",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.utf_16_le",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.utf_32",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.utf_32_be",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.utf_32_le",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.utf_7",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.utf_8",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.utf_8_sig",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.uu_codec",
+      "component_id": "component-1"
+    },
+    {
+      "name": "encodings.zlib_codec",
+      "component_id": "component-1"
+    },
+    {
+      "name": "enum",
+      "component_id": "component-1"
+    },
+    {
+      "name": "fnmatch",
+      "component_id": "component-1"
+    },
+    {
+      "name": "fractions",
+      "component_id": "component-1"
+    },
+    {
+      "name": "ftplib",
+      "component_id": "component-1"
+    },
+    {
+      "name": "functools",
+      "component_id": "component-1"
+    },
+    {
+      "name": "genericpath",
+      "component_id": "component-1"
+    },
+    {
+      "name": "getopt",
+      "component_id": "component-1"
+    },
+    {
+      "name": "gettext",
+      "component_id": "component-1"
+    },
+    {
+      "name": "glob",
+      "component_id": "component-1"
+    },
+    {
+      "name": "gzip",
+      "component_id": "component-1"
+    },
+    {
+      "name": "hashlib",
+      "component_id": "component-1"
+    },
+    {
+      "name": "heapq",
+      "component_id": "component-1"
+    },
+    {
+      "name": "hmac",
+      "component_id": "component-1"
+    },
+    {
+      "name": "http",
+      "component_id": "component-1"
+    },
+    {
+      "name": "http.client",
+      "component_id": "component-1"
+    },
+    {
+      "name": "http.cookiejar",
+      "component_id": "component-1"
+    },
+    {
+      "name": "importlib",
+      "component_id": "component-1"
+    },
+    {
+      "name": "importlib._abc",
+      "component_id": "component-1"
+    },
+    {
+      "name": "importlib._bootstrap",
+      "component_id": "component-1"
+    },
+    {
+      "name": "importlib._bootstrap_external",
+      "component_id": "component-1"
+    },
+    {
+      "name": "importlib.abc",
+      "component_id": "component-1"
+    },
+    {
+      "name": "importlib.machinery",
+      "component_id": "component-1"
+    },
+    {
+      "name": "importlib.metadata",
+      "component_id": "component-1"
+    },
+    {
+      "name": "importlib.metadata._adapters",
+      "component_id": "component-1"
+    },
+    {
+      "name": "importlib.metadata._collections",
+      "component_id": "component-1"
+    },
+    {
+      "name": "importlib.metadata._functools",
+      "component_id": "component-1"
+    },
+    {
+      "name": "importlib.metadata._itertools",
+      "component_id": "component-1"
+    },
+    {
+      "name": "importlib.metadata._meta",
+      "component_id": "component-1"
+    },
+    {
+      "name": "importlib.metadata._text",
+      "component_id": "component-1"
+    },
+    {
+      "name": "importlib.readers",
+      "component_id": "component-1"
+    },
+    {
+      "name": "importlib.resources",
+      "component_id": "component-1"
+    },
+    {
+      "name": "importlib.resources._adapters",
+      "component_id": "component-1"
+    },
+    {
+      "name": "importlib.resources._common",
+      "component_id": "component-1"
+    },
+    {
+      "name": "importlib.resources._functional",
+      "component_id": "component-1"
+    },
+    {
+      "name": "importlib.resources._itertools",
+      "component_id": "component-1"
+    },
+    {
+      "name": "importlib.resources.abc",
+      "component_id": "component-1"
+    },
+    {
+      "name": "importlib.resources.readers",
+      "component_id": "component-1"
+    },
+    {
+      "name": "importlib.util",
+      "component_id": "component-1"
+    },
+    {
+      "name": "inspect",
+      "component_id": "component-1"
+    },
+    {
+      "name": "io",
+      "component_id": "component-1"
+    },
+    {
+      "name": "ipaddress",
+      "component_id": "component-1"
+    },
+    {
+      "name": "json",
+      "component_id": "component-1"
+    },
+    {
+      "name": "json.decoder",
+      "component_id": "component-1"
+    },
+    {
+      "name": "json.encoder",
+      "component_id": "component-1"
+    },
+    {
+      "name": "json.scanner",
+      "component_id": "component-1"
+    },
+    {
+      "name": "keyword",
+      "component_id": "component-1"
+    },
+    {
+      "name": "linecache",
+      "component_id": "component-1"
+    },
+    {
+      "name": "locale",
+      "component_id": "component-1"
+    },
+    {
+      "name": "logging",
+      "component_id": "component-1"
+    },
+    {
+      "name": "logging.handlers",
+      "component_id": "component-1"
+    },
+    {
+      "name": "lzma",
+      "component_id": "component-1"
+    },
+    {
+      "name": "mimetypes",
+      "component_id": "component-1"
+    },
+    {
+      "name": "netrc",
+      "component_id": "component-1"
+    },
+    {
+      "name": "ntpath",
+      "component_id": "component-1"
+    },
+    {
+      "name": "numbers",
+      "component_id": "component-1"
+    },
+    {
+      "name": "opcode",
+      "component_id": "component-1"
+    },
+    {
+      "name": "operator",
+      "component_id": "component-1"
+    },
+    {
+      "name": "os",
+      "component_id": "component-1"
+    },
+    {
+      "name": "pathlib",
+      "component_id": "component-1"
+    },
+    {
+      "name": "pathlib._os",
+      "component_id": "component-1"
+    },
+    {
+      "name": "pickle",
+      "component_id": "component-1"
+    },
+    {
+      "name": "platform",
+      "component_id": "component-1"
+    },
+    {
+      "name": "posixpath",
+      "component_id": "component-1"
+    },
+    {
+      "name": "pprint",
+      "component_id": "component-1"
+    },
+    {
+      "name": "psutil",
+      "component_id": "component-6"
+    },
+    {
+      "name": "psutil._common",
+      "component_id": "component-6"
+    },
+    {
+      "name": "psutil._ntuples",
+      "component_id": "component-6"
+    },
+    {
+      "name": "psutil._pswindows",
+      "component_id": "component-6"
+    },
+    {
+      "name": "py_compile",
+      "component_id": "component-1"
+    },
+    {
+      "name": "pyi_rth_inspect",
+      "component_id": "component-12"
+    },
+    {
+      "name": "pyi_rth_pyside6",
+      "component_id": "component-12"
+    },
+    {
+      "name": "pyiboot01_bootstrap",
+      "component_id": "component-13"
+    },
+    {
+      "name": "queue",
+      "component_id": "component-1"
+    },
+    {
+      "name": "quopri",
+      "component_id": "component-1"
+    },
+    {
+      "name": "random",
+      "component_id": "component-1"
+    },
+    {
+      "name": "re",
+      "component_id": "component-1"
+    },
+    {
+      "name": "re._casefix",
+      "component_id": "component-1"
+    },
+    {
+      "name": "re._compiler",
+      "component_id": "component-1"
+    },
+    {
+      "name": "re._constants",
+      "component_id": "component-1"
+    },
+    {
+      "name": "re._parser",
+      "component_id": "component-1"
+    },
+    {
+      "name": "reprlib",
+      "component_id": "component-1"
+    },
+    {
+      "name": "selectors",
+      "component_id": "component-1"
+    },
+    {
+      "name": "shiboken6",
+      "component_id": "component-9"
+    },
+    {
+      "name": "shutil",
+      "component_id": "component-1"
+    },
+    {
+      "name": "signal",
+      "component_id": "component-1"
+    },
+    {
+      "name": "smtplib",
+      "component_id": "component-1"
+    },
+    {
+      "name": "socket",
+      "component_id": "component-1"
+    },
+    {
+      "name": "sre_compile",
+      "component_id": "component-1"
+    },
+    {
+      "name": "sre_constants",
+      "component_id": "component-1"
+    },
+    {
+      "name": "sre_parse",
+      "component_id": "component-1"
+    },
+    {
+      "name": "ssl",
+      "component_id": "component-1"
+    },
+    {
+      "name": "stat",
+      "component_id": "component-1"
+    },
+    {
+      "name": "statistics",
+      "component_id": "component-1"
+    },
+    {
+      "name": "string",
+      "component_id": "component-1"
+    },
+    {
+      "name": "stringprep",
+      "component_id": "component-1"
+    },
+    {
+      "name": "subprocess",
+      "component_id": "component-1"
+    },
+    {
+      "name": "sysconfig",
+      "component_id": "component-1"
+    },
+    {
+      "name": "tarfile",
+      "component_id": "component-1"
+    },
+    {
+      "name": "tempfile",
+      "component_id": "component-1"
+    },
+    {
+      "name": "textwrap",
+      "component_id": "component-1"
+    },
+    {
+      "name": "threading",
+      "component_id": "component-1"
+    },
+    {
+      "name": "token",
+      "component_id": "component-1"
+    },
+    {
+      "name": "tokenize",
+      "component_id": "component-1"
+    },
+    {
+      "name": "traceback",
+      "component_id": "component-1"
+    },
+    {
+      "name": "tracemalloc",
+      "component_id": "component-1"
+    },
+    {
+      "name": "types",
+      "component_id": "component-1"
+    },
+    {
+      "name": "typing",
+      "component_id": "component-1"
+    },
+    {
+      "name": "urllib",
+      "component_id": "component-1"
+    },
+    {
+      "name": "urllib.error",
+      "component_id": "component-1"
+    },
+    {
+      "name": "urllib.parse",
+      "component_id": "component-1"
+    },
+    {
+      "name": "urllib.request",
+      "component_id": "component-1"
+    },
+    {
+      "name": "urllib.response",
+      "component_id": "component-1"
+    },
+    {
+      "name": "uuid",
+      "component_id": "component-1"
+    },
+    {
+      "name": "video_converter",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.conversion",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.conversion.planner",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.conversion.preview_planner",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.conversion.validator",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.ffmpeg",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.ffmpeg.audio_filters",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.ffmpeg.capabilities",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.ffmpeg.command_builder",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.ffmpeg.encoders",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.ffmpeg.hardware_detector",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.ffmpeg.loudness",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.ffmpeg.progress",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.ffmpeg.runner",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.ffmpeg.runtime",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.ffmpeg.subtitle_pipeline",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.hardware",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.hardware.diagnosis",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.hardware.inventory",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.hardware.report",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.hardware.resources",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.media",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.media.compatibility",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.media.ffprobe_service",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.models",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.models.audio",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.models.conversion",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.models.encoder",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.models.hardware_diagnosis",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.models.job",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.models.loudness",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.models.media",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.models.preview",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.models.queue",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.models.subtitle",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.presets",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.presets.web_kosmi",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.product",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.services",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.services.batch_settings",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.services.diagnostics",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.services.logging",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.services.loudness_cache",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.services.output_commit",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.services.preview_store",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.services.probe_pool",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.services.queue_controller",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.services.release_smoke",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.services.settings_migration",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.services.startup",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.ui",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.ui.branding",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.ui.diagnostics_dialog",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.ui.error_reporter",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.ui.hardware_assistant",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.ui.hardware_assistant_panel",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.ui.hardware_worker",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.ui.main_window",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.ui.preview_dialog",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.ui.queue_panel",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.ui.queue_view",
+      "component_id": "component-3"
+    },
+    {
+      "name": "video_converter.ui.theme",
+      "component_id": "component-3"
+    },
+    {
+      "name": "warnings",
+      "component_id": "component-1"
+    },
+    {
+      "name": "weakref",
+      "component_id": "component-1"
+    },
+    {
+      "name": "zipfile",
+      "component_id": "component-1"
+    },
+    {
+      "name": "zipfile._path",
+      "component_id": "component-1"
+    },
+    {
+      "name": "zipfile._path.glob",
+      "component_id": "component-1"
+    }
+  ],
+  "executable_container_wrapper": {
+    "prefix_bytes": 848896,
+    "prefix_sha256": "17293fe381886e06109b4e643ad71ddb4424f4ce36c57e05d5402a4309512fb6",
+    "pinned_input_sha256": "8a5a6711c3766a6e5fb74f280ba0e3551e719ce94538d901fdbd1f8f9920b3f0",
+    "method": "actual generated PE prefix; installer payload and component terms reviewed separately",
+    "component_id": "component-11"
+  },
+  "components_requiring_review": 7,
+  "system_runtime_boundary": "Host graphics/kernel drivers are not licensed by this inventory; native dependency review remains mandatory",
+  "not_bundled_dependency_names": [
+    "ADVAPI32.dll",
+    "AUTHZ.dll",
+    "AVICAP32.dll",
+    "AVRT.dll",
+    "CFGMGR32.dll",
+    "COMCTL32.dll",
+    "COMDLG32.dll",
+    "CRYPT32.dll",
+    "DNSAPI.dll",
+    "DWrite.dll",
+    "GDI32.dll",
+    "IMM32.dll",
+    "IPHLPAPI.DLL",
+    "KERNEL32.dll",
+    "MPR.dll",
+    "MSIMG32.dll",
+    "NETAPI32.dll",
+    "OLEAUT32.dll",
+    "POWRPROF.dll",
+    "PROPSYS.dll",
+    "PSAPI.DLL",
+    "RPCRT4.dll",
+    "SETUPAPI.dll",
+    "SHELL32.dll",
+    "SHLWAPI.dll",
+    "Secur32.dll",
+    "UIAutomationCore.DLL",
+    "USER32.dll",
+    "USERENV.dll",
+    "USP10.dll",
+    "UxTheme.dll",
+    "VERSION.dll",
+    "WINHTTP.dll",
+    "WINMM.dll",
+    "WS2_32.dll",
+    "WTSAPI32.DLL",
+    "WTSAPI32.dll",
+    "advapi32.dll",
+    "api-ms-win-core-path-l1-1-0.dll",
+    "api-ms-win-core-winrt-error-l1-1-1.dll",
+    "api-ms-win-core-winrt-l1-1-0.dll",
+    "api-ms-win-core-winrt-string-l1-1-0.dll",
+    "api-ms-win-shcore-scaling-l1-1-1.dll",
+    "bcrypt.dll",
+    "bcryptprimitives.dll",
+    "comctl32.dll",
+    "comdlg32.dll",
+    "d2d1.dll",
+    "d3d11.dll",
+    "d3d12.dll",
+    "d3d9.dll",
+    "dwmapi.dll",
+    "dxgi.dll",
+    "gdi32.dll",
+    "icuuc.dll",
+    "imagehlp.dll",
+    "kernel32.dll",
+    "mpr.dll",
+    "msvcrt.dll",
+    "ncrypt.dll",
+    "ntdll.dll",
+    "ole32.dll",
+    "oleaut32.dll",
+    "pdh.dll",
+    "shell32.dll",
+    "shlwapi.dll",
+    "user32.dll",
+    "version.dll",
+    "winhttp.dll",
+    "winspool.drv",
+    "ws2_32.dll"
+  ],
+  "unexpected_driver_files": [],
+  "source_commit": "eabc0920b4d091cba3b6670b263182babca7e539"
+}

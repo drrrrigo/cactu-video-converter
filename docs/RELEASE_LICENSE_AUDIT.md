@@ -49,6 +49,43 @@ information. Other Qt modules may require the GPL option. Statically linked
 libfuse in the AppImage runtime needs separate analysis; replacing a Qt DLL does
 not satisfy that obligation. No runtime/kernel/GPU driver is licensed by analogy.
 
+### Exact native payload findings and stop condition
+
+Audited source is `eabc0920b4d091cba3b6670b263182babca7e539`; native run
+[44810167815](https://github.com/drrrrigo/cactu-video-converter/actions/runs/44810167815)
+passed both build/smoke steps and failed only at the intended distribution gate.
+Metadata-only evidence is retained in
+`release/evidence/beta1-audit-eabc092/`, including separate installed/portable/
+AppImage inventories, actual FFmpeg output and build-generated hashes. No CI
+application binary was uploaded. These are audit outputs, not a final RC inventory.
+
+The actual Ubuntu image contains 392 files (244 native), 382 embedded Python
+modules and 20 component groups requiring review. Windows installed/portable
+contain 272/270 files, 123/122 native files, 380 embedded modules each and 7/6 open
+groups. There are 101 unresolved file origins in Ubuntu and 47 in each Windows
+payload. Known origin is not the same as reviewed terms/source delivery. Exact
+lists and hashes are in the retained reports; do not extrapolate from group counts.
+
+| Exact file/component in audit output | License / evidence observed | Reason blocked | Possible resolution |
+| --- | --- | --- | --- |
+| `usr/bin/_internal/ffmpeg/ffmpeg`, `ffprobe`; Windows `_internal/ffmpeg/ffmpeg.exe`, `ffprobe.exe` | Actual GPL-3.0-or-later output/configuration with version3, x264/libass, no nonfree; individual static dependencies retain their terms | Core/recipe archives exist, complete matching linked-library sources/patches/notices and durable delivery do not | Retain/host the complete matching source/build set or use a controlled fully documented build; preserve mandatory capabilities |
+| AppImage outer ELF prefix, pinned runtime input SHA `617aa77314d57c8b8e4fae9c3f0b35af7b30d5529cb69e98f64f92510ed98a46` | MIT runtime plus libfuse LGPL-2.1 material, squashfuse and other static dependencies | musl/zstd/zlib/mimalloc exact Alpine-derived correspondence, complete notices and applicable static relinking material unresolved | Reconstruct exact static inputs/source/objects/patches and review delivery, or replace runtime only after compatibility/compliance validation |
+| `usr/bin/_internal/PySide6/Qt/lib/libQt6VirtualKeyboard.so.6`, `libQt6Pdf.so.6`, other actual Qt modules/plugins; Windows `_internal/PySide6/Qt6VirtualKeyboard.dll`, `Qt6Pdf.dll` | Qt 6.11.2 source/license texts retained; module terms and third-party terms apply individually | Proposed GPL option not yet established for the complete actual module/third-party subset | Map each actual library/plugin to exact module sources/notices and chosen permitted license option; preserve dynamic replacement information where LGPL is relied on |
+| `usr/bin/_internal/libmvec.so.1` | Build-host glibc source package 2.35-0ubuntu3.18; glibc LGPL terms require file-specific review | Bundled even though libc/loader remain host dependencies; exact notice/source and necessity not closed | Retain distribution source/patches/notices and document replacement, or deliberately exclude only after dependency/functional validation |
+| `usr/bin/_internal/libssl.so.3`, `libcrypto.so.3`; Windows `_internal/libssl-3-x64.dll`, `libcrypto-3-x64.dll` and additional Python-provided OpenSSL pair | Actual files/imports/hashes recorded; exact OpenSSL build/version-specific terms not established by a Python project label | Per-file versions/provenance/notices incomplete; CPython PSF notice alone is not an OpenSSL review | Resolve exact Python/runner-provided origins, applicable OpenSSL source/license text and packaged notices |
+| Windows `_internal/ucrtbase.dll`, `_internal/api-ms-win-crt-*.dll`, `_internal/PySide6/MSVCP140*.dll` | Actual Microsoft runtime files recorded; applicable Microsoft redistribution terms need exact input/version attribution | Wheel/OS origin and redistribution conditions not completely evidenced | Match files to approved runtime distribution/EULA/notice evidence; do not infer rights from an import name |
+| Setup executable PE prefix and installed `unins000.exe` | Inno Setup 7.1.1 root license/source retained, additional component terms apply | Compression and other installer runtime/stub terms not completely audited | Retain exact additional terms/notices/source where required and map them to generated installer/uninstaller components |
+
+No known graphics/kernel driver-file patterns were found in the actual outputs.
+That scan is supporting evidence only, not blanket approval for native libraries.
+Full packaged Cactu/PSF/PyInstaller/psutil/retained Qt text presence is verified,
+but missing component-specific notices prevent calling the license payload complete.
+
+**STOP before RC1 under the request's dependency rule.** These gaps are explicit
+technical evidence deficiencies, not a claim that the named dependencies can never
+be redistributed. Do not ask the owner to bless missing source/notices. Close them,
+build an exact reviewed RC, then request manual results and final human approval.
+
 ### Final owner approval
 
 - Technical dependency/source closure: **BLOCKED**.

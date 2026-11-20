@@ -1,0 +1,2 @@
+ef3d970a2fd9fb72931650aa743476ba9146be0c5fc0900029eb0350e2327f82  CactuVideoConverter-Portable-0.1.0-beta.1.zip
+6d34b7b6ea5351659f6e7487875fe034dc8de7a834958316d40bc3a591875c85  CactuVideoConverter-Setup-0.1.0-beta.1.exe
