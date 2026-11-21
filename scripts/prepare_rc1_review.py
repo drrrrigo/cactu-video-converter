@@ -6,6 +6,8 @@ import hashlib
 import json
 import os
 import subprocess
+import tarfile
+import io
 from pathlib import Path
 
 from dependency_license_policy import UBUNTU
@@ -83,14 +85,83 @@ def prepare(reports, destination):
         "Cactu / packaging recipe",
         "GPL-3.0-or-later application source; exact native candidate commit",
     )
-    for e in read_json(ROOT / "release/ffmpeg-controlled-lock.json")["sources"]:
-        asset(
-            ROOT / "release/evidence/local/sources" / e["filename"],
-            "FFmpeg combined executable / " + e["project"],
-            "GPL corresponding-source build input (not an independent permissive-library source duty)",
-            e["url"],
-            expected=e["sha256"],
-        )
+    original_lock = read_json(ROOT / "release/ffmpeg-controlled-lock.json")
+    offer_lock = json.loads(json.dumps(original_lock))
+    for e in original_lock["sources"]:
+        source = ROOT / "release/evidence/local/sources" / e["filename"]
+        if sha256(source) != e["sha256"]:
+            raise RuntimeError("Locked FFmpeg source changed")
+        if e["project"] == "AMF":
+            subset = output / ("AMF-headers-" + e["revision"] + ".tar")
+            members = []
+            with tarfile.open(source) as incoming, tarfile.open(subset, "w") as outgoing:
+                for member in incoming:
+                    if not member.isfile():
+                        continue
+                    if "/amf/public/include/" not in member.name and not (
+                        member.name.count("/") == 1
+                        and Path(member.name)
+                        .name.lower()
+                        .startswith(("license", "copying", "notice"))
+                    ):
+                        continue
+                    data = incoming.extractfile(member).read()
+                    if member.name.lower().endswith((".dll", ".exe", ".lib", ".so", ".a")):
+                        raise RuntimeError("Binary unexpectedly present in AMF header subset")
+                    outgoing.addfile(member, io.BytesIO(data))
+                    members.append(
+                        {
+                            "member": member.name,
+                            "sha256": hashlib.sha256(data).hexdigest(),
+                            "size": len(data),
+                        }
+                    )
+            if not any("/amf/public/include/" in m["member"] for m in members):
+                raise RuntimeError("AMF source headers missing")
+            offered = next(x for x in offer_lock["sources"] if x["project"] == "AMF")
+            offered.update(
+                filename=subset.name,
+                sha256=sha256(subset),
+                url="https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/"
+                + subset.name,
+                original_archive_sha256=e["sha256"],
+            )
+            proof = output / "AMF-HEADER-SOURCE-PROVENANCE.json"
+            proof.write_text(
+                json.dumps(
+                    {
+                        "original_archive": e,
+                        "offered_archive": {"filename": subset.name, "sha256": sha256(subset)},
+                        "files": members,
+                        "modifications": "Archive layout reduced to original unmodified include headers and root notices; no header bytes modified. Unused third-party binaries excluded.",
+                    },
+                    indent=2,
+                )
+                + "\n"
+            )
+            asset(
+                subset,
+                "FFmpeg / AMF source headers",
+                "GPL combined-work build input; AMF independent permissive notice retained",
+            )
+            asset(
+                proof, "FFmpeg / AMF source headers", "Original-to-offered per-file hash evidence"
+            )
+        else:
+            asset(
+                source,
+                "FFmpeg combined executable / " + e["project"],
+                "GPL corresponding-source build input (not an independent permissive-library source duty)",
+                e["url"],
+                expected=e["sha256"],
+            )
+    offered_lock_file = output / "FFMPEG-SOURCE-OFFER-LOCK.json"
+    offered_lock_file.write_text(json.dumps(offer_lock, indent=2) + "\n")
+    asset(
+        offered_lock_file,
+        "FFmpeg recipient build",
+        "Source-offer archive-layout overlay; source revisions/header bytes unchanged",
+    )
     qt = read_json(ROOT / "release/qt-source-lock.json")
     for e in qt["archives"]:
         asset(
@@ -238,28 +309,27 @@ def prepare(reports, destination):
                 source = msys.get((project, c["version"]))
                 # Non-system libraries linked into the GPL FFmpeg aggregate are
                 # supplied for that combined-work source scope, not because MIT
-                # or BSD independently requires source publication. Compiler
-                # runtimes retain their explicit exception/System Library scope.
-                if c.get("source_delivery_required") or "GCC-exception" not in license:
-                    if source:
-                        asset(
-                            ROOT
-                            / "release/evidence/local/msys-sources"
-                            / source["archive"]["filename"],
-                            project,
-                            license
-                            + " library source/recipe for selected GPL FFmpeg aggregate (independent permissive terms remain notice-only)",
-                            source["archive"]["url"],
-                        )
-                    else:
-                        missing.append(
-                            {
-                                "component": project,
-                                "version": c["version"],
-                                "missing_file": "exact MSYS source archive",
-                                "completion": "Retain matching source-only package",
-                            }
-                        )
+                # or BSD independently requires source publication. Separately
+                # bundled GCC DLLs retain their own GPL source obligation.
+                if source:
+                    asset(
+                        ROOT
+                        / "release/evidence/local/msys-sources"
+                        / source["archive"]["filename"],
+                        project,
+                        license
+                        + " library source/recipe for selected GPL FFmpeg aggregate (independent permissive terms remain notice-only)",
+                        source["archive"]["url"],
+                    )
+                else:
+                    missing.append(
+                        {
+                            "component": project,
+                            "version": c["version"],
+                            "missing_file": "exact MSYS source archive",
+                            "completion": "Retain matching source-only package",
+                        }
+                    )
             elif f.get("qt_source_mapping"):
                 q = f["qt_source_mapping"]
                 license = "GPL-3.0-only (eligible module code) + incorporated independent terms"
@@ -384,16 +454,63 @@ def prepare(reports, destination):
         )
     if runtime_file.is_file() and sha256(runtime_file) != runtime["sha256"]:
         raise RuntimeError("Runtime source/relink archive changed")
-    asset(
-        runtime_file,
-        "AppImage LGPL-linked prefix",
-        "LGPL source/relink objects/instructions for actual static components",
-    )
+    if runtime_file.is_file():
+        # Ordinary kernel headers are a System Library/build prerequisite, not
+        # shipped program source. Keep all original relink objects and needed
+        # library sources. GCC source stays because standalone relink archives
+        # are supplied, independently of the build-only compiler installation.
+        reduced = output / "Cactu-AppImage-fedfad51-cactu1-LGPL-source-relink.tar"
+        file_hashes, omitted = {}, []
+        with tarfile.open(runtime_file) as incoming, tarfile.open(reduced, "w") as outgoing:
+            for member in incoming:
+                if member.name == "SOURCE-MANIFEST.json":
+                    continue
+                if Path(member.name).name in {"linux-6.6.tar.xz", "patch-6.6.xz"}:
+                    omitted.append(member.name)
+                    continue
+                data = incoming.extractfile(member).read()
+                if member.name in {
+                    "scripts/build_controlled_runtime.py",
+                    "scripts/build_controlled_appimage_runtime.sh",
+                    "scripts/release_common.py",
+                }:
+                    data = (ROOT / member.name).read_bytes()
+                if member.name == "README.txt":
+                    data += b"\nRecipient source-offer scope: kernel/header source archives are omitted as ordinary System Library prerequisites. The immutable lock retains original provenance and retrieval information, not a declaration that those sources are delivered. All 15 original static/CRT link inputs, runtime.o, link map and relevant library sources/notices remain unchanged. Current build helper scripts are supplied (including TMPDIR namespace handling). GCC source is retained for standalone relink archives, not because every compiler/build tool is shipped. Use SOURCE-MANIFEST.json for actual delivered membership. No runtime rebuild or new output identity is asserted by this source packaging change.\n"
+                member.size = len(data)
+                outgoing.addfile(member, io.BytesIO(data))
+                file_hashes[member.name] = hashlib.sha256(data).hexdigest()
+            index_data = json.dumps(
+                {
+                    "scope": "Proposed actual-library LGPL source/relink offer; no kernel source or bootstrap binaries",
+                    "original_source_relink_archive_sha256": runtime["sha256"],
+                    "omitted_system_header_archives": omitted,
+                    "files": file_hashes,
+                    "publication_approved": False,
+                },
+                indent=2,
+            ).encode()
+            member = tarfile.TarInfo("SOURCE-MANIFEST.json")
+            member.size = len(index_data)
+            outgoing.addfile(member, io.BytesIO(index_data))
+        with tarfile.open(reduced) as reopened:
+            for name, expected in file_hashes.items():
+                if hashlib.sha256(reopened.extractfile(name).read()).hexdigest() != expected:
+                    raise RuntimeError("Runtime source-offer roundtrip failed")
+        asset(
+            reduced,
+            "AppImage LGPL-linked prefix",
+            "Actual LGPL source/relink inputs with applicable independent notices; ordinary kernel header source excluded",
+        )
+    else:
+        asset(
+            runtime_file, "AppImage LGPL-linked prefix", "Required retained source/relink material"
+        )
     instructions = output / "RECIPIENT-SOURCE-INSTRUCTIONS.txt"
     instructions.write_text(
         "PROPOSED ONLY — NO PUBLICATION OR HUMAN APPROVAL\nCandidate source commit: "
         + commit
-        + "\nVerify SHA256 for every indexed file. Unpack Cactu-source TAR for exact source, locks, workflows and build scripts. FFmpeg: acquire/cache indexed source inputs under release/evidence/local/sources and use scripts/build_controlled_ffmpeg.py with the recorded native tool profile. Qt: supplied module archives include CMake and PySide build scripts; see upstream README and licenses/NATIVE_LIBRARY_REPLACEMENT.md. Ubuntu sources: dpkg-source -x the indexed .dsc with its original/debian archives. MSYS source-only archives contain PKGBUILD, patches and upstream source; use native MSYS makepkg tooling. Runtime source/relink TAR includes its own instructions and replacement objects. General available build tools are prerequisites, not automatically shipped code. Future release-asset URLs in this index are proposals and do not exist as a published offer.\n"
+        + "\nVerify SHA256 for every indexed file. Unpack Cactu-source TAR for exact source, locks, workflows and build scripts. FFmpeg: acquire/cache indexed source inputs under release/evidence/local/sources and use scripts/build_controlled_ffmpeg.py with the recorded native tool profile. Windows AMF: copy FFMPEG-SOURCE-OFFER-LOCK.json over release/ffmpeg-controlled-lock.json in the recipient build tree; this changes only the delivered AMF archive layout, with every original header hash in AMF-HEADER-SOURCE-PROVENANCE.json. The original candidate baseline remains immutable and is not reapproved by this overlay. Qt: supplied module archives include CMake and PySide build scripts; see upstream README and licenses/NATIVE_LIBRARY_REPLACEMENT.md. Ubuntu sources: dpkg-source -x the indexed .dsc with its original/debian archives. MSYS source-only archives contain PKGBUILD, patches and upstream source; use native MSYS makepkg tooling. Runtime source/relink TAR includes its own instructions and replacement objects. General available build tools are prerequisites, not automatically shipped code. Future release-asset URLs in this index are proposals and do not exist as a published offer.\n"
     )
     asset(
         instructions,

@@ -71,9 +71,9 @@
   },
   "libgcc": {
     "license": "GPL-3.0-or-later WITH GCC-exception-3.1",
-    "required_action": "retain notices; assess GCC Runtime Library Exception eligibility",
-    "source_delivery_required": false,
-    "classification_evidence": "installed supplier license texts; xz/COPYING distinguishes 0BSD liblzma from GPL tools, gettext-runtime/COPYING distinguishes LGPL libraries from GPL programs; GCC runtime exception conditions are human review, not universal source requirement",
+    "required_action": "retain GPL and Runtime Library Exception notices; supply corresponding source/recipe for the separately distributed runtime DLL; exception eligibility governs the independent application",
+    "source_delivery_required": true,
+    "classification_evidence": "GNU GCC Runtime Library Exception 3.1 and official FAQ: distribution of the runtime library itself in object-code form requires a GPLv3 section 6 source method; https://www.gnu.org/licenses/gcc-exception-3.1-faq.html",
     "status": "ENGINEERING_NOTICE_INTEGRATED_PENDING_HUMAN_REVIEW"
   },
   "libiconv": {
@@ -92,9 +92,9 @@
   },
   "libstdc++": {
     "license": "GPL-3.0-or-later WITH GCC-exception-3.1",
-    "required_action": "retain notices; assess GCC Runtime Library Exception eligibility",
-    "source_delivery_required": false,
-    "classification_evidence": "installed supplier license texts; xz/COPYING distinguishes 0BSD liblzma from GPL tools, gettext-runtime/COPYING distinguishes LGPL libraries from GPL programs; GCC runtime exception conditions are human review, not universal source requirement",
+    "required_action": "retain GPL and Runtime Library Exception notices; supply corresponding source/recipe for the separately distributed runtime DLL; exception eligibility governs the independent application",
+    "source_delivery_required": true,
+    "classification_evidence": "GNU GCC Runtime Library Exception 3.1 and official FAQ: distribution of the runtime library itself in object-code form requires a GPLv3 section 6 source method; https://www.gnu.org/licenses/gcc-exception-3.1-faq.html",
     "status": "ENGINEERING_NOTICE_INTEGRATED_PENDING_HUMAN_REVIEW"
   },
   "libunibreak": {
