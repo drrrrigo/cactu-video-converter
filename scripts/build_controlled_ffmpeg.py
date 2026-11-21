@@ -184,7 +184,14 @@ def build(target, work, jobs, environment_profile=None):
         if not pc.is_file() or not archive.is_file():
             raise RuntimeError("Required source-built static input missing: " + package)
         text = pc.read_text()
-        replacement = "${libdir}/lib" + library + ".a"
+        linked_archive = archive.with_name(
+            "libcactu_" + library + "_" + sha256(archive)[:16] + ".a"
+        )
+        shutil.copyfile(archive, linked_archive)
+        # FFmpeg separates -l arguments from compiler flags. An absolute archive
+        # argument otherwise moves before test objects and fails symbol resolution.
+        # A unique exact archive name also prevents host DLL/import-lib fallback.
+        replacement = "-l:" + linked_archive.name
         text, count = re.subn(r"-l" + re.escape(library) + r"(?=\s|$)", lambda _: replacement, text)
         if not count:
             raise RuntimeError("Static pkg-config override not applied: " + package)
@@ -204,6 +211,7 @@ def build(target, work, jobs, environment_profile=None):
                 "archive_sha256": sha256(archive),
                 "pkg_config_sha256": sha256(pc),
                 "replacement": replacement,
+                "linked_archive": linked_archive.name,
             }
         )
     flags = [
