@@ -26,6 +26,16 @@ jobs:
         shell: pwsh
         run: '"${{ steps.msys.outputs.msys2-location }}\ucrt64\bin" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append'
       - run: python scripts/check_windows_runtime.py
+      - name: Stage reference fixture (not the release implementation)
+        run: python scripts/stage_ffmpeg.py windows-x86_64
+      - name: Attribute installed compiler dependencies
+        shell: pwsh
+        run: 'python scripts/collect_msys_native_evidence.py "${{ steps.msys.outputs.msys2-location }}" build/msys-attribution'
+      - run: python scripts/install_packaging_tool.py
+      - name: Test portable and installer prerequisite packaging
+        env:
+          QT_QPA_PLATFORM: offscreen
+        run: python scripts/validate_windows_prerequisite_package.py
       - name: Parse clean-Windows PowerShell helpers
         shell: powershell
         run: |
@@ -39,5 +49,7 @@ jobs:
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: Windows-runtime-check-${{ github.sha }}
-          path: build/windows-runtime/*.json
+          path: |
+            build/windows-runtime/*.json
+            build/prerequisite-package/*.json
           if-no-files-found: warn

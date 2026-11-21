@@ -11,6 +11,7 @@ if __name__ == "__main__":
     for entry in read_json(ROOT / "release/ffmpeg-controlled-lock.json")["sources"]:
         if entry["project"] == "AMF" and args.target.startswith("linux"):
             continue
+        print("Verify locked source:", entry["project"], entry["filename"], flush=True)
         download(
             entry["url"],
             entry["sha256"],
