@@ -30,6 +30,17 @@ SolidCompression=yes
 Type: files; Name: "{app}\VideoConverter.exe"
 Type: files; Name: "{autoprograms}\Video Converter.lnk"
 Type: files; Name: "{autodesktop}\Video Converter.lnk"
+; Exact app-owned paths from prior app-local packages. Never remove system DLLs.
+Type: files; Name: "{app}\_internal\PySide6\MSVCP140.dll"
+Type: files; Name: "{app}\_internal\PySide6\MSVCP140_1.dll"
+Type: files; Name: "{app}\_internal\PySide6\MSVCP140_2.dll"
+Type: files; Name: "{app}\_internal\PySide6\VCRUNTIME140.dll"
+Type: files; Name: "{app}\_internal\PySide6\VCRUNTIME140_1.dll"
+Type: files; Name: "{app}\_internal\shiboken6\MSVCP140.dll"
+Type: files; Name: "{app}\_internal\shiboken6\VCRUNTIME140.dll"
+Type: files; Name: "{app}\_internal\shiboken6\VCRUNTIME140_1.dll"
+Type: files; Name: "{app}\_internal\VCRUNTIME140.dll"
+Type: files; Name: "{app}\_internal\VCRUNTIME140_1.dll"
 
 [Files]
 Source: "..\..\dist\{#ExecutableName}\*"; DestDir: "{app}"; Flags: recursesubdirs createallsubdirs

@@ -5,6 +5,8 @@ import sys
 import tempfile
 from pathlib import Path
 from package_smoke import smoke
+from release_common import ROOT, read_json
+from windows_runtime import assert_no_runtime, microsoft_runtime
 
 
 def test_installer(
@@ -14,6 +16,17 @@ def test_installer(
         raise RuntimeError("Installer testing requires native Windows")
     with tempfile.TemporaryDirectory(prefix="cactu-installed-smoke-") as folder:
         target = Path(folder) / "application"
+        # Simulate an earlier app-local installation using harmless placeholder
+        # bytes. Any stale DLL left behind must fail the installed-payload guard.
+        historical = read_json(
+            ROOT
+            / "release/evidence/rc1-qualification-3b19839/windows/packaging/windows-x86_64-portable-payload.json"
+        )
+        for record in historical["files"]:
+            if microsoft_runtime(record["path"]):
+                old = target / record["path"]
+                old.parent.mkdir(parents=True, exist_ok=True)
+                old.write_bytes(b"legacy application runtime test placeholder")
         subprocess.run(
             [
                 str(installer.resolve()),
@@ -27,6 +40,7 @@ def test_installer(
             timeout=120,
         )
         try:
+            assert_no_runtime(target)
             smoke(target / "CactuVideoConverter.exe")
             if inventory_destination:
                 from payload_inventory import inventory
@@ -45,7 +59,10 @@ def test_installer(
                 check=True,
                 timeout=120,
             )
-        if (target / "CactuVideoConverter.exe").exists():
+        if any(
+            (target / name).exists()
+            for name in ("CactuVideoConverter.exe", "CactuVideoConverter-core.exe")
+        ):
             raise RuntimeError("Uninstall left the application executable behind")
 
 

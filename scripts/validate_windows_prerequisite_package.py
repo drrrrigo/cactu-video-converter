@@ -8,7 +8,6 @@ No executable is uploaded. Production stage/build/release gates are unchanged.
 import json
 import shutil
 import sys
-from pathlib import Path
 from unittest.mock import patch
 
 from release_common import ROOT, read_json, sha256

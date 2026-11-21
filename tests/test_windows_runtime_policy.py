@@ -38,6 +38,21 @@ class WindowsRuntimePolicyTests(unittest.TestCase):
             with self.assertRaisesRegex(RuntimeError, "system-installed"):
                 assert_no_runtime(root)
 
+    def test_setup_removes_only_exact_legacy_app_paths_after_prerequisite_check(self):
+        root = Path(__file__).resolve().parents[1]
+        report = json.loads(
+            (
+                root
+                / "release/evidence/rc1-qualification-3b19839/windows/packaging/windows-x86_64-portable-payload.json"
+            ).read_text()
+        )
+        installer = (root / "packaging/windows/CactuVideoConverter.iss").read_text()
+        for record in report["files"]:
+            if microsoft_runtime(record["path"]):
+                self.assertIn("{app}\\" + record["path"].replace("/", "\\"), installer)
+        self.assertNotIn("{sys}\\MSVCP", installer)
+        self.assertNotIn("{sys}\\VCRUNTIME", installer)
+
     def test_windows_backslashes_and_case_are_handled(self):
         self.assertTrue(microsoft_runtime(r"PySide6\VCRUNTIME140_1.DLL"))
         self.assertFalse(microsoft_runtime("libwinpthread-1.dll"))
