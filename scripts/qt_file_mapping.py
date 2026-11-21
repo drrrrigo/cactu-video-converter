@@ -19,6 +19,10 @@ def qt_file_mapping(relative: str, lock: dict):
             project = "qtwayland"
         elif "svg" in name.lower():
             project = "qtsvg"
+        elif "/imageformats/" in relative and re.match(
+            r"(?:lib)?q(?:icns|tga|tiff|wbmp|webp)\.", name
+        ):
+            project = "qtimageformats"
     elif ("PySide6/" in relative and re.match(r"Qt\w+\.(?:abi3|pyd)", name)) or name.startswith(
         ("libpyside6", "libshiboken6")
     ):

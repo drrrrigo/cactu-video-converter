@@ -56,6 +56,7 @@ def native_details(file: Path, magic: bytes) -> dict:
                                 "ProductVersion",
                                 "FileVersion",
                                 "OriginalFilename",
+                                "LegalCopyright",
                             }:
                                 version[key] = value.decode(errors="replace")
             fixed = getattr(pe, "VS_FIXEDFILEINFO", ())

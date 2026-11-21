@@ -37,6 +37,15 @@
       "sha256": "92f292b8889f8a3213f7d17da5cdcd19f6d7f01611689bdf692890d5fbc7eb61",
       "retained": true,
       "complete_binary_build_correspondence": false
+    },
+    {
+      "project": "qtimageformats",
+      "commit": "47b6139dda3b84d1d3ec15caf8d04eff8d744c8d",
+      "url": "https://codeload.github.com/qt/qtimageformats/tar.gz/47b6139dda3b84d1d3ec15caf8d04eff8d744c8d",
+      "filename": "qtimageformats-47b6139dda3b84d1d3ec15caf8d04eff8d744c8d.tar.gz",
+      "sha256": "5a8390e7d8e1c974f230106c3f4fea5a2b5defc296814b24edb8de6f016328bf",
+      "retained": true,
+      "complete_binary_build_correspondence": false
     }
   ]
 }

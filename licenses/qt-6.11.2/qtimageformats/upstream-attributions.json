@@ -1,0 +1,22 @@
+[
+  {
+    "Id": "libtiff",
+    "Name": "TIFF Software Distribution (libtiff)",
+    "Version": "4.7.2",
+    "License": "libtiff License",
+    "LicenseId": "libtiff",
+    "QtUsage": "Used in the qtiff image plugin if no system libtiff is found.",
+    "Homepage": "http://www.simplesystems.org/libtiff/",
+    "source_file": "src/3rdparty/libtiff/qt_attribution.json"
+  },
+  {
+    "Id": "libwebp",
+    "Name": "WebP (libwebp)",
+    "Version": "1.6.0",
+    "License": "BSD 3-clause \"New\" or \"Revised\" License",
+    "LicenseId": "BSD-3-Clause",
+    "QtUsage": "Used in the qwebp image plugin if no system libwebp is found.",
+    "Homepage": "https://developers.google.com/speed/webp/",
+    "source_file": "src/3rdparty/libwebp/qt_attribution.json"
+  }
+]

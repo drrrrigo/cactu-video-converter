@@ -111,3 +111,22 @@ class DependencyComplianceTests(unittest.TestCase):
             (work / "manifest.json").write_text(json.dumps(build))
             with self.assertRaisesRegex(RuntimeError, "tool profile"):
                 checked_build(work, "linux-x86_64", root)
+
+    def test_shipped_image_format_plugins_use_their_own_source_module(self):
+        from qt_file_mapping import qt_file_mapping
+
+        lock = {
+            "version": "6.11.2",
+            "archives": [
+                {
+                    "project": "qtimageformats",
+                    "commit": "a" * 40,
+                    "filename": "imageformats.tar.gz",
+                    "url": "https://example.invalid/source",
+                    "sha256": "b" * 64,
+                }
+            ],
+        }
+        for plugin in ["libqtiff.so", "qwebp.dll", "qicns.dll", "libqwbmp.so", "qtga.dll"]:
+            result = qt_file_mapping("_internal/PySide6/Qt/plugins/imageformats/" + plugin, lock)
+            self.assertEqual(result["source_project"], "qtimageformats")
