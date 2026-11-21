@@ -1,0 +1,14 @@
+{
+  "implementation": "controlled-source-build",
+  "recipe": "scripts/build_controlled_ffmpeg.py",
+  "recipe_lf_sha256": "9b49e55543230c4f8c8fdce81a40b470455f16ecd08c90a8f7441a170931f25d",
+  "source_lock": "release/ffmpeg-controlled-lock.json",
+  "source_lock_canonical_sha256": "df10e3052357cc39a87e6076f0931a378297ffaa087136237c5599a266ed6d28",
+  "profiles": {
+    "windows-x86_64": "windows-2025-ucrt64",
+    "linux-x86_64": "ubuntu-22.04-gcc"
+  },
+  "qualification": "AUDIT_CANDIDATE_PENDING_HUMAN_REVIEW",
+  "redistribution_approved": false,
+  "corresponding_source_complete": false
+}

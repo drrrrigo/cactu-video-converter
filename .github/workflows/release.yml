@@ -39,13 +39,42 @@ jobs:
         with:
           python-version: '3.14.7'
       - if: runner.os == 'Linux'
-        run: sudo apt-get update && sudo apt-get install -y bubblewrap libegl1 libopengl0 libxkbcommon-x11-0 libxcb-cursor0 libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-render-util0 fonts-dejavu-core
+        run: sudo apt-get update && sudo apt-get install -y autoconf automake libtool pkg-config cmake ninja-build meson libfontconfig1-dev libfreetype6-dev libfribidi-dev libharfbuzz-dev libva-dev zlib1g-dev libbz2-dev liblzma-dev bubblewrap libegl1 libopengl0 libxkbcommon-x11-0 libxcb-cursor0 libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-render-util0 fonts-dejavu-core
       - run: "python -m pip install --require-hashes --only-binary=:all: -r release/requirements.lock"
       - run: python scripts/audit_source.py --history
       - run: python scripts/stage_ffmpeg.py ${{ matrix.target }}
       - run: python -m pip install --no-deps --no-build-isolation -e .
       - run: python -m unittest discover -s tests -v
       - run: ruff check .
+      - if: runner.os == 'Windows'
+        uses: msys2/setup-msys2@ec48f7c5447b3140e2b088413ae3a55687bccb6e
+        id: msys
+        with:
+          msystem: UCRT64
+          update: true
+          install: >-
+            python make autoconf automake libtool mingw-w64-ucrt-x86_64-gcc
+            mingw-w64-ucrt-x86_64-pkgconf mingw-w64-ucrt-x86_64-fontconfig
+            mingw-w64-ucrt-x86_64-freetype mingw-w64-ucrt-x86_64-fribidi
+            mingw-w64-ucrt-x86_64-harfbuzz mingw-w64-ucrt-x86_64-libunibreak
+            mingw-w64-ucrt-x86_64-bzip2 mingw-w64-ucrt-x86_64-xz
+            mingw-w64-ucrt-x86_64-zlib mingw-w64-ucrt-x86_64-libiconv
+            mingw-w64-ucrt-x86_64-cmake mingw-w64-ucrt-x86_64-ninja mingw-w64-ucrt-x86_64-meson
+      - if: runner.os == 'Windows'
+        shell: msys2 {0}
+        run: |
+          /usr/bin/python scripts/acquire_controlled_ffmpeg.py windows-x86_64
+          /usr/bin/python scripts/build_controlled_ffmpeg.py windows-x86_64 --jobs 4 --environment-profile windows-2025-ucrt64
+          /usr/bin/python scripts/collect_msys_native_evidence.py / build/msys-attribution
+      - if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          @("${{ steps.msys.outputs.msys2-location }}\ucrt64\bin", $env:pythonLocation, "$env:pythonLocation\Scripts") | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
+      - if: runner.os == 'Linux'
+        run: |
+          python scripts/acquire_controlled_ffmpeg.py linux-x86_64
+          python scripts/build_controlled_ffmpeg.py linux-x86_64 --jobs 4 --environment-profile ubuntu-22.04-gcc
+      - run: python scripts/validate_controlled_ffmpeg.py build/ffmpeg-controlled/prefix/bin build/ffmpeg-controlled/compatibility.json
       - run: python scripts/install_packaging_tool.py
       - run: python scripts/build_release.py ${{ inputs.candidate_stage == 'rc1' && '--rc1' || '--candidate' }}
       # Text-only evidence is safe to review while binaries remain unapproved.

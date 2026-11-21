@@ -16,12 +16,21 @@ MANIFEST = ROOT / "vendor/ffmpeg/manifest.json"
 
 
 def validate(
-    platform: str, *, directory: Path | None = None, evidence_path: Path | None = None
+    platform: str,
+    *,
+    directory: Path | None = None,
+    evidence_path: Path | None = None,
+    manifest_path: Path | None = None,
 ) -> Path:
-    if not MANIFEST.is_file():
+    selected_manifest = manifest_path or MANIFEST
+    if not selected_manifest.is_file():
         raise RuntimeError("FFmpeg provenance manifest is missing")
-    entry = read_json(MANIFEST)[platform]
-    for field in ("archive_sha256", "ffmpeg_sha256", "ffprobe_sha256", "license_sha256"):
+    entry = read_json(selected_manifest)[platform]
+    fields = ["ffmpeg_sha256", "ffprobe_sha256", "license_sha256"]
+    fields.append(
+        "pair_sha256" if entry.get("input_kind") == "direct-controlled-build" else "archive_sha256"
+    )
+    for field in fields:
         if not digest_valid(entry.get(field, "")):
             raise RuntimeError("FFmpeg provenance digest missing: " + field)
     if (
@@ -89,7 +98,9 @@ def validate(
                     "target": platform,
                     "build_id": entry["build_id"],
                     "archive_filename": entry.get("archive_filename"),
-                    "archive_sha256": entry["archive_sha256"],
+                    "archive_sha256": entry.get("archive_sha256"),
+                    "input_kind": entry.get("input_kind", "provider-archive"),
+                    "pair_sha256": entry.get("pair_sha256"),
                     "ffmpeg_sha256": sha256(binary),
                     "ffprobe_sha256": sha256(directory / ("ffprobe" + suffix)),
                     "ffmpeg_version": output(binary, "-version"),

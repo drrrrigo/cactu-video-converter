@@ -82,16 +82,24 @@ def main() -> int:
             raise RuntimeError("RC1 blocked: technical license/source review is incomplete")
         if any(
             e.get("corresponding_source_complete") is not True
-            for e in read_json(ROOT / "vendor/ffmpeg/manifest.json").values()
+            for e in [read_json(ROOT / "release/controlled-baseline.json")]
         ):
             raise RuntimeError("RC1 blocked: FFmpeg corresponding sources are incomplete")
     environment_evidence = check_environment()
     os.environ["SOURCE_DATE_EPOCH"] = str(environment_evidence["source_date_epoch"])
     config = read_json(ROOT / "release/toolchain.json")
     target = platform_id()
+    from stage_controlled_runtime import stage
+
+    controlled_work = ROOT / "build/ffmpeg-controlled"
+    _, runtime_manifest, controlled_provenance = stage(controlled_work, target)
     output = ROOT / "dist/candidate"
     output.mkdir(parents=True, exist_ok=True)
-    runtime = validate(target, evidence_path=output / (target + "-runtime-evidence.json"))
+    runtime = validate(
+        target,
+        manifest_path=runtime_manifest,
+        evidence_path=output / (target + "-runtime-evidence.json"),
+    )
     licenses = ROOT / "build/licenses"
     if licenses.exists():
         shutil.rmtree(licenses)
@@ -111,10 +119,16 @@ def main() -> int:
     )
     bundle = ROOT / "dist" / EXECUTABLE_NAME
     if sys.platform == "win32":
-        shutil.copy2(ROOT / "build/windows-os-boundary.json", output / (target + "-os-boundary.json"))
+        shutil.copy2(
+            ROOT / "build/windows-os-boundary.json", output / (target + "-os-boundary.json")
+        )
     from native_notices import collect_native_notices
 
     collect_native_notices(bundle / "_internal/licenses", ROOT)
+    if sys.platform == "win32":
+        from msys_payload_notices import integrate
+
+        integrate(bundle, ROOT / "build/msys-attribution/msys-native-evidence.json")
     executable = bundle / (EXECUTABLE_NAME + (".exe" if sys.platform == "win32" else ""))
     signed = sign(executable)
     smoke(executable, destination=output / (target + "-onedir-smoke.json"))
@@ -131,6 +145,7 @@ def main() -> int:
         "signed": signed,
         "artifacts": {},
         "candidate_only": True,
+        "controlled_runtime": controlled_provenance,
     }
     if sys.platform == "win32":
         archive = output / f"{EXECUTABLE_NAME}-Portable-{__version__}.zip"

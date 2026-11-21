@@ -1,0 +1,135 @@
+{
+  "brotli": {
+    "license": "MIT",
+    "required_action": "retain notices",
+    "source_delivery_required": false,
+    "classification_evidence": "installed supplier license texts; xz/COPYING distinguishes 0BSD liblzma from GPL tools, gettext-runtime/COPYING distinguishes LGPL libraries from GPL programs; GCC runtime exception conditions are human review, not universal source requirement",
+    "status": "ENGINEERING_NOTICE_INTEGRATED_PENDING_HUMAN_REVIEW"
+  },
+  "bzip2": {
+    "license": "bzip2-1.0.6",
+    "required_action": "retain notices",
+    "source_delivery_required": false,
+    "classification_evidence": "installed supplier license texts; xz/COPYING distinguishes 0BSD liblzma from GPL tools, gettext-runtime/COPYING distinguishes LGPL libraries from GPL programs; GCC runtime exception conditions are human review, not universal source requirement",
+    "status": "ENGINEERING_NOTICE_INTEGRATED_PENDING_HUMAN_REVIEW"
+  },
+  "expat": {
+    "license": "MIT",
+    "required_action": "retain notices",
+    "source_delivery_required": false,
+    "classification_evidence": "installed supplier license texts; xz/COPYING distinguishes 0BSD liblzma from GPL tools, gettext-runtime/COPYING distinguishes LGPL libraries from GPL programs; GCC runtime exception conditions are human review, not universal source requirement",
+    "status": "ENGINEERING_NOTICE_INTEGRATED_PENDING_HUMAN_REVIEW"
+  },
+  "fontconfig": {
+    "license": "MIT",
+    "required_action": "retain notices",
+    "source_delivery_required": false,
+    "classification_evidence": "installed supplier license texts; xz/COPYING distinguishes 0BSD liblzma from GPL tools, gettext-runtime/COPYING distinguishes LGPL libraries from GPL programs; GCC runtime exception conditions are human review, not universal source requirement",
+    "status": "ENGINEERING_NOTICE_INTEGRATED_PENDING_HUMAN_REVIEW"
+  },
+  "freetype": {
+    "license": "FTL",
+    "required_action": "retain notices",
+    "source_delivery_required": false,
+    "classification_evidence": "installed supplier license texts; xz/COPYING distinguishes 0BSD liblzma from GPL tools, gettext-runtime/COPYING distinguishes LGPL libraries from GPL programs; GCC runtime exception conditions are human review, not universal source requirement",
+    "status": "ENGINEERING_NOTICE_INTEGRATED_PENDING_HUMAN_REVIEW"
+  },
+  "fribidi": {
+    "license": "LGPL-2.1-or-later",
+    "required_action": "retain notices; supply corresponding library source and allow dynamic replacement",
+    "source_delivery_required": true,
+    "classification_evidence": "installed supplier license texts; xz/COPYING distinguishes 0BSD liblzma from GPL tools, gettext-runtime/COPYING distinguishes LGPL libraries from GPL programs; GCC runtime exception conditions are human review, not universal source requirement",
+    "status": "ENGINEERING_NOTICE_INTEGRATED_PENDING_HUMAN_REVIEW"
+  },
+  "gettext-runtime": {
+    "license": "LGPL-2.1-or-later",
+    "required_action": "retain notices; supply corresponding library source and allow dynamic replacement",
+    "source_delivery_required": true,
+    "classification_evidence": "installed supplier license texts; xz/COPYING distinguishes 0BSD liblzma from GPL tools, gettext-runtime/COPYING distinguishes LGPL libraries from GPL programs; GCC runtime exception conditions are human review, not universal source requirement",
+    "status": "ENGINEERING_NOTICE_INTEGRATED_PENDING_HUMAN_REVIEW"
+  },
+  "glib2": {
+    "license": "LGPL-2.1-or-later",
+    "required_action": "retain notices; supply corresponding library source and allow dynamic replacement",
+    "source_delivery_required": true,
+    "classification_evidence": "installed supplier license texts; xz/COPYING distinguishes 0BSD liblzma from GPL tools, gettext-runtime/COPYING distinguishes LGPL libraries from GPL programs; GCC runtime exception conditions are human review, not universal source requirement",
+    "status": "ENGINEERING_NOTICE_INTEGRATED_PENDING_HUMAN_REVIEW"
+  },
+  "graphite2": {
+    "license": "LGPL-2.1-or-later",
+    "required_action": "retain notices; supply corresponding library source and allow dynamic replacement",
+    "source_delivery_required": true,
+    "classification_evidence": "installed supplier license texts; xz/COPYING distinguishes 0BSD liblzma from GPL tools, gettext-runtime/COPYING distinguishes LGPL libraries from GPL programs; GCC runtime exception conditions are human review, not universal source requirement",
+    "status": "ENGINEERING_NOTICE_INTEGRATED_PENDING_HUMAN_REVIEW"
+  },
+  "harfbuzz": {
+    "license": "MIT",
+    "required_action": "retain notices",
+    "source_delivery_required": false,
+    "classification_evidence": "installed supplier license texts; xz/COPYING distinguishes 0BSD liblzma from GPL tools, gettext-runtime/COPYING distinguishes LGPL libraries from GPL programs; GCC runtime exception conditions are human review, not universal source requirement",
+    "status": "ENGINEERING_NOTICE_INTEGRATED_PENDING_HUMAN_REVIEW"
+  },
+  "libgcc": {
+    "license": "GPL-3.0-or-later WITH GCC-exception-3.1",
+    "required_action": "retain notices; assess GCC Runtime Library Exception eligibility",
+    "source_delivery_required": false,
+    "classification_evidence": "installed supplier license texts; xz/COPYING distinguishes 0BSD liblzma from GPL tools, gettext-runtime/COPYING distinguishes LGPL libraries from GPL programs; GCC runtime exception conditions are human review, not universal source requirement",
+    "status": "ENGINEERING_NOTICE_INTEGRATED_PENDING_HUMAN_REVIEW"
+  },
+  "libiconv": {
+    "license": "LGPL-2.1-or-later",
+    "required_action": "retain notices; supply corresponding library source and allow dynamic replacement",
+    "source_delivery_required": true,
+    "classification_evidence": "installed supplier license texts; xz/COPYING distinguishes 0BSD liblzma from GPL tools, gettext-runtime/COPYING distinguishes LGPL libraries from GPL programs; GCC runtime exception conditions are human review, not universal source requirement",
+    "status": "ENGINEERING_NOTICE_INTEGRATED_PENDING_HUMAN_REVIEW"
+  },
+  "libpng": {
+    "license": "libpng-2.0",
+    "required_action": "retain notices",
+    "source_delivery_required": false,
+    "classification_evidence": "installed supplier license texts; xz/COPYING distinguishes 0BSD liblzma from GPL tools, gettext-runtime/COPYING distinguishes LGPL libraries from GPL programs; GCC runtime exception conditions are human review, not universal source requirement",
+    "status": "ENGINEERING_NOTICE_INTEGRATED_PENDING_HUMAN_REVIEW"
+  },
+  "libstdc++": {
+    "license": "GPL-3.0-or-later WITH GCC-exception-3.1",
+    "required_action": "retain notices; assess GCC Runtime Library Exception eligibility",
+    "source_delivery_required": false,
+    "classification_evidence": "installed supplier license texts; xz/COPYING distinguishes 0BSD liblzma from GPL tools, gettext-runtime/COPYING distinguishes LGPL libraries from GPL programs; GCC runtime exception conditions are human review, not universal source requirement",
+    "status": "ENGINEERING_NOTICE_INTEGRATED_PENDING_HUMAN_REVIEW"
+  },
+  "libunibreak": {
+    "license": "Zlib",
+    "required_action": "retain notices",
+    "source_delivery_required": false,
+    "classification_evidence": "installed supplier license texts; xz/COPYING distinguishes 0BSD liblzma from GPL tools, gettext-runtime/COPYING distinguishes LGPL libraries from GPL programs; GCC runtime exception conditions are human review, not universal source requirement",
+    "status": "ENGINEERING_NOTICE_INTEGRATED_PENDING_HUMAN_REVIEW"
+  },
+  "libwinpthread": {
+    "license": "MIT AND BSD-3-Clause",
+    "required_action": "retain notices",
+    "source_delivery_required": false,
+    "classification_evidence": "installed supplier license texts; xz/COPYING distinguishes 0BSD liblzma from GPL tools, gettext-runtime/COPYING distinguishes LGPL libraries from GPL programs; GCC runtime exception conditions are human review, not universal source requirement",
+    "status": "ENGINEERING_NOTICE_INTEGRATED_PENDING_HUMAN_REVIEW"
+  },
+  "pcre2": {
+    "license": "BSD-3-Clause",
+    "required_action": "retain notices",
+    "source_delivery_required": false,
+    "classification_evidence": "installed supplier license texts; xz/COPYING distinguishes 0BSD liblzma from GPL tools, gettext-runtime/COPYING distinguishes LGPL libraries from GPL programs; GCC runtime exception conditions are human review, not universal source requirement",
+    "status": "ENGINEERING_NOTICE_INTEGRATED_PENDING_HUMAN_REVIEW"
+  },
+  "xz": {
+    "license": "0BSD",
+    "required_action": "retain notices",
+    "source_delivery_required": false,
+    "classification_evidence": "installed supplier license texts; xz/COPYING distinguishes 0BSD liblzma from GPL tools, gettext-runtime/COPYING distinguishes LGPL libraries from GPL programs; GCC runtime exception conditions are human review, not universal source requirement",
+    "status": "ENGINEERING_NOTICE_INTEGRATED_PENDING_HUMAN_REVIEW"
+  },
+  "zlib": {
+    "license": "Zlib",
+    "required_action": "retain notices",
+    "source_delivery_required": false,
+    "classification_evidence": "installed supplier license texts; xz/COPYING distinguishes 0BSD liblzma from GPL tools, gettext-runtime/COPYING distinguishes LGPL libraries from GPL programs; GCC runtime exception conditions are human review, not universal source requirement",
+    "status": "ENGINEERING_NOTICE_INTEGRATED_PENDING_HUMAN_REVIEW"
+  }
+}

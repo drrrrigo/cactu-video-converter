@@ -19,6 +19,17 @@ def distribution_allowed(root=ROOT):
         raise RuntimeError(
             "Binary distribution blocked: exact dependency/license/source audit not approved"
         )
+    baseline = root / "release/controlled-baseline.json"
+    if baseline.is_file():
+        entry = read_json(baseline)
+        if (
+            entry.get("redistribution_approved") is not True
+            or entry.get("corresponding_source_complete") is not True
+        ):
+            raise RuntimeError(
+                "Binary distribution blocked: selected controlled baseline source/license approval incomplete"
+            )
+        return
     manifest = read_json(root / "vendor/ffmpeg/manifest.json")
     if set(manifest) != {"linux-x86_64", "windows-x86_64"}:
         raise RuntimeError(

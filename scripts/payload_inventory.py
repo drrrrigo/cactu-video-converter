@@ -256,6 +256,10 @@ def inventory(
     catalog = read_json(root / "release/component-sources.json")
     qt_lock_file = root / "release/qt-source-lock.json"
     qt_lock = read_json(qt_lock_file) if qt_lock_file.is_file() else None
+    msys_file = root / "build/msys-payload-notices.json"
+    msys_records = (
+        {e["sha256"]: e for e in read_json(msys_file)["files"]} if msys_file.is_file() else {}
+    )
     records, components = [], {}
 
     def register(component):
@@ -333,7 +337,17 @@ def inventory(
                 component = dict(catalog["cpython"])
                 component["version"] = sys.version.split()[0]
             elif source.is_relative_to(root / "vendor/ffmpeg"):
-                entry = read_json(root / "vendor/ffmpeg/manifest.json")[target]
+                runtime_manifest = root / "build/controlled-runtime-manifest.json"
+                entry = read_json(
+                    runtime_manifest
+                    if runtime_manifest.is_file()
+                    else root / "vendor/ffmpeg/manifest.json"
+                )[target]
+                expected_hash = entry[
+                    "ffprobe_sha256" if file.name.startswith("ffprobe") else "ffmpeg_sha256"
+                ]
+                if sha256(file) != expected_hash:
+                    raise RuntimeError("Runtime inventory does not match selected FFmpeg manifest")
                 component = dict(catalog["ffmpeg"])
                 component.update(
                     version=entry["build_id"], corresponding_source=entry["source_recipe"]
@@ -342,6 +356,23 @@ def inventory(
                 component = host_package(source)
             if source_evidence and source_evidence["copy_bytes_match"] is not True:
                 component = None
+        msys = msys_records.get(sha256(file)) if native else None
+        if msys:
+            component = {
+                "project": msys["source_package"],
+                "version": msys["version"],
+                "origin": "exact-msys2-package-by-sha256",
+                "license": msys["license"],
+                "notice": msys["notices"][0]["path"],
+                "required_action": msys["required_action"],
+                "source_delivery_required": msys["source_delivery_required"],
+                "review_status": "ENGINEERING_NOTICE_INTEGRATED_PENDING_HUMAN_REVIEW",
+            }
+            source_evidence = {
+                "distribution": msys["package"] + " " + msys["version"],
+                "source_sha256": msys["sha256"],
+                "copy_bytes_match": True,
+            }
         if native and details and details.get("format") == "PE":
             version = details.get("version_resource", {})
             if "Microsoft" in version.get("CompanyName", ""):
