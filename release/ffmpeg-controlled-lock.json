@@ -36,6 +36,13 @@
       "sha256": "4255b6cbf2637c778da77ce77ccbb89e92870b3047af5fd56bb680b043ea60b5",
       "revision": "57ee0cfb0e1a08d9041f77435653794c1b012be0",
       "url": "https://codeload.github.com/GPUOpen-LibrariesAndSDKs/AMF/tar.gz/57ee0cfb0e1a08d9041f77435653794c1b012be0"
+    },
+    {
+      "project": "oneVPL",
+      "filename": "50-onevpl--412c5cffe3022d5ebb8a955c3b30afe7bd2e3929.tar.gz",
+      "sha256": "deb2641c23f4350f8dbe965be6e424e59fa6696c7b5528ceb9d77a29244cccc4",
+      "revision": "412c5cffe3022d5ebb8a955c3b30afe7bd2e3929",
+      "url": "https://codeload.github.com/intel/libvpl/tar.gz/412c5cffe3022d5ebb8a955c3b30afe7bd2e3929"
     }
   ],
   "patches": [],

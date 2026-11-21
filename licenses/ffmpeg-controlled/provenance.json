@@ -1,0 +1,85 @@
+{
+  "scope": "Exact source-root notice superset for controlled candidate inputs; AMF applies to Windows; not a final license approval or full toolchain/dependency closure",
+  "files": [
+    {
+      "project": "FFmpeg",
+      "source_commit": "d59078794d80f5256d5def27e10bb5400a13195c",
+      "source_archive_sha256": "a2b303c48a30a23c0d2b10058cb73845b16b2029856486a5f57210a620d4105a",
+      "member": "COPYING.GPLv2",
+      "notice_file": "licenses/ffmpeg-controlled/FFmpeg/COPYING.GPLv2",
+      "notice_sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+    },
+    {
+      "project": "FFmpeg",
+      "source_commit": "d59078794d80f5256d5def27e10bb5400a13195c",
+      "source_archive_sha256": "a2b303c48a30a23c0d2b10058cb73845b16b2029856486a5f57210a620d4105a",
+      "member": "COPYING.GPLv3",
+      "notice_file": "licenses/ffmpeg-controlled/FFmpeg/COPYING.GPLv3",
+      "notice_sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    {
+      "project": "FFmpeg",
+      "source_commit": "d59078794d80f5256d5def27e10bb5400a13195c",
+      "source_archive_sha256": "a2b303c48a30a23c0d2b10058cb73845b16b2029856486a5f57210a620d4105a",
+      "member": "COPYING.LGPLv2.1",
+      "notice_file": "licenses/ffmpeg-controlled/FFmpeg/COPYING.LGPLv2.1",
+      "notice_sha256": "246041b6ecf9bc32d718a62c57877c78b5eb397b6467e74ed7ae2626ab189c30"
+    },
+    {
+      "project": "FFmpeg",
+      "source_commit": "d59078794d80f5256d5def27e10bb5400a13195c",
+      "source_archive_sha256": "a2b303c48a30a23c0d2b10058cb73845b16b2029856486a5f57210a620d4105a",
+      "member": "COPYING.LGPLv3",
+      "notice_file": "licenses/ffmpeg-controlled/FFmpeg/COPYING.LGPLv3",
+      "notice_sha256": "da7eabb7bafdf7d3ae5e9f223aa5bdc1eece45ac569dc21b3b037520b4464768"
+    },
+    {
+      "project": "FFmpeg",
+      "source_commit": "d59078794d80f5256d5def27e10bb5400a13195c",
+      "source_archive_sha256": "a2b303c48a30a23c0d2b10058cb73845b16b2029856486a5f57210a620d4105a",
+      "member": "LICENSE.md",
+      "notice_file": "licenses/ffmpeg-controlled/FFmpeg/LICENSE.md",
+      "notice_sha256": "2e1d16c72fd74e12063776371da757322f8b77589386532f4fd8634bde7de1af"
+    },
+    {
+      "project": "x264",
+      "source_commit": "0480cb05fa188d37ae87e8f4fd8f1aea3711f7ee",
+      "source_archive_sha256": "d0967a1348c85dfde363bb52610403be898171493100561efa0dd05d5fd1ae50",
+      "member": "AUTHORS",
+      "notice_file": "licenses/ffmpeg-controlled/x264/AUTHORS",
+      "notice_sha256": "783150c1bef404fc7140924f3006eff27c940ea73ef38b3bc76fcb9c173229a5"
+    },
+    {
+      "project": "x264",
+      "source_commit": "0480cb05fa188d37ae87e8f4fd8f1aea3711f7ee",
+      "source_archive_sha256": "d0967a1348c85dfde363bb52610403be898171493100561efa0dd05d5fd1ae50",
+      "member": "COPYING",
+      "notice_file": "licenses/ffmpeg-controlled/x264/COPYING",
+      "notice_sha256": "32b1062f7da84967e7019d01ab805935caa7ab7321a7ced0e30ebe75e5df1670"
+    },
+    {
+      "project": "libass",
+      "source_commit": "21b5a54fceff49c126c201d4b51c6445287a5072",
+      "source_archive_sha256": "cc971ba7cb615f2276ef51ba8206e7eee8cd567d565255e923879bb7bab49032",
+      "member": "COPYING",
+      "notice_file": "licenses/ffmpeg-controlled/libass/COPYING",
+      "notice_sha256": "f7e30699d02798351e7f839e3d3bfeb29ce65e44efa7735c225464c4fd7dfe9c"
+    },
+    {
+      "project": "AMF",
+      "source_commit": "57ee0cfb0e1a08d9041f77435653794c1b012be0",
+      "source_archive_sha256": "4255b6cbf2637c778da77ce77ccbb89e92870b3047af5fd56bb680b043ea60b5",
+      "member": "LICENSE.txt",
+      "notice_file": "licenses/ffmpeg-controlled/AMF/LICENSE.txt",
+      "notice_sha256": "eb297397aaa455b5668ab67d216b83828466152dab123fa92384c6ec16b74170"
+    },
+    {
+      "project": "oneVPL",
+      "source_commit": "412c5cffe3022d5ebb8a955c3b30afe7bd2e3929",
+      "source_archive_sha256": "deb2641c23f4350f8dbe965be6e424e59fa6696c7b5528ceb9d77a29244cccc4",
+      "member": "LICENSE",
+      "notice_file": "licenses/ffmpeg-controlled/oneVPL/LICENSE",
+      "notice_sha256": "bf1cfac2e2792b6e1e995ce103d70796aecaf2ec7e4c5fe5474f7acec7b4a677"
+    }
+  ]
+}

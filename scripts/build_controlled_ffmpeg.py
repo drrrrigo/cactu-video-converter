@@ -65,7 +65,16 @@ def build(target, work, jobs):
     # Upstream's version.sh otherwise discovers the enclosing Cactu repository.
     version = "9.0.2-cactu-" + lock["sources"][0]["revision"][:12]
     (sources["FFmpeg"] / "VERSION").write_text(version + "\n")
-    for command in ["gcc", "make", "pkg-config", "autoconf", "automake", "libtoolize"]:
+    for command in [
+        "gcc",
+        "make",
+        "pkg-config",
+        "autoconf",
+        "automake",
+        "libtoolize",
+        "cmake",
+        "ninja",
+    ]:
         executable = shutil.which(command)
         if not executable:
             raise RuntimeError("Missing build tool: " + command)
@@ -77,6 +86,29 @@ def build(target, work, jobs):
     (work / "environment.json").write_text(
         json.dumps({"platform": platform.platform(), "tools": records}, indent=2) + "\n"
     )
+    vpl_build = work / "vpl-build"
+    run(
+        "vpl-configure",
+        [
+            "cmake",
+            "-S",
+            str(sources["oneVPL"]),
+            "-B",
+            str(vpl_build),
+            "-G",
+            "Ninja",
+            "-DCMAKE_BUILD_TYPE=Release",
+            "-DBUILD_SHARED_LIBS=OFF",
+            "-DBUILD_TESTS=OFF",
+            "-DBUILD_EXAMPLES=OFF",
+            "-DCMAKE_POSITION_INDEPENDENT_CODE=ON",
+            "-DCMAKE_INSTALL_LIBDIR=lib",
+            "-DCMAKE_INSTALL_PREFIX=" + str(prefix),
+        ],
+        work,
+    )
+    run("vpl-build", ["cmake", "--build", str(vpl_build), "--parallel", str(jobs)], work)
+    run("vpl-install", ["cmake", "--install", str(vpl_build)], work)
     # No privileged SDK/driver installation. Headers are retained source inputs.
     run("nvheaders", ["make", "install", "PREFIX=" + str(prefix)], sources["nv-codec-headers"])
     run(
@@ -131,6 +163,7 @@ def build(target, work, jobs):
         "--enable-nvdec",
         "--enable-cuvid",
         "--pkg-config-flags=--static",
+        "--extra-libs=-lstdc++",
     ]
     if target.startswith("linux"):
         flags += ["--enable-vaapi"]
@@ -155,7 +188,11 @@ def build(target, work, jobs):
         "target": target,
         "source_lock_sha256": sha256(ROOT / "release/ffmpeg-controlled-lock.json"),
         "recipe_sha256": sha256(Path(__file__)),
-        "source_inputs": lock["sources"],
+        "source_inputs": [entry for entry in lock["sources"] if entry["project"] in sources],
+        "generated_inputs": {"FFmpeg/VERSION": version + "\n"},
+        "local_static_archives": [
+            {"filename": p.name, "sha256": sha256(p)} for p in sorted((prefix / "lib").glob("*.a"))
+        ],
         "patches": [],
         "configure": flags,
         "tools": records,

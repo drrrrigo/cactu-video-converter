@@ -20,15 +20,16 @@ from video_converter.ffmpeg.runtime import FFmpegRuntime
 
 
 def validate(candidate, output):
-    original = FFmpegRuntime.bundled_directory() / "ffmpeg"
-    binary = candidate / "ffmpeg"
+    suffix = ".exe" if sys.platform == "win32" else ""
+    original = FFmpegRuntime.bundled_directory() / ("ffmpeg" + suffix)
+    binary = candidate / ("ffmpeg" + suffix)
     tables = capability_tables(binary)
     require_capabilities(tables)
     if not {"mpeg4", "av1", "vp8", "vp9", "png", "flac", "ac3", "opus"} <= tables["-decoders"]:
         raise RuntimeError("Common input decoder regression")
-    required_hw = {"h264_nvenc", "h264_vaapi", "h264_qsv"}
+    required_hw = {"h264_nvenc", "h264_qsv", "h264_amf" if suffix else "h264_vaapi"}
     if not required_hw <= tables["-encoders"]:
-        raise RuntimeError("Missing required Linux hardware interfaces")
+        raise RuntimeError("Missing required native hardware interfaces")
     if "mpeg4" not in tables["-decoders"] or "libxvid" in tables["-encoders"]:
         raise RuntimeError("Native Xvid input decoding / external encoder boundary incorrect")
     real_run = subprocess.run

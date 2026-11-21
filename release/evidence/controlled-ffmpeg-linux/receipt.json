@@ -28,13 +28,6 @@
       "sha256": "84cefa55265740888a269625474eda5bd018955c2302b72cfe7473ddc82f741f",
       "revision": "f2053071ea93137255b6dcf42e9b4c9e0965a44e",
       "url": "https://codeload.github.com/FFmpeg/nv-codec-headers/tar.gz/f2053071ea93137255b6dcf42e9b4c9e0965a44e"
-    },
-    {
-      "project": "AMF",
-      "filename": "50-amf--57ee0cfb0e1a08d9041f77435653794c1b012be0.tar.gz",
-      "sha256": "4255b6cbf2637c778da77ce77ccbb89e92870b3047af5fd56bb680b043ea60b5",
-      "revision": "57ee0cfb0e1a08d9041f77435653794c1b012be0",
-      "url": "https://codeload.github.com/GPUOpen-LibrariesAndSDKs/AMF/tar.gz/57ee0cfb0e1a08d9041f77435653794c1b012be0"
     }
   ],
   "outputs": {
@@ -167,5 +160,45 @@
     "initial_candidate_seconds": 78.769,
     "hevc_fixture_provider_count": 4,
     "fixture_timeout": "One concurrent run timed out generating HEVC fixture with unchanged provider; complete sequential run passed without changing timeout."
-  }
+  },
+  "active_source_input_count": 4,
+  "unused_windows_header_input": "AMF is not an active Linux build input; prior recipe lock is a target superset",
+  "local_static_archives": [
+    {
+      "filename": "libass.a",
+      "sha256": "6078888515b3e0754ef70040e63b68649c9ee5fcb6c3ff56d9dd0ad924ab23a5"
+    },
+    {
+      "filename": "libavcodec.a",
+      "sha256": "90dfb816ce39949c9b35be5afb058afa754fba1e53f2f615468f181ef63d5342"
+    },
+    {
+      "filename": "libavdevice.a",
+      "sha256": "376cac975185d3a17703f726af560cfbf4078cc68da2a36dd2c77bb006d14425"
+    },
+    {
+      "filename": "libavfilter.a",
+      "sha256": "1542797b8bad3acca7da0ecf684d208e7b12fe5a58425c0515d0b0b0fe1806a6"
+    },
+    {
+      "filename": "libavformat.a",
+      "sha256": "80e6f19a41831ca7ada7814b2ca5ba303c02251f7fddc64ff9810c15f04dc6f5"
+    },
+    {
+      "filename": "libavutil.a",
+      "sha256": "54256b19fd38d3f60e608ac21107588858eaa359e9f942ba839e0458e26511a0"
+    },
+    {
+      "filename": "libswresample.a",
+      "sha256": "90b0998f7e7779aaea6dcb9f658c2cb3155a05063df3379c320edd2754e77868"
+    },
+    {
+      "filename": "libswscale.a",
+      "sha256": "881e50eaeadc61db1f97bee42face21a511e4cfaa495df0d1a0b8e36d957865b"
+    },
+    {
+      "filename": "libx264.a",
+      "sha256": "b8dd8a39b35ff5d5a5cf131e3a9da5fa2e325b675ed8c2093ae1405ef427261a"
+    }
+  ]
 }

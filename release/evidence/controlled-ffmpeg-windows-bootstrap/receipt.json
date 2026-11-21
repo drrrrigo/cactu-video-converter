@@ -1,0 +1,28 @@
+{
+  "source_commit": "a6886383d865ececc170ce0d19d96d8672621e5a",
+  "workflow_run": 44857435005,
+  "job_id": 136702814707,
+  "conclusion": "success",
+  "native_windows_build": true,
+  "software_h264_aac_conversion": "passed",
+  "full_candidate_suite": "not part of this first bootstrap; subsequent workflow adds it",
+  "frozen_windows_package": "not part of this first bootstrap; subsequent workflow adds it",
+  "physical_gpu": "unavailable in cloud",
+  "complete_corresponding_source": false,
+  "publication_approved": false,
+  "scope": "metadata only; no native executable uploaded or downloaded",
+  "files": [
+    {
+      "file": "packages.txt",
+      "sha256": "df007156fd2cb1c30b630270aecf59442f04ca63dcaaf9314a3a16bc35b33df1"
+    },
+    {
+      "file": "environment.json",
+      "sha256": "4e0beef5f5cf6a38eb026365e0751d61b654e4fea7351320a38a6e9cce64783a"
+    },
+    {
+      "file": "manifest.json",
+      "sha256": "3915eb93efdb85a572c3912775ffee5c74db9f0fea6c74af838f304119b3809e"
+    }
+  ]
+}

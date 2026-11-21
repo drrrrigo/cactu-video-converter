@@ -98,3 +98,16 @@ Schannel; Python OpenSSL remains separately subject to its actual supplier terms
 Visual C++ runtime DLLs retain Microsoft conditions and are not relicensed by Qt
 or Cactu. Complete upstream/build/notice/delivery review remains blocked as specified
 in docs/BETA1_BLOCKER_RESOLUTION.md. These records do not authorize publication.
+
+
+## Controlled FFmpeg source-root notices (unapproved candidates)
+
+Controlled candidate source notices for FFmpeg, x264, libass, NV codec headers,
+oneVPL and Windows AMF headers are retained in licenses/ffmpeg-controlled. Its
+provenance index identifies exact upstream bytes and platform scope. It is a
+source-root notice superset, not a final declaration that optional/build-only code
+is incorporated. The selected provider runtime is unchanged. The ICU 73.2 and
+CPython OpenSSL/compression source/supplier notices are retained separately under
+licenses/icu-73.2 and licenses/python-native. Source archives remain local; exact
+mapping does not automatically approve complete corresponding-source delivery or
+individual component terms. See docs/FFMPEG_CONTROLLED_BUILD.md.

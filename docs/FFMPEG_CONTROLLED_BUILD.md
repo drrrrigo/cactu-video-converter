@@ -124,3 +124,29 @@ technical/source set closes should the owner provide qualifying redistribution
 rights review, exact-artifact Windows/Linux manual acceptance and final release
 approval. None is requested to compensate for missing evidence. No beta tag,
 release, binary artifact or source-bundle upload has been made.
+
+
+## Native Windows bootstrap and source-built SDK follow-up — 2026-11-21
+
+Native Windows bootstrap run 44857435005 at a688638 completed successfully with
+MSYS2 GCC 16.2.0 and an actual software H.264/AAC conversion. Its ffmpeg SHA-256 is
+758bc9dc4010d697bad7b23465e86db8ddc466c17aadbdb1e9b26f949fbe8451;
+ffprobe is b1f8e3735c3875bfae01da33b4dbe97a392579d9a42c87b935c68c352ff59147.
+Only JSON/package metadata was uploaded/downloaded. This first bootstrap did not
+include the full candidate suite or frozen Windows tests; it is not a final RC.
+Exact evidence: release/evidence/controlled-ffmpeg-windows-bootstrap.
+
+The subsequent recipe builds the pinned oneVPL source instead of linking the host
+oneVPL binary. CMake/Ninja identities are recorded; the local build-only CMake wheel
+is SHA-256 pinned in ffmpeg-build-tool-lock.json. A real static-link failure exposed
+missing C++ runtime linkage in oneVPL's pkg-config metadata, fixed with explicit
+-lstdc++. No SDK driver implementation is bundled. The expanded manual workflow
+adds Ubuntu 22.04 and full native candidate/frozen/installer tests on both targets;
+results must be assessed separately from the successful initial bootstrap.
+
+Source-root notices for the actual controlled inputs are retained under
+licenses/ffmpeg-controlled with immutable source/notice hashes. AMF is a Windows
+header input, not an active Linux input. native-file-source-mapping.json explicitly
+maps six audited Windows Python files to supplier/source/notice evidence. This is
+not blanket per-file legal clearance. All source/technical/publication flags remain
+false and source-asset index approval remains unset.
