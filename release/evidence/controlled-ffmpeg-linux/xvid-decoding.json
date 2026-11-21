@@ -1,0 +1,23 @@
+{
+  "input": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "mpeg4",
+        "codec_tag_string": "XVID"
+      }
+    ]
+  },
+  "output": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264"
+      }
+    ]
+  },
+  "external_libxvid_used": false,
+  "result": "pass"
+}

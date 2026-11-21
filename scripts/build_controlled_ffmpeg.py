@@ -30,8 +30,15 @@ def build(target, work, jobs):
     logs.mkdir(exist_ok=True)
 
     def run(name, argv, cwd):
-        with (logs / (name + ".log")).open("w") as log:
-            subprocess.run(argv, cwd=cwd, env=env, stdout=log, stderr=subprocess.STDOUT, check=True)
+        path = logs / (name + ".log")
+        try:
+            with path.open("w") as log:
+                subprocess.run(
+                    argv, cwd=cwd, env=env, stdout=log, stderr=subprocess.STDOUT, check=True
+                )
+        except subprocess.CalledProcessError:
+            print(path.read_text(errors="replace")[-6000:], flush=True)
+            raise
 
     sources = {}
     for entry in lock["sources"]:
@@ -114,6 +121,10 @@ def build(target, work, jobs):
         "--enable-version3",
         "--enable-libx264",
         "--enable-libass",
+        "--enable-zlib",
+        "--enable-bzlib",
+        "--enable-lzma",
+        "--enable-iconv",
         "--enable-libvpl",
         "--enable-ffnvcodec",
         "--enable-nvenc",

@@ -50,4 +50,5 @@ jobs:
             build/ffmpeg-controlled/manifest.json
             build/ffmpeg-controlled/environment.json
             build/ffmpeg-controlled/packages.txt
+            build/ffmpeg-controlled/logs/*.log
           if-no-files-found: warn

@@ -1,0 +1,118 @@
+{
+  "cpython_version": "3.14.7",
+  "recipe_evidence": "CPython 3.14.7 PCbuild/get_externals.bat",
+  "records": [
+    {
+      "repository": "python/cpython-bin-deps",
+      "declared_tag": "openssl-bin-3.5.7",
+      "commit": "3217be5a2a7e20dbc5f5b5160ef21a9c84de7138",
+      "url": "https://codeload.github.com/python/cpython-bin-deps/tar.gz/3217be5a2a7e20dbc5f5b5160ef21a9c84de7138",
+      "filename": "openssl-bin-3.5.7-3217be5a2a7e20dbc5f5b5160ef21a9c84de7138.tar.gz",
+      "sha256": "e822b0ff763bff7edf6053baf31dbb33c2f304c993b2b3171b2c7adaff40e4f5",
+      "license_files": [
+        {
+          "member": "cpython-bin-deps-3217be5a2a7e20dbc5f5b5160ef21a9c84de7138/amd64/LICENSE.txt",
+          "sha256": "ed72ce2b51ee58f117e5a021e2e04af158857f40269fbc03491f0b2a99dbcc96"
+        },
+        {
+          "member": "cpython-bin-deps-3217be5a2a7e20dbc5f5b5160ef21a9c84de7138/arm64/LICENSE.txt",
+          "sha256": "ed72ce2b51ee58f117e5a021e2e04af158857f40269fbc03491f0b2a99dbcc96"
+        },
+        {
+          "member": "cpython-bin-deps-3217be5a2a7e20dbc5f5b5160ef21a9c84de7138/win32/LICENSE.txt",
+          "sha256": "ed72ce2b51ee58f117e5a021e2e04af158857f40269fbc03491f0b2a99dbcc96"
+        }
+      ],
+      "matching_payload_files": [
+        {
+          "path": "_internal/libcrypto-3.dll",
+          "archive_member": "cpython-bin-deps-3217be5a2a7e20dbc5f5b5160ef21a9c84de7138/amd64/libcrypto-3.dll",
+          "sha256": "53c529145339fb042a3dcd3a09c2d7753204f8b4fc79d99e0d31e69a33985958"
+        },
+        {
+          "path": "_internal/libssl-3.dll",
+          "archive_member": "cpython-bin-deps-3217be5a2a7e20dbc5f5b5160ef21a9c84de7138/amd64/libssl-3.dll",
+          "sha256": "b17a87979862d19241edc4318f967e24c3ec356ed6c2368f561179fab2311001"
+        }
+      ]
+    },
+    {
+      "repository": "python/cpython-source-deps",
+      "declared_tag": "openssl-3.5.7",
+      "commit": "6a6901fa60c604816acb50b4e167791e5339c8f8",
+      "url": "https://codeload.github.com/python/cpython-source-deps/tar.gz/6a6901fa60c604816acb50b4e167791e5339c8f8",
+      "filename": "openssl-3.5.7-6a6901fa60c604816acb50b4e167791e5339c8f8.tar.gz",
+      "sha256": "c65d5be08510e468823bd3689aa8e30681c3f68778b1d2ba528638c7bff11710",
+      "license_files": [
+        {
+          "member": "cpython-source-deps-6a6901fa60c604816acb50b4e167791e5339c8f8/LICENSE.txt",
+          "sha256": "7d5450cb2d142651b8afa315b5f238efc805dad827d91ba367d8516bc9d49e7a"
+        },
+        {
+          "member": "cpython-source-deps-6a6901fa60c604816acb50b4e167791e5339c8f8/external/perl/Text-Template-1.56/LICENSE",
+          "sha256": "9837f05336ef3cbacb6a96e1672a0426d81ad01191f214b8d48e22ca62338181"
+        }
+      ],
+      "matching_payload_files": []
+    },
+    {
+      "repository": "python/cpython-source-deps",
+      "declared_tag": "bzip2-1.0.8",
+      "commit": "05301997b2f9590f49c672cf3dfd3d3dfa7ad521",
+      "url": "https://codeload.github.com/python/cpython-source-deps/tar.gz/05301997b2f9590f49c672cf3dfd3d3dfa7ad521",
+      "filename": "bzip2-1.0.8-05301997b2f9590f49c672cf3dfd3d3dfa7ad521.tar.gz",
+      "sha256": "ab14accac86cdd92021d50465deeb221b476d6675bd1383d3c7fb83751c2e0a3",
+      "license_files": [
+        {
+          "member": "cpython-source-deps-05301997b2f9590f49c672cf3dfd3d3dfa7ad521/LICENSE",
+          "sha256": "c6dbbf828498be844a89eaa3b84adbab3199e342eb5cb2ed2f0d4ba7ec0f38a3"
+        }
+      ],
+      "matching_payload_files": []
+    },
+    {
+      "repository": "python/cpython-source-deps",
+      "declared_tag": "xz-5.2.5",
+      "commit": "c6bc0c612605622aaef101a33a751f9de2ecc193",
+      "url": "https://codeload.github.com/python/cpython-source-deps/tar.gz/c6bc0c612605622aaef101a33a751f9de2ecc193",
+      "filename": "xz-5.2.5-c6bc0c612605622aaef101a33a751f9de2ecc193.tar.gz",
+      "sha256": "115433c946ee069e857fd04cf41b38a4a74ed45d868a3b2e08ccd4a1f04f39d0",
+      "license_files": [
+        {
+          "member": "cpython-source-deps-c6bc0c612605622aaef101a33a751f9de2ecc193/COPYING",
+          "sha256": "bcb02973ef6e87ea73d331b3a80df7748407f17efdb784b61b47e0e610d3bb5c"
+        },
+        {
+          "member": "cpython-source-deps-c6bc0c612605622aaef101a33a751f9de2ecc193/COPYING.GPLv2",
+          "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+        },
+        {
+          "member": "cpython-source-deps-c6bc0c612605622aaef101a33a751f9de2ecc193/COPYING.GPLv3",
+          "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+        },
+        {
+          "member": "cpython-source-deps-c6bc0c612605622aaef101a33a751f9de2ecc193/COPYING.LGPLv2.1",
+          "sha256": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551"
+        }
+      ],
+      "matching_payload_files": []
+    },
+    {
+      "repository": "python/cpython-source-deps",
+      "declared_tag": "zlib-ng-2.2.4",
+      "commit": "a502e047655c31db29601def76ad6539acacf43d",
+      "url": "https://codeload.github.com/python/cpython-source-deps/tar.gz/a502e047655c31db29601def76ad6539acacf43d",
+      "filename": "zlib-ng-2.2.4-a502e047655c31db29601def76ad6539acacf43d.tar.gz",
+      "sha256": "bdd663f25d83d29814bd903746392108b7bd5b880d101fc8a07aa3c12dd521f5",
+      "license_files": [
+        {
+          "member": "cpython-source-deps-a502e047655c31db29601def76ad6539acacf43d/LICENSE.md",
+          "sha256": "6c9f0d975b41afaa34d22f55bb8986ce69e5cb7ad327cb2b28820cd425edf5ee"
+        }
+      ],
+      "matching_payload_files": []
+    }
+  ],
+  "complete_native_source_build_correspondence": false,
+  "publication_approved": false
+}

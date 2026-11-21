@@ -18,6 +18,16 @@ def verify(root=ROOT):
         + runtime["build_source_archives"]
         + runtime["static_upstream_sources"]
     )
+    python_native_path = root / "release/python-native-source-lock.json"
+    if python_native_path.is_file():
+        entries += [
+            e
+            for e in read_json(python_native_path)["records"]
+            if e["repository"].endswith("source-deps")
+        ]
+    icu_path = root / "release/qt-icu-source-lock.json"
+    if icu_path.is_file():
+        entries.append(read_json(icu_path))
     verified = []
     for entry in entries:
         name = entry["filename"]
@@ -34,7 +44,10 @@ def verify(root=ROOT):
             if Path(name).name != name or sha256(folder / name) != entry["sha256"]:
                 raise RuntimeError("Ubuntu source part missing or changed: " + name)
         ubuntu_verified.append(
-            {"source_package": package["source_package"], "source_version": package["source_version"]}
+            {
+                "source_package": package["source_package"],
+                "source_version": package["source_version"],
+            }
         )
     return {
         "retained_verified": verified,

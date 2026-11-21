@@ -1,0 +1,171 @@
+{
+  "source_revision": "d59078794d80f5256d5def27e10bb5400a13195c",
+  "source_inputs": [
+    {
+      "project": "FFmpeg",
+      "filename": "current-ffmpeg-source-d59078794d80f5256d5def27e10bb5400a13195c.tar.gz",
+      "sha256": "a2b303c48a30a23c0d2b10058cb73845b16b2029856486a5f57210a620d4105a",
+      "revision": "d59078794d80f5256d5def27e10bb5400a13195c",
+      "url": "https://codeload.github.com/FFmpeg/FFmpeg/tar.gz/d59078794d80f5256d5def27e10bb5400a13195c"
+    },
+    {
+      "project": "x264",
+      "filename": "50-x264--0480cb05fa188d37ae87e8f4fd8f1aea3711f7ee.tar.gz",
+      "sha256": "d0967a1348c85dfde363bb52610403be898171493100561efa0dd05d5fd1ae50",
+      "revision": "0480cb05fa188d37ae87e8f4fd8f1aea3711f7ee",
+      "url": "https://code.videolan.org/videolan/x264/-/archive/0480cb05fa188d37ae87e8f4fd8f1aea3711f7ee/x264-0480cb05fa188d37ae87e8f4fd8f1aea3711f7ee.tar.gz"
+    },
+    {
+      "project": "libass",
+      "filename": "50-libass--21b5a54fceff49c126c201d4b51c6445287a5072.tar.gz",
+      "sha256": "cc971ba7cb615f2276ef51ba8206e7eee8cd567d565255e923879bb7bab49032",
+      "revision": "21b5a54fceff49c126c201d4b51c6445287a5072",
+      "url": "https://codeload.github.com/libass/libass/tar.gz/21b5a54fceff49c126c201d4b51c6445287a5072"
+    },
+    {
+      "project": "nv-codec-headers",
+      "filename": "50-ffnvcodec--f2053071ea93137255b6dcf42e9b4c9e0965a44e.tar.gz",
+      "sha256": "84cefa55265740888a269625474eda5bd018955c2302b72cfe7473ddc82f741f",
+      "revision": "f2053071ea93137255b6dcf42e9b4c9e0965a44e",
+      "url": "https://codeload.github.com/FFmpeg/nv-codec-headers/tar.gz/f2053071ea93137255b6dcf42e9b4c9e0965a44e"
+    },
+    {
+      "project": "AMF",
+      "filename": "50-amf--57ee0cfb0e1a08d9041f77435653794c1b012be0.tar.gz",
+      "sha256": "4255b6cbf2637c778da77ce77ccbb89e92870b3047af5fd56bb680b043ea60b5",
+      "revision": "57ee0cfb0e1a08d9041f77435653794c1b012be0",
+      "url": "https://codeload.github.com/GPUOpen-LibrariesAndSDKs/AMF/tar.gz/57ee0cfb0e1a08d9041f77435653794c1b012be0"
+    }
+  ],
+  "outputs": {
+    "ffmpeg": {
+      "sha256": "933f98b976b3d21ed851a4eb6b99849c57e00ddcf0f8f64531dafbbf753ba937",
+      "version": "ffmpeg version 9.0.2-cactu-d59078794d80 Copyright (c) 2000-2026 the FFmpeg developers"
+    },
+    "ffprobe": {
+      "sha256": "5a641097502b5b8c21413b95343c268c8d31fd13f699aaccd2109000cb04f2df",
+      "version": "ffprobe version 9.0.2-cactu-d59078794d80 Copyright (c) 2007-2026 the FFmpeg developers"
+    }
+  },
+  "configure_flags": [
+    "--prefix=<BUILD_PREFIX>",
+    "--disable-autodetect",
+    "--disable-doc",
+    "--disable-debug",
+    "--disable-x86asm",
+    "--disable-shared",
+    "--enable-static",
+    "--enable-gpl",
+    "--enable-version3",
+    "--enable-libx264",
+    "--enable-libass",
+    "--enable-libvpl",
+    "--enable-ffnvcodec",
+    "--enable-nvenc",
+    "--enable-nvdec",
+    "--enable-cuvid",
+    "--pkg-config-flags=--static",
+    "--enable-vaapi",
+    "--enable-zlib",
+    "--enable-bzlib",
+    "--enable-lzma",
+    "--enable-iconv"
+  ],
+  "tool_versions": {
+    "gcc": {
+      "sha256": "b0b49531b313e70aee0254fb5e69b050a781506184e16ebee6ebe68eee94a145",
+      "version": "gcc (GCC) 16.2.1 20260810"
+    },
+    "make": {
+      "sha256": "6f36064c643168dbe57adddebc60c63702f7b5cdf23739705d23c87fe5e8dce3",
+      "version": "GNU Make 4.4.1"
+    },
+    "pkg-config": {
+      "sha256": "52229450d5a43c92ef6be78c927d3f67decfff98702ce86af41411419c9b0c6a",
+      "version": "3.0.11"
+    },
+    "autoconf": {
+      "sha256": "a5e638ffdfd471fe8a799e7efab8e2eedc795cc1c60e5786b56763682af086e9",
+      "version": "autoconf (GNU Autoconf) 2.73"
+    },
+    "automake": {
+      "sha256": "a37a3cc0216faca0e22e49ca5661be07992649741a2a27cd845b682923bb5988",
+      "version": "automake (GNU automake) 1.20"
+    },
+    "libtoolize": {
+      "sha256": "b32c2ee73135069644846a30dbf989b8141ddf30664b22a44ffa313ad4e65bce",
+      "version": "libtoolize (GNU libtool) 2.6.2"
+    }
+  },
+  "selected_provider_unchanged": true,
+  "reproducibility_proven": false,
+  "complete_corresponding_source": false,
+  "publication_approved": false,
+  "generated_inputs": {
+    "FFmpeg/VERSION": "9.0.2-cactu-d59078794d80\n"
+  },
+  "limitations": [
+    "Host font/shaping/QSV/VAAPI dependency versions and source correspondence remain to be locked",
+    "Assembly disabled for the initial candidate; performance is not representative",
+    "No bit-identical reproduction claim"
+  ],
+  "version_fix": "Initial version inherited enclosing Cactu Git identity; explicit upstream VERSION input corrects it. Original failed tests retained locally.",
+  "binary_size_comparison": {
+    "ffmpeg": {
+      "provider_bytes": 175830000,
+      "candidate_bytes": 32082768
+    },
+    "ffprobe": {
+      "provider_bytes": 175600560,
+      "candidate_bytes": 31857360
+    }
+  },
+  "isolated_frozen_snapshot": "40c671cb9b8ddcd0e923260a170fe186637f39d5",
+  "frozen_artifacts": {
+    "CactuVideoConverter-0.1.0-beta.1-x86_64.AppImage": "afa79a91147d2e50ea3cf339e34f08ac1f736796af5136cd0ac32dd3602de087"
+  },
+  "source_bundle": {
+    "complete_corresponding_source": false,
+    "assets": [
+      {
+        "filename": "Cactu-FFmpeg-controlled-source-review.tar",
+        "sha256": "bb63b2c0f75d04ccf62348d47381cc7eca1bce0c64ebce22fff602adb3742cc0",
+        "redistribution_approved": false
+      }
+    ],
+    "remaining": [
+      "host native library and compiler source/build correspondence",
+      "native Windows build validation",
+      "final component license review"
+    ]
+  },
+  "initial_outputs": {
+    "ffmpeg": {
+      "sha256": "0d48f6fcebad74af4bca2859eecedad5800350debf4c1c8aa4ab478d4f6444f8",
+      "version": "ffmpeg version 9.0.2-cactu-d59078794d80 Copyright (c) 2000-2026 the FFmpeg developers"
+    },
+    "ffprobe": {
+      "sha256": "f596bf3c033e3eb13c3987a173ab1b7b1e7a4b96aee03184ef50047eb7f68ac2",
+      "version": "ffprobe version 9.0.2-cactu-d59078794d80 Copyright (c) 2007-2026 the FFmpeg developers"
+    }
+  },
+  "initial_frozen_artifacts": {
+    "CactuVideoConverter-0.1.0-beta.1-x86_64.AppImage": "999c92e0b293393b740b494777706275382ee47a426cf3a0dd5006cd1ae5a9ac"
+  },
+  "source_promotion": "not performed",
+  "validation_note": "Initial full suite 170/170 passed. Compression-enabled concurrent run had provider fixture-generation timeout; sequential final result recorded separately.",
+  "validation": {
+    "candidate_tests": 170,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "seconds": 73.76,
+    "physical_amd_gpu": "RX 7700 XT VAAPI tested",
+    "provider_tests": 170,
+    "provider_test_seconds": 91.94,
+    "initial_candidate_tests": 170,
+    "initial_candidate_seconds": 78.769,
+    "hevc_fixture_provider_count": 4,
+    "fixture_timeout": "One concurrent run timed out generating HEVC fixture with unchanged provider; complete sequential run passed without changing timeout."
+  }
+}

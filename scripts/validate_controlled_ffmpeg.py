@@ -24,6 +24,8 @@ def validate(candidate, output):
     binary = candidate / "ffmpeg"
     tables = capability_tables(binary)
     require_capabilities(tables)
+    if not {"mpeg4", "av1", "vp8", "vp9", "png", "flac", "ac3", "opus"} <= tables["-decoders"]:
+        raise RuntimeError("Common input decoder regression")
     required_hw = {"h264_nvenc", "h264_vaapi", "h264_qsv"}
     if not required_hw <= tables["-encoders"]:
         raise RuntimeError("Missing required Linux hardware interfaces")

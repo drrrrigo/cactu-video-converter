@@ -1,0 +1,91 @@
+{
+  "source_repository": "unicode-org/icu",
+  "declared_tag": "release-73-2",
+  "source_commit": "680f521746a3bd6a86f25f25ee50a62d88b489cf",
+  "url": "https://codeload.github.com/unicode-org/icu/tar.gz/680f521746a3bd6a86f25f25ee50a62d88b489cf",
+  "filename": "icu-680f521746a3bd6a86f25f25ee50a62d88b489cf.tar.gz",
+  "sha256": "9032f32c8edb43a7cd842f2c44349eb75756ee29c3a3d6a0bf2a01793a34b84c",
+  "runtime_version_evidence": "u_getVersion_73 returns 73,2,0,0 in pinned Qt wheel",
+  "files": [
+    {
+      "path": "usr/bin/_internal/PySide6/Qt/lib/libicudata.so.73",
+      "sha256": "4d24b3a908dd838bea23414e16aa830d05a2a306c475246ab11ef0a00c3037e9",
+      "version": "73.2",
+      "source_commit": "680f521746a3bd6a86f25f25ee50a62d88b489cf",
+      "license_notices": [
+        {
+          "file": "licenses/icu-73.2/icu4c/LICENSE",
+          "member": "icu-680f521746a3bd6a86f25f25ee50a62d88b489cf/icu4c/LICENSE",
+          "sha256": "f3005e195ff74d8812cc1f182a1c446fab678d70a10e3dada497585befee5416"
+        }
+      ]
+    },
+    {
+      "path": "usr/bin/_internal/PySide6/Qt/lib/libicui18n.so.73",
+      "sha256": "ad5410f3e4eb4f01f91d10ddb3780cdbcbeb902ed04a3bc4d3f562b956578d52",
+      "version": "73.2",
+      "source_commit": "680f521746a3bd6a86f25f25ee50a62d88b489cf",
+      "license_notices": [
+        {
+          "file": "licenses/icu-73.2/icu4c/LICENSE",
+          "member": "icu-680f521746a3bd6a86f25f25ee50a62d88b489cf/icu4c/LICENSE",
+          "sha256": "f3005e195ff74d8812cc1f182a1c446fab678d70a10e3dada497585befee5416"
+        }
+      ]
+    },
+    {
+      "path": "usr/bin/_internal/PySide6/Qt/lib/libicuuc.so.73",
+      "sha256": "8ce3427af0d2bf566bb422ce80a12014137d12ed452fe2dd9ed481ee46181168",
+      "version": "73.2",
+      "source_commit": "680f521746a3bd6a86f25f25ee50a62d88b489cf",
+      "license_notices": [
+        {
+          "file": "licenses/icu-73.2/icu4c/LICENSE",
+          "member": "icu-680f521746a3bd6a86f25f25ee50a62d88b489cf/icu4c/LICENSE",
+          "sha256": "f3005e195ff74d8812cc1f182a1c446fab678d70a10e3dada497585befee5416"
+        }
+      ]
+    },
+    {
+      "path": "usr/bin/_internal/libicudata.so.73",
+      "sha256": "4d24b3a908dd838bea23414e16aa830d05a2a306c475246ab11ef0a00c3037e9",
+      "version": "73.2",
+      "source_commit": "680f521746a3bd6a86f25f25ee50a62d88b489cf",
+      "license_notices": [
+        {
+          "file": "licenses/icu-73.2/icu4c/LICENSE",
+          "member": "icu-680f521746a3bd6a86f25f25ee50a62d88b489cf/icu4c/LICENSE",
+          "sha256": "f3005e195ff74d8812cc1f182a1c446fab678d70a10e3dada497585befee5416"
+        }
+      ]
+    },
+    {
+      "path": "usr/bin/_internal/libicui18n.so.73",
+      "sha256": "ad5410f3e4eb4f01f91d10ddb3780cdbcbeb902ed04a3bc4d3f562b956578d52",
+      "version": "73.2",
+      "source_commit": "680f521746a3bd6a86f25f25ee50a62d88b489cf",
+      "license_notices": [
+        {
+          "file": "licenses/icu-73.2/icu4c/LICENSE",
+          "member": "icu-680f521746a3bd6a86f25f25ee50a62d88b489cf/icu4c/LICENSE",
+          "sha256": "f3005e195ff74d8812cc1f182a1c446fab678d70a10e3dada497585befee5416"
+        }
+      ]
+    },
+    {
+      "path": "usr/bin/_internal/libicuuc.so.73",
+      "sha256": "8ce3427af0d2bf566bb422ce80a12014137d12ed452fe2dd9ed481ee46181168",
+      "version": "73.2",
+      "source_commit": "680f521746a3bd6a86f25f25ee50a62d88b489cf",
+      "license_notices": [
+        {
+          "file": "licenses/icu-73.2/icu4c/LICENSE",
+          "member": "icu-680f521746a3bd6a86f25f25ee50a62d88b489cf/icu4c/LICENSE",
+          "sha256": "f3005e195ff74d8812cc1f182a1c446fab678d70a10e3dada497585befee5416"
+        }
+      ]
+    }
+  ],
+  "complete_wheel_build_correspondence": false,
+  "publication_approved": false
+}

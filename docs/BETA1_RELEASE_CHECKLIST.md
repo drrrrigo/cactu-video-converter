@@ -107,3 +107,23 @@ index hash approval and completeness/per-file hashes, and includes them in check
 No source archive or executable is uploaded by this experiment. All global approval
 flags remain false. Qt/ICU/Python native, MSVC eligibility, installer scope and final
 recipient source obligations remain open. RC1 is still blocked.
+
+
+## Current controlled-build engineering results
+
+The reduced Linux FFmpeg candidate is implemented and tested: 170/170 source tests
+pass with physical AMD VAAPI, and isolated ONEDIR/AppImage smoke passes. Sources,
+output hashes, capability differences, actual XVID input decoding and 24 host-library
+fingerprints are in release/evidence/controlled-ffmpeg-linux and
+FFMPEG_CONTROLLED_BUILD.md. Compression/character conversion is explicitly enabled
+to preserve PNG and screen-recording decoders. The selected provider is unchanged.
+
+Two actual OpenSSL DLL hashes match official CPython 3.14.7 binary-deps exactly;
+OpenSSL/bzip2/XZ/zlib-ng sources/notices and the Qt ICU 73.2 source/notices are now
+retained and reverified. This resolves those specific source/supplier identification
+items, without claiming full wheel/static-extension correspondence or legal approval.
+The source publisher supports exact approved index/assets/checksums; it remains
+fail-closed and no sources/binaries were uploaded. Windows native bootstrap and
+Ubuntu-baseline/toolchain/source/notice closure remain separate pending gates.
+All three global approvals remain false; RC1 is not ready. See the full current
+report for hashes, limitations and genuine owner actions after technical closure.

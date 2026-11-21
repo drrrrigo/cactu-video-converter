@@ -1,0 +1,170 @@
+[
+  {
+    "soname": "libm.so.6",
+    "file": "libm.so.6",
+    "sha256": "cc68e144a22abd8c232e7aef5a2a1df6568da04f8366ae75571d8e087273b07c",
+    "package": "glibc 2.44+r78+gfcfb867c58ab-1",
+    "source_closure": "not established by this fingerprint"
+  },
+  {
+    "soname": "libz.so.1",
+    "file": "libz.so.1",
+    "sha256": "63e814634983bfa53890b48cb56760ca38840fbcf91f66a51222eef85eaa08b7",
+    "package": "zlib-ng-compat 2.3.3-2",
+    "source_closure": "not established by this fingerprint"
+  },
+  {
+    "soname": "libfontconfig.so.1",
+    "file": "libfontconfig.so.1",
+    "sha256": "b55d7b11cd1ac5e468e84ab99109869ade1ff8754c7bb7233cd485ef50aa537a",
+    "package": "fontconfig 2:2.18.4-1.1",
+    "source_closure": "not established by this fingerprint"
+  },
+  {
+    "soname": "libunibreak.so.7",
+    "file": "libunibreak.so.7",
+    "sha256": "958af80626868a4a6f26ef96dc5af427fbf75d501639d4ff346ae1ae3d416a46",
+    "package": "libunibreak 7.0-1.1",
+    "source_closure": "not established by this fingerprint"
+  },
+  {
+    "soname": "libharfbuzz.so.0",
+    "file": "libharfbuzz.so.0",
+    "sha256": "0b31ce11df80254b18e4d7b4eb46850c7833e5348bfcd7f21fddf0f8da831418",
+    "package": "harfbuzz 15.1.0-1.1",
+    "source_closure": "not established by this fingerprint"
+  },
+  {
+    "soname": "libfribidi.so.0",
+    "file": "libfribidi.so.0",
+    "sha256": "c3452bb69b8d5324a0ecc695c6d14df1f713d11b41658c8b9518b3376ba6800a",
+    "package": "fribidi 1.0.18-1.1",
+    "source_closure": "not established by this fingerprint"
+  },
+  {
+    "soname": "libfreetype.so.6",
+    "file": "libfreetype.so.6",
+    "sha256": "e21271fcdb58bac3a87844265f5c45c3e93d28223f949a70858abe846b11fb9a",
+    "package": "freetype2 2.15.0-1.1",
+    "source_closure": "not established by this fingerprint"
+  },
+  {
+    "soname": "libbz2.so.1.0",
+    "file": "libbz2.so.1.0",
+    "sha256": "c208e149de372d9aca88f752849b33dea032b8054d1718d662666bd3bad33f8b",
+    "package": "bzip2 1.0.8-6.1",
+    "source_closure": "not established by this fingerprint"
+  },
+  {
+    "soname": "libva.so.2",
+    "file": "libva.so.2",
+    "sha256": "7f7aa3eeb770cd0781544c6c6219ac8ac1e2b5c7f4b2674138d605cc99dd0477",
+    "package": "libva 2.24.1-1.1",
+    "source_closure": "not established by this fingerprint"
+  },
+  {
+    "soname": "libvpl.so.2",
+    "file": "libvpl.so.2",
+    "sha256": "f305baf25f43c4eaa68a0b394022744229441d7e36e4324ae00d812372bb798a",
+    "package": "libvpl 2.17.0-1.1",
+    "source_closure": "not established by this fingerprint"
+  },
+  {
+    "soname": "liblzma.so.5",
+    "file": "liblzma.so.5",
+    "sha256": "4e084231906bbe3442962e66c0fb8324c8bfccb1b916ec83a8a2fd147388478f",
+    "package": "xz 5.8.4-2",
+    "source_closure": "not established by this fingerprint"
+  },
+  {
+    "soname": "libva-drm.so.2",
+    "file": "libva-drm.so.2",
+    "sha256": "a7cd06e75b80c08beb8e4a15cba4c893df7b82d2825d296bf347e60f5151bb22",
+    "package": "libva 2.24.1-1.1",
+    "source_closure": "not established by this fingerprint"
+  },
+  {
+    "soname": "libc.so.6",
+    "file": "libc.so.6",
+    "sha256": "bf1b02689a82ac33c948d5a674bb32b8c8d0e5e03cc857a638655f18dd29d28f",
+    "package": "glibc 2.44+r78+gfcfb867c58ab-1",
+    "source_closure": "not established by this fingerprint"
+  },
+  {
+    "soname": "/lib64/ld-linux-x86-64.so.2",
+    "file": "ld-linux-x86-64.so.2",
+    "sha256": "5a3438f526790d257a668769bda6c1ce46d094d2ed68da0541ac5600c47270c4",
+    "package": "glibc 2.44+r78+gfcfb867c58ab-1",
+    "source_closure": "not established by this fingerprint"
+  },
+  {
+    "soname": "libexpat.so.1",
+    "file": "libexpat.so.1",
+    "sha256": "3d6f8bce70811d3e03ee50b41aa6f986f90e530d4c8d2c9e5deb544b15e83637",
+    "package": "expat 2.10.0-1.1",
+    "source_closure": "not established by this fingerprint"
+  },
+  {
+    "soname": "libglib-2.0.so.0",
+    "file": "libglib-2.0.so.0",
+    "sha256": "ba8385e7df96155348ddd165a202cb0140eb23bb80f7599f377251290d0e13b6",
+    "package": "glib2 2.90.1-1.1",
+    "source_closure": "not established by this fingerprint"
+  },
+  {
+    "soname": "libgraphite2.so.3",
+    "file": "libgraphite2.so.3",
+    "sha256": "70eebd2fda11b867ebff5a8e3bdf272875acdde0851d258c98b3b046b01b4fc7",
+    "package": "graphite 1:1.3.15-1",
+    "source_closure": "not established by this fingerprint"
+  },
+  {
+    "soname": "libpng16.so.16",
+    "file": "libpng16.so.16",
+    "sha256": "778b85f05e157b6ea5d3d257c28e19c6c19273db8c34fbc2344f26cdd073efdd",
+    "package": "libpng 1.6.59-1.1",
+    "source_closure": "not established by this fingerprint"
+  },
+  {
+    "soname": "libbrotlidec.so.1",
+    "file": "libbrotlidec.so.1",
+    "sha256": "d8b1e6da218c888d4396fafe35372c7cce28b4e8fa579c6f352a89316cd780c3",
+    "package": "brotli 1.2.1-1.1",
+    "source_closure": "not established by this fingerprint"
+  },
+  {
+    "soname": "libstdc++.so.6",
+    "file": "libstdc++.so.6",
+    "sha256": "8fa09826e4c4d357a956eb7268e5af77750280f777d57eeea6789e87ec4b8842",
+    "package": "libstdc++ 16.2.1+r23+gd564253eb6c8-3",
+    "source_closure": "not established by this fingerprint"
+  },
+  {
+    "soname": "libgcc_s.so.1",
+    "file": "libgcc_s.so.1",
+    "sha256": "f0cb09ad25ba16848370f16086d1b5671962431ae2ea878e8eeb4c7bb35a56ed",
+    "package": "libgcc 16.2.1+r23+gd564253eb6c8-3",
+    "source_closure": "not established by this fingerprint"
+  },
+  {
+    "soname": "libdrm.so.2",
+    "file": "libdrm.so.2",
+    "sha256": "014655a0b8cae1448a5d32ebb0761883b4509daf2085518bb7605dff775575da",
+    "package": "libdrm 2.4.134-1.1",
+    "source_closure": "not established by this fingerprint"
+  },
+  {
+    "soname": "libpcre2-8.so.0",
+    "file": "libpcre2-8.so.0",
+    "sha256": "a12e07c72567e9c5bbc94320fe63afc80a1ecd5dbbf95bf992474ebdd749fd2d",
+    "package": "pcre2 10.49-1.1",
+    "source_closure": "not established by this fingerprint"
+  },
+  {
+    "soname": "libbrotlicommon.so.1",
+    "file": "libbrotlicommon.so.1",
+    "sha256": "431ba8ac8e33307329ef575c13d2cff77262cd7e9c8f3b56a18c6fe667abf0e8",
+    "package": "brotli 1.2.1-1.1",
+    "source_closure": "not established by this fingerprint"
+  }
+]

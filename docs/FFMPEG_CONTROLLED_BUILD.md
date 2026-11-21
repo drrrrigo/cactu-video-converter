@@ -50,3 +50,77 @@ Do not promote candidates before native Windows/Linux tests and frozen tests,
 source/toolchain closure and dependency license review. Qt/ICU/Python native,
 MSVC grant, Inno incorporated scope and recipient delivery review are unchanged
 open items; this work does not certify them. All historical evidence is preserved.
+
+
+## Additional native-component evidence
+
+release/python-native-source-lock.json now records the immutable CPython source-deps
+and binary-deps commits used by 3.14.7 PCbuild/get_externals.bat. The actual audited
+libssl-3.dll and libcrypto-3.dll hashes both match the official openssl-bin-3.5.7
+archive exactly. OpenSSL 3.5.7, bzip2 1.0.8, XZ 5.2.5 and zlib-ng 2.2.4 sources
+and legal files are retained. This closes the exact OpenSSL supplier-file gap;
+static compression-extension build correspondence is still a separate review.
+
+The Qt ICU library exports version 73.2. Three library files and their three
+payload aliases map to immutable unicode-org/icu commit
+680f521746a3bd6a86f25f25ee50a62d88b489cf and retained upstream license text in
+release/qt-icu-source-lock.json. Exact wheel build configuration/correspondence is
+still not proven. acquire_native_source_evidence.py revalidates source/supplier
+archive hashes, actual DLL matches and legal bytes; verify_source_delivery.py now
+covers these additional source records. No license approval follows automatically.
+
+The capability comparison exposed missing compression-dependent native decoders,
+so zlib/bzip2/lzma/iconv are now explicitly requested and common MPEG-4/AV1/VP8/
+VP9/PNG/FLAC/AC3/Opus decoding is guarded. A real XVID-fourcc MPEG-4 AVI fixture
+was converted to H.264 with the candidate without external libxvid. Unused
+optional external decoders remain listed in the exact capability difference.
+
+
+## Recorded Linux results
+
+The selected provider passes 170 tests (91.940 s). The reduced initial candidate
+passes 170 tests (78.769 s); the compression-enabled final candidate passes all
+170 sequentially (73.760 s), including the RX 7700 XT VAAPI scenarios. One parallel
+packaging/test run timed out creating an HEVC fixture with the old provider; no
+product timeout was changed and its failed log is retained locally.
+
+Final hashes:
+
+* ffmpeg: 933f98b976b3d21ed851a4eb6b99849c57e00ddcf0f8f64531dafbbf753ba937
+* ffprobe: 5a641097502b5b8c21413b95343c268c8d31fd13f699aaccd2109000cb04f2df
+* isolated AppImage: afa79a91147d2e50ea3cf339e34f08ac1f736796af5136cd0ac32dd3602de087
+
+Frozen ONEDIR/AppImage smoke passes x264/AAC/Faststart/subtitles/preview and the
+two-job loudness queue. Its isolated snapshot SHA is retained in the receipt; it
+is not represented as a public main commit. Metadata and exact capability diff:
+release/evidence/controlled-ffmpeg-linux. The final dynamic dependency manifest
+fingerprints 24 host shared libraries; it does not assert their source closure.
+
+The ffmpeg executable shrinks from roughly 168 MiB to 31 MiB. The initial isolated
+AppImage is about 113 MiB versus the preceding local 211 MiB audit image; these
+are local CachyOS experiments with different legal payloads, not an approved
+Ubuntu/Windows package size comparison. No approved runtime promotion occurred.
+
+Windows native bootstrap: run 44857435005 at a688638; its compile and native
+software-conversion result are recorded separately when available. Package
+acquisition is not replay-locked, so even a successful bootstrap is not RC-ready.
+
+### Remaining / RC1 / owner actions
+
+RC1 remains blocked: finish Ubuntu-baseline and Windows candidate verification,
+lock/rebuild font/shaping/compression/QSV/VAAPI/toolchain inputs, retain their source
+and notices, and revalidate the exact frozen packages. The recipe's initial local
+incremental corrections are recorded; no exact-output reproduction proof is claimed.
+The selected provider is intentionally unchanged until these checks pass.
+
+The ICU and OpenSSL source/supplier gaps are reduced as documented above; exact Qt
+wheel build provenance and Python compression-extension correspondence remain open.
+MSVC eligibility/REDIST conditions and Inno actual incorporated-component scope
+remain open. Controlled AppImage source/relink evidence is preserved unchanged;
+its final individual terms and recipient hosting review remains separate.
+
+No new source-hosting service or publication approval is assumed. Only after the
+technical/source set closes should the owner provide qualifying redistribution
+rights review, exact-artifact Windows/Linux manual acceptance and final release
+approval. None is requested to compensate for missing evidence. No beta tag,
+release, binary artifact or source-bundle upload has been made.

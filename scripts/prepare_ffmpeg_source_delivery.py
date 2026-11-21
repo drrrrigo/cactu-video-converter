@@ -2,6 +2,7 @@
 
 import json
 import tarfile
+import io
 from release_common import ROOT, read_json, sha256
 
 
@@ -17,13 +18,18 @@ def prepare():
             source = ROOT / "release/evidence/local/sources" / entry["filename"]
             if sha256(source) != entry["sha256"]:
                 raise RuntimeError("Source changed: " + entry["project"])
-            bundle.add(source, arcname="sources/" + entry["filename"])
+            bundle.add(source, arcname="release/evidence/local/sources/" + entry["filename"])
         for name in [
             "scripts/build_controlled_ffmpeg.py",
+            "scripts/release_common.py",
             "release/ffmpeg-controlled-lock.json",
             "LICENSE",
         ]:
             bundle.add(ROOT / name, arcname=name)
+        version = ("9.0.2-cactu-" + lock["sources"][0]["revision"][:12] + "\n").encode()
+        entry = tarfile.TarInfo("generated/FFmpeg/VERSION")
+        entry.size = len(version)
+        bundle.addfile(entry, io.BytesIO(version))
     manifest = {
         "complete_corresponding_source": False,
         "assets": [
