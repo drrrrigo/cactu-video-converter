@@ -7,7 +7,11 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from qt_payload_policy import filter_gui_plugins, windows_network_plugins
+from qt_payload_policy import (
+    filter_gui_plugins,
+    windows_network_plugins,
+    windows_application_binaries,
+)
 from payload_inventory import resolve_copy_origin
 from payload_diff import compare_payloads
 from qt_file_mapping import qt_file_mapping
@@ -16,6 +20,20 @@ from build_controlled_runtime import build as build_runtime
 
 
 class PayloadResolutionTests(unittest.TestCase):
+    def test_windows_os_contracts_are_removed_but_vc_runtime_stays(self):
+        entries = [
+            (name, "supplier/" + name, "BINARY")
+            for name in [
+                "api-ms-win-crt-runtime-l1-1-0.dll",
+                "api-ms-win-core-console-l1-1-0.dll",
+                "ucrtbase.dll",
+                "VCRUNTIME140.dll",
+                "MSVCP140.dll",
+                "Qt6Core.dll",
+            ]
+        ]
+        self.assertEqual(windows_application_binaries(entries), entries[3:])
+
     def test_controlled_runtime_refuses_changed_recipe_before_acquiring_inputs(self):
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)

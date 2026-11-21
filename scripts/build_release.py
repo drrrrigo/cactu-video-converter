@@ -110,6 +110,8 @@ def main() -> int:
         check=True,
     )
     bundle = ROOT / "dist" / EXECUTABLE_NAME
+    if sys.platform == "win32":
+        shutil.copy2(ROOT / "build/windows-os-boundary.json", output / (target + "-os-boundary.json"))
     from native_notices import collect_native_notices
 
     collect_native_notices(bundle / "_internal/licenses", ROOT)

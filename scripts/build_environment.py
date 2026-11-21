@@ -59,6 +59,7 @@ def check_environment(root: Path = ROOT, *, python_version: str | None = None) -
         "source_tree_clean": True,
         "source_date_epoch": int(epoch),
         "python": actual,
+        "python_compiler": platform.python_compiler(),
         "python_pin": toolchain["python"],
         "python_pin_matches": True,
         "python_abi": sys.implementation.cache_tag,

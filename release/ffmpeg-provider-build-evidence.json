@@ -1,0 +1,69 @@
+{
+  "provider_repository": "FFmpeg-Builds/FFmpeg-Builds",
+  "provider_run": 44733376281,
+  "recipe_commit": "7f2a6b1050d302144de8366afa37a75e46f326aa",
+  "jobs": [
+    {
+      "job_id": 136281731429,
+      "role": "dependency image",
+      "target": "linux-x86_64",
+      "log_sha256": "170045f7ddbf0aa42ab05dd69a782f3213d7a6a777f995cf7c075d222b4e8e7c",
+      "image_references": [
+        "ghcr.io/ffmpeg-builds/ffmpeg-builds/base-linux64:latest@sha256:52ee8e89f3f636dfe4cc2d0f1e93904ed80ae14185f7d2e3c0c53db428c23b86",
+        "ghcr.io/ffmpeg-builds/ffmpeg-builds/linux64-gpl-9.0:latest-x86@sha256:b55eb53c27a1242511bcb09e6e24cf1533628ca2cddeb7d78a767566efe3368b"
+      ],
+      "pulled_image_digests": [
+        "sha256:baf6138eb8c37644800c7c913fba051e840ebb9ba13eaf92d92ef9a1712d0b4c",
+        "sha256:eeab273e4e259ba9c1d30663b2a49dce7a0ea02ecbcbad9f0bc476c6ce80149e"
+      ],
+      "exported_manifests": [
+        "sha256:b55eb53c27a1242511bcb09e6e24cf1533628ca2cddeb7d78a767566efe3368b"
+      ]
+    },
+    {
+      "job_id": 136281731164,
+      "role": "dependency image",
+      "target": "windows-x86_64",
+      "log_sha256": "86005dd1260e8d97f4b295a00aee02ede9a61f80d163ebe46329c9a7cb75c386",
+      "image_references": [
+        "ghcr.io/ffmpeg-builds/ffmpeg-builds/base-win64:latest@sha256:426c3b4df95e3212815c8d285196e45d3c75931b3f228394b873bbfd62ff6cd5",
+        "ghcr.io/ffmpeg-builds/ffmpeg-builds/win64-gpl-9.0:latest-x86@sha256:c26d8f16a6252eb841e892d452962ce033a716d2fdf01f1bb30eadebf95e3b29"
+      ],
+      "pulled_image_digests": [
+        "sha256:baf6138eb8c37644800c7c913fba051e840ebb9ba13eaf92d92ef9a1712d0b4c",
+        "sha256:eeab273e4e259ba9c1d30663b2a49dce7a0ea02ecbcbad9f0bc476c6ce80149e"
+      ],
+      "exported_manifests": [
+        "sha256:c26d8f16a6252eb841e892d452962ce033a716d2fdf01f1bb30eadebf95e3b29"
+      ]
+    },
+    {
+      "job_id": 136286514486,
+      "role": "FFmpeg binary build",
+      "target": "linux-x86_64",
+      "log_sha256": "92bb559aa14c93c8647ee727457450bdb5817996798dd45b1b35909f0c91c74a",
+      "image_references": [],
+      "pulled_image_digests": [
+        "sha256:9ccf2c7186810ffcdf440a9f9919b83fbc27e4644917413b9f36f57189d2b315"
+      ],
+      "exported_manifests": []
+    },
+    {
+      "job_id": 136286514240,
+      "role": "FFmpeg binary build",
+      "target": "windows-x86_64",
+      "log_sha256": "02b6cfb4eeca9621eeb7ebd49187ce53a79af5d97c0a411c53e168a242cfec85",
+      "image_references": [],
+      "pulled_image_digests": [
+        "sha256:825f50514aeddcaa70bea5b5f5ca77ef4e26ff62d78852ac4da63361ff8c2492"
+      ],
+      "exported_manifests": []
+    }
+  ],
+  "compiled_dependency_image_indexes": {
+    "linux-x86_64": "sha256:9ccf2c7186810ffcdf440a9f9919b83fbc27e4644917413b9f36f57189d2b315",
+    "windows-x86_64": "sha256:825f50514aeddcaa70bea5b5f5ca77ef4e26ff62d78852ac4da63361ff8c2492"
+  },
+  "complete_corresponding_source": false,
+  "limits": "Pinned observed OCI digests improve provenance but do not prove retained sources/notices for every linked/vendored/generated component. Raw public logs retained locally; no raw log/private path export."
+}

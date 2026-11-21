@@ -58,8 +58,16 @@ def native_details(file: Path, magic: bytes) -> dict:
                                 "OriginalFilename",
                             }:
                                 version[key] = value.decode(errors="replace")
+            fixed = getattr(pe, "VS_FIXEDFILEINFO", ())
+            flags = int(fixed[0].FileFlags & fixed[0].FileFlagsMask) if fixed else None
             pe.close()
-            return {"format": "PE", "needed": needed, "version_resource": version}
+            return {
+                "format": "PE",
+                "needed": needed,
+                "version_resource": version,
+                "version_flags": flags,
+                "prerelease_flag": bool(flags & 2) if flags is not None else None,
+            }
         except (ImportError, OSError, ValueError):
             return {"format": "PE", "dependency_scan": "UNAVAILABLE"}
     return {}
@@ -348,6 +356,11 @@ def inventory(
                     if component
                     else "native dependency analysis",
                 }
+                if details.get("prerelease_flag") is True:
+                    component["review_status"] = "BLOCKED"
+                    component["redistribution_obstacle"] = (
+                        "PE resource marks prerelease; Microsoft preview-code redistribution permission must not be assumed"
+                    )
         if relative.startswith("unins"):
             component = dict(catalog["inno-setup"])
         elif (

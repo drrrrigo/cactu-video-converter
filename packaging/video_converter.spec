@@ -1,6 +1,7 @@
 """PyInstaller ONEDIR specification; run on each target OS independently."""
 
 import sys
+import json
 from pathlib import Path
 
 root = Path(SPECPATH).resolve().parent
@@ -25,6 +26,16 @@ a = Analysis([str(root / "src" / "video_converter" / "app.py")],
              # License payload comes from the exact pinned build environment.
              hiddenimports=[], hookspath=[str(root / "packaging/hooks")],
              hooksconfig={}, runtime_hooks=[], excludes=[])
+if sys.platform == "win32":
+    from scripts.qt_payload_policy import windows_application_binaries, windows_os_contract
+    removed = [name for name, _, _ in a.binaries if windows_os_contract(name)]
+    a.binaries = windows_application_binaries(a.binaries)
+    (root / "build/windows-os-boundary.json").write_text(json.dumps({
+        "os_provided": sorted(removed),
+        "beta_manual_target": "Windows 11",
+        "reason": "Windows 10/11 always uses system UCRT/API-set contracts; VC++ runtime DLLs stay bundled",
+        "evidence": "https://learn.microsoft.com/en-us/cpp/windows/universal-crt-deployment"
+    }, indent=2) + "\n", encoding="utf-8")
 pyz = PYZ(a.pure)
 exe = EXE(pyz, a.scripts, [], exclude_binaries=True, name=EXECUTABLE_NAME, console=False,
           icon=str(ASSETS / "cactu-video-converter.ico"),
