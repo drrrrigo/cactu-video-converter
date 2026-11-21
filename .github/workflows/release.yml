@@ -134,6 +134,14 @@ jobs:
           BETA_MANUAL_EVIDENCE: ${{ vars.BETA_MANUAL_EVIDENCE }}
           BETA_OWNER_APPROVAL: ${{ vars.BETA_OWNER_APPROVAL }}
         run: python scripts/release_policy.py --publish --artifacts dist/release
+      # A separately reviewed, same-commit source set is mandatory. No unapproved
+      # source archive is automatically uploaded by a candidate build.
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+        with:
+          name: Approved-sources-${{ github.sha }}
+          path: dist/release
+      - name: Validate corresponding-source asset hashes and approval
+        run: python -c "from pathlib import Path; import sys; sys.path.insert(0, 'scripts'); from source_assets import source_assets; source_assets(Path('dist/release'))"
       - run: python scripts/checksums.py dist/release
       - name: Publish GitHub pre-release
         env:

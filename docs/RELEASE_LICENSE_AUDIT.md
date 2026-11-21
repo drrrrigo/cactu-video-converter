@@ -198,3 +198,22 @@ Native Windows/Linux package and frozen smoke tests now pass (candidate run
 Both jobs correctly blocked public artifact upload at the license gate. Cactu's
 source/history/privacy audit is recorded as complete with no findings; the separate
 dependency license and final publication approvals remain false.
+
+
+## Controlled FFmpeg implementation follow-up
+
+See [FFMPEG_CONTROLLED_BUILD.md](FFMPEG_CONTROLLED_BUILD.md). A reduced Linux
+candidate has actually compiled from locked FFmpeg/x264/libass/NV header sources.
+libxvid is absent; native MPEG-4/HEVC decoding and required codec/filter tables pass.
+An isolated frozen AppImage using the candidate passed preview/sequential queue/
+loudness smoke. The selected vendor manifest was not changed. Host font/shaping/
+VAAPI/VPL libraries and compiler source/replay closure remain incomplete; this is
+a CachyOS experiment, not the official Ubuntu release baseline. No reproduction
+or full source-compliance claim is made. Native Windows bootstrap is implemented
+as a metadata-only manual workflow; its result must be assessed independently.
+
+Publishing now supports approved corresponding-source assets, requires exact source
+index hash approval and completeness/per-file hashes, and includes them in checksums.
+No source archive or executable is uploaded by this experiment. All global approval
+flags remain false. Qt/ICU/Python native, MSVC eligibility, installer scope and final
+recipient source obligations remain open. RC1 is still blocked.

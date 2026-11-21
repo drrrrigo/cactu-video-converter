@@ -159,3 +159,22 @@ or manual desktop result is inferred. Release/tag lookup remained empty.
 This evidence-only follow-up does not change the existing media or packaging
 pipeline. Its containing commit triggers source CI again; CI success never alters
 the false technical/license/publication approvals or the remaining blocker matrix.
+
+
+## Controlled FFmpeg implementation follow-up
+
+See [FFMPEG_CONTROLLED_BUILD.md](FFMPEG_CONTROLLED_BUILD.md). A reduced Linux
+candidate has actually compiled from locked FFmpeg/x264/libass/NV header sources.
+libxvid is absent; native MPEG-4/HEVC decoding and required codec/filter tables pass.
+An isolated frozen AppImage using the candidate passed preview/sequential queue/
+loudness smoke. The selected vendor manifest was not changed. Host font/shaping/
+VAAPI/VPL libraries and compiler source/replay closure remain incomplete; this is
+a CachyOS experiment, not the official Ubuntu release baseline. No reproduction
+or full source-compliance claim is made. Native Windows bootstrap is implemented
+as a metadata-only manual workflow; its result must be assessed independently.
+
+Publishing now supports approved corresponding-source assets, requires exact source
+index hash approval and completeness/per-file hashes, and includes them in checksums.
+No source archive or executable is uploaded by this experiment. All global approval
+flags remain false. Qt/ICU/Python native, MSVC eligibility, installer scope and final
+recipient source obligations remain open. RC1 is still blocked.

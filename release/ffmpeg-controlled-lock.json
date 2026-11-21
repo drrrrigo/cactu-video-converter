@@ -1,0 +1,54 @@
+{
+  "schema": 1,
+  "stage": "ISOLATED_CANDIDATE_NOT_PROMOTED",
+  "sources": [
+    {
+      "project": "FFmpeg",
+      "filename": "current-ffmpeg-source-d59078794d80f5256d5def27e10bb5400a13195c.tar.gz",
+      "sha256": "a2b303c48a30a23c0d2b10058cb73845b16b2029856486a5f57210a620d4105a",
+      "revision": "d59078794d80f5256d5def27e10bb5400a13195c",
+      "url": "https://codeload.github.com/FFmpeg/FFmpeg/tar.gz/d59078794d80f5256d5def27e10bb5400a13195c"
+    },
+    {
+      "project": "x264",
+      "filename": "50-x264--0480cb05fa188d37ae87e8f4fd8f1aea3711f7ee.tar.gz",
+      "sha256": "d0967a1348c85dfde363bb52610403be898171493100561efa0dd05d5fd1ae50",
+      "revision": "0480cb05fa188d37ae87e8f4fd8f1aea3711f7ee",
+      "url": "https://code.videolan.org/videolan/x264/-/archive/0480cb05fa188d37ae87e8f4fd8f1aea3711f7ee/x264-0480cb05fa188d37ae87e8f4fd8f1aea3711f7ee.tar.gz"
+    },
+    {
+      "project": "libass",
+      "filename": "50-libass--21b5a54fceff49c126c201d4b51c6445287a5072.tar.gz",
+      "sha256": "cc971ba7cb615f2276ef51ba8206e7eee8cd567d565255e923879bb7bab49032",
+      "revision": "21b5a54fceff49c126c201d4b51c6445287a5072",
+      "url": "https://codeload.github.com/libass/libass/tar.gz/21b5a54fceff49c126c201d4b51c6445287a5072"
+    },
+    {
+      "project": "nv-codec-headers",
+      "filename": "50-ffnvcodec--f2053071ea93137255b6dcf42e9b4c9e0965a44e.tar.gz",
+      "sha256": "84cefa55265740888a269625474eda5bd018955c2302b72cfe7473ddc82f741f",
+      "revision": "f2053071ea93137255b6dcf42e9b4c9e0965a44e",
+      "url": "https://codeload.github.com/FFmpeg/nv-codec-headers/tar.gz/f2053071ea93137255b6dcf42e9b4c9e0965a44e"
+    },
+    {
+      "project": "AMF",
+      "filename": "50-amf--57ee0cfb0e1a08d9041f77435653794c1b012be0.tar.gz",
+      "sha256": "4255b6cbf2637c778da77ce77ccbb89e92870b3047af5fd56bb680b043ea60b5",
+      "revision": "57ee0cfb0e1a08d9041f77435653794c1b012be0",
+      "url": "https://codeload.github.com/GPUOpen-LibrariesAndSDKs/AMF/tar.gz/57ee0cfb0e1a08d9041f77435653794c1b012be0"
+    }
+  ],
+  "patches": [],
+  "excluded_external_libraries": [
+    "libxvid",
+    "libx265",
+    "libvpx",
+    "libaom",
+    "librsvg",
+    "librist",
+    "libfdk-aac"
+  ],
+  "rationale": "No autodetected external libraries. Retain native decoders/demuxers/muxers/filters and encoders; explicitly enable x264, libass and platform hardware interfaces. libxvid is not used by Cactu and native mpeg4 decoder remains.",
+  "publication_approved": false,
+  "toolchain_closure_complete": false
+}

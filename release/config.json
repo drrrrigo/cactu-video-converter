@@ -7,5 +7,6 @@
   "manual_candidate_evidence": null,
   "notes": "2026-11-20 blocker resolution: reduced native payload; known copying origins, exact source retention and controlled AppImage relinking verified. Complete linked source/build/notice/grant and maintained recipient delivery remain blocked. No RC1/publication. Bounded source/history scans are not security certification.",
   "technical_license_audit_complete": false,
-  "publication_approval_source": "BETA_OWNER_APPROVAL in the protected public-beta environment; bound to exact source and artifact hashes, never auto-approved"
+  "publication_approval_source": "BETA_OWNER_APPROVAL in the protected public-beta environment; bound to exact source and artifact hashes, never auto-approved",
+  "source_assets_manifest_sha256": null
 }
