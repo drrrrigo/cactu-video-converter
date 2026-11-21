@@ -1073,3 +1073,32 @@ assessment and recipient source publication integration still need closure.
 Technical/license/publication fields stay false. No beta tag, release, executable
 or source-bundle upload occurred. Manual exact-RC desktop gates remain pending.
 BETA1_BLOCKER_RESOLUTION.md gives a concrete remediation path for each obstacle.
+
+
+## Final source validation and local audit package
+
+Follow-up source **a99c208142d36e42449073f982de2e54bf04b9de** passed native
+Windows/Linux source CI [44851028673](https://github.com/drrrrigo/cactu-video-converter/actions/runs/44851028673):
+169 discovered, 166 passed and three optional physical-GPU skips per platform;
+Ruff/branding/bounded source-history scans passed. This is separate from the
+7b7d23c hosted package audit and the local 169/169 physical AMD source test run.
+
+A fresh local CachyOS AppImage was built from clean a99c208 with Python 3.14.7.
+ONEDIR and AppImage frozen tests pass, including preview and a two-job loudness
+queue. SHA-256:
+`188166a15179b3a7295c2427a1cabce7f09b99eb8a5ff89027375a7f5257984f`.
+The file is local under dist/candidate; earlier audit output was preserved under
+dist/audit-eabc092-20261120. No executable was uploaded. Metadata-only receipt:
+release/evidence/beta1-local-a99c208/receipt.json.
+
+This local image has 611 files (228 native) and 91 unresolved copying origins for
+host Arch/CachyOS libraries, outside the Ubuntu dpkg mapping. It is explicitly an
+**AUDIT_ONLY_NOT_RC1** local test build, not the Ubuntu baseline inventory and not
+a redistribution-approved RC. The zero unknown-origin claim above applies only
+to the retained 7b7d23c native Ubuntu/Windows inventories. Full local inventory
+remains beside the ignored local artifact; no extra portability/legal clearance
+or manual desktop result is inferred. Release/tag lookup remained empty.
+
+This evidence-only follow-up does not change the existing media or packaging
+pipeline. Its containing commit triggers source CI again; CI success never alters
+the false technical/license/publication approvals or the remaining blocker matrix.

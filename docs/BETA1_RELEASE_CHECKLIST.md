@@ -11,7 +11,7 @@ Reviewed **2026-11-20**. Target v0.1.0-beta.1. Preparation/audit only.
 | Native audit source | PASS | Clean 7b7d23c9c77afac0933cc1607ab0160cbbc7ec3c; no claim that a later evidence/docs commit produced these artifacts |
 | Source CI on packaged source | PASS | Run 44844968490, Windows/Linux: 166 discovered, 163 pass + 3 optional physical-GPU skips each |
 | Final local source suite | PASS | 169 tests, 69.376 s, CPython 3.14.7, physical RX 7700 XT VAAPI enabled |
-| Follow-up source/evidence commit CI | See containing commit checks | Full two-platform source workflow runs on push; retain final result separately from native audit source |
+| Follow-up a99c208 source CI | PASS | Run 44851028673: 169 discovered, 166 pass + 3 optional hardware skips on each platform; all source checks pass |
 | Hash-locked environment | PASS | release/requirements.lock, toolchain.json; Python 3.14.7 enforced before packaging |
 | Frozen native software/preview/queue smoke | PASS | Audit 44845101385 builds Windows/Linux, installer install/convert/uninstall, portable/AppImage extraction, subtitles, Faststart, preview and two-job loudness queue |
 | Distribution gate | PASS (gate behavior) | Same audit overall FAIL only at Verify distribution eligibility; binary upload skipped |
@@ -79,3 +79,12 @@ Do not ask the owner to approve missing technical evidence. Resolve the remainin
 source/build/notice/delivery/grant records, build an exact RC set, then obtain manual
 results and separate human license/publication approvals. No blanket source offer
 or legal clearance is asserted. See BETA1_BLOCKER_RESOLUTION.md for remediation.
+
+
+Local testing output: clean a99c208 CachyOS AppImage, Python 3.14.7, SHA-256
+188166a15179b3a7295c2427a1cabce7f09b99eb8a5ff89027375a7f5257984f.
+Frozen ONEDIR/AppImage preview and two-job/loudness tests pass. This audit-only local
+image is separate from hosted 7b7d23c and has 91 unmapped host Arch library copying
+origins. It is not the release baseline or RC1; manual desktop acceptance remains
+pending. Receipt: release/evidence/beta1-local-a99c208/receipt.json. Subsequent
+metadata/docs-only commits run the source workflow independently.

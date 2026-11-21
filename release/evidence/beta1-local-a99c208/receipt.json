@@ -1,0 +1,47 @@
+{
+  "source_commit": "a99c208142d36e42449073f982de2e54bf04b9de",
+  "scope": "Local CachyOS audit build; distinct from Ubuntu/Windows hosted 7b7d23c inventories; no executable or source archive upload",
+  "candidate_stage": "AUDIT_ONLY_NOT_RC1",
+  "artifact_sha256": "188166a15179b3a7295c2427a1cabce7f09b99eb8a5ff89027375a7f5257984f",
+  "artifact_filename": "CactuVideoConverter-0.1.0-beta.1-x86_64.AppImage",
+  "smoke": "onedir and extracted AppImage passed, Python 3.14.7, x264/AAC/Faststart/subtitles/preview/two-job loudness queue",
+  "manual_desktop_test": "PENDING",
+  "local_payload": {
+    "files": 611,
+    "native": 228,
+    "unresolved_copy_origins": 91,
+    "reason": "Host Arch/CachyOS libraries do not use the Ubuntu dpkg source mapping; local audit is not the release baseline or a license-approved RC"
+  },
+  "publication_approved": false,
+  "files": [
+    {
+      "file": "linux-x86_64-build.json",
+      "sha256": "aad9467ee0b6b5126f057e0f689fcbe8f91cb54ea3960f27cdba0f49a76aa41e"
+    },
+    {
+      "file": "linux-x86_64-appimage-smoke.json",
+      "sha256": "0b1b9e28682cfdff2020bf2adfca887a296d659e08e96bc314bde75adff05998"
+    },
+    {
+      "file": "linux-x86_64-onedir-smoke.json",
+      "sha256": "0b1b9e28682cfdff2020bf2adfca887a296d659e08e96bc314bde75adff05998"
+    },
+    {
+      "file": "linux-x86_64-SHA256SUMS.txt",
+      "sha256": "b1400cc9e180cf51382ebe377c48e8b8bc90b4432dc2a01f32934927b71ff502"
+    }
+  ],
+  "source_ci": {
+    "run": 44851028673,
+    "linux_job": 136682163465,
+    "windows_job": 136682163158,
+    "conclusion": "success on both",
+    "tests_discovered_per_platform": 169,
+    "tests_passed_per_platform": 166,
+    "optional_physical_gpu_skips_per_platform": 3
+  },
+  "beta_release_and_tag_check": {
+    "release_list_empty": true,
+    "exact_beta_tag_absent": true
+  }
+}
