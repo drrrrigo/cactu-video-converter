@@ -1,0 +1,189 @@
+{
+  "supplier_version": "7.1.1",
+  "supplier_source_commit": "2527da77ff7983514f535d19391a748c5d898336",
+  "source_archive_sha256": "0c3952c637b7a9852068d9a593adf3ed1aef7353fb5a1388860898e0375a63c3",
+  "source_records": [
+    {
+      "member": "issrc-2527da77ff7983514f535d19391a748c5d898336/Projects/Setup.dpr",
+      "sha256": "70b10d9d76e2cf43919563c8ffab4157bf1b9786535b447d00eb7f06724f1271",
+      "direct_object_references": [],
+      "runtime_dependency_evidence": [
+        "SafeDLLPath in '..\\Components\\SafeDLLPath.pas',",
+        "RichEditOleCallback in '..\\Components\\RichEditOleCallback.pas',",
+        "RichEditViewer in '..\\Components\\RichEditViewer.pas',",
+        "Compression.LZMADecompressor in 'Src\\Compression.LZMADecompressor.pas',",
+        "MD5 in '..\\Components\\MD5.pas',",
+        "MD5.Test in '..\\Components\\MD5.Test.pas',",
+        "SHA1 in '..\\Components\\SHA1.pas',",
+        "SHA1.Test in '..\\Components\\SHA1.Test.pas',",
+        "SHA256 in '..\\Components\\SHA256.pas',",
+        "SHA256.Test in '..\\Components\\SHA256.Test.pas',",
+        "ChaCha20 in '..\\Components\\ChaCha20.pas',",
+        "ChaCha20.Test in '..\\Components\\ChaCha20.Test.pas',",
+        "SimpleExpression in '..\\Components\\SimpleExpression.pas',",
+        "SimpleExpression.Test in '..\\Components\\SimpleExpression.Test.pas',",
+        "UIStateForm in '..\\Components\\UIStateForm.pas',",
+        "BrowseFunc in '..\\Components\\BrowseFunc.pas',",
+        "BidiUtils in '..\\Components\\BidiUtils.pas',",
+        "BidiUtils.Test in '..\\Components\\BidiUtils.Test.pas',",
+        "PathFunc in '..\\Components\\PathFunc.pas',",
+        "PathFunc.Test in '..\\Components\\PathFunc.Test.pas',",
+        "NewCtrls in '..\\Components\\NewCtrls.pas',",
+        "BitmapButton in '..\\Components\\BitmapButton.pas',",
+        "BitmapImage in '..\\Components\\BitmapImage.pas',",
+        "FolderTreeView in '..\\Components\\FolderTreeView.pas',",
+        "OleAccFunc in '..\\Components\\OleAccFunc.pas',",
+        "NewCheckListBox in '..\\Components\\NewCheckListBox.pas',",
+        "NewCheckListBox.MSAA in '..\\Components\\NewCheckListBox.MSAA.pas',",
+        "NewNotebook in '..\\Components\\NewNotebook.pas',",
+        "NewProgressBar in '..\\Components\\NewProgressBar.pas',",
+        "NewStaticText in '..\\Components\\NewStaticText.pas',"
+      ]
+    },
+    {
+      "member": "issrc-2527da77ff7983514f535d19391a748c5d898336/Projects/SetupLdr.dpr",
+      "sha256": "3f7b855b71da13346182c7654c07e606258ab610659fe8665203c8858e4fa78d",
+      "direct_object_references": [],
+      "runtime_dependency_evidence": [
+        "SafeDLLPath in '..\\Components\\SafeDLLPath.pas',",
+        "Compression.LZMA1SmallDecompressor in 'Src\\Compression.LZMA1SmallDecompressor.pas',",
+        "PathFunc in '..\\Components\\PathFunc.pas',",
+        "SHA256 in '..\\Components\\SHA256.pas',",
+        "ChaCha20 in '..\\Components\\ChaCha20.pas',",
+        "PBKDF2 in '..\\Components\\PBKDF2.pas',",
+        "UnsignedFunc in '..\\Components\\UnsignedFunc.pas';",
+        "M := LoadLibraryEx(PChar(SelfFilename), 0, LOAD_LIBRARY_AS_DATAFILE);",
+        "raise Exception.Create('LoadLibraryEx failed');",
+        "Reader := TCompressedBlockReader.Create(SourceF, TLZMA1SmallDecompressor);",
+        "Reader := TCompressedBlockReader.Create(SourceF, TLZMA1SmallDecompressor);"
+      ]
+    },
+    {
+      "member": "issrc-2527da77ff7983514f535d19391a748c5d898336/Projects/Src/Compression.SevenZipDecoder/7zDecode/IS7zDec.c",
+      "sha256": "15c865fd4ccca6c1f6a5abb38a006543b5537906710afcb0713d64665bf05892",
+      "direct_object_references": [],
+      "runtime_dependency_evidence": [
+        "This file is public domain (like the LZMA SDK)"
+      ]
+    },
+    {
+      "member": "issrc-2527da77ff7983514f535d19391a748c5d898336/Projects/Src/Compression.Zlib.pas",
+      "sha256": "08c0ddf64e3673d7885704978308dc15087d8774145b8453fcd227d3f355a073",
+      "direct_object_references": [],
+      "runtime_dependency_evidence": [
+        "function ZlibInitDecompressFunctions(Module: HMODULE): Boolean;",
+        "function ZlibInitDecompressFunctions(Module: HMODULE): Boolean;"
+      ]
+    },
+    {
+      "member": "issrc-2527da77ff7983514f535d19391a748c5d898336/Projects/Src/Compression.bzlib.pas",
+      "sha256": "1bf37ce28646b630a6c6ca282c0aa6ed662ac9bbaa55615293389ad901057d31",
+      "direct_object_references": [],
+      "runtime_dependency_evidence": [
+        "function BZInitDecompressFunctions(Module: HMODULE): Boolean;",
+        "function BZInitDecompressFunctions(Module: HMODULE): Boolean;"
+      ]
+    },
+    {
+      "member": "issrc-2527da77ff7983514f535d19391a748c5d898336/Projects/Src/Compression.LZMA1SmallDecompressor.pas",
+      "sha256": "c023cadeb3076802332d738c5fc966b28f1e8901ce9ea20a38a86da97ae44f7c",
+      "direct_object_references": [
+        "{$L Src\\Compression.LZMA1SmallDecompressor\\LzmaDecode\\LzmaDecodeInno-x86.obj}",
+        "{$L Src\\Compression.LZMA1SmallDecompressor\\LzmaDecode\\LzmaDecodeInno-x64.obj}"
+      ],
+      "runtime_dependency_evidence": [
+        "unit Compression.LZMA1SmallDecompressor;",
+        "Interface to the older, size-optimized LZMA SDK 4.43 decompression OBJ in",
+        "Compression.LZMA1SmallDecompressor\\LzmaDecode, used by SetupLdr.",
+        "build, because LZMA_SYSTEM_SIZE_T is not defined.",
+        "TLZMAInternalDecoderState = record",
+        "TLZMA1SmallDecompressor = class(TCustomDecompressor)",
+        "FDecoderState: TLZMAInternalDecoderState;",
+        "SLZMADataError = 'lzma1smalldecompressor: Compressed data is corrupted (%d)';",
+        "procedure LZMADataError(const Id: Integer);",
+        "raise ECompressDataError.CreateFmt(SLZMADataError, [Id]);",
+        "procedure LZMAInternalError(const Msg: String);",
+        "procedure LZMAInternalErrorFmt(const Msg: String; const Args: array of const);",
+        "LZMAInternalError(Format(Msg, Args));",
+        "{ TLZMA1SmallDecompressor }",
+        "{$L Src\\Compression.LZMA1SmallDecompressor\\LzmaDecode\\LzmaDecodeInno-x86.obj}",
+        "{$L Src\\Compression.LZMA1SmallDecompressor\\LzmaDecode\\LzmaDecodeInno-x64.obj}",
+        "LZMA_RESULT_OK = 0;",
+        "LZMA_RESULT_DATA_ERROR = 1;",
+        "LZMA_PROPERTIES_SIZE = 5;",
+        "function LzmaMyDecodeProperties(var vs: TLZMAInternalDecoderState;",
+        "procedure LzmaMyDecoderInit(var vs: TLZMAInternalDecoderState;",
+        "function LzmaDecode(var vs: TLZMAInternalDecoderState;",
+        "TLZMADecompressorCallbackData = record",
+        "Instance: TLZMA1SmallDecompressor;",
+        "TLZMADecompressorCallbackData(obj^).Instance.DoRead(buffer, bufferSize);",
+        "Result := LZMA_RESULT_OK;",
+        "destructor TLZMA1SmallDecompressor.Destroy;",
+        "procedure TLZMA1SmallDecompressor.DestroyHeap;",
+        "procedure TLZMA1SmallDecompressor.DoRead(var Buffer: Pointer; var BufferSize: Cardinal);",
+        "procedure TLZMA1SmallDecompressor.ProcessHeader;"
+      ]
+    },
+    {
+      "member": "issrc-2527da77ff7983514f535d19391a748c5d898336/Projects/Src/Compression.LZMADecompressor.pas",
+      "sha256": "e1d8e9bc4cb6d21f42739ac9df63becfcdc6878ee5976e2ceed5574b0d915d40",
+      "direct_object_references": [
+        "{$L Src\\Compression.LZMADecompressor\\Lzma2Decode\\ISLzmaDec-x86.obj}",
+        "{$L Src\\Compression.LZMADecompressor\\Lzma2Decode\\ISLzmaDec-x64.obj}"
+      ],
+      "runtime_dependency_evidence": [
+        "unit Compression.LZMADecompressor;",
+        "Interface to the LZMA/LZMA2 SDK decompression OBJs in",
+        "Compression.LZMADecompressor\\Lzma2Decode, used by Setup.",
+        "TLZMACustomDecompressor = class(TCustomDecompressor)",
+        "TLZMAInternalDecoderState = array[0..31] of UInt64;",
+        "TLZMA1Decompressor = class(TLZMACustomDecompressor)",
+        "FDecoderState: TLZMAInternalDecoderState;",
+        "TLZMA2Decompressor = class(TLZMACustomDecompressor)",
+        "FDecoderState: TLZMAInternalDecoderState;",
+        "TLZMASRes = type Integer;",
+        "PLZMAISzAlloc = ^TLZMAISzAlloc;",
+        "TLZMAISzAlloc = record",
+        "Alloc: function(p: PLZMAISzAlloc; size: NativeUInt): Pointer; cdecl;",
+        "Free: procedure(p: PLZMAISzAlloc; address: Pointer); cdecl;",
+        "{ SRes (TLZMASRes) }",
+        "LZMA_FINISH_ANY = 0;",
+        "LZMA_FINISH_END = 1;",
+        "LZMA_STATUS_NOT_SPECIFIED = 0;",
+        "LZMA_STATUS_FINISHED_WITH_MARK = 1;",
+        "LZMA_STATUS_NOT_FINISHED = 2;",
+        "LZMA_STATUS_NEEDS_MORE_INPUT = 3;",
+        "LZMA_STATUS_MAYBE_FINISHED_WITHOUT_MARK = 4;",
+        "SLZMADecompDataError = 'lzmadecomp: Compressed data is corrupted (%d)';",
+        "size the compiler currently allows, so same as ssLZMADictionarySize allows",
+        "{ Lzma2Dec_GetOldProps in Lzma2Dec.c decodes LZMA2 property 40 as 4 GB - 1, and",
+        "{$L Src\\Compression.LZMADecompressor\\Lzma2Decode\\ISLzmaDec-x86.obj}",
+        "{$L Src\\Compression.LZMADecompressor\\Lzma2Decode\\ISLzmaDec-x64.obj}",
+        "function IS_LzmaDec_Init(var state: TLZMAInternalDecoderState;",
+        "const alloc: TLZMAISzAlloc): TLZMASRes; cdecl; external name {$IFNDEF WIN64} '_IS_LzmaDec_Init' {$ELSE} 'IS_LzmaDec_Init'{$ENDIF};",
+        "function LzmaDec_DecodeToBuf(var state: TLZMAInternalDecoderState; var dest;"
+      ]
+    },
+    {
+      "member": "issrc-2527da77ff7983514f535d19391a748c5d898336/Projects/Src/Compression.SevenZipDLLDecoder.pas",
+      "sha256": "42a9f788077cacf1696f83b406122402d01ec52a5ffcccadab0d139c2f4ee189",
+      "direct_object_references": [],
+      "runtime_dependency_evidence": []
+    }
+  ],
+  "classification": {
+    "SetupLdr": "Inno permissive code plus size-optimized LZMA 4.40 decoder with explicit linking exception and public-domain portions",
+    "Setup_and_uninstaller": "Inno template/runtime code; Pascal Script custom acknowledgement retained; C IS7zDec source explicitly public domain, includes LZMA SDK C files; not equivalent to optional full 7z.dll LGPL/unRAR code",
+    "zlib_bzip2": "Pascal interfaces load function pointers; whole upstream compressor packages are not automatically incorporated merely because units/SBOM mention them; final payload must check actual supplier DLLs",
+    "compiler_only": "ISCC, ISCmplr, ISPP, IDE/Scintilla executables excluded from shipped payload; no blanket compiler-source requirement"
+  },
+  "required_notices": [
+    "licenses/packaging-runtimes/Inno-Setup-7.1.1-LICENSE.txt",
+    "licenses/packaging-runtimes/inno-components/LICENSE.md",
+    "licenses/packaging-runtimes/inno-components/lzma-sdk.txt",
+    "licenses/packaging-runtimes/inno-components/LzmaDecodeSize.c.license.txt"
+  ],
+  "acknowledgement": "THIRD_PARTY_NOTICES.md credits RemObjects Pascal Script and its URL",
+  "binary_binding": "Final installed-payload wrapper prefix, unins000.exe hash and supplier version recorded by native packaging; source records identify supplier runtime code, not a bit-identical template rebuild claim",
+  "human_approval": false
+}

@@ -141,3 +141,16 @@ class DependencyComplianceTests(unittest.TestCase):
             ("VCRUNTIME140.dll", "crt", "BINARY"),
         ]
         self.assertEqual(windows_application_binaries(entries), entries[1:])
+
+    def test_same_named_cpython_dll_is_not_attributed_to_msys(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            payload, evidence, dll = self.fixture(root)
+            dll.write_bytes(b"CPython-owned different DLL")
+            supplier = root / "cpython/DLLs"
+            supplier.mkdir(parents=True)
+            (supplier / dll.name).write_bytes(dll.read_bytes())
+            self.assertEqual(integrate(payload, evidence, root, python_root=supplier.parent), {})
+            report = json.loads((root / "build/msys-payload-notices.json").read_text())
+            self.assertEqual(len(report["other_supplier_files"]), 1)
+            self.assertEqual(report["files"], [])

@@ -2,23 +2,37 @@
 
 import json
 import shutil
+import sys
 from pathlib import Path
 
 from release_common import ROOT, read_json, sha256
 
 
-def integrate(payload, evidence_file, root=ROOT):
+def integrate(payload, evidence_file, root=ROOT, python_root=None):
     evidence = read_json(evidence_file)
     policy = read_json(root / "release/msys-runtime-obligations.json")
     by_hash = {e["sha256"]: e for e in evidence["files"]}
     known_names = {e["filename"].lower() for e in evidence["files"]}
     packages = {(p["name"], p["version"]): p for p in evidence["packages"]}
-    records, retained = [], {}
+    records, retained, other_suppliers = [], {}, []
+    python_root = python_root or Path(sys.base_prefix)
     for file in sorted(payload.rglob("*.dll")):
         match = by_hash.get(sha256(file))
         if not match:
             if file.name.lower() in known_names:
-                raise RuntimeError("MSYS DLL name matches but bytes differ: " + file.name)
+                supplier_files = [python_root / "DLLs" / file.name, python_root / file.name]
+                if not any(p.is_file() and sha256(p) == sha256(file) for p in supplier_files):
+                    raise RuntimeError(
+                        "MSYS DLL name matches but bytes differ and no alternate supplier is proven: "
+                        + file.name
+                    )
+                other_suppliers.append(
+                    {
+                        "path": file.relative_to(payload).as_posix(),
+                        "sha256": sha256(file),
+                        "supplier": "CPython " + sys.version.split()[0],
+                    }
+                )
             continue
         package = packages[(match["package"], match["version"])]
         short = package["name"].removeprefix("mingw-w64-ucrt-x86_64-")
@@ -58,6 +72,7 @@ def integrate(payload, evidence_file, root=ROOT):
     report = {
         "scope": "Only hash-matched DLLs in this actual payload; build-only packages excluded",
         "files": records,
+        "other_supplier_files": other_suppliers,
         "license_audit_approved": False,
         "publication_approved": False,
     }

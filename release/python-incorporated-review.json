@@ -1,0 +1,40 @@
+{
+  "cpython_version": "3.14.7",
+  "source_archive_sha256": "3b48dac8fb59f62eaa67ac83c1eb12bda1b7a08406dd286e252c11a66be27f81",
+  "recipe_member": "PCbuild/get_externals.bat",
+  "recipe_sha256": "5c2d8e8aafdb961a2415fd6f44f16b3b74a98a9271dac19dad7c554e103f597c",
+  "incorporated_notices": {
+    "file": "licenses/python-native/CPython-3.14.7-INCORPORATED-NOTICES.rst",
+    "sha256": "cd6f471c0bfdb099efefc25ddff9b3df8bf62e10428987f1f05e6f2f9e35d563"
+  },
+  "dependencies": [
+    {
+      "files": [
+        "_decimal.pyd"
+      ],
+      "dependency": "mpdecimal",
+      "version": "4.0.0",
+      "license": "BSD-2-Clause"
+    },
+    {
+      "files": [
+        "_ctypes.pyd",
+        "libffi-8.dll"
+      ],
+      "dependency": "libffi",
+      "version": "3.4.4",
+      "license": "MIT"
+    },
+    {
+      "files": [
+        "_zstd.pyd"
+      ],
+      "dependency": "zstd",
+      "version": "1.5.7",
+      "license": "BSD-3-Clause (selected alternative)"
+    }
+  ],
+  "source_publication_required_by_these_licenses": false,
+  "obligation": "retain copyright/license/attribution; official CPython recipe versions and supplied notices establish attribution, not byte-identical rebuild proof",
+  "human_license_approval": false
+}
