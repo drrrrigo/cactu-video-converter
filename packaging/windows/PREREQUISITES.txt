@@ -1,0 +1,16 @@
+Cactu Video Converter — Windows x64 prerequisite
+
+Install or repair the Microsoft Visual C++ v14 Redistributable (x64),
+14.51.36247.0 or newer, from Microsoft's official page:
+https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist
+
+Choose X64 even if an X86 package is already installed. Follow Microsoft's
+installer and terms yourself, then open CactuVideoConverter.exe again.
+Cactu does not include Microsoft runtime DLLs or their installer and does not
+download or install them automatically. Offline users need the prerequisite
+already installed or an official installer obtained separately beforehand.
+
+Keep the complete extracted folder together. CactuVideoConverter.exe checks
+the actual x64 system DLL versions and loadability before starting Python/Qt.
+Do not start CactuVideoConverter-core.exe directly. The minimum above is a
+conservative qualification floor, not a proven minimum ABI for every component.

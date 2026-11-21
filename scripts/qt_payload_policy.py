@@ -28,13 +28,18 @@ def windows_network_plugins(binaries):
 
 
 def windows_application_binaries(entries):
-    """Retain Widgets/VC++ runtime; omit OS contracts and unused OpenGL fallback."""
+    """Retain Widgets; use the system VC++ prerequisite and omit unused Mesa."""
+    try:
+        from .windows_runtime import microsoft_runtime
+    except ImportError:
+        from windows_runtime import microsoft_runtime
     # Cactu creates raster QWidget controls, no Qt Quick/QOpenGLWidget/Window.
     # FFmpeg GPU encoding is a separate process and does not use this Qt renderer.
     return [
         entry
         for entry in entries
         if not windows_os_contract(entry[0])
+        and not microsoft_runtime(entry[0])
         and Path(entry[0].replace("\\", "/")).name.lower() != "opengl32sw.dll"
     ]
 

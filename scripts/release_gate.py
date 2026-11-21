@@ -175,6 +175,11 @@ def check_publication(
     if len(evidence.get("artifacts", {})) != 3:
         raise RuntimeError("All three exact release artifacts must be manually verified")
     check_payload_evidence(artifacts, source_commit(root))
+    policy_file = root / "release/windows-runtime-policy.json"
+    if policy_file.is_file() and read_json(policy_file).get("strategy") == "system-prerequisite":
+        from windows_runtime import validate_clean_evidence
+
+        validate_clean_evidence(evidence.get("windows_runtime"), evidence["artifacts"])
 
 
 if __name__ == "__main__":

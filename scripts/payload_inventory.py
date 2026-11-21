@@ -128,7 +128,8 @@ def embedded_modules(payload: Path) -> set[str]:
     from PyInstaller.archive.readers import CArchiveReader
 
     result = set()
-    for name in ("CactuVideoConverter", "CactuVideoConverter.exe"):
+    windows_name = "CactuVideoConverter-core.exe" if next(payload.rglob("CactuVideoConverter-core.exe"), None) else "CactuVideoConverter.exe"
+    for name in ("CactuVideoConverter", windows_name):
         executable = next(payload.rglob(name), None)
         if executable is None:
             continue
@@ -405,9 +406,19 @@ def inventory(
             component = dict(catalog["cactu"])
         elif file.name == "base_library.zip":
             component = dict(catalog["cpython"])
-        elif file.name == "CactuVideoConverter" or file.name == "CactuVideoConverter.exe":
+        elif file.name in {"CactuVideoConverter", "CactuVideoConverter.exe", "CactuVideoConverter-core.exe"}:
             component = dict(catalog["pyinstaller"])
             component["role"] = "bootloader plus embedded Cactu/Python module archive"
+            launcher_evidence = root / "build/windows-runtime/launcher-evidence.json"
+            if file.name == "CactuVideoConverter.exe" and launcher_evidence.is_file():
+                evidence = read_json(launcher_evidence)
+                if evidence["sha256"] != sha256(file) or evidence.get("test_binary") is not False:
+                    raise RuntimeError("Actual prerequisite launcher differs from production build evidence")
+                component = dict(catalog["cactu"])
+                component["role"] = "CRT-independent Windows prerequisite launcher; Windows APIs only"
+                source_evidence = {"distribution": "Cactu native source build", **evidence}
+        elif file.name == "PREREQUISITES.txt":
+            component = dict(catalog["cactu"])
         elif "licenses/" in relative or file.name in {"LICENSE", "THIRD_PARTY_NOTICES.md"}:
             component = {
                 "project": "license-and-notice-material",

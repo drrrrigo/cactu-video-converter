@@ -1,0 +1,456 @@
+{
+  "scope": "Exact ten DLLs in historical clean 3b19839 audit packages; new system-prerequisite packages omit them",
+  "method": "Inspect cached supplier DLLs and extracted official DLLs. Never install them.\n\nNormalized comparison excludes only the PE checksum, certificate directory entry\nand certificate table. This is byte-comparison evidence, not WinVerifyTrust,\nAuthenticode validation, an assertion that re-signing is permitted, or a license.\n",
+  "files": [
+    {
+      "historical_payload": "_internal/PySide6/MSVCP140.dll",
+      "supplier": "PySide6_Essentials 6.11.2",
+      "version": "14.44.35211.0",
+      "sha256": "4c667b706893593812cd111b369ba6a77f54d1f1b1ae87cf3bf37692663cfba2",
+      "size": 549176,
+      "normalized_file_sha256": "a2163ff772e19938261394e46b5ff6574e126c2e35481b7e8d465dcb8ff22b5c",
+      "certificate_size": 12088,
+      "certificate_subjects": [
+        "subject=C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Trusted Root G4",
+        "subject=C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1",
+        "subject=jurisdictionC=FI, businessCategory=Private Organization, serialNumber=2637805-2, C=FI, ST=Uusimaa, L=Espoo, O=The QT Company Oy, CN=The QT Company Oy"
+      ],
+      "signature_trust_verified": false,
+      "official_whole_file_matches": [],
+      "official_normalized_matches": [
+        "vc_redist-vs17-x64.exe-cabs/1/a12-files/msvcp140.dll_amd64"
+      ]
+    },
+    {
+      "historical_payload": "_internal/PySide6/MSVCP140_1.dll",
+      "supplier": "PySide6_Essentials 6.11.2",
+      "version": "14.44.35211.0",
+      "sha256": "d419d24b0a76366f5c9d908b0e45fe70e9e9154bb8ad5f3de42070f2337f857b",
+      "size": 27448,
+      "normalized_file_sha256": "9c400e9de01496b229add5b3a222852d182a526a784785ea8a2d1aefbdf88188",
+      "certificate_size": 12088,
+      "certificate_subjects": [
+        "subject=C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Trusted Root G4",
+        "subject=C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1",
+        "subject=jurisdictionC=FI, businessCategory=Private Organization, serialNumber=2637805-2, C=FI, ST=Uusimaa, L=Espoo, O=The QT Company Oy, CN=The QT Company Oy"
+      ],
+      "signature_trust_verified": false,
+      "official_whole_file_matches": [],
+      "official_normalized_matches": [
+        "vc_redist-vs17-x64.exe-cabs/1/a12-files/msvcp140_1.dll_amd64"
+      ]
+    },
+    {
+      "historical_payload": "_internal/PySide6/MSVCP140_2.dll",
+      "supplier": "PySide6_Essentials 6.11.2",
+      "version": "14.44.35211.0",
+      "sha256": "89917964abb6ca16a260cab258e180c3abc239b5af00eed659d0edf0efdd339c",
+      "size": 271672,
+      "normalized_file_sha256": "109f994ba475c7519f443f6f84627131fa66073cfb12454d11f246eedfd4ac61",
+      "certificate_size": 12088,
+      "certificate_subjects": [
+        "subject=C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Trusted Root G4",
+        "subject=C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1",
+        "subject=jurisdictionC=FI, businessCategory=Private Organization, serialNumber=2637805-2, C=FI, ST=Uusimaa, L=Espoo, O=The QT Company Oy, CN=The QT Company Oy"
+      ],
+      "signature_trust_verified": false,
+      "official_whole_file_matches": [],
+      "official_normalized_matches": [
+        "vc_redist-vs17-x64.exe-cabs/1/a12-files/msvcp140_2.dll_amd64"
+      ]
+    },
+    {
+      "historical_payload": "_internal/PySide6/VCRUNTIME140.dll",
+      "supplier": "PySide6_Essentials 6.11.2",
+      "version": "14.44.35211.0",
+      "sha256": "f893ae75a1a24eea174d982f94bc80ce2448201eaa919a73c0653a5657685de4",
+      "size": 116024,
+      "normalized_file_sha256": "161c678ac52fa039a4a90f75908ce8cb7da9398b9d1e9f21dfa731d78e36459a",
+      "certificate_size": 12088,
+      "certificate_subjects": [
+        "subject=C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Trusted Root G4",
+        "subject=C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1",
+        "subject=jurisdictionC=FI, businessCategory=Private Organization, serialNumber=2637805-2, C=FI, ST=Uusimaa, L=Espoo, O=The QT Company Oy, CN=The QT Company Oy"
+      ],
+      "signature_trust_verified": false,
+      "official_whole_file_matches": [],
+      "official_normalized_matches": [
+        "vc_redist-vs17-x64.exe-cabs/1/a12-files/vcruntime140.dll_amd64"
+      ]
+    },
+    {
+      "historical_payload": "_internal/PySide6/VCRUNTIME140_1.dll",
+      "supplier": "PySide6_Essentials 6.11.2",
+      "version": "14.44.35211.0",
+      "sha256": "48aa2783793ea18ab3c2c71d420d4fff9814e662a1ff810053c6e5250061a716",
+      "size": 41272,
+      "normalized_file_sha256": "0959122ef49be68f669713c3ecb69eef077ff6e19fd54b1de42828aab493133b",
+      "certificate_size": 12088,
+      "certificate_subjects": [
+        "subject=C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Trusted Root G4",
+        "subject=C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1",
+        "subject=jurisdictionC=FI, businessCategory=Private Organization, serialNumber=2637805-2, C=FI, ST=Uusimaa, L=Espoo, O=The QT Company Oy, CN=The QT Company Oy"
+      ],
+      "signature_trust_verified": false,
+      "official_whole_file_matches": [],
+      "official_normalized_matches": [
+        "vc_redist-vs17-x64.exe-cabs/1/a12-files/vcruntime140_1.dll_amd64"
+      ]
+    },
+    {
+      "historical_payload": "_internal/shiboken6/MSVCP140.dll",
+      "supplier": "shiboken6 6.11.2",
+      "version": "14.44.35211.0",
+      "sha256": "fd4a8c046fa3fea9ca6132f50cf8a56cf1e783b2d3093ba5c85fa063bc6b3845",
+      "size": 549176,
+      "normalized_file_sha256": "a2163ff772e19938261394e46b5ff6574e126c2e35481b7e8d465dcb8ff22b5c",
+      "certificate_size": 12088,
+      "certificate_subjects": [
+        "subject=C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Trusted Root G4",
+        "subject=C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1",
+        "subject=jurisdictionC=FI, businessCategory=Private Organization, serialNumber=2637805-2, C=FI, ST=Uusimaa, L=Espoo, O=The QT Company Oy, CN=The QT Company Oy"
+      ],
+      "signature_trust_verified": false,
+      "official_whole_file_matches": [],
+      "official_normalized_matches": [
+        "vc_redist-vs17-x64.exe-cabs/1/a12-files/msvcp140.dll_amd64"
+      ]
+    },
+    {
+      "historical_payload": "_internal/shiboken6/VCRUNTIME140.dll",
+      "supplier": "shiboken6 6.11.2",
+      "version": "14.44.35211.0",
+      "sha256": "de617641d82eac15595d2e39394163ac33e49bb032cf2c2ea0044ed39d3675e9",
+      "size": 116024,
+      "normalized_file_sha256": "161c678ac52fa039a4a90f75908ce8cb7da9398b9d1e9f21dfa731d78e36459a",
+      "certificate_size": 12088,
+      "certificate_subjects": [
+        "subject=C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Trusted Root G4",
+        "subject=C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1",
+        "subject=jurisdictionC=FI, businessCategory=Private Organization, serialNumber=2637805-2, C=FI, ST=Uusimaa, L=Espoo, O=The QT Company Oy, CN=The QT Company Oy"
+      ],
+      "signature_trust_verified": false,
+      "official_whole_file_matches": [],
+      "official_normalized_matches": [
+        "vc_redist-vs17-x64.exe-cabs/1/a12-files/vcruntime140.dll_amd64"
+      ]
+    },
+    {
+      "historical_payload": "_internal/shiboken6/VCRUNTIME140_1.dll",
+      "supplier": "shiboken6 6.11.2",
+      "version": "14.44.35211.0",
+      "sha256": "fa577d54bd10a91e52472da784a619da6cf241af45f0a0c48b27e91fa0fe6104",
+      "size": 41272,
+      "normalized_file_sha256": "0959122ef49be68f669713c3ecb69eef077ff6e19fd54b1de42828aab493133b",
+      "certificate_size": 12088,
+      "certificate_subjects": [
+        "subject=C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Trusted Root G4",
+        "subject=C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1",
+        "subject=jurisdictionC=FI, businessCategory=Private Organization, serialNumber=2637805-2, C=FI, ST=Uusimaa, L=Espoo, O=The QT Company Oy, CN=The QT Company Oy"
+      ],
+      "signature_trust_verified": false,
+      "official_whole_file_matches": [],
+      "official_normalized_matches": [
+        "vc_redist-vs17-x64.exe-cabs/1/a12-files/vcruntime140_1.dll_amd64"
+      ]
+    },
+    {
+      "historical_payload": "_internal/VCRUNTIME140.dll",
+      "supplier": "CPython 3.14.7",
+      "version": "14.51.36247.0",
+      "sha256": "d1f4225df2cd877dbf130d5668a021dce3f94118455ff5ec952061c30afc9ce7",
+      "size": 178616,
+      "normalized_file_sha256": "ef0ce8a21cdef8a46c570041ca18542a3826ad18c9ac42cbb74501f5e6af9196",
+      "certificate_size": 20408,
+      "certificate_subjects": [
+        "subject=C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Software Compatibility Publisher",
+        "subject=C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Third Party Component CA 2013"
+      ],
+      "signature_trust_verified": false,
+      "official_whole_file_matches": [],
+      "official_normalized_matches": []
+    },
+    {
+      "historical_payload": "_internal/VCRUNTIME140_1.dll",
+      "supplier": "CPython 3.14.7",
+      "version": "14.51.36247.0",
+      "sha256": "a7146c08f89fe5b04541ab507cdb59ff7b44534d4ba3c668a426c6450a03434e",
+      "size": 50112,
+      "normalized_file_sha256": "5894e963e279583f0aa832944754d8545bcb17afd1b154486488dad6214100aa",
+      "certificate_size": 20416,
+      "certificate_subjects": [
+        "subject=C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Software Compatibility Publisher",
+        "subject=C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Third Party Component CA 2013"
+      ],
+      "signature_trust_verified": false,
+      "official_whole_file_matches": [],
+      "official_normalized_matches": []
+    }
+  ],
+  "official_extracted_files": [
+    {
+      "file": "vc_redist-v14-x64.exe-cabs/1/a4-files/msvcp140.dll_amd64",
+      "name": "msvcp140.dll",
+      "sha256": "59d325227321d52b9a523ea401ce6787a5d59f78229a0ff3a6f124e5d3445685",
+      "size": 652136,
+      "normalized_file_sha256": "62cb06e339ab43e8ba05afc452054a0b952bbe23f39003f762e9923014805795",
+      "certificate_size": 20328,
+      "certificate_subjects": [
+        "subject=C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Software Compatibility Publisher",
+        "subject=C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Third Party Component CA 2013"
+      ],
+      "signature_trust_verified": false
+    },
+    {
+      "file": "vc_redist-v14-x64.exe-cabs/1/a4-files/msvcp140_1.dll_amd64",
+      "name": "msvcp140_1.dll",
+      "sha256": "1c6522f4d005539109aa040f063659704bfda94a224142f50942573cfbcf7ec9",
+      "size": 35696,
+      "normalized_file_sha256": "430dc5cb7265bc4805c353d434e5390bc3c3f62d793838b01cba805e1ebcabad",
+      "certificate_size": 20336,
+      "certificate_subjects": [
+        "subject=C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Software Compatibility Publisher",
+        "subject=C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Third Party Component CA 2013"
+      ],
+      "signature_trust_verified": false
+    },
+    {
+      "file": "vc_redist-v14-x64.exe-cabs/1/a4-files/msvcp140_2.dll_amd64",
+      "name": "msvcp140_2.dll",
+      "sha256": "56318c983acc3914f8523be61f6b1f1c91e6c1ae4b6c531169882aa59baaec6b",
+      "size": 271800,
+      "normalized_file_sha256": "f89edf2b3e25d7fdbdb35721f58eddd202dfc9bb09bfa5961b9dbd84099f5616",
+      "certificate_size": 20408,
+      "certificate_subjects": [
+        "subject=C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Software Compatibility Publisher",
+        "subject=C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Third Party Component CA 2013"
+      ],
+      "signature_trust_verified": false
+    },
+    {
+      "file": "vc_redist-v14-x64.exe-cabs/1/a4-files/msvcp140_atomic_wait.dll_amd64",
+      "name": "msvcp140_atomic_wait.dll",
+      "sha256": "8b10c6bd4c3c427ce7c8be96ef0fef0f8187bc236962be62a03caef834b37dcd",
+      "size": 58736,
+      "normalized_file_sha256": "0b0f6d4164adbbafe637ba2d5a0e433f8e5c79b6cb18be446869039a4268de55",
+      "certificate_size": 20336,
+      "certificate_subjects": [
+        "subject=C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Software Compatibility Publisher",
+        "subject=C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Third Party Component CA 2013"
+      ],
+      "signature_trust_verified": false
+    },
+    {
+      "file": "vc_redist-v14-x64.exe-cabs/1/a4-files/msvcp140_codecvt_ids.dll_amd64",
+      "name": "msvcp140_codecvt_ids.dll",
+      "sha256": "695dbb4921cc1536429d238488cbee73581357a2fa05bb5c87b0f6ae48efcaca",
+      "size": 31080,
+      "normalized_file_sha256": "01321b291a0eec45a0a5b6e2b3c8db7d112d7e9420b7a80836a101fd07167114",
+      "certificate_size": 20328,
+      "certificate_subjects": [
+        "subject=C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Software Compatibility Publisher",
+        "subject=C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Third Party Component CA 2013"
+      ],
+      "signature_trust_verified": false
+    },
+    {
+      "file": "vc_redist-v14-x64.exe-cabs/1/a4-files/vcruntime140.dll_amd64",
+      "name": "vcruntime140.dll",
+      "sha256": "eb1ee979bf02324712346e5bdbfc59c785388bc50d18cc2688aae4b0734915a0",
+      "size": 176488,
+      "normalized_file_sha256": "ae8385c08884955b1aa94ae9337bc36847b66bd9ebfcf503fc1176a2fe684a50",
+      "certificate_size": 20328,
+      "certificate_subjects": [
+        "subject=C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Software Compatibility Publisher",
+        "subject=C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Third Party Component CA 2013"
+      ],
+      "signature_trust_verified": false
+    },
+    {
+      "file": "vc_redist-v14-x64.exe-cabs/1/a4-files/vcruntime140_1.dll_amd64",
+      "name": "vcruntime140_1.dll",
+      "sha256": "a14b4a42a2c6df04d6d53a8340816023d953406f7f3d94996c7cab30c414ff63",
+      "size": 50544,
+      "normalized_file_sha256": "55ee4b1fccf21a2a419ec4bd919c65a95a6d60bb6adcb1a63afd974cf84a8d1e",
+      "certificate_size": 20336,
+      "certificate_subjects": [
+        "subject=C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Software Compatibility Publisher",
+        "subject=C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Third Party Component CA 2013"
+      ],
+      "signature_trust_verified": false
+    },
+    {
+      "file": "vc_redist-v14-x64.exe-cabs/1/a4-files/vcruntime140_threads.dll_amd64",
+      "name": "vcruntime140_threads.dll",
+      "sha256": "44a0a0b925242699f2b31bf40a43b54ab3513584dfe7869521d1983e40ea1f06",
+      "size": 38840,
+      "normalized_file_sha256": "a34b577f254ee22be183da183e01215762e9d32a3fcebc63f7eae0da97826f0c",
+      "certificate_size": 20408,
+      "certificate_subjects": [
+        "subject=C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Software Compatibility Publisher",
+        "subject=C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Third Party Component CA 2013"
+      ],
+      "signature_trust_verified": false
+    },
+    {
+      "file": "vc_redist-vs17-x64.exe-cabs/1/a12-files/msvcp140.dll_amd64",
+      "name": "msvcp140.dll",
+      "sha256": "0f885b509a685d2bbfa652fed26b5fb31d88fbdab0a978c641d1c7b8aa460aa9",
+      "size": 557728,
+      "normalized_file_sha256": "a2163ff772e19938261394e46b5ff6574e126c2e35481b7e8d465dcb8ff22b5c",
+      "certificate_size": 20640,
+      "certificate_subjects": [
+        "subject=C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Software Compatibility Publisher",
+        "subject=C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Third Party Component CA 2013"
+      ],
+      "signature_trust_verified": false
+    },
+    {
+      "file": "vc_redist-vs17-x64.exe-cabs/1/a12-files/msvcp140_1.dll_amd64",
+      "name": "msvcp140_1.dll",
+      "sha256": "bfad5aef4c63a669e3c140655cdfdf395b6c979b400a447bd5dcb65ed8826c3d",
+      "size": 35952,
+      "normalized_file_sha256": "9c400e9de01496b229add5b3a222852d182a526a784785ea8a2d1aefbdf88188",
+      "certificate_size": 20592,
+      "certificate_subjects": [
+        "subject=C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Software Compatibility Publisher",
+        "subject=C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Third Party Component CA 2013"
+      ],
+      "signature_trust_verified": false
+    },
+    {
+      "file": "vc_redist-vs17-x64.exe-cabs/1/a12-files/msvcp140_2.dll_amd64",
+      "name": "msvcp140_2.dll",
+      "sha256": "3ea06f0ee098b4823cb79599df3780e7f23cce52c19aac31d2a0d47efe33a5e9",
+      "size": 280200,
+      "normalized_file_sha256": "109f994ba475c7519f443f6f84627131fa66073cfb12454d11f246eedfd4ac61",
+      "certificate_size": 20616,
+      "certificate_subjects": [
+        "subject=C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Software Compatibility Publisher",
+        "subject=C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Third Party Component CA 2013"
+      ],
+      "signature_trust_verified": false
+    },
+    {
+      "file": "vc_redist-vs17-x64.exe-cabs/1/a12-files/msvcp140_atomic_wait.dll_amd64",
+      "name": "msvcp140_atomic_wait.dll",
+      "sha256": "640b2aefced484d0368eea5bdd06addd0658a3a70a49256e560d6923b404a479",
+      "size": 50304,
+      "normalized_file_sha256": "ba8f2e870b66cb3e230b5de7bcacee5a7595232f704f075f34392d90bf759cbc",
+      "certificate_size": 20608,
+      "certificate_subjects": [
+        "subject=C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Software Compatibility Publisher",
+        "subject=C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Third Party Component CA 2013"
+      ],
+      "signature_trust_verified": false
+    },
+    {
+      "file": "vc_redist-vs17-x64.exe-cabs/1/a12-files/msvcp140_codecvt_ids.dll_amd64",
+      "name": "msvcp140_codecvt_ids.dll",
+      "sha256": "f2069a52880ec885ee7f0511186100eb7fada0411a2b4948fafea7735b878a18",
+      "size": 31872,
+      "normalized_file_sha256": "40551f22c643888a5959936242079674b7c20c2ff019ea5587e7e84d93041dcf",
+      "certificate_size": 20608,
+      "certificate_subjects": [
+        "subject=C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Software Compatibility Publisher",
+        "subject=C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Third Party Component CA 2013"
+      ],
+      "signature_trust_verified": false
+    },
+    {
+      "file": "vc_redist-vs17-x64.exe-cabs/1/a12-files/vcruntime140.dll_amd64",
+      "name": "vcruntime140.dll",
+      "sha256": "d5e4d9a3e835fa679450145d6a7d94e36573a509317111904d9b3712c30d9066",
+      "size": 124544,
+      "normalized_file_sha256": "161c678ac52fa039a4a90f75908ce8cb7da9398b9d1e9f21dfa731d78e36459a",
+      "certificate_size": 20608,
+      "certificate_subjects": [
+        "subject=C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Software Compatibility Publisher",
+        "subject=C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Third Party Component CA 2013"
+      ],
+      "signature_trust_verified": false
+    },
+    {
+      "file": "vc_redist-vs17-x64.exe-cabs/1/a12-files/vcruntime140_1.dll_amd64",
+      "name": "vcruntime140_1.dll",
+      "sha256": "1f2d41c4aa5db0bc33ebf7b66d72943a817d7ce6cbe880502a9403823633093f",
+      "size": 49792,
+      "normalized_file_sha256": "0959122ef49be68f669713c3ecb69eef077ff6e19fd54b1de42828aab493133b",
+      "certificate_size": 20608,
+      "certificate_subjects": [
+        "subject=C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Software Compatibility Publisher",
+        "subject=C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Third Party Component CA 2013"
+      ],
+      "signature_trust_verified": false
+    },
+    {
+      "file": "vc_redist-vs17-x64.exe-cabs/1/a12-files/vcruntime140_threads.dll_amd64",
+      "name": "vcruntime140_threads.dll",
+      "sha256": "219915cf20822f34d5e7c1fdd4e21ae7f3396881096c51036225fb8f84b47afa",
+      "size": 38528,
+      "normalized_file_sha256": "5204c018bcef048a3946937800c8860b3bd1dc017b7654b9dfdd662e9fa59c07",
+      "certificate_size": 20608,
+      "certificate_subjects": [
+        "subject=C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Software Compatibility Publisher",
+        "subject=C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Third Party Component CA 2013"
+      ],
+      "signature_trust_verified": false
+    }
+  ],
+  "owner_license_acceptance_established": false,
+  "redistribution_approved": false,
+  "official_archives": [
+    {
+      "filename": "vc_redist-v14-x64.exe",
+      "url": "https://aka.ms/vc14/vc_redist.x64.exe",
+      "sha256": "9c02c9ed120f671b900e6b9471d890e3b2414117a7e53f4ae2e855466fa2b7c9",
+      "size": 18863624
+    },
+    {
+      "filename": "vc_redist-vs17-x64.exe",
+      "url": "https://aka.ms/vs/17/release/vc_redist.x64.exe",
+      "sha256": "cc0ff0eb1dc3f5188ae6300faef32bf5beeba4bdd6e8e445a9184072096b713b",
+      "size": 25635768
+    },
+    {
+      "filename": "pyside6_essentials-6.11.2-cp310-abi3-win_amd64.whl",
+      "url": "https://files.pythonhosted.org/packages/dc/09/d2662684aee4d3f027ff9b1e965f22301bc28ffc5b7f167658508e4475dc/pyside6_essentials-6.11.2-cp310-abi3-win_amd64.whl",
+      "sha256": "c8a29def77032773a30879f7f24415b5395ad08592d147c170824ef4c735dfc1",
+      "size": 76913043
+    },
+    {
+      "filename": "shiboken6-6.11.2-cp310-abi3-win_amd64.whl",
+      "url": "https://files.pythonhosted.org/packages/ce/6b/fee1b4814317e4664e318644c9c007676c65a71e5b2b9d3ac4121a94dc0a/shiboken6-6.11.2-cp310-abi3-win_amd64.whl",
+      "sha256": "6ab0eba1c904455df621f9a6df3ca2bb896bab8670572d2bc4e37804ae91f19a",
+      "size": 1226578
+    }
+  ],
+  "cpython_source": {
+    "url": "https://www.python.org/ftp/python/3.14.7/python-3.14.7-embed-amd64.zip",
+    "sha256": "d297e5ff019966817ad8502465176139f2d3d840fa4ed84b13bed399a6ab1f15",
+    "files": {
+      "vcruntime140.dll": "d1f4225df2cd877dbf130d5668a021dce3f94118455ff5ec952061c30afc9ce7",
+      "vcruntime140_1.dll": "a7146c08f89fe5b04541ab507cdb59ff7b44534d4ba3c668a426c6450a03434e"
+    }
+  },
+  "terms": [
+    {
+      "name": "community-2026",
+      "url": "https://visualstudio.microsoft.com/wp-content/uploads/2025/10/Visual_Studio_2026-License-Community_ENU.docx",
+      "sha256": "02ac07637f4a513a807cd3721c7620433fc483bc049d25784b0c10c54b05e1fb",
+      "size": 69066
+    },
+    {
+      "name": "runtime-2026",
+      "url": "https://visualstudio.microsoft.com/wp-content/uploads/2025/10/Visual-C-V14-License-Redistributable_and_Runtime_ENU.docx",
+      "sha256": "08651651a7602fc7c0e2763de0fde1ff9f868df2780597cd1775ee9d6441c783",
+      "size": 39553
+    },
+    {
+      "name": "community-2022",
+      "url": "https://visualstudio.microsoft.com/wp-content/uploads/2021/11/Visual-Studio-2022-Community-License-EN.docx",
+      "sha256": "41a207b10c8ab91d0d2f10a854715f73dca54509581692d2fe179aa3ffcb8540",
+      "size": 62859
+    }
+  ]
+}

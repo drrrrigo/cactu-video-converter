@@ -79,6 +79,8 @@ jobs:
       - name: Capture exact installed MSYS attribution
         shell: msys2 {0}
         run: /usr/bin/python scripts/collect_msys_native_evidence.py / build/msys-attribution
+      - name: Check CRT-independent Windows prerequisite launcher
+        run: python scripts/check_windows_runtime.py
       - name: Frozen Windows candidate and installer smoke
         env:
           QT_QPA_PLATFORM: offscreen
@@ -96,6 +98,7 @@ jobs:
             build/ffmpeg-controlled/compatibility.json
             build/controlled-runtime-manifest.json
             build/msys-payload-notices.json
+            build/windows-runtime/*.json
             dist/candidate/*.json
             dist/candidate/*-SHA256SUMS.txt
           if-no-files-found: warn

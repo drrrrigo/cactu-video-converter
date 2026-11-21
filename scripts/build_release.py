@@ -129,8 +129,19 @@ def main() -> int:
         from msys_payload_notices import integrate
 
         integrate(bundle, ROOT / "build/msys-attribution/msys-native-evidence.json")
+        from windows_runtime import prepare_bundle
+
+        windows_runtime_evidence = prepare_bundle(bundle)
     executable = bundle / (EXECUTABLE_NAME + (".exe" if sys.platform == "win32" else ""))
     signed = sign(executable)
+    if sys.platform == "win32":
+        sign(bundle / "CactuVideoConverter-core.exe")
+        windows_runtime_evidence.update(
+            sha256=sha256(executable), core_sha256=sha256(bundle / "CactuVideoConverter-core.exe")
+        )
+        (ROOT / "build/windows-runtime/launcher-evidence.json").write_text(
+            json.dumps(windows_runtime_evidence, indent=2) + "\n"
+        )
     smoke(executable, destination=output / (target + "-onedir-smoke.json"))
     evidence = {
         "version": __version__,
@@ -147,6 +158,8 @@ def main() -> int:
         "candidate_only": True,
         "controlled_runtime": controlled_provenance,
     }
+    if sys.platform == "win32":
+        evidence["windows_runtime"] = windows_runtime_evidence
     if sys.platform == "win32":
         archive = output / f"{EXECUTABLE_NAME}-Portable-{__version__}.zip"
         with zipfile.ZipFile(archive, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as z:

@@ -1,0 +1,12 @@
+{
+  "strategy": "system-prerequisite",
+  "architecture": "x64",
+  "qualification_floor": [14, 51, 36247, 0],
+  "floor_basis": "Conservative qualification floor from CPython 3.14.7 supplier runtime; not a claim of the minimum ABI supported by every component",
+  "required_dlls": ["msvcp140.dll", "msvcp140_1.dll", "msvcp140_2.dll", "vcruntime140.dll", "vcruntime140_1.dll"],
+  "official_guidance": "https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist",
+  "automatic_download": false,
+  "bundled_microsoft_runtime": false,
+  "clean_windows_validation_complete": false,
+  "human_license_approval": false
+}

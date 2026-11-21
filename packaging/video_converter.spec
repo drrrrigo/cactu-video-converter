@@ -33,7 +33,7 @@ if sys.platform == "win32":
     (root / "build/windows-os-boundary.json").write_text(json.dumps({
         "os_provided": sorted(removed),
         "beta_manual_target": "Windows 11",
-        "reason": "Windows 10/11 always uses system UCRT/API-set contracts; VC++ runtime DLLs stay bundled",
+        "reason": "System UCRT/API-set contracts and system-installed Microsoft VC++ runtime; no app-local MSVCP/VCRUNTIME",
         "evidence": "https://learn.microsoft.com/en-us/cpp/windows/universal-crt-deployment"
     }, indent=2) + "\n", encoding="utf-8")
 pyz = PYZ(a.pure)

@@ -140,7 +140,7 @@ class DependencyComplianceTests(unittest.TestCase):
             ("qwindows.dll", "platform", "BINARY"),
             ("VCRUNTIME140.dll", "crt", "BINARY"),
         ]
-        self.assertEqual(windows_application_binaries(entries), entries[1:])
+        self.assertEqual(windows_application_binaries(entries), entries[1:3])
 
     def test_same_named_cpython_dll_is_not_attributed_to_msys(self):
         with tempfile.TemporaryDirectory() as folder:

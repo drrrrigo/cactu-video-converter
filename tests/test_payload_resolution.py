@@ -74,7 +74,7 @@ class PayloadResolutionTests(unittest.TestCase):
             self.assertEqual(entry["revision"], "7153")
             self.assertEqual(entry["source_method"], "svn-export")
 
-    def test_windows_os_contracts_are_removed_but_vc_runtime_stays(self):
+    def test_windows_os_contracts_and_system_vc_runtime_are_not_bundled(self):
         entries = [
             (name, "supplier/" + name, "BINARY")
             for name in [
@@ -86,7 +86,7 @@ class PayloadResolutionTests(unittest.TestCase):
                 "Qt6Core.dll",
             ]
         ]
-        self.assertEqual(windows_application_binaries(entries), entries[3:])
+        self.assertEqual(windows_application_binaries(entries), entries[5:])
 
     def test_controlled_runtime_refuses_changed_recipe_before_acquiring_inputs(self):
         with tempfile.TemporaryDirectory() as folder:
