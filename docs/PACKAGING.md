@@ -46,3 +46,29 @@ and native dependency scan. Unknown origins/notices remain open reviews. These
 reports and generated checksum text may be retained separately from binaries;
 the public binary upload gate remains intact. Audit builds are explicitly not RC1.
 See [BETA1_RELEASE_CHECKLIST](BETA1_RELEASE_CHECKLIST.md) for authoritative status.
+
+
+## Redistribution blocker-resolution packaging policy
+
+The final native audit is 7b7d23c, run 44845101385. All builds/frozen smoke passed;
+only distribution eligibility failed and executable upload was skipped. Metadata
+and comparisons are retained in release/evidence/beta1-resolution-7b7d23c.
+
+Custom QtGui/QtNetwork hooks exclude only unused PDF/virtual keyboard chains and
+Windows Qt's optional OpenSSL backend. Windows frozen smoke requires Schannel.
+windows_application_binaries excludes OS-supplied UCRT/API-set contracts while
+preserving Visual C++ DLLs. Linux required libmvec stays bundled. See
+scripts/qt_payload_policy.py and the exact per-file comparisons; no blanket host
+library exclusion or required codec/driver installation was added.
+
+The selected type-2 runtime is built from source by build_controlled_runtime.py
+inside a locked Alpine root with network disabled. Its reproducible hash is in
+appimage-controlled-lock.json. prepare_runtime_source_delivery.py creates only a
+local component source/relink archive; runtime-source-delivery.json retains the
+verified archive/roundtrip/relink receipt. No binary build approval follows from
+these technical checks. Source delivery and final terms remain separate gates.
+
+Current hosted outputs are audit-only, not a retained RC1 set. Final exact source,
+notice, conditional-grant and maintained recipient delivery records remain open;
+see BETA1_BLOCKER_RESOLUTION.md. The publisher currently uploads application assets
+and checksums; reviewed source assets/index wiring must be added before release.

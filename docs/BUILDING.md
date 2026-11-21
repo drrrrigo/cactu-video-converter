@@ -52,3 +52,28 @@ Packaged smoke executes the frozen app with PATH empty, not a source interpreter
 Beta publication additionally requires exact license/source closure, manual Windows
 11/portable/Linux evidence and the source/artifact hashes described in
 [RELEASE_CHECKLIST](RELEASE_CHECKLIST.md). Do not flip approval flags without evidence.
+
+
+## Controlled AppImage and local source-review material
+
+Linux candidate setup invokes scripts/build_controlled_runtime.py for the pinned
+runtime. Install bubblewrap as a build prerequisite. Input acquisition verifies
+hashes before entering the isolated offline build; no host package installation
+is performed by that script. CACTU_RUNTIME_BUILD_ROOT can place the isolated build
+on a disk with sufficient space. Exact rootfs/99 APK/static source/link input hashes
+and compiler identity are in release/appimage-controlled-lock.json.
+
+Source audit helpers (no publication):
+
+```sh
+python scripts/retain_ffmpeg_sources.py --download
+python scripts/verify_source_delivery.py
+python scripts/prepare_runtime_source_delivery.py --experiment build/controlled-runtime
+```
+
+SVN source export additionally needs a trusted SVN client; explicit revision pins
+are retained. The current Xvid endpoint requires authentication, so no complete
+FFmpeg source set is asserted. verify_source_delivery.py --require-complete must
+still fail. The runtime component archive is not a complete Cactu source offer.
+Retained sources are ignored local files; maintain/review them before recipient
+hosting. Build directories and tests can be large: put TMPDIR on adequate disk.

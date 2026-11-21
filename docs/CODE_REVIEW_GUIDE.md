@@ -304,3 +304,37 @@ required manual scenario results and BETA_OWNER_APPROVAL from the protected envi
 Owner approval binds the same source/artifact hashes without changing the tested
 commit. No committed publication boolean alone authorizes release. Preparation must
 never execute a beta tag, create a release or upload application binaries publicly.
+
+
+## Redistribution blocker resolution
+
+Start with docs/BETA1_BLOCKER_RESOLUTION.md and the 7b7d23c native metadata receipt.
+Compare original eabc092 inventories with the new actual installed/portable/AppImage
+reports; do not replace the packaged SHA with a later docs/evidence commit.
+
+Review packaging/hooks and scripts/qt_payload_policy.py for narrow pre-analysis
+plugin exclusions, mandatory Windows Schannel and the OS-provided UCRT/API-set
+boundary. Check required libmvec and Visual C++ DLLs remain. Inspect actual frozen
+smoke evidence for preview, subtitles, loudness and sequential queue behavior.
+
+Trace payload_inventory.py copy aliases/dpkg source origins and PE flags,
+qt_file_mapping.py actual module/source/notice mapping, native_notices.py source
+notices and payload_diff.py exact removals/changes. resolve_payload_obligations.py
+joins each exact file/hash to sources/open obligations; it never grants approval.
+Known wheel copying origin is not exact upstream source/build closure.
+
+Inspect retain_ffmpeg_sources.py for exact Git/SVN/tag resolution, preserved hashes,
+changed-cache rejection, bounded acquisition and explicitly unretained gitlinks.
+Review ffmpeg-provider-build-evidence.json actual OCI identities and the remaining
+Xvid/generated/vendor/source correspondence gaps. No controlled FFmpeg replacement
+is claimed. retain_ubuntu_sources.py verifies exact source versions and .dsc part
+hashes but does not claim independent PGP validation.
+
+Review build_controlled_runtime.py, the shell recipe, appimage-controlled-lock.json,
+static link map/inputs, notices and prepare_runtime_source_delivery.py. Compilation
+is offline, exact hashes are checked, relinking works without Cactu keys and the
+local component TAR manifest was roundtrip verified. Recipient hosting and final
+license review remain required. Inno's SBOM includes optional/build-only objects;
+actual generated-stub inclusion is still an open review. All global technical,
+license and publication approvals must remain false until their own evidence gates
+are satisfied. Tests do not override them.

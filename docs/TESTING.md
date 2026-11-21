@@ -227,7 +227,7 @@ Linux desktop exact-artifact testing.
 Nine release-boundary tests in test_release_preparation.py cover wrong Python patch,
 clean commit/dirty-source rejection, actual unknown-file inventory, escaping symlink
 rejection, missing payload evidence, missing external owner approval, incomplete
-manual records and technical-review flag enforcement. The current total is **157**.
+manual records and technical-review flag enforcement. The preparation-stage total was **157**; see the final blocker-resolution count below.
 The existing 148 media/product tests remain present. Release smoke additionally
 compares the actual frozen interpreter's version with the canonical 3.14.7 pin.
 
@@ -237,3 +237,32 @@ fresh; the historical Nov 1 run is not current-HEAD evidence. Native package aud
 reports include actual installed/portable/AppImage inventories and runtime license
 outputs. Full desktop/manual result forms are in MANUAL_TEST_WINDOWS_BETA1.md and
 MANUAL_TEST_LINUX_BETA1.md. No RC1 or licensing readiness is implied by green tests.
+
+
+## Final redistribution blocker-resolution validation
+
+The current total is **169**. Final local Python 3.14.7 execution passed all 169 in
+69.376 s with VIDEO_CONVERTER_HARDWARE_TEST=1, physical RX 7700 XT VAAPI, and TMPDIR
+on the project disk. Coverage adds narrow plugin/OS contract boundaries, alias
+copy-origin resolution, per-file diff semantics, changed-runtime recipe rejection,
+SVN revision parsing and immutable retained-source/tag/hash checks. Expected
+synthetic failure logs exercise failure paths; they are not test failures.
+
+At packaged source 7b7d23c, Windows/Linux source CI 44844968490 found 166 tests:
+163 passed and three opt-in physical-GPU tests skipped per platform. Packaging
+44845101385 built and smoke-tested installer/portable/AppImage, x264/AAC/Faststart,
+subtitles, Quick Preview and sequential two-job/loudness queue. Windows smoke
+checks Qt's active Schannel backend. Overall audit failed only at redistribution
+eligibility; executable upload was skipped. Cloud tables are not physical GPU tests.
+
+Controlled AppImage runtime: two offline builds plus independent retained-object
+relink match the selected hash; the local source/relink TAR roundtrip verified all
+131 source/relink file hashes. Local source verification covers 146 source entries
+and 64 exact Ubuntu packages; complete corresponding-source approval remains false.
+The containing source/evidence commit triggers the full native source suite again;
+its status must be assessed separately from the 7b7d23c packaged artifacts.
+
+Manual Windows 11/portable/Linux/second-environment/display-scale/Wayland/X11 results
+remain pending for an exact future RC set. Earlier development offscreen or GPU
+checks do not fill those records. See BETA1_BLOCKER_RESOLUTION.md and the retained
+metadata-only receipt for exact evidence and limitations.

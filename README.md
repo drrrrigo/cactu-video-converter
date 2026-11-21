@@ -95,3 +95,5 @@ own licenses. See [THIRD_PARTY_NOTICES](THIRD_PARTY_NOTICES.md) and the
 [release license audit](docs/RELEASE_LICENSE_AUDIT.md). An unfinished dependency/
 corresponding-source audit blocks binary publication. GPL source availability does
 not by itself certify a particular binary bundle for redistribution.
+
+Current redistribution engineering status and exact remaining RC1 blockers: [blocker-resolution report](docs/BETA1_BLOCKER_RESOLUTION.md). Native audit builds passed smoke; beta binaries remain unpublished.

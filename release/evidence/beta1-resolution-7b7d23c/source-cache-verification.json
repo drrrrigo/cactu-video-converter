@@ -1,0 +1,1017 @@
+{
+  "retained_verified": [
+    {
+      "filename": "qtbase-ef55f427f2c8b410d34f8a7681020a3000cf6866.tar.gz",
+      "sha256": "12b3a9ba00613180caea4da77a1ae6fc1ca054b8822b316ba3a05fb4414fba56",
+      "url": "https://codeload.github.com/qt/qtbase/tar.gz/ef55f427f2c8b410d34f8a7681020a3000cf6866"
+    },
+    {
+      "filename": "qtsvg-17ca512f903f935282ebeca496aac5d11ba4199a.tar.gz",
+      "sha256": "67214f604e86af925d9e2c9f32af5e778a621cabfb51011b7e89aef268a6a150",
+      "url": "https://codeload.github.com/qt/qtsvg/tar.gz/17ca512f903f935282ebeca496aac5d11ba4199a"
+    },
+    {
+      "filename": "qtwayland-fd0456558bc1766da85aee42f6a87f79092cbb13.tar.gz",
+      "sha256": "70e921497f4decb88d6f61b6a94673f2dda3c18f4343bd21b8cab44ba19692f4",
+      "url": "https://codeload.github.com/qt/qtwayland/tar.gz/fd0456558bc1766da85aee42f6a87f79092cbb13"
+    },
+    {
+      "filename": "pyside-pyside-setup-24627cd36e1593adf22eb1f2950e4248e7bcc1ec.tar.gz",
+      "sha256": "92f292b8889f8a3213f7d17da5cdcd19f6d7f01611689bdf692890d5fbc7eb61",
+      "url": "https://codeload.github.com/qtproject/pyside-pyside-setup/tar.gz/24627cd36e1593adf22eb1f2950e4248e7bcc1ec"
+    },
+    {
+      "filename": "10-mingw-std-threads--c931bac289dd431f1dd30fc4a5d1a7be36668073.tar.gz",
+      "sha256": "bba362a5fd537ecd223239efa1f7e7c570018e6d5ea7b26cc0515d3ede9da5ad",
+      "url": "https://codeload.github.com/meganz/mingw-std-threads/tar.gz/c931bac289dd431f1dd30fc4a5d1a7be36668073"
+    },
+    {
+      "filename": "10-mingw--41eb042358a52011b35350392130dcdc94a8ead8.tar.gz",
+      "sha256": "ad6d560026642dd3865529d772b9c6cfeb7dbd01897aeeeafc5d8a8b830b8c90",
+      "url": "https://git.code.sf.net/p/mingw-w64/mingw-w64.git"
+    },
+    {
+      "filename": "10-xorg-macros--ea1e15a4909ac8b03b2c5a08ac3810b385985157.tar.gz",
+      "sha256": "3d7b9d27ac79e9fcdbdae6fcbacb171ba11a5fc12cb54c756bc81633064f91ad",
+      "url": "https://gitlab.freedesktop.org/xorg/util/macros/-/archive/ea1e15a4909ac8b03b2c5a08ac3810b385985157/macros-ea1e15a4909ac8b03b2c5a08ac3810b385985157.tar.gz"
+    },
+    {
+      "filename": "20-libiconv--baaba39736e3b498e1597bf0e5e899b1f753fb01.tar.gz",
+      "sha256": "d12ca8a45396da22d1bfbc8ec6d791bb70a974a84eb371c66bcc9305cb6d8391",
+      "url": "https://git.savannah.gnu.org/git/libiconv.git"
+    },
+    {
+      "filename": "20-libiconv-2-f9e4c24e9bf3f878a11505a8d06bec965f0fca02.tar.gz",
+      "sha256": "4aa96ffb681831e24bbde6909b855179e8492e17469d41aa3d3137d7fd074e4f",
+      "url": "https://git.savannah.gnu.org/git/gnulib.git"
+    },
+    {
+      "filename": "20-zlib--99623ef7097352da7993ba614161fd6a311e046e.tar.gz",
+      "sha256": "f0d590dd90243a12f551ee13359bf6c634249c55b316fa2b7dbecabe7ae9a904",
+      "url": "https://codeload.github.com/madler/zlib/tar.gz/99623ef7097352da7993ba614161fd6a311e046e"
+    },
+    {
+      "filename": "25-fftw3--a7b679c528330cf6258253d6dcf5ec90552e6c93.tar.gz",
+      "sha256": "cb4c579c7d67b933b91eb37c0c18e929734ac8cbe7154f742a4a3dde139e18d7",
+      "url": "https://codeload.github.com/FFTW/fftw3/tar.gz/a7b679c528330cf6258253d6dcf5ec90552e6c93"
+    },
+    {
+      "filename": "25-fribidi--15393e4937aa95bcf865d92143735746aeb654fa.tar.gz",
+      "sha256": "3e8c03cf8182ff3570a3696c7efd3c456f1fcf288a509b588abe67fc2ff4f630",
+      "url": "https://codeload.github.com/fribidi/fribidi/tar.gz/15393e4937aa95bcf865d92143735746aeb654fa"
+    },
+    {
+      "filename": "25-gmp--f9095918ead819c0a2340232891b5acac24b8085.tar.gz",
+      "sha256": "7e03113bef806a1c57a059093ccc63bb76c5ebcd221829f78e49c54ec83fd9c9",
+      "url": "https://codeload.github.com/BtbN/gmplib/tar.gz/f9095918ead819c0a2340232891b5acac24b8085"
+    },
+    {
+      "filename": "25-libogg--06a5e0262cdc28aa4ae6797627a783b5010440f0.tar.gz",
+      "sha256": "fd7ab06f9fe9ace6b75d4223cf9034c9648cbe9f16120a344ec82f27c605ca11",
+      "url": "https://codeload.github.com/xiph/ogg/tar.gz/06a5e0262cdc28aa4ae6797627a783b5010440f0"
+    },
+    {
+      "filename": "25-libpng--5408ee7a2e56555cc4b0acc4051ae241fee38cf3.tar.gz",
+      "sha256": "57c27f62c21ad560b9474ab366fa06c95e7d1f074fbd6fec0aeb5c9848fc7403",
+      "url": "https://codeload.github.com/glennrp/libpng/tar.gz/5408ee7a2e56555cc4b0acc4051ae241fee38cf3"
+    },
+    {
+      "filename": "25-libxml2--21c8223ac091b81d5914c52eb20b1b063e29cb92.tar.gz",
+      "sha256": "8f6ac2d07fcc87404494257cc726cefafed2796f7a7885700610d7255b9fc802",
+      "url": "https://codeload.github.com/GNOME/libxml2/tar.gz/21c8223ac091b81d5914c52eb20b1b063e29cb92"
+    },
+    {
+      "filename": "25-openssl--openssl-3.6.5.tar.gz",
+      "sha256": "dcd6ac7e568a106deddfb1785407fdb89073f121532dcdb049979cd72d8e7713",
+      "url": "https://codeload.github.com/openssl/openssl/tar.gz/c8bd5a57108599ac650bbae77fcabe3109dab2e8"
+    },
+    {
+      "filename": "25-xz--f54febc540607b3bdee0a0e6793355df2a7e9f61.tar.gz",
+      "sha256": "ba9015d70fd478711f09124697c59eec155e87af02efa965e6a3875e04306a24",
+      "url": "https://codeload.github.com/tukaani-project/xz/tar.gz/f54febc540607b3bdee0a0e6793355df2a7e9f61"
+    },
+    {
+      "filename": "45-brotli--3dce8720b74194027c7b4cf42dee5bd159786df5.tar.gz",
+      "sha256": "fd56b2612ae2851529d7e3b4de34b45ed9abdf9ba3cb8d4fa7cf2a9218c645d7",
+      "url": "https://codeload.github.com/google/brotli/tar.gz/3dce8720b74194027c7b4cf42dee5bd159786df5"
+    },
+    {
+      "filename": "25-freetype--dbb00e529e69a2be629a9ef98498e4f9b188aab1.tar.gz",
+      "sha256": "213242cda8ea9e08e6c2abd159ba4c0fb3d884622e896e1546c8b9102f893a30",
+      "url": "https://gitlab.freedesktop.org/freetype/freetype/-/archive/dbb00e529e69a2be629a9ef98498e4f9b188aab1/freetype-dbb00e529e69a2be629a9ef98498e4f9b188aab1.tar.gz"
+    },
+    {
+      "filename": "35-fontconfig--bb21be622280981392c0335fc22202fbba46d247.tar.gz",
+      "sha256": "36389e1f51dae04abace72832a106e9eed746874539e12f34017789ecaa71b01",
+      "url": "https://gitlab.freedesktop.org/fontconfig/fontconfig/-/archive/bb21be622280981392c0335fc22202fbba46d247/fontconfig-bb21be622280981392c0335fc22202fbba46d247.tar.gz"
+    },
+    {
+      "filename": "45-harfbuzz--8f1a4e0634a35182e5dd04401edcf57acf5eb12e.tar.gz",
+      "sha256": "0e39f541c2c6a266e951f63530c6c2f7652be65a9f3578092541abd00213a785",
+      "url": "https://codeload.github.com/harfbuzz/harfbuzz/tar.gz/8f1a4e0634a35182e5dd04401edcf57acf5eb12e"
+    },
+    {
+      "filename": "50-freetype--dbb00e529e69a2be629a9ef98498e4f9b188aab1.tar.gz",
+      "sha256": "213242cda8ea9e08e6c2abd159ba4c0fb3d884622e896e1546c8b9102f893a30",
+      "url": "https://gitlab.freedesktop.org/freetype/freetype/-/archive/dbb00e529e69a2be629a9ef98498e4f9b188aab1/freetype-dbb00e529e69a2be629a9ef98498e4f9b188aab1.tar.gz"
+    },
+    {
+      "filename": "45-lcms2--ed288c301bd85eaabcb9e1ae0f73540c5f129e1e.tar.gz",
+      "sha256": "a66ab9851e297389daafeb01bd407e650535cff5d182898cb691c36a55850eb4",
+      "url": "https://codeload.github.com/mm2/Little-CMS/tar.gz/ed288c301bd85eaabcb9e1ae0f73540c5f129e1e"
+    },
+    {
+      "filename": "45-libffi--de7afe7aa9e8ab7ac36429428a7222caae1e7988.tar.gz",
+      "sha256": "d3c4bc7f807bd15f10c99ea3b2a3365bad27f47b3fd0621a329120af3fe87e9d",
+      "url": "https://codeload.github.com/libffi/libffi/tar.gz/de7afe7aa9e8ab7ac36429428a7222caae1e7988"
+    },
+    {
+      "filename": "45-libsamplerate--0844c208f683527c08ea8a80acc13b398aa9c8bf.tar.gz",
+      "sha256": "c5b976c99196df8247dd429fcaa05f44e281ec15b48f185c9b60c979c468d4c6",
+      "url": "https://codeload.github.com/libsndfile/libsamplerate/tar.gz/0844c208f683527c08ea8a80acc13b398aa9c8bf"
+    },
+    {
+      "filename": "45-libudfread--b0bc6957e7e07d5f35391f210596d9eb71cffdd9.tar.gz",
+      "sha256": "c04bb96b72dd0760030d880ad6c9ea2ae80abbdd648de127adb1b2e8555186aa",
+      "url": "https://code.videolan.org/videolan/libudfread/-/archive/b0bc6957e7e07d5f35391f210596d9eb71cffdd9/libudfread-b0bc6957e7e07d5f35391f210596d9eb71cffdd9.tar.gz"
+    },
+    {
+      "filename": "45-libunibreak--ff24f284a567a006c183b3507b6c650d6ec68b94.tar.gz",
+      "sha256": "af0578a41869495401fa65d7071216af969cc40005f8c599ef97ed8c9828b578",
+      "url": "https://codeload.github.com/adah1972/libunibreak/tar.gz/ff24f284a567a006c183b3507b6c650d6ec68b94"
+    },
+    {
+      "filename": "45-libvorbis--1b75110b5a2754ba1931d82dd83cb822b266a21d.tar.gz",
+      "sha256": "bd0f08c8a63debdce27dd71de7d953f9c92e410d1cfe263220bcb49fff2ab749",
+      "url": "https://codeload.github.com/xiph/vorbis/tar.gz/1b75110b5a2754ba1931d82dd83cb822b266a21d"
+    },
+    {
+      "filename": "45-opencl--82f60316cc142e7b21dc1d8983b26de18858fbd9.tar.gz",
+      "sha256": "7576bc8ba67af73ef30ae28096b4d19b953e7767960f24fba0e14d97e732f62d",
+      "url": "https://codeload.github.com/KhronosGroup/OpenCL-Headers/tar.gz/82f60316cc142e7b21dc1d8983b26de18858fbd9"
+    },
+    {
+      "filename": "45-opencl-2-d0be526adb156de7f701024acc811182c984d4c5.tar.gz",
+      "sha256": "a144134837478ffc3d8d67c3d398ab8a2d3130ffc25a7d19bdedf8348c8cd864",
+      "url": "https://codeload.github.com/KhronosGroup/OpenCL-ICD-Loader/tar.gz/d0be526adb156de7f701024acc811182c984d4c5"
+    },
+    {
+      "filename": "45-pcre2--49d26bca00694ae940adde6d8bd056d8bfc168fa.tar.gz",
+      "sha256": "62c34aa3104806a35afc6604cbf05bcb009fdbdb90f4aefaef5ced147c9531a2",
+      "url": "https://codeload.github.com/PCRE2Project/pcre2/tar.gz/49d26bca00694ae940adde6d8bd056d8bfc168fa"
+    },
+    {
+      "filename": "45-pixman--b88b92e512a33a222e08352e87ff90a57d33c7b5.tar.gz",
+      "sha256": "f93b3cd41cefcecbb8a908d16ed085b93db95ae47938694dc88be967bc2e44fc",
+      "url": "https://gitlab.freedesktop.org/pixman/pixman/-/archive/b88b92e512a33a222e08352e87ff90a57d33c7b5/pixman-b88b92e512a33a222e08352e87ff90a57d33c7b5.tar.gz"
+    },
+    {
+      "filename": "45-pulseaudio--819f2c06ccdc105739e1c714de968f2af1d3e205.tar.gz",
+      "sha256": "7f755548d2d38a416af422d0577c4458d9a050b586901a6efc8a7cbfe7893385",
+      "url": "https://gitlab.freedesktop.org/pulseaudio/pulseaudio/-/archive/819f2c06ccdc105739e1c714de968f2af1d3e205/pulseaudio-819f2c06ccdc105739e1c714de968f2af1d3e205.tar.gz"
+    },
+    {
+      "filename": "45-vmaf--cf677baaa039723876fff8c2677164f25102e684.tar.gz",
+      "sha256": "877997d8d63d9a0f757daac788f319248ef82416aad366cd992a238e204c0955",
+      "url": "https://codeload.github.com/Netflix/vmaf/tar.gz/cf677baaa039723876fff8c2677164f25102e684"
+    },
+    {
+      "filename": "10-xcbproto--dea37a7033abfdef3376dc9ad5e8756e9fee959b.tar.gz",
+      "sha256": "95c513c2364bdeba4d51ceb4dacf969a6b8506fe917c169b9341cfb13f31300d",
+      "url": "https://gitlab.freedesktop.org/xorg/proto/xcbproto/-/archive/dea37a7033abfdef3376dc9ad5e8756e9fee959b/xcbproto-dea37a7033abfdef3376dc9ad5e8756e9fee959b.tar.gz"
+    },
+    {
+      "filename": "10-xproto--6d3907b6d5dc4aa7d7ee6ee5d7d8714e7466630b.tar.gz",
+      "sha256": "2f41108995a0e85fc3f8bb8ca2e5649b827052d3d18135766ad50e248fb142b3",
+      "url": "https://gitlab.freedesktop.org/xorg/proto/xorgproto/-/archive/6d3907b6d5dc4aa7d7ee6ee5d7d8714e7466630b/xorgproto-6d3907b6d5dc4aa7d7ee6ee5d7d8714e7466630b.tar.gz"
+    },
+    {
+      "filename": "10-xtrans--79f6b0bfe2170496e8c37626043d009f4cd3f1e1.tar.gz",
+      "sha256": "6b1027b212c31d8b6867eea3f20a192b6323c417c20a83a37c940197f832e541",
+      "url": "https://gitlab.freedesktop.org/xorg/lib/libxtrans/-/archive/79f6b0bfe2170496e8c37626043d009f4cd3f1e1/libxtrans-79f6b0bfe2170496e8c37626043d009f4cd3f1e1.tar.gz"
+    },
+    {
+      "filename": "20-libxau--be1daeb909f1d678e7859ac1555e90b4e768d5c4.tar.gz",
+      "sha256": "91c7a43930dee28fce9f3aa17181e61eeee385318ba94952990070fe05b27d35",
+      "url": "https://gitlab.freedesktop.org/xorg/lib/libxau/-/archive/be1daeb909f1d678e7859ac1555e90b4e768d5c4/libxau-be1daeb909f1d678e7859ac1555e90b4e768d5c4.tar.gz"
+    },
+    {
+      "filename": "30-libxcb--aa7f3256060451ad65a38feeccf792f44181a4e0.tar.gz",
+      "sha256": "76caea5c2af7c621c7db84d3cf595508d05b3baabddf902ce8913b99c5ecd689",
+      "url": "https://gitlab.freedesktop.org/xorg/lib/libxcb/-/archive/aa7f3256060451ad65a38feeccf792f44181a4e0/libxcb-aa7f3256060451ad65a38feeccf792f44181a4e0.tar.gz"
+    },
+    {
+      "filename": "40-libx11--bf893321132251b17b5224fa8830787b45aec4f6.tar.gz",
+      "sha256": "23a00311a4e04713b8f45bd2b5e55bf00c9dd45c65e2bb6f3498abe9cea69b39",
+      "url": "https://gitlab.freedesktop.org/xorg/lib/libx11/-/archive/bf893321132251b17b5224fa8830787b45aec4f6/libx11-bf893321132251b17b5224fa8830787b45aec4f6.tar.gz"
+    },
+    {
+      "filename": "50-libxext--4770cdff013c036ba4f043b2c895d1b0bfeb0973.tar.gz",
+      "sha256": "40cba75fb020d207a0c440c2652bbb20ee546f663973cfd7e02db3b6c094e0c6",
+      "url": "https://gitlab.freedesktop.org/xorg/lib/libxext/-/archive/4770cdff013c036ba4f043b2c895d1b0bfeb0973/libxext-4770cdff013c036ba4f043b2c895d1b0bfeb0973.tar.gz"
+    },
+    {
+      "filename": "50-libxfixes--156e1e39c518f0443073e9c27071e4eceb02e3c0.tar.gz",
+      "sha256": "d3b890b7f3a66060fb52c9fbd1c60f6d5258115c56e01489ef52d6badc7070e0",
+      "url": "https://gitlab.freedesktop.org/xorg/lib/libxfixes/-/archive/156e1e39c518f0443073e9c27071e4eceb02e3c0/libxfixes-156e1e39c518f0443073e9c27071e4eceb02e3c0.tar.gz"
+    },
+    {
+      "filename": "50-libxi--9584453906a144fb8b4dbe92d9bf79219391f8e1.tar.gz",
+      "sha256": "ba08bd3a0e721a2d9724965ef66053b321836ad866a8313d31891e4f45d7bb39",
+      "url": "https://gitlab.freedesktop.org/xorg/lib/libxi/-/archive/9584453906a144fb8b4dbe92d9bf79219391f8e1/libxi-9584453906a144fb8b4dbe92d9bf79219391f8e1.tar.gz"
+    },
+    {
+      "filename": "50-libxinerama--92d8f35d672537721dcd3a071d04306aa065c29b.tar.gz",
+      "sha256": "235578c4ffecdc7ab22126e2fd03c741369d7fd47ae66d6e06ec712f365a7598",
+      "url": "https://gitlab.freedesktop.org/xorg/lib/libxinerama/-/archive/92d8f35d672537721dcd3a071d04306aa065c29b/libxinerama-92d8f35d672537721dcd3a071d04306aa065c29b.tar.gz"
+    },
+    {
+      "filename": "50-libxrender--3aff9046bc91b31cc3dd6974876c29bc309a250a.tar.gz",
+      "sha256": "e806ab687a7e116762ead839e4418cd7e32cc3c26c254cb95d0fb2602c8d71f3",
+      "url": "https://gitlab.freedesktop.org/xorg/lib/libxrender/-/archive/3aff9046bc91b31cc3dd6974876c29bc309a250a/libxrender-3aff9046bc91b31cc3dd6974876c29bc309a250a.tar.gz"
+    },
+    {
+      "filename": "50-libxscrnsaver--723953c9a8dba44bcb1866cf06a54be74fbb8089.tar.gz",
+      "sha256": "12f97d52efefa0f613b21362fe026a498daa95a4842f4f2ab5b8a1d4ca8062ca",
+      "url": "https://gitlab.freedesktop.org/xorg/lib/libxscrnsaver/-/archive/723953c9a8dba44bcb1866cf06a54be74fbb8089/libxscrnsaver-723953c9a8dba44bcb1866cf06a54be74fbb8089.tar.gz"
+    },
+    {
+      "filename": "50-libxxf86vm--cf0c73fe2d5847eec3fb966487769f460c722cc4.tar.gz",
+      "sha256": "f1c5176628f863099cf49dddf75f2dd095c994df441093d5bdf04b33e1e8fc03",
+      "url": "https://gitlab.freedesktop.org/xorg/lib/libxxf86vm/-/archive/cf0c73fe2d5847eec3fb966487769f460c722cc4/libxxf86vm-cf0c73fe2d5847eec3fb966487769f460c722cc4.tar.gz"
+    },
+    {
+      "filename": "60-libglvnd--8731041dbd78566bffafb5145aec8b8df8b5260e.tar.gz",
+      "sha256": "d810f1e315917b546d0e8ae099071c4de662a71eaf2bd3ac434b664e32bddfa4",
+      "url": "https://gitlab.freedesktop.org/glvnd/libglvnd/-/archive/8731041dbd78566bffafb5145aec8b8df8b5260e/libglvnd-8731041dbd78566bffafb5145aec8b8df8b5260e.tar.gz"
+    },
+    {
+      "filename": "60-libxcursor--15efad7ccd035f5d1ddc8d437e047569d1775fa7.tar.gz",
+      "sha256": "b8d34bcb1959204f1b85df2c654eb3863012f488dbd0f22c98609982cfcfd3b8",
+      "url": "https://gitlab.freedesktop.org/xorg/lib/libxcursor/-/archive/15efad7ccd035f5d1ddc8d437e047569d1775fa7/libxcursor-15efad7ccd035f5d1ddc8d437e047569d1775fa7.tar.gz"
+    },
+    {
+      "filename": "60-libxrandr--cc7082d2af97458dbb6d7e4bbda7b8884030e05f.tar.gz",
+      "sha256": "6dac1aa060a6b1694afae6c072241e9ad2a101d81b79035209cc726513e29967",
+      "url": "https://gitlab.freedesktop.org/xorg/lib/libxrandr/-/archive/cc7082d2af97458dbb6d7e4bbda7b8884030e05f/libxrandr-cc7082d2af97458dbb6d7e4bbda7b8884030e05f.tar.gz"
+    },
+    {
+      "filename": "60-libxv--f315ec50fcad9bdbaed46c3e78dc5e7fe209f933.tar.gz",
+      "sha256": "5f952681dfa38d36ea6af9e560d886d36d1cc8ef6b9161cbfafc9f18fba4ac6c",
+      "url": "https://gitlab.freedesktop.org/xorg/lib/libxv/-/archive/f315ec50fcad9bdbaed46c3e78dc5e7fe209f933/libxv-f315ec50fcad9bdbaed46c3e78dc5e7fe209f933.tar.gz"
+    },
+    {
+      "filename": "45-xxhash--2ec67caeb18ec15ae60c0853174331089acddfc0.tar.gz",
+      "sha256": "3af288291460ab006ed582312d3fd8e140fadc08a538c97bc1917c49a46bb935",
+      "url": "https://codeload.github.com/Cyan4973/xxHash/tar.gz/2ec67caeb18ec15ae60c0853174331089acddfc0"
+    },
+    {
+      "filename": "45-zstd--de6359d7ea2949afa1407ed2fc2423777ebf1e23.tar.gz",
+      "sha256": "865e80e792fc4462c375d6850617b6bd9adf03284072dd6797e842abbec78b9f",
+      "url": "https://codeload.github.com/facebook/zstd/tar.gz/de6359d7ea2949afa1407ed2fc2423777ebf1e23"
+    },
+    {
+      "filename": "40-vulkan-headers--v1.4.368.tar.gz",
+      "sha256": "997cd7754f272f46a477f783b7a5c16613604cecde52233eede07e26dfc5655f",
+      "url": "https://codeload.github.com/KhronosGroup/Vulkan-Headers/tar.gz/88487f687f3100ebe1d3559a8a34d971ee85b977"
+    },
+    {
+      "filename": "45-vulkan-loader--65b3936528cd92eb4ea3de485d03f858a3850484.tar.gz",
+      "sha256": "1cea0208588bd9d30379e7b83800dd7a32ca68d43c118642693be57782f8633d",
+      "url": "https://codeload.github.com/BtbN/Vulkan-Shim-Loader/tar.gz/65b3936528cd92eb4ea3de485d03f858a3850484"
+    },
+    {
+      "filename": "45-vulkan-loader-2-v1.4.368.tar.gz",
+      "sha256": "997cd7754f272f46a477f783b7a5c16613604cecde52233eede07e26dfc5655f",
+      "url": "https://codeload.github.com/KhronosGroup/Vulkan-Headers/tar.gz/88487f687f3100ebe1d3559a8a34d971ee85b977"
+    },
+    {
+      "filename": "50-shaderc--05814952134d09f8b54ae925afe578fc341cf6c1.tar.gz",
+      "sha256": "8e4c6994dfe6451be2665f186ba9c721f486fb23e6aaa026bb4a1ec98625135e",
+      "url": "https://codeload.github.com/google/shaderc/tar.gz/05814952134d09f8b54ae925afe578fc341cf6c1"
+    },
+    {
+      "filename": "55-spirv-cross--57e4efcc84112abcd426dc5ec248b5339bee04f2.tar.gz",
+      "sha256": "59f15a74725f96a1e15f0fa708d54a217ab659eeef894c4d7e44cc67837d3e3a",
+      "url": "https://codeload.github.com/KhronosGroup/SPIRV-Cross/tar.gz/57e4efcc84112abcd426dc5ec248b5339bee04f2"
+    },
+    {
+      "filename": "60-spirv-headers--5c6004e758e0c80185ef2cee93ae5c10fa342a5b.tar.gz",
+      "sha256": "cc1bdb9d3ecee75c00eab4e60387909d27152ec5f13ac928ee984ae952b6f70c",
+      "url": "https://codeload.github.com/KhronosGroup/SPIRV-Headers/tar.gz/5c6004e758e0c80185ef2cee93ae5c10fa342a5b"
+    },
+    {
+      "filename": "50-amf--57ee0cfb0e1a08d9041f77435653794c1b012be0.tar.gz",
+      "sha256": "4255b6cbf2637c778da77ce77ccbb89e92870b3047af5fd56bb680b043ea60b5",
+      "url": "https://codeload.github.com/GPUOpen-LibrariesAndSDKs/AMF/tar.gz/57ee0cfb0e1a08d9041f77435653794c1b012be0"
+    },
+    {
+      "filename": "50-aom--aac27b8f291ed449fac576bcce0ad0ca189be851.tar.gz",
+      "sha256": "e34e6d99b73d34fa7312051a75de589cecba63b11784e43e1d643923f850f550",
+      "url": "https://aomedia.googlesource.com/aom"
+    },
+    {
+      "filename": "50-avisynth--5da089a5889a69ebacc25139c7718b4ab12f3cfb.tar.gz",
+      "sha256": "f563b7d6dba24725a8fa4be5225c506536d849c26cc622e26acf7bc6b3e61752",
+      "url": "https://codeload.github.com/AviSynth/AviSynthPlus/tar.gz/5da089a5889a69ebacc25139c7718b4ab12f3cfb"
+    },
+    {
+      "filename": "50-chromaprint--3b38c100022bdfb49be7797c4828a476f1621d55.tar.gz",
+      "sha256": "c68c77e11c9afe905117e3af24eb1bd802342d19b6d4629bae3bebc912df1dc6",
+      "url": "https://codeload.github.com/acoustid/chromaprint/tar.gz/3b38c100022bdfb49be7797c4828a476f1621d55"
+    },
+    {
+      "filename": "50-dav1d--6c7bee685677fd997a431302be4fea8ea4017606.tar.gz",
+      "sha256": "725d0ebe5bd19316aaaeee84a170b0f6f3930fc7cf53fa0c5bbe3c86ba1c2b15",
+      "url": "https://code.videolan.org/videolan/dav1d/-/archive/6c7bee685677fd997a431302be4fea8ea4017606/dav1d-6c7bee685677fd997a431302be4fea8ea4017606.tar.gz"
+    },
+    {
+      "filename": "50-davs2--b41cf117452e2d73d827f02d3e30aa20f1c721ac.tar.gz",
+      "sha256": "efa1d5080a42c6fe4a74177111bc20c82dd1cef7adfc5ed2ca997f4b03c8dd9c",
+      "url": "https://codeload.github.com/pkuvcl/davs2/tar.gz/b41cf117452e2d73d827f02d3e30aa20f1c721ac"
+    },
+    {
+      "filename": "30-libdvdcss--811ce97a1d4d1c9d936f4b2707f533a9ef768251.tar.gz",
+      "sha256": "14f97b4df1ec2aacaa84cca3806155fc85f3f2efa6abc51ea0007d423f374ed0",
+      "url": "https://code.videolan.org/videolan/libdvdcss/-/archive/811ce97a1d4d1c9d936f4b2707f533a9ef768251/libdvdcss-811ce97a1d4d1c9d936f4b2707f533a9ef768251.tar.gz"
+    },
+    {
+      "filename": "40-libdvdread--0f30df53125b564ef45903714403ce0a1e6c5e9e.tar.gz",
+      "sha256": "51a8e9192363753e8aadee37de97a196200237ea7c35d232727cb82eadf5dc6e",
+      "url": "https://code.videolan.org/videolan/libdvdread/-/archive/0f30df53125b564ef45903714403ce0a1e6c5e9e/libdvdread-0f30df53125b564ef45903714403ce0a1e6c5e9e.tar.gz"
+    },
+    {
+      "filename": "50-libdvdnav--8147ccd35e5aae4afdd21171cf7b6b4d8f179d28.tar.gz",
+      "sha256": "c79e47e5fb0523a3a8d6a62d9ec2e5b734eecea20733cacb0d69a2731b29f63f",
+      "url": "https://code.videolan.org/videolan/libdvdnav/-/archive/8147ccd35e5aae4afdd21171cf7b6b4d8f179d28/libdvdnav-8147ccd35e5aae4afdd21171cf7b6b4d8f179d28.tar.gz"
+    },
+    {
+      "filename": "50-fdk-aac--ec82feb39662ac77e24ee9b324d5962e91bc79c5.tar.gz",
+      "sha256": "08c7477b63d142d555f6c238df6a95d20d38c504b70e9eb9512d21a877884752",
+      "url": "https://codeload.github.com/mstorsjo/fdk-aac/tar.gz/ec82feb39662ac77e24ee9b324d5962e91bc79c5"
+    },
+    {
+      "filename": "50-ffnvcodec--f2053071ea93137255b6dcf42e9b4c9e0965a44e.tar.gz",
+      "sha256": "84cefa55265740888a269625474eda5bd018955c2302b72cfe7473ddc82f741f",
+      "url": "https://codeload.github.com/FFmpeg/nv-codec-headers/tar.gz/f2053071ea93137255b6dcf42e9b4c9e0965a44e"
+    },
+    {
+      "filename": "50-ffnvcodec-2-ced4f8eba3ba5dd431932cba17928f0dffdaeb2b.tar.gz",
+      "sha256": "625ddd8f2a603699fdba101bebcde0e7a97bcc7b8a82ec7f45a7d06d61336597",
+      "url": "https://codeload.github.com/FFmpeg/nv-codec-headers/tar.gz/ced4f8eba3ba5dd431932cba17928f0dffdaeb2b"
+    },
+    {
+      "filename": "50-ffnvcodec-3-833faee5f7b8d3f56444347c587f4aed11ee213f.tar.gz",
+      "sha256": "1d1d8c3518b48fd11333895ce670f9f53c7f67c716e465547152ae455dd59f11",
+      "url": "https://codeload.github.com/FFmpeg/nv-codec-headers/tar.gz/833faee5f7b8d3f56444347c587f4aed11ee213f"
+    },
+    {
+      "filename": "50-frei0r--f09dad3aeb8160244febac49589e47a1513549d4.tar.gz",
+      "sha256": "9f5986e842bc0195386b56c395e07e113a248b56e2f00d4e9e1cedb13c4d7a51",
+      "url": "https://codeload.github.com/dyne/frei0r/tar.gz/f09dad3aeb8160244febac49589e47a1513549d4"
+    },
+    {
+      "filename": "50-gme--8238afd9503a59ffcec0e2685584d5ce819ad7c6.tar.gz",
+      "sha256": "b9c1cee28476bd374b3dae40e534e414547d66499524c2460a66e828263b752c",
+      "url": "https://codeload.github.com/libgme/game-music-emu/tar.gz/8238afd9503a59ffcec0e2685584d5ce819ad7c6"
+    },
+    {
+      "filename": "50-kvazaar--ec7562da7f5971f9fa3f984db358371e74bf3c7d.tar.gz",
+      "sha256": "47d3dbc11dee7d7fce04843c4a205bd21fa7f2fff074369680cc6ad91c001959",
+      "url": "https://codeload.github.com/ultravideo/kvazaar/tar.gz/ec7562da7f5971f9fa3f984db358371e74bf3c7d"
+    },
+    {
+      "filename": "50-lcevcdec--e295d8438ba554bc541fb269baa9cbd567b626a8.tar.gz",
+      "sha256": "737431483106a2c1d614940f28f1a21d060963057e15dceddefb7ac6c2ebca1b",
+      "url": "https://codeload.github.com/v-novaltd/LCEVCdec/tar.gz/e295d8438ba554bc541fb269baa9cbd567b626a8"
+    },
+    {
+      "filename": "50-libaribb24--5e9be272f96e00f15a2f3c5f8ba7e124862aec38.tar.gz",
+      "sha256": "651e88af3c8189d4faed538bee3affde360eb4698a70505765fc7e5653f5eb23",
+      "url": "https://codeload.github.com/nkoriyama/aribb24/tar.gz/5e9be272f96e00f15a2f3c5f8ba7e124862aec38"
+    },
+    {
+      "filename": "50-libaribcaption--d59c9d6403645dd7e8098b02b887a6723b15259b.tar.gz",
+      "sha256": "8e7d3b0f2254d5e35260a2b011243dfb0ef5f8d25608eb0f117fea45e19b3245",
+      "url": "https://codeload.github.com/xqq/libaribcaption/tar.gz/d59c9d6403645dd7e8098b02b887a6723b15259b"
+    },
+    {
+      "filename": "50-libass--21b5a54fceff49c126c201d4b51c6445287a5072.tar.gz",
+      "sha256": "cc971ba7cb615f2276ef51ba8206e7eee8cd567d565255e923879bb7bab49032",
+      "url": "https://codeload.github.com/libass/libass/tar.gz/21b5a54fceff49c126c201d4b51c6445287a5072"
+    },
+    {
+      "filename": "50-libbluray--4613535451af402c6d72665e8cd88be1b29c9158.tar.gz",
+      "sha256": "50831fc66db7fdf315adff0d8bd3c2ec6fd00ae1ec2e860bf8127214956d4ce0",
+      "url": "https://code.videolan.org/videolan/libbluray/-/archive/4613535451af402c6d72665e8cd88be1b29c9158/libbluray-4613535451af402c6d72665e8cd88be1b29c9158.tar.gz"
+    },
+    {
+      "filename": "40-libpsl--88331dae18f1824ab033f7e77880cf65814fc21a.tar.gz",
+      "sha256": "2fdf8b855976c24aa476a7ee75134824a2b0a9a968b284dc266d5b6a482eb5e9",
+      "url": "https://codeload.github.com/rockdaboot/libpsl/tar.gz/88331dae18f1824ab033f7e77880cf65814fc21a"
+    },
+    {
+      "filename": "40-libpsl-2-ee4f2faaca9387a7cf3d433e68484b82c9542543.tar.gz",
+      "sha256": "814f0f128f1fd85fba75a77861114a0971e3a761ca1db4cc979eb0932a4cf8cb",
+      "url": "https://codeload.github.com/publicsuffix/list/tar.gz/ee4f2faaca9387a7cf3d433e68484b82c9542543"
+    },
+    {
+      "filename": "40-nghttp2--c785bf23f9d77966085ae1b32717f3e8c8d12090.tar.gz",
+      "sha256": "e174657a2d322e11ce04c8657592ccb2803463087f5bf006a57144ccc9e9558e",
+      "url": "https://codeload.github.com/nghttp2/nghttp2/tar.gz/c785bf23f9d77966085ae1b32717f3e8c8d12090"
+    },
+    {
+      "filename": "40-nghttp3--e06a63ac6a0267149b480cd7fe04c8ea9a366d9e.tar.gz",
+      "sha256": "03280144d31b401240260241851ad973fdf60d3bee3d8fbc1a4d6acacaaf8880",
+      "url": "https://codeload.github.com/ngtcp2/nghttp3/tar.gz/e06a63ac6a0267149b480cd7fe04c8ea9a366d9e"
+    },
+    {
+      "filename": "40-ngtcp2--9595a0dda7990b95cc2ff728d2524d7db0a8b7f3.tar.gz",
+      "sha256": "2e28034b1cc10f811dccbc7b9b538802b1a6a5fc7d9e6963eff75e9db549feba",
+      "url": "https://codeload.github.com/ngtcp2/ngtcp2/tar.gz/9595a0dda7990b95cc2ff728d2524d7db0a8b7f3"
+    },
+    {
+      "filename": "50-libcurl--d999cc6c6bb1f73ca60593355e522f97240317ad.tar.gz",
+      "sha256": "899c9c63a506d96464f0ee85e2874eb0437ef739af9ac46ae2df250b5c316cf0",
+      "url": "https://codeload.github.com/curl/curl/tar.gz/d999cc6c6bb1f73ca60593355e522f97240317ad"
+    },
+    {
+      "filename": "50-libjxl--a14f4e0ff32c07cbd19eae144c850e8bbfee2261.tar.gz",
+      "sha256": "0c191b8730782fe23a8adf50effdc06e234d8161d4750a2d08c51788fccd77bf",
+      "url": "https://codeload.github.com/libjxl/libjxl/tar.gz/a14f4e0ff32c07cbd19eae144c850e8bbfee2261"
+    },
+    {
+      "filename": "50-libmp3lame--7153.tar.gz",
+      "sha256": "490094fccc2a96348d8bf60ffcf66e1de449dc4521f66ab16e6c71e21de25daf",
+      "url": "https://svn.code.sf.net/p/lame/svn/trunk/lame"
+    },
+    {
+      "filename": "50-libopus--f1afc4222aff7c5456d27581ec618ae64158fbe1.tar.gz",
+      "sha256": "4d905fc26579de9a034bd6179422a7b87bdb5c0c8b579f45b8e83095ced7ce6d",
+      "url": "https://codeload.github.com/xiph/opus/tar.gz/f1afc4222aff7c5456d27581ec618ae64158fbe1"
+    },
+    {
+      "filename": "50-libplacebo--e608e5b799b6515af2689fddbbed66ffae7b724c.tar.gz",
+      "sha256": "c39c7c9ea738ab8ee56bcdcfb3110a90d6a3f2bb3257be4985511055a6701324",
+      "url": "https://code.videolan.org/videolan/libplacebo/-/archive/e608e5b799b6515af2689fddbbed66ffae7b724c/libplacebo-e608e5b799b6515af2689fddbbed66ffae7b724c.tar.gz"
+    },
+    {
+      "filename": "40-mbedtls--v4.3.0.tar.gz",
+      "sha256": "abc274eb30036d5d1bfb9b2dd83ffc27a88ac6714f95d9d7048e2effc68a6069",
+      "url": "https://codeload.github.com/ARMmbed/mbedtls/tar.gz/eafb4a72592addfd5ba1326caad2f3e9adef49ad"
+    },
+    {
+      "filename": "50-librist--a911bee8904d88beb1ccd3349ff9a3de1cadc1a6.tar.gz",
+      "sha256": "10b7c77bfc6750c5a9a833a0ef1f2050e591e1eebb226f648d89ff093a9a490e",
+      "url": "https://code.videolan.org/rist/librist.git"
+    },
+    {
+      "filename": "10-glib--5cf924587ed152260d85c6ca8733546bcad5ee42.tar.gz",
+      "sha256": "ac4d8ca841b897b660927c0902ce8599597ca246e769864d30a4bda9bc92d4cb",
+      "url": "https://codeload.github.com/GNOME/glib/tar.gz/5cf924587ed152260d85c6ca8733546bcad5ee42"
+    },
+    {
+      "filename": "20-cairo--07adef44b00a9765e9bdb92c4e6f3772debc83c2.tar.gz",
+      "sha256": "9f8f0b75d72bf725975192a43fa33ab379395eec26888492fce68ddaf79f78c8",
+      "url": "https://gitlab.freedesktop.org/cairo/cairo/-/archive/07adef44b00a9765e9bdb92c4e6f3772debc83c2/cairo-07adef44b00a9765e9bdb92c4e6f3772debc83c2.tar.gz"
+    },
+    {
+      "filename": "30-pango--6bd640fdbdfe4d751cc17e0fff25caa6a372d303.tar.gz",
+      "sha256": "65df71b867b4fd3346e62477f17266ea765e6b94300f7945709427f41d791741",
+      "url": "https://codeload.github.com/GNOME/pango/tar.gz/6bd640fdbdfe4d751cc17e0fff25caa6a372d303"
+    },
+    {
+      "filename": "99-librsvg--a6ab2529560de5e17551a9ca3ed9e8a9b9bc9a2e.tar.gz",
+      "sha256": "3a31f167e9de96e412b72aa5c89f4c9dd78e9f75768bff1c00950e3900697f9d",
+      "url": "https://codeload.github.com/GNOME/librsvg/tar.gz/a6ab2529560de5e17551a9ca3ed9e8a9b9bc9a2e"
+    },
+    {
+      "filename": "50-libssh--5138d46fd3b844d525b05938bf55a6d0d924c8d2.tar.gz",
+      "sha256": "c088179d2d7fd8333efe7a54b766304c3a79e9dd70ef041fdf0a997f63a08ecc",
+      "url": "https://gitlab.com/libssh/libssh-mirror.git"
+    },
+    {
+      "filename": "50-libtheora--28fd5ec77f0ad0e07a371cef1047828116f6bd8a.tar.gz",
+      "sha256": "b92c94380b3c86db5797e8f248373eecfc6230c8a0b374e64b4041645b0d2152",
+      "url": "https://codeload.github.com/xiph/theora/tar.gz/28fd5ec77f0ad0e07a371cef1047828116f6bd8a"
+    },
+    {
+      "filename": "50-libvpx--7e000a41a7727d5b9477dbbe5727431560d6a16c.tar.gz",
+      "sha256": "f1eb086ce607490e4471ea642c1ebaad49cdd553500408bb217788b8decef29b",
+      "url": "https://chromium.googlesource.com/webm/libvpx"
+    },
+    {
+      "filename": "50-libwebp--67b8354c37d21f36d6d5cdd027ca0bcf94d3243d.tar.gz",
+      "sha256": "a54487c4ee12584216d5082be296077f7b68f06ae25a2306b8229844a4e6b254",
+      "url": "https://chromium.googlesource.com/webm/libwebp"
+    },
+    {
+      "filename": "50-libzmq--46493370217ac135246617fa2f6ac819d8b61bfc.tar.gz",
+      "sha256": "a5219efcc1bd863f1e37c170ce05a04f0c11cce497ea52222dd8a1952a78c1b9",
+      "url": "https://codeload.github.com/zeromq/libzmq/tar.gz/46493370217ac135246617fa2f6ac819d8b61bfc"
+    },
+    {
+      "filename": "96-lv2--3c57dae600a5ad8d05acd53ee3490f7d91cb7be6.tar.gz",
+      "sha256": "4769e649aabf1774aaf2cb4dede19ae2463ded0e94cd3cc3af81403992398457",
+      "url": "https://codeload.github.com/lv2/lv2/tar.gz/3c57dae600a5ad8d05acd53ee3490f7d91cb7be6"
+    },
+    {
+      "filename": "96-serd--b621b0bc790d1e8102d3138ead16b974ddda8432.tar.gz",
+      "sha256": "67575636d233332ae137ac086e6dd193f1f8a10fd7ede8ef4dff539c8e784cbc",
+      "url": "https://codeload.github.com/drobilla/serd/tar.gz/b621b0bc790d1e8102d3138ead16b974ddda8432"
+    },
+    {
+      "filename": "96-zix--17d632393f5addb6fa24dda2927b96515407cca7.tar.gz",
+      "sha256": "a1b95d6eb32a00f881f620edcab9d27335250e37c6ad879feb0c29a7fc2c02e5",
+      "url": "https://codeload.github.com/drobilla/zix/tar.gz/17d632393f5addb6fa24dda2927b96515407cca7"
+    },
+    {
+      "filename": "97-sord--4b5232bb91e7f2f1b84df384494d073fabbcd312.tar.gz",
+      "sha256": "b5a1d3a34d7b177fd33f4ac7f96c3904861b2c6cf9b3039cb6856f6cb9abb995",
+      "url": "https://codeload.github.com/drobilla/sord/tar.gz/4b5232bb91e7f2f1b84df384494d073fabbcd312"
+    },
+    {
+      "filename": "98-sratom--9e8ee84eed502e6030ce8bb49694fd28542b08fc.tar.gz",
+      "sha256": "7a1785d825e6d1d60f11c7371a0a5fc8a6d66f407eddf9d37eb50dd87afe274f",
+      "url": "https://codeload.github.com/lv2/sratom/tar.gz/9e8ee84eed502e6030ce8bb49694fd28542b08fc"
+    },
+    {
+      "filename": "99-lilv--4b8f30055fa5cb4134a2eb45fc1555bc04289314.tar.gz",
+      "sha256": "37c5df93860082273ab02104556b45625303a04a299d2914f5dd215f39a29409",
+      "url": "https://codeload.github.com/lv2/lilv/tar.gz/4b8f30055fa5cb4134a2eb45fc1555bc04289314"
+    },
+    {
+      "filename": "50-onevpl--412c5cffe3022d5ebb8a955c3b30afe7bd2e3929.tar.gz",
+      "sha256": "deb2641c23f4350f8dbe965be6e424e59fa6696c7b5528ceb9d77a29244cccc4",
+      "url": "https://codeload.github.com/intel/libvpl/tar.gz/412c5cffe3022d5ebb8a955c3b30afe7bd2e3929"
+    },
+    {
+      "filename": "50-openal--0609c8df5848040a13d67d790ac65ed95fad265f.tar.gz",
+      "sha256": "8c352251c0103f76ab956674fcb0e87cb17a3eb3ec11643fd80de7c45cfed6a1",
+      "url": "https://codeload.github.com/kcat/openal-soft/tar.gz/0609c8df5848040a13d67d790ac65ed95fad265f"
+    },
+    {
+      "filename": "50-openapv--3f0291391dbb1fbc27229b2543aad4ce778b0d72.tar.gz",
+      "sha256": "2ba3d8b0cdbf60cd95a98513d3d2dfc65a8571494fe6cfcffb727f5ef0abc200",
+      "url": "https://codeload.github.com/AcademySoftwareFoundation/openapv/tar.gz/3f0291391dbb1fbc27229b2543aad4ce778b0d72"
+    },
+    {
+      "filename": "50-opencore-amr--7dba8c32238418ce0b316a852b2224df586ca896.tar.gz",
+      "sha256": "6aa9dd79c0bd003a73355cda80ef14218eea1c5843099f2907181dc298a55a72",
+      "url": "https://git.code.sf.net/p/opencore-amr/code"
+    },
+    {
+      "filename": "50-openh264--1bca62311e447fd9c39fc93de2c4b96cd5ce971c.tar.gz",
+      "sha256": "2238d3e5956ef0d288dd43842a0220015cf72c4327d98684e8bc47ffa7cf5308",
+      "url": "https://codeload.github.com/cisco/openh264/tar.gz/1bca62311e447fd9c39fc93de2c4b96cd5ce971c"
+    },
+    {
+      "filename": "50-openjpeg--8314119b067c0fc77834731168daaebd379fdb12.tar.gz",
+      "sha256": "e723e8babb2188e8743308842bb1bfc9809f0375cd964cfeac2fb17285094321",
+      "url": "https://codeload.github.com/uclouvain/openjpeg/tar.gz/8314119b067c0fc77834731168daaebd379fdb12"
+    },
+    {
+      "filename": "50-openmpt--ad7ba02b3fd1212e65cca02c41476af4368491ce.tar.gz",
+      "sha256": "144d28ff590db951df220f396cb6d5dbc49a55925b6748ed92223de8712dc3cd",
+      "url": "https://codeload.github.com/OpenMPT/openmpt/tar.gz/ad7ba02b3fd1212e65cca02c41476af4368491ce"
+    },
+    {
+      "filename": "50-rav1e--31435de9d76fddd38f6dcc31d4014574cebb2092.tar.gz",
+      "sha256": "ac56fef82e5f41b53d2c6088f4b0693380c389a55665a698ba768908ee17f073",
+      "url": "https://codeload.github.com/xiph/rav1e/tar.gz/31435de9d76fddd38f6dcc31d4014574cebb2092"
+    },
+    {
+      "filename": "50-rubberband--e4296ac80b1170018a110bc326fd0d45a0eb27d6.tar.gz",
+      "sha256": "32770ab6a395badb6a5ee3443bf5a0cfd5cac07f332af8e03fd6dcd61f5b3759",
+      "url": "https://codeload.github.com/breakfastquay/rubberband/tar.gz/e4296ac80b1170018a110bc326fd0d45a0eb27d6"
+    },
+    {
+      "filename": "50-sdl--fe30456e94e89ef2cab50172121bffb7f7f50830.tar.gz",
+      "sha256": "d188f3fd4611824c4aff0ce1c38737ba56af6d4c904fb443a9eba1ef8a114bba",
+      "url": "https://codeload.github.com/libsdl-org/SDL/tar.gz/fe30456e94e89ef2cab50172121bffb7f7f50830"
+    },
+    {
+      "filename": "50-snappy--946606459314e55d029c85f9a8c46f8809467f0f.tar.gz",
+      "sha256": "78767c8f8d9ac0eb26a7ab04ed33ed9b33b9de7f80434bc66d4792fb55c83cb8",
+      "url": "https://codeload.github.com/google/snappy/tar.gz/946606459314e55d029c85f9a8c46f8809467f0f"
+    },
+    {
+      "filename": "50-soxr--945b592b70470e29f917f4de89b4281fbbd540c0.tar.gz",
+      "sha256": "f82222307e318a89480374ca27a768fea9a454f0dc9e53bae0c21a60883c5a33",
+      "url": "https://git.code.sf.net/p/soxr/code"
+    },
+    {
+      "filename": "50-srt--23af65f7dafb0f65b80312b859f80aeece557924.tar.gz",
+      "sha256": "f07139fa40ab6e48ae99e9a6652dd17f9d4e4262b0c10fb924064bfcb51477b4",
+      "url": "https://codeload.github.com/Haivision/srt/tar.gz/23af65f7dafb0f65b80312b859f80aeece557924"
+    },
+    {
+      "filename": "50-svtav1--5fdf6b2f373bd96256bb6b45f892077b1b4431d9.tar.gz",
+      "sha256": "f60536d3b8d434c606febcf58682341897bfd1eaa9b607cabd535a9ace4087b5",
+      "url": "https://codeload.github.com/AOMediaCodec/SVT-AV1/tar.gz/5fdf6b2f373bd96256bb6b45f892077b1b4431d9"
+    },
+    {
+      "filename": "50-twolame--6fced852d4d5cfad58cf9dbe3ea619b08e87d398.tar.gz",
+      "sha256": "6fd32a3d16a57ceacd5a64c4b6c54d6118b213fe8c63bc2900045200e2012000",
+      "url": "https://codeload.github.com/njh/twolame/tar.gz/6fced852d4d5cfad58cf9dbe3ea619b08e87d398"
+    },
+    {
+      "filename": "50-uavs3d--0e20d2c291853f196c68922a264bcd8471d75b68.tar.gz",
+      "sha256": "1c1eb778b6080bc01493180ea7ae671c6444ce3aa760b5d021ba882eb0f9e3a0",
+      "url": "https://codeload.github.com/uavs3/uavs3d/tar.gz/0e20d2c291853f196c68922a264bcd8471d75b68"
+    },
+    {
+      "filename": "30-libpciaccess--e33aa5fd28f63b9842e36c1a8a954577eec042e3.tar.gz",
+      "sha256": "2ea4a0ddc2c38ca4b510b8053d1550cae2dbe0b6717b4c2cbf6891677bd7a5a8",
+      "url": "https://gitlab.freedesktop.org/xorg/lib/libpciaccess/-/archive/e33aa5fd28f63b9842e36c1a8a954577eec042e3/libpciaccess-e33aa5fd28f63b9842e36c1a8a954577eec042e3.tar.gz"
+    },
+    {
+      "filename": "40-libdrm--33fab8cbca7f7581e955a675597d14412702edc4.tar.gz",
+      "sha256": "158ba73b9149793fb50f6ed51020917b6f31754ff0d2404394b76ae8afe73710",
+      "url": "https://gitlab.freedesktop.org/mesa/drm/-/archive/33fab8cbca7f7581e955a675597d14412702edc4/drm-33fab8cbca7f7581e955a675597d14412702edc4.tar.gz"
+    },
+    {
+      "filename": "50-libva--f052e984e0c8bf10784198cc311b23c567b1367f.tar.gz",
+      "sha256": "549d8b3984e7221572db3d4a9d45561d88197e553e067e09bc37352629278682",
+      "url": "https://codeload.github.com/intel/libva/tar.gz/f052e984e0c8bf10784198cc311b23c567b1367f"
+    },
+    {
+      "filename": "50-vapoursynth--R82.tar.gz",
+      "sha256": "d908d2c7a9278918658db0f2e3e46ac11c78cfb365d265616c41e648bc561900",
+      "url": "https://codeload.github.com/vapoursynth/vapoursynth/tar.gz/e0fadcc1c8977e99b11ce2e478996a867a939874"
+    },
+    {
+      "filename": "50-vidstab--e2445c4081658318223762a696eb1c645c2d7168.tar.gz",
+      "sha256": "39506541c073b2be1e376b59fc90e6a79ba4d16cbf4a4a2a58a6badc3a4ce1c3",
+      "url": "https://codeload.github.com/georgmartius/vid.stab/tar.gz/e2445c4081658318223762a696eb1c645c2d7168"
+    },
+    {
+      "filename": "50-vvenc--7804c92e133983e5d81c88d0ae642201d73ee457.tar.gz",
+      "sha256": "d2e543507f18c5072521a9350756c18c8653fe28666bdee7f5298355bdce33e4",
+      "url": "https://codeload.github.com/fraunhoferhhi/vvenc/tar.gz/7804c92e133983e5d81c88d0ae642201d73ee457"
+    },
+    {
+      "filename": "50-whisper--aba02defd6bb6ff5de63721c21e3456645c153e2.tar.gz",
+      "sha256": "bcfdb3c3cbe74171067bee2d070acfd7f0dd147ea972a56cd98dd2a01ad3f332",
+      "url": "https://codeload.github.com/ggml-org/whisper.cpp/tar.gz/aba02defd6bb6ff5de63721c21e3456645c153e2"
+    },
+    {
+      "filename": "50-x264--0480cb05fa188d37ae87e8f4fd8f1aea3711f7ee.tar.gz",
+      "sha256": "d0967a1348c85dfde363bb52610403be898171493100561efa0dd05d5fd1ae50",
+      "url": "https://code.videolan.org/videolan/x264/-/archive/0480cb05fa188d37ae87e8f4fd8f1aea3711f7ee/x264-0480cb05fa188d37ae87e8f4fd8f1aea3711f7ee.tar.gz"
+    },
+    {
+      "filename": "50-x265--217c4f9b88a06513afb7ea44d55b832d6618f80c.tar.gz",
+      "sha256": "2a1891ecaf5e09b1019d8637b9baa763a64a6879a9dea27ed1d56be9931f2e73",
+      "url": "https://codeload.github.com/Multicorewareinc/x265/tar.gz/217c4f9b88a06513afb7ea44d55b832d6618f80c"
+    },
+    {
+      "filename": "50-xavs2--eae1e8b9d12468059bdd7dee893508e470fa83d8.tar.gz",
+      "sha256": "48d69abb070e6326b8894fd88f61d696eb6d4626cd052fecfeb36b4d528c270c",
+      "url": "https://codeload.github.com/pkuvcl/xavs2/tar.gz/eae1e8b9d12468059bdd7dee893508e470fa83d8"
+    },
+    {
+      "filename": "50-zimg--67e0603271c080e22c8429856dd4a8a56587e61e.tar.gz",
+      "sha256": "539495d51fcd8c7ef9b89a611454e0c1173d18e8d4e743efdef67c4aa7e40d4f",
+      "url": "https://codeload.github.com/sekrit-twc/zimg/tar.gz/67e0603271c080e22c8429856dd4a8a56587e61e"
+    },
+    {
+      "filename": "50-zvbi--34bb6f660c5c1bacd4a66cc7b22311e4ca3c1ab5.tar.gz",
+      "sha256": "5c671a9f052e41cf770372a263ee6258cb41f6c97ce884080f68b341ab81db1a",
+      "url": "https://codeload.github.com/zapping-vbi/zvbi/tar.gz/34bb6f660c5c1bacd4a66cc7b22311e4ca3c1ab5"
+    },
+    {
+      "filename": "libfuse-3.15.0.tar.xz",
+      "sha256": "70589cfd5e1cff7ccd6ac91c86c01be340b227285c5e200baa284e401eea2ca0",
+      "url": "https://github.com/libfuse/libfuse/releases/download/fuse-3.15.0/fuse-3.15.0.tar.xz"
+    },
+    {
+      "filename": "squashfuse-0.5.2.tar.gz",
+      "sha256": "db0238c5981dabbd80ee09ae15387f390091668ca060a7bc38047912491443d3",
+      "url": "https://github.com/vasi/squashfuse/archive/0.5.2.tar.gz"
+    },
+    {
+      "filename": "appimage-runtime-fedfad51acc2860b2916a1eef32ba4a500ff31ef.tar.gz",
+      "sha256": "e27ea3c837e9c660e1a9a2993b673ae93bbb53077330efba8654031e302d4e8e",
+      "url": "https://codeload.github.com/AppImage/type2-runtime/tar.gz/fedfad51acc2860b2916a1eef32ba4a500ff31ef"
+    },
+    {
+      "filename": "musl-1.2.5.tar.gz",
+      "sha256": "a9a118bbe84d8764da0ea0d28b3ab3fae8477fc7e4085d90102b8596fc7c75e4",
+      "url": "https://musl.libc.org/releases/musl-1.2.5.tar.gz"
+    },
+    {
+      "filename": "mimalloc-2.1.7.tar.gz",
+      "sha256": "0eed39319f139afde8515010ff59baf24de9e47ea316a315398e8027d198202d",
+      "url": "https://codeload.github.com/microsoft/mimalloc/tar.gz/refs/tags/v2.1.7"
+    },
+    {
+      "filename": "zstd-1.5.6.tar.gz",
+      "sha256": "30f35f71c1203369dc979ecde0400ffea93c27391bfd2ac5a9715d2173d92ff7",
+      "url": "https://codeload.github.com/facebook/zstd/tar.gz/refs/tags/v1.5.6"
+    },
+    {
+      "filename": "zlib-1.4.tar.gz",
+      "sha256": "02dd159783677a749c04adbdd02b55b8a2bcc7e054f51b76b549199a916ad584",
+      "url": "https://zlib.net/fossils/zlib-1.4.tar.gz"
+    },
+    {
+      "filename": "gcc-14.2.0.tar.xz",
+      "sha256": "a7b39bc69cbf9e25826c5a60ab26477001f7c08d85cec04bc0e29cabed6f3cc9",
+      "url": "https://gcc.gnu.org/pub/gcc/releases/gcc-14.2.0/gcc-14.2.0.tar.xz"
+    },
+    {
+      "filename": "linux-6.6.tar.xz",
+      "sha256": "d926a06c63dd8ac7df3f86ee1ffc2ce2a3b81a2d168484e76b5b389aba8e56d0",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.6.tar.xz"
+    },
+    {
+      "filename": "patch-6.6.xz",
+      "sha256": "3315f9619cb4dcfbcb8b06e7a33eccbfc8a1237ed92811ed42f50a903b664e65",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.6.xz"
+    }
+  ],
+  "ubuntu_source_packages_verified": [
+    {
+      "source_package": "at-spi2-atk",
+      "source_version": "2.38.0-3"
+    },
+    {
+      "source_package": "at-spi2-core",
+      "source_version": "2.44.0-3"
+    },
+    {
+      "source_package": "atk1.0",
+      "source_version": "2.36.0-3build1"
+    },
+    {
+      "source_package": "brotli",
+      "source_version": "1.0.9-2ubuntu0.1"
+    },
+    {
+      "source_package": "bzip2",
+      "source_version": "1.0.8-5ubuntu0.1"
+    },
+    {
+      "source_package": "cairo",
+      "source_version": "1.16.0-5ubuntu2.1"
+    },
+    {
+      "source_package": "dbus",
+      "source_version": "1.12.20-2ubuntu4.1"
+    },
+    {
+      "source_package": "e2fsprogs",
+      "source_version": "1.46.5-2ubuntu1.2"
+    },
+    {
+      "source_package": "expat",
+      "source_version": "2.4.7-1ubuntu0.9"
+    },
+    {
+      "source_package": "fontconfig",
+      "source_version": "2.13.1-4.2ubuntu5"
+    },
+    {
+      "source_package": "freetype",
+      "source_version": "2.11.1+dfsg-1ubuntu0.4"
+    },
+    {
+      "source_package": "fribidi",
+      "source_version": "1.0.8-2ubuntu3.1"
+    },
+    {
+      "source_package": "gcc-12",
+      "source_version": "12.3.0-1ubuntu1~22.04.3"
+    },
+    {
+      "source_package": "gdk-pixbuf",
+      "source_version": "2.42.8+dfsg-1ubuntu0.5"
+    },
+    {
+      "source_package": "glib2.0",
+      "source_version": "2.72.4-0ubuntu2.11"
+    },
+    {
+      "source_package": "glibc",
+      "source_version": "2.35-0ubuntu3.18"
+    },
+    {
+      "source_package": "graphite2",
+      "source_version": "1.3.14-1ubuntu0.1"
+    },
+    {
+      "source_package": "gtk+3.0",
+      "source_version": "3.24.33-1ubuntu2.2"
+    },
+    {
+      "source_package": "harfbuzz",
+      "source_version": "2.7.4-1ubuntu3.2"
+    },
+    {
+      "source_package": "keyutils",
+      "source_version": "1.6.1-2ubuntu3"
+    },
+    {
+      "source_package": "krb5",
+      "source_version": "1.19.2-2ubuntu0.10"
+    },
+    {
+      "source_package": "libbsd",
+      "source_version": "0.11.5-1"
+    },
+    {
+      "source_package": "libcap2",
+      "source_version": "1:2.44-1ubuntu0.22.04.3"
+    },
+    {
+      "source_package": "libdatrie",
+      "source_version": "0.2.13-2"
+    },
+    {
+      "source_package": "libepoxy",
+      "source_version": "1.5.10-1"
+    },
+    {
+      "source_package": "libffi",
+      "source_version": "3.4.2-4"
+    },
+    {
+      "source_package": "libgcrypt20",
+      "source_version": "1.9.4-3ubuntu3.3"
+    },
+    {
+      "source_package": "libgpg-error",
+      "source_version": "1.43-3"
+    },
+    {
+      "source_package": "libjpeg-turbo",
+      "source_version": "2.1.2-0ubuntu1"
+    },
+    {
+      "source_package": "libmd",
+      "source_version": "1.0.4-1build1"
+    },
+    {
+      "source_package": "libpng1.6",
+      "source_version": "1.6.37-3ubuntu0.7"
+    },
+    {
+      "source_package": "libselinux",
+      "source_version": "3.3-1build2"
+    },
+    {
+      "source_package": "libthai",
+      "source_version": "0.1.29-1build1"
+    },
+    {
+      "source_package": "libx11",
+      "source_version": "2:1.7.5-1ubuntu0.4"
+    },
+    {
+      "source_package": "libxau",
+      "source_version": "1:1.0.9-1build5"
+    },
+    {
+      "source_package": "libxcb",
+      "source_version": "1.14-3ubuntu3"
+    },
+    {
+      "source_package": "libxcomposite",
+      "source_version": "1:0.4.5-1build2"
+    },
+    {
+      "source_package": "libxcursor",
+      "source_version": "1:1.2.0-2build4"
+    },
+    {
+      "source_package": "libxdamage",
+      "source_version": "1:1.1.5-2build2"
+    },
+    {
+      "source_package": "libxdmcp",
+      "source_version": "1:1.1.3-0ubuntu5"
+    },
+    {
+      "source_package": "libxext",
+      "source_version": "2:1.3.4-1build1"
+    },
+    {
+      "source_package": "libxfixes",
+      "source_version": "1:6.0.0-1"
+    },
+    {
+      "source_package": "libxi",
+      "source_version": "2:1.8-1build1"
+    },
+    {
+      "source_package": "libxinerama",
+      "source_version": "2:1.1.4-3"
+    },
+    {
+      "source_package": "libxkbcommon",
+      "source_version": "1.4.0-1"
+    },
+    {
+      "source_package": "libxrandr",
+      "source_version": "2:1.5.2-1build1"
+    },
+    {
+      "source_package": "libxrender",
+      "source_version": "1:0.9.10-1build4"
+    },
+    {
+      "source_package": "libzstd",
+      "source_version": "1.4.8+dfsg-3build1"
+    },
+    {
+      "source_package": "lz4",
+      "source_version": "1.9.3-2build2"
+    },
+    {
+      "source_package": "openssl",
+      "source_version": "3.0.2-0ubuntu1.30"
+    },
+    {
+      "source_package": "pango1.0",
+      "source_version": "1.50.6+ds-2ubuntu1"
+    },
+    {
+      "source_package": "pcre2",
+      "source_version": "10.39-3ubuntu0.2"
+    },
+    {
+      "source_package": "pcre3",
+      "source_version": "2:8.39-13ubuntu0.22.04.1"
+    },
+    {
+      "source_package": "pixman",
+      "source_version": "0.40.0-1ubuntu0.22.04.1"
+    },
+    {
+      "source_package": "systemd",
+      "source_version": "249.11-0ubuntu3.23"
+    },
+    {
+      "source_package": "util-linux",
+      "source_version": "2.37.2-4ubuntu3.6"
+    },
+    {
+      "source_package": "xcb-util",
+      "source_version": "0.4.0-1build2"
+    },
+    {
+      "source_package": "xcb-util-cursor",
+      "source_version": "0.1.1-4ubuntu1"
+    },
+    {
+      "source_package": "xcb-util-image",
+      "source_version": "0.4.0-2"
+    },
+    {
+      "source_package": "xcb-util-keysyms",
+      "source_version": "0.4.0-1build3"
+    },
+    {
+      "source_package": "xcb-util-renderutil",
+      "source_version": "0.3.9-1build3"
+    },
+    {
+      "source_package": "xcb-util-wm",
+      "source_version": "0.4.1-1.1build2"
+    },
+    {
+      "source_package": "xz-utils",
+      "source_version": "5.2.5-2ubuntu1.2"
+    },
+    {
+      "source_package": "zlib",
+      "source_version": "1:1.2.11.dfsg-2ubuntu9.2"
+    }
+  ],
+  "blocked_inputs": [
+    {
+      "recipe_file": "scripts.d/50-xvid.sh",
+      "repo": "https://svn.xvid.org/trunk/xvidcore",
+      "revision": "2204",
+      "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-xvid--2204.tar.gz",
+      "status": "BLOCKED",
+      "source_method": "svn-export",
+      "url": "https://svn.xvid.org/trunk/xvidcore",
+      "reason": "Exact SVN revision 2204; isolated SVN 1.14.5 returned E170013/E215004: repository authentication failed (no credentials supplied). No different revision substituted."
+    }
+  ],
+  "complete_corresponding_source": false,
+  "remaining": [
+    "use observed pinned toolchain images from ffmpeg-provider-build-evidence.json; retain all generated/vendored inputs",
+    "resolve blocked source inputs",
+    "build and validate natively on Windows and Linux",
+    "retain actual build logs/configuration/patches/notices and relinking material",
+    "Qt wheel build/third-party correspondence",
+    "per-file native library terms and replacement assessment",
+    "final static runtime source/relinking license review (material retained and relink tested)",
+    "recipient-accessible maintained source delivery"
+  ],
+  "delivery_strategy": "approved release source asset plus immutable source-index/hash manifest; no daily URLs as sole retention"
+}

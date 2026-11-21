@@ -1024,3 +1024,52 @@ Linux desktop results remain pending. The guides are ready for use after an
 approved exact-artifact RC exists. All final owner approval boxes and machine
 license/publication flags remain unapproved. Remote tag/release lists were both
 empty on 2026-11-20; no public beta or binary release was created.
+
+
+## Final beta redistribution blocker resolution — 2026-11-20
+
+Scope: dependency surface, source/provenance retention, controlled AppImage runtime,
+packaging regression checks and audit evidence. No product/media pipeline rewrite.
+Committed engineering stages: 0827677, 9b36721 and 7b7d23c. Final hosted packages use
+clean 7b7d23c; this subsequent source/evidence/docs commit is not their build SHA.
+
+Actual installed/portable/AppImage inventories changed 272/270/392 → 449/447/705
+files, native 123/122/244 → 65/64/226. Fifty-eight Windows native paths and eighteen
+Ubuntu native paths were removed; legal data increased total file count. Unknown
+copying origins 47/47/101 → 0/0/0. Known copying origins do not close upstream
+sources/terms. All 47 former unknown Windows paths were removed; 93 retained Linux
+paths gained origin mapping. No known driver patterns or prerelease PE flags found.
+
+The narrow Qt hooks remove unused PDF/virtual keyboard chains; Windows Qt uses
+Schannel and excludes duplicate OpenSSL/OS UCRT contracts. Required Python SSL,
+Visual C++ runtimes and libmvec remain. Four exact Qt sources/196 attribution files,
+64 exact Ubuntu source packages/patches and 132/133 FFmpeg top-level recipe inputs
+are retained. Actual provider OCI digests are identified. Xvid r2204 authentication,
+linked generated/vendor/build/notice correspondence and maintained source delivery
+remain unresolved; no FFmpeg rebuild/provider replacement was completed.
+
+Cactu-controlled fedfad51-cactu1 replaces the opaque AppImage stub: locked isolated
+root/99 APK inputs, offline compile, static source/patches and object/link inputs.
+Two local builds and native Ubuntu CI reproduce the runtime hash. Separate offline
+relink matches too. The local 131-file component source/relink TAR was reopened and
+all hashes verified; receipt is release/runtime-source-delivery.json. It excludes
+compiler/rootfs/APK binaries and is not a complete/public Cactu source offer.
+
+Final local suite: 169/169 in 69.376 s, Python 3.14.7 with RX 7700 XT VAAPI/loudness
+and embedded/external subtitle tests enabled. At 7b7d23c native source CI 44844968490
+passes 163 + 3 physical-GPU skips per platform (166 discovered). Native audit
+44845101385 passes builds/frozen tests including installer install/convert/uninstall,
+preview and two-job/loudness queue; only distribution eligibility fails and binary
+upload is skipped. Follow-up source CI runs on this containing commit separately.
+No cloud hardware coverage or manual desktop pass is claimed. A prior /tmp-space
+failure was resolved by placing temporary/build data on disk; interruption also
+required restoring the canonical build environment. Only completed runs count.
+
+Exact report receipts, immutable original reports, comparisons and per-file source/
+obligation joins are retained under release/evidence/beta1-resolution-7b7d23c.
+Final status remains BLOCKED before RC1: Qt/ICU/Python native source/build/notices,
+Microsoft conditional grants, Inno actual incorporated scope, per-library license
+assessment and recipient source publication integration still need closure.
+Technical/license/publication fields stay false. No beta tag, release, executable
+or source-bundle upload occurred. Manual exact-RC desktop gates remain pending.
+BETA1_BLOCKER_RESOLUTION.md gives a concrete remediation path for each obstacle.

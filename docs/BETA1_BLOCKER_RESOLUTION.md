@@ -1,90 +1,132 @@
 # Beta.1 redistribution blocker resolution
 
-This milestone changes packaging/provenance and release diagnostics only. No beta
-tag, release or unapproved application/source-bundle upload is authorized.
+Reviewed 2026-11-20 (America/Sao_Paulo). **Improved, still BLOCKED before RC1.**
+Only packaging, source retention and audit tooling changed. Product/media behavior
+is preserved. No beta tag, release, binary or source-bundle publication occurred.
+All three technical/license/publication approval fields remain false.
 
-## Work and evidence
+## Resolved engineering issues
 
-The baseline is clean source fe10aa1 and actual audit payloads from eabc092.
-Those metadata-only reports remain retained unchanged. New builds generate exact
-per-file comparisons against them, rather than replacing historical evidence.
+Baseline: actual eabc092 audit retained unchanged. New native payload source:
+**7b7d23c9c77afac0933cc1607ab0160cbbc7ec3c**. The containing follow-up commit adds
+source acquisition/evidence/docs; it must not be substituted for the packaged SHA.
 
-The pinned PyInstaller QtGui hook collected every optional image/input plugin.
-The PDF image plugin pulls QtPdf; the virtual keyboard input plugin pulls
-VirtualKeyboard/QML/Quick. Cactu imports QtCore/QtGui/QtWidgets, uses native desktop
-input methods and has no PDF renderer/QML interface. A narrow custom hook filters
-only qpdf and qtvirtualkeyboardplugin before native dependency discovery. Desktop
-platform plugins, native input methods, styles, raster/SVG support and QtNetwork
-remain. Native package builds/smokes and exact reductions must be recorded below.
+| Payload | Before files (native) | After files (native) | Removed | Added notice/data paths | Unknown copying origins before → after |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Windows installed | 272 (123) | 449 (65) | 58 | 235 | 47 → 0 |
+| Windows portable | 270 (122) | 447 (64) | 58 | 235 | 47 → 0 |
+| Ubuntu AppImage | 392 (244) | 705 (226) | 18 | 331 | 101 → 0 |
 
-libmvec.so.1 is **required by both current FFmpeg executables** (actual ELF NEEDED
-records), not safely removable contamination. It stays. The source/notice problem
-is addressed as a glibc distribution-library obligation, not by breaking startup.
+Total files increased because legal material was added; native code decreased.
+All 47 former unknown Windows paths were removed. On Linux, 93 retained paths
+received copying origins and eight formerly unknown paths were removed.
+Known copying distribution is **not** complete upstream/source/license clearance.
+Eight/seven/88 component groups still require review for installed/portable/Linux;
+these finer groups are not unresolved-origin file counts.
 
-Inventory attribution now follows COLLECT alias chains, verifies copy-source
-bytes, resolves merged-/usr Debian package paths, records Windows PE supplier/file
-versions and distinguishes Microsoft runtime terms from Qt/Cactu terms. Known
-supplier/version metadata does not assert an approved redistribution grant.
-Actual copied Debian-library copyright notices are included after collection.
+* QtGui now excludes only the unused PDF image and virtual keyboard input plugins
+  before native analysis. QtPdf/QML/Quick/VirtualKeyboard chains disappear.
+  QtCore/Gui/Widgets/Network, SVG, platform plugins, native input methods and styles
+  remain. Import/dependency analysis and frozen preview/queue tests support this.
+* Windows Qt TLS uses Schannel. Its optional OpenSSL Qt plugin and two duplicate
+  host OpenSSL DLLs are excluded; Python SSL dependencies remain. Frozen tests
+  confirm supportsSsl() and active Schannel.
+* Forty-five app-local UCRT/API-set contract files are excluded. Windows 10/11
+  supplies these OS contracts; Visual C++ runtime DLLs remain. No arbitrary DLL
+  replacement or new system installation is introduced.
+* libmvec.so.1 remains: both FFmpeg and FFprobe declare it in ELF dependencies.
+  Its exact glibc distribution source/patches/notices are now retained.
+* Copy-source resolution follows PyInstaller aliases and merged /lib and /usr/lib
+  ownership. Actual hashes, wheel/OS origins, PE versions/flags and Ubuntu sources
+  are recorded. No final PE has its prerelease resource flag set. No known driver
+  patterns or missing declared notices were found; undeclared obligations remain.
 
-Exact QtBase, QtSvg, QtWayland and PySide 6.11.2 source archives are retained with
-immutable commits and hashes in release/qt-source-lock.json. 196 source notice/
-attribution files are packaged, with a provenance manifest. This is a conservative
-superset for these source modules, not a claim every attributed dependency ships.
-Each actual Qt binary/plugin receives source-module/version/license-option/notice
-mapping. Exact wheel build configuration and third-party correspondence remain a
-separate review; source version agreement alone is insufficient.
+## Controlled AppImage runtime replacement
 
-The official Inno 7.1.1 SBOM and Pascal Script/LZMA component terms are retained.
-THIRD_PARTY_NOTICES now supplies the documentation acknowledgement required by
-Pascal Script. LZMA 26.02 public-domain code and the older size decoder's linking
-exception are identified separately. Optional 7-Zip/compiler/IDE components are
-not automatically described as embedded in Setup; final linkage still needs review.
+The opaque stub was replaced with **fedfad51-cactu1**, from the same upstream
+runtime source in an isolated Alpine 3.21.10 root with 99 hash-locked APK inputs.
+Network is disabled during installation/compilation. Sources, six exact aports
+recipe/patch snapshots, compiler, link map, runtime.o and 15 static/CRT inputs are
+recorded in release/appimage-controlled-lock.json.
 
-## Corresponding-source acquisition and delivery
+Two local offline builds and native Ubuntu CI produced runtime SHA-256
+`dcf5f5b07d5679e37c5a2decff55a65fc2962c565fdaacbf88eaf2bd4ad61ac4`.
+An offline relink using retained object/static inputs reproduced that hash.
+Incorporated code includes libfuse, squashfuse, musl, zstd, zlib, mimalloc and GCC
+target runtime inputs. Individual notices/exceptions are retained; MIT is not
+blanket clearance for the static libraries.
 
-retain_ffmpeg_sources.py actively acquires immutable source archives from the
-exact retained provider recipe, with bounded downloads, archive validation, hashes
-and license-file hashes. Mutable refs, unsupported hosts, missing inputs and size
-bounds remain explicit failures. The result is a recipe-input superset, **not**
-proof that every input was incorporated or that cargo/non-git/toolchain source
-closure is complete. release/ffmpeg-source-lock.json records each outcome.
+The local source/relink component TAR contains 131 verified files plus README and
+manifest, SHA-256
+`4760a8477193572c103daaa76a50258f0d0cf6fcde6d7f16e78615f39a7be459`.
+Every member hash was checked after reopening it. It excludes compiler/rootfs/APK
+binaries, whose retrieval hashes remain locked. Replacement instructions require
+no Cactu signing key. Receipt: release/runtime-source-delivery.json. This is local
+review material, **not a complete Cactu source offer or a published source asset**.
 
-All archives stay in ignored release/evidence/local/sources on the workspace disk.
-They are not published. The intended recipient package must contain exact archives,
-patches, build configuration/instructions, static relinking inputs where needed,
-notices and a hash manifest; it must be retained alongside eventual approved beta
-assets rather than depend on daily provider URLs. A local verification/staging
-tool and remaining gaps are recorded in this milestone's final evidence.
+## Sources and notices acquired
 
-An isolated Alpine 3.21.10 rootfs has been verified against the official release
-SHA-256. A controlled AppImage runtime experiment retains compiler/static-library
-APKs and compiles inside a rootless namespace, leaving the host untouched. Its
-outcome and source/relinking limitations must be recorded before any replacement
-is selected. The controlled runtime is selected for the next native audit only after its local
-offline repeat reproduced the same SHA-256 and its AppImage passed frozen smoke.
-The integrated builder verifies 99 exact APK inputs, three project source archives
-and its recipe, then compiles without network and checks the expected runtime hash.
-Native CI must repeat that result before this packaging change is accepted.
-Static supplier APK recipes/patches and seven upstream source inputs were also
-retained and verified against their Alpine SHA-512 values. Publication remains gated.
+* Four exact Qt/PySide 6.11.2 archives (qtbase, qtsvg, qtwayland, bindings), immutable
+  commits and hashes: release/qt-source-lock.json. Actual Qt files map to source,
+  module, proposed eligible GPL option and notice directory. The 196 retained
+  legal/attribution files are a conservative notice superset for these modules,
+  not a claim that every listed third party is shipped.
+* All **64 exact Ubuntu source packages**, original archives and Debian patches,
+  retained with each part matching official .dsc SHA-256/size. Exact Launchpad
+  publications: release/ubuntu-source-lock.json. PGP signatures were not separately
+  verified. Obligation reports join these records to actual library versions.
+* **132 of 133** top-level FFmpeg recipe inputs retained (previously 115).
+  Explicit version tags resolve to immutable commits; Git exports verify object
+  IDs; LAME uses SVN r7153 through an isolated signed-package SVN client. Reruns
+  preserve resolved tags/hashes and reject changed cached bytes.
+* Exact provider build logs identify the OCI image digests actually used:
+  release/ffmpeg-provider-build-evidence.json. The selected executable build stays
+  n9.0.2-61-gd59078794d-20261120; no FFmpeg replacement was made.
+* Inno Setup 7.1.1 source/SBOM, Pascal Script license/required acknowledgement,
+  LZMA SDK public-domain terms and old decoder exception retained. Optional
+  compiler/SBOM components are not automatically declared incorporated.
 
-## Test scope and current decision
+verify_source_delivery.py verified 146 Qt/FFmpeg/runtime source entries and all
+64 Ubuntu source packages from local bytes. This is not proof of a complete
+source graph or binary correspondence.
 
-The first packaging revision passed 163 tests locally, including physical
-RX 7700 XT checks. Eight focused payload/source-boundary tests now bring the
-suite to 165; complete tests must run for the integrated runtime/TLS revision. Frozen smoke now exercises external burn/volume/Faststart,
-Quick Preview, and a sequential two-job queue with embedded burn and loudness
-analysis. Native installer/portable/AppImage builds and inventories are pending
-for this source revision. CI GPU presence must not be inferred from encoder tables.
+## Exact remaining obstacles and remediation
 
-Technical closure, human license approval and publication approval remain separate.
-No approval flags are set by acquisition or tests. **RC1 may not proceed until the
-remaining exact source/terms/build/relinking evidence is closed.** New audit builds
-are permitted under the existing policy without uploading executable payloads.
+| Category | Affected files / evidence | Remaining action |
+| --- | --- | --- |
+| Missing corresponding source | Xvid scripts.d/50-xvid.sh, SVN r2204 | Official HTTPS SVN returns E170013/E215004 authentication failure. Obtain an authorized exact export or verified official equivalent mirror; do not substitute another revision. No credentials supplied. |
+| Source/build/patch correspondence | Windows _internal/ffmpeg/ffmpeg.exe and ffprobe.exe; Linux usr/bin/_internal/ffmpeg/ffmpeg and ffprobe | Top-level archives are not the linked source graph. Retain generated/Cargo/vendor/submodule inputs, patches, toolchain/runtime sources, per-library notices and actual configurations; join to each executable. |
+| Controlled FFmpeg contingency | Exact images now observed; provider recipe/input locks | Implement and validate controlled native Windows/Linux builds if provider correspondence cannot close. No replacement FFmpeg build completed here. Preserve required capabilities. |
+| Upstream provenance / notices / build | Actual Qt wheel ICU and other third-party binaries without module mappings; Qt build_correspondence=REVIEW_REQUIRED | Obtain wheel build configuration and exact third-party source/notice mapping, including ICU 73; assess individual GPL/LGPL options. Wheel copying origin alone is insufficient. |
+| Python incorporated libraries | Native CPython files, especially Windows SSL/compression extensions | Join exact upstream versions/build sources and terms; PSF core source/text alone is insufficient. |
+| Conditional redistribution grant | MSVCP/VCRUNTIME 14.44.35211.0 and 14.51.36247.0, supplier recorded per file | Review exact supplier REDIST/terms and owner qualifying rights. No PE prerelease flags found; this is not a grant. Do not self-certify a Visual Studio license. |
+| Native terms / replacement | Ubuntu libraries joined to 64 exact source packages | Review file-specific conditions and dynamic replacement method. Acquisition is done; assessment and recipient delivery remain. |
+| Installer incorporation / notices | Generated Setup prefix and unins000.exe | Map actual Inno compression/runtime objects to retained SBOM/terms; distinguish optional compiler-only components. |
+| Static relink / delivery review | Controlled AppImage prefix | Source/patch/object/static inputs and tested instructions now exist. Review component obligations and maintain recipient delivery. |
+| Durable recipient delivery | Required binary/source/notice sets | Maintain approved immutable source assets/indexes beside binaries. Current publisher uploads three application artifacts and checksums only; source-asset integration remains. Local caches/TAR are not public delivery. |
 
-Windows Qt TLS uses the documented Schannel backend. The optional OpenSSL TLS
-plugin and its two unrelated host DLLs are excluded; CPython SSL libraries stay.
-The hook requires Schannel before filtering, and frozen Windows smoke requires
-Schannel to initialize as the active TLS backend. See the official Qt 6.11.2
-[SSL backend documentation](https://doc.qt.io/qt-6.11/ssl.html).
+No owner approval is requested to compensate for missing technical records.
+After closure, require human license review, exact-artifact Windows 11/portable/
+Linux desktop tests, then final publication approval.
+
+## Tests and exact evidence
+
+* Final local suite: **169 tests passed**, 69.376 s, canonical Python 3.14.7,
+  opt-in RX 7700 XT VAAPI/loudness/embedded+external subtitle checks enabled.
+* Native source CI [44844968490](https://github.com/drrrrigo/cactu-video-converter/actions/runs/44844968490),
+  7b7d23c: 166 discovered, 163 pass + three physical-GPU skips per platform.
+* Native packaging audit [44845101385](https://github.com/drrrrigo/cactu-video-converter/actions/runs/44845101385)
+  passed builds/frozen smoke on Windows/Linux: x264/AAC/Faststart, subtitles,
+  preview, sequential two-job/loudness queue and installer install/convert/uninstall.
+  Overall run intentionally **failed at distribution eligibility**; binary upload
+  skipped. No cloud physical-GPU validation or green release workflow is claimed.
+* Metadata-only reports, exact comparisons and per-file source-obligation joins:
+  release/evidence/beta1-resolution-7b7d23c/. Original bytes/hash receipts retained.
+  Generated joins do not rewrite original inventories.
+* The containing follow-up commit triggers full source CI again. Its result is
+  separate from the native packaged source SHA.
+
+A new internal audit build for local testing is technically feasible, labelled as
+an audit. **RC1 preparation/promotion remains blocked.** Hosted runner binaries
+were not retained as an owner-test RC set. Manual desktop records remain pending;
+earlier local AppImages are distinct audit outputs, not the 7b7d23c hosted bytes.

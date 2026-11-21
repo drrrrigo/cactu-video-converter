@@ -73,11 +73,28 @@ it is present in the generated installer. No blanket installer approval is given
 
 ## Controlled AppImage runtime audit input
 
-The next audit selects Cactu-controlled fedfad51-cactu1 rather than the opaque
+The 9b36721 and 7b7d23c audits select Cactu-controlled fedfad51-cactu1 rather than the opaque
 provider stub. Exact rootfs/APK/source/patch/relink input hashes and the repeated
 runtime hash are in release/appimage-controlled-lock.json. Its source-derived
 static library notices accompany licenses/packaging-runtimes/controlled-runtime.
 The runtime uses libfuse/squashfuse, musl, zstd, zlib, mimalloc and GCC target
 runtime inputs with their individual terms. The source notice collection is a
-conservative superset; only link-map inputs are declared incorporated. Native CI,
+conservative superset; only link-map inputs are declared incorporated. Native CI passed; complete recipient
 source delivery and human review remain required. This is not beta approval.
+
+
+## Current controlled-runtime and native audit evidence
+
+The 7b7d23c native audit actually uses the controlled fedfad51-cactu1 runtime;
+it is no longer only a proposed next audit input. Sources, static link inputs,
+notices and an independently tested relink are recorded. The local component
+source TAR receipt is release/runtime-source-delivery.json; no public complete
+source offer is asserted. GPL/LGPL and independent component terms still apply.
+
+Current actual native payload mapping, exact Ubuntu sources/patches and proposed
+eligible Qt module options are recorded in release/evidence/beta1-resolution-7b7d23c,
+release/ubuntu-source-lock.json and release/qt-source-lock.json. Windows Qt uses OS
+Schannel; Python OpenSSL remains separately subject to its actual supplier terms.
+Visual C++ runtime DLLs retain Microsoft conditions and are not relicensed by Qt
+or Cactu. Complete upstream/build/notice/delivery review remains blocked as specified
+in docs/BETA1_BLOCKER_RESOLUTION.md. These records do not authorize publication.

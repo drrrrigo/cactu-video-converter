@@ -7,9 +7,10 @@
       "repo": "https://github.com/meganz/mingw-std-threads.git",
       "revision": "c931bac289dd431f1dd30fc4a5d1a7be36668073",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "10-mingw-std-threads--c931bac289dd431f1dd30fc4a5d1a7be36668073.tar.gz",
       "url": "https://codeload.github.com/meganz/mingw-std-threads/tar.gz/c931bac289dd431f1dd30fc4a5d1a7be36668073",
       "status": "RETAINED",
-      "filename": "10-mingw-std-threads--c931bac289dd431f1dd30fc4a5d1a7be36668073.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "LICENSE",
@@ -24,17 +25,37 @@
       "repo": "https://git.code.sf.net/p/mingw-w64/mingw-w64.git",
       "revision": "41eb042358a52011b35350392130dcdc94a8ead8",
       "source_role": "recipe input superset; actual linked inclusion not established",
-      "status": "BLOCKED",
-      "reason": "Source host requires a verified archive retrieval adapter"
+      "filename": "10-mingw--41eb042358a52011b35350392130dcdc94a8ead8.tar.gz",
+      "status": "RETAINED",
+      "source_method": "git-export",
+      "url": "https://git.code.sf.net/p/mingw-w64/mingw-w64.git",
+      "unretained_gitlink_inputs": [],
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "99a69660981156c21336fdb5661f89341b013c94e4bf9e1c7467b4745718397f"
+        },
+        {
+          "file": "COPYING.MinGW-w64-runtime/COPYING.MinGW-w64-runtime.txt",
+          "sha256": "1db8da07b436c68833c0673ffee3d9fcb2526047f3820b81661865dfedc79a1f"
+        },
+        {
+          "file": "COPYING.MinGW-w64/COPYING.MinGW-w64.txt",
+          "sha256": "f38e6194bd3bfa1b654f118e5acefe0aead437bbe669eee43957ccc65a7127f1"
+        }
+      ],
+      "sha256": "ad6d560026642dd3865529d772b9c6cfeb7dbd01897aeeeafc5d8a8b830b8c90",
+      "size": 15730261
     },
     {
       "recipe_file": "scripts.d/10-xorg-macros.sh",
       "repo": "https://gitlab.freedesktop.org/xorg/util/macros.git",
       "revision": "ea1e15a4909ac8b03b2c5a08ac3810b385985157",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "10-xorg-macros--ea1e15a4909ac8b03b2c5a08ac3810b385985157.tar.gz",
       "url": "https://gitlab.freedesktop.org/xorg/util/macros/-/archive/ea1e15a4909ac8b03b2c5a08ac3810b385985157/macros-ea1e15a4909ac8b03b2c5a08ac3810b385985157.tar.gz",
       "status": "RETAINED",
-      "filename": "10-xorg-macros--ea1e15a4909ac8b03b2c5a08ac3810b385985157.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -49,25 +70,81 @@
       "repo": "https://git.savannah.gnu.org/git/libiconv.git",
       "revision": "baaba39736e3b498e1597bf0e5e899b1f753fb01",
       "source_role": "recipe input superset; actual linked inclusion not established",
-      "status": "BLOCKED",
-      "reason": "Source host requires a verified archive retrieval adapter"
+      "filename": "20-libiconv--baaba39736e3b498e1597bf0e5e899b1f753fb01.tar.gz",
+      "status": "RETAINED",
+      "source_method": "git-export",
+      "url": "https://git.savannah.gnu.org/git/libiconv.git",
+      "unretained_gitlink_inputs": [],
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+        },
+        {
+          "file": "COPYING.LIB",
+          "sha256": "20e50fe7aae3e56378ebf0417d9de904f55a0e61e4df315333e632a4d3555d95"
+        },
+        {
+          "file": "libcharset/COPYING.LIB",
+          "sha256": "20e50fe7aae3e56378ebf0417d9de904f55a0e61e4df315333e632a4d3555d95"
+        }
+      ],
+      "sha256": "d12ca8a45396da22d1bfbc8ec6d791bb70a974a84eb371c66bcc9305cb6d8391",
+      "size": 4666188
     },
     {
       "recipe_file": "scripts.d/20-libiconv.sh",
       "repo": "https://git.savannah.gnu.org/git/gnulib.git",
       "revision": "f9e4c24e9bf3f878a11505a8d06bec965f0fca02",
       "source_role": "recipe input superset; actual linked inclusion not established",
-      "status": "BLOCKED",
-      "reason": "Source host requires a verified archive retrieval adapter"
+      "filename": "20-libiconv-2-f9e4c24e9bf3f878a11505a8d06bec965f0fca02.tar.gz",
+      "status": "RETAINED",
+      "source_method": "git-export",
+      "url": "https://git.savannah.gnu.org/git/gnulib.git",
+      "fetch_repo": "https://github.com/coreutils/gnulib.git",
+      "unretained_gitlink_inputs": [],
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "438610ba3d10f492dff9e17f7d53a5316e3f4b4adc5f79a33ac7110d5a5ee210"
+        },
+        {
+          "file": "doc/COPYING.LESSERv2",
+          "sha256": "20e50fe7aae3e56378ebf0417d9de904f55a0e61e4df315333e632a4d3555d95"
+        },
+        {
+          "file": "doc/COPYING.LESSERv3",
+          "sha256": "e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118"
+        },
+        {
+          "file": "doc/COPYINGv2",
+          "sha256": "edaef632cbb643e4e7a221717a6c441a4c1a7c918e6e4d56debc3d8739b233f6"
+        },
+        {
+          "file": "doc/COPYINGv3",
+          "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+        },
+        {
+          "file": "doc/licenses-texi.texi",
+          "sha256": "e2978abebf7cbcae3ee0c8794e660dd7b8a1508b1b347357fd235e5c83347436"
+        },
+        {
+          "file": "modules/COPYING",
+          "sha256": "f530fec34a348cd8ad9cab66d0672f40406b07c3a4b995a2a5f31c483a9221d7"
+        }
+      ],
+      "sha256": "4aa96ffb681831e24bbde6909b855179e8492e17469d41aa3d3137d7fd074e4f",
+      "size": 9442529
     },
     {
       "recipe_file": "scripts.d/20-zlib.sh",
       "repo": "https://github.com/madler/zlib.git",
       "revision": "99623ef7097352da7993ba614161fd6a311e046e",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "20-zlib--99623ef7097352da7993ba614161fd6a311e046e.tar.gz",
       "url": "https://codeload.github.com/madler/zlib/tar.gz/99623ef7097352da7993ba614161fd6a311e046e",
       "status": "RETAINED",
-      "filename": "20-zlib--99623ef7097352da7993ba614161fd6a311e046e.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "LICENSE",
@@ -82,9 +159,10 @@
       "repo": "https://github.com/FFTW/fftw3.git",
       "revision": "a7b679c528330cf6258253d6dcf5ec90552e6c93",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "25-fftw3--a7b679c528330cf6258253d6dcf5ec90552e6c93.tar.gz",
       "url": "https://codeload.github.com/FFTW/fftw3/tar.gz/a7b679c528330cf6258253d6dcf5ec90552e6c93",
       "status": "RETAINED",
-      "filename": "25-fftw3--a7b679c528330cf6258253d6dcf5ec90552e6c93.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -107,9 +185,10 @@
       "repo": "https://github.com/fribidi/fribidi.git",
       "revision": "15393e4937aa95bcf865d92143735746aeb654fa",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "25-fribidi--15393e4937aa95bcf865d92143735746aeb654fa.tar.gz",
       "url": "https://codeload.github.com/fribidi/fribidi/tar.gz/15393e4937aa95bcf865d92143735746aeb654fa",
       "status": "RETAINED",
-      "filename": "25-fribidi--15393e4937aa95bcf865d92143735746aeb654fa.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -124,9 +203,10 @@
       "repo": "https://github.com/BtbN/gmplib.git",
       "revision": "f9095918ead819c0a2340232891b5acac24b8085",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "25-gmp--f9095918ead819c0a2340232891b5acac24b8085.tar.gz",
       "url": "https://codeload.github.com/BtbN/gmplib/tar.gz/f9095918ead819c0a2340232891b5acac24b8085",
       "status": "RETAINED",
-      "filename": "25-gmp--f9095918ead819c0a2340232891b5acac24b8085.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING.LESSERv3",
@@ -149,9 +229,10 @@
       "repo": "https://github.com/xiph/ogg.git",
       "revision": "06a5e0262cdc28aa4ae6797627a783b5010440f0",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "25-libogg--06a5e0262cdc28aa4ae6797627a783b5010440f0.tar.gz",
       "url": "https://codeload.github.com/xiph/ogg/tar.gz/06a5e0262cdc28aa4ae6797627a783b5010440f0",
       "status": "RETAINED",
-      "filename": "25-libogg--06a5e0262cdc28aa4ae6797627a783b5010440f0.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -166,9 +247,10 @@
       "repo": "https://github.com/glennrp/libpng.git",
       "revision": "5408ee7a2e56555cc4b0acc4051ae241fee38cf3",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "25-libpng--5408ee7a2e56555cc4b0acc4051ae241fee38cf3.tar.gz",
       "url": "https://codeload.github.com/glennrp/libpng/tar.gz/5408ee7a2e56555cc4b0acc4051ae241fee38cf3",
       "status": "RETAINED",
-      "filename": "25-libpng--5408ee7a2e56555cc4b0acc4051ae241fee38cf3.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "LICENSE.md",
@@ -183,9 +265,10 @@
       "repo": "https://github.com/GNOME/libxml2.git",
       "revision": "21c8223ac091b81d5914c52eb20b1b063e29cb92",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "25-libxml2--21c8223ac091b81d5914c52eb20b1b063e29cb92.tar.gz",
       "url": "https://codeload.github.com/GNOME/libxml2/tar.gz/21c8223ac091b81d5914c52eb20b1b063e29cb92",
       "status": "RETAINED",
-      "filename": "25-libxml2--21c8223ac091b81d5914c52eb20b1b063e29cb92.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "Copyright",
@@ -198,19 +281,32 @@
     {
       "recipe_file": "scripts.d/25-openssl.sh",
       "repo": "https://github.com/openssl/openssl.git",
-      "revision": "openssl-3.6.5",
+      "revision": "c8bd5a57108599ac650bbae77fcabe3109dab2e8",
       "source_role": "recipe input superset; actual linked inclusion not established",
-      "status": "BLOCKED",
-      "reason": "Mutable/non-commit source ref requires explicit resolution"
+      "filename": "25-openssl--openssl-3.6.5.tar.gz",
+      "status": "RETAINED",
+      "source_method": "archive",
+      "url": "https://codeload.github.com/openssl/openssl/tar.gz/c8bd5a57108599ac650bbae77fcabe3109dab2e8",
+      "declared_revision": "openssl-3.6.5",
+      "tag_object_sha": "f93be98fe7c796e92fc999dd1a21a5212d4e4f8e",
+      "license_files": [
+        {
+          "file": "LICENSE.txt",
+          "sha256": "7d5450cb2d142651b8afa315b5f238efc805dad827d91ba367d8516bc9d49e7a"
+        }
+      ],
+      "sha256": "dcd6ac7e568a106deddfb1785407fdb89073f121532dcdb049979cd72d8e7713",
+      "size": 55268264
     },
     {
       "recipe_file": "scripts.d/25-xz.sh",
       "repo": "https://github.com/tukaani-project/xz.git",
       "revision": "f54febc540607b3bdee0a0e6793355df2a7e9f61",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "25-xz--f54febc540607b3bdee0a0e6793355df2a7e9f61.tar.gz",
       "url": "https://codeload.github.com/tukaani-project/xz/tar.gz/f54febc540607b3bdee0a0e6793355df2a7e9f61",
       "status": "RETAINED",
-      "filename": "25-xz--f54febc540607b3bdee0a0e6793355df2a7e9f61.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -245,9 +341,10 @@
       "repo": "https://github.com/google/brotli.git",
       "revision": "3dce8720b74194027c7b4cf42dee5bd159786df5",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "45-brotli--3dce8720b74194027c7b4cf42dee5bd159786df5.tar.gz",
       "url": "https://codeload.github.com/google/brotli/tar.gz/3dce8720b74194027c7b4cf42dee5bd159786df5",
       "status": "RETAINED",
-      "filename": "45-brotli--3dce8720b74194027c7b4cf42dee5bd159786df5.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "LICENSE",
@@ -262,9 +359,10 @@
       "repo": "https://gitlab.freedesktop.org/freetype/freetype.git",
       "revision": "dbb00e529e69a2be629a9ef98498e4f9b188aab1",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "25-freetype--dbb00e529e69a2be629a9ef98498e4f9b188aab1.tar.gz",
       "url": "https://gitlab.freedesktop.org/freetype/freetype/-/archive/dbb00e529e69a2be629a9ef98498e4f9b188aab1/freetype-dbb00e529e69a2be629a9ef98498e4f9b188aab1.tar.gz",
       "status": "RETAINED",
-      "filename": "25-freetype--dbb00e529e69a2be629a9ef98498e4f9b188aab1.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "LICENSE.TXT",
@@ -279,9 +377,10 @@
       "repo": "https://gitlab.freedesktop.org/fontconfig/fontconfig.git",
       "revision": "bb21be622280981392c0335fc22202fbba46d247",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "35-fontconfig--bb21be622280981392c0335fc22202fbba46d247.tar.gz",
       "url": "https://gitlab.freedesktop.org/fontconfig/fontconfig/-/archive/bb21be622280981392c0335fc22202fbba46d247/fontconfig-bb21be622280981392c0335fc22202fbba46d247.tar.gz",
       "status": "RETAINED",
-      "filename": "35-fontconfig--bb21be622280981392c0335fc22202fbba46d247.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -296,9 +395,10 @@
       "repo": "https://github.com/harfbuzz/harfbuzz.git",
       "revision": "8f1a4e0634a35182e5dd04401edcf57acf5eb12e",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "45-harfbuzz--8f1a4e0634a35182e5dd04401edcf57acf5eb12e.tar.gz",
       "url": "https://codeload.github.com/harfbuzz/harfbuzz/tar.gz/8f1a4e0634a35182e5dd04401edcf57acf5eb12e",
       "status": "RETAINED",
-      "filename": "45-harfbuzz--8f1a4e0634a35182e5dd04401edcf57acf5eb12e.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -317,9 +417,10 @@
       "repo": "https://gitlab.freedesktop.org/freetype/freetype.git",
       "revision": "dbb00e529e69a2be629a9ef98498e4f9b188aab1",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-freetype--dbb00e529e69a2be629a9ef98498e4f9b188aab1.tar.gz",
       "url": "https://gitlab.freedesktop.org/freetype/freetype/-/archive/dbb00e529e69a2be629a9ef98498e4f9b188aab1/freetype-dbb00e529e69a2be629a9ef98498e4f9b188aab1.tar.gz",
       "status": "RETAINED",
-      "filename": "50-freetype--dbb00e529e69a2be629a9ef98498e4f9b188aab1.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "LICENSE.TXT",
@@ -334,9 +435,10 @@
       "repo": "https://github.com/mm2/Little-CMS.git",
       "revision": "ed288c301bd85eaabcb9e1ae0f73540c5f129e1e",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "45-lcms2--ed288c301bd85eaabcb9e1ae0f73540c5f129e1e.tar.gz",
       "url": "https://codeload.github.com/mm2/Little-CMS/tar.gz/ed288c301bd85eaabcb9e1ae0f73540c5f129e1e",
       "status": "RETAINED",
-      "filename": "45-lcms2--ed288c301bd85eaabcb9e1ae0f73540c5f129e1e.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "LICENSE",
@@ -351,9 +453,10 @@
       "repo": "https://github.com/libffi/libffi.git",
       "revision": "de7afe7aa9e8ab7ac36429428a7222caae1e7988",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "45-libffi--de7afe7aa9e8ab7ac36429428a7222caae1e7988.tar.gz",
       "url": "https://codeload.github.com/libffi/libffi/tar.gz/de7afe7aa9e8ab7ac36429428a7222caae1e7988",
       "status": "RETAINED",
-      "filename": "45-libffi--de7afe7aa9e8ab7ac36429428a7222caae1e7988.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "LICENSE",
@@ -372,9 +475,10 @@
       "repo": "https://github.com/libsndfile/libsamplerate.git",
       "revision": "0844c208f683527c08ea8a80acc13b398aa9c8bf",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "45-libsamplerate--0844c208f683527c08ea8a80acc13b398aa9c8bf.tar.gz",
       "url": "https://codeload.github.com/libsndfile/libsamplerate/tar.gz/0844c208f683527c08ea8a80acc13b398aa9c8bf",
       "status": "RETAINED",
-      "filename": "45-libsamplerate--0844c208f683527c08ea8a80acc13b398aa9c8bf.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -393,9 +497,10 @@
       "repo": "https://code.videolan.org/videolan/libudfread.git",
       "revision": "b0bc6957e7e07d5f35391f210596d9eb71cffdd9",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "45-libudfread--b0bc6957e7e07d5f35391f210596d9eb71cffdd9.tar.gz",
       "url": "https://code.videolan.org/videolan/libudfread/-/archive/b0bc6957e7e07d5f35391f210596d9eb71cffdd9/libudfread-b0bc6957e7e07d5f35391f210596d9eb71cffdd9.tar.gz",
       "status": "RETAINED",
-      "filename": "45-libudfread--b0bc6957e7e07d5f35391f210596d9eb71cffdd9.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -410,9 +515,10 @@
       "repo": "https://github.com/adah1972/libunibreak.git",
       "revision": "ff24f284a567a006c183b3507b6c650d6ec68b94",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "45-libunibreak--ff24f284a567a006c183b3507b6c650d6ec68b94.tar.gz",
       "url": "https://codeload.github.com/adah1972/libunibreak/tar.gz/ff24f284a567a006c183b3507b6c650d6ec68b94",
       "status": "RETAINED",
-      "filename": "45-libunibreak--ff24f284a567a006c183b3507b6c650d6ec68b94.tar.gz",
+      "source_method": "archive",
       "license_files": [],
       "sha256": "af0578a41869495401fa65d7071216af969cc40005f8c599ef97ed8c9828b578",
       "size": 351045
@@ -422,9 +528,10 @@
       "repo": "https://github.com/xiph/vorbis.git",
       "revision": "1b75110b5a2754ba1931d82dd83cb822b266a21d",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "45-libvorbis--1b75110b5a2754ba1931d82dd83cb822b266a21d.tar.gz",
       "url": "https://codeload.github.com/xiph/vorbis/tar.gz/1b75110b5a2754ba1931d82dd83cb822b266a21d",
       "status": "RETAINED",
-      "filename": "45-libvorbis--1b75110b5a2754ba1931d82dd83cb822b266a21d.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -443,9 +550,10 @@
       "repo": "https://github.com/KhronosGroup/OpenCL-Headers.git",
       "revision": "82f60316cc142e7b21dc1d8983b26de18858fbd9",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "45-opencl--82f60316cc142e7b21dc1d8983b26de18858fbd9.tar.gz",
       "url": "https://codeload.github.com/KhronosGroup/OpenCL-Headers/tar.gz/82f60316cc142e7b21dc1d8983b26de18858fbd9",
       "status": "RETAINED",
-      "filename": "45-opencl--82f60316cc142e7b21dc1d8983b26de18858fbd9.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "LICENSE",
@@ -460,9 +568,10 @@
       "repo": "https://github.com/KhronosGroup/OpenCL-ICD-Loader.git",
       "revision": "d0be526adb156de7f701024acc811182c984d4c5",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "45-opencl-2-d0be526adb156de7f701024acc811182c984d4c5.tar.gz",
       "url": "https://codeload.github.com/KhronosGroup/OpenCL-ICD-Loader/tar.gz/d0be526adb156de7f701024acc811182c984d4c5",
       "status": "RETAINED",
-      "filename": "45-opencl-2-d0be526adb156de7f701024acc811182c984d4c5.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "LICENSE",
@@ -477,9 +586,10 @@
       "repo": "https://github.com/PCRE2Project/pcre2.git",
       "revision": "49d26bca00694ae940adde6d8bd056d8bfc168fa",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "45-pcre2--49d26bca00694ae940adde6d8bd056d8bfc168fa.tar.gz",
       "url": "https://codeload.github.com/PCRE2Project/pcre2/tar.gz/49d26bca00694ae940adde6d8bd056d8bfc168fa",
       "status": "RETAINED",
-      "filename": "45-pcre2--49d26bca00694ae940adde6d8bd056d8bfc168fa.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "cmake/COPYING-CMAKE-SCRIPTS",
@@ -494,9 +604,10 @@
       "repo": "https://gitlab.freedesktop.org/pixman/pixman.git",
       "revision": "b88b92e512a33a222e08352e87ff90a57d33c7b5",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "45-pixman--b88b92e512a33a222e08352e87ff90a57d33c7b5.tar.gz",
       "url": "https://gitlab.freedesktop.org/pixman/pixman/-/archive/b88b92e512a33a222e08352e87ff90a57d33c7b5/pixman-b88b92e512a33a222e08352e87ff90a57d33c7b5.tar.gz",
       "status": "RETAINED",
-      "filename": "45-pixman--b88b92e512a33a222e08352e87ff90a57d33c7b5.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -511,9 +622,10 @@
       "repo": "https://gitlab.freedesktop.org/pulseaudio/pulseaudio.git",
       "revision": "819f2c06ccdc105739e1c714de968f2af1d3e205",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "45-pulseaudio--819f2c06ccdc105739e1c714de968f2af1d3e205.tar.gz",
       "url": "https://gitlab.freedesktop.org/pulseaudio/pulseaudio/-/archive/819f2c06ccdc105739e1c714de968f2af1d3e205/pulseaudio-819f2c06ccdc105739e1c714de968f2af1d3e205.tar.gz",
       "status": "RETAINED",
-      "filename": "45-pulseaudio--819f2c06ccdc105739e1c714de968f2af1d3e205.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "LICENSE",
@@ -528,9 +640,10 @@
       "repo": "https://github.com/Netflix/vmaf.git",
       "revision": "cf677baaa039723876fff8c2677164f25102e684",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "45-vmaf--cf677baaa039723876fff8c2677164f25102e684.tar.gz",
       "url": "https://codeload.github.com/Netflix/vmaf/tar.gz/cf677baaa039723876fff8c2677164f25102e684",
       "status": "RETAINED",
-      "filename": "45-vmaf--cf677baaa039723876fff8c2677164f25102e684.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "LICENSE",
@@ -545,9 +658,10 @@
       "repo": "https://gitlab.freedesktop.org/xorg/proto/xcbproto.git",
       "revision": "dea37a7033abfdef3376dc9ad5e8756e9fee959b",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "10-xcbproto--dea37a7033abfdef3376dc9ad5e8756e9fee959b.tar.gz",
       "url": "https://gitlab.freedesktop.org/xorg/proto/xcbproto/-/archive/dea37a7033abfdef3376dc9ad5e8756e9fee959b/xcbproto-dea37a7033abfdef3376dc9ad5e8756e9fee959b.tar.gz",
       "status": "RETAINED",
-      "filename": "10-xcbproto--dea37a7033abfdef3376dc9ad5e8756e9fee959b.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -562,9 +676,10 @@
       "repo": "https://gitlab.freedesktop.org/xorg/proto/xorgproto.git",
       "revision": "6d3907b6d5dc4aa7d7ee6ee5d7d8714e7466630b",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "10-xproto--6d3907b6d5dc4aa7d7ee6ee5d7d8714e7466630b.tar.gz",
       "url": "https://gitlab.freedesktop.org/xorg/proto/xorgproto/-/archive/6d3907b6d5dc4aa7d7ee6ee5d7d8714e7466630b/xorgproto-6d3907b6d5dc4aa7d7ee6ee5d7d8714e7466630b.tar.gz",
       "status": "RETAINED",
-      "filename": "10-xproto--6d3907b6d5dc4aa7d7ee6ee5d7d8714e7466630b.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING-applewmproto",
@@ -723,9 +838,10 @@
       "repo": "https://gitlab.freedesktop.org/xorg/lib/libxtrans.git",
       "revision": "79f6b0bfe2170496e8c37626043d009f4cd3f1e1",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "10-xtrans--79f6b0bfe2170496e8c37626043d009f4cd3f1e1.tar.gz",
       "url": "https://gitlab.freedesktop.org/xorg/lib/libxtrans/-/archive/79f6b0bfe2170496e8c37626043d009f4cd3f1e1/libxtrans-79f6b0bfe2170496e8c37626043d009f4cd3f1e1.tar.gz",
       "status": "RETAINED",
-      "filename": "10-xtrans--79f6b0bfe2170496e8c37626043d009f4cd3f1e1.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -740,9 +856,10 @@
       "repo": "https://gitlab.freedesktop.org/xorg/lib/libxau.git",
       "revision": "be1daeb909f1d678e7859ac1555e90b4e768d5c4",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "20-libxau--be1daeb909f1d678e7859ac1555e90b4e768d5c4.tar.gz",
       "url": "https://gitlab.freedesktop.org/xorg/lib/libxau/-/archive/be1daeb909f1d678e7859ac1555e90b4e768d5c4/libxau-be1daeb909f1d678e7859ac1555e90b4e768d5c4.tar.gz",
       "status": "RETAINED",
-      "filename": "20-libxau--be1daeb909f1d678e7859ac1555e90b4e768d5c4.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -757,9 +874,10 @@
       "repo": "https://gitlab.freedesktop.org/xorg/lib/libxcb.git",
       "revision": "aa7f3256060451ad65a38feeccf792f44181a4e0",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "30-libxcb--aa7f3256060451ad65a38feeccf792f44181a4e0.tar.gz",
       "url": "https://gitlab.freedesktop.org/xorg/lib/libxcb/-/archive/aa7f3256060451ad65a38feeccf792f44181a4e0/libxcb-aa7f3256060451ad65a38feeccf792f44181a4e0.tar.gz",
       "status": "RETAINED",
-      "filename": "30-libxcb--aa7f3256060451ad65a38feeccf792f44181a4e0.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -774,9 +892,10 @@
       "repo": "https://gitlab.freedesktop.org/xorg/lib/libx11.git",
       "revision": "bf893321132251b17b5224fa8830787b45aec4f6",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "40-libx11--bf893321132251b17b5224fa8830787b45aec4f6.tar.gz",
       "url": "https://gitlab.freedesktop.org/xorg/lib/libx11/-/archive/bf893321132251b17b5224fa8830787b45aec4f6/libx11-bf893321132251b17b5224fa8830787b45aec4f6.tar.gz",
       "status": "RETAINED",
-      "filename": "40-libx11--bf893321132251b17b5224fa8830787b45aec4f6.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -791,9 +910,10 @@
       "repo": "https://gitlab.freedesktop.org/xorg/lib/libxext.git",
       "revision": "4770cdff013c036ba4f043b2c895d1b0bfeb0973",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-libxext--4770cdff013c036ba4f043b2c895d1b0bfeb0973.tar.gz",
       "url": "https://gitlab.freedesktop.org/xorg/lib/libxext/-/archive/4770cdff013c036ba4f043b2c895d1b0bfeb0973/libxext-4770cdff013c036ba4f043b2c895d1b0bfeb0973.tar.gz",
       "status": "RETAINED",
-      "filename": "50-libxext--4770cdff013c036ba4f043b2c895d1b0bfeb0973.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -808,9 +928,10 @@
       "repo": "https://gitlab.freedesktop.org/xorg/lib/libxfixes.git",
       "revision": "156e1e39c518f0443073e9c27071e4eceb02e3c0",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-libxfixes--156e1e39c518f0443073e9c27071e4eceb02e3c0.tar.gz",
       "url": "https://gitlab.freedesktop.org/xorg/lib/libxfixes/-/archive/156e1e39c518f0443073e9c27071e4eceb02e3c0/libxfixes-156e1e39c518f0443073e9c27071e4eceb02e3c0.tar.gz",
       "status": "RETAINED",
-      "filename": "50-libxfixes--156e1e39c518f0443073e9c27071e4eceb02e3c0.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -825,9 +946,10 @@
       "repo": "https://gitlab.freedesktop.org/xorg/lib/libxi.git",
       "revision": "9584453906a144fb8b4dbe92d9bf79219391f8e1",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-libxi--9584453906a144fb8b4dbe92d9bf79219391f8e1.tar.gz",
       "url": "https://gitlab.freedesktop.org/xorg/lib/libxi/-/archive/9584453906a144fb8b4dbe92d9bf79219391f8e1/libxi-9584453906a144fb8b4dbe92d9bf79219391f8e1.tar.gz",
       "status": "RETAINED",
-      "filename": "50-libxi--9584453906a144fb8b4dbe92d9bf79219391f8e1.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -842,9 +964,10 @@
       "repo": "https://gitlab.freedesktop.org/xorg/lib/libxinerama.git",
       "revision": "92d8f35d672537721dcd3a071d04306aa065c29b",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-libxinerama--92d8f35d672537721dcd3a071d04306aa065c29b.tar.gz",
       "url": "https://gitlab.freedesktop.org/xorg/lib/libxinerama/-/archive/92d8f35d672537721dcd3a071d04306aa065c29b/libxinerama-92d8f35d672537721dcd3a071d04306aa065c29b.tar.gz",
       "status": "RETAINED",
-      "filename": "50-libxinerama--92d8f35d672537721dcd3a071d04306aa065c29b.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -859,9 +982,10 @@
       "repo": "https://gitlab.freedesktop.org/xorg/lib/libxrender.git",
       "revision": "3aff9046bc91b31cc3dd6974876c29bc309a250a",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-libxrender--3aff9046bc91b31cc3dd6974876c29bc309a250a.tar.gz",
       "url": "https://gitlab.freedesktop.org/xorg/lib/libxrender/-/archive/3aff9046bc91b31cc3dd6974876c29bc309a250a/libxrender-3aff9046bc91b31cc3dd6974876c29bc309a250a.tar.gz",
       "status": "RETAINED",
-      "filename": "50-libxrender--3aff9046bc91b31cc3dd6974876c29bc309a250a.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -876,9 +1000,10 @@
       "repo": "https://gitlab.freedesktop.org/xorg/lib/libxscrnsaver.git",
       "revision": "723953c9a8dba44bcb1866cf06a54be74fbb8089",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-libxscrnsaver--723953c9a8dba44bcb1866cf06a54be74fbb8089.tar.gz",
       "url": "https://gitlab.freedesktop.org/xorg/lib/libxscrnsaver/-/archive/723953c9a8dba44bcb1866cf06a54be74fbb8089/libxscrnsaver-723953c9a8dba44bcb1866cf06a54be74fbb8089.tar.gz",
       "status": "RETAINED",
-      "filename": "50-libxscrnsaver--723953c9a8dba44bcb1866cf06a54be74fbb8089.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -893,9 +1018,10 @@
       "repo": "https://gitlab.freedesktop.org/xorg/lib/libxxf86vm.git",
       "revision": "cf0c73fe2d5847eec3fb966487769f460c722cc4",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-libxxf86vm--cf0c73fe2d5847eec3fb966487769f460c722cc4.tar.gz",
       "url": "https://gitlab.freedesktop.org/xorg/lib/libxxf86vm/-/archive/cf0c73fe2d5847eec3fb966487769f460c722cc4/libxxf86vm-cf0c73fe2d5847eec3fb966487769f460c722cc4.tar.gz",
       "status": "RETAINED",
-      "filename": "50-libxxf86vm--cf0c73fe2d5847eec3fb966487769f460c722cc4.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -910,9 +1036,10 @@
       "repo": "https://gitlab.freedesktop.org/glvnd/libglvnd.git",
       "revision": "8731041dbd78566bffafb5145aec8b8df8b5260e",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "60-libglvnd--8731041dbd78566bffafb5145aec8b8df8b5260e.tar.gz",
       "url": "https://gitlab.freedesktop.org/glvnd/libglvnd/-/archive/8731041dbd78566bffafb5145aec8b8df8b5260e/libglvnd-8731041dbd78566bffafb5145aec8b8df8b5260e.tar.gz",
       "status": "RETAINED",
-      "filename": "60-libglvnd--8731041dbd78566bffafb5145aec8b8df8b5260e.tar.gz",
+      "source_method": "archive",
       "license_files": [],
       "sha256": "d810f1e315917b546d0e8ae099071c4de662a71eaf2bd3ac434b664e32bddfa4",
       "size": 848492
@@ -922,9 +1049,10 @@
       "repo": "https://gitlab.freedesktop.org/xorg/lib/libxcursor.git",
       "revision": "15efad7ccd035f5d1ddc8d437e047569d1775fa7",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "60-libxcursor--15efad7ccd035f5d1ddc8d437e047569d1775fa7.tar.gz",
       "url": "https://gitlab.freedesktop.org/xorg/lib/libxcursor/-/archive/15efad7ccd035f5d1ddc8d437e047569d1775fa7/libxcursor-15efad7ccd035f5d1ddc8d437e047569d1775fa7.tar.gz",
       "status": "RETAINED",
-      "filename": "60-libxcursor--15efad7ccd035f5d1ddc8d437e047569d1775fa7.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -939,9 +1067,10 @@
       "repo": "https://gitlab.freedesktop.org/xorg/lib/libxrandr.git",
       "revision": "cc7082d2af97458dbb6d7e4bbda7b8884030e05f",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "60-libxrandr--cc7082d2af97458dbb6d7e4bbda7b8884030e05f.tar.gz",
       "url": "https://gitlab.freedesktop.org/xorg/lib/libxrandr/-/archive/cc7082d2af97458dbb6d7e4bbda7b8884030e05f/libxrandr-cc7082d2af97458dbb6d7e4bbda7b8884030e05f.tar.gz",
       "status": "RETAINED",
-      "filename": "60-libxrandr--cc7082d2af97458dbb6d7e4bbda7b8884030e05f.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -956,9 +1085,10 @@
       "repo": "https://gitlab.freedesktop.org/xorg/lib/libxv.git",
       "revision": "f315ec50fcad9bdbaed46c3e78dc5e7fe209f933",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "60-libxv--f315ec50fcad9bdbaed46c3e78dc5e7fe209f933.tar.gz",
       "url": "https://gitlab.freedesktop.org/xorg/lib/libxv/-/archive/f315ec50fcad9bdbaed46c3e78dc5e7fe209f933/libxv-f315ec50fcad9bdbaed46c3e78dc5e7fe209f933.tar.gz",
       "status": "RETAINED",
-      "filename": "60-libxv--f315ec50fcad9bdbaed46c3e78dc5e7fe209f933.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -973,9 +1103,10 @@
       "repo": "https://github.com/Cyan4973/xxHash.git",
       "revision": "2ec67caeb18ec15ae60c0853174331089acddfc0",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "45-xxhash--2ec67caeb18ec15ae60c0853174331089acddfc0.tar.gz",
       "url": "https://codeload.github.com/Cyan4973/xxHash/tar.gz/2ec67caeb18ec15ae60c0853174331089acddfc0",
       "status": "RETAINED",
-      "filename": "45-xxhash--2ec67caeb18ec15ae60c0853174331089acddfc0.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "LICENSE",
@@ -994,9 +1125,10 @@
       "repo": "https://github.com/facebook/zstd.git",
       "revision": "de6359d7ea2949afa1407ed2fc2423777ebf1e23",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "45-zstd--de6359d7ea2949afa1407ed2fc2423777ebf1e23.tar.gz",
       "url": "https://codeload.github.com/facebook/zstd/tar.gz/de6359d7ea2949afa1407ed2fc2423777ebf1e23",
       "status": "RETAINED",
-      "filename": "45-zstd--de6359d7ea2949afa1407ed2fc2423777ebf1e23.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -1013,19 +1145,32 @@
     {
       "recipe_file": "scripts.d/47-vulkan/40-vulkan-headers.sh",
       "repo": "https://github.com/KhronosGroup/Vulkan-Headers.git",
-      "revision": "v1.4.368",
+      "revision": "88487f687f3100ebe1d3559a8a34d971ee85b977",
       "source_role": "recipe input superset; actual linked inclusion not established",
-      "status": "BLOCKED",
-      "reason": "Mutable/non-commit source ref requires explicit resolution"
+      "filename": "40-vulkan-headers--v1.4.368.tar.gz",
+      "status": "RETAINED",
+      "source_method": "archive",
+      "url": "https://codeload.github.com/KhronosGroup/Vulkan-Headers/tar.gz/88487f687f3100ebe1d3559a8a34d971ee85b977",
+      "declared_revision": "v1.4.368",
+      "tag_object_sha": "753d0fa284e803beabb4d5d1ab91a4f2d8a4a6a9",
+      "license_files": [
+        {
+          "file": "LICENSE.md",
+          "sha256": "95ad366d23fadf701d355bc45fb8b82ae2d700239471d35d41286ac3b08ff903"
+        }
+      ],
+      "sha256": "997cd7754f272f46a477f783b7a5c16613604cecde52233eede07e26dfc5655f",
+      "size": 3457417
     },
     {
       "recipe_file": "scripts.d/47-vulkan/45-vulkan-loader.sh",
       "repo": "https://github.com/BtbN/Vulkan-Shim-Loader.git",
       "revision": "65b3936528cd92eb4ea3de485d03f858a3850484",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "45-vulkan-loader--65b3936528cd92eb4ea3de485d03f858a3850484.tar.gz",
       "url": "https://codeload.github.com/BtbN/Vulkan-Shim-Loader/tar.gz/65b3936528cd92eb4ea3de485d03f858a3850484",
       "status": "RETAINED",
-      "filename": "45-vulkan-loader--65b3936528cd92eb4ea3de485d03f858a3850484.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "LICENSE",
@@ -1038,19 +1183,32 @@
     {
       "recipe_file": "scripts.d/47-vulkan/45-vulkan-loader.sh",
       "repo": "https://github.com/KhronosGroup/Vulkan-Headers.git",
-      "revision": "v1.4.368",
+      "revision": "88487f687f3100ebe1d3559a8a34d971ee85b977",
       "source_role": "recipe input superset; actual linked inclusion not established",
-      "status": "BLOCKED",
-      "reason": "Mutable/non-commit source ref requires explicit resolution"
+      "filename": "45-vulkan-loader-2-v1.4.368.tar.gz",
+      "status": "RETAINED",
+      "source_method": "archive",
+      "url": "https://codeload.github.com/KhronosGroup/Vulkan-Headers/tar.gz/88487f687f3100ebe1d3559a8a34d971ee85b977",
+      "declared_revision": "v1.4.368",
+      "tag_object_sha": "753d0fa284e803beabb4d5d1ab91a4f2d8a4a6a9",
+      "license_files": [
+        {
+          "file": "LICENSE.md",
+          "sha256": "95ad366d23fadf701d355bc45fb8b82ae2d700239471d35d41286ac3b08ff903"
+        }
+      ],
+      "sha256": "997cd7754f272f46a477f783b7a5c16613604cecde52233eede07e26dfc5655f",
+      "size": 3457417
     },
     {
       "recipe_file": "scripts.d/47-vulkan/50-shaderc.sh",
       "repo": "https://github.com/google/shaderc.git",
       "revision": "05814952134d09f8b54ae925afe578fc341cf6c1",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-shaderc--05814952134d09f8b54ae925afe578fc341cf6c1.tar.gz",
       "url": "https://codeload.github.com/google/shaderc/tar.gz/05814952134d09f8b54ae925afe578fc341cf6c1",
       "status": "RETAINED",
-      "filename": "50-shaderc--05814952134d09f8b54ae925afe578fc341cf6c1.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "LICENSE",
@@ -1077,9 +1235,10 @@
       "repo": "https://github.com/KhronosGroup/SPIRV-Cross.git",
       "revision": "57e4efcc84112abcd426dc5ec248b5339bee04f2",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "55-spirv-cross--57e4efcc84112abcd426dc5ec248b5339bee04f2.tar.gz",
       "url": "https://codeload.github.com/KhronosGroup/SPIRV-Cross/tar.gz/57e4efcc84112abcd426dc5ec248b5339bee04f2",
       "status": "RETAINED",
-      "filename": "55-spirv-cross--57e4efcc84112abcd426dc5ec248b5339bee04f2.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "LICENSE",
@@ -1098,9 +1257,10 @@
       "repo": "https://github.com/KhronosGroup/SPIRV-Headers.git",
       "revision": "5c6004e758e0c80185ef2cee93ae5c10fa342a5b",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "60-spirv-headers--5c6004e758e0c80185ef2cee93ae5c10fa342a5b.tar.gz",
       "url": "https://codeload.github.com/KhronosGroup/SPIRV-Headers/tar.gz/5c6004e758e0c80185ef2cee93ae5c10fa342a5b",
       "status": "RETAINED",
-      "filename": "60-spirv-headers--5c6004e758e0c80185ef2cee93ae5c10fa342a5b.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "LICENSE",
@@ -1115,27 +1275,47 @@
       "repo": "https://github.com/GPUOpen-LibrariesAndSDKs/AMF.git",
       "revision": "57ee0cfb0e1a08d9041f77435653794c1b012be0",
       "source_role": "recipe input superset; actual linked inclusion not established",
-      "url": "https://codeload.github.com/GPUOpen-LibrariesAndSDKs/AMF/tar.gz/57ee0cfb0e1a08d9041f77435653794c1b012be0",
-      "status": "BLOCKED",
       "filename": "50-amf--57ee0cfb0e1a08d9041f77435653794c1b012be0.tar.gz",
-      "reason": "ValueError: Archive exceeds acquisition bound; retain separately with explicit hash"
+      "url": "https://codeload.github.com/GPUOpen-LibrariesAndSDKs/AMF/tar.gz/57ee0cfb0e1a08d9041f77435653794c1b012be0",
+      "status": "RETAINED",
+      "source_method": "archive",
+      "license_files": [
+        {
+          "file": "LICENSE.txt",
+          "sha256": "eb297397aaa455b5668ab67d216b83828466152dab123fa92384c6ec16b74170"
+        }
+      ],
+      "sha256": "4255b6cbf2637c778da77ce77ccbb89e92870b3047af5fd56bb680b043ea60b5",
+      "size": 624605813
     },
     {
       "recipe_file": "scripts.d/50-aom.sh",
       "repo": "https://aomedia.googlesource.com/aom",
       "revision": "aac27b8f291ed449fac576bcce0ad0ca189be851",
       "source_role": "recipe input superset; actual linked inclusion not established",
-      "status": "BLOCKED",
-      "reason": "Source host requires a verified archive retrieval adapter"
+      "filename": "50-aom--aac27b8f291ed449fac576bcce0ad0ca189be851.tar.gz",
+      "status": "RETAINED",
+      "source_method": "git-export",
+      "url": "https://aomedia.googlesource.com/aom",
+      "unretained_gitlink_inputs": [],
+      "license_files": [
+        {
+          "file": "LICENSE",
+          "sha256": "4764a286d8b2faeaf42f4418e7d7a28d58fc8fd4d00a3d0a7f44b0a4099de7f2"
+        }
+      ],
+      "sha256": "e34e6d99b73d34fa7312051a75de589cecba63b11784e43e1d643923f850f550",
+      "size": 6724264
     },
     {
       "recipe_file": "scripts.d/50-avisynth.sh",
       "repo": "https://github.com/AviSynth/AviSynthPlus.git",
       "revision": "5da089a5889a69ebacc25139c7718b4ab12f3cfb",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-avisynth--5da089a5889a69ebacc25139c7718b4ab12f3cfb.tar.gz",
       "url": "https://codeload.github.com/AviSynth/AviSynthPlus/tar.gz/5da089a5889a69ebacc25139c7718b4ab12f3cfb",
       "status": "RETAINED",
-      "filename": "50-avisynth--5da089a5889a69ebacc25139c7718b4ab12f3cfb.tar.gz",
+      "source_method": "archive",
       "license_files": [],
       "sha256": "f563b7d6dba24725a8fa4be5225c506536d849c26cc622e26acf7bc6b3e61752",
       "size": 11096902
@@ -1145,9 +1325,10 @@
       "repo": "https://github.com/acoustid/chromaprint.git",
       "revision": "3b38c100022bdfb49be7797c4828a476f1621d55",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-chromaprint--3b38c100022bdfb49be7797c4828a476f1621d55.tar.gz",
       "url": "https://codeload.github.com/acoustid/chromaprint/tar.gz/3b38c100022bdfb49be7797c4828a476f1621d55",
       "status": "RETAINED",
-      "filename": "50-chromaprint--3b38c100022bdfb49be7797c4828a476f1621d55.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "LICENSE.md",
@@ -1162,9 +1343,10 @@
       "repo": "https://code.videolan.org/videolan/dav1d.git",
       "revision": "6c7bee685677fd997a431302be4fea8ea4017606",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-dav1d--6c7bee685677fd997a431302be4fea8ea4017606.tar.gz",
       "url": "https://code.videolan.org/videolan/dav1d/-/archive/6c7bee685677fd997a431302be4fea8ea4017606/dav1d-6c7bee685677fd997a431302be4fea8ea4017606.tar.gz",
       "status": "RETAINED",
-      "filename": "50-dav1d--6c7bee685677fd997a431302be4fea8ea4017606.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -1179,9 +1361,10 @@
       "repo": "https://github.com/pkuvcl/davs2.git",
       "revision": "b41cf117452e2d73d827f02d3e30aa20f1c721ac",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-davs2--b41cf117452e2d73d827f02d3e30aa20f1c721ac.tar.gz",
       "url": "https://codeload.github.com/pkuvcl/davs2/tar.gz/b41cf117452e2d73d827f02d3e30aa20f1c721ac",
       "status": "RETAINED",
-      "filename": "50-davs2--b41cf117452e2d73d827f02d3e30aa20f1c721ac.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -1196,9 +1379,10 @@
       "repo": "https://code.videolan.org/videolan/libdvdcss.git",
       "revision": "811ce97a1d4d1c9d936f4b2707f533a9ef768251",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "30-libdvdcss--811ce97a1d4d1c9d936f4b2707f533a9ef768251.tar.gz",
       "url": "https://code.videolan.org/videolan/libdvdcss/-/archive/811ce97a1d4d1c9d936f4b2707f533a9ef768251/libdvdcss-811ce97a1d4d1c9d936f4b2707f533a9ef768251.tar.gz",
       "status": "RETAINED",
-      "filename": "30-libdvdcss--811ce97a1d4d1c9d936f4b2707f533a9ef768251.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -1213,9 +1397,10 @@
       "repo": "https://code.videolan.org/videolan/libdvdread.git",
       "revision": "0f30df53125b564ef45903714403ce0a1e6c5e9e",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "40-libdvdread--0f30df53125b564ef45903714403ce0a1e6c5e9e.tar.gz",
       "url": "https://code.videolan.org/videolan/libdvdread/-/archive/0f30df53125b564ef45903714403ce0a1e6c5e9e/libdvdread-0f30df53125b564ef45903714403ce0a1e6c5e9e.tar.gz",
       "status": "RETAINED",
-      "filename": "40-libdvdread--0f30df53125b564ef45903714403ce0a1e6c5e9e.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -1230,9 +1415,10 @@
       "repo": "https://code.videolan.org/videolan/libdvdnav.git",
       "revision": "8147ccd35e5aae4afdd21171cf7b6b4d8f179d28",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-libdvdnav--8147ccd35e5aae4afdd21171cf7b6b4d8f179d28.tar.gz",
       "url": "https://code.videolan.org/videolan/libdvdnav/-/archive/8147ccd35e5aae4afdd21171cf7b6b4d8f179d28/libdvdnav-8147ccd35e5aae4afdd21171cf7b6b4d8f179d28.tar.gz",
       "status": "RETAINED",
-      "filename": "50-libdvdnav--8147ccd35e5aae4afdd21171cf7b6b4d8f179d28.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -1247,9 +1433,10 @@
       "repo": "https://github.com/mstorsjo/fdk-aac.git",
       "revision": "ec82feb39662ac77e24ee9b324d5962e91bc79c5",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-fdk-aac--ec82feb39662ac77e24ee9b324d5962e91bc79c5.tar.gz",
       "url": "https://codeload.github.com/mstorsjo/fdk-aac/tar.gz/ec82feb39662ac77e24ee9b324d5962e91bc79c5",
       "status": "RETAINED",
-      "filename": "50-fdk-aac--ec82feb39662ac77e24ee9b324d5962e91bc79c5.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "NOTICE",
@@ -1272,9 +1459,10 @@
       "repo": "https://github.com/FFmpeg/nv-codec-headers.git",
       "revision": "f2053071ea93137255b6dcf42e9b4c9e0965a44e",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-ffnvcodec--f2053071ea93137255b6dcf42e9b4c9e0965a44e.tar.gz",
       "url": "https://codeload.github.com/FFmpeg/nv-codec-headers/tar.gz/f2053071ea93137255b6dcf42e9b4c9e0965a44e",
       "status": "RETAINED",
-      "filename": "50-ffnvcodec--f2053071ea93137255b6dcf42e9b4c9e0965a44e.tar.gz",
+      "source_method": "archive",
       "license_files": [],
       "sha256": "84cefa55265740888a269625474eda5bd018955c2302b72cfe7473ddc82f741f",
       "size": 87916
@@ -1284,9 +1472,10 @@
       "repo": "https://github.com/FFmpeg/nv-codec-headers.git",
       "revision": "ced4f8eba3ba5dd431932cba17928f0dffdaeb2b",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-ffnvcodec-2-ced4f8eba3ba5dd431932cba17928f0dffdaeb2b.tar.gz",
       "url": "https://codeload.github.com/FFmpeg/nv-codec-headers/tar.gz/ced4f8eba3ba5dd431932cba17928f0dffdaeb2b",
       "status": "RETAINED",
-      "filename": "50-ffnvcodec-2-ced4f8eba3ba5dd431932cba17928f0dffdaeb2b.tar.gz",
+      "source_method": "archive",
       "license_files": [],
       "sha256": "625ddd8f2a603699fdba101bebcde0e7a97bcc7b8a82ec7f45a7d06d61336597",
       "size": 84047
@@ -1296,9 +1485,10 @@
       "repo": "https://github.com/FFmpeg/nv-codec-headers.git",
       "revision": "833faee5f7b8d3f56444347c587f4aed11ee213f",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-ffnvcodec-3-833faee5f7b8d3f56444347c587f4aed11ee213f.tar.gz",
       "url": "https://codeload.github.com/FFmpeg/nv-codec-headers/tar.gz/833faee5f7b8d3f56444347c587f4aed11ee213f",
       "status": "RETAINED",
-      "filename": "50-ffnvcodec-3-833faee5f7b8d3f56444347c587f4aed11ee213f.tar.gz",
+      "source_method": "archive",
       "license_files": [],
       "sha256": "1d1d8c3518b48fd11333895ce670f9f53c7f67c716e465547152ae455dd59f11",
       "size": 71625
@@ -1308,9 +1498,10 @@
       "repo": "https://github.com/dyne/frei0r.git",
       "revision": "f09dad3aeb8160244febac49589e47a1513549d4",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-frei0r--f09dad3aeb8160244febac49589e47a1513549d4.tar.gz",
       "url": "https://codeload.github.com/dyne/frei0r/tar.gz/f09dad3aeb8160244febac49589e47a1513549d4",
       "status": "RETAINED",
-      "filename": "50-frei0r--f09dad3aeb8160244febac49589e47a1513549d4.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -1325,9 +1516,10 @@
       "repo": "https://github.com/libgme/game-music-emu.git",
       "revision": "8238afd9503a59ffcec0e2685584d5ce819ad7c6",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-gme--8238afd9503a59ffcec0e2685584d5ce819ad7c6.tar.gz",
       "url": "https://codeload.github.com/libgme/game-music-emu/tar.gz/8238afd9503a59ffcec0e2685584d5ce819ad7c6",
       "status": "RETAINED",
-      "filename": "50-gme--8238afd9503a59ffcec0e2685584d5ce819ad7c6.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "license.gpl2.txt",
@@ -1346,9 +1538,10 @@
       "repo": "https://github.com/ultravideo/kvazaar.git",
       "revision": "ec7562da7f5971f9fa3f984db358371e74bf3c7d",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-kvazaar--ec7562da7f5971f9fa3f984db358371e74bf3c7d.tar.gz",
       "url": "https://codeload.github.com/ultravideo/kvazaar/tar.gz/ec7562da7f5971f9fa3f984db358371e74bf3c7d",
       "status": "RETAINED",
-      "filename": "50-kvazaar--ec7562da7f5971f9fa3f984db358371e74bf3c7d.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "LICENSE",
@@ -1367,9 +1560,10 @@
       "repo": "https://github.com/v-novaltd/LCEVCdec.git",
       "revision": "e295d8438ba554bc541fb269baa9cbd567b626a8",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-lcevcdec--e295d8438ba554bc541fb269baa9cbd567b626a8.tar.gz",
       "url": "https://codeload.github.com/v-novaltd/LCEVCdec/tar.gz/e295d8438ba554bc541fb269baa9cbd567b626a8",
       "status": "RETAINED",
-      "filename": "50-lcevcdec--e295d8438ba554bc541fb269baa9cbd567b626a8.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -1388,9 +1582,10 @@
       "repo": "https://github.com/nkoriyama/aribb24.git",
       "revision": "5e9be272f96e00f15a2f3c5f8ba7e124862aec38",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-libaribb24--5e9be272f96e00f15a2f3c5f8ba7e124862aec38.tar.gz",
       "url": "https://codeload.github.com/nkoriyama/aribb24/tar.gz/5e9be272f96e00f15a2f3c5f8ba7e124862aec38",
       "status": "RETAINED",
-      "filename": "50-libaribb24--5e9be272f96e00f15a2f3c5f8ba7e124862aec38.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -1405,9 +1600,10 @@
       "repo": "https://github.com/xqq/libaribcaption.git",
       "revision": "d59c9d6403645dd7e8098b02b887a6723b15259b",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-libaribcaption--d59c9d6403645dd7e8098b02b887a6723b15259b.tar.gz",
       "url": "https://codeload.github.com/xqq/libaribcaption/tar.gz/d59c9d6403645dd7e8098b02b887a6723b15259b",
       "status": "RETAINED",
-      "filename": "50-libaribcaption--d59c9d6403645dd7e8098b02b887a6723b15259b.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "LICENSE",
@@ -1422,9 +1618,10 @@
       "repo": "https://github.com/libass/libass.git",
       "revision": "21b5a54fceff49c126c201d4b51c6445287a5072",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-libass--21b5a54fceff49c126c201d4b51c6445287a5072.tar.gz",
       "url": "https://codeload.github.com/libass/libass/tar.gz/21b5a54fceff49c126c201d4b51c6445287a5072",
       "status": "RETAINED",
-      "filename": "50-libass--21b5a54fceff49c126c201d4b51c6445287a5072.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -1439,9 +1636,10 @@
       "repo": "https://code.videolan.org/videolan/libbluray.git",
       "revision": "4613535451af402c6d72665e8cd88be1b29c9158",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-libbluray--4613535451af402c6d72665e8cd88be1b29c9158.tar.gz",
       "url": "https://code.videolan.org/videolan/libbluray/-/archive/4613535451af402c6d72665e8cd88be1b29c9158/libbluray-4613535451af402c6d72665e8cd88be1b29c9158.tar.gz",
       "status": "RETAINED",
-      "filename": "50-libbluray--4613535451af402c6d72665e8cd88be1b29c9158.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -1456,9 +1654,10 @@
       "repo": "https://github.com/rockdaboot/libpsl.git",
       "revision": "88331dae18f1824ab033f7e77880cf65814fc21a",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "40-libpsl--88331dae18f1824ab033f7e77880cf65814fc21a.tar.gz",
       "url": "https://codeload.github.com/rockdaboot/libpsl/tar.gz/88331dae18f1824ab033f7e77880cf65814fc21a",
       "status": "RETAINED",
-      "filename": "40-libpsl--88331dae18f1824ab033f7e77880cf65814fc21a.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "LICENSE",
@@ -1477,9 +1676,10 @@
       "repo": "https://github.com/publicsuffix/list.git",
       "revision": "ee4f2faaca9387a7cf3d433e68484b82c9542543",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "40-libpsl-2-ee4f2faaca9387a7cf3d433e68484b82c9542543.tar.gz",
       "url": "https://codeload.github.com/publicsuffix/list/tar.gz/ee4f2faaca9387a7cf3d433e68484b82c9542543",
       "status": "RETAINED",
-      "filename": "40-libpsl-2-ee4f2faaca9387a7cf3d433e68484b82c9542543.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "LICENSE",
@@ -1494,9 +1694,10 @@
       "repo": "https://github.com/nghttp2/nghttp2.git",
       "revision": "c785bf23f9d77966085ae1b32717f3e8c8d12090",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "40-nghttp2--c785bf23f9d77966085ae1b32717f3e8c8d12090.tar.gz",
       "url": "https://codeload.github.com/nghttp2/nghttp2/tar.gz/c785bf23f9d77966085ae1b32717f3e8c8d12090",
       "status": "RETAINED",
-      "filename": "40-nghttp2--c785bf23f9d77966085ae1b32717f3e8c8d12090.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -1511,9 +1712,10 @@
       "repo": "https://github.com/ngtcp2/nghttp3.git",
       "revision": "e06a63ac6a0267149b480cd7fe04c8ea9a366d9e",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "40-nghttp3--e06a63ac6a0267149b480cd7fe04c8ea9a366d9e.tar.gz",
       "url": "https://codeload.github.com/ngtcp2/nghttp3/tar.gz/e06a63ac6a0267149b480cd7fe04c8ea9a366d9e",
       "status": "RETAINED",
-      "filename": "40-nghttp3--e06a63ac6a0267149b480cd7fe04c8ea9a366d9e.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -1528,9 +1730,10 @@
       "repo": "https://github.com/ngtcp2/ngtcp2.git",
       "revision": "9595a0dda7990b95cc2ff728d2524d7db0a8b7f3",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "40-ngtcp2--9595a0dda7990b95cc2ff728d2524d7db0a8b7f3.tar.gz",
       "url": "https://codeload.github.com/ngtcp2/ngtcp2/tar.gz/9595a0dda7990b95cc2ff728d2524d7db0a8b7f3",
       "status": "RETAINED",
-      "filename": "40-ngtcp2--9595a0dda7990b95cc2ff728d2524d7db0a8b7f3.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -1545,9 +1748,10 @@
       "repo": "https://github.com/curl/curl.git",
       "revision": "d999cc6c6bb1f73ca60593355e522f97240317ad",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-libcurl--d999cc6c6bb1f73ca60593355e522f97240317ad.tar.gz",
       "url": "https://codeload.github.com/curl/curl/tar.gz/d999cc6c6bb1f73ca60593355e522f97240317ad",
       "status": "RETAINED",
-      "filename": "50-libcurl--d999cc6c6bb1f73ca60593355e522f97240317ad.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -1562,9 +1766,10 @@
       "repo": "https://github.com/libjxl/libjxl.git",
       "revision": "a14f4e0ff32c07cbd19eae144c850e8bbfee2261",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-libjxl--a14f4e0ff32c07cbd19eae144c850e8bbfee2261.tar.gz",
       "url": "https://codeload.github.com/libjxl/libjxl/tar.gz/a14f4e0ff32c07cbd19eae144c850e8bbfee2261",
       "status": "RETAINED",
-      "filename": "50-libjxl--a14f4e0ff32c07cbd19eae144c850e8bbfee2261.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "LICENSE",
@@ -1581,19 +1786,39 @@
     {
       "recipe_file": "scripts.d/50-libmp3lame.sh",
       "repo": "https://svn.code.sf.net/p/lame/svn/trunk/lame",
-      "revision": "",
+      "revision": "7153",
       "source_role": "recipe input superset; actual linked inclusion not established",
-      "status": "BLOCKED",
-      "reason": "Mutable/non-commit source ref requires explicit resolution"
+      "filename": "50-libmp3lame--7153.tar.gz",
+      "status": "RETAINED",
+      "source_method": "svn-export",
+      "url": "https://svn.code.sf.net/p/lame/svn/trunk/lame",
+      "svn_externals_ignored": true,
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "e64f9c5a18f56828c10a575df13ade641aa3af4512a7afe6c411256943b57aaf"
+        },
+        {
+          "file": "LICENSE",
+          "sha256": "5c1f8d44f1eacbea3e1c31ff6ee11a4e1690ccbed4ee4af16de3b6eb61dc69a8"
+        },
+        {
+          "file": "debian/copyright",
+          "sha256": "eb2efb4511f3c5d5e4747b6f3a0da1dd5649975082284e12889b6892ededd53d"
+        }
+      ],
+      "sha256": "490094fccc2a96348d8bf60ffcf66e1de449dc4521f66ab16e6c71e21de25daf",
+      "size": 2302052
     },
     {
       "recipe_file": "scripts.d/50-libopus.sh",
       "repo": "https://github.com/xiph/opus.git",
       "revision": "f1afc4222aff7c5456d27581ec618ae64158fbe1",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-libopus--f1afc4222aff7c5456d27581ec618ae64158fbe1.tar.gz",
       "url": "https://codeload.github.com/xiph/opus/tar.gz/f1afc4222aff7c5456d27581ec618ae64158fbe1",
       "status": "RETAINED",
-      "filename": "50-libopus--f1afc4222aff7c5456d27581ec618ae64158fbe1.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -1612,9 +1837,10 @@
       "repo": "https://code.videolan.org/videolan/libplacebo.git",
       "revision": "e608e5b799b6515af2689fddbbed66ffae7b724c",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-libplacebo--e608e5b799b6515af2689fddbbed66ffae7b724c.tar.gz",
       "url": "https://code.videolan.org/videolan/libplacebo/-/archive/e608e5b799b6515af2689fddbbed66ffae7b724c/libplacebo-e608e5b799b6515af2689fddbbed66ffae7b724c.tar.gz",
       "status": "RETAINED",
-      "filename": "50-libplacebo--e608e5b799b6515af2689fddbbed66ffae7b724c.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "LICENSE",
@@ -1631,29 +1857,52 @@
     {
       "recipe_file": "scripts.d/50-librist/40-mbedtls.sh",
       "repo": "https://github.com/ARMmbed/mbedtls.git",
-      "revision": "v4.3.0",
+      "revision": "eafb4a72592addfd5ba1326caad2f3e9adef49ad",
       "source_role": "recipe input superset; actual linked inclusion not established",
-      "status": "BLOCKED",
-      "reason": "Mutable/non-commit source ref requires explicit resolution"
+      "filename": "40-mbedtls--v4.3.0.tar.gz",
+      "status": "RETAINED",
+      "source_method": "archive",
+      "url": "https://codeload.github.com/ARMmbed/mbedtls/tar.gz/eafb4a72592addfd5ba1326caad2f3e9adef49ad",
+      "declared_revision": "v4.3.0",
+      "tag_object_sha": "7ad5d99db40801b48b4e2b713d567d40d34ff7c8",
+      "license_files": [
+        {
+          "file": "LICENSE",
+          "sha256": "9b405ef4c89342f5eae1dd828882f931747f71001cfba7d114801039b52ad09b"
+        }
+      ],
+      "sha256": "abc274eb30036d5d1bfb9b2dd83ffc27a88ac6714f95d9d7048e2effc68a6069",
+      "size": 1191962
     },
     {
       "recipe_file": "scripts.d/50-librist/50-librist.sh",
       "repo": "https://code.videolan.org/rist/librist.git",
       "revision": "a911bee8904d88beb1ccd3349ff9a3de1cadc1a6",
       "source_role": "recipe input superset; actual linked inclusion not established",
-      "url": "https://code.videolan.org/rist/librist/-/archive/a911bee8904d88beb1ccd3349ff9a3de1cadc1a6/librist-a911bee8904d88beb1ccd3349ff9a3de1cadc1a6.tar.gz",
-      "status": "BLOCKED",
       "filename": "50-librist--a911bee8904d88beb1ccd3349ff9a3de1cadc1a6.tar.gz",
-      "reason": "RemoteDisconnected: Remote end closed connection without response"
+      "url": "https://code.videolan.org/rist/librist.git",
+      "status": "RETAINED",
+      "source_method": "git-export",
+      "unretained_gitlink_inputs": [],
+      "archive_url_attempted": "https://code.videolan.org/rist/librist/-/archive/a911bee8904d88beb1ccd3349ff9a3de1cadc1a6/librist-a911bee8904d88beb1ccd3349ff9a3de1cadc1a6.tar.gz",
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "b9841591a3452ee30033d8e3586c7b1244a0b2fc1dc6cb04576957c313cb2792"
+        }
+      ],
+      "sha256": "10b7c77bfc6750c5a9a833a0ef1f2050e591e1eebb226f648d89ff093a9a490e",
+      "size": 3478289
     },
     {
       "recipe_file": "scripts.d/50-librsvg/10-glib.sh",
       "repo": "https://github.com/GNOME/glib.git",
       "revision": "5cf924587ed152260d85c6ca8733546bcad5ee42",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "10-glib--5cf924587ed152260d85c6ca8733546bcad5ee42.tar.gz",
       "url": "https://codeload.github.com/GNOME/glib/tar.gz/5cf924587ed152260d85c6ca8733546bcad5ee42",
       "status": "RETAINED",
-      "filename": "10-glib--5cf924587ed152260d85c6ca8733546bcad5ee42.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "LICENSES/LicenseRef-old-glib-tests.txt",
@@ -1668,9 +1917,10 @@
       "repo": "https://gitlab.freedesktop.org/cairo/cairo.git",
       "revision": "07adef44b00a9765e9bdb92c4e6f3772debc83c2",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "20-cairo--07adef44b00a9765e9bdb92c4e6f3772debc83c2.tar.gz",
       "url": "https://gitlab.freedesktop.org/cairo/cairo/-/archive/07adef44b00a9765e9bdb92c4e6f3772debc83c2/cairo-07adef44b00a9765e9bdb92c4e6f3772debc83c2.tar.gz",
       "status": "RETAINED",
-      "filename": "20-cairo--07adef44b00a9765e9bdb92c4e6f3772debc83c2.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -1705,9 +1955,10 @@
       "repo": "https://github.com/GNOME/pango.git",
       "revision": "6bd640fdbdfe4d751cc17e0fff25caa6a372d303",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "30-pango--6bd640fdbdfe4d751cc17e0fff25caa6a372d303.tar.gz",
       "url": "https://codeload.github.com/GNOME/pango/tar.gz/6bd640fdbdfe4d751cc17e0fff25caa6a372d303",
       "status": "RETAINED",
-      "filename": "30-pango--6bd640fdbdfe4d751cc17e0fff25caa6a372d303.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -1722,9 +1973,10 @@
       "repo": "https://github.com/GNOME/librsvg.git",
       "revision": "a6ab2529560de5e17551a9ca3ed9e8a9b9bc9a2e",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "99-librsvg--a6ab2529560de5e17551a9ca3ed9e8a9b9bc9a2e.tar.gz",
       "url": "https://codeload.github.com/GNOME/librsvg/tar.gz/a6ab2529560de5e17551a9ca3ed9e8a9b9bc9a2e",
       "status": "RETAINED",
-      "filename": "99-librsvg--a6ab2529560de5e17551a9ca3ed9e8a9b9bc9a2e.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING.LIB",
@@ -1743,17 +1995,29 @@
       "repo": "https://gitlab.com/libssh/libssh-mirror.git",
       "revision": "5138d46fd3b844d525b05938bf55a6d0d924c8d2",
       "source_role": "recipe input superset; actual linked inclusion not established",
-      "status": "BLOCKED",
-      "reason": "Source host requires a verified archive retrieval adapter"
+      "filename": "50-libssh--5138d46fd3b844d525b05938bf55a6d0d924c8d2.tar.gz",
+      "status": "RETAINED",
+      "source_method": "git-export",
+      "url": "https://gitlab.com/libssh/libssh-mirror.git",
+      "unretained_gitlink_inputs": [],
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "1656186e951db1c010a8485481fa94587f7e53a26d24976bef97945ad0c4df5a"
+        }
+      ],
+      "sha256": "c088179d2d7fd8333efe7a54b766304c3a79e9dd70ef041fdf0a997f63a08ecc",
+      "size": 1210745
     },
     {
       "recipe_file": "scripts.d/50-libtheora.sh",
       "repo": "https://github.com/xiph/theora.git",
       "revision": "28fd5ec77f0ad0e07a371cef1047828116f6bd8a",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-libtheora--28fd5ec77f0ad0e07a371cef1047828116f6bd8a.tar.gz",
       "url": "https://codeload.github.com/xiph/theora/tar.gz/28fd5ec77f0ad0e07a371cef1047828116f6bd8a",
       "status": "RETAINED",
-      "filename": "50-libtheora--28fd5ec77f0ad0e07a371cef1047828116f6bd8a.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -1772,25 +2036,48 @@
       "repo": "https://chromium.googlesource.com/webm/libvpx",
       "revision": "7e000a41a7727d5b9477dbbe5727431560d6a16c",
       "source_role": "recipe input superset; actual linked inclusion not established",
-      "status": "BLOCKED",
-      "reason": "Source host requires a verified archive retrieval adapter"
+      "filename": "50-libvpx--7e000a41a7727d5b9477dbbe5727431560d6a16c.tar.gz",
+      "status": "RETAINED",
+      "source_method": "git-export",
+      "url": "https://chromium.googlesource.com/webm/libvpx",
+      "unretained_gitlink_inputs": [],
+      "license_files": [
+        {
+          "file": "LICENSE",
+          "sha256": "8267348d5af1262c11d1a08de2f5afc77457755f1ac658627dd9acf71011d615"
+        }
+      ],
+      "sha256": "f1eb086ce607490e4471ea642c1ebaad49cdd553500408bb217788b8decef29b",
+      "size": 5645089
     },
     {
       "recipe_file": "scripts.d/50-libwebp.sh",
       "repo": "https://chromium.googlesource.com/webm/libwebp",
       "revision": "67b8354c37d21f36d6d5cdd027ca0bcf94d3243d",
       "source_role": "recipe input superset; actual linked inclusion not established",
-      "status": "BLOCKED",
-      "reason": "Source host requires a verified archive retrieval adapter"
+      "filename": "50-libwebp--67b8354c37d21f36d6d5cdd027ca0bcf94d3243d.tar.gz",
+      "status": "RETAINED",
+      "source_method": "git-export",
+      "url": "https://chromium.googlesource.com/webm/libwebp",
+      "unretained_gitlink_inputs": [],
+      "license_files": [
+        {
+          "file": "COPYING",
+          "sha256": "5aec868f669e384a22372a4e8a1a6cd7d44c64cd451f960ca69cc170d1e13acf"
+        }
+      ],
+      "sha256": "a54487c4ee12584216d5082be296077f7b68f06ae25a2306b8229844a4e6b254",
+      "size": 3884040
     },
     {
       "recipe_file": "scripts.d/50-libzmq.sh",
       "repo": "https://github.com/zeromq/libzmq.git",
       "revision": "46493370217ac135246617fa2f6ac819d8b61bfc",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-libzmq--46493370217ac135246617fa2f6ac819d8b61bfc.tar.gz",
       "url": "https://codeload.github.com/zeromq/libzmq/tar.gz/46493370217ac135246617fa2f6ac819d8b61bfc",
       "status": "RETAINED",
-      "filename": "50-libzmq--46493370217ac135246617fa2f6ac819d8b61bfc.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "LICENSE",
@@ -1805,9 +2092,10 @@
       "repo": "https://github.com/lv2/lv2.git",
       "revision": "3c57dae600a5ad8d05acd53ee3490f7d91cb7be6",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "96-lv2--3c57dae600a5ad8d05acd53ee3490f7d91cb7be6.tar.gz",
       "url": "https://codeload.github.com/lv2/lv2/tar.gz/3c57dae600a5ad8d05acd53ee3490f7d91cb7be6",
       "status": "RETAINED",
-      "filename": "96-lv2--3c57dae600a5ad8d05acd53ee3490f7d91cb7be6.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -1822,9 +2110,10 @@
       "repo": "https://github.com/drobilla/serd.git",
       "revision": "b621b0bc790d1e8102d3138ead16b974ddda8432",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "96-serd--b621b0bc790d1e8102d3138ead16b974ddda8432.tar.gz",
       "url": "https://codeload.github.com/drobilla/serd/tar.gz/b621b0bc790d1e8102d3138ead16b974ddda8432",
       "status": "RETAINED",
-      "filename": "96-serd--b621b0bc790d1e8102d3138ead16b974ddda8432.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -1839,9 +2128,10 @@
       "repo": "https://github.com/drobilla/zix.git",
       "revision": "17d632393f5addb6fa24dda2927b96515407cca7",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "96-zix--17d632393f5addb6fa24dda2927b96515407cca7.tar.gz",
       "url": "https://codeload.github.com/drobilla/zix/tar.gz/17d632393f5addb6fa24dda2927b96515407cca7",
       "status": "RETAINED",
-      "filename": "96-zix--17d632393f5addb6fa24dda2927b96515407cca7.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -1856,9 +2146,10 @@
       "repo": "https://github.com/drobilla/sord.git",
       "revision": "4b5232bb91e7f2f1b84df384494d073fabbcd312",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "97-sord--4b5232bb91e7f2f1b84df384494d073fabbcd312.tar.gz",
       "url": "https://codeload.github.com/drobilla/sord/tar.gz/4b5232bb91e7f2f1b84df384494d073fabbcd312",
       "status": "RETAINED",
-      "filename": "97-sord--4b5232bb91e7f2f1b84df384494d073fabbcd312.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -1873,9 +2164,10 @@
       "repo": "https://github.com/lv2/sratom.git",
       "revision": "9e8ee84eed502e6030ce8bb49694fd28542b08fc",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "98-sratom--9e8ee84eed502e6030ce8bb49694fd28542b08fc.tar.gz",
       "url": "https://codeload.github.com/lv2/sratom/tar.gz/9e8ee84eed502e6030ce8bb49694fd28542b08fc",
       "status": "RETAINED",
-      "filename": "98-sratom--9e8ee84eed502e6030ce8bb49694fd28542b08fc.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -1890,9 +2182,10 @@
       "repo": "https://github.com/lv2/lilv.git",
       "revision": "4b8f30055fa5cb4134a2eb45fc1555bc04289314",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "99-lilv--4b8f30055fa5cb4134a2eb45fc1555bc04289314.tar.gz",
       "url": "https://codeload.github.com/lv2/lilv/tar.gz/4b8f30055fa5cb4134a2eb45fc1555bc04289314",
       "status": "RETAINED",
-      "filename": "99-lilv--4b8f30055fa5cb4134a2eb45fc1555bc04289314.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -1907,9 +2200,10 @@
       "repo": "https://github.com/intel/libvpl.git",
       "revision": "412c5cffe3022d5ebb8a955c3b30afe7bd2e3929",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-onevpl--412c5cffe3022d5ebb8a955c3b30afe7bd2e3929.tar.gz",
       "url": "https://codeload.github.com/intel/libvpl/tar.gz/412c5cffe3022d5ebb8a955c3b30afe7bd2e3929",
       "status": "RETAINED",
-      "filename": "50-onevpl--412c5cffe3022d5ebb8a955c3b30afe7bd2e3929.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "LICENSE",
@@ -1924,9 +2218,10 @@
       "repo": "https://github.com/kcat/openal-soft.git",
       "revision": "0609c8df5848040a13d67d790ac65ed95fad265f",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-openal--0609c8df5848040a13d67d790ac65ed95fad265f.tar.gz",
       "url": "https://codeload.github.com/kcat/openal-soft/tar.gz/0609c8df5848040a13d67d790ac65ed95fad265f",
       "status": "RETAINED",
-      "filename": "50-openal--0609c8df5848040a13d67d790ac65ed95fad265f.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -1961,9 +2256,10 @@
       "repo": "https://github.com/AcademySoftwareFoundation/openapv.git",
       "revision": "3f0291391dbb1fbc27229b2543aad4ce778b0d72",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-openapv--3f0291391dbb1fbc27229b2543aad4ce778b0d72.tar.gz",
       "url": "https://codeload.github.com/AcademySoftwareFoundation/openapv/tar.gz/3f0291391dbb1fbc27229b2543aad4ce778b0d72",
       "status": "RETAINED",
-      "filename": "50-openapv--3f0291391dbb1fbc27229b2543aad4ce778b0d72.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "LICENSE",
@@ -1978,17 +2274,33 @@
       "repo": "https://git.code.sf.net/p/opencore-amr/code",
       "revision": "7dba8c32238418ce0b316a852b2224df586ca896",
       "source_role": "recipe input superset; actual linked inclusion not established",
-      "status": "BLOCKED",
-      "reason": "Source host requires a verified archive retrieval adapter"
+      "filename": "50-opencore-amr--7dba8c32238418ce0b316a852b2224df586ca896.tar.gz",
+      "status": "RETAINED",
+      "source_method": "git-export",
+      "url": "https://git.code.sf.net/p/opencore-amr/code",
+      "unretained_gitlink_inputs": [],
+      "license_files": [
+        {
+          "file": "LICENSE",
+          "sha256": "8b3f1762349248d444ab9acbafe73941254e36e1064954da56bb9ddbd5873ddb"
+        },
+        {
+          "file": "opencore/NOTICE",
+          "sha256": "d106802b5e406073c1d10fbe9f638234c6973ebce37df71773179642085eb489"
+        }
+      ],
+      "sha256": "6aa9dd79c0bd003a73355cda80ef14218eea1c5843099f2907181dc298a55a72",
+      "size": 517214
     },
     {
       "recipe_file": "scripts.d/50-openh264.sh",
       "repo": "https://github.com/cisco/openh264.git",
       "revision": "1bca62311e447fd9c39fc93de2c4b96cd5ce971c",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-openh264--1bca62311e447fd9c39fc93de2c4b96cd5ce971c.tar.gz",
       "url": "https://codeload.github.com/cisco/openh264/tar.gz/1bca62311e447fd9c39fc93de2c4b96cd5ce971c",
       "status": "RETAINED",
-      "filename": "50-openh264--1bca62311e447fd9c39fc93de2c4b96cd5ce971c.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "LICENSE",
@@ -2003,9 +2315,10 @@
       "repo": "https://github.com/uclouvain/openjpeg.git",
       "revision": "8314119b067c0fc77834731168daaebd379fdb12",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-openjpeg--8314119b067c0fc77834731168daaebd379fdb12.tar.gz",
       "url": "https://codeload.github.com/uclouvain/openjpeg/tar.gz/8314119b067c0fc77834731168daaebd379fdb12",
       "status": "RETAINED",
-      "filename": "50-openjpeg--8314119b067c0fc77834731168daaebd379fdb12.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "LICENSE",
@@ -2020,9 +2333,10 @@
       "repo": "https://github.com/OpenMPT/openmpt.git",
       "revision": "ad7ba02b3fd1212e65cca02c41476af4368491ce",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-openmpt--ad7ba02b3fd1212e65cca02c41476af4368491ce.tar.gz",
       "url": "https://codeload.github.com/OpenMPT/openmpt/tar.gz/ad7ba02b3fd1212e65cca02c41476af4368491ce",
       "status": "RETAINED",
-      "filename": "50-openmpt--ad7ba02b3fd1212e65cca02c41476af4368491ce.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "LICENSE",
@@ -2037,9 +2351,10 @@
       "repo": "https://github.com/xiph/rav1e.git",
       "revision": "31435de9d76fddd38f6dcc31d4014574cebb2092",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-rav1e--31435de9d76fddd38f6dcc31d4014574cebb2092.tar.gz",
       "url": "https://codeload.github.com/xiph/rav1e/tar.gz/31435de9d76fddd38f6dcc31d4014574cebb2092",
       "status": "RETAINED",
-      "filename": "50-rav1e--31435de9d76fddd38f6dcc31d4014574cebb2092.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "LICENSE",
@@ -2062,9 +2377,10 @@
       "repo": "https://github.com/breakfastquay/rubberband.git",
       "revision": "e4296ac80b1170018a110bc326fd0d45a0eb27d6",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-rubberband--e4296ac80b1170018a110bc326fd0d45a0eb27d6.tar.gz",
       "url": "https://codeload.github.com/breakfastquay/rubberband/tar.gz/e4296ac80b1170018a110bc326fd0d45a0eb27d6",
       "status": "RETAINED",
-      "filename": "50-rubberband--e4296ac80b1170018a110bc326fd0d45a0eb27d6.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -2079,9 +2395,10 @@
       "repo": "https://github.com/libsdl-org/SDL.git",
       "revision": "fe30456e94e89ef2cab50172121bffb7f7f50830",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-sdl--fe30456e94e89ef2cab50172121bffb7f7f50830.tar.gz",
       "url": "https://codeload.github.com/libsdl-org/SDL/tar.gz/fe30456e94e89ef2cab50172121bffb7f7f50830",
       "status": "RETAINED",
-      "filename": "50-sdl--fe30456e94e89ef2cab50172121bffb7f7f50830.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "LICENSE.txt",
@@ -2104,9 +2421,10 @@
       "repo": "https://github.com/google/snappy.git",
       "revision": "946606459314e55d029c85f9a8c46f8809467f0f",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-snappy--946606459314e55d029c85f9a8c46f8809467f0f.tar.gz",
       "url": "https://codeload.github.com/google/snappy/tar.gz/946606459314e55d029c85f9a8c46f8809467f0f",
       "status": "RETAINED",
-      "filename": "50-snappy--946606459314e55d029c85f9a8c46f8809467f0f.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -2125,17 +2443,33 @@
       "repo": "https://git.code.sf.net/p/soxr/code",
       "revision": "945b592b70470e29f917f4de89b4281fbbd540c0",
       "source_role": "recipe input superset; actual linked inclusion not established",
-      "status": "BLOCKED",
-      "reason": "Source host requires a verified archive retrieval adapter"
+      "filename": "50-soxr--945b592b70470e29f917f4de89b4281fbbd540c0.tar.gz",
+      "status": "RETAINED",
+      "source_method": "git-export",
+      "url": "https://git.code.sf.net/p/soxr/code",
+      "unretained_gitlink_inputs": [],
+      "license_files": [
+        {
+          "file": "COPYING.LGPL",
+          "sha256": "f2f118b9029ec1871b953639ecc46651b2fc7b62e295e6cf3ef2ac4c9a058b33"
+        },
+        {
+          "file": "lsr-tests/COPYING",
+          "sha256": "32b1062f7da84967e7019d01ab805935caa7ab7321a7ced0e30ebe75e5df1670"
+        }
+      ],
+      "sha256": "f82222307e318a89480374ca27a768fea9a454f0dc9e53bae0c21a60883c5a33",
+      "size": 143623
     },
     {
       "recipe_file": "scripts.d/50-srt.sh",
       "repo": "https://github.com/Haivision/srt.git",
       "revision": "23af65f7dafb0f65b80312b859f80aeece557924",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-srt--23af65f7dafb0f65b80312b859f80aeece557924.tar.gz",
       "url": "https://codeload.github.com/Haivision/srt/tar.gz/23af65f7dafb0f65b80312b859f80aeece557924",
       "status": "RETAINED",
-      "filename": "50-srt--23af65f7dafb0f65b80312b859f80aeece557924.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "LICENSE",
@@ -2150,9 +2484,10 @@
       "repo": "https://github.com/AOMediaCodec/SVT-AV1.git",
       "revision": "5fdf6b2f373bd96256bb6b45f892077b1b4431d9",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-svtav1--5fdf6b2f373bd96256bb6b45f892077b1b4431d9.tar.gz",
       "url": "https://codeload.github.com/AOMediaCodec/SVT-AV1/tar.gz/5fdf6b2f373bd96256bb6b45f892077b1b4431d9",
       "status": "RETAINED",
-      "filename": "50-svtav1--5fdf6b2f373bd96256bb6b45f892077b1b4431d9.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "LICENSE-BSD2.md",
@@ -2171,9 +2506,10 @@
       "repo": "https://github.com/njh/twolame.git",
       "revision": "6fced852d4d5cfad58cf9dbe3ea619b08e87d398",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-twolame--6fced852d4d5cfad58cf9dbe3ea619b08e87d398.tar.gz",
       "url": "https://codeload.github.com/njh/twolame/tar.gz/6fced852d4d5cfad58cf9dbe3ea619b08e87d398",
       "status": "RETAINED",
-      "filename": "50-twolame--6fced852d4d5cfad58cf9dbe3ea619b08e87d398.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -2188,9 +2524,10 @@
       "repo": "https://github.com/uavs3/uavs3d.git",
       "revision": "0e20d2c291853f196c68922a264bcd8471d75b68",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-uavs3d--0e20d2c291853f196c68922a264bcd8471d75b68.tar.gz",
       "url": "https://codeload.github.com/uavs3/uavs3d/tar.gz/0e20d2c291853f196c68922a264bcd8471d75b68",
       "status": "RETAINED",
-      "filename": "50-uavs3d--0e20d2c291853f196c68922a264bcd8471d75b68.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -2205,9 +2542,10 @@
       "repo": "https://gitlab.freedesktop.org/xorg/lib/libpciaccess.git",
       "revision": "e33aa5fd28f63b9842e36c1a8a954577eec042e3",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "30-libpciaccess--e33aa5fd28f63b9842e36c1a8a954577eec042e3.tar.gz",
       "url": "https://gitlab.freedesktop.org/xorg/lib/libpciaccess/-/archive/e33aa5fd28f63b9842e36c1a8a954577eec042e3/libpciaccess-e33aa5fd28f63b9842e36c1a8a954577eec042e3.tar.gz",
       "status": "RETAINED",
-      "filename": "30-libpciaccess--e33aa5fd28f63b9842e36c1a8a954577eec042e3.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -2222,9 +2560,10 @@
       "repo": "https://gitlab.freedesktop.org/mesa/drm.git",
       "revision": "33fab8cbca7f7581e955a675597d14412702edc4",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "40-libdrm--33fab8cbca7f7581e955a675597d14412702edc4.tar.gz",
       "url": "https://gitlab.freedesktop.org/mesa/drm/-/archive/33fab8cbca7f7581e955a675597d14412702edc4/drm-33fab8cbca7f7581e955a675597d14412702edc4.tar.gz",
       "status": "RETAINED",
-      "filename": "40-libdrm--33fab8cbca7f7581e955a675597d14412702edc4.tar.gz",
+      "source_method": "archive",
       "license_files": [],
       "sha256": "158ba73b9149793fb50f6ed51020917b6f31754ff0d2404394b76ae8afe73710",
       "size": 571838
@@ -2234,9 +2573,10 @@
       "repo": "https://github.com/intel/libva.git",
       "revision": "f052e984e0c8bf10784198cc311b23c567b1367f",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-libva--f052e984e0c8bf10784198cc311b23c567b1367f.tar.gz",
       "url": "https://codeload.github.com/intel/libva/tar.gz/f052e984e0c8bf10784198cc311b23c567b1367f",
       "status": "RETAINED",
-      "filename": "50-libva--f052e984e0c8bf10784198cc311b23c567b1367f.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -2249,19 +2589,32 @@
     {
       "recipe_file": "scripts.d/50-vapoursynth.sh",
       "repo": "https://github.com/vapoursynth/vapoursynth.git",
-      "revision": "R82",
+      "revision": "e0fadcc1c8977e99b11ce2e478996a867a939874",
       "source_role": "recipe input superset; actual linked inclusion not established",
-      "status": "BLOCKED",
-      "reason": "Mutable/non-commit source ref requires explicit resolution"
+      "filename": "50-vapoursynth--R82.tar.gz",
+      "status": "RETAINED",
+      "source_method": "archive",
+      "url": "https://codeload.github.com/vapoursynth/vapoursynth/tar.gz/e0fadcc1c8977e99b11ce2e478996a867a939874",
+      "declared_revision": "R82",
+      "tag_object_sha": "e0fadcc1c8977e99b11ce2e478996a867a939874",
+      "license_files": [
+        {
+          "file": "COPYING.LESSER",
+          "sha256": "b634ab5640e258563c536e658cad87080553df6f34f62269a21d554844e58bfe"
+        }
+      ],
+      "sha256": "d908d2c7a9278918658db0f2e3e46ac11c78cfb365d265616c41e648bc561900",
+      "size": 1140334
     },
     {
       "recipe_file": "scripts.d/50-vidstab.sh",
       "repo": "https://github.com/georgmartius/vid.stab.git",
       "revision": "e2445c4081658318223762a696eb1c645c2d7168",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-vidstab--e2445c4081658318223762a696eb1c645c2d7168.tar.gz",
       "url": "https://codeload.github.com/georgmartius/vid.stab/tar.gz/e2445c4081658318223762a696eb1c645c2d7168",
       "status": "RETAINED",
-      "filename": "50-vidstab--e2445c4081658318223762a696eb1c645c2d7168.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING.LESSER",
@@ -2280,9 +2633,10 @@
       "repo": "https://github.com/fraunhoferhhi/vvenc.git",
       "revision": "7804c92e133983e5d81c88d0ae642201d73ee457",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-vvenc--7804c92e133983e5d81c88d0ae642201d73ee457.tar.gz",
       "url": "https://codeload.github.com/fraunhoferhhi/vvenc/tar.gz/7804c92e133983e5d81c88d0ae642201d73ee457",
       "status": "RETAINED",
-      "filename": "50-vvenc--7804c92e133983e5d81c88d0ae642201d73ee457.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "LICENSE.txt",
@@ -2297,9 +2651,10 @@
       "repo": "https://github.com/ggml-org/whisper.cpp.git",
       "revision": "aba02defd6bb6ff5de63721c21e3456645c153e2",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-whisper--aba02defd6bb6ff5de63721c21e3456645c153e2.tar.gz",
       "url": "https://codeload.github.com/ggml-org/whisper.cpp/tar.gz/aba02defd6bb6ff5de63721c21e3456645c153e2",
       "status": "RETAINED",
-      "filename": "50-whisper--aba02defd6bb6ff5de63721c21e3456645c153e2.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "LICENSE",
@@ -2314,9 +2669,10 @@
       "repo": "https://code.videolan.org/videolan/x264.git",
       "revision": "0480cb05fa188d37ae87e8f4fd8f1aea3711f7ee",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-x264--0480cb05fa188d37ae87e8f4fd8f1aea3711f7ee.tar.gz",
       "url": "https://code.videolan.org/videolan/x264/-/archive/0480cb05fa188d37ae87e8f4fd8f1aea3711f7ee/x264-0480cb05fa188d37ae87e8f4fd8f1aea3711f7ee.tar.gz",
       "status": "RETAINED",
-      "filename": "50-x264--0480cb05fa188d37ae87e8f4fd8f1aea3711f7ee.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -2331,9 +2687,10 @@
       "repo": "https://github.com/Multicorewareinc/x265.git",
       "revision": "217c4f9b88a06513afb7ea44d55b832d6618f80c",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-x265--217c4f9b88a06513afb7ea44d55b832d6618f80c.tar.gz",
       "url": "https://codeload.github.com/Multicorewareinc/x265/tar.gz/217c4f9b88a06513afb7ea44d55b832d6618f80c",
       "status": "RETAINED",
-      "filename": "50-x265--217c4f9b88a06513afb7ea44d55b832d6618f80c.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -2348,9 +2705,10 @@
       "repo": "https://github.com/pkuvcl/xavs2.git",
       "revision": "eae1e8b9d12468059bdd7dee893508e470fa83d8",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-xavs2--eae1e8b9d12468059bdd7dee893508e470fa83d8.tar.gz",
       "url": "https://codeload.github.com/pkuvcl/xavs2/tar.gz/eae1e8b9d12468059bdd7dee893508e470fa83d8",
       "status": "RETAINED",
-      "filename": "50-xavs2--eae1e8b9d12468059bdd7dee893508e470fa83d8.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -2363,19 +2721,23 @@
     {
       "recipe_file": "scripts.d/50-xvid.sh",
       "repo": "https://svn.xvid.org/trunk/xvidcore",
-      "revision": "",
+      "revision": "2204",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-xvid--2204.tar.gz",
       "status": "BLOCKED",
-      "reason": "Mutable/non-commit source ref requires explicit resolution"
+      "source_method": "svn-export",
+      "url": "https://svn.xvid.org/trunk/xvidcore",
+      "reason": "Exact SVN revision 2204; isolated SVN 1.14.5 returned E170013/E215004: repository authentication failed (no credentials supplied). No different revision substituted."
     },
     {
       "recipe_file": "scripts.d/50-zimg.sh",
       "repo": "https://github.com/sekrit-twc/zimg.git",
       "revision": "67e0603271c080e22c8429856dd4a8a56587e61e",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-zimg--67e0603271c080e22c8429856dd4a8a56587e61e.tar.gz",
       "url": "https://codeload.github.com/sekrit-twc/zimg/tar.gz/67e0603271c080e22c8429856dd4a8a56587e61e",
       "status": "RETAINED",
-      "filename": "50-zimg--67e0603271c080e22c8429856dd4a8a56587e61e.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING",
@@ -2390,9 +2752,10 @@
       "repo": "https://github.com/zapping-vbi/zvbi",
       "revision": "34bb6f660c5c1bacd4a66cc7b22311e4ca3c1ab5",
       "source_role": "recipe input superset; actual linked inclusion not established",
+      "filename": "50-zvbi--34bb6f660c5c1bacd4a66cc7b22311e4ca3c1ab5.tar.gz",
       "url": "https://codeload.github.com/zapping-vbi/zvbi/tar.gz/34bb6f660c5c1bacd4a66cc7b22311e4ca3c1ab5",
       "status": "RETAINED",
-      "filename": "50-zvbi--34bb6f660c5c1bacd4a66cc7b22311e4ca3c1ab5.tar.gz",
+      "source_method": "archive",
       "license_files": [
         {
           "file": "COPYING.md",
@@ -2406,9 +2769,15 @@
   "binary_correspondence_complete": false,
   "controlled_build_complete": false,
   "remaining_build_requirements": [
-    "pin toolchain/base images and all non-git/generated/vendored inputs",
+    "use observed pinned toolchain images from ffmpeg-provider-build-evidence.json; retain all generated/vendored inputs",
     "resolve blocked source inputs",
     "build and validate natively on Windows and Linux",
     "retain actual build logs/configuration/patches/notices and relinking material"
-  ]
+  ],
+  "acquisition_environment": {
+    "svn_client": "Alpine subversion 1.14.5-r0 in isolated build root; signed APK repository; not bundled into Cactu",
+    "git_export": "exact commit fetched and verified; gitlinks explicitly recorded",
+    "tag_policy": "explicit version tags resolved to commits, preserved by retained lock",
+    "remaining_input": "Xvid r2204 upstream HTTPS SVN authentication failure"
+  }
 }

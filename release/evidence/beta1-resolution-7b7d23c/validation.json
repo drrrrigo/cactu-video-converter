@@ -1,0 +1,43 @@
+{
+  "packaged_source_commit": "7b7d23c9c77afac0933cc1607ab0160cbbc7ec3c",
+  "local_source_followup_tests": {
+    "tests": 169,
+    "passed": 169,
+    "skipped": 0,
+    "seconds": 69.376,
+    "python": "3.14.7",
+    "physical_device": "AMD RX 7700 XT",
+    "backend": "VAAPI",
+    "hardware_opt_in": true,
+    "scope": "source tests, not manual packaged desktop acceptance",
+    "log_sha256": "8f4077d6d9615aa038a902737c55698a3d37055cfdfaf06f8aaf7f10cf9d475a"
+  },
+  "native_source_ci": {
+    "run": 44844968490,
+    "linux_job": 136662311240,
+    "windows_job": 136662311778,
+    "discovered_per_platform": 166,
+    "passed_per_platform": 163,
+    "physical_gpu_skips_per_platform": 3,
+    "conclusion": "success"
+  },
+  "native_package_audit": {
+    "run": 44845101385,
+    "windows_job": 136662749235,
+    "linux_job": 136662749558,
+    "build_and_frozen_smoke": "success on both",
+    "distribution_eligibility": "failure on both (expected while blocked)",
+    "executable_upload": "skipped on both",
+    "overall": "failure, not a release success"
+  },
+  "other_local_checks": {
+    "ruff": "pass",
+    "branding": "pass",
+    "compileall": "pass",
+    "source_history_signature_findings": 0,
+    "signature_scan_scope": "bounded, not a security certification"
+  },
+  "technical_license_audit_complete": false,
+  "license_audit_approved": false,
+  "publication_approved": false
+}

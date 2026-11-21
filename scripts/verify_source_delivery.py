@@ -10,22 +10,42 @@ def verify(root=ROOT):
     cache = root / "release/evidence/local/sources"
     qt = read_json(root / "release/qt-source-lock.json")
     ffmpeg = read_json(root / "release/ffmpeg-source-lock.json")
-    entries = list(qt["archives"]) + [e for e in ffmpeg["inputs"] if e["status"] == "RETAINED"]
+    ubuntu = read_json(root / "release/ubuntu-source-lock.json")
+    runtime = read_json(root / "release/appimage-controlled-lock.json")
+    entries = (
+        list(qt["archives"])
+        + [e for e in ffmpeg["inputs"] if e["status"] == "RETAINED"]
+        + runtime["build_source_archives"]
+        + runtime["static_upstream_sources"]
+    )
     verified = []
     for entry in entries:
         name = entry["filename"]
         if Path(name).name != name or sha256(cache / name) != entry["sha256"]:
             raise RuntimeError("Retained source missing or changed: " + name)
         verified.append({"filename": name, "sha256": entry["sha256"], "url": entry["url"]})
+    ubuntu_verified = []
+    for package in ubuntu["source_packages"]:
+        if package["status"] != "RETAINED":
+            raise RuntimeError("Ubuntu source package not retained: " + package["source_package"])
+        folder = root / "release/evidence/local/ubuntu-sources" / package["cache_subdirectory"]
+        for entry in [package["dsc"], *package["parts"]]:
+            name = entry["filename"]
+            if Path(name).name != name or sha256(folder / name) != entry["sha256"]:
+                raise RuntimeError("Ubuntu source part missing or changed: " + name)
+        ubuntu_verified.append(
+            {"source_package": package["source_package"], "source_version": package["source_version"]}
+        )
     return {
         "retained_verified": verified,
+        "ubuntu_source_packages_verified": ubuntu_verified,
         "blocked_inputs": [e for e in ffmpeg["inputs"] if e["status"] != "RETAINED"],
         "complete_corresponding_source": False,
         "remaining": ffmpeg["remaining_build_requirements"]
         + [
             "Qt wheel build/third-party correspondence",
-            "native OS source packages/patches",
-            "complete static runtime source/relinking review",
+            "per-file native library terms and replacement assessment",
+            "final static runtime source/relinking license review (material retained and relink tested)",
             "recipient-accessible maintained source delivery",
         ],
         "delivery_strategy": "approved release source asset plus immutable source-index/hash manifest; no daily URLs as sole retention",

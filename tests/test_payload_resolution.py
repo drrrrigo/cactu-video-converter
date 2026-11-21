@@ -3,6 +3,8 @@
 import sys
 import tempfile
 import json
+import io
+import tarfile
 import unittest
 from pathlib import Path
 
@@ -15,11 +17,63 @@ from qt_payload_policy import (
 from payload_inventory import resolve_copy_origin
 from payload_diff import compare_payloads
 from qt_file_mapping import qt_file_mapping
-from retain_ffmpeg_sources import archive_url
+from retain_ffmpeg_sources import acquire, archive_url, recipe_inputs
 from build_controlled_runtime import build as build_runtime
 
 
 class PayloadResolutionTests(unittest.TestCase):
+    def test_retained_version_tag_keeps_immutable_resolution(self):
+        with tempfile.TemporaryDirectory() as folder:
+            cache = Path(folder)
+            entry = {
+                "filename": "tag.tar.gz",
+                "repo": "https://github.com/example/project.git",
+                "revision": "v1.2.3",
+                "recipe_file": "example.sh",
+                "status": "NOT_RETAINED",
+            }
+            (cache / entry["filename"]).write_bytes(b"retained")
+            import hashlib
+
+            retained = dict(
+                entry,
+                revision="a" * 40,
+                declared_revision="v1.2.3",
+                status="RETAINED",
+                sha256=hashlib.sha256(b"retained").hexdigest(),
+            )
+            self.assertEqual(acquire(entry, cache, retained), retained)
+
+    def test_changed_cached_source_is_not_silently_relocked(self):
+        with tempfile.TemporaryDirectory() as folder:
+            cache = Path(folder)
+            entry = {
+                "filename": "source.tar.gz",
+                "repo": "https://github.com/example/project.git",
+                "revision": "a" * 40,
+                "recipe_file": "example.sh",
+                "status": "NOT_RETAINED",
+            }
+            (cache / entry["filename"]).write_bytes(b"changed")
+            retained = dict(entry, status="RETAINED", sha256="b" * 64)
+            result = acquire(entry, cache, retained)
+            self.assertEqual(result["status"], "BLOCKED")
+            self.assertIn("refusing to relock", result["reason"])
+
+    def test_recipe_recognizes_svn_pin_instead_of_treating_it_as_missing(self):
+        with tempfile.TemporaryDirectory() as folder:
+            file = Path(folder) / "recipe.tar"
+            body = (
+                b'SCRIPT_REPO="https://svn.code.sf.net/p/lame/svn/trunk/lame"\nSCRIPT_REV="7153"\n'
+            )
+            with tarfile.open(file, "w") as archive:
+                info = tarfile.TarInfo("recipe/scripts.d/lame.sh")
+                info.size = len(body)
+                archive.addfile(info, io.BytesIO(body))
+            entry = recipe_inputs(file)[0]
+            self.assertEqual(entry["revision"], "7153")
+            self.assertEqual(entry["source_method"], "svn-export")
+
     def test_windows_os_contracts_are_removed_but_vc_runtime_stays(self):
         entries = [
             (name, "supplier/" + name, "BINARY")

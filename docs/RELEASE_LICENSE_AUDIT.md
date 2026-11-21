@@ -1,101 +1,57 @@
 # Release license audit — v0.1.0-beta.1
 
-## Current audit — 2026-11-20
+## Current blocker resolution — 2026-11-20
 
-**BLOCKED. No final RC1 or redistribution approval is declared.** The authoritative
-status is [BETA1_RELEASE_CHECKLIST](BETA1_RELEASE_CHECKLIST.md). Historical evidence
-below describes earlier candidates and must not be mistaken for the current inputs.
+**BLOCKED before RC1.** No legal/publication approval is declared. The full current
+facts, exact obstacles and remediation matrix are in
+[BETA1_BLOCKER_RESOLUTION](BETA1_BLOCKER_RESOLUTION.md); authoritative gates are in
+[BETA1_RELEASE_CHECKLIST](BETA1_RELEASE_CHECKLIST.md).
 
-### Facts observed and technical evidence
+The current actual native payloads use clean source **7b7d23c**, audit run
+[44845101385](https://github.com/drrrrigo/cactu-video-converter/actions/runs/44845101385).
+Both native builds and frozen smoke passed; distribution eligibility intentionally
+failed and binary upload was skipped. JSON/checksum reports are retained in
+release/evidence/beta1-resolution-7b7d23c, including original report hashes and
+separate installed/portable/AppImage per-file source-obligation joins. Baseline
+eabc092 reports remain unchanged and are historical comparisons.
 
-| Component / exact file | Fact observed | Technical evidence / license obligation | Unresolved question / resolution |
-| --- | --- | --- | --- |
-| Cactu original source | Owner chose GPL-3.0-or-later | LICENSE, pyproject.toml, repository history | No missing owner license choice |
-| CPython runtime | Canonical release remains 3.14.7; mismatches and dirty trees are now rejected before packaging | Official source SHA-256 `3b48dac8fb59f62eaa67ac83c1eb12bda1b7a08406dd286e252c11a66be27f81`; exact PSF text; pinned CI-family Linux interpreter hash in toolchain.json | Final payload must show 3.14.7 and account for its native dependencies; old 3.14.8 image is superseded |
-| FFmpeg / FFprobe executables, both platforms | Previous Nov 1 release is now HTTP 404; its archives remain only in the local ignored cache | User must be able to rebuild from maintained inputs. Dated daily releases have short retention | Preserve approved inputs/source at a maintained location before RC1; do not rely on an expiring URL |
-| Retained Oct 31 FFmpeg n9.0.2-39 | Investigated, then rejected for RC use | Compared with prior n9.0.2-42: excludes Ogg allocation-error handling and chained Vorbis parsing fixes; [upstream comparison](https://github.com/FFmpeg/FFmpeg/compare/7adfbe40dc...d7643a0fe3) | A retained older build must not silently regress fixes; it is audit evidence only |
-| Current dated FFmpeg n9.0.2-61-gd59078794d-20261120 | Preparation/audit input remains in the 9.0.2 family, with exact Windows/Linux archives, hashes, configuration, recipe and FFmpeg revision in the manifest | GPL/version3, libx264/libass, no nonfree; repeat native -version/-buildconf/-L and capability validation for these exact bytes | Not a final selected/approved RC. Full linked-library source/notice closure and durable input retention remain incomplete |
-| Statically linked libx264/libass and other enabled FFmpeg libraries | A recipe revision lists source declarations; it does not ship or prove the entire matching source set | release/source-evidence.json retains exact recipe/FFmpeg source archives and hashes; inspect all enabled libraries and patches | Need complete per-library sources/notices and correspondence to binaries, including toolchain/runtime code. Recipe base images use floating tags; source declarations alone do not close this |
-| PySide6 / Essentials / Addons / Shiboken 6.11.2 | Existing wheel versions remain pinned; only actual packaged modules are inventoried | Eight exact source-license texts retained at commit `24627cd36e1593adf22eb1f2950e4248e7bcc1ec` | Proposed GPL-3.0 option for eligible binding/Qt modules requires review of each actual module and included third-party terms; no blanket whole-Qt approval |
-| Qt native libraries and platform/image/input plugins | Native payload walker records actual files/ hashes, origin wheel, embedded Python modules and dynamic dependencies | Actual artifact reports replace the former development-environment-only list | Need module-specific notices, exact sources and LGPL/GPL assessment. Each unresolved file stays BLOCKED; a general GPL text is insufficient |
-| Linux libraries copied from build OS | Per-file source package/version and copyright hash are queried where available | Need exact distribution source packages/patches, packaged notices and appropriate LGPL replacement/relinking information | Unidentified or uncopied notices/source packages prevent closure; do not infer approval from an OS package name |
-| Windows DLLs | Actual installed and extracted portable files are enumerated separately, including PE import dependencies | Need origin/version/terms for Python, Qt, Microsoft runtime and other DLLs | Resolve native reports individually; no arbitrary developer DLL is approved by default |
-| psutil 7.2.2 | BSD-3-Clause notice is collected from the exact installed wheel | Exact wheel/source hashes recorded in dependency-provenance.json; actual shipped native and Python modules are inventoried | Verify final packaged notice and module mapping |
-| PyInstaller 6.16.0 | Compiler is build-only; bootloader/runtime hooks are embedded | Exact COPYING with bootloader exception retained under licenses/packaging-runtimes; actual executable/PYZ inspection identifies embedded modules | Do not describe the complete compiler, altgraph or test packages as shipped runtime dependencies merely because installed in the build environment |
-| appimagetool 1.9.1 | Hash-pinned build-only tool; filesystem output embeds a separately pinned runtime | Tool input and runtime/stub roles recorded separately; license/source review of the tool remains required | Build-tool licensing does not establish embedded runtime compliance |
-| AppImage runtime `runtime-x86_64`, SHA-256 `617aa77314d57c8b8e4fae9c3f0b35af7b30d5529cb69e98f64f92510ed98a46` | Source commit `fedfad51acc2860b2916a1eef32ba4a500ff31ef`; root MIT text explicitly lists statically linked libraries | Source retained; Makefile links squashfuse, zstd, zlib, fuse3 and mimalloc. Script pins fuse 3.15.0 and squashfuse 0.5.2, including a libfuse patch | Need the complete static dependency notices/source/relinking material. Alpine package-derived inputs are not fully pinned by the root MIT text; libfuse LGPL obligations survive |
-| Inno Setup 7.1.1 generated Setup/uninstaller | Exact source commit `2527da77ff7983514f535d19391a748c5d898336` and license retained | Root terms permit use/redistribution subject to retained copyrights/addresses and other component exceptions; inspect exact installed stub/runtime | Need included compression/other third-party terms and final stub inventory. Root license alone is not approval for every component |
+| Item | Resolved technical evidence | Still open |
+| --- | --- | --- |
+| Cactu source | Owner chose GPL-3.0-or-later; LICENSE and SPDX metadata | No source-license choice pending |
+| Dependency surface | 58 Windows native paths and 18 Ubuntu native paths removed; narrow unused Qt plugin exclusions, Windows Schannel and OS UCRT/API-set boundary verified by native smoke | No blanket exclusion of required libraries; libmvec remains an actual FFmpeg/FFprobe dependency |
+| Native copying origins | 47 Windows / 101 Ubuntu unknown origins reduced to zero; actual supplier/OS/wheel version, SHA-256, PE versions/flags and component notices mapped | Known copying distribution does not establish upstream provenance, complete source or redistribution rights |
+| Qt 6.11.2 | Exact qtbase/qtsvg/qtwayland/PySide source archives, module mapping and 196 legal/attribution files retained | Wheel build configuration and incorporated third-party correspondence, including ICU 73; eligible GPL/LGPL assessment and exact notice scope |
+| Ubuntu libraries | All 64 exact source packages, original archives/Debian patches, notices and applicable common license texts retained; source parts match .dsc SHA-256 and size | PGP signatures not independently verified; file-specific conditions, replacement assessment and maintained recipient delivery |
+| Windows CPython / native dependencies | Python 3.14.7 source, wheel/interpreter supplier and PE versions recorded; duplicate Qt OpenSSL pair removed, Python SSL retained | Native compression/SSL library source/build/notice mapping, beyond the PSF core text |
+| MSVC runtime | Actual supplier versions 14.44.35211.0 and 14.51.36247.0 retained; compiler MSC v.1944; no actual PE prerelease resource flags | Exact supplier REDIST/terms and qualifying redistribution rights must be reviewed; do not invent owner Visual Studio licensing |
+| FFmpeg n9.0.2-61 | Exact core/recipe/binary/configuration retained; GPL/version3/no-nonfree and required tables pass; 132/133 recipe input sources retained; observed immutable provider OCI digests recorded | Xvid SVN r2204 server authentication failure; complete linked/generated/vendor/toolchain source/patch/notices correspondence and durable binary/source delivery |
+| AppImage runtime | Opaque stub replaced with controlled offline fedfad51-cactu1; rootfs/99 APK hashes, static source/patches/link map/objects retained; two builds and separate relink reproduce dcf5f5b0…; component TAR has 131 verified members | Final individual component conditions/source-delivery review and maintained recipient source assets. MIT runtime text does not cover every static library |
+| Inno 7.1.1 | Exact source/SBOM, Pascal Script licence and required acknowledgement, LZMA SDK declaration and old decoder exception retained | Map actual Setup/uninstaller linked objects to component terms; optional SBOM/compiler components are not all shipped |
+| Recipient delivery | Local source indexes/hash verification and a tested runtime component source/relink TAR exist; dynamic replacement instructions in licenses/NATIVE_LIBRARY_REPLACEMENT.md | Local cache is not a public offer; complete source set/maintained assets and publisher source-asset wiring remain incomplete |
 
-The facts above are **technical evidence, not legal certainty**. Licenses are not
-changed merely because Cactu uses GPL. Public binary uploads remain behind the
-existing false redistribution flags and now also require complete exact-payload
-evidence at publication. Owner approval cannot override missing technical evidence.
+The GPL option for eligible Qt modules is recorded as a proposed source-review
+choice, not whole-Qt legal clearance. Independent third-party terms survive it.
+Dynamic Qt/native libraries remain separate replaceable files without an added
+Cactu signature check. Static libfuse/runtime obligations are assessed separately;
+replacement of a Qt library does not satisfy those obligations.
 
-### Source delivery and LGPL assessment
+Official references supporting the packaging boundary and remaining conditions:
+[Qt SSL backends](https://doc.qt.io/qt-6.11/ssl.html),
+[Windows UCRT deployment](https://learn.microsoft.com/en-us/cpp/windows/universal-crt-deployment?view=msvc-170),
+[Microsoft redistribution conditions](https://learn.microsoft.com/en-us/cpp/windows/redistributing-visual-cpp-files),
+[Microsoft REDIST list](https://learn.microsoft.com/en-us/visualstudio/releases/2026/redistribution),
+[FFmpeg legal guidance](https://ffmpeg.org/legal.html).
+These are evidence for review, not a legal opinion or certification.
 
-Recipient source instructions are **not complete**, so no valid blanket source offer
-is asserted. `release/source-evidence.json` lists retained immutable archives and
-their hashes; local archives are under ignored release/evidence/local/sources.
-Those archives cover only the projects explicitly named there, not every linked
-library. Full corresponding sources/patches/build information must be retained at
-maintained, recipient-accessible locations alongside an approved release.
+The per-file reports distinguish missing provenance, notices, corresponding source,
+build/patch information, replacement/relink material, removed unused components
+and conditional grants. No known driver-file pattern or missing declared notice
+path was found; that bounded check does not establish complete notice scope.
 
-Qt libraries in ONEDIR/AppImage are separate dynamic files. The packaging does not
-deliberately prevent local replacement, and no application signature enforcement
-is added. This observation alone does not establish LGPL compliance. If relying
-on LGPL for a module, preserve its notices, corresponding modified/unmodified
-sources, reverse-engineering/replacement rights and required installation/relinking
-information. Other Qt modules may require the GPL option. Statically linked
-libfuse in the AppImage runtime needs separate analysis; replacing a Qt DLL does
-not satisfy that obligation. No runtime/kernel/GPU driver is licensed by analogy.
-
-### Exact native payload findings and stop condition
-
-Audited source is `eabc0920b4d091cba3b6670b263182babca7e539`; native run
-[44810167815](https://github.com/drrrrigo/cactu-video-converter/actions/runs/44810167815)
-passed both build/smoke steps and failed only at the intended distribution gate.
-Metadata-only evidence is retained in
-`release/evidence/beta1-audit-eabc092/`, including separate installed/portable/
-AppImage inventories, actual FFmpeg output and build-generated hashes. No CI
-application binary was uploaded. These are audit outputs, not a final RC inventory.
-
-The actual Ubuntu image contains 392 files (244 native), 382 embedded Python
-modules and 20 component groups requiring review. Windows installed/portable
-contain 272/270 files, 123/122 native files, 380 embedded modules each and 7/6 open
-groups. There are 101 unresolved file origins in Ubuntu and 47 in each Windows
-payload. Known origin is not the same as reviewed terms/source delivery. Exact
-lists and hashes are in the retained reports; do not extrapolate from group counts.
-
-| Exact file/component in audit output | License / evidence observed | Reason blocked | Possible resolution |
-| --- | --- | --- | --- |
-| `usr/bin/_internal/ffmpeg/ffmpeg`, `ffprobe`; Windows `_internal/ffmpeg/ffmpeg.exe`, `ffprobe.exe` | Actual GPL-3.0-or-later output/configuration with version3, x264/libass, no nonfree; individual static dependencies retain their terms | Core/recipe archives exist, complete matching linked-library sources/patches/notices and durable delivery do not | Retain/host the complete matching source/build set or use a controlled fully documented build; preserve mandatory capabilities |
-| AppImage outer ELF prefix, pinned runtime input SHA `617aa77314d57c8b8e4fae9c3f0b35af7b30d5529cb69e98f64f92510ed98a46` | MIT runtime plus libfuse LGPL-2.1 material, squashfuse and other static dependencies | musl/zstd/zlib/mimalloc exact Alpine-derived correspondence, complete notices and applicable static relinking material unresolved | Reconstruct exact static inputs/source/objects/patches and review delivery, or replace runtime only after compatibility/compliance validation |
-| `usr/bin/_internal/PySide6/Qt/lib/libQt6VirtualKeyboard.so.6`, `libQt6Pdf.so.6`, other actual Qt modules/plugins; Windows `_internal/PySide6/Qt6VirtualKeyboard.dll`, `Qt6Pdf.dll` | Qt 6.11.2 source/license texts retained; module terms and third-party terms apply individually | Proposed GPL option not yet established for the complete actual module/third-party subset | Map each actual library/plugin to exact module sources/notices and chosen permitted license option; preserve dynamic replacement information where LGPL is relied on |
-| `usr/bin/_internal/libmvec.so.1` | Build-host glibc source package 2.35-0ubuntu3.18; glibc LGPL terms require file-specific review | Bundled even though libc/loader remain host dependencies; exact notice/source and necessity not closed | Retain distribution source/patches/notices and document replacement, or deliberately exclude only after dependency/functional validation |
-| `usr/bin/_internal/libssl.so.3`, `libcrypto.so.3`; Windows `_internal/libssl-3-x64.dll`, `libcrypto-3-x64.dll` and additional Python-provided OpenSSL pair | Actual files/imports/hashes recorded; exact OpenSSL build/version-specific terms not established by a Python project label | Per-file versions/provenance/notices incomplete; CPython PSF notice alone is not an OpenSSL review | Resolve exact Python/runner-provided origins, applicable OpenSSL source/license text and packaged notices |
-| Windows `_internal/ucrtbase.dll`, `_internal/api-ms-win-crt-*.dll`, `_internal/PySide6/MSVCP140*.dll` | Actual Microsoft runtime files recorded; applicable Microsoft redistribution terms need exact input/version attribution | Wheel/OS origin and redistribution conditions not completely evidenced | Match files to approved runtime distribution/EULA/notice evidence; do not infer rights from an import name |
-| Setup executable PE prefix and installed `unins000.exe` | Inno Setup 7.1.1 root license/source retained, additional component terms apply | Compression and other installer runtime/stub terms not completely audited | Retain exact additional terms/notices/source where required and map them to generated installer/uninstaller components |
-
-No known graphics/kernel driver-file patterns were found in the actual outputs.
-That scan is supporting evidence only, not blanket approval for native libraries.
-Full packaged Cactu/PSF/PyInstaller/psutil/retained Qt text presence is verified,
-but missing component-specific notices prevent calling the license payload complete.
-
-**STOP before RC1 under the request's dependency rule.** These gaps are explicit
-technical evidence deficiencies, not a claim that the named dependencies can never
-be redistributed. Do not ask the owner to bless missing source/notices. Close them,
-build an exact reviewed RC, then request manual results and final human approval.
-
-### Final owner approval
-
-- Technical dependency/source closure: **BLOCKED**.
-- Human third-party redistribution approval: **NOT GIVEN**.
-- Windows/Linux exact-artifact manual tests: **PENDING MANUAL OWNER TEST**.
-- Final owner publication approval: **NOT GIVEN**.
-
-If the source correspondence cannot be established for the selected provider,
-stop RC1 and use the contingency in [FFMPEG_SOURCE_BUILD_STRATEGY](FFMPEG_SOURCE_BUILD_STRATEGY.md).
-Do not flip any approval flag to compensate for missing evidence.
+**Decision:** do not start RC1 promotion. Continue the exact remediation matrix,
+then require separate owner license review, manual Windows/Linux exact-artifact
+results and publication approval. All three global approvals remain false. No
+public beta tag/release/binary/source-bundle upload occurred.
 
 ## Historical audit — 2026-11-01 (superseded inputs)
 

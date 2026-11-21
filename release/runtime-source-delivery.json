@@ -1,0 +1,26 @@
+{
+  "filename": "Cactu-AppImage-fedfad51-cactu1-source-and-relink.tar",
+  "sha256": "4760a8477193572c103daaa76a50258f0d0cf6fcde6d7f16e78615f39a7be459",
+  "size": 270878720,
+  "source_and_relink_files": 131,
+  "scope": "controlled AppImage runtime source/relink component only",
+  "publication_approved": false,
+  "manifest_roundtrip_verified": true,
+  "manifest_files_verified": 131,
+  "recipe_source_commit": "7b7d23c9c77afac0933cc1607ab0160cbbc7ec3c",
+  "relink_test": {
+    "expected_sha256": "dcf5f5b07d5679e37c5a2decff55a65fc2962c565fdaacbf88eaf2bd4ad61ac4",
+    "relinked_sha256": "dcf5f5b07d5679e37c5a2decff55a65fc2962c565fdaacbf88eaf2bd4ad61ac4",
+    "identical": true,
+    "network": "disabled",
+    "used_retained_runtime_object_and_static_archives": true
+  },
+  "offline_repeat": {
+    "expected_runtime_sha256": "dcf5f5b07d5679e37c5a2decff55a65fc2962c565fdaacbf88eaf2bd4ad61ac4",
+    "repeated_runtime_sha256": "dcf5f5b07d5679e37c5a2decff55a65fc2962c565fdaacbf88eaf2bd4ad61ac4",
+    "identical": true,
+    "network": "disabled during compile"
+  },
+  "public_location": null,
+  "complete_cactu_source_offer": false
+}

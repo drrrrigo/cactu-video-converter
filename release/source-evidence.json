@@ -1951,5 +1951,18 @@
     "build_id": "n9.0.2-39-g7adfbe40dc-20261031",
     "reason": "Older than prior input; excludes Ogg allocation-error and chained Vorbis parsing fixes. Not selected for RC.",
     "compare_url": "https://github.com/FFmpeg/FFmpeg/compare/7adfbe40dc...d7643a0fe3"
+  },
+  "blocker_resolution": {
+    "packaged_source_commit": "7b7d23c9c77afac0933cc1607ab0160cbbc7ec3c",
+    "report": "docs/BETA1_BLOCKER_RESOLUTION.md",
+    "native_evidence": "release/evidence/beta1-resolution-7b7d23c/receipt.json",
+    "qt_source_lock": "release/qt-source-lock.json",
+    "ubuntu_source_lock": "release/ubuntu-source-lock.json",
+    "ffmpeg_source_lock": "release/ffmpeg-source-lock.json",
+    "ffmpeg_provider_images": "release/ffmpeg-provider-build-evidence.json",
+    "runtime_source_relink_lock": "release/appimage-controlled-lock.json",
+    "runtime_local_delivery_receipt": "release/runtime-source-delivery.json",
+    "complete_corresponding_source": false,
+    "public_source_delivery": false
   }
 }

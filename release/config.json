@@ -5,7 +5,7 @@
   "license_audit_approved": false,
   "security_audit_approved": true,
   "manual_candidate_evidence": null,
-  "notes": "2026-11-20 preparation: no publication authorization; technical dependency/source closure blocked, exact-artifact manual tests pending. Current source/history signature scans reported zero findings locally and in native CI; this is a bounded scan, not a security certification.",
+  "notes": "2026-11-20 blocker resolution: reduced native payload; known copying origins, exact source retention and controlled AppImage relinking verified. Complete linked source/build/notice/grant and maintained recipient delivery remain blocked. No RC1/publication. Bounded source/history scans are not security certification.",
   "technical_license_audit_complete": false,
   "publication_approval_source": "BETA_OWNER_APPROVAL in the protected public-beta environment; bound to exact source and artifact hashes, never auto-approved"
 }

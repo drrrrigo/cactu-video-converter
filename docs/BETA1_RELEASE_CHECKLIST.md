@@ -1,170 +1,81 @@
 # Beta.1 authoritative release checklist
 
-Reviewed: **2026-11-20**. Target: **v0.1.0-beta.1**. Preparation only: no public tag,
-release or binary upload is authorized. States: **PASS**, **FAIL**, **BLOCKED**,
-**PENDING MANUAL**, **NOT APPLICABLE**. PASS requires linked or retained evidence.
+Reviewed **2026-11-20**. Target v0.1.0-beta.1. Preparation/audit only.
+**BLOCKED before RC1; not ready for owner publication approval.**
 
-## Current decision
+## Source and validation
 
-**BLOCKED — not RC READY and not ready for owner publication approval.**
-Audited application/build-tooling source is
-`eabc0920b4d091cba3b6670b263182babca7e539`, an audit commit, not RC1.
-The following documentation/evidence receipt commit triggers the same full source
-CI; its identity is its containing Git commit. No circular self-hash is invented.
-Per the request, stop before RC1 while exact source/license closure is incomplete.
-No public beta tag, release or binary upload was made.
-
-**Canonical release Python: 3.14.7.** Keep the existing CI/toolchain pin. The old
-local 3.14.8 candidate is preserved under ignored
-`dist/superseded-python3.14.8-2026-11-01/` and superseded. Both native packages and
-the rebuilt local audit image report 3.14.7 inside the frozen application. Packaging
-rejects other patches before building.
-The developer's installed 3.14.10 is not a release runtime.
-
-## Repository and source
-
-| Check | State | Evidence / remaining action |
+| Check | State | Exact evidence / remaining action |
 | --- | --- | --- |
-| Correct public repository | PASS | GitHub API: drrrrigo/cactu-video-converter, public, main |
-| Clean inspected baseline | PASS | Clean committed eabc092 in all build receipts; workspace source synchronized with publishing clone |
-| Cactu GPL-3.0-or-later | PASS | Owner decision; LICENSE and pyproject.toml |
-| Current source/history secrets scan | PASS | audit_source.py --history: zero findings locally and in both native CI jobs; signature scanning does not prove universal absence |
-| No private files/document labels | PASS | Retained reports contain package-relative paths, public source URLs, versions and hashes; no executable payload/media/credentials |
-| Release freeze | PASS | Release tooling/dependencies/audit/docs only; application change exposes actual Python version in automated smoke evidence |
-| Public beta tag absent | PASS | Remote exact-tag lookup returned no ref on 2026-11-20 |
-| Public beta release absent | PASS | Repository releases API returned [] on 2026-11-20 |
+| Repository and original-source license | PASS | drrrrigo/cactu-video-converter; owner chose GPL-3.0-or-later |
+| Native audit source | PASS | Clean 7b7d23c9c77afac0933cc1607ab0160cbbc7ec3c; no claim that a later evidence/docs commit produced these artifacts |
+| Source CI on packaged source | PASS | Run 44844968490, Windows/Linux: 166 discovered, 163 pass + 3 optional physical-GPU skips each |
+| Final local source suite | PASS | 169 tests, 69.376 s, CPython 3.14.7, physical RX 7700 XT VAAPI enabled |
+| Follow-up source/evidence commit CI | See containing commit checks | Full two-platform source workflow runs on push; retain final result separately from native audit source |
+| Hash-locked environment | PASS | release/requirements.lock, toolchain.json; Python 3.14.7 enforced before packaging |
+| Frozen native software/preview/queue smoke | PASS | Audit 44845101385 builds Windows/Linux, installer install/convert/uninstall, portable/AppImage extraction, subtitles, Faststart, preview and two-job loudness queue |
+| Distribution gate | PASS (gate behavior) | Same audit overall FAIL only at Verify distribution eligibility; binary upload skipped |
+| Physical cloud GPU coverage | NOT AVAILABLE | Native CI has no physical NVENC/AMF/QSV hardware; tables/probes are not hardware validation |
+| Final desktop/manual evidence | PENDING MANUAL | Windows 11 installer/portable, Linux RX 7700 XT, second Linux environment/display stack and exact hashes |
 
-## CI and dependency definition
+## Dependency resolution
 
-| Check | State | Evidence / remaining action |
+| Check | State | Exact evidence / remaining action |
 | --- | --- | --- |
-| Windows and Linux historical source CI | PASS | [41351535190](https://github.com/drrrrigo/cactu-video-converter/actions/runs/41351535190), baseline SHA, 148 tests/platform |
-| Current preparation HEAD CI | PASS | [44810167677](https://github.com/drrrrigo/cactu-video-converter/actions/runs/44810167677), eabc092: 157 discovered, 154 pass + 3 optional hardware skips per platform; receipt follow-up also triggers full CI |
-| Historical packaged smoke | PASS | [41350221053](https://github.com/drrrrigo/cactu-video-converter/actions/runs/41350221053); build/smoke passed, distribution gate correctly failed |
-| Exact Python/build/runtime versions | PASS | release/requirements.txt and release/toolchain.json |
-| Wheel/archive hash lock | PASS | 21 exact releases in requirements.lock; --require-hashes --only-binary install passed on Windows/Linux |
-| Dependency source/role provenance | PASS | dependency-provenance.json, component-sources.json, source-evidence.json and actual payload inventories; provenance recording is distinct from complete source delivery |
-| Exact current Python runtime | PASS | All native onedir/portable/AppImage and rebuilt local smoke reports show standard CPython 3.14.7 |
-| Wrong-Python build rejection | PASS | Regression tests reject 3.14.8 and dirty/uncommitted trees before packaging |
+| Actual installed/portable/AppImage inventories | PASS | release/evidence/beta1-resolution-7b7d23c; receipt hashes original report bytes |
+| Unknown native copying origins | PASS | Windows 47→0 each, Ubuntu 101→0; upstream source/license closure is separate |
+| Unused Qt/Windows runtime surface | PASS | 58 Windows native paths removed, 18 Ubuntu native paths removed; narrow hooks, Schannel and OS contracts validated |
+| Required libmvec | PASS (necessity/source retention) | FFmpeg and FFprobe ELF dependencies; glibc 2.35 source/patches/notices retained |
+| Qt module sources and notice acquisition | PASS | Four immutable 6.11.2 archives, 196 legal/attribution files, actual file/module mapping |
+| Qt wheel third-party/build correspondence | BLOCKED | ICU 73 and other exact incorporated dependencies/configuration/terms still need review |
+| Ubuntu exact source packages | PASS (acquisition) | All 64 source packages retained; parts match .dsc SHA-256/size, PGP signatures not separately verified |
+| Ubuntu individual conditions/replacement/delivery | BLOCKED | Per-file obligation reports and licenses/NATIVE_LIBRARY_REPLACEMENT.md; final assessment/delivery remains |
+| Windows Python/native dependency closure | BLOCKED | Supplier/version known; exact SSL/compression sources/build/notices remain |
+| Microsoft runtime redistribution conditions | BLOCKED | Exact 14.44/14.51 files/suppliers known, no prerelease PE flags; exact grant/REDIST and owner rights review required |
+| FFmpeg core/recipe/capabilities | PASS | n9.0.2-61-gd59078794d-20261120; actual GPL/version3, no nonfree, mandatory tables retained per platform |
+| FFmpeg matching complete source graph | BLOCKED | 132/133 top-level inputs retained; Xvid r2204 auth failure plus generated/vendor/toolchain/build/notice correspondence incomplete |
+| FFmpeg toolchain image identities | PASS (observation) | ffmpeg-provider-build-evidence.json records digests actually used; no controlled FFmpeg replacement completed |
+| AppImage controlled runtime/relink engineering | PASS | Offline repeated build and relink reproduce dcf5f5b0…; runtime-source-delivery.json verifies local 131-file component TAR |
+| AppImage final terms/source delivery | BLOCKED | Static components need final review and maintained recipient assets; local TAR is not a complete source offer |
+| Inno additional term acquisition | PASS | Exact SBOM/Pascal Script/LZMA notices and acknowledgement retained |
+| Inno actual generated component scope | BLOCKED | Map Setup/uninstaller incorporated objects to required terms |
+| PyInstaller/psutil source roles and notices | PASS (technical evidence) | Actual embedded modules/native files distinguish runtime from build-only dependencies |
+| Complete notice payload | BLOCKED | Declared notices exist; full individual incorporated-component scope remains under review |
+| Maintained recipient source/binary retention | BLOCKED | No approved immutable public source assets; publisher source-asset integration required |
 
-## FFmpeg
+## Current exact audit outputs — not RC1
 
-| Check | State | Evidence / remaining action |
-| --- | --- | --- |
-| Exact Windows/Linux archive/member hashes | PASS | vendor/ffmpeg/manifest.json; current audit build n9.0.2-61-gd59078794d-20261120 verified in both native jobs |
-| Pinned daily release availability | BLOCKED | Nov 20 inputs fetched successfully; old Nov 1 daily expired. No durable approved Cactu input/source mirror exists |
-| Exact configuration / GPL / no nonfree | PASS | Separate current native runtime-evidence JSON retains actual -version/-buildconf/-L, GPL v3, libx264/libass, no --enable-nonfree |
-| Software/subtitle/audio/hardware capability tables | PASS | Current mandatory tables validated natively; table exposure does not establish physical NVENC/AMF/QSV coverage |
-| Immutable recipe revision | PASS | Manifest records recipe commit; recipe alone is not source closure |
-| FFmpeg revision and patches retained | PASS | Exact FFmpeg core and recipe archives/hashes retained; per-linked-library patch/source closure remains blocked below |
-| All linked dependency corresponding sources | BLOCKED | Per-component source/license inventory and retained source set incomplete |
-| Recipient source retrieval instructions | BLOCKED | Require maintained exact source locations/hashes before approval |
-| Nonfree provider exclusion | PASS | Nonfree configuration rejected; excluded provider remains excluded |
+Run [44845101385](https://github.com/drrrrigo/cactu-video-converter/actions/runs/44845101385)
+uses 7b7d23c. Build/smoke passed, overall distribution check intentionally failed.
+Only JSON/checksum metadata was uploaded. Hosted application binaries were not
+retained as an owner-test RC set. These hashes identify audit outputs only.
 
-## Qt, Python, native libraries and packaging runtimes
-
-| Check | State | Evidence / remaining action |
-| --- | --- | --- |
-| PySide/Essentials/Addons/Shiboken versions | PASS | 6.11.2 pins; inventory actual payload subset |
-| PySide license text provenance | PASS | licenses/qt-pyside-6.11.2/provenance.json, immutable source commit and hashes |
-| Qt module license option / notices / sources | BLOCKED | Actual inventories include Core/Gui/Network/Widgets plus collected Pdf/Qml/Quick/VirtualKeyboard/plugins; exact module/source/third-party review incomplete |
-| LGPL replacement/relinking/install information | BLOCKED | Review dynamic Qt/native libraries and statically linked AppImage runtime dependencies separately |
-| Python exact PSF license text | PASS | licenses/Python-3.14.7.txt; only valid for a 3.14.7 runtime |
-| Python runtime third-party/native closure | BLOCKED | Inspect final packaged runtime and dependent DLL/ELF files |
-| Runtime Python packages / build-only distinction | PASS | Actual PYZ/CArchive/bootstrap/base-library tables used; environment notice inventory explicitly labeled build-context evidence |
-| PyInstaller bootloader/exception | PASS | Exact 6.16.0 COPYING/exception packaged; actual bootstrap/runtime hooks inventoried; compiler is build-only |
-| AppImage tool vs embedded runtime | BLOCKED | appimagetool 1.9.1 vs runtime fedfad51 identified separately, outer ELF prefix hashed; complete static dependency terms/source/relinking material incomplete |
-| Inno compiler vs installed stub/uninstaller | BLOCKED | 7.1.1 source/root license retained; generated Setup prefix and installed uninstaller inventoried; additional component terms incomplete |
-| Actual Windows DLL / Linux ELF origins | BLOCKED | 47 unresolved-origin files in each Windows payload, 101 in native Ubuntu AppImage; additional known origins still require terms/source/notices review |
-| Host drivers not bundled/installed | PASS | All actual inventories report no known driver-file pattern matches; this does not approve unreviewed native libraries |
-
-## Final candidate and release metadata
-
-| Check | State | Evidence / remaining action |
-| --- | --- | --- |
-| Version metadata | PASS | 0.1.0-beta.1 / package 0.1.0b1 / numeric Windows 0.1.0.1 |
-| Final clean RC1 source commit | BLOCKED | No RC1 declared until technical audit gates are satisfied |
-| Final RC1 Windows installer | BLOCKED | Current native audit build/install/convert/uninstall passed; binary upload blocked, no retained approved RC1 |
-| Final RC1 Windows portable ZIP | BLOCKED | Current native audit build/extract/convert passed; binary upload blocked, no retained approved RC1 |
-| Final RC1 Linux AppImage | BLOCKED | Current native/local Python 3.14.7 audit images pass smoke; no final technically approved RC1 |
-| Inventories: installed / portable / AppImage | PASS | Actual separate reports retained in release/evidence/beta1-audit-eabc092; audit-only, not final RC |
-| Generated RC SHA256SUMS | BLOCKED | All three exact final artifacts are required; no invented hashes |
-| Notices and license payload verified | BLOCKED | Must match the actual final inventories |
-| Release notes / known issues / security policy | PASS | Existing drafts/policies; reconcile final state before approval |
-| README download state | PASS | No approved binary download is advertised as available |
-| Windows signing | NOT APPLICABLE | Optional for beta.1; current infrastructure/candidates are unsigned |
-| Additional AppImage signing | NOT APPLICABLE | Optional; SHA-256 remains mandatory |
-| Fail-closed publication workflow | PASS | Current native jobs stopped at distribution eligibility; protected owner environment and exact source/hash external attestation required |
-
-## Manual verification
-
-| Check | State | Evidence / remaining action |
-| --- | --- | --- |
-| Clean Windows 11 installer/portable desktop | PENDING MANUAL | docs/MANUAL_TEST_WINDOWS_BETA1.md; exact RC hashes required |
-| CachyOS / RX 7700 XT packaged desktop | PENDING MANUAL | docs/MANUAL_TEST_LINUX_BETA1.md; source/GPU tests are insufficient |
-| Second Linux environment | PENDING MANUAL | Prefer Ubuntu LTS; explicitly record unavailable environment if necessary |
-| Wayland / X11 attribution | PENDING MANUAL | Record the actual tested display stack; do not claim both by inference |
-| Final manual result/hash attestation | PENDING MANUAL | Tester, date, OS/build, SHA-256 and scenario results required |
-
-## Current audit outputs — not RC1
-
-Current native packaging run:
-[44810167815](https://github.com/drrrrigo/cactu-video-converter/actions/runs/44810167815).
-Both build and smoke steps passed; the overall run failed at the intended technical
-redistribution gate. Do not describe that workflow as a green release. All native
-rows below use clean source `eabc0920b4d091cba3b6670b263182babca7e539`.
-Only JSON/checksum text was uploaded. Windows runner binaries were not retained as
-an owner-test RC set. The local image has a different native library set and is a
-separate audit. Exact build-generated hashes are retained in the reports.
-
-| Audit output | SHA-256 |
+| Output | SHA-256 |
 | --- | --- |
-| Native Windows Setup | `6d34b7b6ea5351659f6e7487875fe034dc8de7a834958316d40bc3a591875c85` |
-| Native Windows Portable | `ef3d970a2fd9fb72931650aa743476ba9146be0c5fc0900029eb0350e2327f82` |
-| Native Ubuntu AppImage | `1b29aa4f44b8012e44cd787e176ca88ba5855785f8c807f530eb792babe54e86` |
-| Local CachyOS AppImage, ignored dist/candidate | `a4ab0be5670ea2df3ae8bd482eeaeef4965bc50f49a5639677d6f0c6f91d53dd` |
+| Ubuntu AppImage | 1d92f9a3759fd652738f88d260cb41b7ad5addeddbc2acfebde058109dfe88a1 |
+| Windows Portable | bebd60df9ed69517287a380a5d81e12c2c2438f113895e3c7c2b4f364c8eee17 |
+| Windows Setup | 715d8b6e2c8c423d2474a67b6572b39aff1bde1b7b9bf565dfbe7f177c93fb36 |
 
-| Actual native payload | Files | Native files | Embedded Python modules | Component groups requiring review |
-| --- | ---: | ---: | ---: | ---: |
-| Installed Windows + outer Setup prefix | 272 | 123 | 380 | 7 |
-| Extracted Windows portable | 270 | 122 | 380 | 6 |
-| Extracted Ubuntu AppImage + outer ELF prefix | 392 | 244 | 382 | 20 |
+Installed/portable/AppImage: 449/447/705 total files, 65/64/226 native files.
+Legal material increases total files while native code decreases. Eight/seven/88
+component groups require review; these are not unidentified-file counts.
+Historical eabc092 outputs remain unchanged under release/evidence/beta1-audit-eabc092.
+Earlier local audit images are separate from hosted 7b7d23c bytes. The 3.14.8
+local image remains explicitly superseded; canonical release Python is 3.14.7.
 
-Group counts are not counts of unresolved files. Outer container prefixes are
-inventoried separately from extracted-file counts. Full per-file hashes/origins,
-actual Qt file lists, runtime evidence and report checksums are retained in
-[the metadata-only audit receipt](../release/evidence/beta1-audit-eabc092/receipt.json).
+## Final gates
 
-Local eabc092 tests with pinned Python/FFmpeg and physical RX 7700 XT:
-**157/157 PASS, zero skips, 61.796 seconds**. CI discovers 157 and skips three
-optional physical hardware tests. These checks do not establish manual desktop
-acceptance. Exact source/hash inputs and SOURCE_DATE_EPOCH improve repeatability;
-bit-identical reproduction across changing hosted images/native libraries remains
-**BLOCKED / unproven**.
+| Gate | State |
+| --- | --- |
+| technical_license_audit_complete | false — exact remaining matrix in BETA1_BLOCKER_RESOLUTION.md |
+| license_audit_approved | false — no human redistribution approval |
+| publication_approved | false — no publication authorization |
+| Final clean RC1 and final three-artifact manual hash attestation | BLOCKED / PENDING MANUAL |
+| Beta tag/release/public binary or source-bundle upload | NOT PERFORMED |
+| Source/history bounded signature scan | Run locally and in source CI; findings must be empty, not a security certification |
+| Windows/AppImage signing | Optional, current audit artifacts unsigned |
 
-The Ubuntu payload includes `usr/bin/_internal/libmvec.so.1` from glibc
-2.35-0ubuntu3.18 even though libc/loader are host dependencies. Its necessity,
-notices and corresponding source need explicit review. Existing packaged license
-texts pass presence checks; complete third-party notice coverage remains BLOCKED.
-
-## Final release approval
-
-- [ ] Third-party redistribution approved by human review.
-- [ ] Windows manual installer and portable tests passed.
-- [ ] Linux manual tests passed; portability limits recorded.
-- [ ] Exact RC artifacts, source commit, inventories and checksums approved.
-- [ ] Owner explicitly authorized publication in a separate instruction.
-
-**PUBLICATION IS BLOCKED WHILE ANY BOX ABOVE IS UNCHECKED.** Preparation must never
-check owner approval, create v0.1.0-beta.1, or create/upload a public binary release.
-Complete the exact dependency/source evidence first, then build RC1 and run both
-manual guides against its exact hashes before requesting publication approval.
-
-## Evidence locations and promotion
-
-Technical audit: [RELEASE_LICENSE_AUDIT.md](RELEASE_LICENSE_AUDIT.md).
-Implementation/results: [IMPLEMENTATION_REPORT.md](IMPLEMENTATION_REPORT.md).
-Promotion procedure: [RELEASE_CHECKLIST.md](RELEASE_CHECKLIST.md).
-Machine gates: release/config.json and vendor/ffmpeg/manifest.json. The checklist
-does not override them. Manual evidence belongs outside the tested source commit
-so recording results cannot silently change the source identity of an approved RC.
+Do not ask the owner to approve missing technical evidence. Resolve the remaining
+source/build/notice/delivery/grant records, build an exact RC set, then obtain manual
+results and separate human license/publication approvals. No blanket source offer
+or legal clearance is asserted. See BETA1_BLOCKER_RESOLUTION.md for remediation.
