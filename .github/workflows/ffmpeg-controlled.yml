@@ -1,10 +1,17 @@
 name: FFmpeg native bootstrap (unapproved)
 on:
   workflow_dispatch:
+    inputs:
+      target:
+        description: Native target to validate
+        type: choice
+        default: both
+        options: [both, windows, linux]
 permissions:
   contents: read
 jobs:
   windows:
+    if: inputs.target != 'linux'
     runs-on: windows-2025
     timeout-minutes: 60
     steps:
@@ -49,7 +56,10 @@ jobs:
           python-version: '3.14.7'
       - name: Expose native candidate dependency directory
         shell: pwsh
-        run: '"${{ steps.msys.outputs.msys2-location }}\ucrt64\bin" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append'
+        run: |
+          @("${{ steps.msys.outputs.msys2-location }}\ucrt64\bin", $env:pythonLocation, "$env:pythonLocation\Scripts") | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
+      - name: Verify canonical native Python wins over MSYS2
+        run: python -c "import os, sys; from pathlib import Path; assert sys.version_info[:3] == (3,14,7); assert Path(sys.executable).resolve() == (Path(os.environ['pythonLocation']) / 'python.exe').resolve()"
       - run: "python -m pip install --require-hashes --only-binary=:all: -r release/requirements.lock"
       - run: python scripts/stage_ffmpeg.py windows-x86_64
       - run: python -m pip install --no-deps --no-build-isolation -e .
@@ -78,6 +88,7 @@ jobs:
             build/controlled-app-snapshot/dist/candidate/*-SHA256SUMS.txt
           if-no-files-found: warn
   linux:
+    if: inputs.target != 'windows'
     runs-on: ubuntu-22.04
     timeout-minutes: 60
     env:

@@ -81,5 +81,55 @@
       "notice_file": "licenses/ffmpeg-controlled/oneVPL/LICENSE",
       "notice_sha256": "bf1cfac2e2792b6e1e995ce103d70796aecaf2ec7e4c5fe5474f7acec7b4a677"
     }
+  ],
+  "header_notices": [
+    {
+      "project": "nv-codec-headers",
+      "source_commit": "f2053071ea93137255b6dcf42e9b4c9e0965a44e",
+      "member": "nv-codec-headers-f2053071ea93137255b6dcf42e9b4c9e0965a44e/include/ffnvcodec/dynlink_cuda.h",
+      "header_sha256": "a544398c3dfd90f583c74a466406b4562290cda0765ec876f9463f41ac3234df",
+      "notice_file": "licenses/ffmpeg-controlled/nv-codec-headers/dynlink_cuda.h.notice.txt",
+      "notice_sha256": "6f0d5ad2609c6fda3e0fb07fa286e7b46c2ea7b87ab12d926ab7a82c69ffe09d"
+    },
+    {
+      "project": "nv-codec-headers",
+      "source_commit": "f2053071ea93137255b6dcf42e9b4c9e0965a44e",
+      "member": "nv-codec-headers-f2053071ea93137255b6dcf42e9b4c9e0965a44e/include/ffnvcodec/dynlink_cuviddec.h",
+      "header_sha256": "0d9f490e8699a2e000904275d9e380e7ee9945e5717b95f920358013153c6377",
+      "notice_file": "licenses/ffmpeg-controlled/nv-codec-headers/dynlink_cuviddec.h.notice.txt",
+      "notice_sha256": "8f115901902ad05ce3a1ba48ae15393a1853ac0a3e7835ebe986cc80e1039b19"
+    },
+    {
+      "project": "nv-codec-headers",
+      "source_commit": "f2053071ea93137255b6dcf42e9b4c9e0965a44e",
+      "member": "nv-codec-headers-f2053071ea93137255b6dcf42e9b4c9e0965a44e/include/ffnvcodec/dynlink_loader.h",
+      "header_sha256": "6dcf1ede1f38e91467fb8c06fa39894b8447f199446d6a4f008b083d7d0db9bf",
+      "notice_file": "licenses/ffmpeg-controlled/nv-codec-headers/dynlink_loader.h.notice.txt",
+      "notice_sha256": "6f0d5ad2609c6fda3e0fb07fa286e7b46c2ea7b87ab12d926ab7a82c69ffe09d"
+    },
+    {
+      "project": "nv-codec-headers",
+      "source_commit": "f2053071ea93137255b6dcf42e9b4c9e0965a44e",
+      "member": "nv-codec-headers-f2053071ea93137255b6dcf42e9b4c9e0965a44e/include/ffnvcodec/dynlink_nvcuvid.h",
+      "header_sha256": "c1290075d5d881e98c8f14dc5a23953a792f56971b172cf84ee0bc7aab6d1aab",
+      "notice_file": "licenses/ffmpeg-controlled/nv-codec-headers/dynlink_nvcuvid.h.notice.txt",
+      "notice_sha256": "8f115901902ad05ce3a1ba48ae15393a1853ac0a3e7835ebe986cc80e1039b19"
+    },
+    {
+      "project": "nv-codec-headers",
+      "source_commit": "f2053071ea93137255b6dcf42e9b4c9e0965a44e",
+      "member": "nv-codec-headers-f2053071ea93137255b6dcf42e9b4c9e0965a44e/include/ffnvcodec/dynlink_nvml.h",
+      "header_sha256": "ac7baf43dadd49f37795e20f677ef9ffd949434938d16c677df43a64527cb54f",
+      "notice_file": "licenses/ffmpeg-controlled/nv-codec-headers/dynlink_nvml.h.notice.txt",
+      "notice_sha256": "c3323ec6cd1a6c7e93b6b7e93840a773cb57da7a1f55fc875fde7708ce3f418f"
+    },
+    {
+      "project": "nv-codec-headers",
+      "source_commit": "f2053071ea93137255b6dcf42e9b4c9e0965a44e",
+      "member": "nv-codec-headers-f2053071ea93137255b6dcf42e9b4c9e0965a44e/include/ffnvcodec/nvEncodeAPI.h",
+      "header_sha256": "8776fddcb8febc6aec4d73989b1f21831eb30306bc583da55b4bf0c14a1dc228",
+      "notice_file": "licenses/ffmpeg-controlled/nv-codec-headers/nvEncodeAPI.h.notice.txt",
+      "notice_sha256": "8f115901902ad05ce3a1ba48ae15393a1853ac0a3e7835ebe986cc80e1039b19"
+    }
   ]
 }
