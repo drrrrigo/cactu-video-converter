@@ -130,3 +130,14 @@ class DependencyComplianceTests(unittest.TestCase):
         for plugin in ["libqtiff.so", "qwebp.dll", "qicns.dll", "libqwbmp.so", "qtga.dll"]:
             result = qt_file_mapping("_internal/PySide6/Qt/plugins/imageformats/" + plugin, lock)
             self.assertEqual(result["source_project"], "qtimageformats")
+
+    def test_windows_widgets_keep_platform_runtime_but_omit_unused_mesa(self):
+        from qt_payload_policy import windows_application_binaries
+
+        entries = [
+            ("PySide6/opengl32sw.dll", "mesa", "BINARY"),
+            ("Qt6Widgets.dll", "widgets", "BINARY"),
+            ("qwindows.dll", "platform", "BINARY"),
+            ("VCRUNTIME140.dll", "crt", "BINARY"),
+        ]
+        self.assertEqual(windows_application_binaries(entries), entries[1:])

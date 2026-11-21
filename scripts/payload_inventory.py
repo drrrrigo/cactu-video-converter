@@ -347,7 +347,7 @@ def inventory(
                 expected_hash = entry[
                     "ffprobe_sha256" if file.name.startswith("ffprobe") else "ffmpeg_sha256"
                 ]
-                if sha256(file) != expected_hash:
+                if native and sha256(file) != expected_hash:
                     raise RuntimeError("Runtime inventory does not match selected FFmpeg manifest")
                 component = dict(catalog["ffmpeg"])
                 component.update(

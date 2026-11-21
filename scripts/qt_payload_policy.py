@@ -28,8 +28,15 @@ def windows_network_plugins(binaries):
 
 
 def windows_application_binaries(entries):
-    """Windows 10/11 provides UCRT/API-set contracts; retain the VC++ runtime."""
-    return [entry for entry in entries if not windows_os_contract(entry[0])]
+    """Retain Widgets/VC++ runtime; omit OS contracts and unused OpenGL fallback."""
+    # Cactu creates raster QWidget controls, no Qt Quick/QOpenGLWidget/Window.
+    # FFmpeg GPU encoding is a separate process and does not use this Qt renderer.
+    return [
+        entry
+        for entry in entries
+        if not windows_os_contract(entry[0])
+        and Path(entry[0].replace("\\", "/")).name.lower() != "opengl32sw.dll"
+    ]
 
 
 def windows_os_contract(destination):

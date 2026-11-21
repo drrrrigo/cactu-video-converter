@@ -24,7 +24,7 @@ def qt_file_mapping(relative: str, lock: dict):
         ):
             project = "qtimageformats"
     elif ("PySide6/" in relative and re.match(r"Qt\w+\.(?:abi3|pyd)", name)) or name.startswith(
-        ("libpyside6", "libshiboken6")
+        ("libpyside6", "libshiboken6", "pyside6.abi3", "shiboken6.abi3", "Shiboken.")
     ):
         module = "Qt Python binding: " + name
         project = "pyside-pyside-setup"
