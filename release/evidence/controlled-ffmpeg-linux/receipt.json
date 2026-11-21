@@ -200,5 +200,6 @@
       "filename": "libx264.a",
       "sha256": "b8dd8a39b35ff5d5a5cf131e3a9da5fa2e325b675ed8c2093ae1405ef427261a"
     }
-  ]
+  ],
+  "promotion_blocker": "Superseded: AV1 table entry proved hardware-only. These stages passed the earlier suite, but fail actual AV1 software input. The dav1d candidate adds a real decoding regression check."
 }

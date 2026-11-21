@@ -1,3 +1,13 @@
+# Current qualification note — AV1 correction
+
+Earlier candidate reports below describe intermediate stages, not eligible RCs.
+An actual AV1 input exposed that FFmpeg native av1 is hardware-only: the old
+capability-name check and 170-test suite did not cover CPU AV1 decoding. Those
+artifacts are explicitly superseded. The corrected recipe includes pinned BSD
+licensed dav1d, builds it from source, and requires actual AV1 software decoding
+with decoded pixels matching the provider reference. Xvid encoding remains absent;
+MPEG-4 input uses the native decoder. All release approvals remain false.
+
 # Controlled FFmpeg candidate implementation
 
 This is an implemented, isolated candidate pipeline, not a promoted runtime.
@@ -150,3 +160,14 @@ header input, not an active Linux input. native-file-source-mapping.json explici
 maps six audited Windows Python files to supplier/source/notice evidence. This is
 not blanket per-file legal clearance. All source/technical/publication flags remain
 false and source-asset index approval remains unset.
+
+
+The corrected controlled graph has six Linux source inputs (FFmpeg, x264, libass,
+NV headers, oneVPL and dav1d) and adds AMF headers on Windows. Source/build input
+retention no longer depends on the 133-input provider recipe for these candidates.
+The legacy provider remains selected until candidate qualification is complete.
+verify_source_delivery.py --controlled checks this graph separately, so the old
+Xvid SVN acquisition failure is not a false blocker for controlled candidates.
+Ubuntu actual-library sources are retained separately in controlled-ubuntu-source-lock;
+shared archives are reused rather than copied. The source-closure flag remains false
+for outstanding toolchain/native/Qt/installer/delivery reviews.

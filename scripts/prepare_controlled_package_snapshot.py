@@ -41,6 +41,12 @@ def prepare(work, destination):
     selected = read_json(destination / "vendor/ffmpeg/manifest.json")
     entry = selected[target]
     entry.update(
+        provider="Cactu controlled candidate (unapproved)",
+        source_url=None,
+        archive_format="tar",
+        ffmpeg_member="ffmpeg" + suffix,
+        ffprobe_member="ffprobe" + suffix,
+        license_member="FFmpeg-LICENSE.txt",
         build_id=manifest["outputs"]["ffmpeg"]["-version"].splitlines()[0].split()[2],
         build_configuration=next(
             s.removeprefix("configuration: ")
@@ -58,6 +64,22 @@ def prepare(work, destination):
     for name in ["ffmpeg", "ffprobe"]:
         entry[name + "_sha256"] = manifest["outputs"][name]["sha256"]
     (destination / "vendor/ffmpeg/manifest.json").write_text(json.dumps(selected, indent=2) + "\n")
+    provenance = {
+        "upstream_source_commit": subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT)
+        .decode()
+        .strip(),
+        "upstream_source_tree_clean": not subprocess.check_output(
+            ["git", "status", "--porcelain"], cwd=ROOT
+        ),
+        "candidate_manifest_sha256": sha256(work / "manifest.json"),
+        "candidate_source_lock_sha256": sha256(ROOT / "release/ffmpeg-controlled-lock.json"),
+        "generated_vendor_manifest_sha256": sha256(destination / "vendor/ffmpeg/manifest.json"),
+        "scope": "Isolated packaging export; no selected-runtime promotion or archive download URL",
+        "publication_approved": False,
+    }
+    (destination / "release/controlled-snapshot.json").write_text(
+        json.dumps(provenance, indent=2) + "\n"
+    )
     subprocess.run(["git", "init", "-q"], cwd=destination, check=True)
     subprocess.run(["git", "add", "."], cwd=destination, check=True)
     subprocess.run(

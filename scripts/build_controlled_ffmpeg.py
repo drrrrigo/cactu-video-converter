@@ -74,6 +74,7 @@ def build(target, work, jobs):
         "libtoolize",
         "cmake",
         "ninja",
+        "meson",
     ]:
         executable = shutil.which(command)
         if not executable:
@@ -109,6 +110,29 @@ def build(target, work, jobs):
     )
     run("vpl-build", ["cmake", "--build", str(vpl_build), "--parallel", str(jobs)], work)
     run("vpl-install", ["cmake", "--install", str(vpl_build)], work)
+    dav1d_build = work / "dav1d-build"
+    run(
+        "dav1d-configure",
+        [
+            "meson",
+            "setup",
+            str(dav1d_build),
+            str(sources["dav1d"]),
+            "--prefix=" + str(prefix),
+            "--libdir=lib",
+            "--buildtype=release",
+            "--default-library=static",
+            "--wrap-mode=nodownload",
+            "-Denable_asm=false",
+            "-Denable_tests=false",
+            "-Denable_tools=false",
+            "-Denable_examples=false",
+            "-Denable_docs=false",
+        ],
+        work,
+    )
+    run("dav1d-build", ["meson", "compile", "-C", str(dav1d_build), "-j", str(jobs)], work)
+    run("dav1d-install", ["meson", "install", "-C", str(dav1d_build)], work)
     # No privileged SDK/driver installation. Headers are retained source inputs.
     run("nvheaders", ["make", "install", "PREFIX=" + str(prefix)], sources["nv-codec-headers"])
     run(
@@ -153,6 +177,7 @@ def build(target, work, jobs):
         "--enable-version3",
         "--enable-libx264",
         "--enable-libass",
+        "--enable-libdav1d",
         "--enable-zlib",
         "--enable-bzlib",
         "--enable-lzma",

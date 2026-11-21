@@ -33,6 +33,7 @@ jobs:
             mingw-w64-ucrt-x86_64-libvpl
             mingw-w64-ucrt-x86_64-cmake
             mingw-w64-ucrt-x86_64-ninja
+            mingw-w64-ucrt-x86_64-meson
       - name: Record bootstrap package versions
         shell: msys2 {0}
         run: |
@@ -103,9 +104,10 @@ jobs:
       - name: Native build prerequisites (unapproved bootstrap)
         run: >-
           sudo apt-get update && sudo apt-get install -y autoconf automake libtool
-          pkg-config cmake ninja-build libfontconfig1-dev libfreetype6-dev
+          pkg-config cmake ninja-build meson libfontconfig1-dev libfreetype6-dev
           libfribidi-dev libharfbuzz-dev libva-dev zlib1g-dev libbz2-dev liblzma-dev
           bubblewrap libegl1 libopengl0 libxkbcommon-x11-0 libxcb-cursor0 fonts-dejavu-core
+          libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-render-util0
       - run: python scripts/acquire_controlled_ffmpeg.py linux-x86_64
       - run: python scripts/build_controlled_ffmpeg.py linux-x86_64 --jobs 4
       - run: "python -m pip install --require-hashes --only-binary=:all: -r release/requirements.lock"

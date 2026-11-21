@@ -80,6 +80,14 @@
       "member": "LICENSE",
       "notice_file": "licenses/ffmpeg-controlled/oneVPL/LICENSE",
       "notice_sha256": "bf1cfac2e2792b6e1e995ce103d70796aecaf2ec7e4c5fe5474f7acec7b4a677"
+    },
+    {
+      "project": "dav1d",
+      "source_commit": "6c7bee685677fd997a431302be4fea8ea4017606",
+      "source_archive_sha256": "725d0ebe5bd19316aaaeee84a170b0f6f3930fc7cf53fa0c5bbe3c86ba1c2b15",
+      "member": "COPYING",
+      "notice_file": "licenses/ffmpeg-controlled/dav1d/COPYING",
+      "notice_sha256": "dd92c3c2247c5651606fc23a5e2d6a1ebc5ace9a3e49cbde0e12f05ad1cb1ee5"
     }
   ],
   "header_notices": [

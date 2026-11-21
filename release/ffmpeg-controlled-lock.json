@@ -43,6 +43,13 @@
       "sha256": "deb2641c23f4350f8dbe965be6e424e59fa6696c7b5528ceb9d77a29244cccc4",
       "revision": "412c5cffe3022d5ebb8a955c3b30afe7bd2e3929",
       "url": "https://codeload.github.com/intel/libvpl/tar.gz/412c5cffe3022d5ebb8a955c3b30afe7bd2e3929"
+    },
+    {
+      "project": "dav1d",
+      "filename": "50-dav1d--6c7bee685677fd997a431302be4fea8ea4017606.tar.gz",
+      "sha256": "725d0ebe5bd19316aaaeee84a170b0f6f3930fc7cf53fa0c5bbe3c86ba1c2b15",
+      "revision": "6c7bee685677fd997a431302be4fea8ea4017606",
+      "url": "https://code.videolan.org/videolan/dav1d/-/archive/6c7bee685677fd997a431302be4fea8ea4017606/dav1d-6c7bee685677fd997a431302be4fea8ea4017606.tar.gz"
     }
   ],
   "patches": [],

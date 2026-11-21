@@ -6,15 +6,22 @@ from pathlib import Path
 from release_common import ROOT, read_json, sha256
 
 
-def verify(root=ROOT):
+def verify(root=ROOT, *, controlled=False):
     cache = root / "release/evidence/local/sources"
     qt = read_json(root / "release/qt-source-lock.json")
     ffmpeg = read_json(root / "release/ffmpeg-source-lock.json")
+    controlled_sources = (
+        read_json(root / "release/ffmpeg-controlled-lock.json") if controlled else None
+    )
     ubuntu = read_json(root / "release/ubuntu-source-lock.json")
     runtime = read_json(root / "release/appimage-controlled-lock.json")
     entries = (
         list(qt["archives"])
-        + [e for e in ffmpeg["inputs"] if e["status"] == "RETAINED"]
+        + (
+            controlled_sources["sources"]
+            if controlled
+            else [e for e in ffmpeg["inputs"] if e["status"] == "RETAINED"]
+        )
         + runtime["build_source_archives"]
         + runtime["static_upstream_sources"]
     )
@@ -35,7 +42,14 @@ def verify(root=ROOT):
             raise RuntimeError("Retained source missing or changed: " + name)
         verified.append({"filename": name, "sha256": entry["sha256"], "url": entry["url"]})
     ubuntu_verified = []
-    for package in ubuntu["source_packages"]:
+    ubuntu_packages = {
+        (p["source_package"], p["source_version"]): p for p in ubuntu["source_packages"]
+    }
+    controlled_ubuntu = root / "release/controlled-ubuntu-source-lock.json"
+    if controlled_ubuntu.is_file():
+        for p in read_json(controlled_ubuntu)["source_packages"]:
+            ubuntu_packages[(p["source_package"], p["source_version"])] = p
+    for package in ubuntu_packages.values():
         if package["status"] != "RETAINED":
             raise RuntimeError("Ubuntu source package not retained: " + package["source_package"])
         folder = root / "release/evidence/local/ubuntu-sources" / package["cache_subdirectory"]
@@ -52,9 +66,20 @@ def verify(root=ROOT):
     return {
         "retained_verified": verified,
         "ubuntu_source_packages_verified": ubuntu_verified,
-        "blocked_inputs": [e for e in ffmpeg["inputs"] if e["status"] != "RETAINED"],
+        "scope": "controlled candidates"
+        if controlled
+        else "selected legacy provider plus retained evidence",
+        "blocked_inputs": []
+        if controlled
+        else [e for e in ffmpeg["inputs"] if e["status"] != "RETAINED"],
         "complete_corresponding_source": False,
-        "remaining": ffmpeg["remaining_build_requirements"]
+        "remaining": (
+            [
+                "Native build/toolchain and incorporated dependency correspondence remains under review"
+            ]
+            if controlled
+            else ffmpeg["remaining_build_requirements"]
+        )
         + [
             "Qt wheel build/third-party correspondence",
             "per-file native library terms and replacement assessment",
@@ -69,8 +94,9 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--output", type=Path, default=ROOT / "build/source-delivery-index.json")
     parser.add_argument("--require-complete", action="store_true")
+    parser.add_argument("--controlled", action="store_true")
     args = parser.parse_args()
-    result = verify()
+    result = verify(controlled=args.controlled)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
     print(
