@@ -1,0 +1,314 @@
+{
+  "keyring_package": {
+    "package": "msys2-keyring",
+    "version": "1~20260814-1",
+    "url": "https://repo.msys2.org/msys/x86_64/msys2-keyring-1~20260814-1-any.pkg.tar.zst",
+    "filename": "msys2-keyring-1~20260814-1-any.pkg.tar.zst",
+    "sha256": "a9a02c41bc14eb0965fb23b7e7d43a1d0eb20d9e70cbfeb193fcbf68bb0dc5d0",
+    "publisher_hash_reference": "https://packages.msys2.org/packages/msys2-keyring",
+    "trust_scope": "Official HTTPS-published package hash; not an independently supplied offline trust root. Used for source-signature validation only, not incorporated into Cactu.",
+    "accepted_package_signers": [
+      "AD351C50AE085775EB59333B5F92EFC1A47D45A1",
+      "87771331B3F1FF5263856A6D974C8BE49078F532",
+      "5F944B027F7FE2091985AA2EFA11531AA0AA7F57"
+    ],
+    "signer_fingerprint_reference": "https://www.msys2.org/dev/keyring/"
+  },
+  "keyring_member_sha256": "1257d4ccc536c53333445a618039af4c3ea3f56b96601de9af89151ea529c19a",
+  "verification_keyring_sha256": "d5efcc13a6d394ec3726078a6bcae331f4fa61d74bb787521bab0789e533d102",
+  "results": [
+    {
+      "base": "mingw-w64-brotli",
+      "version": "1.2.1-1",
+      "archive_sha256": "3dfc69b88a111ef4809928e81d4cb650ea9c7ba5da4ebd1bf28d6effdeeb6bd6",
+      "signature_sha256": "d0cd64eb605587c5350aa3b3e374107611f6fb7bf8a81e62fe16b63342eab3d6",
+      "signer_fingerprint": "5F944B027F7FE2091985AA2EFA11531AA0AA7F57",
+      "gpg_status": [
+        "[GNUPG:] NEWSIG",
+        "[GNUPG:] KEY_CONSIDERED 5F944B027F7FE2091985AA2EFA11531AA0AA7F57 0",
+        "[GNUPG:] SIG_ID IfC6GTLxfhODDoyuBdlBzQzagRs 2026-10-23 1792783329",
+        "[GNUPG:] GOODSIG FA11531AA0AA7F57 Christoph Reiter (MSYS2 development key) <reiter.christoph@gmail.com>",
+        "[GNUPG:] VALIDSIG 5F944B027F7FE2091985AA2EFA11531AA0AA7F57 2026-10-23 1792783329 0 4 0 1 10 00 5F944B027F7FE2091985AA2EFA11531AA0AA7F57"
+      ]
+    },
+    {
+      "base": "mingw-w64-bzip2",
+      "version": "1.0.8-4",
+      "archive_sha256": "fd9360917314d1cbccb3cb15ed8450d1e56b8a9f733b606504aba52c52159e54",
+      "signature_sha256": "c122fdd19f4f35dc886557f71dcd21c9f147d663344680035cdd88dc17814ab7",
+      "signer_fingerprint": "5F944B027F7FE2091985AA2EFA11531AA0AA7F57",
+      "gpg_status": [
+        "[GNUPG:] NEWSIG",
+        "[GNUPG:] KEY_CONSIDERED 5F944B027F7FE2091985AA2EFA11531AA0AA7F57 0",
+        "[GNUPG:] SIG_ID 9/ZOnOhMR5xbMr1Q7IXKsiF1KPk 2026-08-14 1786716455",
+        "[GNUPG:] GOODSIG FA11531AA0AA7F57 Christoph Reiter (MSYS2 development key) <reiter.christoph@gmail.com>",
+        "[GNUPG:] VALIDSIG 5F944B027F7FE2091985AA2EFA11531AA0AA7F57 2026-08-14 1786716455 0 4 0 1 10 00 5F944B027F7FE2091985AA2EFA11531AA0AA7F57"
+      ]
+    },
+    {
+      "base": "mingw-w64-expat",
+      "version": "2.10.0-1",
+      "archive_sha256": "8473f4c38da677e7f0f2eabf9fb60404ea2ef80c5e465258a2724ceff4c1d331",
+      "signature_sha256": "3417393d228b52ce56b43ea66c048e564c2f7de0d5e7340f10ad6f9a044bb586",
+      "signer_fingerprint": "5F944B027F7FE2091985AA2EFA11531AA0AA7F57",
+      "gpg_status": [
+        "[GNUPG:] NEWSIG",
+        "[GNUPG:] KEY_CONSIDERED 5F944B027F7FE2091985AA2EFA11531AA0AA7F57 0",
+        "[GNUPG:] SIG_ID lXwtYDL+tvhlHiJwxN8tifhETzE 2026-11-03 1793745859",
+        "[GNUPG:] GOODSIG FA11531AA0AA7F57 Christoph Reiter (MSYS2 development key) <reiter.christoph@gmail.com>",
+        "[GNUPG:] VALIDSIG 5F944B027F7FE2091985AA2EFA11531AA0AA7F57 2026-11-03 1793745859 0 4 0 1 10 00 5F944B027F7FE2091985AA2EFA11531AA0AA7F57"
+      ]
+    },
+    {
+      "base": "mingw-w64-fontconfig",
+      "version": "2.18.4-1",
+      "archive_sha256": "7168fb268671f92ab62864302aaec737c93dbeff514509c31dbff38a717745b6",
+      "signature_sha256": "430878eb2300248ba19554b6580e1bcd2a5d0d77f32935882f46a08f89b94da1",
+      "signer_fingerprint": "5F944B027F7FE2091985AA2EFA11531AA0AA7F57",
+      "gpg_status": [
+        "[GNUPG:] NEWSIG",
+        "[GNUPG:] KEY_CONSIDERED 5F944B027F7FE2091985AA2EFA11531AA0AA7F57 0",
+        "[GNUPG:] SIG_ID iUmHfElmdEwLqZ4wDIV4RKxxtbs 2026-11-19 1795121783",
+        "[GNUPG:] GOODSIG FA11531AA0AA7F57 Christoph Reiter (MSYS2 development key) <reiter.christoph@gmail.com>",
+        "[GNUPG:] VALIDSIG 5F944B027F7FE2091985AA2EFA11531AA0AA7F57 2026-11-19 1795121783 0 4 0 1 10 00 5F944B027F7FE2091985AA2EFA11531AA0AA7F57"
+      ]
+    },
+    {
+      "base": "mingw-w64-freetype",
+      "version": "2.15.0-1",
+      "archive_sha256": "2f09c60b72bd249642d055aa5a34edf2577392e592415f3f4730dd37990b47ad",
+      "signature_sha256": "4ecd6179f3bf1ff12c85776ed409cee3eaeee2ee08b0174ec8edec750908200a",
+      "signer_fingerprint": "5F944B027F7FE2091985AA2EFA11531AA0AA7F57",
+      "gpg_status": [
+        "[GNUPG:] NEWSIG",
+        "[GNUPG:] KEY_CONSIDERED 5F944B027F7FE2091985AA2EFA11531AA0AA7F57 0",
+        "[GNUPG:] SIG_ID dtAzBUoDMPDC1XeNRqHuIwIlHHs 2026-10-14 1791962963",
+        "[GNUPG:] GOODSIG FA11531AA0AA7F57 Christoph Reiter (MSYS2 development key) <reiter.christoph@gmail.com>",
+        "[GNUPG:] VALIDSIG 5F944B027F7FE2091985AA2EFA11531AA0AA7F57 2026-10-14 1791962963 0 4 0 1 10 00 5F944B027F7FE2091985AA2EFA11531AA0AA7F57"
+      ]
+    },
+    {
+      "base": "mingw-w64-fribidi",
+      "version": "1.0.18-1",
+      "archive_sha256": "7cd0b6290516a7d61b1508d79c18d2661170a0e3189582ded99bd9879cc159b2",
+      "signature_sha256": "574a4e510317afccf4f0cb165e719088cedec7240c6edbb67ae56bf03ea1f363",
+      "signer_fingerprint": "5F944B027F7FE2091985AA2EFA11531AA0AA7F57",
+      "gpg_status": [
+        "[GNUPG:] NEWSIG",
+        "[GNUPG:] KEY_CONSIDERED 5F944B027F7FE2091985AA2EFA11531AA0AA7F57 0",
+        "[GNUPG:] SIG_ID C9E9OO1MYe/Wpq4QUjjtYDcVAw0 2026-10-30 1793368376",
+        "[GNUPG:] GOODSIG FA11531AA0AA7F57 Christoph Reiter (MSYS2 development key) <reiter.christoph@gmail.com>",
+        "[GNUPG:] VALIDSIG 5F944B027F7FE2091985AA2EFA11531AA0AA7F57 2026-10-30 1793368376 0 4 0 1 10 00 5F944B027F7FE2091985AA2EFA11531AA0AA7F57"
+      ]
+    },
+    {
+      "base": "mingw-w64-gcc",
+      "version": "16.2.0-7",
+      "archive_sha256": "bdd1b2cd820cd67d38b42a174180bdd589b80b97af1a8b042d6c4da9176bac93",
+      "signature_sha256": "fef8f693a469e0e73c56258c5d91f915145b271bc55f4fbe42a74916dc92a1d9",
+      "signer_fingerprint": "5F944B027F7FE2091985AA2EFA11531AA0AA7F57",
+      "gpg_status": [
+        "[GNUPG:] NEWSIG",
+        "[GNUPG:] KEY_CONSIDERED 5F944B027F7FE2091985AA2EFA11531AA0AA7F57 0",
+        "[GNUPG:] SIG_ID Yp4lN3h1OqOkIwd6soW/ZBfi3EE 2026-11-14 1794646025",
+        "[GNUPG:] GOODSIG FA11531AA0AA7F57 Christoph Reiter (MSYS2 development key) <reiter.christoph@gmail.com>",
+        "[GNUPG:] VALIDSIG 5F944B027F7FE2091985AA2EFA11531AA0AA7F57 2026-11-14 1794646025 0 4 0 1 10 00 5F944B027F7FE2091985AA2EFA11531AA0AA7F57"
+      ]
+    },
+    {
+      "base": "mingw-w64-gettext",
+      "version": "1.0-1",
+      "archive_sha256": "cca0d0c8f60353faccc5ad40405240014e4a7ccc8b1c6ca9f4626aef3097d26e",
+      "signature_sha256": "daaa76ab77b852c1d62de5ab2338b026a5281e6d208a5f83e963f19c504baf95",
+      "signer_fingerprint": "5F944B027F7FE2091985AA2EFA11531AA0AA7F57",
+      "gpg_status": [
+        "[GNUPG:] NEWSIG",
+        "[GNUPG:] KEY_CONSIDERED 5F944B027F7FE2091985AA2EFA11531AA0AA7F57 0",
+        "[GNUPG:] SIG_ID znUyxriwdHHoURQ6pRGTdVPS2os 2026-02-01 1769940146",
+        "[GNUPG:] GOODSIG FA11531AA0AA7F57 Christoph Reiter (MSYS2 development key) <reiter.christoph@gmail.com>",
+        "[GNUPG:] VALIDSIG 5F944B027F7FE2091985AA2EFA11531AA0AA7F57 2026-02-01 1769940146 0 4 0 1 10 00 5F944B027F7FE2091985AA2EFA11531AA0AA7F57"
+      ]
+    },
+    {
+      "base": "mingw-w64-glib2",
+      "version": "2.90.1-1",
+      "archive_sha256": "ac3bc00e4079e6b51dd0a1fb9ccc420fff033b4e9095e4487dbf6cf01312cee6",
+      "signature_sha256": "8a4a15f9134d813d9e525a0ecf67a587cf5a414138b5019e6a37b1a8a7d59e4d",
+      "signer_fingerprint": "5F944B027F7FE2091985AA2EFA11531AA0AA7F57",
+      "gpg_status": [
+        "[GNUPG:] NEWSIG",
+        "[GNUPG:] KEY_CONSIDERED 5F944B027F7FE2091985AA2EFA11531AA0AA7F57 0",
+        "[GNUPG:] SIG_ID aW80GPTNidQF7n7FY+g+fUUe5o0 2026-10-08 1791442813",
+        "[GNUPG:] GOODSIG FA11531AA0AA7F57 Christoph Reiter (MSYS2 development key) <reiter.christoph@gmail.com>",
+        "[GNUPG:] VALIDSIG 5F944B027F7FE2091985AA2EFA11531AA0AA7F57 2026-10-08 1791442813 0 4 0 1 10 00 5F944B027F7FE2091985AA2EFA11531AA0AA7F57"
+      ]
+    },
+    {
+      "base": "mingw-w64-graphite2",
+      "version": "1.3.15-1",
+      "archive_sha256": "eb76ce274c68ea6bad0883144c21e44a803ec94fed9dc0f6584feb0a8415a1d6",
+      "signature_sha256": "e90d1ad525400918fbe5956243071f70d1ecda382778f9b9a3fed1669cff9a86",
+      "signer_fingerprint": "5F944B027F7FE2091985AA2EFA11531AA0AA7F57",
+      "gpg_status": [
+        "[GNUPG:] NEWSIG",
+        "[GNUPG:] KEY_CONSIDERED 5F944B027F7FE2091985AA2EFA11531AA0AA7F57 0",
+        "[GNUPG:] SIG_ID m0eUtvvSENN3yhJTyS1hSGpP0Ug 2026-06-05 1780646415",
+        "[GNUPG:] GOODSIG FA11531AA0AA7F57 Christoph Reiter (MSYS2 development key) <reiter.christoph@gmail.com>",
+        "[GNUPG:] VALIDSIG 5F944B027F7FE2091985AA2EFA11531AA0AA7F57 2026-06-05 1780646415 0 4 0 1 10 00 5F944B027F7FE2091985AA2EFA11531AA0AA7F57"
+      ]
+    },
+    {
+      "base": "mingw-w64-harfbuzz",
+      "version": "15.2.0-1",
+      "archive_sha256": "d69e2926253579bf626b5cad66c74dbfa17a5b007e5b633cc2f8bad42c223c2f",
+      "signature_sha256": "2b0317ef2957081156ed01ca75976a04395624b356449100dc3d5fe27997e0c5",
+      "signer_fingerprint": "5F944B027F7FE2091985AA2EFA11531AA0AA7F57",
+      "gpg_status": [
+        "[GNUPG:] NEWSIG",
+        "[GNUPG:] KEY_CONSIDERED 5F944B027F7FE2091985AA2EFA11531AA0AA7F57 0",
+        "[GNUPG:] SIG_ID +1JwOStGDvDPLrv2Ibd/o1Z+Ttg 2026-11-20 1795181647",
+        "[GNUPG:] GOODSIG FA11531AA0AA7F57 Christoph Reiter (MSYS2 development key) <reiter.christoph@gmail.com>",
+        "[GNUPG:] VALIDSIG 5F944B027F7FE2091985AA2EFA11531AA0AA7F57 2026-11-20 1795181647 0 4 0 1 10 00 5F944B027F7FE2091985AA2EFA11531AA0AA7F57"
+      ]
+    },
+    {
+      "base": "mingw-w64-libass",
+      "version": "0.17.5-1",
+      "archive_sha256": "4a68edae2c1454ffcf7cf0a6fccf6930c876caa5fe2422cdb0b34d1fc0f5fb03",
+      "signature_sha256": "70b7f2f60c7cb31120df4eca55397a05356b688c6d774a9082e97e58d07db33a",
+      "signer_fingerprint": "5F944B027F7FE2091985AA2EFA11531AA0AA7F57",
+      "gpg_status": [
+        "[GNUPG:] NEWSIG",
+        "[GNUPG:] KEY_CONSIDERED 5F944B027F7FE2091985AA2EFA11531AA0AA7F57 0",
+        "[GNUPG:] SIG_ID rKkcWH2RTCzluVz0oeaVHKpDrnQ 2026-06-26 1782503962",
+        "[GNUPG:] GOODSIG FA11531AA0AA7F57 Christoph Reiter (MSYS2 development key) <reiter.christoph@gmail.com>",
+        "[GNUPG:] VALIDSIG 5F944B027F7FE2091985AA2EFA11531AA0AA7F57 2026-06-26 1782503962 0 4 0 1 10 00 5F944B027F7FE2091985AA2EFA11531AA0AA7F57"
+      ]
+    },
+    {
+      "base": "mingw-w64-libiconv",
+      "version": "1.19.1-1",
+      "archive_sha256": "ed46bb1b524ad9bd9d843091bf7b18ab23e5cd21fef6de743c8c943bdc11dabe",
+      "signature_sha256": "094a812672283d4ae7dcf8a5256ec3510d7410233749510f17d4f336b70111c7",
+      "signer_fingerprint": "5F944B027F7FE2091985AA2EFA11531AA0AA7F57",
+      "gpg_status": [
+        "[GNUPG:] NEWSIG",
+        "[GNUPG:] KEY_CONSIDERED 5F944B027F7FE2091985AA2EFA11531AA0AA7F57 0",
+        "[GNUPG:] SIG_ID olGk6LfX8rNq2sy3IMRJxIn6VjQ 2026-11-05 1793862751",
+        "[GNUPG:] GOODSIG FA11531AA0AA7F57 Christoph Reiter (MSYS2 development key) <reiter.christoph@gmail.com>",
+        "[GNUPG:] VALIDSIG 5F944B027F7FE2091985AA2EFA11531AA0AA7F57 2026-11-05 1793862751 0 4 0 1 10 00 5F944B027F7FE2091985AA2EFA11531AA0AA7F57"
+      ]
+    },
+    {
+      "base": "mingw-w64-libpng",
+      "version": "1.6.59-2",
+      "archive_sha256": "7f7c029d119427fe7b36be8a79228f831062bedadee1f49c9e0919fe6d7a459a",
+      "signature_sha256": "785b0a5516d5bbc4a382dfb9b860793785169beafa490a2c354278a9648436f2",
+      "signer_fingerprint": "5F944B027F7FE2091985AA2EFA11531AA0AA7F57",
+      "gpg_status": [
+        "[GNUPG:] NEWSIG",
+        "[GNUPG:] KEY_CONSIDERED 5F944B027F7FE2091985AA2EFA11531AA0AA7F57 0",
+        "[GNUPG:] SIG_ID RI4V3fQ4VedE1nhbZ7XVYcKLB04 2026-10-23 1792783370",
+        "[GNUPG:] GOODSIG FA11531AA0AA7F57 Christoph Reiter (MSYS2 development key) <reiter.christoph@gmail.com>",
+        "[GNUPG:] VALIDSIG 5F944B027F7FE2091985AA2EFA11531AA0AA7F57 2026-10-23 1792783370 0 4 0 1 10 00 5F944B027F7FE2091985AA2EFA11531AA0AA7F57"
+      ]
+    },
+    {
+      "base": "mingw-w64-libunibreak",
+      "version": "7.0-1",
+      "archive_sha256": "3d51ed18b20deb475c6947ea8fdabb7d6107962e2e6e690de90e5227537728ad",
+      "signature_sha256": "732ea3af357dc0c8ec9410be31fbc03abe0e632be2112f6854136d70c2619c33",
+      "signer_fingerprint": "5F944B027F7FE2091985AA2EFA11531AA0AA7F57",
+      "gpg_status": [
+        "[GNUPG:] NEWSIG",
+        "[GNUPG:] KEY_CONSIDERED 5F944B027F7FE2091985AA2EFA11531AA0AA7F57 0",
+        "[GNUPG:] SIG_ID JV4mh8RJK1J1n1B4B5i7DuJ3LxU 2026-04-12 1776012452",
+        "[GNUPG:] GOODSIG FA11531AA0AA7F57 Christoph Reiter (MSYS2 development key) <reiter.christoph@gmail.com>",
+        "[GNUPG:] VALIDSIG 5F944B027F7FE2091985AA2EFA11531AA0AA7F57 2026-04-12 1776012452 0 4 0 1 10 00 5F944B027F7FE2091985AA2EFA11531AA0AA7F57"
+      ]
+    },
+    {
+      "base": "mingw-w64-libvpl",
+      "version": "2.17.0-1",
+      "archive_sha256": "4bd392447f4a5f986462cfc412ab7ace3dfaa980e53b41f35d08c44b8b31cc9d",
+      "signature_sha256": "ec83927d95c9f69d5d82b0f67f07a1a3fa392e7d958837da9373090fef6f6084",
+      "signer_fingerprint": "5F944B027F7FE2091985AA2EFA11531AA0AA7F57",
+      "gpg_status": [
+        "[GNUPG:] NEWSIG",
+        "[GNUPG:] KEY_CONSIDERED 5F944B027F7FE2091985AA2EFA11531AA0AA7F57 0",
+        "[GNUPG:] SIG_ID +ojlaisjaU41v+JyNJLqmHU44XU 2026-06-30 1782846790",
+        "[GNUPG:] GOODSIG FA11531AA0AA7F57 Christoph Reiter (MSYS2 development key) <reiter.christoph@gmail.com>",
+        "[GNUPG:] VALIDSIG 5F944B027F7FE2091985AA2EFA11531AA0AA7F57 2026-06-30 1782846790 0 4 0 1 10 00 5F944B027F7FE2091985AA2EFA11531AA0AA7F57"
+      ]
+    },
+    {
+      "base": "mingw-w64-pcre2",
+      "version": "10.49-2",
+      "archive_sha256": "a0834cd8808867aaa3d0065eefcb12a2be09735a6c398c3da9301187e8517ead",
+      "signature_sha256": "ee730a948c17e70123f4d0647b4ae599ab391df8dee096efe28e67d6f6c8dd69",
+      "signer_fingerprint": "5F944B027F7FE2091985AA2EFA11531AA0AA7F57",
+      "gpg_status": [
+        "[GNUPG:] NEWSIG",
+        "[GNUPG:] KEY_CONSIDERED 5F944B027F7FE2091985AA2EFA11531AA0AA7F57 0",
+        "[GNUPG:] SIG_ID 3DtQN5LsOWCOrqBmWTbZEI0kmyo 2026-11-11 1794388927",
+        "[GNUPG:] GOODSIG FA11531AA0AA7F57 Christoph Reiter (MSYS2 development key) <reiter.christoph@gmail.com>",
+        "[GNUPG:] VALIDSIG 5F944B027F7FE2091985AA2EFA11531AA0AA7F57 2026-11-11 1794388927 0 4 0 1 10 00 5F944B027F7FE2091985AA2EFA11531AA0AA7F57"
+      ]
+    },
+    {
+      "base": "mingw-w64-winpthreads",
+      "version": "14.0.0.r598.ge3d18511f-1",
+      "archive_sha256": "1da3dad4f6916d0c23e8fe76c38ed79946fb32078f94047c0475229b8112a1db",
+      "signature_sha256": "5b201422206762eea7cc9a39e667160c0093b69cb74d5a858b870de0fbea4365",
+      "signer_fingerprint": "5F944B027F7FE2091985AA2EFA11531AA0AA7F57",
+      "gpg_status": [
+        "[GNUPG:] NEWSIG",
+        "[GNUPG:] KEY_CONSIDERED 5F944B027F7FE2091985AA2EFA11531AA0AA7F57 0",
+        "[GNUPG:] SIG_ID CvMNbcZr2gOlZ0ReepA0U8fCHa0 2026-11-03 1793745941",
+        "[GNUPG:] GOODSIG FA11531AA0AA7F57 Christoph Reiter (MSYS2 development key) <reiter.christoph@gmail.com>",
+        "[GNUPG:] VALIDSIG 5F944B027F7FE2091985AA2EFA11531AA0AA7F57 2026-11-03 1793745941 0 4 0 1 10 00 5F944B027F7FE2091985AA2EFA11531AA0AA7F57"
+      ]
+    },
+    {
+      "base": "mingw-w64-xz",
+      "version": "5.8.4-1",
+      "archive_sha256": "b8acbc56b2bfe08df7bffff423f3bf07ee85dbec4e07416017ab04c8afb9d13e",
+      "signature_sha256": "6823143fb98f92033977214c2e5e80b2a0adbfa778cdd939749c079e5455ad9d",
+      "signer_fingerprint": "5F944B027F7FE2091985AA2EFA11531AA0AA7F57",
+      "gpg_status": [
+        "[GNUPG:] NEWSIG",
+        "[GNUPG:] KEY_CONSIDERED 5F944B027F7FE2091985AA2EFA11531AA0AA7F57 0",
+        "[GNUPG:] SIG_ID o+hjk3ckl5nzC3wSKixIo17kZ3Y 2026-09-09 1788991250",
+        "[GNUPG:] GOODSIG FA11531AA0AA7F57 Christoph Reiter (MSYS2 development key) <reiter.christoph@gmail.com>",
+        "[GNUPG:] VALIDSIG 5F944B027F7FE2091985AA2EFA11531AA0AA7F57 2026-09-09 1788991250 0 4 0 1 10 00 5F944B027F7FE2091985AA2EFA11531AA0AA7F57"
+      ]
+    },
+    {
+      "base": "mingw-w64-zlib",
+      "version": "1.4-2",
+      "archive_sha256": "28415621a0f6c16bc20b0ce50cd1ae3632dd9f27bdc5776ab3ec18e8d2f00dcd",
+      "signature_sha256": "d22a7234fbc828a2ce84519213380addd81a7444d1690e95b72bb319ea301585",
+      "signer_fingerprint": "5F944B027F7FE2091985AA2EFA11531AA0AA7F57",
+      "gpg_status": [
+        "[GNUPG:] NEWSIG",
+        "[GNUPG:] KEY_CONSIDERED 5F944B027F7FE2091985AA2EFA11531AA0AA7F57 0",
+        "[GNUPG:] SIG_ID 5XIzycefCg8ke05Wr4Bez47QIKM 2026-11-07 1794060671",
+        "[GNUPG:] GOODSIG FA11531AA0AA7F57 Christoph Reiter (MSYS2 development key) <reiter.christoph@gmail.com>",
+        "[GNUPG:] VALIDSIG 5F944B027F7FE2091985AA2EFA11531AA0AA7F57 2026-11-07 1794060671 0 4 0 1 10 00 5F944B027F7FE2091985AA2EFA11531AA0AA7F57"
+      ]
+    }
+  ],
+  "verification_tools": {
+    "gpg": {
+      "sha256": "72371499cd957d9e62bba7cf00e43530b0989bb98536032a59628f7500f159c7",
+      "version": "gpg (GnuPG) 2.4.9"
+    },
+    "gpgv": {
+      "sha256": "618064c2b2fca619b3741cc40c5a378ae09a4aea58075519cf5f3b1bcd315863",
+      "version": "gpgv (GnuPG) 2.4.9"
+    }
+  },
+  "scope": "Cryptographic signature verification against the hash-locked publisher keyring obtained over official HTTPS. No independent offline root-of-trust or legal/source-completeness approval is claimed.",
+  "complete_corresponding_source": false,
+  "publication_approved": false
+}

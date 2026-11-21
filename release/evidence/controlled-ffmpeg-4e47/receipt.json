@@ -63,8 +63,30 @@
       "original_sha256": "e30d1ba2734a40465b9dde9d4814e70e9777e1c7cad5e5338d188c97fb2df9b8",
       "retained_sha256": "e30d1ba2734a40465b9dde9d4814e70e9777e1c7cad5e5338d188c97fb2df9b8",
       "generic_ci_workspace_redacted": false
+    },
+    {
+      "file": "windows/ffmpeg-controlled/packages.txt",
+      "original_sha256": "169143378f5cc5e4a22d97d49e1be09e9e617c1a305ca7e9403ce4febe83eec1",
+      "retained_sha256": "169143378f5cc5e4a22d97d49e1be09e9e617c1a305ca7e9403ce4febe83eec1",
+      "generic_ci_workspace_redacted": false
+    },
+    {
+      "file": "windows/ffmpeg-controlled/environment.json",
+      "original_sha256": "5e7f7aac996443caa972319106e90f3f4b20b5a16697b0f8c4dde9639acf136d",
+      "retained_sha256": "5e7f7aac996443caa972319106e90f3f4b20b5a16697b0f8c4dde9639acf136d",
+      "generic_ci_workspace_redacted": false
+    },
+    {
+      "file": "windows/ffmpeg-controlled/manifest.json",
+      "original_sha256": "49480f98877cbb77ec9de607b2b42bb7254dbfa7bd8ec4b47e826f3307fcb214",
+      "retained_sha256": "03385aefcc7ffc34bbac7015661ffb52f646f9f045304b21a67a3350cf465639",
+      "generic_ci_workspace_redacted": true
     }
   ],
   "publication_approved": false,
-  "complete_corresponding_source": false
+  "complete_corresponding_source": false,
+  "platform_results": {
+    "linux": "172 tests, 3 physical-GPU skips, full native frozen ONEDIR/AppImage success",
+    "windows": "Controlled static build, PE guard and software conversion passed; reference-provider staging then failed with WinError 5. Full compatibility/frozen tests skipped. Superseded by c56ebf6 Windows rerun."
+  }
 }

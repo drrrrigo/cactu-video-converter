@@ -1,0 +1,15 @@
+{
+  "package": "msys2-keyring",
+  "version": "1~20260814-1",
+  "url": "https://repo.msys2.org/msys/x86_64/msys2-keyring-1~20260814-1-any.pkg.tar.zst",
+  "filename": "msys2-keyring-1~20260814-1-any.pkg.tar.zst",
+  "sha256": "a9a02c41bc14eb0965fb23b7e7d43a1d0eb20d9e70cbfeb193fcbf68bb0dc5d0",
+  "publisher_hash_reference": "https://packages.msys2.org/packages/msys2-keyring",
+  "trust_scope": "Official HTTPS-published package hash; not an independently supplied offline trust root. Used for source-signature validation only, not incorporated into Cactu.",
+  "accepted_package_signers": [
+    "AD351C50AE085775EB59333B5F92EFC1A47D45A1",
+    "87771331B3F1FF5263856A6D974C8BE49078F532",
+    "5F944B027F7FE2091985AA2EFA11531AA0AA7F57"
+  ],
+  "signer_fingerprint_reference": "https://www.msys2.org/dev/keyring/"
+}
