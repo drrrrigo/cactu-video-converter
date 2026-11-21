@@ -1,0 +1,192 @@
+{
+  "target": "windows-x86_64",
+  "source_lock_sha256": "98a86c7d0acb8a00551922bfd622e5e5b160250d037e71c6b8e97dac037c1f47",
+  "recipe_sha256": "1123fb34b249e8e56f9f14c886e2aeb309c6220f89c8a5ed0e26b221453a89b6",
+  "source_inputs": [
+    {
+      "project": "FFmpeg",
+      "filename": "current-ffmpeg-source-d59078794d80f5256d5def27e10bb5400a13195c.tar.gz",
+      "sha256": "a2b303c48a30a23c0d2b10058cb73845b16b2029856486a5f57210a620d4105a",
+      "revision": "d59078794d80f5256d5def27e10bb5400a13195c",
+      "url": "https://codeload.github.com/FFmpeg/FFmpeg/tar.gz/d59078794d80f5256d5def27e10bb5400a13195c"
+    },
+    {
+      "project": "x264",
+      "filename": "50-x264--0480cb05fa188d37ae87e8f4fd8f1aea3711f7ee.tar.gz",
+      "sha256": "d0967a1348c85dfde363bb52610403be898171493100561efa0dd05d5fd1ae50",
+      "revision": "0480cb05fa188d37ae87e8f4fd8f1aea3711f7ee",
+      "url": "https://code.videolan.org/videolan/x264/-/archive/0480cb05fa188d37ae87e8f4fd8f1aea3711f7ee/x264-0480cb05fa188d37ae87e8f4fd8f1aea3711f7ee.tar.gz"
+    },
+    {
+      "project": "libass",
+      "filename": "50-libass--21b5a54fceff49c126c201d4b51c6445287a5072.tar.gz",
+      "sha256": "cc971ba7cb615f2276ef51ba8206e7eee8cd567d565255e923879bb7bab49032",
+      "revision": "21b5a54fceff49c126c201d4b51c6445287a5072",
+      "url": "https://codeload.github.com/libass/libass/tar.gz/21b5a54fceff49c126c201d4b51c6445287a5072"
+    },
+    {
+      "project": "nv-codec-headers",
+      "filename": "50-ffnvcodec--f2053071ea93137255b6dcf42e9b4c9e0965a44e.tar.gz",
+      "sha256": "84cefa55265740888a269625474eda5bd018955c2302b72cfe7473ddc82f741f",
+      "revision": "f2053071ea93137255b6dcf42e9b4c9e0965a44e",
+      "url": "https://codeload.github.com/FFmpeg/nv-codec-headers/tar.gz/f2053071ea93137255b6dcf42e9b4c9e0965a44e"
+    },
+    {
+      "project": "AMF",
+      "filename": "50-amf--57ee0cfb0e1a08d9041f77435653794c1b012be0.tar.gz",
+      "sha256": "4255b6cbf2637c778da77ce77ccbb89e92870b3047af5fd56bb680b043ea60b5",
+      "revision": "57ee0cfb0e1a08d9041f77435653794c1b012be0",
+      "url": "https://codeload.github.com/GPUOpen-LibrariesAndSDKs/AMF/tar.gz/57ee0cfb0e1a08d9041f77435653794c1b012be0"
+    },
+    {
+      "project": "oneVPL",
+      "filename": "50-onevpl--412c5cffe3022d5ebb8a955c3b30afe7bd2e3929.tar.gz",
+      "sha256": "deb2641c23f4350f8dbe965be6e424e59fa6696c7b5528ceb9d77a29244cccc4",
+      "revision": "412c5cffe3022d5ebb8a955c3b30afe7bd2e3929",
+      "url": "https://codeload.github.com/intel/libvpl/tar.gz/412c5cffe3022d5ebb8a955c3b30afe7bd2e3929"
+    },
+    {
+      "project": "dav1d",
+      "filename": "50-dav1d--6c7bee685677fd997a431302be4fea8ea4017606.tar.gz",
+      "sha256": "725d0ebe5bd19316aaaeee84a170b0f6f3930fc7cf53fa0c5bbe3c86ba1c2b15",
+      "revision": "6c7bee685677fd997a431302be4fea8ea4017606",
+      "url": "https://code.videolan.org/videolan/dav1d/-/archive/6c7bee685677fd997a431302be4fea8ea4017606/dav1d-6c7bee685677fd997a431302be4fea8ea4017606.tar.gz"
+    }
+  ],
+  "generated_inputs": {
+    "FFmpeg/VERSION": "9.0.2-cactu-d59078794d80\n"
+  },
+  "local_static_archives": [
+    {
+      "filename": "libass.a",
+      "sha256": "8bf50a6c00722465e0afcbbd59eb5aa1f7ccea44607177f1ab4af8986b34decd"
+    },
+    {
+      "filename": "libavcodec.a",
+      "sha256": "508021f955d448ba7ceccdbbe4b7d71993e151bf6bec4f3b14c4fb5b672ec5d8"
+    },
+    {
+      "filename": "libavdevice.a",
+      "sha256": "eb3458a2ae4874e249bf166522fc1d13c084f213c6fa97a9011a8c9ebc939739"
+    },
+    {
+      "filename": "libavfilter.a",
+      "sha256": "587017d8543a92749f0e91ea31bb4467bca7d53f569c7aef97c2c9787bd92791"
+    },
+    {
+      "filename": "libavformat.a",
+      "sha256": "2051613614f77cf5593ae7ab956a254fd7dd0a2237a5119baf051e31711fa5b1"
+    },
+    {
+      "filename": "libavutil.a",
+      "sha256": "8bc5b0e4887dcf5dedef4f07839d60d2374d14b47331f3b3f568da85be362a10"
+    },
+    {
+      "filename": "libdav1d.a",
+      "sha256": "72a4fb5133b5012699d4ecaf8763f03f2e88d92a77567843fe103f836b26200d"
+    },
+    {
+      "filename": "libswresample.a",
+      "sha256": "1fb62fed68e7ce1a5b863c39086fae8b38288131d07ddb2434d27ea59aa35961"
+    },
+    {
+      "filename": "libswscale.a",
+      "sha256": "d74efe1a20c670af8e217f092a796f11133c1c51059c8eda2d193acbb43dfd23"
+    },
+    {
+      "filename": "libvpl.a",
+      "sha256": "e7a9543e88086bc2a625f3a319d3e164c4b27543d42b77cf1f68261baa87155b"
+    },
+    {
+      "filename": "libx264.a",
+      "sha256": "988b8f709b62532a371b363cf204208fe48e3e2268292602c39b8693beccb869"
+    }
+  ],
+  "patches": [],
+  "configure": [
+    "--prefix=<CI_WORKSPACE>/build/ffmpeg-controlled/prefix",
+    "--disable-autodetect",
+    "--disable-doc",
+    "--disable-debug",
+    "--disable-x86asm",
+    "--disable-shared",
+    "--enable-static",
+    "--enable-gpl",
+    "--enable-version3",
+    "--enable-libx264",
+    "--enable-libass",
+    "--enable-libdav1d",
+    "--enable-zlib",
+    "--enable-bzlib",
+    "--enable-lzma",
+    "--enable-iconv",
+    "--enable-libvpl",
+    "--enable-ffnvcodec",
+    "--enable-nvenc",
+    "--enable-nvdec",
+    "--enable-cuvid",
+    "--pkg-config-flags=--static",
+    "--extra-libs=-lstdc++",
+    "--enable-amf",
+    "--extra-cflags=-I<CI_WORKSPACE>/build/ffmpeg-controlled/prefix/include"
+  ],
+  "tools": {
+    "gcc": {
+      "sha256": "f6ff9378c1edb591131304518eac6456708d28720284105930d0d687136bcdd3",
+      "version": "gcc.exe (Rev7, Built by MSYS2 project) 16.2.0"
+    },
+    "make": {
+      "sha256": "91b7e155590d59db22e5eb0a3ffeec6350149f70f9ed2c242d133e584eb72fee",
+      "version": "GNU Make 4.4.1"
+    },
+    "pkg-config": {
+      "sha256": "a3ff66357a7b67d99def00032d7bde68dd354ae1c6286a1ba9e9bf3bfae46132",
+      "version": "3.0.11"
+    },
+    "autoconf": {
+      "sha256": "297d3bb53505386eaad79639a5ea67ed9203f6d430c77a9ee5bad77eef7aa74b",
+      "version": "autoconf (GNU Autoconf) 2.73"
+    },
+    "automake": {
+      "sha256": "88f9adb6274912fc891a292b201ece1df70481f61d93bc1388358da487d15da7",
+      "version": "automake (GNU automake) 1.18.1"
+    },
+    "libtoolize": {
+      "sha256": "6896114b4c486b358eaf5aebc124e2591a49534d047a49a80592fe67a27bb884",
+      "version": "libtoolize (GNU libtool) 2.6.2"
+    },
+    "cmake": {
+      "sha256": "b0cbdfe95dce1cf36882134b9029a28ff12fc8b897335e3ee5229ed09a3da3c4",
+      "version": "cmake version 4.5.1"
+    },
+    "ninja": {
+      "sha256": "6db3d9e4443835fe40d4b1425a0a13012ae810c449f74ba5cb059e6ca16df4f0",
+      "version": "1.13.2"
+    },
+    "meson": {
+      "sha256": "50347fe66019cd21727495c93bdbd955ec7ca498b8f631db63103d2eaa9428d9",
+      "version": "1.12.1"
+    }
+  },
+  "outputs": {
+    "ffmpeg": {
+      "sha256": "11b14d96764768e9ab5af82d9c7fc4d16fa8971f75dd3151669d3d927c40a8a1",
+      "-version": "ffmpeg version 9.0.2-cactu-d59078794d80 Copyright (c) 2000-2026 the FFmpeg developers\nbuilt with gcc 16.2.0 (Rev7, Built by MSYS2 project)\nconfiguration: --prefix=<CI_WORKSPACE>/build/ffmpeg-controlled/prefix --disable-autodetect --disable-doc --disable-debug --disable-x86asm --disable-shared --enable-static --enable-gpl --enable-version3 --enable-libx264 --enable-libass --enable-libdav1d --enable-zlib --enable-bzlib --enable-lzma --enable-iconv --enable-libvpl --enable-ffnvcodec --enable-nvenc --enable-nvdec --enable-cuvid --pkg-config-flags=--static --extra-libs=-lstdc++ --enable-amf --extra-cflags=-I<CI_WORKSPACE>/build/ffmpeg-controlled/prefix/include\nlibavutil      61.  1.102 / 61.  1.102\nlibavcodec     63.  1.102 / 63.  1.102\nlibavformat    63.  1.102 / 63.  1.102\nlibavdevice    63.  1.102 / 63.  1.102\nlibavfilter    12.  1.102 / 12.  1.102\nlibswscale     10.  1.102 / 10.  1.102\nlibswresample   7.  1.102 /  7.  1.102\n\nExiting with exit code 0\n",
+      "-buildconf": "ffmpeg version 9.0.2-cactu-d59078794d80 Copyright (c) 2000-2026 the FFmpeg developers\n  built with gcc 16.2.0 (Rev7, Built by MSYS2 project)\n  configuration: --prefix=<CI_WORKSPACE>/build/ffmpeg-controlled/prefix --disable-autodetect --disable-doc --disable-debug --disable-x86asm --disable-shared --enable-static --enable-gpl --enable-version3 --enable-libx264 --enable-libass --enable-libdav1d --enable-zlib --enable-bzlib --enable-lzma --enable-iconv --enable-libvpl --enable-ffnvcodec --enable-nvenc --enable-nvdec --enable-cuvid --pkg-config-flags=--static --extra-libs=-lstdc++ --enable-amf --extra-cflags=-I<CI_WORKSPACE>/build/ffmpeg-controlled/prefix/include\n  libavutil      61.  1.102 / 61.  1.102\n  libavcodec     63.  1.102 / 63.  1.102\n  libavformat    63.  1.102 / 63.  1.102\n  libavdevice    63.  1.102 / 63.  1.102\n  libavfilter    12.  1.102 / 12.  1.102\n  libswscale     10.  1.102 / 10.  1.102\n  libswresample   7.  1.102 /  7.  1.102\n\n  configuration:\n    --prefix=<CI_WORKSPACE>/build/ffmpeg-controlled/prefix\n    --disable-autodetect\n    --disable-doc\n    --disable-debug\n    --disable-x86asm\n    --disable-shared\n    --enable-static\n    --enable-gpl\n    --enable-version3\n    --enable-libx264\n    --enable-libass\n    --enable-libdav1d\n    --enable-zlib\n    --enable-bzlib\n    --enable-lzma\n    --enable-iconv\n    --enable-libvpl\n    --enable-ffnvcodec\n    --enable-nvenc\n    --enable-nvdec\n    --enable-cuvid\n    --pkg-config-flags=--static\n    --extra-libs=-lstdc++\n    --enable-amf\n    --extra-cflags=-I<CI_WORKSPACE>/build/ffmpeg-controlled/prefix/include\n\nExiting with exit code 0\n",
+      "-L": "ffmpeg version 9.0.2-cactu-d59078794d80 Copyright (c) 2000-2026 the FFmpeg developers\n  built with gcc 16.2.0 (Rev7, Built by MSYS2 project)\n  configuration: --prefix=<CI_WORKSPACE>/build/ffmpeg-controlled/prefix --disable-autodetect --disable-doc --disable-debug --disable-x86asm --disable-shared --enable-static --enable-gpl --enable-version3 --enable-libx264 --enable-libass --enable-libdav1d --enable-zlib --enable-bzlib --enable-lzma --enable-iconv --enable-libvpl --enable-ffnvcodec --enable-nvenc --enable-nvdec --enable-cuvid --pkg-config-flags=--static --extra-libs=-lstdc++ --enable-amf --extra-cflags=-I<CI_WORKSPACE>/build/ffmpeg-controlled/prefix/include\n  libavutil      61.  1.102 / 61.  1.102\n  libavcodec     63.  1.102 / 63.  1.102\n  libavformat    63.  1.102 / 63.  1.102\n  libavdevice    63.  1.102 / 63.  1.102\n  libavfilter    12.  1.102 / 12.  1.102\n  libswscale     10.  1.102 / 10.  1.102\n  libswresample   7.  1.102 /  7.  1.102\nffmpeg is free software; you can redistribute it and/or modify\nit under the terms of the GNU General Public License as published by\nthe Free Software Foundation; either version 3 of the License, or\n(at your option) any later version.\n\nffmpeg is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License\nalong with ffmpeg.  If not, see <http://www.gnu.org/licenses/>.\n"
+    },
+    "ffprobe": {
+      "sha256": "1aec0d47eee3f4a5555bbb6ee542df3c97ec4d72a597e9e10a6b0a6de4d89a85",
+      "-version": "ffprobe version 9.0.2-cactu-d59078794d80 Copyright (c) 2007-2026 the FFmpeg developers\nbuilt with gcc 16.2.0 (Rev7, Built by MSYS2 project)\nconfiguration: --prefix=<CI_WORKSPACE>/build/ffmpeg-controlled/prefix --disable-autodetect --disable-doc --disable-debug --disable-x86asm --disable-shared --enable-static --enable-gpl --enable-version3 --enable-libx264 --enable-libass --enable-libdav1d --enable-zlib --enable-bzlib --enable-lzma --enable-iconv --enable-libvpl --enable-ffnvcodec --enable-nvenc --enable-nvdec --enable-cuvid --pkg-config-flags=--static --extra-libs=-lstdc++ --enable-amf --extra-cflags=-I<CI_WORKSPACE>/build/ffmpeg-controlled/prefix/include\nlibavutil      61.  1.102 / 61.  1.102\nlibavcodec     63.  1.102 / 63.  1.102\nlibavformat    63.  1.102 / 63.  1.102\nlibavdevice    63.  1.102 / 63.  1.102\nlibavfilter    12.  1.102 / 12.  1.102\nlibswscale     10.  1.102 / 10.  1.102\nlibswresample   7.  1.102 /  7.  1.102\n",
+      "-buildconf": "ffprobe version 9.0.2-cactu-d59078794d80 Copyright (c) 2007-2026 the FFmpeg developers\n  built with gcc 16.2.0 (Rev7, Built by MSYS2 project)\n  configuration: --prefix=<CI_WORKSPACE>/build/ffmpeg-controlled/prefix --disable-autodetect --disable-doc --disable-debug --disable-x86asm --disable-shared --enable-static --enable-gpl --enable-version3 --enable-libx264 --enable-libass --enable-libdav1d --enable-zlib --enable-bzlib --enable-lzma --enable-iconv --enable-libvpl --enable-ffnvcodec --enable-nvenc --enable-nvdec --enable-cuvid --pkg-config-flags=--static --extra-libs=-lstdc++ --enable-amf --extra-cflags=-I<CI_WORKSPACE>/build/ffmpeg-controlled/prefix/include\n  libavutil      61.  1.102 / 61.  1.102\n  libavcodec     63.  1.102 / 63.  1.102\n  libavformat    63.  1.102 / 63.  1.102\n  libavdevice    63.  1.102 / 63.  1.102\n  libavfilter    12.  1.102 / 12.  1.102\n  libswscale     10.  1.102 / 10.  1.102\n  libswresample   7.  1.102 /  7.  1.102\n\n  configuration:\n    --prefix=<CI_WORKSPACE>/build/ffmpeg-controlled/prefix\n    --disable-autodetect\n    --disable-doc\n    --disable-debug\n    --disable-x86asm\n    --disable-shared\n    --enable-static\n    --enable-gpl\n    --enable-version3\n    --enable-libx264\n    --enable-libass\n    --enable-libdav1d\n    --enable-zlib\n    --enable-bzlib\n    --enable-lzma\n    --enable-iconv\n    --enable-libvpl\n    --enable-ffnvcodec\n    --enable-nvenc\n    --enable-nvdec\n    --enable-cuvid\n    --pkg-config-flags=--static\n    --extra-libs=-lstdc++\n    --enable-amf\n    --extra-cflags=-I<CI_WORKSPACE>/build/ffmpeg-controlled/prefix/include\n",
+      "-L": "ffprobe version 9.0.2-cactu-d59078794d80 Copyright (c) 2007-2026 the FFmpeg developers\n  built with gcc 16.2.0 (Rev7, Built by MSYS2 project)\n  configuration: --prefix=<CI_WORKSPACE>/build/ffmpeg-controlled/prefix --disable-autodetect --disable-doc --disable-debug --disable-x86asm --disable-shared --enable-static --enable-gpl --enable-version3 --enable-libx264 --enable-libass --enable-libdav1d --enable-zlib --enable-bzlib --enable-lzma --enable-iconv --enable-libvpl --enable-ffnvcodec --enable-nvenc --enable-nvdec --enable-cuvid --pkg-config-flags=--static --extra-libs=-lstdc++ --enable-amf --extra-cflags=-I<CI_WORKSPACE>/build/ffmpeg-controlled/prefix/include\n  libavutil      61.  1.102 / 61.  1.102\n  libavcodec     63.  1.102 / 63.  1.102\n  libavformat    63.  1.102 / 63.  1.102\n  libavdevice    63.  1.102 / 63.  1.102\n  libavfilter    12.  1.102 / 12.  1.102\n  libswscale     10.  1.102 / 10.  1.102\n  libswresample   7.  1.102 /  7.  1.102\nffprobe is free software; you can redistribute it and/or modify\nit under the terms of the GNU General Public License as published by\nthe Free Software Foundation; either version 3 of the License, or\n(at your option) any later version.\n\nffprobe is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License\nalong with ffprobe.  If not, see <http://www.gnu.org/licenses/>.\n"
+    }
+  },
+  "publication_approved": false,
+  "complete_corresponding_source": false,
+  "limitations": [
+    "Host font/shaping/QSV/VAAPI dependency versions and source correspondence remain to be locked",
+    "Assembly disabled for the initial candidate; performance is not representative",
+    "No bit-identical reproduction claim"
+  ]
+}

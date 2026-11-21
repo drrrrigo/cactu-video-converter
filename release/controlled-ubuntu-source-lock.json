@@ -1,9 +1,9 @@
 {
-  "inventory_source_commit": "fa3508f525f50569b4196bc1812155fa167381cc",
-  "upstream_source_commit": "5449be25ca4cfe52f4d739e1dc3effcfe825d831",
+  "inventory_source_commit": "a7ffbadbb162e0af75083a506fb8e343375fc745",
+  "upstream_source_commit": "7f9a9cc514e036fe4eccba131bb063040a5e4681",
   "artifact": {
     "filename": "CactuVideoConverter-0.1.0-beta.1-x86_64.AppImage",
-    "sha256": "ec02db6ad370ebfa1a85c5d3d959e96edf8bc6d5e9ee9c9e90c2cf1613be24d1"
+    "sha256": "ca8e07b74bcc96be23699aae826df40a46a04529d3e4c56d5c7c73ac7877350e"
   },
   "source_packages": [
     {
@@ -1672,6 +1672,33 @@
       "verification": "exact Launchpad source version over HTTPS; parts match dsc SHA-256; PGP signature not independently verified"
     },
     {
+      "source_package": "xcb-util-keysyms",
+      "source_version": "0.4.0-1build3",
+      "status": "RETAINED",
+      "publication": "https://api.launchpad.net/1.0/ubuntu/+archive/primary/+sourcepub/15297957",
+      "cache_subdirectory": "xcb-util-keysyms/0.4.0-1build3",
+      "dsc": {
+        "filename": "xcb-util-keysyms_0.4.0-1build3.dsc",
+        "url": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/xcb-util-keysyms/0.4.0-1build3/xcb-util-keysyms_0.4.0-1build3.dsc",
+        "sha256": "5a83beb9ffb67c550e9dd89a2dfdc814176be49f50b51838525c8baf20457a5a"
+      },
+      "parts": [
+        {
+          "filename": "xcb-util-keysyms_0.4.0.orig.tar.bz2",
+          "url": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/xcb-util-keysyms/0.4.0-1build3/xcb-util-keysyms_0.4.0.orig.tar.bz2",
+          "sha256": "0ef8490ff1dede52b7de533158547f8b454b241aa3e4dcca369507f66f216dd9",
+          "size": 289880
+        },
+        {
+          "filename": "xcb-util-keysyms_0.4.0-1build3.debian.tar.xz",
+          "url": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/xcb-util-keysyms/0.4.0-1build3/xcb-util-keysyms_0.4.0-1build3.debian.tar.xz",
+          "sha256": "23dfbb54ff32bd0b0a67da70793e5496fa7e0334eea37388532d1981c2f34597",
+          "size": 4460
+        }
+      ],
+      "verification": "exact Launchpad source version over HTTPS; parts match dsc SHA-256; PGP signature not independently verified"
+    },
+    {
       "source_package": "xcb-util-renderutil",
       "source_version": "0.3.9-1build3",
       "status": "RETAINED",
@@ -1694,6 +1721,33 @@
           "url": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/xcb-util-renderutil/0.3.9-1build3/xcb-util-renderutil_0.3.9-1build3.debian.tar.xz",
           "sha256": "ff35b6b5a8d009d7f607f447eec42a1ec2de5186f38e01a43485294188c5170c",
           "size": 4512
+        }
+      ],
+      "verification": "exact Launchpad source version over HTTPS; parts match dsc SHA-256; PGP signature not independently verified"
+    },
+    {
+      "source_package": "xcb-util-wm",
+      "source_version": "0.4.1-1.1build2",
+      "status": "RETAINED",
+      "publication": "https://api.launchpad.net/1.0/ubuntu/+archive/primary/+sourcepub/15297959",
+      "cache_subdirectory": "xcb-util-wm/0.4.1-1.1build2",
+      "dsc": {
+        "filename": "xcb-util-wm_0.4.1-1.1build2.dsc",
+        "url": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/xcb-util-wm/0.4.1-1.1build2/xcb-util-wm_0.4.1-1.1build2.dsc",
+        "sha256": "0c0993c06aa5e20950245d9a8aca3deeb7aa2129ecaf0783bbf37ce5a0ae60be"
+      },
+      "parts": [
+        {
+          "filename": "xcb-util-wm_0.4.1.orig.tar.gz",
+          "url": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/xcb-util-wm/0.4.1-1.1build2/xcb-util-wm_0.4.1.orig.tar.gz",
+          "sha256": "038b39c4bdc04a792d62d163ba7908f4bb3373057208c07110be73c1b04b8334",
+          "size": 395835
+        },
+        {
+          "filename": "xcb-util-wm_0.4.1-1.1build2.debian.tar.xz",
+          "url": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/xcb-util-wm/0.4.1-1.1build2/xcb-util-wm_0.4.1-1.1build2.debian.tar.xz",
+          "sha256": "cbf5ce21c783753ad6a783addbefc732e5955ce7f5f81af51b03a258d04befda",
+          "size": 4620
         }
       ],
       "verification": "exact Launchpad source version over HTTPS; parts match dsc SHA-256; PGP signature not independently verified"

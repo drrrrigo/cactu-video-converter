@@ -63,9 +63,21 @@ def verify(root=ROOT, *, controlled=False):
                 "source_version": package["source_version"],
             }
         )
+    msys_verified = []
+    msys_lock = root / "release/controlled-msys-source-lock.json"
+    if controlled and msys_lock.is_file():
+        for package in read_json(msys_lock)["source_packages"]:
+            for entry in [package["archive"], package["signature"]]:
+                name = entry["filename"]
+                if Path(name).name != name or sha256(
+                    root / "release/evidence/local/msys-sources" / name
+                ) != entry["sha256"]:
+                    raise RuntimeError("MSYS2 source/signature missing or changed: " + name)
+            msys_verified.append({"base": package["base"], "version": package["version"]})
     return {
         "retained_verified": verified,
         "ubuntu_source_packages_verified": ubuntu_verified,
+        "msys_source_packages_verified": msys_verified,
         "scope": "controlled candidates"
         if controlled
         else "selected legacy provider plus retained evidence",

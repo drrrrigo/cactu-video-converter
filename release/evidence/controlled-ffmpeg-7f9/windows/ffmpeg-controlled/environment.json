@@ -1,0 +1,41 @@
+{
+  "platform": "MINGW64_NT-10.0-26100-3.6.12-50c44b7c.x86_64-x86_64-64bit-WindowsPE",
+  "tools": {
+    "gcc": {
+      "sha256": "f6ff9378c1edb591131304518eac6456708d28720284105930d0d687136bcdd3",
+      "version": "gcc.exe (Rev7, Built by MSYS2 project) 16.2.0"
+    },
+    "make": {
+      "sha256": "91b7e155590d59db22e5eb0a3ffeec6350149f70f9ed2c242d133e584eb72fee",
+      "version": "GNU Make 4.4.1"
+    },
+    "pkg-config": {
+      "sha256": "a3ff66357a7b67d99def00032d7bde68dd354ae1c6286a1ba9e9bf3bfae46132",
+      "version": "3.0.11"
+    },
+    "autoconf": {
+      "sha256": "297d3bb53505386eaad79639a5ea67ed9203f6d430c77a9ee5bad77eef7aa74b",
+      "version": "autoconf (GNU Autoconf) 2.73"
+    },
+    "automake": {
+      "sha256": "88f9adb6274912fc891a292b201ece1df70481f61d93bc1388358da487d15da7",
+      "version": "automake (GNU automake) 1.18.1"
+    },
+    "libtoolize": {
+      "sha256": "6896114b4c486b358eaf5aebc124e2591a49534d047a49a80592fe67a27bb884",
+      "version": "libtoolize (GNU libtool) 2.6.2"
+    },
+    "cmake": {
+      "sha256": "b0cbdfe95dce1cf36882134b9029a28ff12fc8b897335e3ee5229ed09a3da3c4",
+      "version": "cmake version 4.5.1"
+    },
+    "ninja": {
+      "sha256": "6db3d9e4443835fe40d4b1425a0a13012ae810c449f74ba5cb059e6ca16df4f0",
+      "version": "1.13.2"
+    },
+    "meson": {
+      "sha256": "50347fe66019cd21727495c93bdbd955ec7ca498b8f631db63103d2eaa9428d9",
+      "version": "1.12.1"
+    }
+  }
+}
