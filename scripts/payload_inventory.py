@@ -419,7 +419,7 @@ def inventory(
                 source_evidence = {"distribution": "Cactu native source build", **evidence}
         elif file.name == "PREREQUISITES.txt":
             component = dict(catalog["cactu"])
-        elif "licenses/" in relative or file.name in {"LICENSE", "THIRD_PARTY_NOTICES.md"}:
+        elif "licenses/" in relative or file.name in {"LICENSE", "THIRD_PARTY_NOTICES.md", "WINDOWS-THIRD-PARTY-LICENSES.txt"}:
             component = {
                 "project": "license-and-notice-material",
                 "version": "payload",

@@ -36,5 +36,12 @@
   ],
   "source_publication_required_by_these_licenses": false,
   "obligation": "retain copyright/license/attribution; official CPython recipe versions and supplied notices establish attribution, not byte-identical rebuild proof",
-  "human_license_approval": false
+  "human_license_approval": false,
+  "windows_binary_notice": {
+    "file": "licenses/python-native/CPython-3.14.7-WINDOWS-LICENSE.txt",
+    "sha256": "935cf13e19f8c31b497d20b05d73623431a226b230c3599bc30fa3348979bc68",
+    "origin": "https://www.python.org/ftp/python/3.14.7/python-3.14.7-embed-amd64.zip",
+    "archive_sha256": "d297e5ff019966817ad8502465176139f2d3d840fa4ed84b13bed399a6ab1f15",
+    "scope": "Exact Windows LICENSE.txt including Additional Conditions for this Windows binary build; embedded Microsoft Distributable Code remains distinct from omitted runtime DLLs; not a paid-license requirement or automatic human approval"
+  }
 }

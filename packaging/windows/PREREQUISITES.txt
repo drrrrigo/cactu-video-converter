@@ -14,3 +14,8 @@ Keep the complete extracted folder together. CactuVideoConverter.exe checks
 the actual x64 system DLL versions and loadability before starting Python/Qt.
 Do not start CactuVideoConverter-core.exe directly. The minimum above is a
 conservative qualification floor, not a proven minimum ABI for every component.
+
+Read WINDOWS-THIRD-PARTY-LICENSES.txt before using the packaged third-party code.
+CPython's Windows build includes Microsoft Distributable Code with its separate
+additional conditions. Agree to those conditions before using or redistributing
+that Microsoft code. They do not restrict Cactu's GPL source or Python programs.

@@ -66,6 +66,8 @@ def collect(destination: Path) -> dict:
         )
     for source in (ROOT / "licenses").rglob("*"):
         if source.is_file():
+            if source.name == "CPython-3.14.7-WINDOWS-LICENSE.txt" and sys.platform != "win32":
+                continue
             target = destination / source.relative_to(ROOT / "licenses")
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(source, target)

@@ -171,10 +171,39 @@ def build_launcher(destination, *, test=False, root=ROOT):
 
 def prepare_bundle(bundle, root=ROOT):
     assert_no_runtime(bundle)
+    notice_record = read_json(root / "release/python-incorporated-review.json")[
+        "windows_binary_notice"
+    ]
+    notice = root / notice_record["file"]
+    if sha256(notice) != notice_record["sha256"]:
+        raise RuntimeError("Exact CPython Windows binary license changed")
+    scope = (
+        "Cactu's own source remains GPL-3.0-or-later. The following CPython Windows "
+        "binary license and its Additional Conditions apply to their respective "
+        "third-party components, including embedded Microsoft Distributable Code. "
+        "They do not restrict Cactu's own GPL source or programs running on Python. "
+        "Before using or redistributing that Microsoft code, agree to its applicable "
+        "restrictions below.\n\n"
+    )
+    portable_notice = bundle / "WINDOWS-THIRD-PARTY-LICENSES.txt"
+    portable_notice.write_text(scope + notice.read_text(encoding="utf-8"), encoding="utf-8-sig")
+    work = root / "build/windows-runtime"
+    work.mkdir(parents=True, exist_ok=True)
+    (work / "installer-license.txt").write_text(
+        "Cactu source license and separate third-party Windows binary terms\n\n"
+        + (root / "LICENSE").read_text(encoding="utf-8")
+        + "\n\n"
+        + scope
+        + notice.read_text(encoding="utf-8"),
+        encoding="utf-8-sig",
+    )
     executable = bundle / "CactuVideoConverter.exe"
     core = bundle / "CactuVideoConverter-core.exe"
     executable.rename(core)
     evidence = build_launcher(executable, root=root)
+    evidence.update(
+        cpython_windows_notice_sha256=sha256(notice), portable_notice_sha256=sha256(portable_notice)
+    )
     shutil.copy2(root / "packaging/windows/PREREQUISITES.txt", bundle / "PREREQUISITES.txt")
     evidence.update(
         strategy="system-prerequisite", core_sha256=sha256(core), automatic_download=False
