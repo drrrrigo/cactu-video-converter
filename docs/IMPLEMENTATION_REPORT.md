@@ -1,6 +1,36 @@
 # Implementation report — work in progress
 
-## Implemented
+> Current status (2026-11-21): see [Controlled build closure](FFMPEG_CONTROLLED_CLOSURE.md). That report supersedes historical test counts, provider-only blockers and pending implementation claims below. All technical/license/publication approvals remain false. Earlier milestone records are retained for traceability.
+
+## Current controlled FFmpeg milestone — 2026-11-21
+
+Implemented source builds and isolated packaging candidates instead of replacing
+Cactu's conversion pipeline. No application/media source was changed in this
+milestone. The recipes compile x264, libass, dav1d and oneVPL, install pinned GPU
+headers, retain native FFmpeg decoding and reject nonfree builds. Hash-named
+static archives and PE import checks prevent packaged MSYS libass/VPL fallback.
+Real AV1 software decoding is checked against reference pixels. Exact tool
+fingerprint drift fails before compilation; host/sysroot replay remains open.
+
+The complete local suite passes with physical AMD VAAPI. Native Ubuntu frozen
+ONEDIR/AppImage tests pass; Windows evidence distinguishes successful compilation
+from subsequent reference staging failure and its corrected rerun. A bounded
+Windows access/sharing retry preserves all integrity/capability checks. Exact
+counts, commits, hashes and final platform outcomes are maintained in the
+[closure report](FFMPEG_CONTROLLED_CLOSURE.md), rather than inferred from earlier
+historical packages below.
+
+Actual native source joins verify executable hashes before using the controlled
+graph, tolerate only Git LF/CRLF representations of the same source lock, and
+preserve independent legacy-provider evidence. MSYS source-only archives,
+recipes/patches, notices and internal identity/member hashes are retained; 20
+source signatures verify against a hash-pinned official keyring and published
+signer fingerprints. Native/Qt/Python source review, MSVC rights, Inno object scope,
+manual desktop acceptance and maintained recipient delivery remain incomplete.
+No RC1 promotion, provider replacement, beta tag/release or public binary/source
+bundle upload occurred. All three global approval fields remain false.
+
+## Initial implementation record (historical)
 
 Typed FFprobe media parsing; exact stream-index selection; Web Compatibility /
 Kosmi preset; compatibility analysis; settings validation; smart copy/encode
@@ -13,7 +43,7 @@ FFmpeg/FFprobe 9.0.2 were used from the Linux development host only. Local
 runtime validation checks version, libx264, AAC, subtitles and optional loudnorm
 availability; release verification requires loudnorm.
 
-## Incomplete release work
+## Initial release work (historical, superseded)
 
 No pinned Windows/Linux binary archives or SHA-256 values have been approved.
 The archive acquisition script exists but lacks approved pinned inputs. Full

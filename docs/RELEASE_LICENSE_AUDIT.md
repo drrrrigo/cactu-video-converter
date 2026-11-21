@@ -1,6 +1,32 @@
 # Release license audit — v0.1.0-beta.1
 
-## Current blocker resolution — 2026-11-20
+> Current status (2026-11-21): see [Controlled build closure](FFMPEG_CONTROLLED_CLOSURE.md). That report supersedes historical test counts, provider-only blockers and pending implementation claims below. All technical/license/publication approvals remain false. Earlier milestone records are retained for traceability.
+
+## Controlled-build evidence update — 2026-11-21
+
+The reduced FFmpeg graph is implemented and tested in isolated candidates, with
+source/input/recipe/executable hashes and actual license/configuration output.
+The legacy Xvid acquisition failure does not block this reduced graph; it remains
+unresolved for reconstructing the unchanged selected provider. Source-built dav1d
+preserves actual AV1 CPU decoding. Static library selection is verified instead
+of assumed from successful compilation.
+
+Qt ICU 73.2 and Python native dependency locks add exact source/notice identities;
+Python OpenSSL DLLs match the official source supplier's binary archive by hash.
+The controlled Ubuntu inventory maps to 64 exact source packages. Matched MSYS
+DLLs have package-level byte ownership, notices and exact source-only archives;
+20 signatures verify with the official keyring, hash-pinned from its publisher
+index, and published signer fingerprints. The trust bootstrap is official HTTPS,
+not an independently supplied offline trust root. Source identity and signatures
+are evidence, not whole-payload redistribution approval.
+
+MSVC conditional grant/owner eligibility, exact wheel/static-extension build
+correspondence, native terms/source/replacement assessment, actual Inno object
+incorporation and maintained recipient source access remain open. Source-assets
+publication plumbing is implemented and fail closed. Current exact candidate
+results/hashes and owner-only actions are in the [closure report](FFMPEG_CONTROLLED_CLOSURE.md).
+
+## Historical provider blocker resolution — 2026-11-20
 
 **BLOCKED before RC1.** No legal/publication approval is declared. The full current
 facts, exact obstacles and remediation matrix are in

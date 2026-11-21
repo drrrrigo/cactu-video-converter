@@ -1,0 +1,20 @@
+{
+  "complete_corresponding_source": false,
+  "assets": [
+    {
+      "filename": "Cactu-FFmpeg-controlled-source-review.tar",
+      "sha256": "6dad00bbe342f2df8383a651a9d47bbe2d66a0f895d137d855f06044906ccc9e",
+      "redistribution_approved": false
+    }
+  ],
+  "remaining": [
+    "host native library and compiler source/build correspondence",
+    "source selection and packaged validation for the exact final native candidates",
+    "final component license review"
+  ],
+  "scope": "Linux FFmpeg component source review only; incomplete, local, not a complete Cactu source offer",
+  "archive_members": 17,
+  "all_six_source_archive_hashes_verified_after_reopening": true,
+  "recipe_helper_bytes_match": true,
+  "extracted_recipe_import_and_help_pass": true
+}

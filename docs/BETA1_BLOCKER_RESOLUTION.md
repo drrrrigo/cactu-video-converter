@@ -1,5 +1,7 @@
 # Beta.1 redistribution blocker resolution
 
+Current controlled-build outcome and remaining RC1 blockers: [FFMPEG_CONTROLLED_CLOSURE](FFMPEG_CONTROLLED_CLOSURE.md), reviewed 2026-11-21. This is the authoritative current summary; the following sections preserve earlier audit results and intermediate build history. A blocker or test count from an earlier section must not be applied to a later candidate without its exact source/artifact identity.
+
 Reviewed 2026-11-20 (America/Sao_Paulo). **Improved, still BLOCKED before RC1.**
 Only packaging, source retention and audit tooling changed. Product/media behavior
 is preserved. No beta tag, release, binary or source-bundle publication occurred.

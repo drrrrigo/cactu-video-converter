@@ -1,5 +1,7 @@
 # Current qualification note — AV1 correction
 
+> Current status (2026-11-21): see [Controlled build closure](FFMPEG_CONTROLLED_CLOSURE.md). That report supersedes historical test counts, provider-only blockers and pending implementation claims below. All technical/license/publication approvals remain false. Earlier milestone records are retained for traceability.
+
 Earlier candidate reports below describe intermediate stages, not eligible RCs.
 An actual AV1 input exposed that FFmpeg native av1 is hardware-only: the old
 capability-name check and 170-test suite did not cover CPU AV1 decoding. Those

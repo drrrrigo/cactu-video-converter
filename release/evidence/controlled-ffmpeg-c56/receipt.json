@@ -1,0 +1,95 @@
+{
+  "run_id": 44904194890,
+  "upstream_source_commit": "c56ebf68242cae0c312b4abd2529ed737cefd512",
+  "result": "SUCCESS",
+  "scope": "Native Windows controlled static library selection, software AV1 reference pixels, full compatibility suite, frozen ONEDIR/portable and installer install-convert-uninstall smoke. No physical GPU validation.",
+  "normalization": "Generic hosted workspace prefix only; raw original metadata retained locally. Original and retained hashes below.",
+  "files": [
+    {
+      "file": "windows/ffmpeg-controlled/packages.txt",
+      "original_sha256": "169143378f5cc5e4a22d97d49e1be09e9e617c1a305ca7e9403ce4febe83eec1",
+      "retained_sha256": "169143378f5cc5e4a22d97d49e1be09e9e617c1a305ca7e9403ce4febe83eec1",
+      "generic_ci_workspace_redacted": false
+    },
+    {
+      "file": "windows/ffmpeg-controlled/environment.json",
+      "original_sha256": "5e7f7aac996443caa972319106e90f3f4b20b5a16697b0f8c4dde9639acf136d",
+      "retained_sha256": "5e7f7aac996443caa972319106e90f3f4b20b5a16697b0f8c4dde9639acf136d",
+      "generic_ci_workspace_redacted": false
+    },
+    {
+      "file": "windows/ffmpeg-controlled/compatibility.json",
+      "original_sha256": "65421443a7d1a7cae0b336aff2da2287c649b915c4f6239d5f7a03251556e76d",
+      "retained_sha256": "65421443a7d1a7cae0b336aff2da2287c649b915c4f6239d5f7a03251556e76d",
+      "generic_ci_workspace_redacted": false
+    },
+    {
+      "file": "windows/ffmpeg-controlled/manifest.json",
+      "original_sha256": "52dc934d2c4380a3205cad2ec0e0945eed8f6b45236fdc3b9f27d3a3cb3d1a84",
+      "retained_sha256": "f3ea01202ce90b11445132dd5ad613af2f952396dc7246896e4d3c72a1d622e9",
+      "generic_ci_workspace_redacted": true
+    },
+    {
+      "file": "windows/packaging/windows-x86_64-portable-payload.json",
+      "original_sha256": "7fd8b0f6e2cc6ea9f10c4315f502bc576cd84d9adc44cd60a94f809fcba9dc45",
+      "retained_sha256": "7fd8b0f6e2cc6ea9f10c4315f502bc576cd84d9adc44cd60a94f809fcba9dc45",
+      "generic_ci_workspace_redacted": false
+    },
+    {
+      "file": "windows/packaging/windows-x86_64-portable-comparison.json",
+      "original_sha256": "91afcd10d23dda6cd1e8db93808acb7705aeadfb06a7af6af271d8ea14ba1ef3",
+      "retained_sha256": "91afcd10d23dda6cd1e8db93808acb7705aeadfb06a7af6af271d8ea14ba1ef3",
+      "generic_ci_workspace_redacted": false
+    },
+    {
+      "file": "windows/packaging/windows-x86_64-SHA256SUMS.txt",
+      "original_sha256": "60531960f03e566c41b89a7f0561c55acadb3a068da1c7b1fcd2212a0ee1a5bc",
+      "retained_sha256": "60531960f03e566c41b89a7f0561c55acadb3a068da1c7b1fcd2212a0ee1a5bc",
+      "generic_ci_workspace_redacted": false
+    },
+    {
+      "file": "windows/packaging/windows-x86_64-os-boundary.json",
+      "original_sha256": "816bdad37044d3ddee9c6d1b87216e085bd10c9d71bde3978a10b93f80603f30",
+      "retained_sha256": "816bdad37044d3ddee9c6d1b87216e085bd10c9d71bde3978a10b93f80603f30",
+      "generic_ci_workspace_redacted": false
+    },
+    {
+      "file": "windows/packaging/windows-x86_64-onedir-smoke.json",
+      "original_sha256": "3a4922c9351f0b0229b7453ef6cee5887c48b5bb8bae6704d44bca926d534a72",
+      "retained_sha256": "3a4922c9351f0b0229b7453ef6cee5887c48b5bb8bae6704d44bca926d534a72",
+      "generic_ci_workspace_redacted": false
+    },
+    {
+      "file": "windows/packaging/windows-x86_64-build.json",
+      "original_sha256": "9c04db1e2130839b1d903dffe88fa1fc041820113c6cf61da69a5f38f0d0eb95",
+      "retained_sha256": "9c04db1e2130839b1d903dffe88fa1fc041820113c6cf61da69a5f38f0d0eb95",
+      "generic_ci_workspace_redacted": false
+    },
+    {
+      "file": "windows/packaging/windows-x86_64-portable-smoke.json",
+      "original_sha256": "3a4922c9351f0b0229b7453ef6cee5887c48b5bb8bae6704d44bca926d534a72",
+      "retained_sha256": "3a4922c9351f0b0229b7453ef6cee5887c48b5bb8bae6704d44bca926d534a72",
+      "generic_ci_workspace_redacted": false
+    },
+    {
+      "file": "windows/packaging/windows-x86_64-installed-payload.json",
+      "original_sha256": "2ba885db6277ff64e2d654ed869bccdaccdde8fb61e9cc55a64f3c796932f5ed",
+      "retained_sha256": "2ba885db6277ff64e2d654ed869bccdaccdde8fb61e9cc55a64f3c796932f5ed",
+      "generic_ci_workspace_redacted": false
+    },
+    {
+      "file": "windows/packaging/windows-x86_64-runtime-evidence.json",
+      "original_sha256": "aecd8ac9ad3f2ddca1927550fea631d0648973f2009b16e250c6d2e80197bcab",
+      "retained_sha256": "b150c2b93a8632d167bad2fdd80c9157566ce73345b0e71d456560390093d51e",
+      "generic_ci_workspace_redacted": true
+    },
+    {
+      "file": "windows/packaging/windows-x86_64-installed-comparison.json",
+      "original_sha256": "773482f099a49abbe225a45964846d2d3c965caad00f94121baf0ebc0c52572c",
+      "retained_sha256": "773482f099a49abbe225a45964846d2d3c965caad00f94121baf0ebc0c52572c",
+      "generic_ci_workspace_redacted": false
+    }
+  ],
+  "publication_approved": false,
+  "complete_corresponding_source": false
+}

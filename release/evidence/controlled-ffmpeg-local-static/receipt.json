@@ -6,7 +6,7 @@
   "failures": 0,
   "errors": 0,
   "skipped": 0,
-  "elapsed_seconds": 70.974,
+  "elapsed_seconds": 71.002,
   "physical_gpu": "AMD RX 7700 XT / VAAPI",
   "frozen_smoke": "ONEDIR and AppImage: preview, subtitles, two sequential loudness jobs, software H264/AAC/yuv420p/Faststart",
   "artifact": {
@@ -17,7 +17,7 @@
   "runtime_rebuild_after_TMPDIR_fix_sha256": "dcf5f5b07d5679e37c5a2decff55a65fc2962c565fdaacbf88eaf2bd4ad61ac4",
   "publication_approved": false,
   "complete_corresponding_source": false,
-  "audit_tools_tested_source_commit": "c56ebf68242cae0c312b4abd2529ed737cefd512",
+  "audit_tools_tested_source_commit": "78a4bc1677a7f5067847b393d85e2798c670a629",
   "intermediate_validation_notes": [
     "A subsequent 174-test run exposed an optional package-base lookup error in the MSYS report helper; corrected, then 174 and 177 complete tests passed.",
     "Packaging source tree is the recorded e3bfa2c isolated export; later changes concern audit/acquisition tools and their tests, not media/application code."

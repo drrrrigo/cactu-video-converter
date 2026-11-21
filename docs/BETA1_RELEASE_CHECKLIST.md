@@ -1,6 +1,26 @@
 # Beta.1 authoritative release checklist
 
-Reviewed **2026-11-20**. Target v0.1.0-beta.1. Preparation/audit only.
+> Current status (2026-11-21): see [Controlled build closure](FFMPEG_CONTROLLED_CLOSURE.md). That report supersedes historical test counts, provider-only blockers and pending implementation claims below. All technical/license/publication approvals remain false. Earlier milestone records are retained for traceability.
+
+## Current controlled-build checklist — 2026-11-21
+
+| Check | Current state |
+| --- | --- |
+| Native source recipes / source locks / executable manifests | IMPLEMENTED; six Linux / seven Windows source inputs, transitive review separate |
+| Required software/audio/subtitle/preview/queue behavior | Local complete suite with physical AMD VAAPI passes; native evidence scoped to exact candidates |
+| Ubuntu controlled frozen ONEDIR/AppImage | PASS at 4e47bab, run 44902731258 |
+| Windows controlled source/static-input PE proof | PASS at c56ebf6, run 44904194890: 177 discovered, 3 GPU skips, ONEDIR/portable/installer install-convert-uninstall; original 4e47 staging failure retained separately |
+| Complete source CI after Windows staging correction | PASS at 78a4bc1, run 44904835443, Windows/Linux: 177 discovered, 3 GPU skips, Ruff/branding/history scans |
+| Official MSYS source archive acquisition/signatures | 20 source-only archives retained; internal identities/member hashes checked, gpgv verifies against pinned official keys; not license approval |
+| Ubuntu exact sources | 64 actual current packages; 65 unique retained historical/current package versions |
+| AppImage controlled runtime / independent relink | Exact dcf5f5b0… hash reproduced; TMPDIR namespace regression fixed and actual rebuild checked |
+| Source asset publishing support | IMPLEMENTED, disabled; exact approved index SHA required and currently null |
+| Complete source/build/notice/rights/manual/delivery closure | BLOCKED; see current closure report for exact inputs/actions |
+| RC1 / provider promotion / beta publication | BLOCKED; three global approvals false; no public beta tag, binaries or source bundles |
+
+## Historical provider checklist
+
+Historical checklist reviewed **2026-11-20**. Target v0.1.0-beta.1. Preparation/audit only.
 **BLOCKED before RC1; not ready for owner publication approval.**
 
 ## Source and validation

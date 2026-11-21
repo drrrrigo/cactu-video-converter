@@ -2,7 +2,7 @@
   "candidate_sha256": "e3908e1b6f647b8bfb1130fb4f02a11db1d70de67972c37d5650f3b2416fb022",
   "av1_software_decode": true,
   "av1_decoded_pixels_match_provider": true,
-  "av1_fixture_sha256": "621acb56d5b29a05153222428abaaf932656eb4972ef70e4f87a58aad9bd6597",
+  "av1_fixture_sha256": "15e2e2ad803193e5272a05192c0d3820358fa95361378c39399c5384e275988c",
   "tests": 177,
   "failures": 0,
   "errors": 0,
