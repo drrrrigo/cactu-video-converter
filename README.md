@@ -98,4 +98,6 @@ not by itself certify a particular binary bundle for redistribution.
 
 Current redistribution engineering status and exact remaining RC1 blockers: [blocker-resolution report](docs/BETA1_BLOCKER_RESOLUTION.md). Native audit builds passed smoke; beta binaries remain unpublished.
 
-Current controlled FFmpeg build and remaining redistribution gates: [engineering closure report](docs/FFMPEG_CONTROLLED_CLOSURE.md). Experimental candidates remain local audit artifacts; the public beta is not published.
+Historical controlled FFmpeg build evidence: [earlier engineering report](docs/FFMPEG_CONTROLLED_CLOSURE.md). Final status is in the qualification report below.
+
+Final dependency review and common native candidate: [RC1 qualification](docs/RC1_QUALIFICATION.md). Controlled FFmpeg is selected for audit packaging; Microsoft rights and human approval remain pending. No public beta is published.

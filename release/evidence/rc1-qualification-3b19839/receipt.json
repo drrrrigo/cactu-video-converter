@@ -1,0 +1,173 @@
+{
+  "candidate_source_commit": "3b19839d6a626dd0a339dc7997e79c7fe23f9935",
+  "qualification": "AUDIT_ONLY_NOT_RC1",
+  "windows_run": 44931018788,
+  "linux_retry_run": 44931526666,
+  "source_ci_run": 44931018572,
+  "first_linux_attempt": {
+    "run": 44931018788,
+    "job": 136927435199,
+    "result": "FAILED: Python segmentation fault during full compatibility suite, exit 139; no package success inferred",
+    "cause": "Not established; same-source isolated retry recorded separately"
+  },
+  "normalization": "Generic hosted workspace path only. Raw metadata remains local. No application binary or source archive retained in Git.",
+  "files": [
+    {
+      "file": "linux/ffmpeg-controlled/compatibility.json",
+      "original_sha256": "075ffb23bf397881763153b3550ad0cc1ba453623031327b6d3e8de5a6faa383",
+      "retained_sha256": "075ffb23bf397881763153b3550ad0cc1ba453623031327b6d3e8de5a6faa383",
+      "generic_ci_workspace_redacted": false
+    },
+    {
+      "file": "linux/ffmpeg-controlled/environment.json",
+      "original_sha256": "17b091aa3ae518ea5f7cc0d91582c7ee9ca2680d1de44a1561dffe0c6e07beca",
+      "retained_sha256": "17b091aa3ae518ea5f7cc0d91582c7ee9ca2680d1de44a1561dffe0c6e07beca",
+      "generic_ci_workspace_redacted": false
+    },
+    {
+      "file": "linux/ffmpeg-controlled/manifest.json",
+      "original_sha256": "519fc00b87dd96016b6f667275d5649095b2c785753ad48182a100c086e32f4b",
+      "retained_sha256": "8e5dbc3de7ecfd5b5449c5002f29cd9b8be5efa6c9030ce8ab26764037698dc7",
+      "generic_ci_workspace_redacted": true
+    },
+    {
+      "file": "linux/packaging/linux-x86_64-SHA256SUMS.txt",
+      "original_sha256": "03ccf454575c499f6571f1f8780bfa1426119479f7e894a588c0f2ab3ab24ec1",
+      "retained_sha256": "03ccf454575c499f6571f1f8780bfa1426119479f7e894a588c0f2ab3ab24ec1",
+      "generic_ci_workspace_redacted": false
+    },
+    {
+      "file": "linux/packaging/linux-x86_64-appimage-comparison.json",
+      "original_sha256": "29b3774790092a1974edf263556a835a9a82c51530394dbbe7120b1ecc97c7ef",
+      "retained_sha256": "29b3774790092a1974edf263556a835a9a82c51530394dbbe7120b1ecc97c7ef",
+      "generic_ci_workspace_redacted": false
+    },
+    {
+      "file": "linux/packaging/linux-x86_64-appimage-payload.json",
+      "original_sha256": "acf0a6b52fd7d65ebc35558c5eb361192c679c9945b5ba37021e4b38a48e19b6",
+      "retained_sha256": "acf0a6b52fd7d65ebc35558c5eb361192c679c9945b5ba37021e4b38a48e19b6",
+      "generic_ci_workspace_redacted": false
+    },
+    {
+      "file": "linux/packaging/linux-x86_64-appimage-smoke.json",
+      "original_sha256": "3db61cc5d2fea87241ea9ab769081beb8e31dd602d7f4318093664139534606a",
+      "retained_sha256": "3db61cc5d2fea87241ea9ab769081beb8e31dd602d7f4318093664139534606a",
+      "generic_ci_workspace_redacted": false
+    },
+    {
+      "file": "linux/packaging/linux-x86_64-build.json",
+      "original_sha256": "970d2dbfaff029197979994f2d0cbc5eecbe976b0c370506b4ee262c4375e6be",
+      "retained_sha256": "970d2dbfaff029197979994f2d0cbc5eecbe976b0c370506b4ee262c4375e6be",
+      "generic_ci_workspace_redacted": false
+    },
+    {
+      "file": "linux/packaging/linux-x86_64-onedir-smoke.json",
+      "original_sha256": "3db61cc5d2fea87241ea9ab769081beb8e31dd602d7f4318093664139534606a",
+      "retained_sha256": "3db61cc5d2fea87241ea9ab769081beb8e31dd602d7f4318093664139534606a",
+      "generic_ci_workspace_redacted": false
+    },
+    {
+      "file": "linux/packaging/linux-x86_64-runtime-evidence.json",
+      "original_sha256": "f8dfae1bd19a6bc9266445909f0c7ca87f09a94aeaa1e8585b9f03fbe7ee1afa",
+      "retained_sha256": "c40f29ee30df17fec05a99ad809dd2d6db16d4cc8184cfc8bc5c3e62b90a0352",
+      "generic_ci_workspace_redacted": true
+    },
+    {
+      "file": "windows/controlled-runtime-manifest.json",
+      "original_sha256": "da335cd88f8f322d414aaa386a2bcf0d015f6a5fd46c7e4328bf606c963c475b",
+      "retained_sha256": "da335cd88f8f322d414aaa386a2bcf0d015f6a5fd46c7e4328bf606c963c475b",
+      "generic_ci_workspace_redacted": false
+    },
+    {
+      "file": "windows/ffmpeg-controlled/compatibility.json",
+      "original_sha256": "4f4b32091d512a4962dd37807cf9a1484b2de0ca47a52a963eaeba6880d71b3a",
+      "retained_sha256": "4f4b32091d512a4962dd37807cf9a1484b2de0ca47a52a963eaeba6880d71b3a",
+      "generic_ci_workspace_redacted": false
+    },
+    {
+      "file": "windows/ffmpeg-controlled/environment.json",
+      "original_sha256": "5e7f7aac996443caa972319106e90f3f4b20b5a16697b0f8c4dde9639acf136d",
+      "retained_sha256": "5e7f7aac996443caa972319106e90f3f4b20b5a16697b0f8c4dde9639acf136d",
+      "generic_ci_workspace_redacted": false
+    },
+    {
+      "file": "windows/ffmpeg-controlled/manifest.json",
+      "original_sha256": "09b3f923bd66437e244ed9d1d03b4feb2812fdfa7ba88601f53090f746084bee",
+      "retained_sha256": "09b3f923bd66437e244ed9d1d03b4feb2812fdfa7ba88601f53090f746084bee",
+      "generic_ci_workspace_redacted": false
+    },
+    {
+      "file": "windows/ffmpeg-controlled/packages.txt",
+      "original_sha256": "169143378f5cc5e4a22d97d49e1be09e9e617c1a305ca7e9403ce4febe83eec1",
+      "retained_sha256": "169143378f5cc5e4a22d97d49e1be09e9e617c1a305ca7e9403ce4febe83eec1",
+      "generic_ci_workspace_redacted": false
+    },
+    {
+      "file": "windows/msys-payload-notices.json",
+      "original_sha256": "dd7e6114212dc08a1b3967113b0fc0c13d858805681e16eb719541f613d95de6",
+      "retained_sha256": "dd7e6114212dc08a1b3967113b0fc0c13d858805681e16eb719541f613d95de6",
+      "generic_ci_workspace_redacted": false
+    },
+    {
+      "file": "windows/packaging/windows-x86_64-SHA256SUMS.txt",
+      "original_sha256": "672636f68b36d2e210f5f48abdcc914121de2c82fccc276c7781e968b1ffeba5",
+      "retained_sha256": "672636f68b36d2e210f5f48abdcc914121de2c82fccc276c7781e968b1ffeba5",
+      "generic_ci_workspace_redacted": false
+    },
+    {
+      "file": "windows/packaging/windows-x86_64-build.json",
+      "original_sha256": "d69513e3c1c86eb836e1bf73bc3652be7f1927e01925f1cfce02eb71e9ab08ed",
+      "retained_sha256": "d69513e3c1c86eb836e1bf73bc3652be7f1927e01925f1cfce02eb71e9ab08ed",
+      "generic_ci_workspace_redacted": false
+    },
+    {
+      "file": "windows/packaging/windows-x86_64-installed-comparison.json",
+      "original_sha256": "4fbbe53babdd972297be3d2a37f9d8b76e55dd560c104240a1c02a84a289c454",
+      "retained_sha256": "4fbbe53babdd972297be3d2a37f9d8b76e55dd560c104240a1c02a84a289c454",
+      "generic_ci_workspace_redacted": false
+    },
+    {
+      "file": "windows/packaging/windows-x86_64-installed-payload.json",
+      "original_sha256": "325c0c5099a8c8ed5a182a51b43d4888350ffabb9dbce4548e2584dd985aff78",
+      "retained_sha256": "325c0c5099a8c8ed5a182a51b43d4888350ffabb9dbce4548e2584dd985aff78",
+      "generic_ci_workspace_redacted": false
+    },
+    {
+      "file": "windows/packaging/windows-x86_64-onedir-smoke.json",
+      "original_sha256": "3a4922c9351f0b0229b7453ef6cee5887c48b5bb8bae6704d44bca926d534a72",
+      "retained_sha256": "3a4922c9351f0b0229b7453ef6cee5887c48b5bb8bae6704d44bca926d534a72",
+      "generic_ci_workspace_redacted": false
+    },
+    {
+      "file": "windows/packaging/windows-x86_64-os-boundary.json",
+      "original_sha256": "816bdad37044d3ddee9c6d1b87216e085bd10c9d71bde3978a10b93f80603f30",
+      "retained_sha256": "816bdad37044d3ddee9c6d1b87216e085bd10c9d71bde3978a10b93f80603f30",
+      "generic_ci_workspace_redacted": false
+    },
+    {
+      "file": "windows/packaging/windows-x86_64-portable-comparison.json",
+      "original_sha256": "ccda59ae30278f6d4a060f2a1790ea340ec6b0c534408f1161812baaea7e4c25",
+      "retained_sha256": "ccda59ae30278f6d4a060f2a1790ea340ec6b0c534408f1161812baaea7e4c25",
+      "generic_ci_workspace_redacted": false
+    },
+    {
+      "file": "windows/packaging/windows-x86_64-portable-payload.json",
+      "original_sha256": "433ee505cc743642ce619747b707608a7ab7a0ab010be6c0092fa47e6464ca67",
+      "retained_sha256": "433ee505cc743642ce619747b707608a7ab7a0ab010be6c0092fa47e6464ca67",
+      "generic_ci_workspace_redacted": false
+    },
+    {
+      "file": "windows/packaging/windows-x86_64-portable-smoke.json",
+      "original_sha256": "3a4922c9351f0b0229b7453ef6cee5887c48b5bb8bae6704d44bca926d534a72",
+      "retained_sha256": "3a4922c9351f0b0229b7453ef6cee5887c48b5bb8bae6704d44bca926d534a72",
+      "generic_ci_workspace_redacted": false
+    },
+    {
+      "file": "windows/packaging/windows-x86_64-runtime-evidence.json",
+      "original_sha256": "014ef6dc54a9bc291b0558218cc2ec5a4717f8fee983af116c46dd10623a6531",
+      "retained_sha256": "014ef6dc54a9bc291b0558218cc2ec5a4717f8fee983af116c46dd10623a6531",
+      "generic_ci_workspace_redacted": false
+    }
+  ],
+  "publication_approved": false
+}

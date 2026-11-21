@@ -1,5 +1,7 @@
 # Implementation report — work in progress
 
+> Current authority: [RC1 qualification](RC1_QUALIFICATION.md), 2026-11-21. This supersedes the historical status, test counts, provider selection and open engineering lists below. Final common native source is 3b19839; human approval and Microsoft rights remain pending. No public beta is authorized.
+
 > Current status (2026-11-21): see [Controlled build closure](FFMPEG_CONTROLLED_CLOSURE.md). That report supersedes historical test counts, provider-only blockers and pending implementation claims below. All technical/license/publication approvals remain false. Earlier milestone records are retained for traceability.
 
 ## Current controlled FFmpeg milestone — 2026-11-21
@@ -1171,3 +1173,21 @@ fail-closed and no sources/binaries were uploaded. Windows native bootstrap and
 Ubuntu-baseline/toolchain/source/notice closure remain separate pending gates.
 All three global approvals remain false; RC1 is not ready. See the full current
 report for hashes, limitations and genuine owner actions after technical closure.
+
+
+## Final dependency-compliance implementation
+
+Packaging now selects the checked controlled FFmpeg baseline from the original
+clean native checkout, preserving the existing conversion pipeline. Actual-byte
+MSYS attribution integrates supplier notices and handles the same-named CPython
+libffi collision. Qt image-format sources/notices and complete CPython native
+notices are integrated; unused Windows Mesa is excluded. Inno incorporated runtime
+scope and the existing AppImage relink material have finite component reviews.
+The owner explicitly left Microsoft redistribution eligibility pending.
+
+Proposed recipient delivery is implemented with exact common-source/binary hashes,
+license-specific source selection, AMF headers only, source/relink TAR membership
+verification and a fail-closed protected owner index pin. Nothing is automatically
+approved or published. Actual results, tests, hashes, remaining human decisions
+and limitations are maintained in [RC1 qualification](RC1_QUALIFICATION.md) and its
+linked metadata receipts; historical counts/hashes above remain historical.

@@ -1,7 +1,6 @@
 # Controlled FFmpeg and redistribution closure — 2026-11-21
 
-**Material engineering progress; RC1 remains blocked.** This is the current
-summary. Historical reports under release/evidence remain immutable. No beta tag,
+**Historical controlled-build report.** Superseded by [RC1 qualification](RC1_QUALIFICATION.md). Its hashes and selected-provider statements apply to that earlier milestone only. Historical reports under release/evidence remain immutable. No beta tag,
 GitHub release, public application binary artifact or source bundle was published.
 The three global technical/license/publication approval fields remain false.
 The selected vendor runtime remains unchanged; candidates are isolated.

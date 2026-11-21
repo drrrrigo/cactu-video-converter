@@ -1,0 +1,19 @@
+{
+  "source_code_commit": "3b19839d6a626dd0a339dc7997e79c7fe23f9935",
+  "kind": "local source compatibility tests, not a native release artifact build",
+  "python": "3.14.7",
+  "physical_hardware": "AMD RX 7700 XT VAAPI",
+  "tests": 186,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "elapsed_seconds": 74.612,
+  "raw_local_log_sha256": "406763d7b91ee12c2931f9d097ba408ee96d38ed95938486b7c54f7ebcd7f908",
+  "source_history_pattern_scan": {
+    "findings": [],
+    "history_checked": true
+  },
+  "ruff": "PASS",
+  "branding": "PASS",
+  "publication_approved": false
+}

@@ -1,5 +1,9 @@
 # Release license audit — v0.1.0-beta.1
 
+> Current authority: [RC1 qualification](RC1_QUALIFICATION.md), 2026-11-21. This supersedes the historical status, test counts, provider selection and open engineering lists below. Final common native source is 3b19839; human approval and Microsoft rights remain pending. No public beta is authorized.
+
+Final verification: same clean source `3b19839`, 186/186 local tests with AMD VAAPI; source CI and native controlled suites passed on both systems (three cloud GPU skips each). Windows portable/installer and Linux AppImage smoke passed; Linux required a same-source retry after exit 139, preserved in the report. Actual notices and 95 proposed source assets verify; Microsoft rights, final human review and manual acceptance remain pending. All technical/license/publication approvals remain false.
+
 > Current status (2026-11-21): see [Controlled build closure](FFMPEG_CONTROLLED_CLOSURE.md). That report supersedes historical test counts, provider-only blockers and pending implementation claims below. All technical/license/publication approvals remain false. Earlier milestone records are retained for traceability.
 
 ## Controlled-build evidence update — 2026-11-21

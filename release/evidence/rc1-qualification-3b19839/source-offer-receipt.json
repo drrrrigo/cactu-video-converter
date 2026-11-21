@@ -1,0 +1,10 @@
+{
+  "candidate_source_commit": "3b19839d6a626dd0a339dc7997e79c7fe23f9935",
+  "proposed_index_sha256": "73f10cea8b28e824e894aec1689ae92d2ebbeadff7bab47feafe087e813c2f81",
+  "post_build_review_tool_sha256": "803283c5843dbb89289192f3f2ab95577fc2d0fabd864ff66b0a15e7ce87e440",
+  "post_build_tool_scope": "Source selection/hash verification and reporting only; no application or native packaging input changed after the tested source commit",
+  "assets": 95,
+  "engineering_missing_materials": [],
+  "complete_corresponding_source": false,
+  "publication_approved": false
+}

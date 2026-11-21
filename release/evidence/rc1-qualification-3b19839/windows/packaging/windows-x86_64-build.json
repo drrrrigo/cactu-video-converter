@@ -1,0 +1,101 @@
+{
+  "version": "0.1.0-beta.1",
+  "target": "windows-x86_64",
+  "source_commit": "3b19839d6a626dd0a339dc7997e79c7fe23f9935",
+  "source_tree_clean": true,
+  "source_date_epoch": 1795282613,
+  "python": "3.14.7",
+  "python_compiler": "MSC v.1944 64 bit (AMD64)",
+  "python_pin": "3.14.7",
+  "python_pin_matches": true,
+  "python_abi": "cpython-314",
+  "interpreter_executable_sha256": "4942b86a6597e5aee0128daa00050ed79bc21f6e709a78eb19cbfeb0c2f39ac9",
+  "dependency_versions": {
+    "pip": "25.2",
+    "setuptools": "80.9.0",
+    "wheel": "0.45.1",
+    "packaging": "25.0",
+    "PySide6": "6.11.2",
+    "PySide6_Addons": "6.11.2",
+    "PySide6_Essentials": "6.11.2",
+    "shiboken6": "6.11.2",
+    "psutil": "7.2.2",
+    "PyInstaller": "6.16.0",
+    "pyinstaller-hooks-contrib": "2025.9",
+    "altgraph": "0.17.4",
+    "pefile": "2023.2.7",
+    "pywin32-ctypes": "0.2.3",
+    "pytest": "8.4.2",
+    "iniconfig": "2.3.1",
+    "pluggy": "1.7.0",
+    "Pygments": "2.19.2",
+    "colorama": "0.4.6",
+    "ruff": "0.13.3",
+    "PyYAML": "6.0.3"
+  },
+  "requirements_lock_sha256": "a5c116ac8094598568cce32bcb041d37870ce1458f8ed55721395b299a993ec9",
+  "candidate_stage": "AUDIT_ONLY_NOT_RC1",
+  "candidate_id": "0.1.0-beta.1-audit",
+  "platform": "Windows-2025Server-10.0.26100-SP0",
+  "runner_image": "win25-vs2026",
+  "runner_image_version": "20261116.315.1",
+  "packaging_toolchain": {
+    "python": "3.14.7",
+    "linux_runner": "ubuntu-22.04",
+    "windows_runner": "windows-2025",
+    "appimagetool": {
+      "version": "1.9.1",
+      "url": "https://github.com/AppImage/appimagetool/releases/download/1.9.1/appimagetool-x86_64.AppImage",
+      "sha256": "ed4ce84f0d9caff66f50bcca6ff6f35aae54ce8135408b3fa33abfc3cb384eb0",
+      "source_commit": "8c8c91f762b412a19f4e8d2c4b35afb98f2d7c81",
+      "license": "MIT, with separate dependency terms",
+      "role": "build-only packager; separate runtime embeds into output"
+    },
+    "inno_setup": {
+      "version": "7.1.1",
+      "url": "https://github.com/jrsoftware/issrc/releases/download/is-7_1_1/innosetup-7.1.1-x64.exe",
+      "sha256": "8a5a6711c3766a6e5fb74f280ba0e3551e719ce94538d901fdbd1f8f9920b3f0",
+      "source_commit": "2527da77ff7983514f535d19391a748c5d898336",
+      "license": "Inno Setup License and component terms",
+      "role": "build compiler and generated installer/uninstaller runtime"
+    },
+    "appimage_runtime": {
+      "source_commit": "fedfad51acc2860b2916a1eef32ba4a500ff31ef",
+      "sha256": "dcf5f5b07d5679e37c5a2decff55a65fc2962c565fdaacbf88eaf2bd4ad61ac4",
+      "license": "MIT plus statically linked dependency terms including LGPL-covered libfuse",
+      "role": "embedded executable runtime/stub",
+      "previous_provider_input_sha256": "617aa77314d57c8b8e4fae9c3f0b35af7b30d5529cb69e98f64f92510ed98a46",
+      "build_method": "cactu-controlled-offline",
+      "source_lock": "release/appimage-controlled-lock.json",
+      "version": "fedfad51-cactu1"
+    },
+    "python_source": {
+      "url": "https://www.python.org/ftp/python/3.14.7/Python-3.14.7.tar.xz",
+      "sha256": "3b48dac8fb59f62eaa67ac83c1eb12bda1b7a08406dd286e252c11a66be27f81"
+    },
+    "python_linux_baseline": {
+      "provider": "actions/python-versions",
+      "version": "3.14.7",
+      "url": "https://github.com/actions/python-versions/releases/download/3.14.7-31064857500/python-3.14.7-linux-22.04-x64.tar.gz",
+      "sha256": "938c95f002a952aa24d7dbc4a6df353e0c9bb22152cafdb7da79e0beb79ae251",
+      "role": "local audit interpreter matching native CI build family; not a new system Python"
+    }
+  },
+  "signed": false,
+  "artifacts": {
+    "CactuVideoConverter-Portable-0.1.0-beta.1.zip": "f73659308dfcfe272adecdedbfd3ff9076460703014a437e90fec2d22dc51eff",
+    "CactuVideoConverter-Setup-0.1.0-beta.1.exe": "b2f46b79400c5a65fb93f6e6b290f67a0a003e8ff8604c05c93c5d1e02315e30"
+  },
+  "candidate_only": true,
+  "controlled_runtime": {
+    "source_commit": "3b19839d6a626dd0a339dc7997e79c7fe23f9935",
+    "baseline_sha256": "aed108fb83c9a54dc4fe20f9d10764ce67b8a3dbab845c013389f7dabad7dd0c",
+    "controlled_build_manifest_sha256": "09b3f923bd66437e244ed9d1d03b4feb2812fdfa7ba88601f53090f746084bee",
+    "generated_runtime_manifest_sha256": "da335cd88f8f322d414aaa386a2bcf0d015f6a5fd46c7e4328bf606c963c475b",
+    "binary_hashes": {
+      "ffmpeg": "59abbce6c9908ae41f9e4c68f7f98c3a95dd2a95734b68012d4d64ffa6ca855d",
+      "ffprobe": "79f06b56e4e836c75b00b0240e9b8264c777bdd49bd643ecba7a5b9d30a3154a"
+    },
+    "redistribution_approved": false
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "linux-x86_64": {
+    "version": "9.0.2",
+    "build_id": "n9.0.2-61-gd59078794d-20261120",
+    "provider": "FFmpeg-Builds/FFmpeg-Builds",
+    "source_url": "https://github.com/FFmpeg-Builds/FFmpeg-Builds/releases/download/autobuild-2026-11-20-12-40/ffmpeg-n9.0.2-61-gd59078794d-linux64-gpl-9.0.tar.xz",
+    "archive_sha256": "080e804801eac92399a98687575b64aa38e557ed651cc381dfbc1e8fe5c2ccd8",
+    "archive_format": "tar.xz",
+    "ffmpeg_member": "ffmpeg-n9.0.2-61-gd59078794d-linux64-gpl-9.0/bin/ffmpeg",
+    "ffprobe_member": "ffmpeg-n9.0.2-61-gd59078794d-linux64-gpl-9.0/bin/ffprobe",
+    "ffmpeg_sha256": "6b7543cc9705e2c6a6925ae0b4c3a8fccfe0340c8caab7a0e0445dcc596288b4",
+    "ffprobe_sha256": "874e916dfc453d1202dca2836dc51c60adddcd5e19185d183d774c2b35a2ad7e",
+    "build_configuration": "--prefix=/ffbuild/prefix --pkg-config-flags=--static --pkg-config=pkg-config --cross-prefix=x86_64-ffbuild-linux-gnu- --arch=x86_64 --target-os=linux --enable-gpl --enable-version3 --disable-debug --enable-iconv --enable-zlib --enable-libxml2 --enable-libsoxr --enable-openssl --enable-libvmaf --enable-libxcb --enable-xlib --enable-fontconfig --enable-libharfbuzz --enable-libfreetype --enable-libfribidi --enable-lcms2 --enable-vulkan --enable-libdav1d --enable-libvorbis --enable-librav1e --enable-librsvg --enable-libpulse --enable-gmp --enable-lzma --enable-liblcevc-dec --enable-opencl --enable-amf --enable-libaom --enable-avisynth --enable-chromaprint --enable-libdavs2 --enable-libdvdread --enable-libdvdnav --disable-libfdk-aac --enable-ffnvcodec --enable-cuda-llvm --enable-frei0r --enable-libgme --enable-libkvazaar --enable-libaribb24 --enable-libaribcaption --enable-libass --enable-libbluray --enable-libjxl --enable-libmp3lame --enable-libopus --enable-libplacebo --enable-librist --enable-libssh --enable-libtheora --enable-libvpx --enable-libwebp --enable-libzmq --enable-lv2 --enable-libvpl --enable-openal --enable-liboapv --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenh264 --enable-libopenjpeg --enable-libopenmpt --enable-librubberband --disable-schannel --enable-sdl2 --enable-libsnappy --enable-libsrt --enable-libsvtav1 --enable-libtwolame --enable-libuavs3d --enable-libdrm --enable-vaapi --enable-vapoursynth --enable-libvidstab --enable-libvvenc --disable-whisper --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxvid --enable-libzimg --disable-libzvbi --extra-cflags=-DLIBTWOLAME_STATIC --extra-cxxflags= --extra-libs='-lgomp -ldl' --extra-ldflags=-pthread --extra-ldexeflags= --cc=x86_64-ffbuild-linux-gnu-gcc --cxx=x86_64-ffbuild-linux-gnu-g++ --ar=x86_64-ffbuild-linux-gnu-gcc-ar --ranlib=x86_64-ffbuild-linux-gnu-gcc-ranlib --nm=x86_64-ffbuild-linux-gnu-gcc-nm --extra-version=20261120",
+    "license": "GPL-3.0-or-later",
+    "license_member": "ffmpeg-n9.0.2-61-gd59078794d-linux64-gpl-9.0/LICENSE.txt",
+    "license_sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "hardware_encoders": [
+      "h264_nvenc",
+      "h264_amf",
+      "h264_vaapi",
+      "h264_qsv"
+    ],
+    "source_recipe": "https://github.com/FFmpeg-Builds/FFmpeg-Builds/tree/7f2a6b1050d302144de8366afa37a75e46f326aa",
+    "corresponding_source_complete": false,
+    "redistribution_approved": false,
+    "source_review_note": "Full matching third-party source/license closure must be archived and reviewed before publication.",
+    "source_recipe_commit": "7f2a6b1050d302144de8366afa37a75e46f326aa",
+    "archive_filename": "ffmpeg-n9.0.2-61-gd59078794d-linux64-gpl-9.0.tar.xz",
+    "ffmpeg_revision": "d59078794d80f5256d5def27e10bb5400a13195c"
+  },
+  "windows-x86_64": {
+    "version": "9.0.2",
+    "build_id": "9.0.2-cactu-d59078794d80",
+    "provider": "Cactu selected controlled audit candidate",
+    "source_url": null,
+    "archive_sha256": null,
+    "archive_format": "zip",
+    "ffmpeg_member": "ffmpeg-n9.0.2-61-gd59078794d-win64-gpl-9.0/bin/ffmpeg.exe",
+    "ffprobe_member": "ffmpeg-n9.0.2-61-gd59078794d-win64-gpl-9.0/bin/ffprobe.exe",
+    "ffmpeg_sha256": "59abbce6c9908ae41f9e4c68f7f98c3a95dd2a95734b68012d4d64ffa6ca855d",
+    "ffprobe_sha256": "79f06b56e4e836c75b00b0240e9b8264c777bdd49bd643ecba7a5b9d30a3154a",
+    "build_configuration": "--prefix=/d/a/cactu-video-converter/cactu-video-converter/build/ffmpeg-controlled/prefix --disable-autodetect --disable-doc --disable-debug --disable-x86asm --disable-shared --enable-static --enable-gpl --enable-version3 --enable-libx264 --enable-libass --enable-libdav1d --enable-zlib --enable-bzlib --enable-lzma --enable-iconv --enable-libvpl --enable-ffnvcodec --enable-nvenc --enable-nvdec --enable-cuvid --pkg-config-flags=--static --extra-libs=-lstdc++ --enable-amf --extra-cflags=-I/d/a/cactu-video-converter/cactu-video-converter/build/ffmpeg-controlled/prefix/include",
+    "license": "GPL-3.0-or-later",
+    "license_member": "ffmpeg-n9.0.2-61-gd59078794d-win64-gpl-9.0/LICENSE.txt",
+    "license_sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "hardware_encoders": [
+      "h264_nvenc",
+      "h264_qsv",
+      "h264_amf"
+    ],
+    "source_recipe": "release/controlled-baseline.json + scripts/build_controlled_ffmpeg.py",
+    "corresponding_source_complete": false,
+    "redistribution_approved": false,
+    "source_review_note": "Full matching third-party source/license closure must be archived and reviewed before publication.",
+    "source_recipe_commit": "7f2a6b1050d302144de8366afa37a75e46f326aa",
+    "archive_filename": null,
+    "ffmpeg_revision": "d59078794d80f5256d5def27e10bb5400a13195c",
+    "input_kind": "direct-controlled-build",
+    "pair_sha256": "af64bccc3f75ee6a4e4dc132f2740a898aa4213d93944a648249224df2e374ee"
+  }
+}

@@ -15,7 +15,7 @@ from release_common import ROOT, read_json, sha256
 
 
 def copyleft(license):
-    return ("GPL" in license or "MPL" in license) and "exception" not in license
+    return "GPL" in license or "MPL" in license
 
 
 def prepare(reports, destination):
@@ -290,8 +290,10 @@ def prepare(reports, destination):
                             asset(
                                 cache / e["filename"],
                                 project,
-                                license + " dynamic library source/patches",
+                                license
+                                + " separately distributed library source/patches; exception does not remove the library source duty",
                                 e["url"],
+                                expected=e["sha256"],
                             )
                     else:
                         missing.append(
@@ -320,6 +322,7 @@ def prepare(reports, destination):
                         license
                         + " library source/recipe for selected GPL FFmpeg aggregate (independent permissive terms remain notice-only)",
                         source["archive"]["url"],
+                        expected=source["archive"]["sha256"],
                     )
                 else:
                     missing.append(

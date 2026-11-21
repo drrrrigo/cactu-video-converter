@@ -5,7 +5,7 @@
   "license_audit_approved": false,
   "security_audit_approved": true,
   "manual_candidate_evidence": null,
-  "notes": "2026-11-21 controlled FFmpeg source-build milestone: reduced isolated Windows/Linux candidates; exact source/tool/byte evidence retained. No selected-runtime promotion, RC1, release tag, public binaries or source bundles. Source/build/notice/MSVC/installer/manual/recipient-delivery gates remain open; see docs/FFMPEG_CONTROLLED_CLOSURE.md. Bounded source scans are not security certification.",
+  "notes": "2026-11-21 final dependency qualification: controlled source-built FFmpeg selected for common native audit candidate 3b19839. Actual MSYS/Qt/Python notices and proposed recipient sources prepared. Human Microsoft rights and exact-source/license/manual approval remain pending. No RC1, public tag, binaries, Release or source bundle. See docs/RC1_QUALIFICATION.md. Bootstrap tool fingerprints are not a hermetic rebuild or security certification.",
   "technical_license_audit_complete": false,
   "publication_approval_source": "BETA_OWNER_APPROVAL in the protected public-beta environment; bound to exact source and artifact hashes, never auto-approved",
   "source_assets_manifest_sha256": null

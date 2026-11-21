@@ -1,0 +1,20 @@
+{
+  "checks": [
+    {
+      "case": "unapproved actual final source set",
+      "result": "REJECTED",
+      "reason": "Complete corresponding-source delivery is not approved"
+    },
+    {
+      "case": "absent exact owner attestation",
+      "result": "REJECTED",
+      "reason": "Source approval lacks the exact owner/source attestation"
+    },
+    {
+      "case": "mixed real candidate source commits",
+      "result": "REJECTED",
+      "reason": "Candidate builds do not share one clean controlled source commit"
+    }
+  ],
+  "global_approvals_unchanged": true
+}

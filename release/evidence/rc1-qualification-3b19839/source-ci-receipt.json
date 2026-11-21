@@ -1,0 +1,25 @@
+{
+  "source_commit": "3b19839d6a626dd0a339dc7997e79c7fe23f9935",
+  "run": 44931018572,
+  "conclusion": "success",
+  "platforms": {
+    "ubuntu-22.04": {
+      "tests": 186,
+      "passed": 183,
+      "skipped": 3,
+      "elapsed_seconds": 48.532
+    },
+    "windows-2025": {
+      "tests": 186,
+      "passed": 183,
+      "skipped": 3,
+      "elapsed_seconds": 67.134
+    }
+  },
+  "ruff": "PASS",
+  "branding": "PASS",
+  "source_and_full_history_pattern_scan": "PASS",
+  "scope": "Source checks use the reference provider; controlled candidate compatibility and frozen smoke are recorded separately",
+  "publication_approved": false,
+  "original_ci_log_sha256": "20befffadb3e286d97e165529f199b50fe327611a2305ff40b6a3a4782b864eb"
+}

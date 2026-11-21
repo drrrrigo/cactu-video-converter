@@ -1,5 +1,7 @@
 # Cactu beta packaging
 
+> Current authority: [RC1 qualification](RC1_QUALIFICATION.md), 2026-11-21. This supersedes the historical status, test counts, provider selection and open engineering lists below. Final common native source is 3b19839; human approval and Microsoft rights remain pending. No public beta is authorized.
+
 `packaging/video_converter.spec` creates a PyInstaller ONEDIR bundle with Python,
 PySide6/Qt, dependencies, bundled FFmpeg/FFprobe, branding, Cactu license and collected
 third-party notices/licenses. The executable/collection is CactuVideoConverter.
@@ -127,3 +129,28 @@ contains its own Git commit (which would otherwise change that commit again).
 It does not bypass technical/license/manual gates or publish anything. The
 selected controlled-baseline approval fields replace irrelevant approval of the
 legacy fixture provider; all selected-baseline fields remain false until reviewed.
+
+
+## Final controlled candidate and source-offer preparation
+
+The selected candidate implementation is `release/controlled-baseline.json`.
+`build_release.py` packages the checked native source-built pair in the actual
+clean checkout; generic provider staging remains a reference-fixture operation.
+Run `scripts/prepare_rc1_review.py <raw-common-platform-metadata> <review-output>`
+after downloading metadata from both native jobs. It refuses different commits
+or dirty/source-mismatched packages, verifies actual notices and stages only
+proposed sources in `build/proposed-source-assets`. Archive names, per-file hashes,
+AMF header-layout overlay and recipient instructions are indexed. This post-build
+review does not modify packaged binaries or approve delivery.
+
+`SOURCE-ASSETS.json` is bound to the exact commit and all three artifact hashes.
+The protected owner record must explicitly approve its SHA-256; the committed
+optional configured pin is an additional check. All individual asset approvals,
+completeness, technical/license/manual/publication gates still apply. This avoids
+a Git self-reference without accepting an unpinned index. Current index and every
+asset remain unapproved; proposed URLs are not a published source offer.
+
+See [RC1 qualification](RC1_QUALIFICATION.md) for actual final evidence, finite
+human decisions, candidate identities and manual tests. The current metadata-only
+workflow does not preserve a downloadable application binary. Do not tell testers
+to download an older provider artifact as though it were this candidate.

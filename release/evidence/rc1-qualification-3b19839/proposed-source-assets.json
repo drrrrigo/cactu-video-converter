@@ -1,0 +1,1364 @@
+{
+  "candidate_source_commit": "3b19839d6a626dd0a339dc7997e79c7fe23f9935",
+  "candidate_binary_artifacts": {
+    "CactuVideoConverter-0.1.0-beta.1-x86_64.AppImage": "338622d40a3eff55d31df0c3f1e1d407da01656d439920fe38c3018efaddeee9",
+    "CactuVideoConverter-Portable-0.1.0-beta.1.zip": "f73659308dfcfe272adecdedbfd3ff9076460703014a437e90fec2d22dc51eff",
+    "CactuVideoConverter-Setup-0.1.0-beta.1.exe": "b2f46b79400c5a65fb93f6e6b290f67a0a003e8ff8604c05c93c5d1e02315e30"
+  },
+  "classification": "PROPOSED_PENDING_HUMAN_REVIEW",
+  "complete_corresponding_source": false,
+  "assets": [
+    {
+      "filename": "Cactu-source-3b19839d6a626dd0a339dc7997e79c7fe23f9935.tar",
+      "sha256": "a8c0d10f0b1e4ef779afca8f14861ae145e8290b274764d2c65be79263d64d22",
+      "components": [
+        "Cactu / packaging recipe"
+      ],
+      "license_obligations": [
+        "GPL-3.0-or-later application source; exact native candidate commit"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/Cactu-source-3b19839d6a626dd0a339dc7997e79c7fe23f9935.tar",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": null
+    },
+    {
+      "filename": "current-ffmpeg-source-d59078794d80f5256d5def27e10bb5400a13195c.tar.gz",
+      "sha256": "a2b303c48a30a23c0d2b10058cb73845b16b2029856486a5f57210a620d4105a",
+      "components": [
+        "FFmpeg combined executable / FFmpeg"
+      ],
+      "license_obligations": [
+        "GPL corresponding-source build input (not an independent permissive-library source duty)"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/current-ffmpeg-source-d59078794d80f5256d5def27e10bb5400a13195c.tar.gz",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://codeload.github.com/FFmpeg/FFmpeg/tar.gz/d59078794d80f5256d5def27e10bb5400a13195c"
+    },
+    {
+      "filename": "50-x264--0480cb05fa188d37ae87e8f4fd8f1aea3711f7ee.tar.gz",
+      "sha256": "d0967a1348c85dfde363bb52610403be898171493100561efa0dd05d5fd1ae50",
+      "components": [
+        "FFmpeg combined executable / x264"
+      ],
+      "license_obligations": [
+        "GPL corresponding-source build input (not an independent permissive-library source duty)"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/50-x264--0480cb05fa188d37ae87e8f4fd8f1aea3711f7ee.tar.gz",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://code.videolan.org/videolan/x264/-/archive/0480cb05fa188d37ae87e8f4fd8f1aea3711f7ee/x264-0480cb05fa188d37ae87e8f4fd8f1aea3711f7ee.tar.gz"
+    },
+    {
+      "filename": "50-libass--21b5a54fceff49c126c201d4b51c6445287a5072.tar.gz",
+      "sha256": "cc971ba7cb615f2276ef51ba8206e7eee8cd567d565255e923879bb7bab49032",
+      "components": [
+        "FFmpeg combined executable / libass"
+      ],
+      "license_obligations": [
+        "GPL corresponding-source build input (not an independent permissive-library source duty)"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/50-libass--21b5a54fceff49c126c201d4b51c6445287a5072.tar.gz",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://codeload.github.com/libass/libass/tar.gz/21b5a54fceff49c126c201d4b51c6445287a5072"
+    },
+    {
+      "filename": "50-ffnvcodec--f2053071ea93137255b6dcf42e9b4c9e0965a44e.tar.gz",
+      "sha256": "84cefa55265740888a269625474eda5bd018955c2302b72cfe7473ddc82f741f",
+      "components": [
+        "FFmpeg combined executable / nv-codec-headers"
+      ],
+      "license_obligations": [
+        "GPL corresponding-source build input (not an independent permissive-library source duty)"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/50-ffnvcodec--f2053071ea93137255b6dcf42e9b4c9e0965a44e.tar.gz",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://codeload.github.com/FFmpeg/nv-codec-headers/tar.gz/f2053071ea93137255b6dcf42e9b4c9e0965a44e"
+    },
+    {
+      "filename": "AMF-headers-57ee0cfb0e1a08d9041f77435653794c1b012be0.tar",
+      "sha256": "fce320b8c89ba8f1e249a1475fafa0615266715688baf3fed620c8f6e388c2ad",
+      "components": [
+        "FFmpeg / AMF source headers"
+      ],
+      "license_obligations": [
+        "GPL combined-work build input; AMF independent permissive notice retained"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/AMF-headers-57ee0cfb0e1a08d9041f77435653794c1b012be0.tar",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": null
+    },
+    {
+      "filename": "AMF-HEADER-SOURCE-PROVENANCE.json",
+      "sha256": "e41dfe158662d542882e038433e3403cde9c033b43f9954c24e7b6bf7137ad2b",
+      "components": [
+        "FFmpeg / AMF source headers"
+      ],
+      "license_obligations": [
+        "Original-to-offered per-file hash evidence"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/AMF-HEADER-SOURCE-PROVENANCE.json",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": null
+    },
+    {
+      "filename": "50-onevpl--412c5cffe3022d5ebb8a955c3b30afe7bd2e3929.tar.gz",
+      "sha256": "deb2641c23f4350f8dbe965be6e424e59fa6696c7b5528ceb9d77a29244cccc4",
+      "components": [
+        "FFmpeg combined executable / oneVPL"
+      ],
+      "license_obligations": [
+        "GPL corresponding-source build input (not an independent permissive-library source duty)"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/50-onevpl--412c5cffe3022d5ebb8a955c3b30afe7bd2e3929.tar.gz",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://codeload.github.com/intel/libvpl/tar.gz/412c5cffe3022d5ebb8a955c3b30afe7bd2e3929"
+    },
+    {
+      "filename": "50-dav1d--6c7bee685677fd997a431302be4fea8ea4017606.tar.gz",
+      "sha256": "725d0ebe5bd19316aaaeee84a170b0f6f3930fc7cf53fa0c5bbe3c86ba1c2b15",
+      "components": [
+        "FFmpeg combined executable / dav1d"
+      ],
+      "license_obligations": [
+        "GPL corresponding-source build input (not an independent permissive-library source duty)"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/50-dav1d--6c7bee685677fd997a431302be4fea8ea4017606.tar.gz",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://code.videolan.org/videolan/dav1d/-/archive/6c7bee685677fd997a431302be4fea8ea4017606/dav1d-6c7bee685677fd997a431302be4fea8ea4017606.tar.gz"
+    },
+    {
+      "filename": "FFMPEG-SOURCE-OFFER-LOCK.json",
+      "sha256": "75d9537bb103532746739c7145aaf409bb89644f4f1e40fa48691498cddb976d",
+      "components": [
+        "FFmpeg recipient build"
+      ],
+      "license_obligations": [
+        "Source-offer archive-layout overlay; source revisions/header bytes unchanged"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/FFMPEG-SOURCE-OFFER-LOCK.json",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": null
+    },
+    {
+      "filename": "qtbase-ef55f427f2c8b410d34f8a7681020a3000cf6866.tar.gz",
+      "sha256": "12b3a9ba00613180caea4da77a1ae6fc1ca054b8822b316ba3a05fb4414fba56",
+      "components": [
+        "Qt / qtbase"
+      ],
+      "license_obligations": [
+        "Selected GPL v3 module source and supplied upstream build scripts"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/qtbase-ef55f427f2c8b410d34f8a7681020a3000cf6866.tar.gz",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://codeload.github.com/qt/qtbase/tar.gz/ef55f427f2c8b410d34f8a7681020a3000cf6866"
+    },
+    {
+      "filename": "qtsvg-17ca512f903f935282ebeca496aac5d11ba4199a.tar.gz",
+      "sha256": "67214f604e86af925d9e2c9f32af5e778a621cabfb51011b7e89aef268a6a150",
+      "components": [
+        "Qt / qtsvg"
+      ],
+      "license_obligations": [
+        "Selected GPL v3 module source and supplied upstream build scripts"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/qtsvg-17ca512f903f935282ebeca496aac5d11ba4199a.tar.gz",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://codeload.github.com/qt/qtsvg/tar.gz/17ca512f903f935282ebeca496aac5d11ba4199a"
+    },
+    {
+      "filename": "qtwayland-fd0456558bc1766da85aee42f6a87f79092cbb13.tar.gz",
+      "sha256": "70e921497f4decb88d6f61b6a94673f2dda3c18f4343bd21b8cab44ba19692f4",
+      "components": [
+        "Qt / qtwayland"
+      ],
+      "license_obligations": [
+        "Selected GPL v3 module source and supplied upstream build scripts"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/qtwayland-fd0456558bc1766da85aee42f6a87f79092cbb13.tar.gz",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://codeload.github.com/qt/qtwayland/tar.gz/fd0456558bc1766da85aee42f6a87f79092cbb13"
+    },
+    {
+      "filename": "pyside-pyside-setup-24627cd36e1593adf22eb1f2950e4248e7bcc1ec.tar.gz",
+      "sha256": "92f292b8889f8a3213f7d17da5cdcd19f6d7f01611689bdf692890d5fbc7eb61",
+      "components": [
+        "Qt / pyside-pyside-setup"
+      ],
+      "license_obligations": [
+        "Selected GPL v3 module source and supplied upstream build scripts"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/pyside-pyside-setup-24627cd36e1593adf22eb1f2950e4248e7bcc1ec.tar.gz",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://codeload.github.com/qtproject/pyside-pyside-setup/tar.gz/24627cd36e1593adf22eb1f2950e4248e7bcc1ec"
+    },
+    {
+      "filename": "qtimageformats-47b6139dda3b84d1d3ec15caf8d04eff8d744c8d.tar.gz",
+      "sha256": "5a8390e7d8e1c974f230106c3f4fea5a2b5defc296814b24edb8de6f016328bf",
+      "components": [
+        "Qt / qtimageformats"
+      ],
+      "license_obligations": [
+        "Selected GPL v3 module source and supplied upstream build scripts"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/qtimageformats-47b6139dda3b84d1d3ec15caf8d04eff8d744c8d.tar.gz",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://codeload.github.com/qt/qtimageformats/tar.gz/47b6139dda3b84d1d3ec15caf8d04eff8d744c8d"
+    },
+    {
+      "filename": "icu-680f521746a3bd6a86f25f25ee50a62d88b489cf.tar.gz",
+      "sha256": "9032f32c8edb43a7cd842f2c44349eb75756ee29c3a3d6a0bf2a01793a34b84c",
+      "components": [
+        "Qt linked ICU"
+      ],
+      "license_obligations": [
+        "Proposed selected GPL Qt aggregate source support; Unicode permissive terms alone impose notices, not standalone source publication"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/icu-680f521746a3bd6a86f25f25ee50a62d88b489cf.tar.gz",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://codeload.github.com/unicode-org/icu/tar.gz/680f521746a3bd6a86f25f25ee50a62d88b489cf"
+    },
+    {
+      "filename": "atk1.0_2.36.0-3build1.dsc",
+      "sha256": "8ccdb950635739c256f7f986845a44fb839a70120fbc5f267d9ea785b348b73a",
+      "components": [
+        "atk1.0"
+      ],
+      "license_obligations": [
+        "LGPL-2.0-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/atk1.0_2.36.0-3build1.dsc",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/atk1.0/2.36.0-3build1/atk1.0_2.36.0-3build1.dsc"
+    },
+    {
+      "filename": "atk1.0_2.36.0.orig.tar.xz",
+      "sha256": "fb76247e369402be23f1f5c65d38a9639c1164d934e40f6a9cf3c9e96b652788",
+      "components": [
+        "atk1.0"
+      ],
+      "license_obligations": [
+        "LGPL-2.0-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/atk1.0_2.36.0.orig.tar.xz",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/atk1.0/2.36.0-3build1/atk1.0_2.36.0.orig.tar.xz"
+    },
+    {
+      "filename": "atk1.0_2.36.0-3build1.debian.tar.xz",
+      "sha256": "2122335c9ac1e98a959766838fbb4b0dfefdcda8b89ddb6a34286655e33ac646",
+      "components": [
+        "atk1.0"
+      ],
+      "license_obligations": [
+        "LGPL-2.0-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/atk1.0_2.36.0-3build1.debian.tar.xz",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/atk1.0/2.36.0-3build1/atk1.0_2.36.0-3build1.debian.tar.xz"
+    },
+    {
+      "filename": "at-spi2-atk_2.38.0-3.dsc",
+      "sha256": "10decc2dc684dd907314f79e231c796408c91910c6b63f8accd516cb09a79b9b",
+      "components": [
+        "at-spi2-atk"
+      ],
+      "license_obligations": [
+        "LGPL-2.0-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/at-spi2-atk_2.38.0-3.dsc",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/at-spi2-atk/2.38.0-3/at-spi2-atk_2.38.0-3.dsc"
+    },
+    {
+      "filename": "at-spi2-atk_2.38.0.orig.tar.xz",
+      "sha256": "cfa008a5af822b36ae6287f18182c40c91dd699c55faa38605881ed175ca464f",
+      "components": [
+        "at-spi2-atk"
+      ],
+      "license_obligations": [
+        "LGPL-2.0-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/at-spi2-atk_2.38.0.orig.tar.xz",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/at-spi2-atk/2.38.0-3/at-spi2-atk_2.38.0.orig.tar.xz"
+    },
+    {
+      "filename": "at-spi2-atk_2.38.0-3.debian.tar.xz",
+      "sha256": "4209f16cfb970c97320fb9842604edf4c3ea362de29ba0b00e22543b023838f2",
+      "components": [
+        "at-spi2-atk"
+      ],
+      "license_obligations": [
+        "LGPL-2.0-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/at-spi2-atk_2.38.0-3.debian.tar.xz",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/at-spi2-atk/2.38.0-3/at-spi2-atk_2.38.0-3.debian.tar.xz"
+    },
+    {
+      "filename": "at-spi2-core_2.44.0-3.dsc",
+      "sha256": "a1fc91ef1d34305678f7a2223810c8631ab65b87b77b767d1a1352f48a9df02b",
+      "components": [
+        "at-spi2-core"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/at-spi2-core_2.44.0-3.dsc",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/at-spi2-core/2.44.0-3/at-spi2-core_2.44.0-3.dsc"
+    },
+    {
+      "filename": "at-spi2-core_2.44.0.orig.tar.xz",
+      "sha256": "7eee3cf285b089060fd6b6e51b3eb2cacf752cca3a082c7f4c2c5ab841e51353",
+      "components": [
+        "at-spi2-core"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/at-spi2-core_2.44.0.orig.tar.xz",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/at-spi2-core/2.44.0-3/at-spi2-core_2.44.0.orig.tar.xz"
+    },
+    {
+      "filename": "at-spi2-core_2.44.0-3.debian.tar.xz",
+      "sha256": "60c996f063bb9722c729aa191b9e7a0ef51e479872544cf008d613ddb6a22c6d",
+      "components": [
+        "at-spi2-core"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/at-spi2-core_2.44.0-3.debian.tar.xz",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/at-spi2-core/2.44.0-3/at-spi2-core_2.44.0-3.debian.tar.xz"
+    },
+    {
+      "filename": "util-linux_2.37.2-4ubuntu3.6.dsc",
+      "sha256": "e2b458d2005c328b0187ded5acac81c530cca8bf164f7c20b8370d02c4ffaebc",
+      "components": [
+        "util-linux"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/util-linux_2.37.2-4ubuntu3.6.dsc",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/util-linux/2.37.2-4ubuntu3.6/util-linux_2.37.2-4ubuntu3.6.dsc"
+    },
+    {
+      "filename": "util-linux_2.37.2.orig.tar.xz",
+      "sha256": "6a0764c1aae7fb607ef8a6dd2c0f6c47d5e5fd27aa08820abaad9ec14e28e9d9",
+      "components": [
+        "util-linux"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/util-linux_2.37.2.orig.tar.xz",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/util-linux/2.37.2-4ubuntu3.6/util-linux_2.37.2.orig.tar.xz"
+    },
+    {
+      "filename": "util-linux_2.37.2-4ubuntu3.6.debian.tar.xz",
+      "sha256": "d556ef8fb39638a6fee023dc02d1ed4c9a15d6065f844fa885ddb5b9e755ae31",
+      "components": [
+        "util-linux"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/util-linux_2.37.2-4ubuntu3.6.debian.tar.xz",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/util-linux/2.37.2-4ubuntu3.6/util-linux_2.37.2-4ubuntu3.6.debian.tar.xz"
+    },
+    {
+      "filename": "cairo_1.16.0-5ubuntu2.1.dsc",
+      "sha256": "695111fafc7dd5f2a8012efb628ed71c4aeae6b112ba4e7995aeafe7e4a609f8",
+      "components": [
+        "cairo"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/cairo_1.16.0-5ubuntu2.1.dsc",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/cairo/1.16.0-5ubuntu2.1/cairo_1.16.0-5ubuntu2.1.dsc"
+    },
+    {
+      "filename": "cairo_1.16.0.orig.tar.xz",
+      "sha256": "5e7b29b3f113ef870d1e3ecf8adf21f923396401604bda16d44be45e66052331",
+      "components": [
+        "cairo"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/cairo_1.16.0.orig.tar.xz",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/cairo/1.16.0-5ubuntu2.1/cairo_1.16.0.orig.tar.xz"
+    },
+    {
+      "filename": "cairo_1.16.0-5ubuntu2.1.debian.tar.xz",
+      "sha256": "bf29ca80c54f34affeffc7d356934c407e492304d42a5426ce144adc45083398",
+      "components": [
+        "cairo"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/cairo_1.16.0-5ubuntu2.1.debian.tar.xz",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/cairo/1.16.0-5ubuntu2.1/cairo_1.16.0-5ubuntu2.1.debian.tar.xz"
+    },
+    {
+      "filename": "libdatrie_0.2.13-2.dsc",
+      "sha256": "d359689deccfa654ab844d6e955fff5e826d9a5dc9a74408d1b6a095f78ab0e5",
+      "components": [
+        "libdatrie"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/libdatrie_0.2.13-2.dsc",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/libdatrie/0.2.13-2/libdatrie_0.2.13-2.dsc"
+    },
+    {
+      "filename": "libdatrie_0.2.13.orig.tar.xz",
+      "sha256": "12231bb2be2581a7f0fb9904092d24b0ed2a271a16835071ed97bed65267f4be",
+      "components": [
+        "libdatrie"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/libdatrie_0.2.13.orig.tar.xz",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/libdatrie/0.2.13-2/libdatrie_0.2.13.orig.tar.xz"
+    },
+    {
+      "filename": "libdatrie_0.2.13-2.debian.tar.xz",
+      "sha256": "3f341eb067c5365345e0a416a3c835a8e785c3220aca27c8fb2a01499d0214e9",
+      "components": [
+        "libdatrie"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/libdatrie_0.2.13-2.debian.tar.xz",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/libdatrie/0.2.13-2/libdatrie_0.2.13-2.debian.tar.xz"
+    },
+    {
+      "filename": "dbus_1.12.20-2ubuntu4.1.dsc",
+      "sha256": "9eb0861266c097572ae79ced86c85fda3401c6544f1d08151213683e036f8be9",
+      "components": [
+        "dbus"
+      ],
+      "license_obligations": [
+        "GPL-2.0-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/dbus_1.12.20-2ubuntu4.1.dsc",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/dbus/1.12.20-2ubuntu4.1/dbus_1.12.20-2ubuntu4.1.dsc"
+    },
+    {
+      "filename": "dbus_1.12.20.orig.tar.gz",
+      "sha256": "f77620140ecb4cdc67f37fb444f8a6bea70b5b6461f12f1cbe2cec60fa7de5fe",
+      "components": [
+        "dbus"
+      ],
+      "license_obligations": [
+        "GPL-2.0-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/dbus_1.12.20.orig.tar.gz",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/dbus/1.12.20-2ubuntu4.1/dbus_1.12.20.orig.tar.gz"
+    },
+    {
+      "filename": "dbus_1.12.20-2ubuntu4.1.debian.tar.xz",
+      "sha256": "c1f655920ef22949145c7b2287a057012c71ae39b3998b8bc260ce0609c30585",
+      "components": [
+        "dbus"
+      ],
+      "license_obligations": [
+        "GPL-2.0-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/dbus_1.12.20-2ubuntu4.1.debian.tar.xz",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/dbus/1.12.20-2ubuntu4.1/dbus_1.12.20-2ubuntu4.1.debian.tar.xz"
+    },
+    {
+      "filename": "fribidi_1.0.8-2ubuntu3.1.dsc",
+      "sha256": "585c32773194a19ab4e64e37e86c2d9627ba1235c496fe07544f8b8f80233160",
+      "components": [
+        "fribidi"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/fribidi_1.0.8-2ubuntu3.1.dsc",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/fribidi/1.0.8-2ubuntu3.1/fribidi_1.0.8-2ubuntu3.1.dsc"
+    },
+    {
+      "filename": "fribidi_1.0.8.orig.tar.bz2",
+      "sha256": "94c7b68d86ad2a9613b4dcffe7bbeb03523d63b5b37918bdf2e4ef34195c1e6c",
+      "components": [
+        "fribidi"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/fribidi_1.0.8.orig.tar.bz2",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/fribidi/1.0.8-2ubuntu3.1/fribidi_1.0.8.orig.tar.bz2"
+    },
+    {
+      "filename": "fribidi_1.0.8-2ubuntu3.1.debian.tar.xz",
+      "sha256": "c4a0185e8b55a2520eb98575acdfbb7d42b36a1ad2b22f1c2f308a20ee3466f9",
+      "components": [
+        "fribidi"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/fribidi_1.0.8-2ubuntu3.1.debian.tar.xz",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/fribidi/1.0.8-2ubuntu3.1/fribidi_1.0.8-2ubuntu3.1.debian.tar.xz"
+    },
+    {
+      "filename": "gcc-12_12.3.0-1ubuntu1~22.04.3.dsc",
+      "sha256": "ec040a1fa94186bd53535f7156e086e67863bb55836ae7fd7fef64f1ab66b04d",
+      "components": [
+        "gcc-12"
+      ],
+      "license_obligations": [
+        "GPL-3.0-or-later WITH GCC-exception-3.1 separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/gcc-12_12.3.0-1ubuntu1~22.04.3.dsc",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/gcc-12/12.3.0-1ubuntu1~22.04.3/gcc-12_12.3.0-1ubuntu1~22.04.3.dsc"
+    },
+    {
+      "filename": "gcc-12_12.3.0.orig.tar.gz",
+      "sha256": "62b0fc89b6d41f9df2470d0fb4995f6ff5885f910518a2c6a44a6888ea5a9ea1",
+      "components": [
+        "gcc-12"
+      ],
+      "license_obligations": [
+        "GPL-3.0-or-later WITH GCC-exception-3.1 separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/gcc-12_12.3.0.orig.tar.gz",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/gcc-12/12.3.0-1ubuntu1~22.04.3/gcc-12_12.3.0.orig.tar.gz"
+    },
+    {
+      "filename": "gcc-12_12.3.0-1ubuntu1~22.04.3.debian.tar.xz",
+      "sha256": "44074c3d5e7d97365f1f7b45291ade2ee40ed6300176530d912e7cc0ceba77ab",
+      "components": [
+        "gcc-12"
+      ],
+      "license_obligations": [
+        "GPL-3.0-or-later WITH GCC-exception-3.1 separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/gcc-12_12.3.0-1ubuntu1~22.04.3.debian.tar.xz",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/gcc-12/12.3.0-1ubuntu1~22.04.3/gcc-12_12.3.0-1ubuntu1~22.04.3.debian.tar.xz"
+    },
+    {
+      "filename": "libgcrypt20_1.9.4-3ubuntu3.3.dsc",
+      "sha256": "d5f3d4082c4c6ab97d500dd299d0b45644dde808709a030502158831eacd76c2",
+      "components": [
+        "libgcrypt20"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/libgcrypt20_1.9.4-3ubuntu3.3.dsc",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/libgcrypt20/1.9.4-3ubuntu3.3/libgcrypt20_1.9.4-3ubuntu3.3.dsc"
+    },
+    {
+      "filename": "libgcrypt20_1.9.4.orig.tar.bz2",
+      "sha256": "ea849c83a72454e3ed4267697e8ca03390aee972ab421e7df69dfe42b65caaf7",
+      "components": [
+        "libgcrypt20"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/libgcrypt20_1.9.4.orig.tar.bz2",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/libgcrypt20/1.9.4-3ubuntu3.3/libgcrypt20_1.9.4.orig.tar.bz2"
+    },
+    {
+      "filename": "libgcrypt20_1.9.4.orig.tar.bz2.asc",
+      "sha256": "aa44cb00b779b4e75f3e63abeedd4112b10b4b92914dad8f23438fd0217a9fec",
+      "components": [
+        "libgcrypt20"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/libgcrypt20_1.9.4.orig.tar.bz2.asc",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/libgcrypt20/1.9.4-3ubuntu3.3/libgcrypt20_1.9.4.orig.tar.bz2.asc"
+    },
+    {
+      "filename": "libgcrypt20_1.9.4-3ubuntu3.3.debian.tar.xz",
+      "sha256": "184bf9126ee3a38c70bcdd584bcf363c564848ef3329546b18082ded62bf68d7",
+      "components": [
+        "libgcrypt20"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/libgcrypt20_1.9.4-3ubuntu3.3.debian.tar.xz",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/libgcrypt20/1.9.4-3ubuntu3.3/libgcrypt20_1.9.4-3ubuntu3.3.debian.tar.xz"
+    },
+    {
+      "filename": "gtk+3.0_3.24.33-1ubuntu2.2.dsc",
+      "sha256": "0abcce1e1db4494ff9e07ec8dcda39503ad8d31ebfded46ee09b13ec2e147ada",
+      "components": [
+        "gtk+3.0"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/gtk+3.0_3.24.33-1ubuntu2.2.dsc",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/gtk+3.0/3.24.33-1ubuntu2.2/gtk+3.0_3.24.33-1ubuntu2.2.dsc"
+    },
+    {
+      "filename": "gtk+3.0_3.24.33.orig.tar.xz",
+      "sha256": "588b06522e25d1579e989b6f9d8a1bdbf2fe13cde01a04e904ff346a225e7801",
+      "components": [
+        "gtk+3.0"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/gtk+3.0_3.24.33.orig.tar.xz",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/gtk+3.0/3.24.33-1ubuntu2.2/gtk+3.0_3.24.33.orig.tar.xz"
+    },
+    {
+      "filename": "gtk+3.0_3.24.33-1ubuntu2.2.debian.tar.xz",
+      "sha256": "842fe4b2590378b3e57890fc4455e2b9674ca2d31697d2ecd64459f5f29f5295",
+      "components": [
+        "gtk+3.0"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/gtk+3.0_3.24.33-1ubuntu2.2.debian.tar.xz",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/gtk+3.0/3.24.33-1ubuntu2.2/gtk+3.0_3.24.33-1ubuntu2.2.debian.tar.xz"
+    },
+    {
+      "filename": "gdk-pixbuf_2.42.8+dfsg-1ubuntu0.5.dsc",
+      "sha256": "87b6107536b3cf76d413abca072619814db2e2e9249ea6152a1f4ff4860b23d3",
+      "components": [
+        "gdk-pixbuf"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/gdk-pixbuf_2.42.8+dfsg-1ubuntu0.5.dsc",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/gdk-pixbuf/2.42.8+dfsg-1ubuntu0.5/gdk-pixbuf_2.42.8+dfsg-1ubuntu0.5.dsc"
+    },
+    {
+      "filename": "gdk-pixbuf_2.42.8+dfsg.orig.tar.xz",
+      "sha256": "c1f00d4419e164d160c9d9b49a90890e516c1624bcd0c2a120eb7f529835b5d3",
+      "components": [
+        "gdk-pixbuf"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/gdk-pixbuf_2.42.8+dfsg.orig.tar.xz",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/gdk-pixbuf/2.42.8+dfsg-1ubuntu0.5/gdk-pixbuf_2.42.8+dfsg.orig.tar.xz"
+    },
+    {
+      "filename": "gdk-pixbuf_2.42.8+dfsg-1ubuntu0.5.debian.tar.xz",
+      "sha256": "43353cee25c5bbc00cdd1e7b0b850166e14bc8997c4d1338d182db783226713c",
+      "components": [
+        "gdk-pixbuf"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/gdk-pixbuf_2.42.8+dfsg-1ubuntu0.5.debian.tar.xz",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/gdk-pixbuf/2.42.8+dfsg-1ubuntu0.5/gdk-pixbuf_2.42.8+dfsg-1ubuntu0.5.debian.tar.xz"
+    },
+    {
+      "filename": "glib2.0_2.72.4-0ubuntu2.11.dsc",
+      "sha256": "73396ff4b4833347ce80aab880eff2e58502e256530c6e8163fdbaeb8b0d8002",
+      "components": [
+        "glib2.0"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/glib2.0_2.72.4-0ubuntu2.11.dsc",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/glib2.0/2.72.4-0ubuntu2.11/glib2.0_2.72.4-0ubuntu2.11.dsc"
+    },
+    {
+      "filename": "glib2.0_2.72.4.orig.tar.xz",
+      "sha256": "8848aba518ba2f4217d144307a1d6cb9afcc92b54e5c13ac1f8c4d4608e96f0e",
+      "components": [
+        "glib2.0"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/glib2.0_2.72.4.orig.tar.xz",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/glib2.0/2.72.4-0ubuntu2.11/glib2.0_2.72.4.orig.tar.xz"
+    },
+    {
+      "filename": "glib2.0_2.72.4-0ubuntu2.11.debian.tar.xz",
+      "sha256": "6470490f79324c2bf46d3138093c137b7af77f5b741a2d313476dd7a3daf0f66",
+      "components": [
+        "glib2.0"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/glib2.0_2.72.4-0ubuntu2.11.debian.tar.xz",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/glib2.0/2.72.4-0ubuntu2.11/glib2.0_2.72.4-0ubuntu2.11.debian.tar.xz"
+    },
+    {
+      "filename": "libgpg-error_1.43-3.dsc",
+      "sha256": "4cebb44aa01a2dfc75eae5b5758ac73f353778e1391e55726264fabf06944a23",
+      "components": [
+        "libgpg-error"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/libgpg-error_1.43-3.dsc",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/libgpg-error/1.43-3/libgpg-error_1.43-3.dsc"
+    },
+    {
+      "filename": "libgpg-error_1.43.orig.tar.bz2",
+      "sha256": "a9ab83ca7acc442a5bd846a75b920285ff79bdb4e3d34aa382be88ed2c3aebaf",
+      "components": [
+        "libgpg-error"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/libgpg-error_1.43.orig.tar.bz2",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/libgpg-error/1.43-3/libgpg-error_1.43.orig.tar.bz2"
+    },
+    {
+      "filename": "libgpg-error_1.43.orig.tar.bz2.asc",
+      "sha256": "6f1f0354aee0abc946d7f0e604fa69d5826a312baabcc0bb4fad4f97899cfa80",
+      "components": [
+        "libgpg-error"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/libgpg-error_1.43.orig.tar.bz2.asc",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/libgpg-error/1.43-3/libgpg-error_1.43.orig.tar.bz2.asc"
+    },
+    {
+      "filename": "libgpg-error_1.43-3.debian.tar.xz",
+      "sha256": "d9d4efa45fc8d58152cbfa3bbaa68ed1977d8c56b7d59a579ef4feb4ffe7ec83",
+      "components": [
+        "libgpg-error"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/libgpg-error_1.43-3.debian.tar.xz",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/libgpg-error/1.43-3/libgpg-error_1.43-3.debian.tar.xz"
+    },
+    {
+      "filename": "graphite2_1.3.14-1ubuntu0.1.dsc",
+      "sha256": "fa3ded8974494bcfcec90b83cf581de1341100b83f20217f30a819e522f7c199",
+      "components": [
+        "graphite2"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/graphite2_1.3.14-1ubuntu0.1.dsc",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/graphite2/1.3.14-1ubuntu0.1/graphite2_1.3.14-1ubuntu0.1.dsc"
+    },
+    {
+      "filename": "graphite2_1.3.14.orig.tar.gz",
+      "sha256": "7a3b342c5681921ce2e0c2496509d30b5b078399d5a7bd2358f95166d57d91df",
+      "components": [
+        "graphite2"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/graphite2_1.3.14.orig.tar.gz",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/graphite2/1.3.14-1ubuntu0.1/graphite2_1.3.14.orig.tar.gz"
+    },
+    {
+      "filename": "graphite2_1.3.14-1ubuntu0.1.debian.tar.xz",
+      "sha256": "2a573bb291d53438aae7db6655e68f8544f885dc3530a1cbee8a4f7313515407",
+      "components": [
+        "graphite2"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/graphite2_1.3.14-1ubuntu0.1.debian.tar.xz",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/graphite2/1.3.14-1ubuntu0.1/graphite2_1.3.14-1ubuntu0.1.debian.tar.xz"
+    },
+    {
+      "filename": "keyutils_1.6.1-2ubuntu3.dsc",
+      "sha256": "6ce03824add78e1dc385723ce354a5513eb1ab4b83643e91e9b2c64f81112f9d",
+      "components": [
+        "keyutils"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/keyutils_1.6.1-2ubuntu3.dsc",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/keyutils/1.6.1-2ubuntu3/keyutils_1.6.1-2ubuntu3.dsc"
+    },
+    {
+      "filename": "keyutils_1.6.1.orig.tar.bz2",
+      "sha256": "c8b15722ae51d95b9ad76cc6d49a4c2cc19b0c60f72f61fb9bf43eea7cbd64ce",
+      "components": [
+        "keyutils"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/keyutils_1.6.1.orig.tar.bz2",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/keyutils/1.6.1-2ubuntu3/keyutils_1.6.1.orig.tar.bz2"
+    },
+    {
+      "filename": "keyutils_1.6.1-2ubuntu3.debian.tar.xz",
+      "sha256": "e9e8992edcc28599fb59ca1dc9ecbfb6b35175fb712f86b13bf4dc35397631f9",
+      "components": [
+        "keyutils"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/keyutils_1.6.1-2ubuntu3.debian.tar.xz",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/keyutils/1.6.1-2ubuntu3/keyutils_1.6.1-2ubuntu3.debian.tar.xz"
+    },
+    {
+      "filename": "pango1.0_1.50.6+ds-2ubuntu1.dsc",
+      "sha256": "c757b318c7862a162830c765eb2f26ca31837ad08aa752cc2736aa05c9f4fca2",
+      "components": [
+        "pango1.0"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/pango1.0_1.50.6+ds-2ubuntu1.dsc",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/pango1.0/1.50.6+ds-2ubuntu1/pango1.0_1.50.6+ds-2ubuntu1.dsc"
+    },
+    {
+      "filename": "pango1.0_1.50.6+ds.orig.tar.xz",
+      "sha256": "70f0323d6270ee12e8ae14a2959b7227088e3146801d09309558bebb1f2f9df7",
+      "components": [
+        "pango1.0"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/pango1.0_1.50.6+ds.orig.tar.xz",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/pango1.0/1.50.6+ds-2ubuntu1/pango1.0_1.50.6+ds.orig.tar.xz"
+    },
+    {
+      "filename": "pango1.0_1.50.6+ds-2ubuntu1.debian.tar.xz",
+      "sha256": "b16ad51d8b0837303fc57db029fbda8dc5d12e2fd03a1fedb647ce253a87b1f1",
+      "components": [
+        "pango1.0"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/pango1.0_1.50.6+ds-2ubuntu1.debian.tar.xz",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/pango1.0/1.50.6+ds-2ubuntu1/pango1.0_1.50.6+ds-2ubuntu1.debian.tar.xz"
+    },
+    {
+      "filename": "systemd_249.11-0ubuntu3.23.dsc",
+      "sha256": "96d06c4f802aa2a7b4d52dbcbbb04648994f7e8ba2eaef8fe3039075050f1a6d",
+      "components": [
+        "systemd"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/systemd_249.11-0ubuntu3.23.dsc",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/systemd/249.11-0ubuntu3.23/systemd_249.11-0ubuntu3.23.dsc"
+    },
+    {
+      "filename": "systemd_249.11.orig.tar.gz",
+      "sha256": "305ba81cc33593bc2e8e9d6dc7f964b1c0a9303155fced5e6b1d236577441bf2",
+      "components": [
+        "systemd"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/systemd_249.11.orig.tar.gz",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/systemd/249.11-0ubuntu3.23/systemd_249.11.orig.tar.gz"
+    },
+    {
+      "filename": "systemd_249.11-0ubuntu3.23.debian.tar.xz",
+      "sha256": "149803061ffbd7b5deb82747a58fe482d9ff23849bfbed40aac19ccae1462c81",
+      "components": [
+        "systemd"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/systemd_249.11-0ubuntu3.23.debian.tar.xz",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/systemd/249.11-0ubuntu3.23/systemd_249.11-0ubuntu3.23.debian.tar.xz"
+    },
+    {
+      "filename": "libthai_0.1.29-1build1.dsc",
+      "sha256": "1f021fa685c211d68aa2dc8b568d045480ebb40b5ca5b52181ab50000c01cfe3",
+      "components": [
+        "libthai"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/libthai_0.1.29-1build1.dsc",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/libthai/0.1.29-1build1/libthai_0.1.29-1build1.dsc"
+    },
+    {
+      "filename": "libthai_0.1.29.orig.tar.xz",
+      "sha256": "fc80cc7dcb50e11302b417cebd24f2d30a8b987292e77e003267b9100d0f4bcd",
+      "components": [
+        "libthai"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/libthai_0.1.29.orig.tar.xz",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/libthai/0.1.29-1build1/libthai_0.1.29.orig.tar.xz"
+    },
+    {
+      "filename": "libthai_0.1.29-1build1.debian.tar.xz",
+      "sha256": "6aede1220d716f4291b8e9ee60383b4ff3c09c2abe17982443d977c557426866",
+      "components": [
+        "libthai"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later separately distributed library source/patches; exception does not remove the library source duty"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/libthai_0.1.29-1build1.debian.tar.xz",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/libthai/0.1.29-1build1/libthai_0.1.29-1build1.debian.tar.xz"
+    },
+    {
+      "filename": "mingw-w64-brotli-1.2.1-1.src.tar.zst",
+      "sha256": "3dfc69b88a111ef4809928e81d4cb650ea9c7ba5da4ebd1bf28d6effdeeb6bd6",
+      "components": [
+        "mingw-w64-brotli"
+      ],
+      "license_obligations": [
+        "MIT library source/recipe for selected GPL FFmpeg aggregate (independent permissive terms remain notice-only)"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/mingw-w64-brotli-1.2.1-1.src.tar.zst",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://repo.msys2.org/mingw/sources/mingw-w64-brotli-1.2.1-1.src.tar.zst"
+    },
+    {
+      "filename": "mingw-w64-bzip2-1.0.8-4.src.tar.zst",
+      "sha256": "fd9360917314d1cbccb3cb15ed8450d1e56b8a9f733b606504aba52c52159e54",
+      "components": [
+        "mingw-w64-bzip2"
+      ],
+      "license_obligations": [
+        "bzip2-1.0.6 library source/recipe for selected GPL FFmpeg aggregate (independent permissive terms remain notice-only)"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/mingw-w64-bzip2-1.0.8-4.src.tar.zst",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://repo.msys2.org/mingw/sources/mingw-w64-bzip2-1.0.8-4.src.tar.zst"
+    },
+    {
+      "filename": "mingw-w64-expat-2.10.0-1.src.tar.zst",
+      "sha256": "8473f4c38da677e7f0f2eabf9fb60404ea2ef80c5e465258a2724ceff4c1d331",
+      "components": [
+        "mingw-w64-expat"
+      ],
+      "license_obligations": [
+        "MIT library source/recipe for selected GPL FFmpeg aggregate (independent permissive terms remain notice-only)"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/mingw-w64-expat-2.10.0-1.src.tar.zst",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://repo.msys2.org/mingw/sources/mingw-w64-expat-2.10.0-1.src.tar.zst"
+    },
+    {
+      "filename": "mingw-w64-fontconfig-2.18.4-1.src.tar.zst",
+      "sha256": "7168fb268671f92ab62864302aaec737c93dbeff514509c31dbff38a717745b6",
+      "components": [
+        "mingw-w64-fontconfig"
+      ],
+      "license_obligations": [
+        "MIT library source/recipe for selected GPL FFmpeg aggregate (independent permissive terms remain notice-only)"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/mingw-w64-fontconfig-2.18.4-1.src.tar.zst",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://repo.msys2.org/mingw/sources/mingw-w64-fontconfig-2.18.4-1.src.tar.zst"
+    },
+    {
+      "filename": "mingw-w64-freetype-2.15.0-1.src.tar.zst",
+      "sha256": "2f09c60b72bd249642d055aa5a34edf2577392e592415f3f4730dd37990b47ad",
+      "components": [
+        "mingw-w64-freetype"
+      ],
+      "license_obligations": [
+        "FTL library source/recipe for selected GPL FFmpeg aggregate (independent permissive terms remain notice-only)"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/mingw-w64-freetype-2.15.0-1.src.tar.zst",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://repo.msys2.org/mingw/sources/mingw-w64-freetype-2.15.0-1.src.tar.zst"
+    },
+    {
+      "filename": "mingw-w64-fribidi-1.0.18-1.src.tar.zst",
+      "sha256": "7cd0b6290516a7d61b1508d79c18d2661170a0e3189582ded99bd9879cc159b2",
+      "components": [
+        "mingw-w64-fribidi"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later library source/recipe for selected GPL FFmpeg aggregate (independent permissive terms remain notice-only)"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/mingw-w64-fribidi-1.0.18-1.src.tar.zst",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://repo.msys2.org/mingw/sources/mingw-w64-fribidi-1.0.18-1.src.tar.zst"
+    },
+    {
+      "filename": "mingw-w64-gcc-16.2.0-7.src.tar.zst",
+      "sha256": "bdd1b2cd820cd67d38b42a174180bdd589b80b97af1a8b042d6c4da9176bac93",
+      "components": [
+        "mingw-w64-gcc"
+      ],
+      "license_obligations": [
+        "GPL-3.0-or-later WITH GCC-exception-3.1 library source/recipe for selected GPL FFmpeg aggregate (independent permissive terms remain notice-only)"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/mingw-w64-gcc-16.2.0-7.src.tar.zst",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://repo.msys2.org/mingw/sources/mingw-w64-gcc-16.2.0-7.src.tar.zst"
+    },
+    {
+      "filename": "mingw-w64-glib2-2.90.1-1.src.tar.zst",
+      "sha256": "ac3bc00e4079e6b51dd0a1fb9ccc420fff033b4e9095e4487dbf6cf01312cee6",
+      "components": [
+        "mingw-w64-glib2"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later library source/recipe for selected GPL FFmpeg aggregate (independent permissive terms remain notice-only)"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/mingw-w64-glib2-2.90.1-1.src.tar.zst",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://repo.msys2.org/mingw/sources/mingw-w64-glib2-2.90.1-1.src.tar.zst"
+    },
+    {
+      "filename": "mingw-w64-graphite2-1.3.15-1.src.tar.zst",
+      "sha256": "eb76ce274c68ea6bad0883144c21e44a803ec94fed9dc0f6584feb0a8415a1d6",
+      "components": [
+        "mingw-w64-graphite2"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later library source/recipe for selected GPL FFmpeg aggregate (independent permissive terms remain notice-only)"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/mingw-w64-graphite2-1.3.15-1.src.tar.zst",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://repo.msys2.org/mingw/sources/mingw-w64-graphite2-1.3.15-1.src.tar.zst"
+    },
+    {
+      "filename": "mingw-w64-harfbuzz-15.2.0-1.src.tar.zst",
+      "sha256": "d69e2926253579bf626b5cad66c74dbfa17a5b007e5b633cc2f8bad42c223c2f",
+      "components": [
+        "mingw-w64-harfbuzz"
+      ],
+      "license_obligations": [
+        "MIT library source/recipe for selected GPL FFmpeg aggregate (independent permissive terms remain notice-only)"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/mingw-w64-harfbuzz-15.2.0-1.src.tar.zst",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://repo.msys2.org/mingw/sources/mingw-w64-harfbuzz-15.2.0-1.src.tar.zst"
+    },
+    {
+      "filename": "mingw-w64-libiconv-1.19.1-1.src.tar.zst",
+      "sha256": "ed46bb1b524ad9bd9d843091bf7b18ab23e5cd21fef6de743c8c943bdc11dabe",
+      "components": [
+        "mingw-w64-libiconv"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later library source/recipe for selected GPL FFmpeg aggregate (independent permissive terms remain notice-only)"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/mingw-w64-libiconv-1.19.1-1.src.tar.zst",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://repo.msys2.org/mingw/sources/mingw-w64-libiconv-1.19.1-1.src.tar.zst"
+    },
+    {
+      "filename": "mingw-w64-gettext-1.0-1.src.tar.zst",
+      "sha256": "cca0d0c8f60353faccc5ad40405240014e4a7ccc8b1c6ca9f4626aef3097d26e",
+      "components": [
+        "mingw-w64-gettext"
+      ],
+      "license_obligations": [
+        "LGPL-2.1-or-later library source/recipe for selected GPL FFmpeg aggregate (independent permissive terms remain notice-only)"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/mingw-w64-gettext-1.0-1.src.tar.zst",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://repo.msys2.org/mingw/sources/mingw-w64-gettext-1.0-1.src.tar.zst"
+    },
+    {
+      "filename": "mingw-w64-xz-5.8.4-1.src.tar.zst",
+      "sha256": "b8acbc56b2bfe08df7bffff423f3bf07ee85dbec4e07416017ab04c8afb9d13e",
+      "components": [
+        "mingw-w64-xz"
+      ],
+      "license_obligations": [
+        "0BSD library source/recipe for selected GPL FFmpeg aggregate (independent permissive terms remain notice-only)"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/mingw-w64-xz-5.8.4-1.src.tar.zst",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://repo.msys2.org/mingw/sources/mingw-w64-xz-5.8.4-1.src.tar.zst"
+    },
+    {
+      "filename": "mingw-w64-pcre2-10.49-2.src.tar.zst",
+      "sha256": "a0834cd8808867aaa3d0065eefcb12a2be09735a6c398c3da9301187e8517ead",
+      "components": [
+        "mingw-w64-pcre2"
+      ],
+      "license_obligations": [
+        "BSD-3-Clause library source/recipe for selected GPL FFmpeg aggregate (independent permissive terms remain notice-only)"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/mingw-w64-pcre2-10.49-2.src.tar.zst",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://repo.msys2.org/mingw/sources/mingw-w64-pcre2-10.49-2.src.tar.zst"
+    },
+    {
+      "filename": "mingw-w64-libpng-1.6.59-2.src.tar.zst",
+      "sha256": "7f7c029d119427fe7b36be8a79228f831062bedadee1f49c9e0919fe6d7a459a",
+      "components": [
+        "mingw-w64-libpng"
+      ],
+      "license_obligations": [
+        "libpng-2.0 library source/recipe for selected GPL FFmpeg aggregate (independent permissive terms remain notice-only)"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/mingw-w64-libpng-1.6.59-2.src.tar.zst",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://repo.msys2.org/mingw/sources/mingw-w64-libpng-1.6.59-2.src.tar.zst"
+    },
+    {
+      "filename": "mingw-w64-libunibreak-7.0-1.src.tar.zst",
+      "sha256": "3d51ed18b20deb475c6947ea8fdabb7d6107962e2e6e690de90e5227537728ad",
+      "components": [
+        "mingw-w64-libunibreak"
+      ],
+      "license_obligations": [
+        "Zlib library source/recipe for selected GPL FFmpeg aggregate (independent permissive terms remain notice-only)"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/mingw-w64-libunibreak-7.0-1.src.tar.zst",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://repo.msys2.org/mingw/sources/mingw-w64-libunibreak-7.0-1.src.tar.zst"
+    },
+    {
+      "filename": "mingw-w64-winpthreads-14.0.0.r598.ge3d18511f-1.src.tar.zst",
+      "sha256": "1da3dad4f6916d0c23e8fe76c38ed79946fb32078f94047c0475229b8112a1db",
+      "components": [
+        "mingw-w64-winpthreads"
+      ],
+      "license_obligations": [
+        "MIT AND BSD-3-Clause library source/recipe for selected GPL FFmpeg aggregate (independent permissive terms remain notice-only)"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/mingw-w64-winpthreads-14.0.0.r598.ge3d18511f-1.src.tar.zst",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://repo.msys2.org/mingw/sources/mingw-w64-winpthreads-14.0.0.r598.ge3d18511f-1.src.tar.zst"
+    },
+    {
+      "filename": "mingw-w64-zlib-1.4-2.src.tar.zst",
+      "sha256": "28415621a0f6c16bc20b0ce50cd1ae3632dd9f27bdc5776ab3ec18e8d2f00dcd",
+      "components": [
+        "mingw-w64-zlib"
+      ],
+      "license_obligations": [
+        "Zlib library source/recipe for selected GPL FFmpeg aggregate (independent permissive terms remain notice-only)"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/mingw-w64-zlib-1.4-2.src.tar.zst",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": "https://repo.msys2.org/mingw/sources/mingw-w64-zlib-1.4-2.src.tar.zst"
+    },
+    {
+      "filename": "Cactu-AppImage-fedfad51-cactu1-LGPL-source-relink.tar",
+      "sha256": "a836cccbc38e3b2bec8f13517e4bf0fecdc4afd802b594dfbd6003df352dfdc5",
+      "components": [
+        "AppImage LGPL-linked prefix"
+      ],
+      "license_obligations": [
+        "Actual LGPL source/relink inputs with applicable independent notices; ordinary kernel header source excluded"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/Cactu-AppImage-fedfad51-cactu1-LGPL-source-relink.tar",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": null
+    },
+    {
+      "filename": "RECIPIENT-SOURCE-INSTRUCTIONS.txt",
+      "sha256": "3bfc4fd4b8f124f37e33ef1f50bf18e44695b8716b42951b7bfdd87359d13c8d",
+      "components": [
+        "all recipients"
+      ],
+      "license_obligations": [
+        "source retrieval, hash verification and build/replacement information"
+      ],
+      "redistribution_approved": false,
+      "retrieval_url": "https://github.com/drrrrigo/cactu-video-converter/releases/download/v0.1.0-beta.1/RECIPIENT-SOURCE-INSTRUCTIONS.txt",
+      "retrieval_status": "PROPOSED_NOT_PUBLISHED",
+      "upstream_source": null
+    }
+  ],
+  "remaining_engineering": [],
+  "proposed_materials_prepared": true,
+  "recipient_notice_location": "Each exact binary package contains _internal/licenses (Linux usr/bin/_internal/licenses), including actual native-system/MSYS, Qt and Python notices. The exact Cactu source archive also contains supplier notice material. Refer to component-review.json for the finite per-file mapping.",
+  "human_decisions": [
+    {
+      "id": "MSVC-RIGHTS",
+      "affected": "actual Microsoft runtime DLLs in Windows payloads",
+      "condition": "applicable Visual Studio redistribution terms and REDIST grant",
+      "owner_answer": "Owner does not know qualifying rights; keep as legal pending (2026-11-21)",
+      "responsible": "owner / qualified legal reviewer",
+      "resolution": "Confirm qualifying grant, or choose official prerequisite and implement/test changed installer/portable/offline behavior",
+      "completion": "Written decision tied to actual files/versions and strategy"
+    },
+    {
+      "id": "FINAL-LICENSE-SOURCE-APPROVAL",
+      "affected": "exact candidate binaries and proposed source/notice set",
+      "responsible": "human license reviewer / owner",
+      "resolution": "Review finite component table and proposed assets; approve exact identities separately",
+      "completion": "Explicit approved records; no automatic flag change"
+    }
+  ],
+  "publication_approved": false
+}

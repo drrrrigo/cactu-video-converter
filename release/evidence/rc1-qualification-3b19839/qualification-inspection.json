@@ -1,0 +1,20 @@
+{
+  "candidate_source_commit": "3b19839d6a626dd0a339dc7997e79c7fe23f9935",
+  "candidate_artifacts": {
+    "CactuVideoConverter-0.1.0-beta.1-x86_64.AppImage": "338622d40a3eff55d31df0c3f1e1d407da01656d439920fe38c3018efaddeee9",
+    "CactuVideoConverter-Portable-0.1.0-beta.1.zip": "f73659308dfcfe272adecdedbfd3ff9076460703014a437e90fec2d22dc51eff",
+    "CactuVideoConverter-Setup-0.1.0-beta.1.exe": "b2f46b79400c5a65fb93f6e6b290f67a0a003e8ff8604c05c93c5d1e02315e30"
+  },
+  "actual_notice_hashes": "PASS",
+  "source_asset_hashes": "PASS",
+  "forbidden_unshipped_components": "ABSENT",
+  "review_rows": 398,
+  "review_status_counts": {
+    "ENGINEERING_EVIDENCE_PREPARED": 378,
+    "HUMAN LEGAL / OWNER DECISION": 20
+  },
+  "proposed_assets": 95,
+  "remaining_engineering": [],
+  "qualification": "AUDIT_ONLY_NOT_RC1",
+  "human_approval": false
+}

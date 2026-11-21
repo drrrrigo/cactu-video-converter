@@ -1,0 +1,25 @@
+{
+  "version": "0.1.0-beta.1",
+  "python": "3.14.7",
+  "python_implementation": "CPython",
+  "frozen": true,
+  "ok": true,
+  "qt_tls_backends": [
+    "cert-only",
+    "openssl"
+  ],
+  "window_title": "Cactu Video Converter",
+  "ffmpeg": "ffmpeg version 9.0.2-cactu-d59078794d80 Copyright (c) 2000-2026 the FFmpeg developers",
+  "ffprobe": "ffprobe version 9.0.2-cactu-d59078794d80 Copyright (c) 2007-2026 the FFmpeg developers",
+  "runtime_bundled": true,
+  "video": "h264",
+  "audio": "aac",
+  "faststart": true,
+  "original_unchanged": true,
+  "output_sha256": "fa52965db8701171b7d6651782f69d2b79443bcfec0c1726efdd723e741f2423",
+  "quick_preview": true,
+  "embedded_subtitle_queue": true,
+  "loudness_queue": true,
+  "sequential_queue_completed": 2,
+  "physical_gpu_validation": "not performed by frozen smoke; separate optional hardware tests required"
+}

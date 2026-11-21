@@ -1,5 +1,9 @@
 # Beta.1 redistribution blocker resolution
 
+> Current authority: [RC1 qualification](RC1_QUALIFICATION.md), 2026-11-21. This supersedes the historical status, test counts, provider selection and open engineering lists below. Final common native source is 3b19839; human approval and Microsoft rights remain pending. No public beta is authorized.
+
+Final verification: same clean source `3b19839`, 186/186 local tests with AMD VAAPI; source CI and native controlled suites passed on both systems (three cloud GPU skips each). Windows portable/installer and Linux AppImage smoke passed; Linux required a same-source retry after exit 139, preserved in the report. Actual notices and 95 proposed source assets verify; Microsoft rights, final human review and manual acceptance remain pending. All technical/license/publication approvals remain false.
+
 Current controlled-build outcome and remaining RC1 blockers: [FFMPEG_CONTROLLED_CLOSURE](FFMPEG_CONTROLLED_CLOSURE.md), reviewed 2026-11-21. This is the authoritative current summary; the following sections preserve earlier audit results and intermediate build history. A blocker or test count from an earlier section must not be applied to a later candidate without its exact source/artifact identity.
 
 Reviewed 2026-11-20 (America/Sao_Paulo). **Improved, still BLOCKED before RC1.**
