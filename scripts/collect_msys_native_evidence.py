@@ -42,6 +42,8 @@ def collect(msys, output):
             "notices": [],
         }
         for relative in owned:
+            if relative not in dlls and not relative.startswith("ucrt64/share/licenses/"):
+                continue
             source = (msys / relative).resolve()
             if not source.is_relative_to(msys):
                 raise RuntimeError("Package evidence path escapes the installation")
