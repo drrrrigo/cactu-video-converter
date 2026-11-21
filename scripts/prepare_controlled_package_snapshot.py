@@ -39,9 +39,14 @@ def prepare(work, destination):
         for name in ["ffmpeg" + suffix, "ffprobe" + suffix, "FFmpeg-LICENSE.txt"]:
             bundle.add(vendor / name, arcname=name)
     selected = read_json(destination / "vendor/ffmpeg/manifest.json")
+    upstream_commit = (
+        subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT).decode().strip()
+    )
     entry = selected[target]
     entry.update(
         provider="Cactu controlled candidate (unapproved)",
+        source_recipe_commit=upstream_commit,
+        source_review_note="Controlled candidate; dependency/toolchain/source-delivery review incomplete",
         source_url=None,
         archive_format="tar",
         ffmpeg_member="ffmpeg" + suffix,
