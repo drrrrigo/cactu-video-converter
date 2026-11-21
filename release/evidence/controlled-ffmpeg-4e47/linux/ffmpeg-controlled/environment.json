@@ -1,0 +1,41 @@
+{
+  "platform": "Linux-6.8.0-1070-azure-x86_64-with-glibc2.35",
+  "tools": {
+    "gcc": {
+      "sha256": "821af3c74506283c179ca413bb33e6b528805a4dd8a5c09df125e5ad560a9e89",
+      "version": "gcc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0"
+    },
+    "make": {
+      "sha256": "92f646030615cd98490a68a94c0aefd87b552be3158b941c02e43b0bfdb576db",
+      "version": "GNU Make 4.3"
+    },
+    "pkg-config": {
+      "sha256": "5b3ac843680075b8266500aaa948eb3f622aed206ff4116c08de5d8609eaa563",
+      "version": "0.29.2"
+    },
+    "autoconf": {
+      "sha256": "6e1333c24e8f3bd9bd5e38c513cc47f9c8cc7dbb3dd30b0354b628ba0f4580dd",
+      "version": "autoconf (GNU Autoconf) 2.71"
+    },
+    "automake": {
+      "sha256": "d408da48b279eff2996bb9a4c298b76645fdc61770af8da0e8fff3b5c60c804b",
+      "version": "automake (GNU automake) 1.16.5"
+    },
+    "libtoolize": {
+      "sha256": "1b7f464b777a431ca686b2fbd3baa289b157fde930b297998b9a5174556b09b7",
+      "version": "libtoolize (GNU libtool) 2.4.6"
+    },
+    "cmake": {
+      "sha256": "c4b3b237dc7a013590db9e90f70fca2dfdedde09521e920d3339569ea364230a",
+      "version": "cmake version 3.31.6"
+    },
+    "ninja": {
+      "sha256": "607e668f90dd6cd82e1a42ae572647ad1b1fd43063964295b9547836d8c15d99",
+      "version": "1.13.2"
+    },
+    "meson": {
+      "sha256": "109d54fd8e80781efa0c7979394e8e231048f4ced8b977e7294b6057d66d9baa",
+      "version": "0.61.2"
+    }
+  }
+}

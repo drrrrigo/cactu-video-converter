@@ -2,14 +2,44 @@
 
 import argparse
 import concurrent.futures
+import hashlib
 import json
 import re
+import tarfile
 import urllib.request
 from pathlib import Path
 
 from release_common import ROOT, sha256
 
 BASE = "https://repo.msys2.org/mingw/sources/"
+
+
+def inspect_source(record, cache):
+    with tarfile.open(cache / record["archive"]["filename"], "r:*") as archive:
+        members = archive.getmembers()
+        metadata = next(m for m in members if m.name.endswith("/.SRCINFO"))
+        fields = {}
+        for line in archive.extractfile(metadata).read().decode().splitlines():
+            if " = " in line:
+                key, value = line.split("=", 1)
+                fields.setdefault(key.strip(), []).append(value.strip())
+        version = fields["pkgver"][0] + "-" + fields["pkgrel"][0]
+        if fields.get("epoch", ["0"])[0] != "0":
+            version = fields["epoch"][0] + ":" + version
+        if version != record["version"] or fields["pkgbase"][0] != record["base"]:
+            raise RuntimeError("Source archive identity differs from installed package")
+        files = []
+        for member in members:
+            if not member.isfile():
+                continue
+            digest = hashlib.sha256()
+            with archive.extractfile(member) as source:
+                while chunk := source.read(1024 * 1024):
+                    digest.update(chunk)
+            files.append({"file": member.name, "size": member.size, "sha256": digest.hexdigest()})
+        record["archive_members_verified"] = files
+        record["srcinfo_identity_matches"] = True
+    return record
 
 
 def retain(join_file, output):
@@ -30,7 +60,7 @@ def retain(join_file, output):
             for item in [record["archive"], record["signature"]]:
                 if sha256(cache / item["filename"]) != item["sha256"]:
                     raise RuntimeError("Retained MSYS2 source bytes changed")
-            return record
+            return inspect_source(record, cache)
         matches = [
             n
             for n in names
@@ -58,13 +88,16 @@ def retain(join_file, output):
                 }
             )
         print(base, version, "retained", flush=True)
-        return {
-            "base": base,
-            "version": version,
-            "archive": files[0],
-            "signature": files[1],
-            "verification": "Exact version-named source-only archive from official HTTPS repository; SHA-256 locked locally. Detached signature retained, not independently verified. Contents/build correspondence and license review remain required.",
-        }
+        return inspect_source(
+            {
+                "base": base,
+                "version": version,
+                "archive": files[0],
+                "signature": files[1],
+                "verification": "Exact version-named source-only archive from official HTTPS repository; SHA-256 locked locally. Detached signature retained, not independently verified. Contents/build correspondence and license review remain required.",
+            },
+            cache,
+        )
 
     identities = sorted({(p["base"], p["version"]) for p in join["packages"]})
     with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:

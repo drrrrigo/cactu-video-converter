@@ -1,0 +1,20 @@
+{
+  "scope": "Local CachyOS development audit, not official Ubuntu package or RC1",
+  "upstream_source_commit": "e3bfa2c",
+  "recipe_commit": "4e47bab",
+  "source_tests": 174,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "elapsed_seconds": 71.095,
+  "physical_gpu": "AMD RX 7700 XT / VAAPI",
+  "frozen_smoke": "ONEDIR and AppImage: preview, subtitles, two sequential loudness jobs, software H264/AAC/yuv420p/Faststart",
+  "artifact": {
+    "filename": "CactuVideoConverter-0.1.0-beta.1-x86_64.AppImage",
+    "sha256": "0dd4c2a26d03cdaf27e262e81860b0bfbf7e197ff0a86194fedeec1100475b8e",
+    "size": 119495056
+  },
+  "runtime_rebuild_after_TMPDIR_fix_sha256": "dcf5f5b07d5679e37c5a2decff55a65fc2962c565fdaacbf88eaf2bd4ad61ac4",
+  "publication_approved": false,
+  "complete_corresponding_source": false
+}

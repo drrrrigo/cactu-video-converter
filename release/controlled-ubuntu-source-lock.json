@@ -1,9 +1,9 @@
 {
-  "inventory_source_commit": "a7ffbadbb162e0af75083a506fb8e343375fc745",
-  "upstream_source_commit": "7f9a9cc514e036fe4eccba131bb063040a5e4681",
+  "inventory_source_commit": "afa6e92d3b4385ed1921ebe458533875487cabb5",
+  "upstream_source_commit": "4e47bab1db633b02cb8b5be95e077921ed6ba4a9",
   "artifact": {
     "filename": "CactuVideoConverter-0.1.0-beta.1-x86_64.AppImage",
-    "sha256": "ca8e07b74bcc96be23699aae826df40a46a04529d3e4c56d5c7c73ac7877350e"
+    "sha256": "4b88d70b6f2fe0f70ec68264046e9b9e78a4c859388b88b2920235363859e723"
   },
   "source_packages": [
     {

@@ -25,6 +25,9 @@ def prepare():
             "scripts/ffmpeg_tool_profile.py",
             "release/ffmpeg-native-environments.json",
             "release/ffmpeg-controlled-lock.json",
+            "release/ffmpeg-build-tool-lock.json",
+            ".github/workflows/ffmpeg-controlled.yml",
+            "docs/FFMPEG_CONTROLLED_BUILD.md",
             "LICENSE",
         ]:
             bundle.add(ROOT / name, arcname=name)
@@ -32,6 +35,22 @@ def prepare():
         entry = tarfile.TarInfo("generated/FFmpeg/VERSION")
         entry.size = len(version)
         bundle.addfile(entry, io.BytesIO(version))
+        readme = (
+            "LOCAL INCOMPLETE COMPONENT SOURCE REVIEW BUNDLE — NOT APPROVED FOR PUBLICATION\n"
+            "Scope: Linux FFmpeg source inputs and Cactu build recipe only.\n"
+            "Run with Python 3.14: python scripts/build_controlled_ffmpeg.py linux-x86_64\n"
+            "Native prerequisites are shown in .github/workflows/ffmpeg-controlled.yml.\n"
+            "The optional --environment-profile requires the exact recorded build-tool hashes.\n"
+            "This is not a hermetic toolchain: host font/shaping/compression/VA libraries,\n"
+            "compiler/sysroot source and exact build correspondence are separate obligations.\n"
+            "Assembly is disabled. No bit-identical FFmpeg reproduction is asserted.\n"
+            "Windows AMF input is excluded. Cactu application/Qt/Python/native/runtime source\n"
+            "and per-component notices, final terms review and maintained delivery are not\n"
+            "satisfied by this component bundle. SOURCE-ASSETS.json remains unapproved.\n"
+        ).encode()
+        entry = tarfile.TarInfo("README-SOURCE-REVIEW.txt")
+        entry.size = len(readme)
+        bundle.addfile(entry, io.BytesIO(readme))
     manifest = {
         "complete_corresponding_source": False,
         "assets": [

@@ -1,0 +1,86 @@
+{
+  "version": "0.1.0-beta.1",
+  "target": "linux-x86_64",
+  "source_commit": "afa6e92d3b4385ed1921ebe458533875487cabb5",
+  "source_tree_clean": true,
+  "source_date_epoch": 1795263559,
+  "python": "3.14.7",
+  "python_compiler": "GCC 11.4.0",
+  "python_pin": "3.14.7",
+  "python_pin_matches": true,
+  "python_abi": "cpython-314",
+  "interpreter_executable_sha256": "335e342389d5b5e0394ce3dae00e3f9b20fc3eaeacea18aba312f2fde9b91254",
+  "dependency_versions": {
+    "pip": "25.2",
+    "setuptools": "80.9.0",
+    "wheel": "0.45.1",
+    "packaging": "25.0",
+    "PySide6": "6.11.2",
+    "PySide6_Addons": "6.11.2",
+    "PySide6_Essentials": "6.11.2",
+    "shiboken6": "6.11.2",
+    "psutil": "7.2.2",
+    "PyInstaller": "6.16.0",
+    "pyinstaller-hooks-contrib": "2025.9",
+    "altgraph": "0.17.4",
+    "pytest": "8.4.2",
+    "iniconfig": "2.3.1",
+    "pluggy": "1.7.0",
+    "Pygments": "2.19.2",
+    "ruff": "0.13.3",
+    "PyYAML": "6.0.3"
+  },
+  "requirements_lock_sha256": "fc898fb12797e1e1d97ccfcc2124ea9ebeffc908d98585f2cb72a87216e73da8",
+  "candidate_stage": "AUDIT_ONLY_NOT_RC1",
+  "candidate_id": "0.1.0-beta.1-audit",
+  "platform": "Linux-6.8.0-1070-azure-x86_64-with-glibc2.35",
+  "runner_image": "ubuntu22",
+  "runner_image_version": "20261116.365.1",
+  "packaging_toolchain": {
+    "python": "3.14.7",
+    "linux_runner": "ubuntu-22.04",
+    "windows_runner": "windows-2025",
+    "appimagetool": {
+      "version": "1.9.1",
+      "url": "https://github.com/AppImage/appimagetool/releases/download/1.9.1/appimagetool-x86_64.AppImage",
+      "sha256": "ed4ce84f0d9caff66f50bcca6ff6f35aae54ce8135408b3fa33abfc3cb384eb0",
+      "source_commit": "8c8c91f762b412a19f4e8d2c4b35afb98f2d7c81",
+      "license": "MIT, with separate dependency terms",
+      "role": "build-only packager; separate runtime embeds into output"
+    },
+    "inno_setup": {
+      "version": "7.1.1",
+      "url": "https://github.com/jrsoftware/issrc/releases/download/is-7_1_1/innosetup-7.1.1-x64.exe",
+      "sha256": "8a5a6711c3766a6e5fb74f280ba0e3551e719ce94538d901fdbd1f8f9920b3f0",
+      "source_commit": "2527da77ff7983514f535d19391a748c5d898336",
+      "license": "Inno Setup License and component terms",
+      "role": "build compiler and generated installer/uninstaller runtime"
+    },
+    "appimage_runtime": {
+      "source_commit": "fedfad51acc2860b2916a1eef32ba4a500ff31ef",
+      "sha256": "dcf5f5b07d5679e37c5a2decff55a65fc2962c565fdaacbf88eaf2bd4ad61ac4",
+      "license": "MIT plus statically linked dependency terms including LGPL-covered libfuse",
+      "role": "embedded executable runtime/stub",
+      "previous_provider_input_sha256": "617aa77314d57c8b8e4fae9c3f0b35af7b30d5529cb69e98f64f92510ed98a46",
+      "build_method": "cactu-controlled-offline",
+      "source_lock": "release/appimage-controlled-lock.json",
+      "version": "fedfad51-cactu1"
+    },
+    "python_source": {
+      "url": "https://www.python.org/ftp/python/3.14.7/Python-3.14.7.tar.xz",
+      "sha256": "3b48dac8fb59f62eaa67ac83c1eb12bda1b7a08406dd286e252c11a66be27f81"
+    },
+    "python_linux_baseline": {
+      "provider": "actions/python-versions",
+      "version": "3.14.7",
+      "url": "https://github.com/actions/python-versions/releases/download/3.14.7-31064857500/python-3.14.7-linux-22.04-x64.tar.gz",
+      "sha256": "938c95f002a952aa24d7dbc4a6df353e0c9bb22152cafdb7da79e0beb79ae251",
+      "role": "local audit interpreter matching native CI build family; not a new system Python"
+    }
+  },
+  "signed": false,
+  "artifacts": {
+    "CactuVideoConverter-0.1.0-beta.1-x86_64.AppImage": "4b88d70b6f2fe0f70ec68264046e9b9e78a4c859388b88b2920235363859e723"
+  },
+  "candidate_only": true
+}

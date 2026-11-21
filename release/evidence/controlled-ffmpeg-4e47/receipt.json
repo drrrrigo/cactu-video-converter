@@ -1,0 +1,70 @@
+{
+  "run_id": 44902731258,
+  "upstream_source_commit": "4e47bab1db633b02cb8b5be95e077921ed6ba4a9",
+  "scope": "Native corrected-source static linkage audit. Exact isolated snapshot source commits remain in each platform build.json.",
+  "normalization": "Generic hosted workspace prefix only; original raw metadata retained locally; original and retained hashes below.",
+  "files": [
+    {
+      "file": "linux/ffmpeg-controlled/environment.json",
+      "original_sha256": "17b091aa3ae518ea5f7cc0d91582c7ee9ca2680d1de44a1561dffe0c6e07beca",
+      "retained_sha256": "17b091aa3ae518ea5f7cc0d91582c7ee9ca2680d1de44a1561dffe0c6e07beca",
+      "generic_ci_workspace_redacted": false
+    },
+    {
+      "file": "linux/ffmpeg-controlled/compatibility.json",
+      "original_sha256": "fbe3a20e289d3af7defb992f5f9a2392dbb4bf0100048b4125d14d3b895f69d6",
+      "retained_sha256": "fbe3a20e289d3af7defb992f5f9a2392dbb4bf0100048b4125d14d3b895f69d6",
+      "generic_ci_workspace_redacted": false
+    },
+    {
+      "file": "linux/ffmpeg-controlled/manifest.json",
+      "original_sha256": "519fc00b87dd96016b6f667275d5649095b2c785753ad48182a100c086e32f4b",
+      "retained_sha256": "6c0f9c18917b3e378a4e9dee39501b55cb3da1006417cba7a638796009fae391",
+      "generic_ci_workspace_redacted": true
+    },
+    {
+      "file": "linux/packaging/linux-x86_64-appimage-smoke.json",
+      "original_sha256": "3db61cc5d2fea87241ea9ab769081beb8e31dd602d7f4318093664139534606a",
+      "retained_sha256": "3db61cc5d2fea87241ea9ab769081beb8e31dd602d7f4318093664139534606a",
+      "generic_ci_workspace_redacted": false
+    },
+    {
+      "file": "linux/packaging/linux-x86_64-appimage-payload.json",
+      "original_sha256": "548e39abb761403feac34504cda70e06c7e9f94547435c8550a622cf0bd44e56",
+      "retained_sha256": "548e39abb761403feac34504cda70e06c7e9f94547435c8550a622cf0bd44e56",
+      "generic_ci_workspace_redacted": false
+    },
+    {
+      "file": "linux/packaging/linux-x86_64-appimage-comparison.json",
+      "original_sha256": "b2ca13c880a643a25bde5eb28151cbf76b28b57f948c43329510a9070f1bcfb8",
+      "retained_sha256": "b2ca13c880a643a25bde5eb28151cbf76b28b57f948c43329510a9070f1bcfb8",
+      "generic_ci_workspace_redacted": false
+    },
+    {
+      "file": "linux/packaging/linux-x86_64-runtime-evidence.json",
+      "original_sha256": "9e14f453cb610f133ee213e45f832559b03b07bc7d57e3dcfa84e32135924413",
+      "retained_sha256": "d89d48a76afdcf114c7a893a195bfae442433f40e748a031056eac4483c5e60f",
+      "generic_ci_workspace_redacted": true
+    },
+    {
+      "file": "linux/packaging/linux-x86_64-build.json",
+      "original_sha256": "97477c3fb6786bd70100763903a376ac080fbcf8d93c38f56f3271b34992ccc3",
+      "retained_sha256": "97477c3fb6786bd70100763903a376ac080fbcf8d93c38f56f3271b34992ccc3",
+      "generic_ci_workspace_redacted": false
+    },
+    {
+      "file": "linux/packaging/linux-x86_64-onedir-smoke.json",
+      "original_sha256": "3db61cc5d2fea87241ea9ab769081beb8e31dd602d7f4318093664139534606a",
+      "retained_sha256": "3db61cc5d2fea87241ea9ab769081beb8e31dd602d7f4318093664139534606a",
+      "generic_ci_workspace_redacted": false
+    },
+    {
+      "file": "linux/packaging/linux-x86_64-SHA256SUMS.txt",
+      "original_sha256": "e30d1ba2734a40465b9dde9d4814e70e9777e1c7cad5e5338d188c97fb2df9b8",
+      "retained_sha256": "e30d1ba2734a40465b9dde9d4814e70e9777e1c7cad5e5338d188c97fb2df9b8",
+      "generic_ci_workspace_redacted": false
+    }
+  ],
+  "publication_approved": false,
+  "complete_corresponding_source": false
+}

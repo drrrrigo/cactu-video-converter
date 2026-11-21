@@ -8,10 +8,16 @@ from pathlib import Path
 from release_common import sha256
 
 
-def join(payload_file, evidence_file, output):
+def join(payload_file, evidence_file, output, source_lock=None):
     payload = json.loads(payload_file.read_text())
     evidence = json.loads(evidence_file.read_text())
     packages = {(p["name"], p["version"]): p for p in evidence["packages"]}
+    sources = {}
+    if source_lock:
+        sources = {
+            (p["base"], p["version"]): p
+            for p in json.loads(source_lock.read_text())["source_packages"]
+        }
     by_hash = {}
     for file in evidence["files"]:
         by_hash.setdefault(file["sha256"], []).append(file)
@@ -40,7 +46,12 @@ def join(payload_file, evidence_file, output):
     output.mkdir(parents=True, exist_ok=True)
     retained = []
     for key in sorted(used):
-        package = packages[key]
+        package = dict(packages[key])
+        source = sources.get((package.get("base", package["name"]), package["version"]))
+        package["retained_source_archive"] = source["archive"] if source else None
+        package["source_identity_matches_SRCINFO"] = bool(
+            source and source.get("srcinfo_identity_matches")
+        )
         for notice in package["notices"]:
             relative = Path(notice["file"])
             if relative.is_absolute() or ".." in relative.parts:
@@ -75,8 +86,9 @@ if __name__ == "__main__":
     parser.add_argument("payload", type=Path)
     parser.add_argument("installed_evidence", type=Path)
     parser.add_argument("output", type=Path)
+    parser.add_argument("--source-lock", type=Path)
     args = parser.parse_args()
-    result = join(args.payload, args.installed_evidence, args.output)
+    result = join(args.payload, args.installed_evidence, args.output, args.source_lock)
     print(
         "Exact byte joins:",
         len(result["matches"]),
