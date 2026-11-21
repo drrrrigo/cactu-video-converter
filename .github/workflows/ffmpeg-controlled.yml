@@ -29,8 +29,15 @@ jobs:
             python make autoconf automake libtool
             mingw-w64-ucrt-x86_64-gcc
             mingw-w64-ucrt-x86_64-pkgconf
-            mingw-w64-ucrt-x86_64-libass
-            mingw-w64-ucrt-x86_64-libvpl
+            mingw-w64-ucrt-x86_64-fontconfig
+            mingw-w64-ucrt-x86_64-freetype
+            mingw-w64-ucrt-x86_64-fribidi
+            mingw-w64-ucrt-x86_64-harfbuzz
+            mingw-w64-ucrt-x86_64-libunibreak
+            mingw-w64-ucrt-x86_64-bzip2
+            mingw-w64-ucrt-x86_64-xz
+            mingw-w64-ucrt-x86_64-zlib
+            mingw-w64-ucrt-x86_64-libiconv
             mingw-w64-ucrt-x86_64-cmake
             mingw-w64-ucrt-x86_64-ninja
             mingw-w64-ucrt-x86_64-meson
@@ -44,7 +51,7 @@ jobs:
         run: /usr/bin/python scripts/acquire_controlled_ffmpeg.py windows-x86_64
       - name: Build native Windows candidate
         shell: msys2 {0}
-        run: /usr/bin/python scripts/build_controlled_ffmpeg.py windows-x86_64 --jobs 4
+        run: /usr/bin/python scripts/build_controlled_ffmpeg.py windows-x86_64 --jobs 4 --environment-profile windows-2025-ucrt64
       - name: Native software conversion
         shell: msys2 {0}
         run: >-
@@ -109,7 +116,7 @@ jobs:
           bubblewrap libegl1 libopengl0 libxkbcommon-x11-0 libxcb-cursor0 fonts-dejavu-core
           libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-render-util0
       - run: python scripts/acquire_controlled_ffmpeg.py linux-x86_64
-      - run: python scripts/build_controlled_ffmpeg.py linux-x86_64 --jobs 4
+      - run: python scripts/build_controlled_ffmpeg.py linux-x86_64 --jobs 4 --environment-profile ubuntu-22.04-gcc
       - run: "python -m pip install --require-hashes --only-binary=:all: -r release/requirements.lock"
       - run: python scripts/stage_ffmpeg.py linux-x86_64
       - run: python -m pip install --no-deps --no-build-isolation -e .

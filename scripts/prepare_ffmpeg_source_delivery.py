@@ -22,6 +22,8 @@ def prepare():
         for name in [
             "scripts/build_controlled_ffmpeg.py",
             "scripts/release_common.py",
+            "scripts/ffmpeg_tool_profile.py",
+            "release/ffmpeg-native-environments.json",
             "release/ffmpeg-controlled-lock.json",
             "LICENSE",
         ]:
@@ -37,7 +39,7 @@ def prepare():
         ],
         "remaining": [
             "host native library and compiler source/build correspondence",
-            "native Windows build validation",
+            "source selection and packaged validation for the exact final native candidates",
             "final component license review",
         ],
     }

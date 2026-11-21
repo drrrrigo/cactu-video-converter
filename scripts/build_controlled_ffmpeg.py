@@ -4,15 +4,17 @@ import argparse
 import json
 import os
 import platform
+import re
 import shutil
 import subprocess
 import tarfile
 from pathlib import Path
 
 from release_common import ROOT, read_json, sha256
+from ffmpeg_tool_profile import verify_tool_profile
 
 
-def build(target, work, jobs):
+def build(target, work, jobs, environment_profile=None):
     windows = os.name == "nt" or platform.system().startswith(("MINGW", "MSYS"))
     if (target.startswith("windows")) != windows:
         raise RuntimeError(
@@ -84,6 +86,11 @@ def build(target, work, jobs):
             "sha256": sha256(Path(executable).resolve()),
             "version": result.stdout.splitlines()[0],
         }
+    verified_profile = None
+    if environment_profile:
+        verified_profile = verify_tool_profile(
+            ROOT / "release/ffmpeg-native-environments.json", environment_profile, records
+        )
     (work / "environment.json").write_text(
         json.dumps({"platform": platform.platform(), "tools": records}, indent=2) + "\n"
     )
@@ -165,6 +172,40 @@ def build(target, work, jobs):
     )
     run("ass-build", ["make", "-j" + str(jobs)], sources["libass"])
     run("ass-install", ["make", "install"], sources["libass"])
+    static_overrides = []
+    for package, library in [
+        ("x264", "x264"),
+        ("libass", "ass"),
+        ("vpl", "vpl"),
+        ("dav1d", "dav1d"),
+    ]:
+        pc = prefix / "lib/pkgconfig" / (package + ".pc")
+        archive = prefix / "lib" / ("lib" + library + ".a")
+        if not pc.is_file() or not archive.is_file():
+            raise RuntimeError("Required source-built static input missing: " + package)
+        text = pc.read_text()
+        replacement = "${libdir}/lib" + library + ".a"
+        text, count = re.subn(r"-l" + re.escape(library) + r"(?=\s|$)", lambda _: replacement, text)
+        if not count:
+            raise RuntimeError("Static pkg-config override not applied: " + package)
+        pc.write_text(text)
+        directory = subprocess.check_output(
+            ["pkg-config", "--variable=pcfiledir", package], env=env, text=True
+        ).strip()
+        if windows and os.name != "nt":
+            directory = subprocess.check_output(["cygpath", "-u", directory], text=True).strip()
+        if not Path(directory).resolve().is_relative_to(prefix):
+            raise RuntimeError(
+                "pkg-config selected an external input for " + package + ": " + directory
+            )
+        static_overrides.append(
+            {
+                "package": package,
+                "archive_sha256": sha256(archive),
+                "pkg_config_sha256": sha256(pc),
+                "replacement": replacement,
+            }
+        )
     flags = [
         "--prefix=" + str(prefix),
         "--disable-autodetect",
@@ -202,9 +243,20 @@ def build(target, work, jobs):
     run("ffmpeg-build", ["make", "-j" + str(jobs)], sources["FFmpeg"])
     run("ffmpeg-install", ["make", "install"], sources["FFmpeg"])
     outputs = {}
+    pe_imports = {}
     for name in ["ffmpeg", "ffprobe"]:
         binary = prefix / "bin" / (name + (".exe" if target.startswith("windows") else ""))
         outputs[name] = {"sha256": sha256(binary)}
+        if windows:
+            inspected = subprocess.check_output(["objdump", "-p", str(binary)], env=env, text=True)
+            imports = re.findall(r"DLL Name:\s*(\S+)", inspected)
+            if any(
+                d.lower().startswith(("libass-", "libvpl-", "libx264", "libdav1d")) for d in imports
+            ):
+                raise RuntimeError(
+                    "A controlled source library was replaced by an external DLL: " + str(imports)
+                )
+            pe_imports[name] = imports
         for flag in ["-version", "-buildconf", "-L"]:
             outputs[name][flag] = subprocess.check_output(
                 [str(binary), flag], stderr=subprocess.STDOUT, text=True
@@ -218,9 +270,12 @@ def build(target, work, jobs):
         "local_static_archives": [
             {"filename": p.name, "sha256": sha256(p)} for p in sorted((prefix / "lib").glob("*.a"))
         ],
+        "static_pkg_config_overrides": static_overrides,
+        "pe_imports": pe_imports,
         "patches": [],
         "configure": flags,
         "tools": records,
+        "verified_tool_fingerprint_profile": verified_profile,
         "outputs": outputs,
         "publication_approved": False,
         "complete_corresponding_source": False,
@@ -239,5 +294,9 @@ if __name__ == "__main__":
     p.add_argument("target", choices=["linux-x86_64", "windows-x86_64"])
     p.add_argument("--work", type=Path, default=ROOT / "build/ffmpeg-controlled")
     p.add_argument("--jobs", type=int, default=8)
+    p.add_argument(
+        "--environment-profile",
+        help="Require an exact compiler/build-tool fingerprint match; no drift fallback",
+    )
     args = p.parse_args()
-    build(args.target, args.work, args.jobs)
+    build(args.target, args.work, args.jobs, args.environment_profile)
