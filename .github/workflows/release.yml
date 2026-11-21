@@ -61,9 +61,12 @@ jobs:
             mingw-w64-ucrt-x86_64-zlib mingw-w64-ucrt-x86_64-libiconv
             mingw-w64-ucrt-x86_64-cmake mingw-w64-ucrt-x86_64-ninja mingw-w64-ucrt-x86_64-meson
       - if: runner.os == 'Windows'
+        name: Acquire locked sources using native Windows Python
+        shell: pwsh
+        run: '& "$env:pythonLocation\python.exe" scripts/acquire_controlled_ffmpeg.py windows-x86_64'
+      - if: runner.os == 'Windows'
         shell: msys2 {0}
         run: |
-          /usr/bin/python scripts/acquire_controlled_ffmpeg.py windows-x86_64
           /usr/bin/python scripts/build_controlled_ffmpeg.py windows-x86_64 --jobs 4 --environment-profile windows-2025-ucrt64
           /usr/bin/python scripts/collect_msys_native_evidence.py / build/msys-attribution
       - if: runner.os == 'Windows'

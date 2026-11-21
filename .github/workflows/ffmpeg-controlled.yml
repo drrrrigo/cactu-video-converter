@@ -46,9 +46,12 @@ jobs:
         run: |
           mkdir -p build/ffmpeg-controlled
           pacman -Q > build/ffmpeg-controlled/packages.txt
-      - name: Acquire exact source inputs
-        shell: msys2 {0}
-        run: /usr/bin/python scripts/acquire_controlled_ffmpeg.py windows-x86_64
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version: '3.14.7'
+      - name: Acquire exact source inputs with native Windows Python
+        shell: pwsh
+        run: '& "$env:pythonLocation\python.exe" scripts/acquire_controlled_ffmpeg.py windows-x86_64'
       - name: Build native Windows candidate
         shell: msys2 {0}
         run: /usr/bin/python scripts/build_controlled_ffmpeg.py windows-x86_64 --jobs 4 --environment-profile windows-2025-ucrt64
@@ -59,9 +62,6 @@ jobs:
           -f lavfi -i testsrc2=s=160x90:d=1
           -f lavfi -i sine=d=1 -c:v libx264 -pix_fmt yuv420p
           -c:a aac -movflags +faststart build/ffmpeg-controlled/software.mp4
-      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
-        with:
-          python-version: '3.14.7'
       - name: Expose native candidate dependency directory
         shell: pwsh
         run: |
