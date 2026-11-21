@@ -1,0 +1,43 @@
+name: Windows prerequisite checks (metadata only)
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  prerequisite:
+    runs-on: windows-2025
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: msys2/setup-msys2@ec48f7c5447b3140e2b088413ae3a55687bccb6e
+        id: msys
+        with:
+          msystem: UCRT64
+          update: false
+          install: mingw-w64-ucrt-x86_64-gcc
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version: '3.14.7'
+      - run: "python -m pip install --require-hashes --only-binary=:all: -r release/requirements.lock"
+      - run: python -m pip install --no-deps --no-build-isolation -e .
+      - name: Expose native compiler
+        shell: pwsh
+        run: '"${{ steps.msys.outputs.msys2-location }}\ucrt64\bin" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append'
+      - run: python scripts/check_windows_runtime.py
+      - name: Parse clean-Windows PowerShell helpers
+        shell: powershell
+        run: |
+          foreach ($file in @('packaging/windows/Test-CleanWindowsRuntime.ps1', 'packaging/windows/New-RuntimeSandbox.ps1')) {
+            $tokens = $null; $errors = $null
+            [System.Management.Automation.Language.Parser]::ParseFile((Resolve-Path $file), [ref]$tokens, [ref]$errors) | Out-Null
+            if ($errors.Count) { throw ($errors | Out-String) }
+          }
+      - name: Retain only diagnostic metadata
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: Windows-runtime-check-${{ github.sha }}
+          path: build/windows-runtime/*.json
+          if-no-files-found: warn
