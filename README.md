@@ -42,7 +42,7 @@ Cactu validates output before finalizing it and does not intentionally delete in
 
 ## Installation
 
-**Windows:** download the Setup executable, review the source/checksum, then follow
+**Windows:** install the Microsoft Visual C++ v14 Redistributable **X64 (14.51.36247.0 or newer)** from the [official Microsoft page](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist). Cactu does not bundle or download it. Then download the Setup executable, review the source/checksum, and follow
 the per-user installer. Or extract the complete Portable ZIP and run
 `CactuVideoConverter.exe`. Do not move that executable out of its supporting folder.
 Beta signing status is stated in the release notes; unsigned builds can trigger

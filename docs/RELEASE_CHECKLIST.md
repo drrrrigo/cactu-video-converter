@@ -1,5 +1,31 @@
 # Beta.1 release checklist and promotion
 
+## Microsoft runtime strategy — 2026-11-21
+
+The [runtime decision record](WINDOWS_RUNTIME_REDISTRIBUTION.md) supersedes the
+older app-local Microsoft-rights blocker below. Free Community 2026 is eligible
+in principle for this individual developer; no paid edition is recommended.
+Exact wheel redistribution coverage was not assumed: the eight Qt copies have
+Qt certificate tables despite matching official 14.44 normalized images.
+
+| Check | State |
+| --- | --- |
+| Ten historical DLL identities / official terms | REVIEWED; hashes and per-file evidence retained |
+| New Windows strategy | System-installed Microsoft VC++ v14 x64; no bundled MSVCP/VCRUNTIME or redistributable installer |
+| Prerequisite checks | Native launcher, Setup preflight, ten-path upgrade cleanup and scoped CPython Windows notice tested; no automatic downloads |
+| Local tests / final source CI | 194 local passes including AMD VAAPI; dd1570a Windows/Linux CI passed (194 discovered, 3 GPU skips each), lint/branding/full-history pass |
+| Native Windows checks / packaging | PASS for prerequisite test fixture dd1570a (44938875061); normal controlled refresh blocked by source-host connection refusal |
+| Clean Windows missing/present qualification | PENDING by owner's instruction: no clean machine/VM available; scripts prepared, no pass asserted |
+| Owner Community acceptance | NOT asserted; only needed for a future app-local strategy requiring that grant |
+| Final human/source/manual/publication approvals | Remain false/pending; historical 3b19839 hashes/index do not qualify changed packages |
+
+Before publication, protected manual evidence must include `windows_runtime.missing`
+and `windows_runtime.installed`, generated for identical new ZIP/Setup hashes in
+one clean Windows 11 guest. The gate rejects a preinstalled-runtime machine as
+the missing baseline, altered artifact hashes, other guests and partial/older
+runtimes. Ordinary desktop/manual and owner approval gates remain separate.
+
+
 **Authoritative current states:** [BETA1_RELEASE_CHECKLIST](BETA1_RELEASE_CHECKLIST.md).
 The dated results below are historical. No RC1 is currently declared; technical
 license/source closure remains blocked. This procedure does not authorize a tag,

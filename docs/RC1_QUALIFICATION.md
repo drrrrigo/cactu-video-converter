@@ -1,5 +1,7 @@
 # Final dependency review and common native audit candidate
 
+> Historical common-candidate qualification at 3b19839. The newer [Microsoft runtime strategy](WINDOWS_RUNTIME_REDISTRIBUTION.md) changes Windows packaging to a system prerequisite. These original app-local hashes and source index are not new fallback or RC1 identities.
+
 This report supersedes FFMPEG_CONTROLLED_CLOSURE.md and earlier provider-only
 blocker lists. Historical receipts keep their original identities. **AUDIT
 CANDIDATE — NOT RC1.** No human license, technical approval or publication gate

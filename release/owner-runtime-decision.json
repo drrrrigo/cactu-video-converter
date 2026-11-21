@@ -1,12 +1,17 @@
 {
   "recorded": "2026-11-21",
-  "classification": "HUMAN LEGAL / OWNER DECISION",
-  "affected": "Microsoft runtime DLLs in exact Windows candidate payloads",
+  "classification": "SYSTEM_PREREQUISITE_SELECTED_PENDING_QUALIFICATION",
+  "affected": "Ten historical app-local Microsoft runtime DLL paths; omitted from new fallback Windows payloads",
   "owner_response": "Does not know qualifying redistribution rights; keep as legal pending",
-  "current_strategy": "Unchanged app-local runtime in AUDIT candidates only",
-  "alternative": "Official system VC14 x64 prerequisite, not implemented; installer/portable/offline/clean-Windows impact in docs/WINDOWS_RUNTIME_REDISTRIBUTION.md",
-  "responsible": "owner / qualified license reviewer",
-  "completion_criterion": "Confirm exact applicable grant/REDIST rights, or explicitly select and validate the alternative strategy",
+  "current_strategy": "System-installed Microsoft VC++ prerequisite; omitted from new Windows payloads. Historical app-local owner rights remain unasserted.",
+  "alternative": "Optional self-contained route using canonical Microsoft files after eligible free Community acceptance and exact grant/notice review",
+  "responsible": "Maintainer: packaging; owner/tester: deferred clean Windows; owner/reviewer: final approvals",
+  "completion_criterion": "New fallback packages pass hosted smoke and later exact-hash clean-Windows missing/installed tests; final human approvals remain separate.",
   "license_audit_approved": false,
-  "publication_approved": false
+  "publication_approved": false,
+  "community_eligibility": "Free Community 2026 is eligible in principle for the stated individual own-application case; personal acceptance and exact-file coverage are not established.",
+  "clean_windows_owner_response": "No clean Windows machine/VM available; owner requested validation remain pending (2026-11-21)",
+  "recommendation": "Use system prerequisite for beta; no paid Visual Studio license recommended. Optional Community route to canonical app-local files documented.",
+  "historical_app_local_classification": "HUMAN LEGAL / OWNER DECISION",
+  "owner_current_context": "Individual developer publishing own free GPL-3.0-or-later application; no personal Community acceptance is asserted"
 }

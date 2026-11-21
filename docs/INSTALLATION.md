@@ -2,9 +2,20 @@
 
 Download only from [Cactu's official Releases](https://github.com/drrrrigo/cactu-video-converter/releases).
 A listed candidate/workflow run is not automatically an approved public beta.
-Packages include Python, PySide6/Qt, FFmpeg and FFprobe; there is no runtime download.
+Packages include Python, PySide6/Qt, FFmpeg and FFprobe. Windows requires the separately installed Microsoft VC++ runtime described below. Cactu never downloads a runtime automatically.
 
 ## Windows 11 x86_64
+
+New system-prerequisite builds require **Microsoft Visual C++ v14 Redistributable
+(X64), 14.51.36247.0 or newer**. Obtain it from Microsoft's
+[official guidance](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist),
+read/accept its terms and install/repair it yourself. X86 alone is insufficient.
+Setup blocks installation if the actual system DLLs are missing/older/unloadable.
+The portable launcher explains the same requirement before loading Python/Qt.
+Neither package bundles Microsoft runtime DLLs or installs/downloads that
+prerequisite. Offline users need it already installed or an official installer
+obtained separately. Keep `CactuVideoConverter-core.exe` and `_internal` alongside
+the normal launcher; do not launch the core directly.
 
 Recommended: run the versioned Setup executable. It installs per user, creates a
 Start Menu entry, offers a Desktop shortcut and registers an uninstaller. It keeps

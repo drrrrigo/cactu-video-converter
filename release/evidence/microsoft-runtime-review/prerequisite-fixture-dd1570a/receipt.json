@@ -1,0 +1,57 @@
+{
+  "source_commit": "dd1570afacb2e12df7976f22128221e1e51f9b1b",
+  "workflow_run": 44938875061,
+  "qualification": "PREREQUISITE_TEST_FIXTURE_NOT_RELEASE",
+  "runtime": "Pinned reference fixture, not the selected controlled source-built release runtime",
+  "result": "PASS: launcher, ONEDIR, portable, installer, old app-local path cleanup, frozen software/preview/queue/loudness smoke and uninstall",
+  "no_bundled_msvcp_vcruntime": true,
+  "exact_cpython_windows_notice_sha256": "935cf13e19f8c31b497d20b05d73623431a226b230c3599bc30fa3348979bc68",
+  "clean_windows_validation": false,
+  "publication_approved": false,
+  "metadata_files": [
+    {
+      "file": "prerequisite-package/fixture-build.json",
+      "sha256": "4f76e13f492348115e1c3bc6b50af8b3bdc06a2fac9f63ca932fe366c29e7f1b"
+    },
+    {
+      "file": "prerequisite-package/windows-x86_64-installed-comparison.json",
+      "sha256": "2213ef9bbfd6ba7963bb892dbfa5f616e8fe38b53cfc180c7d06dd2a94d9bf70"
+    },
+    {
+      "file": "prerequisite-package/windows-x86_64-installed-payload.json",
+      "sha256": "db2b0c3bf0c67cbca4879be25d91a68ea6408a5c77b23c8746bba2323e661a1f"
+    },
+    {
+      "file": "prerequisite-package/windows-x86_64-onedir-smoke.json",
+      "sha256": "3d255d47d59b1284aad82257397742f0c8a676dd3107b9d8230210353fdf9e8f"
+    },
+    {
+      "file": "prerequisite-package/windows-x86_64-os-boundary.json",
+      "sha256": "f4f070db35e7c5f60a482d9066d0a9ebd2e825422cc911ae3c695024202d2cf3"
+    },
+    {
+      "file": "prerequisite-package/windows-x86_64-portable-comparison.json",
+      "sha256": "ef905344043aaa6d8a5d1d32f773dc8133c1d09e5df5272105f796f57afa0778"
+    },
+    {
+      "file": "prerequisite-package/windows-x86_64-portable-payload.json",
+      "sha256": "843a20351154161f99295366f26f8dc799e259ade9d63ecfb33c289e71cecb07"
+    },
+    {
+      "file": "prerequisite-package/windows-x86_64-portable-smoke.json",
+      "sha256": "3d255d47d59b1284aad82257397742f0c8a676dd3107b9d8230210353fdf9e8f"
+    },
+    {
+      "file": "prerequisite-package/windows-x86_64-runtime-evidence.json",
+      "sha256": "16b65d25532bd1b0b7d49d3db64ce087d375d08d1ca1cf347abaf6051f5f5fa9"
+    },
+    {
+      "file": "windows-runtime/launcher-evidence.json",
+      "sha256": "1764a903ad0f6f36deb423512032b58023577fd745fa0054b8ff48c2933b5564"
+    },
+    {
+      "file": "windows-runtime/native-checks.json",
+      "sha256": "a0b6e5cf2ba9848fbb0e01bc033550015eef46f63cf3d59473fc66cfab91764b"
+    }
+  ]
+}

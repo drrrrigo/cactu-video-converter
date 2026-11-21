@@ -1,0 +1,17 @@
+{
+  "sha256": "6fe8c255c7ecf4feeec1c86d5e234c25ee609d8ad359c7af182f140bb378ffbb",
+  "needed": [
+    "KERNEL32.dll",
+    "SHELL32.dll",
+    "USER32.dll",
+    "VERSION.dll"
+  ],
+  "test_binary": false,
+  "source_sha256": "1815deeaf3973d90f460610e5f339ad4ced5671e3f7da1f9376c5bed082a36cf",
+  "compiler_sha256": "f4120ffea38b73efaf4d770c1942905e220819ae97299c94bfeab3c396b686e2",
+  "hosted_system_prerequisite": "PASS",
+  "isolated_missing_directory": "REJECTED",
+  "isolated_older_supplier_dlls": "REJECTED",
+  "clean_windows_validation": false,
+  "no_runtime_installed_or_downloaded_by_test": true
+}

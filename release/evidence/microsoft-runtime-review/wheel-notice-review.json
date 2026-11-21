@@ -1,0 +1,18 @@
+[
+  {
+    "wheel": "shiboken6-6.11.2-cp310-abi3-win_amd64.whl",
+    "license_members": [
+      "shiboken6-6.11.2.dist-info/licenses/LicenseRef-Qt-Commercial.txt"
+    ],
+    "microsoft_runtime_grant_term_hits": [],
+    "scope": "Searched only supplier license/notice text, not all code; no separate Microsoft runtime sublicense established"
+  },
+  {
+    "wheel": "pyside6_essentials-6.11.2-cp310-abi3-win_amd64.whl",
+    "license_members": [
+      "pyside6_essentials-6.11.2.dist-info/licenses/LicenseRef-Qt-Commercial.txt"
+    ],
+    "microsoft_runtime_grant_term_hits": [],
+    "scope": "Searched only supplier license/notice text, not all code; no separate Microsoft runtime sublicense established"
+  }
+]

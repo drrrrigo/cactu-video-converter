@@ -1,0 +1,17 @@
+{
+  "sha256": "6fe8c255c7ecf4feeec1c86d5e234c25ee609d8ad359c7af182f140bb378ffbb",
+  "needed": [
+    "KERNEL32.dll",
+    "SHELL32.dll",
+    "USER32.dll",
+    "VERSION.dll"
+  ],
+  "test_binary": false,
+  "source_sha256": "1815deeaf3973d90f460610e5f339ad4ced5671e3f7da1f9376c5bed082a36cf",
+  "compiler_sha256": "f4120ffea38b73efaf4d770c1942905e220819ae97299c94bfeab3c396b686e2",
+  "cpython_windows_notice_sha256": "935cf13e19f8c31b497d20b05d73623431a226b230c3599bc30fa3348979bc68",
+  "portable_notice_sha256": "e91eb1285eb7a5ad86c3ae8e19a2607bf411050846fc67df5a23cf9ceba71e9d",
+  "strategy": "system-prerequisite",
+  "core_sha256": "3ce028a4e1247d98d0b95e347d56508a1f23c0aca7da16308cd6a04c2fc1b144",
+  "automatic_download": false
+}

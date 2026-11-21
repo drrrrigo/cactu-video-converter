@@ -5,7 +5,7 @@
   "license_audit_approved": false,
   "security_audit_approved": true,
   "manual_candidate_evidence": null,
-  "notes": "2026-11-21 final dependency qualification: controlled source-built FFmpeg selected for common native audit candidate 3b19839. Actual MSYS/Qt/Python notices and proposed recipient sources prepared. Human Microsoft rights and exact-source/license/manual approval remain pending. No RC1, public tag, binaries, Release or source bundle. See docs/RC1_QUALIFICATION.md. Bootstrap tool fingerprints are not a hermetic rebuild or security certification.",
+  "notes": "2026-11-21 Microsoft runtime follow-up: Community is a free eligible route in principle for this individual; acceptance and exact wheel-file grant are not assumed. New Windows packaging uses a system VC++ x64 prerequisite and excludes MSVCP/VCRUNTIME. Clean Windows qualification remains pending by owner instruction. Technical/license/publication approvals remain false; no RC1/tag/Release/binary publication. See docs/WINDOWS_RUNTIME_REDISTRIBUTION.md. Historical common candidate 3b19839 and its source index do not qualify new packages.",
   "technical_license_audit_complete": false,
   "publication_approval_source": "BETA_OWNER_APPROVAL in the protected public-beta environment; bound to exact source and artifact hashes, never auto-approved",
   "source_assets_manifest_sha256": null

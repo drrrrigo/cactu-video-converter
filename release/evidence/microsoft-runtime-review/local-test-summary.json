@@ -1,0 +1,13 @@
+{
+  "candidate_sha256": "e3908e1b6f647b8bfb1130fb4f02a11db1d70de67972c37d5650f3b2416fb022",
+  "tests": 194,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "av1_software_decode": true,
+  "av1_decoded_pixels_match_provider": true,
+  "elapsed_seconds": 74.357,
+  "physical_gpu": "AMD RX 7700 XT VAAPI",
+  "scope": "Local controlled source tests after upgrade cleanup; later notice-only packaging verified natively in dd1570a fixture",
+  "raw_log_sha256": "65dd1df2227510eed877bd3a2a13a61d002b23fbab4df74b09e7d7658446b066"
+}

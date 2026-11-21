@@ -1,5 +1,7 @@
 # Cactu beta packaging
 
+> New Windows builds use the [system Microsoft runtime prerequisite](WINDOWS_RUNTIME_REDISTRIBUTION.md). PyInstaller's executable is renamed `CactuVideoConverter-core.exe`; a GPL Windows-API-only launcher retains the ordinary executable name, icon and shortcuts. The ten old MSVCP/VCRUNTIME paths are excluded; no Microsoft installer is bundled. Earlier app-local audit packages below remain historical.
+
 > Current authority: [RC1 qualification](RC1_QUALIFICATION.md), 2026-11-21. This supersedes the historical status, test counts, provider selection and open engineering lists below. Final common native source is 3b19839; human approval and Microsoft rights remain pending. No public beta is authorized.
 
 `packaging/video_converter.spec` creates a PyInstaller ONEDIR bundle with Python,

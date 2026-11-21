@@ -1,5 +1,31 @@
 # Beta.1 authoritative release checklist
 
+## Microsoft runtime strategy — 2026-11-21
+
+The [runtime decision record](WINDOWS_RUNTIME_REDISTRIBUTION.md) supersedes the
+older app-local Microsoft-rights blocker below. Free Community 2026 is eligible
+in principle for this individual developer; no paid edition is recommended.
+Exact wheel redistribution coverage was not assumed: the eight Qt copies have
+Qt certificate tables despite matching official 14.44 normalized images.
+
+| Check | State |
+| --- | --- |
+| Ten historical DLL identities / official terms | REVIEWED; hashes and per-file evidence retained |
+| New Windows strategy | System-installed Microsoft VC++ v14 x64; no bundled MSVCP/VCRUNTIME or redistributable installer |
+| Prerequisite checks | Native launcher, Setup preflight, ten-path upgrade cleanup and scoped CPython Windows notice tested; no automatic downloads |
+| Local tests / final source CI | 194 local passes including AMD VAAPI; dd1570a Windows/Linux CI passed (194 discovered, 3 GPU skips each), lint/branding/full-history pass |
+| Native Windows checks / packaging | PASS for prerequisite test fixture dd1570a (44938875061); normal controlled refresh blocked by source-host connection refusal |
+| Clean Windows missing/present qualification | PENDING by owner's instruction: no clean machine/VM available; scripts prepared, no pass asserted |
+| Owner Community acceptance | NOT asserted; only needed for a future app-local strategy requiring that grant |
+| Final human/source/manual/publication approvals | Remain false/pending; historical 3b19839 hashes/index do not qualify changed packages |
+
+Before publication, protected manual evidence must include `windows_runtime.missing`
+and `windows_runtime.installed`, generated for identical new ZIP/Setup hashes in
+one clean Windows 11 guest. The gate rejects a preinstalled-runtime machine as
+the missing baseline, altered artifact hashes, other guests and partial/older
+runtimes. Ordinary desktop/manual and owner approval gates remain separate.
+
+
 > Current authority: [RC1 qualification](RC1_QUALIFICATION.md), 2026-11-21. This supersedes the historical status, test counts, provider selection and open engineering lists below. Final common native source is 3b19839; human approval and Microsoft rights remain pending. No public beta is authorized.
 
 Final verification: same clean source `3b19839`, 186/186 local tests with AMD VAAPI; source CI and native controlled suites passed on both systems (three cloud GPU skips each). Windows portable/installer and Linux AppImage smoke passed; Linux required a same-source retry after exit 139, preserved in the report. Actual notices and 95 proposed source assets verify; Microsoft rights, final human review and manual acceptance remain pending. All technical/license/publication approvals remain false.

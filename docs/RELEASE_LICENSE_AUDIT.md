@@ -1,5 +1,7 @@
 # Release license audit — v0.1.0-beta.1
 
+> Microsoft runtime follow-up: [current decision and fallback](WINDOWS_RUNTIME_REDISTRIBUTION.md). Free Community eligibility is documented; new Windows packages omit MSVCP/VCRUNTIME and retain CPython Windows embedded-code terms. Historical app-local rights are not automatically approved. Clean Windows remains pending by owner instruction, and the new controlled package refresh is blocked by upstream access.
+
 > Current authority: [RC1 qualification](RC1_QUALIFICATION.md), 2026-11-21. This supersedes the historical status, test counts, provider selection and open engineering lists below. Final common native source is 3b19839; human approval and Microsoft rights remain pending. No public beta is authorized.
 
 Final verification: same clean source `3b19839`, 186/186 local tests with AMD VAAPI; source CI and native controlled suites passed on both systems (three cloud GPU skips each). Windows portable/installer and Linux AppImage smoke passed; Linux required a same-source retry after exit 139, preserved in the report. Actual notices and 95 proposed source assets verify; Microsoft rights, final human review and manual acceptance remain pending. All technical/license/publication approvals remain false.

@@ -129,3 +129,16 @@ hashes. Preserve the same bytes. Rebuilding after manual tests requires new test
 Store approved evidence in the protected `BETA_MANUAL_EVIDENCE` environment variable
 only after review. Publication still requires a separate explicit owner instruction
 and `BETA_OWNER_APPROVAL`; this guide does not authorize tagging or uploading binaries.
+
+
+## Additional system-runtime prerequisite qualification
+
+New Windows packaging omits Microsoft's runtime DLLs. Follow
+[the exact-hash clean-guest procedure](WINDOWS_RUNTIME_REDISTRIBUTION.md) using
+`Test-CleanWindowsRuntime.ps1`: Missing must pass before the tester interactively
+installs the official x64 runtime; Installed must pass afterwards in the same
+guest for the same ZIP/Setup bytes. Include both full receipts in protected
+manual evidence under `windows_runtime`. The scripts exercise automated smoke;
+perform the ordinary desktop scenarios above separately. Owner currently has no
+clean Windows VM and explicitly left this step pending. Do not infer a pass from
+a GitHub runner with preinstalled Visual Studio/runtimes.

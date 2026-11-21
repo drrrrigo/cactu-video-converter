@@ -1,0 +1,47 @@
+{
+  "native_runtime_workflow": 44936706596,
+  "native_runtime_source_commit": "c8b95c42394a8482448f6efd1eb0f1981b199416",
+  "native_runtime_status": "SUCCESS",
+  "power_shell_helpers": "Parsed by Windows PowerShell 5.1; not executed on clean Windows",
+  "clean_windows_status": "PENDING_BY_OWNER_INSTRUCTION",
+  "owner_answer": "No clean Windows machine/VM available; leave validation pending",
+  "failed_package_acquisition_runs": [
+    44936430729,
+    44936760492
+  ],
+  "failed_stage": "MSYS /usr/bin/python urllib: Network is unreachable; before compilation/packaging",
+  "transport_adjustment": "Use pinned native CPython Windows for locked source acquisition, preserve SHA checks and MSYS build tool profile",
+  "native_package_followup_run": 44937153110,
+  "license_audit_approved": false,
+  "publication_approved": false,
+  "native_package_followup_result": "FAILED external source connection refusal before compilation; not a package test failure",
+  "prerequisite_fixture_run": 44938875061,
+  "prerequisite_fixture_result": "SUCCESS; explicitly not a controlled candidate",
+  "upgrade_cleanup_run": 44938265640,
+  "upgrade_cleanup_result": "SUCCESS; exact ten old app paths seeded with harmless placeholders, removed before installed smoke",
+  "final_source_ci": {
+    "run": 44938875257,
+    "source_commit": "dd1570afacb2e12df7976f22128221e1e51f9b1b",
+    "result": "SUCCESS",
+    "windows": {
+      "tests": 194,
+      "passed": 191,
+      "skipped": 3,
+      "seconds": 70.774
+    },
+    "ubuntu": {
+      "tests": 194,
+      "passed": 191,
+      "skipped": 3,
+      "seconds": 55.415
+    },
+    "ruff": "PASS",
+    "branding": "PASS",
+    "source_and_full_history_pattern_scan": "PASS",
+    "raw_log_sha256": "c0c42e2ec62bdf99275b9d71d1ba90417b08b9c128e00b471403f55135971a8b"
+  },
+  "current_source_scan": {
+    "findings": [],
+    "scope": "Current report/evidence tree; no automatic approval"
+  }
+}

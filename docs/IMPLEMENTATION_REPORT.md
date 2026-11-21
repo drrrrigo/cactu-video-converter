@@ -1191,3 +1191,39 @@ verification and a fail-closed protected owner index pin. Nothing is automatical
 approved or published. Actual results, tests, hashes, remaining human decisions
 and limitations are maintained in [RC1 qualification](RC1_QUALIFICATION.md) and its
 linked metadata receipts; historical counts/hashes above remain historical.
+
+
+## Microsoft runtime redistribution follow-up
+
+Reviewed the actual Community 2026 and VC++ v14 agreements and all ten supplier
+DLL identities. Individual/free Community eligibility does not prove that current
+wheel re-signed files satisfy the unmodified-file condition. Eight Qt images
+match official 14.44 code after excluding checksum/certificate metadata; two
+14.51 files match CPython's official embeddable ZIP. No paid Visual Studio edition
+is recommended or license acceptance invented. Exact evidence and optional
+Community steps are in WINDOWS_RUNTIME_REDISTRIBUTION.md.
+
+Implemented the system-prerequisite fallback: remove MSVCP/VCRUNTIME throughout
+collection, reject remaining copies, build a CRT-independent Windows-API launcher,
+retain normal executable/shortcut names, preflight Setup and provide explicit
+official Microsoft guidance. Arguments/child exit status reach the unchanged
+frozen application. No downloader or Microsoft installer is shipped/executed.
+New unit tests cover all ten exclusions and exact-hash/same-guest clean-test gates.
+The local full controlled suite passed 194 tests including physical AMD VAAPI.
+
+Clean Windows missing/installed scripts and offline Sandbox configuration are
+prepared. Owner explicitly has no clean machine/VM and requested this remain
+pending; hosted smoke and synthetic missing-directory checks cannot replace it.
+No human license, technical, source or publication approval is automatically
+completed. No tag, Release or public executable is created. Native CI results and
+changed package hashes are recorded in the runtime decision report.
+
+Native prerequisite packaging passed at dd1570a, run 44938875061, including old
+app-local DLL cleanup and exact Windows CPython additional-conditions retention.
+Portable/installed inventories have zero MSVCP/VCRUNTIME. This is explicitly a
+reference-runtime test fixture, not a controlled release candidate: three normal
+controlled runs failed during source acquisition (network connection errors),
+before compilation. The selected controlled implementation and locked hashes
+remain unchanged. The owner-deferred clean Windows test and normal controlled
+package refresh remain concrete verification work; no legal/publication approval
+is automatically inferred from successful hosted tests.
