@@ -41,3 +41,38 @@ check with an explicit failure/help path. Bundling Microsoft's installer would
 still require permission review. This alternative has not changed Cactu's current
 self-contained packaging and does not claim that a prerequisite fixes every legal
 condition. Decide only after the technical tests and eligibility review.
+
+
+## Owner decision recorded — 2026-11-21
+
+The owner answered that qualifying redistribution rights are not known and
+requested this remain a legal pending item. Classification: **HUMAN LEGAL / OWNER
+DECISION**, not a missing compiler/source scan. Current app-local files stay in
+AUDIT candidates; neither the global technical/license/publication fields nor
+this supplier grant is self-approved.
+
+A precise alternative, if the owner selects it after review, is system-only
+Microsoft VC14 x64 runtime installation from Microsoft's [official supported
+redistributable page](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170). The user obtains it directly; Cactu would not redistribute
+or silently download it. Engineering steps would be: omit only the ten mapped
+app-local VC DLL paths, perform installer prerequisite detection against the
+supported x64 runtime and actual import requirements, give a clear prerequisite
+error/link before install, and retest on clean Windows 11 without preinstalled
+runtime and again after official installation. Avoid inferring the minimum ABI
+only from the largest bundled DLL's resource version.
+
+| Workflow | Consequence / required acceptance |
+| --- | --- |
+| Installer | Explicit preflight and help; no hidden download, arbitrary DLL or automatic prerequisite installation. Retest install/convert/uninstall on a clean machine. |
+| Portable ZIP | No longer self-contained on machines without the system runtime. Provide a visible prerequisite README; Python cannot reliably show a custom GUI if its own loader dependency is absent. Validate both missing/present runtime cases. |
+| Offline | Requires runtime already installed, or an official installer obtained separately beforehand. Do not bundle that installer without its own applicable redistribution permission. |
+| First launch | System loader may fail before Cactu starts when prerequisite is absent; documentation/preflight must account for that rather than promising an in-app recovery dialog. |
+| Existing automated tests | Current Windows hosted runners already have runtime software and cannot prove clean-machine prerequisite handling. Add isolated clean-Windows tests for a changed strategy. Existing self-contained smoke stays applicable to audit bundles only. |
+
+Completion criterion for the present app-local strategy: owner/legal reviewer
+records the applicable edition/license/REDIST grant covering these exact files,
+versions and intended redistribution. Alternative completion criterion: an
+explicit owner strategy choice followed by the concrete implementation and clean-
+machine tests above. This record requests no approval to compensate for an
+unimplemented prerequisite strategy. No extra source publication is imposed on
+the proprietary Microsoft files.

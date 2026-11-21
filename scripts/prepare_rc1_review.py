@@ -2,6 +2,7 @@
 
 import argparse
 import csv
+import hashlib
 import json
 import os
 import subprocess
@@ -33,7 +34,7 @@ def prepare(reports, destination):
     output.mkdir(parents=True, exist_ok=True)
     assets, rows, missing = {}, [], []
 
-    def asset(file, component, obligation, url=None):
+    def asset(file, component, obligation, url=None, expected=None):
         if not file.is_file():
             missing.append(
                 {
@@ -44,6 +45,8 @@ def prepare(reports, destination):
             )
             return
         digest = sha256(file)
+        if expected is not None and digest != expected:
+            raise RuntimeError("Proposed source bytes differ from retained lock: " + file.name)
         if file.name in assets and assets[file.name]["sha256"] != digest:
             raise RuntimeError("Source asset filename collision")
         target = output / file.name
@@ -86,6 +89,7 @@ def prepare(reports, destination):
             "FFmpeg combined executable / " + e["project"],
             "GPL corresponding-source build input (not an independent permissive-library source duty)",
             e["url"],
+            expected=e["sha256"],
         )
     qt = read_json(ROOT / "release/qt-source-lock.json")
     for e in qt["archives"]:
@@ -94,6 +98,7 @@ def prepare(reports, destination):
             "Qt / " + e["project"],
             "Selected GPL v3 module source and supplied upstream build scripts",
             e["url"],
+            expected=e["sha256"],
         )
     ubuntu = {
         (p["source_package"], p["source_version"]): p
@@ -104,12 +109,90 @@ def prepare(reports, destination):
         for p in read_json(ROOT / "release/controlled-msys-source-lock.json")["source_packages"]
     }
     icu = {e["sha256"]: e for e in read_json(ROOT / "release/qt-icu-source-lock.json")["files"]}
+    python_extra = {
+        name: e
+        for e in read_json(ROOT / "release/python-incorporated-review.json")["dependencies"]
+        for name in e["files"]
+    }
     native = {
         e["sha256"]: e for e in read_json(ROOT / "release/native-file-source-mapping.json")["files"]
     }
     for report in sorted(reports.rglob("*-payload.json")):
         p = read_json(report)
         components = {c["id"]: c for c in p["components"]}
+        actual_files = {f["path"]: f for f in p["files"]}
+        prefix = "usr/bin/" if p["target"].startswith("linux") else ""
+
+        def check_notice(relative, source):
+            raw = source.read_bytes().replace(b"\r\n", b"\n")
+            acceptable = {
+                hashlib.sha256(data).hexdigest() for data in [raw, raw.replace(b"\n", b"\r\n")]
+            }
+            record = actual_files.get(prefix + "_internal/" + relative)
+            if record is None or record["sha256"] not in acceptable:
+                missing.append(
+                    {
+                        "component": p["artifact"]["filename"],
+                        "missing_file": relative,
+                        "completion": "Integrate the actual required notice and re-inventory; LF/CRLF is allowed, substantive differences are not",
+                    }
+                )
+
+        projects = {
+            f["qt_source_mapping"]["source_project"]
+            for f in p["files"]
+            if f.get("qt_source_mapping")
+        }
+        for notice in read_json(ROOT / "licenses/qt-6.11.2/provenance.json")["files"]:
+            if notice["project"] in projects:
+                check_notice(notice["packaged_file"], ROOT / notice["packaged_file"])
+        check_notice(
+            "licenses/python-native/CPython-3.14.7-INCORPORATED-NOTICES.rst",
+            ROOT / "licenses/python-native/CPython-3.14.7-INCORPORATED-NOTICES.rst",
+        )
+        if p["target"].startswith("windows"):
+            mappings = list(reports.rglob("msys-payload-notices.json"))
+            if len(mappings) != 1:
+                raise RuntimeError("Exact Windows MSYS notice map required")
+            for dll in read_json(mappings[0])["files"]:
+                for notice in dll["notices"]:
+                    if actual_files.get(notice["path"], {}).get("sha256") != notice["sha256"]:
+                        missing.append(
+                            {
+                                "component": dll["path"],
+                                "missing_file": notice["path"],
+                                "completion": "Restore exact hash-matched supplier notice and re-inventory",
+                            }
+                        )
+        wrapper = p.get("executable_container_wrapper")
+        if wrapper:
+            rows.append(
+                {
+                    "platform": p["target"],
+                    "payload": p["payload_kind"],
+                    "component": "AppImage static runtime"
+                    if p["target"].startswith("linux")
+                    else "Inno Setup prefix",
+                    "file": p["artifact"]["filename"]
+                    + ":prefix[0:"
+                    + str(wrapper["prefix_bytes"])
+                    + "]",
+                    "sha256": wrapper["prefix_sha256"],
+                    "license": "MIT + LGPL-2.1-or-later + linked permissive/runtime-exception terms"
+                    if p["target"].startswith("linux")
+                    else "Inno permissive + applicable incorporated runtime terms",
+                    "required_action": "retain specific notices and supplied LGPL source/relink material"
+                    if p["target"].startswith("linux")
+                    else "retain Inno copyright/website notices and Pascal Script acknowledgement; use actual runtime scope",
+                    "evidence": [
+                        "release/runtime-source-delivery.json"
+                        if p["target"].startswith("linux")
+                        else "release/inno-runtime-review.json",
+                        wrapper["pinned_input_sha256"],
+                    ],
+                    "status": "ENGINEERING_EVIDENCE_PREPARED",
+                }
+            )
         for f in p["files"]:
             if f["type"] != "native":
                 continue
@@ -153,14 +236,19 @@ def prepare(reports, destination):
                 requirement = c["required_action"]
                 evidence.append(c["notice"])
                 source = msys.get((project, c["version"]))
-                if c.get("source_delivery_required"):
+                # Non-system libraries linked into the GPL FFmpeg aggregate are
+                # supplied for that combined-work source scope, not because MIT
+                # or BSD independently requires source publication. Compiler
+                # runtimes retain their explicit exception/System Library scope.
+                if c.get("source_delivery_required") or "GCC-exception" not in license:
                     if source:
                         asset(
                             ROOT
                             / "release/evidence/local/msys-sources"
                             / source["archive"]["filename"],
                             project,
-                            license + " dynamic library source and package recipe",
+                            license
+                            + " library source/recipe for selected GPL FFmpeg aggregate (independent permissive terms remain notice-only)",
                             source["archive"]["url"],
                         )
                     else:
@@ -187,6 +275,14 @@ def prepare(reports, destination):
                         }
                     )
             elif f["sha256"] in icu:
+                icu_lock = read_json(ROOT / "release/qt-icu-source-lock.json")
+                asset(
+                    ROOT / "release/evidence/local/sources" / icu_lock["filename"],
+                    "Qt linked ICU",
+                    "Proposed selected GPL Qt aggregate source support; Unicode permissive terms alone impose notices, not standalone source publication",
+                    icu_lock["url"],
+                    expected=icu_lock["sha256"],
+                )
                 license = "Unicode-DFS-2016 AND incorporated ICU third-party terms"
                 evidence = ["licenses/icu-73.2/icu4c/LICENSE"]
                 requirement = "retain ICU copyright/license/third-party notices; no standalone source-publication requirement under these permissive terms"
@@ -216,6 +312,18 @@ def prepare(reports, destination):
                     "release/controlled-baseline.json",
                     "release/ffmpeg-controlled-lock.json",
                 ]
+            elif project == "CPython" and Path(f["path"]).name in python_extra:
+                dependency = python_extra[Path(f["path"]).name]
+                license = (
+                    dependency["license"]
+                    if f["path"].endswith(".dll")
+                    else "Python-2.0 AND " + dependency["license"]
+                )
+                requirement = "retain exact CPython incorporated copyright/license notices; no independent source-publication duty under these permissive terms"
+                evidence = [
+                    "release/python-incorporated-review.json",
+                    "licenses/python-native/CPython-3.14.7-INCORPORATED-NOTICES.rst",
+                ]
             elif project == "CPython":
                 license = "Python-2.0 + incorporated per-file terms"
                 evidence = ["licenses/Python-3.14.7.txt", "release/python-native-source-lock.json"]
@@ -235,6 +343,15 @@ def prepare(reports, destination):
                         "component": f["path"],
                         "missing_file": "actual license/origin attribution",
                         "completion": "Resolve actual file origin and license",
+                    }
+                )
+            if license == "UNRESOLVED":
+                status = "ENGINEERING_BLOCKED"
+                missing.append(
+                    {
+                        "component": f["path"],
+                        "missing_file": "per-file license classification",
+                        "completion": "Classify the actual library from its supplier notice, not the whole build package",
                     }
                 )
             if c.get("missing_packaged_notice"):
@@ -265,6 +382,8 @@ def prepare(reports, destination):
         runtime_file = (
             ROOT.parent.parent / "blocker-clone-build/source-delivery" / runtime["filename"]
         )
+    if runtime_file.is_file() and sha256(runtime_file) != runtime["sha256"]:
+        raise RuntimeError("Runtime source/relink archive changed")
     asset(
         runtime_file,
         "AppImage LGPL-linked prefix",
@@ -288,6 +407,8 @@ def prepare(reports, destination):
         "complete_corresponding_source": False,
         "assets": list(assets.values()),
         "remaining_engineering": missing,
+        "proposed_materials_prepared": not missing,
+        "recipient_notice_location": "Each exact binary package contains _internal/licenses (Linux usr/bin/_internal/licenses), including actual native-system/MSYS, Qt and Python notices. The exact Cactu source archive also contains supplier notice material. Refer to component-review.json for the finite per-file mapping.",
         "human_decisions": [
             {
                 "id": "MSVC-RIGHTS",

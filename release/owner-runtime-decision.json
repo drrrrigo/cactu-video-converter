@@ -1,0 +1,12 @@
+{
+  "recorded": "2026-11-21",
+  "classification": "HUMAN LEGAL / OWNER DECISION",
+  "affected": "Microsoft runtime DLLs in exact Windows candidate payloads",
+  "owner_response": "Does not know qualifying redistribution rights; keep as legal pending",
+  "current_strategy": "Unchanged app-local runtime in AUDIT candidates only",
+  "alternative": "Official system VC14 x64 prerequisite, not implemented; installer/portable/offline/clean-Windows impact in docs/WINDOWS_RUNTIME_REDISTRIBUTION.md",
+  "responsible": "owner / qualified license reviewer",
+  "completion_criterion": "Confirm exact applicable grant/REDIST rights, or explicitly select and validate the alternative strategy",
+  "license_audit_approved": false,
+  "publication_approved": false
+}

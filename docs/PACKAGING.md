@@ -72,3 +72,58 @@ Current hosted outputs are audit-only, not a retained RC1 set. Final exact sourc
 notice, conditional-grant and maintained recipient delivery records remain open;
 see BETA1_BLOCKER_RESOLUTION.md. The publisher currently uploads application assets
 and checksums; reviewed source assets/index wiring must be added before release.
+
+## Controlled candidate and recipient-source qualification
+
+Release/audit packaging selects `release/controlled-baseline.json` and invokes
+`scripts/stage_controlled_runtime.py` from `build_release.py`. The generic
+`vendor/ffmpeg/manifest.json` is retained only for reference fixtures; it is not
+the selected release implementation. Build the native controlled pair first,
+validate it against the reference for AV1/HEVC fixtures, then package it in the
+same clean checkout. Generated manifests/binaries remain ignored, so Windows and
+Linux `*-build.json` record the same actual source commit without synthetic
+snapshot commits. No global approval follows from a successful build.
+
+Windows notice integration reads the installed MSYS package evidence, matches
+actual DLL bytes, copies only matched supplier notices and ships a FILE-MAP.
+A same-named CPython DLL is accepted only when its bytes match the actual CPython
+installation; it is never attributed to the MSYS package by filename. Qt Image
+Formats is a separate source/notice module. The unused Windows Mesa OpenGL
+fallback is excluded because this application uses raster QWidget controls,
+without Qt Quick or QOpenGLWidget/Window; FFmpeg GPU processes are independent.
+
+After both native builds succeed, run:
+
+```
+python scripts/prepare_rc1_review.py PATH_TO_BOTH_METADATA_REPORTS build/review-final
+```
+
+This requires identical clean source commits and controlled-runtime identities,
+checks the actual Qt/Python/MSYS notice payload, generates a finite per-file CSV/
+JSON review and prepares local source assets under `build/proposed-source-assets`.
+The selection follows applicable license obligations. Permissive standalone
+libraries do not automatically acquire a source duty; non-system inputs needed
+for the proposed GPL FFmpeg/Qt aggregate source scope are identified separately.
+Compiler-only packages and unused provider inputs are excluded. Cached archives
+are hard-linked and deduplicated; none are uploaded by this command.
+
+The output SOURCE-ASSETS index binds the exact source commit, all three binary
+artifact hashes, source asset filenames/hashes, component mappings and proposed
+retrieval/build instructions. Future release URLs are proposals, not a published
+source offer. Every redistribution flag and complete-source approval stays false.
+
+### Exact source-index approval without a commit cycle
+
+The existing protected `BETA_OWNER_APPROVAL` attestation must additionally carry
+`source_assets_manifest_sha256`, the SHA-256 of the reviewed SOURCE-ASSETS.json.
+It remains bound to the same source commit and all manually tested artifacts.
+The publisher rejects a missing owner approval/hash, different source or binary
+identities, incomplete/unapproved assets, changed bytes and unsafe source names.
+If release/config.json specifies a static source-index pin, it is also enforced
+and cannot be overridden by the owner record. Its default null is not approval.
+
+This external post-build attestation avoids committing a hash of an index that
+contains its own Git commit (which would otherwise change that commit again).
+It does not bypass technical/license/manual gates or publish anything. The
+selected controlled-baseline approval fields replace irrelevant approval of the
+legacy fixture provider; all selected-baseline fields remain false until reviewed.

@@ -6,10 +6,10 @@ import sys
 from pathlib import Path
 from branding_metadata import PRODUCT_NAME, __version__
 from checksums import expected_names
-from release_common import ROOT, read_json, sha256, digest_valid
+from release_common import ROOT, read_json
 from release_policy import distribution_allowed
-from release_gate import check_publication
-from source_assets import source_assets
+from release_gate import check_publication, source_commit
+from source_assets import approved_source_assets
 
 if __name__ == "__main__":
     directory = Path(sys.argv[1])
@@ -20,15 +20,12 @@ if __name__ == "__main__":
         owner_approval_path=ROOT / "build/owner-publication-approval.json",
     )
     tag = "v" + __version__
-    expected_sources = read_json(ROOT / "release/config.json").get("source_assets_manifest_sha256")
-    if (
-        not digest_valid(expected_sources or "")
-        or sha256(directory / "SOURCE-ASSETS.json") != expected_sources
-    ):
-        raise RuntimeError(
-            "Exact source asset index has not been approved in the release configuration"
-        )
-    sources = source_assets(directory)
+    sources = approved_source_assets(
+        directory,
+        read_json(ROOT / "release/config.json"),
+        read_json(ROOT / "build/owner-publication-approval.json"),
+        source_commit(ROOT),
+    )
     if os.environ.get("GITHUB_REF") != "refs/tags/" + tag:
         raise RuntimeError("Unexpected release ref")
     # No --clobber: an existing release/tag is not silently replaced.

@@ -126,8 +126,13 @@ def check_publication(
     ):
         if config.get(gate) is not True:
             raise RuntimeError("Publication blocked: " + gate)
-    manifest = read_json(root / "vendor/ffmpeg/manifest.json")
-    if set(manifest) != {"linux-x86_64", "windows-x86_64"}:
+    selected_baseline = root / "release/controlled-baseline.json"
+    manifest = (
+        {"selected-controlled-baseline": read_json(selected_baseline)}
+        if selected_baseline.is_file()
+        else read_json(root / "vendor/ffmpeg/manifest.json")
+    )
+    if not selected_baseline.is_file() and set(manifest) != {"linux-x86_64", "windows-x86_64"}:
         raise RuntimeError("Both exact platform FFmpeg manifests are required")
     if any(
         e.get("redistribution_approved") is not True
