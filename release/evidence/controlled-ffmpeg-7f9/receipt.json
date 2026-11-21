@@ -24,43 +24,43 @@
       "generic_ci_workspace_redacted": true
     },
     {
-      "file": "linux/controlled-app-snapshot/dist/candidate/linux-x86_64-appimage-smoke.json",
+      "file": "linux/packaging/linux-x86_64-appimage-smoke.json",
       "original_sha256": "3db61cc5d2fea87241ea9ab769081beb8e31dd602d7f4318093664139534606a",
       "retained_sha256": "3db61cc5d2fea87241ea9ab769081beb8e31dd602d7f4318093664139534606a",
       "generic_ci_workspace_redacted": false
     },
     {
-      "file": "linux/controlled-app-snapshot/dist/candidate/linux-x86_64-appimage-payload.json",
+      "file": "linux/packaging/linux-x86_64-appimage-payload.json",
       "original_sha256": "d945d574977a207abedeb15358ccb26d4d62b2ac70f42b161430062c97ce2c17",
       "retained_sha256": "d945d574977a207abedeb15358ccb26d4d62b2ac70f42b161430062c97ce2c17",
       "generic_ci_workspace_redacted": false
     },
     {
-      "file": "linux/controlled-app-snapshot/dist/candidate/linux-x86_64-appimage-comparison.json",
+      "file": "linux/packaging/linux-x86_64-appimage-comparison.json",
       "original_sha256": "83fe20d63491a60a385899be9c7934ae20fb0d6093365e2fd923a8632433b3b0",
       "retained_sha256": "83fe20d63491a60a385899be9c7934ae20fb0d6093365e2fd923a8632433b3b0",
       "generic_ci_workspace_redacted": false
     },
     {
-      "file": "linux/controlled-app-snapshot/dist/candidate/linux-x86_64-runtime-evidence.json",
+      "file": "linux/packaging/linux-x86_64-runtime-evidence.json",
       "original_sha256": "8d2945cfab4b4647fcc5f9c8e9c0d0fd029454ea611999d9532842a62209bd11",
       "retained_sha256": "297d471879f4fc9db0603b8c5ded442597d1f6eeea2ca0eff7b8c08fe65ceaee",
       "generic_ci_workspace_redacted": true
     },
     {
-      "file": "linux/controlled-app-snapshot/dist/candidate/linux-x86_64-build.json",
+      "file": "linux/packaging/linux-x86_64-build.json",
       "original_sha256": "e119f8c8e58666d006100b1fcb6c57e9d239215c76af8f611e3caaef6dd81325",
       "retained_sha256": "e119f8c8e58666d006100b1fcb6c57e9d239215c76af8f611e3caaef6dd81325",
       "generic_ci_workspace_redacted": false
     },
     {
-      "file": "linux/controlled-app-snapshot/dist/candidate/linux-x86_64-onedir-smoke.json",
+      "file": "linux/packaging/linux-x86_64-onedir-smoke.json",
       "original_sha256": "3db61cc5d2fea87241ea9ab769081beb8e31dd602d7f4318093664139534606a",
       "retained_sha256": "3db61cc5d2fea87241ea9ab769081beb8e31dd602d7f4318093664139534606a",
       "generic_ci_workspace_redacted": false
     },
     {
-      "file": "linux/controlled-app-snapshot/dist/candidate/linux-x86_64-SHA256SUMS.txt",
+      "file": "linux/packaging/linux-x86_64-SHA256SUMS.txt",
       "original_sha256": "af2003a1afacf07e8aafa6051ea918cb15c3f8a263fe97f370d460b066df868e",
       "retained_sha256": "af2003a1afacf07e8aafa6051ea918cb15c3f8a263fe97f370d460b066df868e",
       "generic_ci_workspace_redacted": false
@@ -90,61 +90,61 @@
       "generic_ci_workspace_redacted": true
     },
     {
-      "file": "windows/controlled-app-snapshot/dist/candidate/windows-x86_64-portable-payload.json",
+      "file": "windows/packaging/windows-x86_64-portable-payload.json",
       "original_sha256": "cc573583ee23d303276a0f7f89152fbae91f49527ca6993f7c68e46e3f455d72",
       "retained_sha256": "cc573583ee23d303276a0f7f89152fbae91f49527ca6993f7c68e46e3f455d72",
       "generic_ci_workspace_redacted": false
     },
     {
-      "file": "windows/controlled-app-snapshot/dist/candidate/windows-x86_64-portable-comparison.json",
+      "file": "windows/packaging/windows-x86_64-portable-comparison.json",
       "original_sha256": "1f539256c0e3bca4d423833832f06d23ea475e5f627305ded2c2b73e14de6407",
       "retained_sha256": "1f539256c0e3bca4d423833832f06d23ea475e5f627305ded2c2b73e14de6407",
       "generic_ci_workspace_redacted": false
     },
     {
-      "file": "windows/controlled-app-snapshot/dist/candidate/windows-x86_64-SHA256SUMS.txt",
+      "file": "windows/packaging/windows-x86_64-SHA256SUMS.txt",
       "original_sha256": "e5b2d06868752c0d0799f32a473f55797f405c0a76a35d796d242cb212a38a18",
       "retained_sha256": "e5b2d06868752c0d0799f32a473f55797f405c0a76a35d796d242cb212a38a18",
       "generic_ci_workspace_redacted": false
     },
     {
-      "file": "windows/controlled-app-snapshot/dist/candidate/windows-x86_64-os-boundary.json",
+      "file": "windows/packaging/windows-x86_64-os-boundary.json",
       "original_sha256": "816bdad37044d3ddee9c6d1b87216e085bd10c9d71bde3978a10b93f80603f30",
       "retained_sha256": "816bdad37044d3ddee9c6d1b87216e085bd10c9d71bde3978a10b93f80603f30",
       "generic_ci_workspace_redacted": false
     },
     {
-      "file": "windows/controlled-app-snapshot/dist/candidate/windows-x86_64-onedir-smoke.json",
+      "file": "windows/packaging/windows-x86_64-onedir-smoke.json",
       "original_sha256": "3a4922c9351f0b0229b7453ef6cee5887c48b5bb8bae6704d44bca926d534a72",
       "retained_sha256": "3a4922c9351f0b0229b7453ef6cee5887c48b5bb8bae6704d44bca926d534a72",
       "generic_ci_workspace_redacted": false
     },
     {
-      "file": "windows/controlled-app-snapshot/dist/candidate/windows-x86_64-build.json",
+      "file": "windows/packaging/windows-x86_64-build.json",
       "original_sha256": "e4c5b49cae075d936c969c36d64b619458b57a9f4caf7185abc871a6641f92ee",
       "retained_sha256": "e4c5b49cae075d936c969c36d64b619458b57a9f4caf7185abc871a6641f92ee",
       "generic_ci_workspace_redacted": false
     },
     {
-      "file": "windows/controlled-app-snapshot/dist/candidate/windows-x86_64-portable-smoke.json",
+      "file": "windows/packaging/windows-x86_64-portable-smoke.json",
       "original_sha256": "3a4922c9351f0b0229b7453ef6cee5887c48b5bb8bae6704d44bca926d534a72",
       "retained_sha256": "3a4922c9351f0b0229b7453ef6cee5887c48b5bb8bae6704d44bca926d534a72",
       "generic_ci_workspace_redacted": false
     },
     {
-      "file": "windows/controlled-app-snapshot/dist/candidate/windows-x86_64-installed-payload.json",
+      "file": "windows/packaging/windows-x86_64-installed-payload.json",
       "original_sha256": "9e82f0a994d80c3ff3cfc8d0198ee589f0e9f0f0d12d57a05630b7cab6b24c68",
       "retained_sha256": "9e82f0a994d80c3ff3cfc8d0198ee589f0e9f0f0d12d57a05630b7cab6b24c68",
       "generic_ci_workspace_redacted": false
     },
     {
-      "file": "windows/controlled-app-snapshot/dist/candidate/windows-x86_64-runtime-evidence.json",
+      "file": "windows/packaging/windows-x86_64-runtime-evidence.json",
       "original_sha256": "704a12348606860701c8230371818f202a1da57065c78503770b70c45f4d524e",
       "retained_sha256": "eb5888464607f7ea1911c94fc5d34fd08f9c72c35422ea866193853cc362f807",
       "generic_ci_workspace_redacted": true
     },
     {
-      "file": "windows/controlled-app-snapshot/dist/candidate/windows-x86_64-installed-comparison.json",
+      "file": "windows/packaging/windows-x86_64-installed-comparison.json",
       "original_sha256": "d99051030508086faab019e0bbe39668df8d62b82dfb9fd108a636429480edac",
       "retained_sha256": "d99051030508086faab019e0bbe39668df8d62b82dfb9fd108a636429480edac",
       "generic_ci_workspace_redacted": false
