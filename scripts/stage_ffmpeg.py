@@ -7,11 +7,29 @@ import shutil
 import sys
 import tarfile
 import tempfile
+import time
 import zipfile
 from pathlib import Path
 
 from release_common import ROOT, download, read_json, safe_member, sha256
 from verify_ffmpeg import MANIFEST, validate
+
+
+def replace_validated(staged: Path, destination: Path) -> None:
+    """Allow bounded Windows sharing/access races after executable validation."""
+    for attempt in range(8):
+        try:
+            os.replace(staged, destination)
+            return
+        except PermissionError as error:
+            if (
+                sys.platform != "win32"
+                or getattr(error, "winerror", None) not in {5, 32, 33}
+                or attempt == 7
+            ):
+                raise
+            print("Windows file access is busy; retrying atomic FFmpeg staging", attempt + 1)
+            time.sleep(min(0.25 * (2**attempt), 2.0))
 
 
 def unpack(archive: Path, metadata: dict, destination: Path) -> None:
@@ -70,7 +88,7 @@ def stage(platform: str, *, cache: Path | None = None) -> Path:
         validate(platform, directory=staged)
         if destination.exists():
             shutil.rmtree(destination)
-        os.replace(staged, destination)
+        replace_validated(staged, destination)
     return destination
 
 
